@@ -1,16 +1,12 @@
 import React, { FC } from "react";
-import Link from "next/link";
+import { Box } from "@chakra-ui/react";
+import HomeMain from "../containers/HomeMain";
 
 const Home: FC = () => {
   return (
-    <div>
-      <h1>Home</h1>
-      <Link href="/n01">501</Link>
-      <br />
-      <Link href="/eagleseye">Eagle&apos;s Eye</Link>
-      <br />
-      <Link href="/cricketnumbercount">Cricket Number Count</Link>
-    </div>
+    <Box>
+      <HomeMain />
+    </Box>
   );
 };
 
