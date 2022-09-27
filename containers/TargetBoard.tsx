@@ -2,18 +2,32 @@ import { Heading } from "@chakra-ui/react";
 import React, { FC } from "react";
 
 type TargetBoardProps = {
-  score?: number;
-  player: string;
+  target?: string;
+  message: string;
+  size?: "sm" | "md";
 };
 
-const TargetBoard: FC<TargetBoardProps> = ({ score, player }) => {
+const TargetBoard: FC<TargetBoardProps> = ({
+  target,
+  message,
+  size = "md",
+}) => {
   return (
     <>
-      <Heading fontSize="32px" color="green.500" pl={4} pt={4}>
-        {player}
+      <Heading
+        fontSize={size === "md" ? "32px" : "24px"}
+        color="green.500"
+        pl={4}
+        pt={4}
+      >
+        {message}
       </Heading>
-      <Heading textAlign="center" fontSize="120px" py={8}>
-        {score}
+      <Heading
+        textAlign="center"
+        fontSize={size === "md" ? "96px" : "64px"}
+        py={8}
+      >
+        {target}
       </Heading>
     </>
   );

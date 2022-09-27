@@ -2,7 +2,7 @@ import React, { FC, Fragment } from "react";
 import { Button, Center, Grid, GridItem, Heading } from "@chakra-ui/react";
 
 type CountButtonsProps = {
-  onCount: (count: string) => void;
+  onCount: (count: point) => void;
   begin: number;
   end: number;
   reversed?: boolean;
@@ -27,7 +27,7 @@ const CountButtons: FC<CountButtonsProps> = ({
           <Button
             colorScheme="red"
             w="100%"
-            onClick={() => onCount("50")}
+            onClick={() => onCount("S-BULL")}
             disabled={disabled}
           >
             outer Bull
@@ -37,7 +37,7 @@ const CountButtons: FC<CountButtonsProps> = ({
           <Button
             colorScheme="facebook"
             w="100%"
-            onClick={() => onCount("50")}
+            onClick={() => onCount("D-BULL")}
             disabled={disabled}
           >
             inner Bull
@@ -79,7 +79,7 @@ const CountButtons: FC<CountButtonsProps> = ({
                 colorScheme="gray"
                 variant="outline"
                 width="100%"
-                onClick={() => onCount(`${i + 1}`)}
+                onClick={() => onCount(`${i + 1}` as point)}
                 disabled={disabled}
               >
                 {i + 1}
@@ -90,7 +90,7 @@ const CountButtons: FC<CountButtonsProps> = ({
                 colorScheme="teal"
                 variant="outline"
                 width="100%"
-                onClick={() => onCount(`${i + 1}D`)}
+                onClick={() => onCount(`${i + 1}D` as point)}
                 disabled={disabled}
               >
                 {i + 1}
@@ -101,7 +101,7 @@ const CountButtons: FC<CountButtonsProps> = ({
                 colorScheme="pink"
                 variant="outline"
                 width="100%"
-                onClick={() => onCount(`${i + 1}T`)}
+                onClick={() => onCount(`${i + 1}T` as point)}
                 disabled={disabled}
               >
                 {i + 1}

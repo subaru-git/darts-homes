@@ -13,23 +13,21 @@ const RoundBullScore: FC<RoundBullScoreProps> = ({
   onClear,
   onRoundChange,
 }) => {
-  const getBullScore = (n: string) =>
-    n === "50" ? "D-Bull" : n === "25" ? "S-Bull" : n != null ? "-" : "";
   return (
     <Grid templateColumns="repeat(4, 1fr)">
       <GridItem>
         <Heading as="h2" textAlign="center" color="gray.500">
-          {getBullScore(scores[0])}
+          {scores[0] === "0" ? "-" : scores[0]}
         </Heading>
       </GridItem>
       <GridItem>
         <Heading as="h2" textAlign="center" color="gray.500">
-          {getBullScore(scores[1])}
+          {scores[1] === "0" ? "-" : scores[1]}
         </Heading>
       </GridItem>
       <GridItem>
         <Heading as="h2" textAlign="center" color="gray.500">
-          {getBullScore(scores[2])}
+          {scores[2] === "0" ? "-" : scores[2]}
         </Heading>
       </GridItem>
       <GridItem>

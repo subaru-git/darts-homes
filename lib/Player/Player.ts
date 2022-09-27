@@ -1,6 +1,6 @@
 export default class Player {
   private name: string;
-  private rounds: string[][] = [];
+  private rounds: point[][] = [];
 
   constructor(name: string) {
     this.name = name;
@@ -8,7 +8,7 @@ export default class Player {
   getName() {
     return this.name;
   }
-  roundScore(score: string[]) {
+  roundScore(score: point[]) {
     this.rounds.push(score);
   }
   getScore() {

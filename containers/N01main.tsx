@@ -16,8 +16,8 @@ const N01main: FC = () => {
         <Grid templateRows="repeat(3, auto)" gap={10}>
           <GridItem>
             <TargetBoard
-              score={game.getTargetScore()}
-              player={game.getCurrentPlayer()?.getName() ?? ""}
+              target={game.getTargetScore()?.toString()}
+              message={game.getCurrentPlayer()?.getName() ?? ""}
             />
           </GridItem>
           <GridItem>

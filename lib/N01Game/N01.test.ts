@@ -161,12 +161,12 @@ test("in gaming", () => {
   game.changePlayer();
   expect(game["currentPlayer"]).not.toBeNull();
   expect(game["currentPlayer"]?.getName()).toBe("Player1");
-  game.addScore("20T");
-  expect(game.getTargetScore()).toEqual(24);
-  expect(game.getRoundScore()).toEqual(["20T"]);
-  game.addScore("20T");
-  expect(game.getTargetScore()).toEqual(-36);
-  expect(game.getRoundScore()).toEqual(["20T", "20T"]);
+  game.addScore("D-BULL");
+  expect(game.getTargetScore()).toEqual(34);
+  expect(game.getRoundScore()).toEqual(["D-BULL"]);
+  game.addScore("S-BULL");
+  expect(game.getTargetScore()).toEqual(-16);
+  expect(game.getRoundScore()).toEqual(["D-BULL", "S-BULL"]);
   game.roundChange();
   expect(game.getScore()).toEqual([
     [501, 444, 264, 84, 84, 84],

@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import BullButton from "../components/BullButton";
 
 type CountBullButtonsProps = {
-  onCount: (count: string) => void;
+  onCount: (count: point) => void;
   disabled: boolean;
 };
 

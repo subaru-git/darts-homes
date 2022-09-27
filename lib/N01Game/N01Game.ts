@@ -5,7 +5,7 @@ export default class N01Game {
   private fixedScore: number;
   private players: Player[] = [];
   private currentPlayer: Player | null = null;
-  private roundScore: string[] = [];
+  private roundScore: point[] = [];
 
   constructor(fixedScore: number) {
     this.fixedScore = fixedScore;
@@ -16,7 +16,7 @@ export default class N01Game {
   gameOn() {
     this.currentPlayer = this.players[0];
   }
-  addScore(score: string) {
+  addScore(score: point) {
     if (this.currentPlayer === null) return;
     if (this.roundScore.length >= 3) return;
     this.roundScore.push(score);

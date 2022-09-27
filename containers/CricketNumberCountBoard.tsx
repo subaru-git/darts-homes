@@ -31,10 +31,10 @@ const CricketNumberCountBoard: FC<CricketNumberCountBoardProps> = ({
             {scores.map((number) => (
               <Tr key={`number-${number.number}`}>
                 <Td key={`number-${number.number}`}>
-                  {number.number === 50 ? "BULL" : number.number}
+                  {number.number === 25 ? "BULL" : number.number}
                 </Td>
                 <Td key={`score-${number.number}`}>
-                  <Grid templateColumns="repeat(10, 50px)" gap={1}>
+                  <Grid templateColumns="repeat(4, 50px)" gap={1}>
                     {convertNumberOfCountToMarkCount(
                       scores.find((score) => score.number === number.number)
                         ?.count ?? 0
@@ -45,6 +45,7 @@ const CricketNumberCountBoard: FC<CricketNumberCountBoardProps> = ({
                     ))}
                   </Grid>
                 </Td>
+                <Td>{number.total}</Td>
               </Tr>
             ))}
           </Tbody>
