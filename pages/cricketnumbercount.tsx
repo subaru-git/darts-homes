@@ -4,7 +4,7 @@ import CricketNumberCountMain from "../containers/CricketNumberCountMain";
 
 const CricketNumberCount: FC = () => {
   return (
-    <Box p={4}>
+    <Box>
       <CricketNumberCountMain />
     </Box>
   );

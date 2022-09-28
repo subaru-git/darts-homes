@@ -3,6 +3,7 @@ import React, { FC, useState } from "react";
 import CricketNumberCountGame from "../lib/CricketNumberCountGame/CricketNumberCountGame";
 import CountButtons from "./CountButtons";
 import CricketNumberCountBoard from "./CricketNumberCountBoard";
+import NavigationBar, { NavItem } from "./NavigationBar";
 import RoundBoard from "./RoundBoard";
 import RoundScore from "./RoundScore";
 import TargetBoard from "./TargetBoard";
@@ -11,7 +12,8 @@ const CricketNumberCountMain: FC = () => {
   const [game, setGame] = useState(new CricketNumberCountGame(10));
   return (
     <>
-      <Grid templateColumns="repeat(2, auto)" gap={6}>
+      <NavigationBar items={items} />
+      <Grid templateColumns="repeat(2, auto)" gap={6} p={4}>
         <GridItem>
           <Grid templateRows="repeat(3, auto)" gap={10}>
             <GridItem>
@@ -79,5 +81,32 @@ const CricketNumberCountMain: FC = () => {
     </>
   );
 };
+
+const items: Array<NavItem> = [
+  {
+    label: "Games",
+    children: [
+      {
+        label: "501",
+        subLabel: "The popular dart game",
+        href: "/n01",
+      },
+      {
+        label: "Eagle's Eye",
+        subLabel: "A dart game for BULL practice",
+        href: "/eagleseye",
+      },
+      {
+        label: "Cricket Number Count",
+        subLabel: "A original dart game for practice. designed by kikuyama.",
+        href: "#",
+      },
+    ],
+  },
+  {
+    label: "Respects",
+    href: "#",
+  },
+];
 
 export default CricketNumberCountMain;

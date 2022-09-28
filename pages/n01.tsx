@@ -4,7 +4,7 @@ import N01main from "../containers/N01main";
 
 const N01: FC = () => {
   return (
-    <Box p={4}>
+    <Box>
       <N01main />
     </Box>
   );

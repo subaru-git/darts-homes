@@ -4,12 +4,19 @@ import EaglesEyeBoard from "./EaglesEyeBoard";
 import CountBullButtons from "./CountBullButtons";
 import EaglesEyeGame from "../lib/EaglesEyeGame/EaglesEyeGame";
 import RoundBullScore from "./RoundBullScore";
+import NavigationBar, { NavItem } from "./NavigationBar";
 
 const EaglesEyeMain: FC = () => {
   const [game, setGame] = useState(new EaglesEyeGame());
   return (
     <div>
-      <Grid templateRows={"repeat(3, auto)"} gap={10} justifyContent="center">
+      <NavigationBar items={items} />
+      <Grid
+        templateRows={"repeat(3, auto)"}
+        gap={10}
+        justifyContent="center"
+        p={10}
+      >
         <GridItem>
           <CountBullButtons
             onCount={(n) => {
@@ -42,5 +49,32 @@ const EaglesEyeMain: FC = () => {
     </div>
   );
 };
+
+const items: Array<NavItem> = [
+  {
+    label: "Games",
+    children: [
+      {
+        label: "501",
+        subLabel: "The popular dart game",
+        href: "/n01",
+      },
+      {
+        label: "Eagle's Eye",
+        subLabel: "A dart game for BULL practice",
+        href: "#",
+      },
+      {
+        label: "Cricket Number Count",
+        subLabel: "A original dart game for practice. designed by kikuyama.",
+        href: "/cricketnumbercount",
+      },
+    ],
+  },
+  {
+    label: "Respects",
+    href: "#",
+  },
+];
 
 export default EaglesEyeMain;
