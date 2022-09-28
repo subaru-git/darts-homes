@@ -4,7 +4,7 @@ import EaglesEyeMain from "../containers/EaglesEyeMain";
 
 const EaglesEye: FC = () => {
   return (
-    <Box p={10}>
+    <Box>
       <EaglesEyeMain />
     </Box>
   );
