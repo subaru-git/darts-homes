@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import BullButton from "../components/BullButton";
+import BullButton from "./BullButton";
 
 type CountBullButtonsProps = {
   onCount: (count: point) => void;

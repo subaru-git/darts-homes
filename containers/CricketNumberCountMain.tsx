@@ -1,12 +1,12 @@
 import { Grid, GridItem } from "@chakra-ui/react";
 import React, { FC, useState } from "react";
 import CricketNumberCountGame from "../lib/CricketNumberCountGame/CricketNumberCountGame";
-import CountButtons from "./CountButtons";
-import CricketNumberCountBoard from "./CricketNumberCountBoard";
-import NavigationBar, { NavItem } from "./NavigationBar";
-import RoundBoard from "./RoundBoard";
-import RoundScore from "./RoundScore";
-import TargetBoard from "./TargetBoard";
+import CountButtons from "../components/CountButtons";
+import CricketNumberCountBoard from "../components/CricketNumberCountBoard";
+import NavigationBar, { NavItem } from "../components/NavigationBar";
+import RoundBoard from "../components/RoundBoard";
+import RoundScore from "../components/RoundScore";
+import TargetBoard from "../components/TargetBoard";
 
 const CricketNumberCountMain: FC = () => {
   const [game, setGame] = useState(new CricketNumberCountGame(10));

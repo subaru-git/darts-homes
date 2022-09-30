@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import Link from "next/link";
-import NavigationBar, { NavItem } from "./NavigationBar";
+import NavigationBar, { NavItem } from "../components/NavigationBar";
 
 const HomeMain: FC = () => {
   return (

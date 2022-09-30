@@ -9,7 +9,7 @@ import {
   Tr,
 } from "@chakra-ui/react";
 import React, { FC } from "react";
-import CricketMark from "../components/CricketMark";
+import CricketMark from "./CricketMark";
 import {
   convertCountScoreToNumberOfCount,
   convertNumberOfCountToMarkCount,

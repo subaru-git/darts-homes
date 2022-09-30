@@ -16,7 +16,6 @@ type PlayersProps = {
 };
 
 const Players: FC<PlayersProps> = ({ players, onUpdateName }) => {
-  const [names, setNames] = useState(players);
   return (
     <>
       <TableContainer>
@@ -25,10 +24,9 @@ const Players: FC<PlayersProps> = ({ players, onUpdateName }) => {
             <Tr>
               <Th>
                 <Editable
-                  defaultValue={names[0]}
+                  defaultValue={players[0]}
                   onChange={(e) => {
-                    setNames([e, names[1]]);
-                    onUpdateName([e, names[1]]);
+                    onUpdateName([e, players[1]]);
                   }}
                 >
                   <EditablePreview />
@@ -37,10 +35,9 @@ const Players: FC<PlayersProps> = ({ players, onUpdateName }) => {
               </Th>
               <Th>
                 <Editable
-                  defaultValue={names[1]}
+                  defaultValue={players[1]}
                   onChange={(e) => {
-                    setNames([names[0], e]);
-                    onUpdateName([names[0], e]);
+                    onUpdateName([players[0], e]);
                   }}
                 >
                   <EditablePreview />

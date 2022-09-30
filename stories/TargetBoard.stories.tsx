@@ -1,5 +1,5 @@
 import React from "react";
-import TargetBoard from "../containers/TargetBoard";
+import TargetBoard from "../components/TargetBoard";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 
 export default {
