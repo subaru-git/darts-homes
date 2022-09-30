@@ -1,4 +1,3 @@
-import { convertScoreToNumber } from "../Helper/Converter";
 import Player from "../Player/Player";
 
 export default class EaglesEyeGame {
