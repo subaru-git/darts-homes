@@ -1,13 +1,13 @@
 import React, { FC, useState } from "react";
 import { Grid, GridItem } from "@chakra-ui/react";
-import CountButtons from "../containers/CountButtons";
-import N01Board from "../containers/N01Board";
-import Players from "../containers/Players";
+import CountButtons from "../components/CountButtons";
+import N01Board from "../components/N01Board";
+import Players from "../components/Players";
 import N01Game from "../lib/N01Game/N01Game";
 import Player from "../lib/Player/Player";
-import RoundScore from "./RoundScore";
-import TargetBoard from "./TargetBoard";
-import NavigationBar, { NavItem } from "./NavigationBar";
+import RoundScore from "../components/RoundScore";
+import TargetBoard from "../components/TargetBoard";
+import NavigationBar, { NavItem } from "../components/NavigationBar";
 
 const N01main: FC = () => {
   const [game, setGame] = useState(new N01Game(501));
