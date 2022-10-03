@@ -15,8 +15,8 @@
     "jsx": "preserve",
     "incremental": true,
     "downlevelIteration": true,
-    "types": ["@emotion/react/types/css-prop", "@types/jest"],
+    "types": ["@emotion/react/types/css-prop", "@types/jest", "@types/node", "@types/testing-library__jest-dom"],
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "cypress", "./cypress.config.ts"]
 }

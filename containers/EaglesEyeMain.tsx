@@ -9,7 +9,7 @@ import NavigationBar, { NavItem } from "../components/NavigationBar";
 const EaglesEyeMain: FC = () => {
   const [game, setGame] = useState(new EaglesEyeGame());
   return (
-    <div>
+    <div data-cy="eagles-eye-main">
       <NavigationBar items={items} />
       <Grid
         templateRows={"repeat(3, auto)"}
