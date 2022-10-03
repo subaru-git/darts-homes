@@ -6,7 +6,7 @@ type CountButtonsProps = {
   begin: number;
   end: number;
   reversed?: boolean;
-  disabled: boolean;
+  disabled?: boolean;
 };
 
 const CountButtons: FC<CountButtonsProps> = ({
@@ -14,7 +14,7 @@ const CountButtons: FC<CountButtonsProps> = ({
   begin,
   end,
   reversed,
-  disabled,
+  disabled = false,
 }) => {
   const buttons = [...Array(20).keys()].filter(
     (n) => n >= begin - 1 && n <= end - 1

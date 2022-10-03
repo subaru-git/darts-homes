@@ -3,13 +3,16 @@ import BullButton from "./BullButton";
 
 type CountBullButtonsProps = {
   onCount: (count: point) => void;
-  disabled: boolean;
+  disabled?: boolean;
 };
 
-const CountBullButtons: FC<CountBullButtonsProps> = ({ onCount, disabled }) => {
+const CountBullButtons: FC<CountBullButtonsProps> = ({
+  onCount,
+  disabled = false,
+}) => {
   return (
     <>
-      <BullButton onScore={(n) => onCount(n)} disable={disabled} />
+      <BullButton onScore={(n) => onCount(n)} disabled={disabled} />
     </>
   );
 };

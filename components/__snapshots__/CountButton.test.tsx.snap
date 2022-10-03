@@ -1,0 +1,1679 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should rendering and clickable input 1`] = `
+<div>
+  <div
+    class="css-0"
+  >
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        outer Bull
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        inner Bull
+      </button>
+    </div>
+  </div>
+  <div
+    class="css-0"
+  >
+    <div
+      class="css-0"
+    >
+      <div
+        class="css-0"
+      >
+        <h5
+          class="chakra-heading css-0"
+        >
+          Single
+        </h5>
+      </div>
+    </div>
+    <div
+      class="css-0"
+    >
+      <div
+        class="css-0"
+      >
+        <h5
+          class="chakra-heading css-0"
+        >
+          Double
+        </h5>
+      </div>
+    </div>
+    <div
+      class="css-0"
+    >
+      <div
+        class="css-0"
+      >
+        <h5
+          class="chakra-heading css-0"
+        >
+          Triple
+        </h5>
+      </div>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        1
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        1
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        1
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        2
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        2
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        2
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        3
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        3
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        3
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        4
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        4
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        4
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        5
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        5
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        5
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        6
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        6
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        6
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        7
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        7
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        7
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        8
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        8
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        8
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        9
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        9
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        9
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        10
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        10
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        10
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        11
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        11
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        11
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        12
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        12
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        12
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        13
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        13
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        13
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        14
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        14
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        14
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        15
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        15
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        15
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        16
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        16
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        16
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        17
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        17
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        17
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        18
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        18
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        18
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        19
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        19
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        19
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        20
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        20
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        type="button"
+      >
+        20
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should rendering and disable input 1`] = `
+<div>
+  <div
+    class="css-0"
+  >
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        outer Bull
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        inner Bull
+      </button>
+    </div>
+  </div>
+  <div
+    class="css-0"
+  >
+    <div
+      class="css-0"
+    >
+      <div
+        class="css-0"
+      >
+        <h5
+          class="chakra-heading css-0"
+        >
+          Single
+        </h5>
+      </div>
+    </div>
+    <div
+      class="css-0"
+    >
+      <div
+        class="css-0"
+      >
+        <h5
+          class="chakra-heading css-0"
+        >
+          Double
+        </h5>
+      </div>
+    </div>
+    <div
+      class="css-0"
+    >
+      <div
+        class="css-0"
+      >
+        <h5
+          class="chakra-heading css-0"
+        >
+          Triple
+        </h5>
+      </div>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        1
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        1
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        1
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        2
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        2
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        2
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        3
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        3
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        3
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        4
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        4
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        4
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        5
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        5
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        5
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        6
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        6
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        6
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        7
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        7
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        7
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        8
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        8
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        8
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        9
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        9
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        9
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        10
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        10
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        10
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        11
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        11
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        11
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        12
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        12
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        12
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        13
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        13
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        13
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        14
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        14
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        14
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        15
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        15
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        15
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        16
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        16
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        16
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        17
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        17
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        17
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        18
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        18
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        18
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        19
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        19
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        19
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        20
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        20
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        20
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should rendering only cricket numbers 1`] = `
+<div>
+  <div
+    class="css-0"
+  >
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        outer Bull
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        inner Bull
+      </button>
+    </div>
+  </div>
+  <div
+    class="css-0"
+  >
+    <div
+      class="css-0"
+    >
+      <div
+        class="css-0"
+      >
+        <h5
+          class="chakra-heading css-0"
+        >
+          Single
+        </h5>
+      </div>
+    </div>
+    <div
+      class="css-0"
+    >
+      <div
+        class="css-0"
+      >
+        <h5
+          class="chakra-heading css-0"
+        >
+          Double
+        </h5>
+      </div>
+    </div>
+    <div
+      class="css-0"
+    >
+      <div
+        class="css-0"
+      >
+        <h5
+          class="chakra-heading css-0"
+        >
+          Triple
+        </h5>
+      </div>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        15
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        15
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        15
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        16
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        16
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        16
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        17
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        17
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        17
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        18
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        18
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        18
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        19
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        19
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        19
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        20
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        20
+      </button>
+    </div>
+    <div
+      class="css-0"
+    >
+      <button
+        class="chakra-button css-0"
+        disabled=""
+        type="button"
+      >
+        20
+      </button>
+    </div>
+  </div>
+</div>
+`;

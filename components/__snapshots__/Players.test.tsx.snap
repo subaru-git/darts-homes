@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should rendering 1`] = `
+<div>
+  <div
+    class="chakra-table__container css-0"
+  >
+    <table
+      class="chakra-table css-0"
+      role="table"
+    >
+      <thead
+        class="css-0"
+      >
+        <tr
+          class="css-0"
+          role="row"
+        >
+          <th
+            class="css-0"
+          >
+            <div
+              class="chakra-editable css-0"
+            >
+              <span
+                class="chakra-editable__preview css-0"
+                tabindex="0"
+              >
+                Player3
+              </span>
+              <input
+                class="chakra-editable__input css-0"
+                hidden=""
+                value="Player3"
+              />
+            </div>
+          </th>
+          <th
+            class="css-0"
+          >
+            <div
+              class="chakra-editable css-0"
+            >
+              <span
+                class="chakra-editable__preview css-0"
+                tabindex="0"
+              >
+                Player2
+              </span>
+              <input
+                class="chakra-editable__input css-0"
+                hidden=""
+                value="Player2"
+              />
+            </div>
+          </th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+</div>
+`;
