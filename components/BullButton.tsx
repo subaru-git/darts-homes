@@ -3,29 +3,29 @@ import { css } from "@emotion/react";
 
 type BullButtonProps = {
   onScore: (n: point) => void;
-  disable: boolean;
+  disabled?: boolean;
 };
 
-const BullButton: FC<BullButtonProps> = ({ onScore, disable }) => {
+const BullButton: FC<BullButtonProps> = ({ onScore, disabled = false }) => {
   return (
     <div css={styles}>
       <input
         css={outerBullStyles}
         type="button"
         onClick={() => onScore("S-BULL")}
-        disabled={disable}
+        disabled={disabled}
       />
       <input
         css={inBullStyles}
         type="button"
         onClick={() => onScore("D-BULL")}
-        disabled={disable}
+        disabled={disabled}
       />
       <input
         css={nonBullStyles}
         type="button"
         onClick={() => onScore("0")}
-        disabled={disable}
+        disabled={disabled}
       />
     </div>
   );
