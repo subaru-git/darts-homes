@@ -11,7 +11,7 @@ import TargetBoard from "../components/TargetBoard";
 const CricketNumberCountMain: FC = () => {
   const [game, setGame] = useState(new CricketNumberCountGame(10));
   return (
-    <>
+    <div data-cy="cricket-number-count-main">
       <NavigationBar items={items} />
       <Grid templateColumns="repeat(2, auto)" gap={6} p={4}>
         <GridItem>
@@ -78,7 +78,7 @@ const CricketNumberCountMain: FC = () => {
           />
         </GridItem>
       </Grid>
-    </>
+    </div>
   );
 };
 

@@ -12,7 +12,7 @@ import NavigationBar, { NavItem } from "../components/NavigationBar";
 const N01main: FC = () => {
   const [game, setGame] = useState(new N01Game(501));
   return (
-    <>
+    <div data-cy="n01-main">
       <NavigationBar items={items} />
       <Grid templateColumns="repeat(2, auto)" gap={10} p={4}>
         <GridItem>
@@ -68,7 +68,7 @@ const N01main: FC = () => {
           />
         </GridItem>
       </Grid>
-    </>
+    </div>
   );
 };
 

@@ -4,7 +4,7 @@ import NavigationBar, { NavItem } from "../components/NavigationBar";
 
 const HomeMain: FC = () => {
   return (
-    <div>
+    <div data-cy="home-main">
       <NavigationBar items={items} />
       <h1>Home</h1>
       <Link href="/n01">501</Link>
