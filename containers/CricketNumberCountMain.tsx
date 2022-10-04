@@ -17,7 +17,7 @@ const CricketNumberCountMain: FC = () => {
         <GridItem>
           <Grid templateRows="repeat(3, auto)" gap={10}>
             <GridItem>
-              <Grid templateColumns="repeat(2, 1fr)" gap={6}>
+              <Grid templateColumns="repeat(2, auto)" gap={6}>
                 <GridItem>
                   <Grid templateRows="repeat(2, auto)">
                     <GridItem>
@@ -75,6 +75,7 @@ const CricketNumberCountMain: FC = () => {
             end={20}
             reversed={true}
             disabled={game.getRoundScore().length >= 3 || game.isFinished()}
+            other
           />
         </GridItem>
       </Grid>
