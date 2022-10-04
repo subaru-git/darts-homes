@@ -61,4 +61,5 @@ type point =
   | "20D"
   | "20T"
   | "S-BULL"
-  | "D-BULL";
+  | "D-BULL"
+  | "OUT";
