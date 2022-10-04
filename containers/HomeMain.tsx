@@ -1,17 +1,19 @@
 import React, { FC } from "react";
-import Link from "next/link";
 import NavigationBar, { NavItem } from "../components/NavigationBar";
+import Footer from "../components/Footer";
+import HomeDescription from "../components/HomeDescription";
+import HomeDescriptionRespect from "../components/HomeDescriptionRespect";
+import { Grid } from "@chakra-ui/react";
 
 const HomeMain: FC = () => {
   return (
     <div data-cy="home-main">
       <NavigationBar items={items} />
-      <h1>Home</h1>
-      <Link href="/n01">501</Link>
-      <br />
-      <Link href="/eagleseye">Eagle&apos;s Eye</Link>
-      <br />
-      <Link href="/cricketnumbercount">Cricket Number Count</Link>
+      <Grid templateRows="repeat(2, auto)" gap={2} pb={2}>
+        <HomeDescription />
+        <HomeDescriptionRespect />
+      </Grid>
+      <Footer />
     </div>
   );
 };

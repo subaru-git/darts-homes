@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should rendering 1`] = `
+<div>
+  <div>
+    <div
+      class="css-0"
+    >
+      <div
+        class="css-0"
+      >
+        <div
+          class="css-0"
+        >
+          <p
+            class="chakra-text css-0"
+          >
+            This application respects all darts content like youtube videos, blogs, and more.
+          </p>
+        </div>
+      </div>
+      <div
+        class="css-0"
+      >
+        <div
+          class=""
+        >
+          <div
+            class=""
+            id=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
