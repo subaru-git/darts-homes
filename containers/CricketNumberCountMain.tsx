@@ -7,12 +7,19 @@ import NavigationBar, { NavItem } from "../components/NavigationBar";
 import RoundBoard from "../components/RoundBoard";
 import RoundScore from "../components/RoundScore";
 import TargetBoard from "../components/TargetBoard";
+import Footer from "../components/Footer";
+import CricketNumberCountSettings from "../components/CricketNumberCountSettings";
 
 const CricketNumberCountMain: FC = () => {
   const [game, setGame] = useState(new CricketNumberCountGame(10));
   return (
     <div data-cy="cricket-number-count-main">
       <NavigationBar items={items} />
+      <CricketNumberCountSettings
+        onNewGame={(targetNumber) => {
+          setGame(new CricketNumberCountGame(targetNumber));
+        }}
+      />
       <Grid templateColumns="repeat(2, auto)" gap={6} p={4}>
         <GridItem>
           <Grid templateRows="repeat(3, auto)" gap={10}>
@@ -79,6 +86,7 @@ const CricketNumberCountMain: FC = () => {
           />
         </GridItem>
       </Grid>
+      <Footer />
     </div>
   );
 };

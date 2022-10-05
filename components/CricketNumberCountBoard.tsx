@@ -6,6 +6,7 @@ import {
   Tbody,
   Td,
   Tr,
+  Text,
 } from "@chakra-ui/react";
 import React, { FC } from "react";
 import CricketMark from "./CricketMark";
@@ -30,7 +31,9 @@ const CricketNumberCountBoard: FC<CricketNumberCountBoardProps> = ({
             {scores.map((number) => (
               <Tr key={`number-${number.number}`}>
                 <Td key={`number-${number.number}`}>
-                  {number.number === 25 ? "BULL" : number.number}
+                  <Text fontSize="lg">
+                    {number.number === 25 ? "BULL" : number.number}
+                  </Text>
                 </Td>
                 <Td key={`score-${number.number}`}>
                   <Grid templateColumns="repeat(4, 50px)" gap={1}>
@@ -44,7 +47,9 @@ const CricketNumberCountBoard: FC<CricketNumberCountBoardProps> = ({
                     ))}
                   </Grid>
                 </Td>
-                <Td>{number.total}</Td>
+                <Td>
+                  <Text fontSize="lg">{number.total}</Text>
+                </Td>
               </Tr>
             ))}
           </Tbody>

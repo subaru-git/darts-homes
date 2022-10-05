@@ -3,40 +3,44 @@
 exports[`should rendering 1`] = `
 <div>
   <div
-    class="chakra-table__container css-0"
+    class="css-0"
   >
-    <table
-      class="chakra-table css-0"
-      role="table"
+    <div
+      class="chakra-table__container css-0"
     >
-      <tbody
-        class="css-0"
+      <table
+        class="chakra-table css-0"
+        role="table"
       >
-        <tr
+        <tbody
           class="css-0"
-          role="row"
         >
-          <td
+          <tr
             class="css-0"
-            role="gridcell"
+            role="row"
           >
-            20T
-          </td>
-          <td
-            class="css-0"
-            role="gridcell"
-          >
-            19T
-          </td>
-          <td
-            class="css-0"
-            role="gridcell"
-          >
-            18T
-          </td>
-        </tr>
-      </tbody>
-    </table>
+            <td
+              class="css-0"
+              role="gridcell"
+            >
+              20T
+            </td>
+            <td
+              class="css-0"
+              role="gridcell"
+            >
+              19T
+            </td>
+            <td
+              class="css-0"
+              role="gridcell"
+            >
+              18T
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>
 `;

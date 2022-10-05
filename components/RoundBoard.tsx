@@ -1,4 +1,4 @@
-import { Table, TableContainer, Tbody, Td, Tr } from "@chakra-ui/react";
+import { Box, Table, TableContainer, Tbody, Td, Tr } from "@chakra-ui/react";
 import React, { FC } from "react";
 
 type RoundBoardProps = {
@@ -7,7 +7,7 @@ type RoundBoardProps = {
 
 const RoundBoard: FC<RoundBoardProps> = ({ score }) => {
   return (
-    <>
+    <Box overflowY="auto" maxHeight={300}>
       <TableContainer>
         <Table variant="simple">
           <Tbody>
@@ -21,7 +21,7 @@ const RoundBoard: FC<RoundBoardProps> = ({ score }) => {
           </Tbody>
         </Table>
       </TableContainer>
-    </>
+    </Box>
   );
 };
 
