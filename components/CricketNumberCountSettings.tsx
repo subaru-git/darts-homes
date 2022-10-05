@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC } from 'react'
 import {
   Box,
   Button,
@@ -16,30 +16,23 @@ import {
   NumberInputStepper,
   useDisclosure,
   Text,
-} from "@chakra-ui/react";
-import { FiSettings } from "react-icons/fi";
-import CricketNumberCountDescription from "./CricketNumberCountDescription";
+} from '@chakra-ui/react'
+import { FiSettings } from 'react-icons/fi'
+import CricketNumberCountDescription from './CricketNumberCountDescription'
 
 type CricketNumberCountSettingsProps = {
-  onNewGame: (targetCount: number) => void;
-};
+  onNewGame: (targetCount: number) => void
+}
 
-const CricketNumberCountSettings: FC<CricketNumberCountSettingsProps> = ({
-  onNewGame,
-}) => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const [targetCount, setTargetCount] = React.useState(10);
+const CricketNumberCountSettings: FC<CricketNumberCountSettingsProps> = ({ onNewGame }) => {
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const [targetCount, setTargetCount] = React.useState(10)
   return (
     <>
-      <Button
-        leftIcon={<FiSettings />}
-        aria-label="setting"
-        variant="ghost"
-        onClick={onOpen}
-      >
+      <Button leftIcon={<FiSettings />} aria-label='setting' variant='ghost' onClick={onOpen}>
         Settings
       </Button>
-      <Modal isOpen={isOpen} onClose={onClose} size="2xl">
+      <Modal isOpen={isOpen} onClose={onClose} size='2xl'>
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>Cricket Number Count Settings</ModalHeader>
@@ -48,7 +41,7 @@ const CricketNumberCountSettings: FC<CricketNumberCountSettingsProps> = ({
             <Box py={4}>
               <CricketNumberCountDescription />
             </Box>
-            <Text fontSize="sm">Target Count</Text>
+            <Text fontSize='sm'>Target Count</Text>
             <NumberInput
               defaultValue={targetCount}
               onChange={(value) => setTargetCount(parseInt(value))}
@@ -62,23 +55,23 @@ const CricketNumberCountSettings: FC<CricketNumberCountSettingsProps> = ({
           </ModalBody>
           <ModalFooter>
             <Button
-              colorScheme="blue"
+              colorScheme='blue'
               mr={3}
               onClick={() => {
-                onNewGame(targetCount);
-                onClose();
+                onNewGame(targetCount)
+                onClose()
               }}
             >
               New Game
             </Button>
-            <Button variant="ghost" onClick={onClose}>
+            <Button variant='ghost' onClick={onClose}>
               Cancel
             </Button>
           </ModalFooter>
         </ModalContent>
       </Modal>
     </>
-  );
-};
+  )
+}
 
-export default CricketNumberCountSettings;
+export default CricketNumberCountSettings

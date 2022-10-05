@@ -1,42 +1,40 @@
-import React from "react";
-import NavigationBar from "../components/NavigationBar";
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import React from 'react'
+import NavigationBar from '../components/NavigationBar'
+import { ComponentMeta, ComponentStory } from '@storybook/react'
 
 export default {
-  title: "Components/NavigationBar",
+  title: 'Components/NavigationBar',
   component: NavigationBar,
-} as ComponentMeta<typeof NavigationBar>;
+} as ComponentMeta<typeof NavigationBar>
 
-const Template: ComponentStory<typeof NavigationBar> = (args) => (
-  <NavigationBar {...args} />
-);
+const Template: ComponentStory<typeof NavigationBar> = (args) => <NavigationBar {...args} />
 
-export const Default = Template.bind({});
+export const Default = Template.bind({})
 Default.args = {
   items: [
     {
-      label: "Games",
+      label: 'Games',
       children: [
         {
-          label: "501",
-          subLabel: "The popular dart game",
-          href: "#",
+          label: '501',
+          subLabel: 'The popular dart game',
+          href: '#',
         },
         {
           label: "Eagle's Eye",
-          subLabel: "A dart game for BULL practice",
-          href: "#",
+          subLabel: 'A dart game for BULL practice',
+          href: '#',
         },
         {
-          label: "Cricket Number Count",
-          subLabel: "A original dart game for practice. designed by kikuyama.",
-          href: "#",
+          label: 'Cricket Number Count',
+          subLabel: 'A original dart game for practice. designed by kikuyama.',
+          href: '#',
         },
       ],
     },
     {
-      label: "Respects",
-      href: "#",
+      label: 'Respects',
+      href: '#',
     },
   ],
-};
+}

@@ -1,15 +1,15 @@
-import { Box, Table, TableContainer, Tbody, Td, Tr } from "@chakra-ui/react";
-import React, { FC } from "react";
+import React, { FC } from 'react'
+import { Box, Table, TableContainer, Tbody, Td, Tr } from '@chakra-ui/react'
 
 type RoundBoardProps = {
-  score: point[][];
-};
+  score: point[][]
+}
 
 const RoundBoard: FC<RoundBoardProps> = ({ score }) => {
   return (
-    <Box overflowY="auto" maxHeight={300}>
+    <Box overflowY='auto' maxHeight={300}>
       <TableContainer>
-        <Table variant="simple">
+        <Table variant='simple'>
           <Tbody>
             {score.map((round, i) => (
               <Tr key={`round-${i}`}>
@@ -22,7 +22,7 @@ const RoundBoard: FC<RoundBoardProps> = ({ score }) => {
         </Table>
       </TableContainer>
     </Box>
-  );
-};
+  )
+}
 
-export default RoundBoard;
+export default RoundBoard

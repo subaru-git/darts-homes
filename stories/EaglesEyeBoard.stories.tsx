@@ -1,20 +1,18 @@
-import React from "react";
-import EaglesEyeBoard from "../components/EaglesEyeBoard";
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import React from 'react'
+import EaglesEyeBoard from '../components/EaglesEyeBoard'
+import { ComponentMeta, ComponentStory } from '@storybook/react'
 
 export default {
-  title: "Components/EaglesEyeBoard",
+  title: 'Components/EaglesEyeBoard',
   component: EaglesEyeBoard,
-} as ComponentMeta<typeof EaglesEyeBoard>;
+} as ComponentMeta<typeof EaglesEyeBoard>
 
-const Template: ComponentStory<typeof EaglesEyeBoard> = (args) => (
-  <EaglesEyeBoard {...args} />
-);
+const Template: ComponentStory<typeof EaglesEyeBoard> = (args) => <EaglesEyeBoard {...args} />
 
-export const Default = Template.bind({});
+export const Default = Template.bind({})
 Default.args = {
   data: [
-    ["20T", "D-BULL", "S-BULL"],
-    ["D-BULL", "19D", "1T"],
+    ['20T', 'D-BULL', 'S-BULL'],
+    ['D-BULL', '19D', '1T'],
   ],
-};
+}

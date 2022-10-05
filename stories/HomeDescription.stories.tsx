@@ -1,15 +1,13 @@
-import React from "react";
-import HomeDescription from "../components/HomeDescription";
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import React from 'react'
+import HomeDescription from '../components/HomeDescription'
+import { ComponentMeta, ComponentStory } from '@storybook/react'
 
 export default {
-  title: "Components/HomeDescription",
+  title: 'Components/HomeDescription',
   component: HomeDescription,
-} as ComponentMeta<typeof HomeDescription>;
+} as ComponentMeta<typeof HomeDescription>
 
-const Template: ComponentStory<typeof HomeDescription> = (args) => (
-  <HomeDescription {...args} />
-);
+const Template: ComponentStory<typeof HomeDescription> = (args) => <HomeDescription {...args} />
 
-export const Default = Template.bind({});
-Default.args = {};
+export const Default = Template.bind({})
+Default.args = {}
