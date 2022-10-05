@@ -40,17 +40,17 @@ exports[`should rendering 1`] = `
           class="chakra-link css-32dq02"
           href="/"
         >
-          <p
-            class="chakra-text css-12uwa18"
-          >
-            Darts-Games
-          </p>
+          <img
+            alt="logo"
+            class="chakra-image css-xgff9b"
+            src="logo.png"
+          />
         </a>
         <div
           class="css-s90a0u"
         >
           <div
-            class="chakra-stack css-nd8846"
+            class="chakra-stack css-a9v878"
           >
             <div
               class="css-0"
