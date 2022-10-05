@@ -1,23 +1,21 @@
-import React, { FC } from "react";
-import { Grid, Table, TableContainer, Tbody, Td, Tr } from "@chakra-ui/react";
+import React, { FC } from 'react'
+import { Grid, Table, TableContainer, Tbody, Td, Tr } from '@chakra-ui/react'
 
 type EaglesEyeBoardProps = {
-  data: point[][];
-};
+  data: point[][]
+}
 
 const EaglesEyeBoard: FC<EaglesEyeBoardProps> = ({ data }) => {
   return (
     <div>
       <Grid>
         <TableContainer>
-          <Table variant="simple">
+          <Table variant='simple'>
             <Tbody>
               {data.map((round, i) => (
                 <Tr key={`round-${round}-${i}`}>
                   {round.map((score, j) => (
-                    <Td key={`score-${score}-${j}`}>
-                      {score.includes("BULL") ? score : "-"}
-                    </Td>
+                    <Td key={`score-${score}-${j}`}>{score.includes('BULL') ? score : '-'}</Td>
                   ))}
                 </Tr>
               ))}
@@ -26,7 +24,7 @@ const EaglesEyeBoard: FC<EaglesEyeBoardProps> = ({ data }) => {
         </TableContainer>
       </Grid>
     </div>
-  );
-};
+  )
+}
 
-export default EaglesEyeBoard;
+export default EaglesEyeBoard

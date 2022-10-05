@@ -1,52 +1,46 @@
-import { Grid, GridItem } from "@chakra-ui/react";
-import React, { FC, useState } from "react";
-import CricketNumberCountGame from "../lib/CricketNumberCountGame/CricketNumberCountGame";
-import CountButtons from "../components/CountButtons";
-import CricketNumberCountBoard from "../components/CricketNumberCountBoard";
-import NavigationBar, { NavItem } from "../components/NavigationBar";
-import RoundBoard from "../components/RoundBoard";
-import RoundScore from "../components/RoundScore";
-import TargetBoard from "../components/TargetBoard";
-import Footer from "../components/Footer";
-import CricketNumberCountSettings from "../components/CricketNumberCountSettings";
+import { Grid, GridItem } from '@chakra-ui/react'
+import React, { FC, useState } from 'react'
+import CricketNumberCountGame from '../lib/CricketNumberCountGame/CricketNumberCountGame'
+import CountButtons from '../components/CountButtons'
+import CricketNumberCountBoard from '../components/CricketNumberCountBoard'
+import NavigationBar, { NavItem } from '../components/NavigationBar'
+import RoundBoard from '../components/RoundBoard'
+import RoundScore from '../components/RoundScore'
+import TargetBoard from '../components/TargetBoard'
+import Footer from '../components/Footer'
+import CricketNumberCountSettings from '../components/CricketNumberCountSettings'
 
 const CricketNumberCountMain: FC = () => {
-  const [game, setGame] = useState(new CricketNumberCountGame(10));
+  const [game, setGame] = useState(new CricketNumberCountGame(10))
   return (
-    <div data-cy="cricket-number-count-main">
+    <div data-cy='cricket-number-count-main'>
       <NavigationBar items={items} />
       <CricketNumberCountSettings
         onNewGame={(targetNumber) => {
-          setGame(new CricketNumberCountGame(targetNumber));
+          setGame(new CricketNumberCountGame(targetNumber))
         }}
       />
-      <Grid templateColumns="repeat(2, auto)" gap={6} p={4}>
+      <Grid templateColumns='repeat(2, auto)' gap={6} p={4}>
         <GridItem>
-          <Grid templateRows="repeat(3, auto)" gap={10}>
+          <Grid templateRows='repeat(3, auto)' gap={10}>
             <GridItem>
-              <Grid templateColumns="repeat(2, auto)" gap={6}>
+              <Grid templateColumns='repeat(2, auto)' gap={6}>
                 <GridItem>
-                  <Grid templateRows="repeat(2, auto)">
+                  <Grid templateRows='repeat(2, auto)'>
                     <GridItem>
                       <TargetBoard
                         target={
-                          game.getCurrentTarget() === "-1"
-                            ? "Finish"
-                            : game.getCurrentTarget()
+                          game.getCurrentTarget() === '-1' ? 'Finish' : game.getCurrentTarget()
                         }
-                        message="Target"
+                        message='Target'
                       />
                     </GridItem>
                     <GridItem>
-                      <TargetBoard
-                        target={game.getCount().toString()}
-                        message="Count"
-                        size="sm"
-                      />
+                      <TargetBoard target={game.getCount().toString()} message='Count' size='sm' />
                     </GridItem>
                   </Grid>
                 </GridItem>
-                <GridItem maxW="500px" alignSelf="center">
+                <GridItem maxW='500px' alignSelf='center'>
                   <CricketNumberCountBoard data={game.getScore()} />
                 </GridItem>
               </Grid>
@@ -55,14 +49,14 @@ const CricketNumberCountMain: FC = () => {
               <RoundScore
                 scores={game.getRoundScore()}
                 onClear={() => {
-                  const g = Object.assign(new CricketNumberCountGame(10), game);
-                  g.removeScore();
-                  setGame(g);
+                  const g = Object.assign(new CricketNumberCountGame(10), game)
+                  g.removeScore()
+                  setGame(g)
                 }}
                 onRoundChange={() => {
-                  const g = Object.assign(new CricketNumberCountGame(10), game);
-                  g.roundChange();
-                  setGame(g);
+                  const g = Object.assign(new CricketNumberCountGame(10), game)
+                  g.roundChange()
+                  setGame(g)
                 }}
               />
             </GridItem>
@@ -74,9 +68,9 @@ const CricketNumberCountMain: FC = () => {
         <GridItem pt={4}>
           <CountButtons
             onCount={(n) => {
-              const g = Object.assign(new CricketNumberCountGame(10), game);
-              g.addScore(n);
-              setGame(g);
+              const g = Object.assign(new CricketNumberCountGame(10), game)
+              g.addScore(n)
+              setGame(g)
             }}
             begin={15}
             end={20}
@@ -88,34 +82,34 @@ const CricketNumberCountMain: FC = () => {
       </Grid>
       <Footer />
     </div>
-  );
-};
+  )
+}
 
 const items: Array<NavItem> = [
   {
-    label: "Games",
+    label: 'Games',
     children: [
       {
-        label: "501",
-        subLabel: "The popular dart game",
-        href: "/n01",
+        label: '501',
+        subLabel: 'The popular dart game',
+        href: '/n01',
       },
       {
         label: "Eagle's Eye",
-        subLabel: "A dart game for BULL practice",
-        href: "/eagleseye",
+        subLabel: 'A dart game for BULL practice',
+        href: '/eagleseye',
       },
       {
-        label: "Cricket Number Count",
-        subLabel: "A original dart game for practice. designed by kikuyama.",
-        href: "#",
+        label: 'Cricket Number Count',
+        subLabel: 'A original dart game for practice. designed by kikuyama.',
+        href: '#',
       },
     ],
   },
   {
-    label: "Respects",
-    href: "#",
+    label: 'Respects',
+    href: '#',
   },
-];
+]
 
-export default CricketNumberCountMain;
+export default CricketNumberCountMain

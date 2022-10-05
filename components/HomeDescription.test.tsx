@@ -1,8 +1,8 @@
-import HomeDescription from "./HomeDescription";
-import { render, screen } from "@testing-library/react";
+import { render, screen } from '@testing-library/react'
+import HomeDescription from './HomeDescription'
 
-test("should rendering", () => {
-  const { container } = render(<HomeDescription />);
-  expect(screen.getByAltText("darts")).not.toBeNull();
-  expect(container).toMatchSnapshot();
-});
+test('should rendering', () => {
+  const { container } = render(<HomeDescription />)
+  expect(screen.getByAltText('darts')).not.toBeNull()
+  expect(container).toMatchSnapshot()
+})

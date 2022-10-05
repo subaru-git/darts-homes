@@ -1,18 +1,16 @@
-import React from "react";
-import TargetBoard from "../components/TargetBoard";
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import React from 'react'
+import TargetBoard from '../components/TargetBoard'
+import { ComponentMeta, ComponentStory } from '@storybook/react'
 
 export default {
-  title: "Components/TargetBoard",
+  title: 'Components/TargetBoard',
   component: TargetBoard,
-} as ComponentMeta<typeof TargetBoard>;
+} as ComponentMeta<typeof TargetBoard>
 
-const Template: ComponentStory<typeof TargetBoard> = (args) => (
-  <TargetBoard {...args} />
-);
+const Template: ComponentStory<typeof TargetBoard> = (args) => <TargetBoard {...args} />
 
-export const Default = Template.bind({});
+export const Default = Template.bind({})
 Default.args = {
-  target: "501",
-  message: "Next Target",
-};
+  target: '501',
+  message: 'Next Target',
+}

@@ -1,20 +1,17 @@
-import React, { FC } from "react";
-import BullButton from "./BullButton";
+import React, { FC } from 'react'
+import BullButton from './BullButton'
 
 type CountBullButtonsProps = {
-  onCount: (count: point) => void;
-  disabled?: boolean;
-};
+  onCount: (count: point) => void
+  disabled?: boolean
+}
 
-const CountBullButtons: FC<CountBullButtonsProps> = ({
-  onCount,
-  disabled = false,
-}) => {
+const CountBullButtons: FC<CountBullButtonsProps> = ({ onCount, disabled = false }) => {
   return (
     <>
       <BullButton onScore={(n) => onCount(n)} disabled={disabled} />
     </>
-  );
-};
+  )
+}
 
-export default CountBullButtons;
+export default CountBullButtons

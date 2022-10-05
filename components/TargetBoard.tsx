@@ -1,36 +1,23 @@
-import { Heading } from "@chakra-ui/react";
-import React, { FC } from "react";
+import React, { FC } from 'react'
+import { Heading } from '@chakra-ui/react'
 
 type TargetBoardProps = {
-  target?: string;
-  message: string;
-  size?: "sm" | "md";
-};
+  target?: string
+  message: string
+  size?: 'sm' | 'md'
+}
 
-const TargetBoard: FC<TargetBoardProps> = ({
-  target,
-  message,
-  size = "md",
-}) => {
+const TargetBoard: FC<TargetBoardProps> = ({ target, message, size = 'md' }) => {
   return (
     <>
-      <Heading
-        fontSize={size === "md" ? "32px" : "24px"}
-        color="green.500"
-        pl={4}
-        pt={4}
-      >
+      <Heading fontSize={size === 'md' ? '32px' : '24px'} color='green.500' pl={4} pt={4}>
         {message}
       </Heading>
-      <Heading
-        textAlign="center"
-        fontSize={size === "md" ? "96px" : "64px"}
-        py={8}
-      >
+      <Heading textAlign='center' fontSize={size === 'md' ? '96px' : '64px'} py={8}>
         {target}
       </Heading>
     </>
-  );
-};
+  )
+}
 
-export default TargetBoard;
+export default TargetBoard
