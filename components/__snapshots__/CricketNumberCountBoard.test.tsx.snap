@@ -20,7 +20,11 @@ exports[`should rendering 1`] = `
             class="css-0"
             role="gridcell"
           >
-            20
+            <p
+              class="chakra-text css-0"
+            >
+              20
+            </p>
           </td>
           <td
             class="css-0"
@@ -38,7 +42,11 @@ exports[`should rendering 1`] = `
             class="css-0"
             role="gridcell"
           >
-            0
+            <p
+              class="chakra-text css-0"
+            >
+              0
+            </p>
           </td>
         </tr>
         <tr
@@ -49,7 +57,11 @@ exports[`should rendering 1`] = `
             class="css-0"
             role="gridcell"
           >
-            19
+            <p
+              class="chakra-text css-0"
+            >
+              19
+            </p>
           </td>
           <td
             class="css-0"
@@ -67,7 +79,11 @@ exports[`should rendering 1`] = `
             class="css-0"
             role="gridcell"
           >
-            0
+            <p
+              class="chakra-text css-0"
+            >
+              0
+            </p>
           </td>
         </tr>
         <tr
@@ -78,7 +94,11 @@ exports[`should rendering 1`] = `
             class="css-0"
             role="gridcell"
           >
-            18
+            <p
+              class="chakra-text css-0"
+            >
+              18
+            </p>
           </td>
           <td
             class="css-0"
@@ -96,7 +116,11 @@ exports[`should rendering 1`] = `
             class="css-0"
             role="gridcell"
           >
-            0
+            <p
+              class="chakra-text css-0"
+            >
+              0
+            </p>
           </td>
         </tr>
         <tr
@@ -107,7 +131,11 @@ exports[`should rendering 1`] = `
             class="css-0"
             role="gridcell"
           >
-            17
+            <p
+              class="chakra-text css-0"
+            >
+              17
+            </p>
           </td>
           <td
             class="css-0"
@@ -125,7 +153,11 @@ exports[`should rendering 1`] = `
             class="css-0"
             role="gridcell"
           >
-            0
+            <p
+              class="chakra-text css-0"
+            >
+              0
+            </p>
           </td>
         </tr>
         <tr
@@ -136,7 +168,11 @@ exports[`should rendering 1`] = `
             class="css-0"
             role="gridcell"
           >
-            16
+            <p
+              class="chakra-text css-0"
+            >
+              16
+            </p>
           </td>
           <td
             class="css-0"
@@ -154,7 +190,11 @@ exports[`should rendering 1`] = `
             class="css-0"
             role="gridcell"
           >
-            0
+            <p
+              class="chakra-text css-0"
+            >
+              0
+            </p>
           </td>
         </tr>
         <tr
@@ -165,7 +205,11 @@ exports[`should rendering 1`] = `
             class="css-0"
             role="gridcell"
           >
-            15
+            <p
+              class="chakra-text css-0"
+            >
+              15
+            </p>
           </td>
           <td
             class="css-0"
@@ -183,7 +227,11 @@ exports[`should rendering 1`] = `
             class="css-0"
             role="gridcell"
           >
-            0
+            <p
+              class="chakra-text css-0"
+            >
+              0
+            </p>
           </td>
         </tr>
         <tr
@@ -194,7 +242,11 @@ exports[`should rendering 1`] = `
             class="css-0"
             role="gridcell"
           >
-            BULL
+            <p
+              class="chakra-text css-0"
+            >
+              BULL
+            </p>
           </td>
           <td
             class="css-0"
@@ -212,7 +264,11 @@ exports[`should rendering 1`] = `
             class="css-0"
             role="gridcell"
           >
-            0
+            <p
+              class="chakra-text css-0"
+            >
+              0
+            </p>
           </td>
         </tr>
       </tbody>
