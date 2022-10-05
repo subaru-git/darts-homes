@@ -12,7 +12,7 @@ test('should rendering', () => {
       <NavigationBar items={items} />
     </ChakraProvider>,
   )
-  expect(screen.getAllByText('Darts-Games')).toHaveLength(1)
+  expect(screen.getByAltText('logo')).not.toBeNull()
   expect(container).toMatchSnapshot()
 })
 
