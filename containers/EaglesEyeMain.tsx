@@ -2,15 +2,16 @@ import React, { FC, useState } from 'react'
 import { Grid, GridItem } from '@chakra-ui/react'
 import CountBullButtons from '../components/CountBullButtons'
 import EaglesEyeBoard from '../components/EaglesEyeBoard'
-import NavigationBar, { NavItem } from '../components/NavigationBar'
+import NavigationBar from '../components/NavigationBar'
 import RoundBullScore from '../components/RoundBullScore'
+import useLocale from '../hooks/locale'
 import EaglesEyeGame from '../lib/EaglesEyeGame/EaglesEyeGame'
 
 const EaglesEyeMain: FC = () => {
   const [game, setGame] = useState(new EaglesEyeGame())
   return (
     <div data-cy='eagles-eye-main'>
-      <NavigationBar items={items} />
+      <NavigationBar items={GetNavItem()} />
       <Grid templateRows={'repeat(3, auto)'} gap={10} justifyContent='center' p={10}>
         <GridItem>
           <CountBullButtons
@@ -45,31 +46,35 @@ const EaglesEyeMain: FC = () => {
   )
 }
 
-const items: Array<NavItem> = [
-  {
-    label: 'Games',
-    children: [
-      {
-        label: '501',
-        subLabel: 'The popular dart game',
-        href: '/n01',
-      },
-      {
-        label: "Eagle's Eye",
-        subLabel: 'A dart game for BULL practice',
-        href: '#',
-      },
-      {
-        label: 'Cricket Number Count',
-        subLabel: 'A original dart game for practice. designed by kikuyama.',
-        href: '/cricketnumbercount',
-      },
-    ],
-  },
-  {
-    label: 'Respects',
-    href: '#',
-  },
-]
+const GetNavItem = () => {
+  const { t } = useLocale()
+
+  return [
+    {
+      label: 'Games',
+      children: [
+        {
+          label: '501',
+          subLabel: t.N01_DESCRIPTION,
+          href: '/n01',
+        },
+        {
+          label: "Eagle's Eye",
+          subLabel: t.EAGLES_EYE_DESCRIPTION,
+          href: '#',
+        },
+        {
+          label: 'Cricket Number Count',
+          subLabel: t.CRICKET_NUMBER_COUNT_SHORT_DESCRIPTION,
+          href: '/cricketnumbercount',
+        },
+      ],
+    },
+    {
+      label: 'Respects',
+      href: '#',
+    },
+  ]
+}
 
 export default EaglesEyeMain

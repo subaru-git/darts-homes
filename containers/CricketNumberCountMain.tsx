@@ -4,17 +4,18 @@ import CountButtons from '../components/CountButtons'
 import CricketNumberCountBoard from '../components/CricketNumberCountBoard'
 import CricketNumberCountSettings from '../components/CricketNumberCountSettings'
 import Footer from '../components/Footer'
-import NavigationBar, { NavItem } from '../components/NavigationBar'
+import NavigationBar from '../components/NavigationBar'
 import RoundBoard from '../components/RoundBoard'
 import RoundScore from '../components/RoundScore'
 import TargetBoard from '../components/TargetBoard'
+import useLocale from '../hooks/locale'
 import CricketNumberCountGame from '../lib/CricketNumberCountGame/CricketNumberCountGame'
 
 const CricketNumberCountMain: FC = () => {
   const [game, setGame] = useState(new CricketNumberCountGame(10))
   return (
     <div data-cy='cricket-number-count-main'>
-      <NavigationBar items={items} />
+      <NavigationBar items={GetNavItem()} />
       <CricketNumberCountSettings
         onNewGame={(targetNumber) => {
           setGame(new CricketNumberCountGame(targetNumber))
@@ -89,31 +90,35 @@ const CricketNumberCountMain: FC = () => {
   )
 }
 
-const items: Array<NavItem> = [
-  {
-    label: 'Games',
-    children: [
-      {
-        label: '501',
-        subLabel: 'The popular dart game',
-        href: '/n01',
-      },
-      {
-        label: "Eagle's Eye",
-        subLabel: 'A dart game for BULL practice',
-        href: '/eagleseye',
-      },
-      {
-        label: 'Cricket Number Count',
-        subLabel: 'A original dart game for practice. designed by kikuyama.',
-        href: '#',
-      },
-    ],
-  },
-  {
-    label: 'Respects',
-    href: '#',
-  },
-]
+const GetNavItem = () => {
+  const { t } = useLocale()
+
+  return [
+    {
+      label: 'Games',
+      children: [
+        {
+          label: '501',
+          subLabel: t.N01_DESCRIPTION,
+          href: '/n01',
+        },
+        {
+          label: "Eagle's Eye",
+          subLabel: t.EAGLES_EYE_DESCRIPTION,
+          href: '/eagleseye',
+        },
+        {
+          label: 'Cricket Number Count',
+          subLabel: t.CRICKET_NUMBER_COUNT_SHORT_DESCRIPTION,
+          href: '/#',
+        },
+      ],
+    },
+    {
+      label: 'Respects',
+      href: '#',
+    },
+  ]
+}
 
 export default CricketNumberCountMain

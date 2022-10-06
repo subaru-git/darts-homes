@@ -36,16 +36,16 @@ exports[`should rendering 1`] = `
       <div
         class="css-hhwkx"
       >
-        <a
-          class="chakra-link css-32dq02"
-          href="/"
+        <div
+          class="css-8fa26g"
         >
           <img
             alt="logo"
-            class="chakra-image css-xgff9b"
-            src="logo.svg"
+            class="chakra-image css-u1jr60"
+            href="/"
+            src="/logo.svg"
           />
-        </a>
+        </div>
         <div
           class="css-s90a0u"
         >
@@ -55,16 +55,19 @@ exports[`should rendering 1`] = `
             <div
               class="css-0"
             >
-              <a
+              <div
                 aria-controls="popover-content-:r2:"
                 aria-expanded="false"
                 aria-haspopup="dialog"
-                class="chakra-link css-oe8fj1"
-                href="#"
+                class="css-13fflh2"
                 id="popover-trigger-:r2:"
               >
-                Games
-              </a>
+                <a
+                  href="/#"
+                >
+                  Games
+                </a>
+              </div>
               <div
                 class="chakra-popover__popper css-1qq679y"
                 style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
@@ -79,9 +82,8 @@ exports[`should rendering 1`] = `
                   <div
                     class="chakra-stack css-n21gh5"
                   >
-                    <a
-                      class="chakra-link css-1tsr3k3"
-                      href="#"
+                    <div
+                      class="css-1rc82uo"
                       role="group"
                     >
                       <div
@@ -122,10 +124,9 @@ exports[`should rendering 1`] = `
                           </svg>
                         </div>
                       </div>
-                    </a>
-                    <a
-                      class="chakra-link css-1tsr3k3"
-                      href="/eagleseye"
+                    </div>
+                    <div
+                      class="css-1rc82uo"
                       role="group"
                     >
                       <div
@@ -166,10 +167,9 @@ exports[`should rendering 1`] = `
                           </svg>
                         </div>
                       </div>
-                    </a>
-                    <a
-                      class="chakra-link css-1tsr3k3"
-                      href="/cricketnumbercount"
+                    </div>
+                    <div
+                      class="css-1rc82uo"
                       role="group"
                     >
                       <div
@@ -210,7 +210,7 @@ exports[`should rendering 1`] = `
                           </svg>
                         </div>
                       </div>
-                    </a>
+                    </div>
                   </div>
                 </section>
               </div>
@@ -218,18 +218,84 @@ exports[`should rendering 1`] = `
             <div
               class="css-0"
             >
-              <a
+              <div
                 aria-controls="popover-content-:r4:"
                 aria-expanded="false"
                 aria-haspopup="dialog"
-                class="chakra-link css-oe8fj1"
-                href="#"
+                class="css-13fflh2"
                 id="popover-trigger-:r4:"
               >
-                Respects
-              </a>
+                <a
+                  href="/#"
+                >
+                  Respects
+                </a>
+              </div>
             </div>
           </div>
+        </div>
+        <div
+          class="css-17xejub"
+        />
+        <button
+          aria-controls="popover-content-:r6:"
+          aria-expanded="false"
+          aria-haspopup="dialog"
+          aria-label="Change language"
+          class="chakra-button css-ywwdc4"
+          id="popover-trigger-:r6:"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            fill="currentColor"
+            focusable="false"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 512 512"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M478.33 433.6l-90-218a22 22 0 00-40.67 0l-90 218a22 22 0 1040.67 16.79L316.66 406h102.67l18.33 44.39A22 22 0 00458 464a22 22 0 0020.32-30.4zM334.83 362L368 281.65 401.17 362zm-66.99-19.08a22 22 0 00-4.89-30.7c-.2-.15-15-11.13-36.49-34.73 39.65-53.68 62.11-114.75 71.27-143.49H330a22 22 0 000-44H214V70a22 22 0 00-44 0v20H54a22 22 0 000 44h197.25c-9.52 26.95-27.05 69.5-53.79 108.36-31.41-41.68-43.08-68.65-43.17-68.87a22 22 0 00-40.58 17c.58 1.38 14.55 34.23 52.86 83.93.92 1.19 1.83 2.35 2.74 3.51-39.24 44.35-77.74 71.86-93.85 80.74a22 22 0 1021.07 38.63c2.16-1.18 48.6-26.89 101.63-85.59 22.52 24.08 38 35.44 38.93 36.1a22 22 0 0030.75-4.9z"
+            />
+          </svg>
+        </button>
+        <div
+          class="chakra-popover__popper css-1qq679y"
+          style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+        >
+          <section
+            class="chakra-popover__content css-1l1b222"
+            id="popover-content-:r6:"
+            role="dialog"
+            style="transform-origin: var(--popper-transform-origin); opacity: 0; transform: scale(0.95) translateZ(0);"
+            tabindex="-1"
+          >
+            <div
+              class="css-1rc82uo"
+              href="/"
+              role="group"
+            >
+              <p
+                class="chakra-text css-sc37ud"
+              >
+                日本語
+              </p>
+            </div>
+            <div
+              class="css-1rc82uo"
+              href="/"
+              role="group"
+            >
+              <p
+                class="chakra-text css-sc37ud"
+              >
+                English
+              </p>
+            </div>
+          </section>
         </div>
       </div>
     </div>
@@ -243,9 +309,9 @@ exports[`should rendering 1`] = `
         <div
           class="chakra-stack css-egoftb"
         >
-          <a
-            class="chakra-link css-wnxme9"
-            href="#"
+          <div
+            class="css-lxmzlz"
+            href="/#"
           >
             <p
               class="chakra-text css-9y4vnp"
@@ -268,7 +334,7 @@ exports[`should rendering 1`] = `
                 fill-rule="evenodd"
               />
             </svg>
-          </a>
+          </div>
           <div
             class="chakra-collapse"
             style="overflow: hidden; display: none; opacity: 0; height: 0px;"
@@ -276,40 +342,37 @@ exports[`should rendering 1`] = `
             <div
               class="chakra-stack css-11sp92w"
             >
-              <a
-                class="chakra-link css-km23hw"
-                href="#"
+              <div
+                class="css-1j1i25b"
               >
                 501
-              </a>
-              <a
-                class="chakra-link css-km23hw"
-                href="/eagleseye"
+              </div>
+              <div
+                class="css-1j1i25b"
               >
                 Eagle's Eye
-              </a>
-              <a
-                class="chakra-link css-km23hw"
-                href="/cricketnumbercount"
+              </div>
+              <div
+                class="css-1j1i25b"
               >
                 Cricket Number Count
-              </a>
+              </div>
             </div>
           </div>
         </div>
         <div
           class="chakra-stack css-egoftb"
         >
-          <a
-            class="chakra-link css-wnxme9"
-            href="#"
+          <div
+            class="css-lxmzlz"
+            href="/#"
           >
             <p
               class="chakra-text css-9y4vnp"
             >
               Respects
             </p>
-          </a>
+          </div>
           <div
             class="chakra-collapse"
             style="overflow: hidden; display: none; opacity: 0; height: 0px;"

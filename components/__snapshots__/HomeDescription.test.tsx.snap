@@ -23,11 +23,8 @@ exports[`should rendering 1`] = `
         <p
           class="chakra-text css-0"
         >
-          This application has some darts games.
-          <br />
-          The games are for solo practice. (Is the 01 game not solo? It's for software development learning)
-          <br />
-          Some games are not supported by DartsLive Home. So if a game will support by DartsLive Home, the game changes to deprecated.
+          This application has some darts games.The games are for solo practice. (Is the 01 game not solo? It's for software development learning)
+Some games are not supported by DartsLive Home. So if a game will support by DartsLive Home, the game changes to deprecated.
         </p>
       </div>
     </div>
