@@ -43,7 +43,7 @@ exports[`should rendering 1`] = `
           <img
             alt="logo"
             class="chakra-image css-xgff9b"
-            src="logo.png"
+            src="logo.svg"
           />
         </a>
         <div
