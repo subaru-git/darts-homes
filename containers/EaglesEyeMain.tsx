@@ -1,10 +1,10 @@
 import React, { FC, useState } from 'react'
 import { Grid, GridItem } from '@chakra-ui/react'
-import EaglesEyeBoard from '../components/EaglesEyeBoard'
 import CountBullButtons from '../components/CountBullButtons'
-import EaglesEyeGame from '../lib/EaglesEyeGame/EaglesEyeGame'
-import RoundBullScore from '../components/RoundBullScore'
+import EaglesEyeBoard from '../components/EaglesEyeBoard'
 import NavigationBar, { NavItem } from '../components/NavigationBar'
+import RoundBullScore from '../components/RoundBullScore'
+import EaglesEyeGame from '../lib/EaglesEyeGame/EaglesEyeGame'
 
 const EaglesEyeMain: FC = () => {
   const [game, setGame] = useState(new EaglesEyeGame())

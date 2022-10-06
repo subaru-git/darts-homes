@@ -1,9 +1,9 @@
 import React, { FC } from 'react'
-import NavigationBar, { NavItem } from '../components/NavigationBar'
+import { Grid } from '@chakra-ui/react'
 import Footer from '../components/Footer'
 import HomeDescription from '../components/HomeDescription'
 import HomeDescriptionRespect from '../components/HomeDescriptionRespect'
-import { Grid } from '@chakra-ui/react'
+import NavigationBar, { NavItem } from '../components/NavigationBar'
 
 const HomeMain: FC = () => {
   return (
