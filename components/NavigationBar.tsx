@@ -61,7 +61,7 @@ const NavigationBar: FC<NavigationBarProps> = ({ items }) => {
               color: useColorModeValue('gray.800', 'white'),
             }}
           >
-            <Image src='logo.png' alt='logo' h='32px' />
+            <Image src='logo.svg' alt='logo' h='32px' />
           </Link>
           <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
             <DesktopNav items={items} />
