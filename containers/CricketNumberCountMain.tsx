@@ -30,7 +30,11 @@ const CricketNumberCountMain: FC = () => {
                     <GridItem>
                       <TargetBoard
                         target={
-                          game.getCurrentTarget() === '-1' ? 'Finish' : game.getCurrentTarget()
+                          game.getCurrentTarget() === '-1'
+                            ? 'Fin'
+                            : game.getCurrentTarget() === 'S-BULL'
+                            ? 'BULL'
+                            : game.getCurrentTarget()
                         }
                         message='Target'
                       />
