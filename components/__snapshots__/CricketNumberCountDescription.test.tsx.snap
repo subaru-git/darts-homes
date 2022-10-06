@@ -37,9 +37,8 @@ exports[`should rendering 1`] = `
     <p
       class="chakra-text css-0"
     >
-      This game was designed by'Kikuchi Yamaguchi.' 
-      <br />
-      The game rule is:
+      This game was designed by 'Kikuchi Yamaguchi.'
+The game rule is:
     </p>
     <ul
       class="css-0"

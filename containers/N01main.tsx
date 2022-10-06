@@ -2,10 +2,11 @@ import React, { FC, useState } from 'react'
 import { Grid, GridItem } from '@chakra-ui/react'
 import CountButtons from '../components/CountButtons'
 import N01Board from '../components/N01Board'
-import NavigationBar, { NavItem } from '../components/NavigationBar'
+import NavigationBar from '../components/NavigationBar'
 import Players from '../components/Players'
 import RoundScore from '../components/RoundScore'
 import TargetBoard from '../components/TargetBoard'
+import useLocale from '../hooks/locale'
 import N01Game from '../lib/N01Game/N01Game'
 import Player from '../lib/Player/Player'
 
@@ -13,7 +14,7 @@ const N01main: FC = () => {
   const [game, setGame] = useState(new N01Game(501))
   return (
     <div data-cy='n01-main'>
-      <NavigationBar items={items} />
+      <NavigationBar items={GetNavItem()} />
       <Grid templateColumns='repeat(2, auto)' gap={10} p={4}>
         <GridItem>
           <Grid templateRows='repeat(3, auto)' gap={10}>
@@ -70,31 +71,35 @@ const N01main: FC = () => {
   )
 }
 
-const items: Array<NavItem> = [
-  {
-    label: 'Games',
-    children: [
-      {
-        label: '501',
-        subLabel: 'The popular dart game',
-        href: '#',
-      },
-      {
-        label: "Eagle's Eye",
-        subLabel: 'A dart game for BULL practice',
-        href: '/eagleseye',
-      },
-      {
-        label: 'Cricket Number Count',
-        subLabel: 'A original dart game for practice. designed by kikuyama.',
-        href: '/cricketnumbercount',
-      },
-    ],
-  },
-  {
-    label: 'Respects',
-    href: '#',
-  },
-]
+const GetNavItem = () => {
+  const { t } = useLocale()
+
+  return [
+    {
+      label: 'Games',
+      children: [
+        {
+          label: '501',
+          subLabel: t.N01_DESCRIPTION,
+          href: '#',
+        },
+        {
+          label: "Eagle's Eye",
+          subLabel: t.EAGLES_EYE_DESCRIPTION,
+          href: '/eagleseye',
+        },
+        {
+          label: 'Cricket Number Count',
+          subLabel: t.CRICKET_NUMBER_COUNT_SHORT_DESCRIPTION,
+          href: '/cricketnumbercount',
+        },
+      ],
+    },
+    {
+      label: 'Respects',
+      href: '#',
+    },
+  ]
+}
 
 export default N01main

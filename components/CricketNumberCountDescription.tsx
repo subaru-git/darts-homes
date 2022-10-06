@@ -2,27 +2,23 @@ import React, { FC } from 'react'
 import { Button, Collapse, useDisclosure, Text, UnorderedList, ListItem } from '@chakra-ui/react'
 import { GrCircleInformation } from 'react-icons/gr'
 import YouTube from 'react-youtube'
+import useLocale from '../hooks/locale'
 
 const CricketNumberCountDescription: FC = () => {
   const { isOpen, onToggle } = useDisclosure()
+  const { t } = useLocale()
   return (
     <>
       <Button leftIcon={<GrCircleInformation />} variant='ghost' size='sm' onClick={onToggle}>
         What is this game?
       </Button>
       <Collapse in={isOpen}>
-        <Text>
-          This game was designed by&#39;Kikuchi Yamaguchi.&#39; <br />
-          The game rule is:
-        </Text>
+        <Text whiteSpace='pre-wrap'>{t.CRICKET_NUMBER_COUNT_DESCRIPTION}</Text>
         <UnorderedList py={2}>
-          <ListItem>Setting target count (recommended 10 times)</ListItem>
-          <ListItem>
-            Shoot for each cricket numbers from 20 to 15 and Bull until the target count of times,
-            like Cricket.
-          </ListItem>
+          <ListItem>{t.CRICKET_NUMBER_COUNT_RULE_STEP1}</ListItem>
+          <ListItem>{t.CRICKET_NUMBER_COUNT_RULE_STEP2}</ListItem>
         </UnorderedList>
-        <Text>For more information, please watch this video.</Text>
+        <Text>{t.CRICKET_NUMBER_COUNT_RULE_MORE}</Text>
         <YouTube videoId='RFl52NNvWhw' />
       </Collapse>
     </>

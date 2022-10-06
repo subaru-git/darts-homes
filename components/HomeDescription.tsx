@@ -1,7 +1,9 @@
 import React, { FC } from 'react'
 import { Center, Grid, GridItem, Image, Text } from '@chakra-ui/react'
+import useLocale from '../hooks/locale'
 
 const HomeDescription: FC = () => {
+  const { t } = useLocale()
   return (
     <Grid templateColumns='repeat(2, auto)' justifyContent='center' gap={4}>
       <GridItem>
@@ -9,14 +11,8 @@ const HomeDescription: FC = () => {
       </GridItem>
       <GridItem>
         <Center h='100%'>
-          <Text fontSize='xl'>
-            This application has some darts games.
-            <br />
-            The games are for solo practice. (Is the 01 game not solo? It&#39;s for software
-            development learning)
-            <br />
-            Some games are not supported by DartsLive Home. So if a game will support by DartsLive
-            Home, the game changes to deprecated.
+          <Text fontSize='xl' whiteSpace='pre-wrap'>
+            {t.HOME_DESCRIPTION}
           </Text>
         </Center>
       </GridItem>
