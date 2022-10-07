@@ -3,11 +3,11 @@
 exports[`should rendering 1`] = `
 <div>
   <button
-    class="chakra-button css-0"
+    class="chakra-button css-4xx2wk"
     type="button"
   >
     <span
-      class="chakra-button__icon css-0"
+      class="chakra-button__icon css-1wh2kri"
     >
       <svg
         aria-hidden="true"
@@ -35,13 +35,13 @@ exports[`should rendering 1`] = `
     style="overflow: hidden; display: none; opacity: 0; height: 0px;"
   >
     <p
-      class="chakra-text css-0"
+      class="chakra-text css-1kxrhf3"
     >
       This game was designed by 'Kikuchi Yamaguchi.'
 The game rule is:
     </p>
     <ul
-      class="css-0"
+      class="css-iq85eg"
       role="list"
     >
       <li

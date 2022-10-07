@@ -9,7 +9,6 @@ import {
   Box,
 } from '@chakra-ui/react'
 import Link from 'next/link'
-import { setCookie } from 'nookies'
 import { IoLanguage } from 'react-icons/io5'
 
 const LanguageChangeButton: FC = () => {
@@ -26,9 +25,6 @@ const LanguageChangeButton: FC = () => {
             p={2}
             rounded={'md'}
             _hover={{ bg: useColorModeValue('pink.50', 'gray.900') }}
-            onClick={() => {
-              setCookie(null, 'NEXT_LOCALE', 'ja', {})
-            }}
           >
             <Text transition={'all .3s ease'} _groupHover={{ color: 'pink.400' }} fontWeight={500}>
               日本語

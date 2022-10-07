@@ -3,12 +3,12 @@
 exports[`should rendering 1`] = `
 <div>
   <h2
-    class="chakra-heading css-0"
+    class="chakra-heading css-1y3vej2"
   >
     next target
   </h2>
   <h2
-    class="chakra-heading css-0"
+    class="chakra-heading css-ztrn0v"
   >
     501
   </h2>
