@@ -2,7 +2,6 @@ import React from 'react'
 import { fireEvent, render, screen } from '@testing-library/react'
 import LanguageChangeButton from './LanguageChangeButton'
 
-jest.mock('nookies', () => ({ setCookie: jest.fn() }))
 jest.mock(
   'next/link',
   () =>

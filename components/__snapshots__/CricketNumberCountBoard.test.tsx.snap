@@ -3,47 +3,42 @@
 exports[`should rendering 1`] = `
 <div>
   <div
-    class="chakra-table__container css-0"
+    class="chakra-table__container css-zipzvv"
   >
     <table
       class="chakra-table css-0"
-      role="table"
     >
       <tbody
         class="css-0"
       >
         <tr
           class="css-0"
-          role="row"
         >
           <td
             class="css-0"
-            role="gridcell"
           >
             <p
-              class="chakra-text css-0"
+              class="chakra-text css-1ezsviu"
             >
               20
             </p>
           </td>
           <td
             class="css-0"
-            role="gridcell"
           >
             <div
-              class="css-0"
+              class="css-1ntzyee"
             >
               <div
-                class="css-0"
+                class="css-1gvp5h0"
               />
             </div>
           </td>
           <td
             class="css-0"
-            role="gridcell"
           >
             <p
-              class="chakra-text css-0"
+              class="chakra-text css-1ezsviu"
             >
               0
             </p>
@@ -51,36 +46,32 @@ exports[`should rendering 1`] = `
         </tr>
         <tr
           class="css-0"
-          role="row"
         >
           <td
             class="css-0"
-            role="gridcell"
           >
             <p
-              class="chakra-text css-0"
+              class="chakra-text css-1ezsviu"
             >
               19
             </p>
           </td>
           <td
             class="css-0"
-            role="gridcell"
           >
             <div
-              class="css-0"
+              class="css-1ntzyee"
             >
               <div
-                class="css-0"
+                class="css-1gvp5h0"
               />
             </div>
           </td>
           <td
             class="css-0"
-            role="gridcell"
           >
             <p
-              class="chakra-text css-0"
+              class="chakra-text css-1ezsviu"
             >
               0
             </p>
@@ -88,36 +79,32 @@ exports[`should rendering 1`] = `
         </tr>
         <tr
           class="css-0"
-          role="row"
         >
           <td
             class="css-0"
-            role="gridcell"
           >
             <p
-              class="chakra-text css-0"
+              class="chakra-text css-1ezsviu"
             >
               18
             </p>
           </td>
           <td
             class="css-0"
-            role="gridcell"
           >
             <div
-              class="css-0"
+              class="css-1ntzyee"
             >
               <div
-                class="css-0"
+                class="css-1gvp5h0"
               />
             </div>
           </td>
           <td
             class="css-0"
-            role="gridcell"
           >
             <p
-              class="chakra-text css-0"
+              class="chakra-text css-1ezsviu"
             >
               0
             </p>
@@ -125,36 +112,32 @@ exports[`should rendering 1`] = `
         </tr>
         <tr
           class="css-0"
-          role="row"
         >
           <td
             class="css-0"
-            role="gridcell"
           >
             <p
-              class="chakra-text css-0"
+              class="chakra-text css-1ezsviu"
             >
               17
             </p>
           </td>
           <td
             class="css-0"
-            role="gridcell"
           >
             <div
-              class="css-0"
+              class="css-1ntzyee"
             >
               <div
-                class="css-0"
+                class="css-1gvp5h0"
               />
             </div>
           </td>
           <td
             class="css-0"
-            role="gridcell"
           >
             <p
-              class="chakra-text css-0"
+              class="chakra-text css-1ezsviu"
             >
               0
             </p>
@@ -162,36 +145,32 @@ exports[`should rendering 1`] = `
         </tr>
         <tr
           class="css-0"
-          role="row"
         >
           <td
             class="css-0"
-            role="gridcell"
           >
             <p
-              class="chakra-text css-0"
+              class="chakra-text css-1ezsviu"
             >
               16
             </p>
           </td>
           <td
             class="css-0"
-            role="gridcell"
           >
             <div
-              class="css-0"
+              class="css-1ntzyee"
             >
               <div
-                class="css-0"
+                class="css-1gvp5h0"
               />
             </div>
           </td>
           <td
             class="css-0"
-            role="gridcell"
           >
             <p
-              class="chakra-text css-0"
+              class="chakra-text css-1ezsviu"
             >
               0
             </p>
@@ -199,36 +178,32 @@ exports[`should rendering 1`] = `
         </tr>
         <tr
           class="css-0"
-          role="row"
         >
           <td
             class="css-0"
-            role="gridcell"
           >
             <p
-              class="chakra-text css-0"
+              class="chakra-text css-1ezsviu"
             >
               15
             </p>
           </td>
           <td
             class="css-0"
-            role="gridcell"
           >
             <div
-              class="css-0"
+              class="css-1ntzyee"
             >
               <div
-                class="css-0"
+                class="css-1gvp5h0"
               />
             </div>
           </td>
           <td
             class="css-0"
-            role="gridcell"
           >
             <p
-              class="chakra-text css-0"
+              class="chakra-text css-1ezsviu"
             >
               0
             </p>
@@ -236,36 +211,32 @@ exports[`should rendering 1`] = `
         </tr>
         <tr
           class="css-0"
-          role="row"
         >
           <td
             class="css-0"
-            role="gridcell"
           >
             <p
-              class="chakra-text css-0"
+              class="chakra-text css-1ezsviu"
             >
               BULL
             </p>
           </td>
           <td
             class="css-0"
-            role="gridcell"
           >
             <div
-              class="css-0"
+              class="css-1ntzyee"
             >
               <div
-                class="css-0"
+                class="css-1gvp5h0"
               />
             </div>
           </td>
           <td
             class="css-0"
-            role="gridcell"
           >
             <p
-              class="chakra-text css-0"
+              class="chakra-text css-1ezsviu"
             >
               0
             </p>

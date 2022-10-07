@@ -7,7 +7,7 @@ exports[`should rendering 1`] = `
     aria-expanded="true"
     aria-haspopup="dialog"
     aria-label="Change language"
-    class="chakra-button css-0"
+    class="chakra-button css-p7mkev"
     id="popover-trigger-:r1:"
     type="button"
   >
@@ -35,28 +35,28 @@ exports[`should rendering 1`] = `
     style="visibility: visible; position: absolute; min-width: max-content; inset: 0 auto auto 0; left: 0px; top: 0px; margin: 0px; transform: translate(0px, 8px); --popper-transform-origin: top center;"
   >
     <section
-      class="chakra-popover__content css-0"
+      class="chakra-popover__content css-1ab1jlb"
       id="popover-content-:r1:"
       role="dialog"
-      style="transform-origin: var(--popper-transform-origin); opacity: 0; transform: scale(0.95) translateZ(0);"
+      style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
       tabindex="-1"
     >
       <div
-        class="css-0"
+        class="css-1pv49ma"
         role="group"
       >
         <p
-          class="chakra-text css-0"
+          class="chakra-text css-1hb0olr"
         >
           日本語
         </p>
       </div>
       <div
-        class="css-0"
+        class="css-1pv49ma"
         role="group"
       >
         <p
-          class="chakra-text css-0"
+          class="chakra-text css-1hb0olr"
         >
           English
         </p>

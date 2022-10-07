@@ -9,11 +9,11 @@ exports[`should rendering 1`] = `
       class="css-1v5zkfs"
     >
       <div
-        class="css-1ibo7k1"
+        class="css-1twb9xo"
       >
         <button
           aria-label="Toggle Navigation"
-          class="chakra-button css-ywwdc4"
+          class="chakra-button css-13zvu4r"
           type="button"
         >
           <svg
@@ -34,7 +34,7 @@ exports[`should rendering 1`] = `
         </button>
       </div>
       <div
-        class="css-hhwkx"
+        class="css-1ef8uzr"
       >
         <div
           class="css-8fa26g"
@@ -47,7 +47,7 @@ exports[`should rendering 1`] = `
           />
         </div>
         <div
-          class="css-s90a0u"
+          class="css-1ynfsgs"
         >
           <div
             class="chakra-stack css-a9v878"
@@ -76,7 +76,7 @@ exports[`should rendering 1`] = `
                   class="chakra-popover__content css-24m2y2"
                   id="popover-content-:r2:"
                   role="tooltip"
-                  style="transform-origin: var(--popper-transform-origin); opacity: 0; transform: scale(0.95) translateZ(0);"
+                  style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
                   tabindex="-1"
                 >
                   <div
@@ -242,7 +242,7 @@ exports[`should rendering 1`] = `
           aria-expanded="false"
           aria-haspopup="dialog"
           aria-label="Change language"
-          class="chakra-button css-ywwdc4"
+          class="chakra-button css-13zvu4r"
           id="popover-trigger-:r6:"
           type="button"
         >
@@ -270,7 +270,7 @@ exports[`should rendering 1`] = `
             class="chakra-popover__content css-1l1b222"
             id="popover-content-:r6:"
             role="dialog"
-            style="transform-origin: var(--popper-transform-origin); opacity: 0; transform: scale(0.95) translateZ(0);"
+            style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
             tabindex="-1"
           >
             <div
@@ -304,7 +304,7 @@ exports[`should rendering 1`] = `
       style="overflow: hidden; display: none; opacity: 0; height: 0px;"
     >
       <div
-        class="chakra-stack css-z4006u"
+        class="chakra-stack css-1lgh1g"
       >
         <div
           class="chakra-stack css-egoftb"

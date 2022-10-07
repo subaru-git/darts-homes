@@ -3,37 +3,32 @@
 exports[`should rendering 1`] = `
 <div>
   <div
-    class="css-0"
+    class="css-1c5y0hl"
   >
     <div
-      class="chakra-table__container css-0"
+      class="chakra-table__container css-zipzvv"
     >
       <table
         class="chakra-table css-0"
-        role="table"
       >
         <tbody
           class="css-0"
         >
           <tr
             class="css-0"
-            role="row"
           >
             <td
               class="css-0"
-              role="gridcell"
             >
               20T
             </td>
             <td
               class="css-0"
-              role="gridcell"
             >
               19T
             </td>
             <td
               class="css-0"
-              role="gridcell"
             >
               18T
             </td>

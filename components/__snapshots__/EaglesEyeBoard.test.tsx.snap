@@ -4,37 +4,32 @@ exports[`should rendering 1`] = `
 <div>
   <div>
     <div
-      class="css-0"
+      class="css-lgj0h8"
     >
       <div
-        class="chakra-table__container css-0"
+        class="chakra-table__container css-zipzvv"
       >
         <table
           class="chakra-table css-0"
-          role="table"
         >
           <tbody
             class="css-0"
           >
             <tr
               class="css-0"
-              role="row"
             >
               <td
                 class="css-0"
-                role="gridcell"
               >
                 D-BULL
               </td>
               <td
                 class="css-0"
-                role="gridcell"
               >
                 -
               </td>
               <td
                 class="css-0"
-                role="gridcell"
               >
                 S-BULL
               </td>
