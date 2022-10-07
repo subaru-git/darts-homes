@@ -6,6 +6,11 @@ const nextConfig = {
     locales: ['en', 'ja'],
     defaultLocale: 'en',
   },
+  webpack: (config) => {
+    const path = require('path')
+    config.resolve.alias['@'] = path.resolve(__dirname, 'src')
+    return config
+  },
 }
 
 module.exports = nextConfig
