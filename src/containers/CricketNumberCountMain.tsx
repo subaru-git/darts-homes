@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react'
+import React, { FC } from 'react'
 import { Grid, GridItem } from '@chakra-ui/react'
 import CountButtons from '@/components/CountButtons'
 import CricketNumberCountBoard from '@/components/CricketNumberCountBoard'
@@ -8,11 +8,12 @@ import NavigationBar from '@/components/NavigationBar'
 import RoundBoard from '@/components/RoundBoard'
 import RoundScore from '@/components/RoundScore'
 import TargetBoard from '@/components/TargetBoard'
+import useGame from '@/hooks/game'
 import useLocale from '@/hooks/locale'
 import CricketNumberCountGame from '@/lib/CricketNumberCountGame/CricketNumberCountGame'
 
 const CricketNumberCountMain: FC = () => {
-  const [game, setGame] = useState(new CricketNumberCountGame(10))
+  const [game, setGame] = useGame(new CricketNumberCountGame(10))
   return (
     <div data-cy='cricket-number-count-main'>
       <NavigationBar items={GetNavItem()} />

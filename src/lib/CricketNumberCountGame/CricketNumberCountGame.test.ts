@@ -182,3 +182,36 @@ test('in gaming', () => {
   expect(game.getCurrentTarget()).toEqual('-1')
   game.roundChange()
 })
+test('should output progress and resume game', () => {
+  const game = new Game(10)
+  game.addScore('20T')
+  game.addScore('OUT')
+  game.addScore('0')
+  game.roundChange()
+  expect(game.getProgressJson()).toEqual({
+    targetCount: 10,
+    round: [],
+    score: [['20T', 'OUT', '0']],
+  })
+  game.addScore('19T')
+  game.addScore('18T')
+  game.addScore('17T')
+  expect(game.getProgressJson()).toEqual({
+    targetCount: 10,
+    round: ['19T', '18T', '17T'],
+    score: [['20T', 'OUT', '0']],
+  })
+  game.roundChange()
+  expect(game.getProgressJson()).toEqual({
+    targetCount: 10,
+    round: [],
+    score: [
+      ['20T', 'OUT', '0'],
+      ['19T', '18T', '17T'],
+    ],
+  })
+  const newGame = new Game(0)
+  newGame.resumeGame({ targetCount: 10, round: [], score: [['20T', 'OUT', '0']] })
+  expect(newGame.getRoundsScore()).toEqual([['20T', 'OUT', '0']])
+  expect(newGame['targetCount']).toEqual(10)
+})
