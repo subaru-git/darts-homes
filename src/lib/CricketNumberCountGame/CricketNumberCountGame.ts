@@ -11,6 +11,13 @@ export default class CricketNumberCountGame {
   constructor(targetCount: number) {
     this.targetCount = targetCount
   }
+  resumeGame(progress: { targetCount: number; round: point[]; score: point[][] }) {
+    this.targetCount = progress.targetCount
+    for (const round of progress.score) {
+      this.player.roundScore(round)
+    }
+    this.roundScore = progress.round
+  }
   addScore(score: point) {
     if (this.roundScore.length >= 3) return
     this.roundScore.push(score)
@@ -77,5 +84,8 @@ export default class CricketNumberCountGame {
   getCount() {
     const score = this.getScore()
     return score.flat().filter((s) => s !== '-1').length
+  }
+  getProgressJson() {
+    return { targetCount: this.targetCount, round: this.roundScore, score: this.player.getScore() }
   }
 }
