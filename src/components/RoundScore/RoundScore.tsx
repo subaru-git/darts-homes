@@ -13,17 +13,17 @@ const RoundScore: FC<RoundScoreProps> = ({ scores, onClear, onRoundChange }) => 
     <Grid templateColumns='repeat(4, 1fr)'>
       <GridItem>
         <Heading as='h2' textAlign='center' color='gray.500'>
-          {scores[0]}
+          {scores[0] === '0' ? '-' : scores[0]}
         </Heading>
       </GridItem>
       <GridItem>
         <Heading as='h2' textAlign='center' color='gray.500'>
-          {scores[1]}
+          {scores[1] === '0' ? '-' : scores[1]}
         </Heading>
       </GridItem>
       <GridItem>
         <Heading as='h2' textAlign='center' color='gray.500'>
-          {scores[2]}
+          {scores[2] === '0' ? '-' : scores[2]}
         </Heading>
       </GridItem>
       <GridItem>
@@ -34,6 +34,7 @@ const RoundScore: FC<RoundScoreProps> = ({ scores, onClear, onRoundChange }) => 
               icon={<VscTrash />}
               colorScheme='blue'
               onClick={() => onClear()}
+              disabled={scores.length === 0}
             ></IconButton>
           </GridItem>
           <GridItem>
@@ -43,6 +44,7 @@ const RoundScore: FC<RoundScoreProps> = ({ scores, onClear, onRoundChange }) => 
               onClick={() => {
                 onRoundChange()
               }}
+              disabled={scores.length !== 3}
             >
               Round Change
             </Button>

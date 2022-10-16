@@ -14,7 +14,7 @@ const RoundBoard: FC<RoundBoardProps> = ({ score }) => {
             {score.map((round, i) => (
               <Tr key={`round-${i}`}>
                 {round.map((point, j) => (
-                  <Td key={`point-${i}-${j}`}>{point}</Td>
+                  <Td key={`point-${i}-${j}`}>{point === '0' ? '-' : point}</Td>
                 ))}
               </Tr>
             ))}
