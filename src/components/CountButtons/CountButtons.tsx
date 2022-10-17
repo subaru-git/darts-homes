@@ -67,21 +67,21 @@ const CountButtons: FC<CountButtonsProps> = ({
           >
             <GridItem>
               <Center h='100%'>
-                <Heading as='h5' size='sm'>
+                <Heading as='h5' size='sm' color={disabled ? 'blackAlpha.500' : 'black'}>
                   Single
                 </Heading>
               </Center>
             </GridItem>
             <GridItem>
               <Center h='100%'>
-                <Heading as='h5' size='sm'>
+                <Heading as='h5' size='sm' color={disabled ? 'blackAlpha.500' : 'black'}>
                   Double
                 </Heading>
               </Center>
             </GridItem>
             <GridItem>
               <Center h='100%'>
-                <Heading as='h5' size='sm'>
+                <Heading as='h5' size='sm' color={disabled ? 'blackAlpha.500' : 'black'}>
                   Triple
                 </Heading>
               </Center>
