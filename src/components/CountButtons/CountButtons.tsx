@@ -49,6 +49,7 @@ const CountButtons: FC<CountButtonsProps> = ({
             <GridItem>
               <IconButton
                 aria-label='out board'
+                variant='outline'
                 icon={<TbTargetOff />}
                 colorScheme='gray'
                 w='100%'

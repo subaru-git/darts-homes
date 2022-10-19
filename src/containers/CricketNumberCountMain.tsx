@@ -23,6 +23,7 @@ const CricketNumberCountMain: FC = () => {
           if (save) saveGameHistory(game.getGameResult())
           setGame(new CricketNumberCountGame(targetNumber))
         }}
+        targetCount={game.getTargetCount()}
         isFinished={game.isFinished()}
       />
       <Grid templateColumns='repeat(2, auto)' gap={6} p={4}>
@@ -30,7 +31,7 @@ const CricketNumberCountMain: FC = () => {
           <Grid templateRows='repeat(3, auto)' gap={10}>
             <GridItem>
               <Grid templateColumns='repeat(2, auto)' gap={6}>
-                <GridItem>
+                <GridItem m={0}>
                   <Grid templateRows='repeat(2, auto)'>
                     <GridItem>
                       <TargetBoard

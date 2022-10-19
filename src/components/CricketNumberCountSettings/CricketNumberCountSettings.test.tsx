@@ -6,7 +6,7 @@ jest.mock('next/router', () => ({ useRouter: jest.fn().mockReturnValue({ locale:
 test('should rendering', () => {
   const mockOnNewGame = jest.fn()
   const { container } = render(
-    <CricketNumberCountSettings onNewGame={mockOnNewGame} isFinished={false} />,
+    <CricketNumberCountSettings onNewGame={mockOnNewGame} isFinished={false} targetCount={10} />,
   )
   fireEvent.click(screen.getByText('New Game'))
   fireEvent.click(screen.getAllByText('New Game')[1])
