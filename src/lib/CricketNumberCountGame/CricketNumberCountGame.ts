@@ -1,4 +1,8 @@
-import { convertNumberToSinglePoint, convertScoreToCount } from '@/lib/Helper/Converter'
+import {
+  convertCountScoreToNumberOfCount,
+  convertNumberToSinglePoint,
+  convertScoreToCount,
+} from '@/lib/Helper/Converter'
 import Player from '@/lib/Player/Player'
 
 export default class CricketNumberCountGame {
@@ -85,7 +89,19 @@ export default class CricketNumberCountGame {
     const score = this.getScore()
     return score.flat().filter((s) => s !== '-1').length
   }
+  getTargetCount() {
+    return this.targetCount
+  }
   getProgressJson() {
     return { targetCount: this.targetCount, round: this.roundScore, score: this.player.getScore() }
+  }
+  getGameResult(): GameResult {
+    return {
+      game: 'CricketNumberCountGame',
+      setting: { targetCount: this.targetCount },
+      result: { count: this.getCount() },
+      scores: convertCountScoreToNumberOfCount(this.getScore(), 15, 20),
+      playedAt: new Date().toJSON(),
+    }
   }
 }

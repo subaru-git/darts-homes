@@ -16,7 +16,7 @@ export const convertScoreToCount = (score: string) => {
 
 export const convertCountScoreToNumberOfCount = (score: string[][], begin: number, end: number) => {
   const numbers = [...[...Array(21).keys()].filter((n) => begin <= n && n <= end).reverse(), 25]
-  const result: { number: number; count: number; total: number }[] = []
+  const result: CricketNumberCountScore[] = []
   numbers.forEach((n) => result.push({ number: n, count: 0, total: 0 }))
   score.flat().forEach((s) => {
     if (s === '-1') return

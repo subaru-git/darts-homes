@@ -1,23 +1,18 @@
 import React, { FC } from 'react'
-import { Grid } from '@chakra-ui/react'
-import Footer from '@/components/Footer'
-import HomeDescription from '@/components/HomeDescription'
-import HomeDescriptionRespect from '@/components/HomeDescriptionRespect'
+import HistoryBoard from '@/components/HistoryBoard'
 import NavigationBar from '@/components/NavigationBar'
 import useLocale from '@/hooks/locale'
 
-const HomeMain: FC = () => {
+const HistoryMain: FC = () => {
   return (
-    <div data-cy='home-main'>
+    <div data-cy='history-main'>
       <NavigationBar items={GetNavItem()} />
-      <Grid templateRows='repeat(2, auto)' gap={2} pb={2}>
-        <HomeDescription />
-        <HomeDescriptionRespect />
-      </Grid>
-      <Footer />
+      <HistoryBoard />
     </div>
   )
 }
+
+export default HistoryMain
 
 const GetNavItem = () => {
   const { t } = useLocale()
@@ -49,9 +44,7 @@ const GetNavItem = () => {
     },
     {
       label: 'History',
-      href: '/history',
+      href: '#',
     },
   ]
 }
-
-export default HomeMain

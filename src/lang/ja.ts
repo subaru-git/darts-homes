@@ -12,6 +12,8 @@ const text = {
   CRICKET_NUMBER_COUNT_RULE_STEP2:
     '20から15、BULLまでのクリケットナンバーを目標の回数狙っていきます。',
   CRICKET_NUMBER_COUNT_RULE_MORE: '詳しくは動画をご覧ください。',
+  CRICKET_NUMBER_COUNT_START_NEW_GAME_WARNING:
+    '新しいゲームを始めると、現在のスコアは破棄されます。',
 }
 
 export default text

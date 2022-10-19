@@ -1,7 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should rendering 1`] = `
-<div>
+<div
+  aria-hidden="true"
+  data-aria-hidden="true"
+>
   <button
     aria-label="setting"
     class="chakra-button css-4xx2wk"
@@ -33,7 +36,7 @@ exports[`should rendering 1`] = `
         />
       </svg>
     </span>
-    Settings
+    New Game
   </button>
 </div>
 `;

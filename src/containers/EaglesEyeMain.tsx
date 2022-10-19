@@ -74,6 +74,10 @@ const GetNavItem = () => {
       label: 'Respects',
       href: '#',
     },
+    {
+      label: 'History',
+      href: '/history',
+    },
   ]
 }
 

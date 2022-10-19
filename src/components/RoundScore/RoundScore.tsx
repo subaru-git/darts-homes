@@ -1,14 +1,56 @@
 import React, { FC } from 'react'
-import { Button, Grid, GridItem, Heading, IconButton } from '@chakra-ui/react'
+import { Button, Center, Grid, GridItem, Heading, IconButton } from '@chakra-ui/react'
 import { VscTrash } from 'react-icons/vsc'
 
 type RoundScoreProps = {
   scores: string[]
   onClear: () => void
   onRoundChange: () => void
+  isFinished: boolean
+  onRoundOver: () => void
 }
 
-const RoundScore: FC<RoundScoreProps> = ({ scores, onClear, onRoundChange }) => {
+const RoundScore: FC<RoundScoreProps> = ({
+  scores,
+  onClear,
+  onRoundChange,
+  isFinished,
+  onRoundOver,
+}) => {
+  return (
+    <>
+      {isFinished && scores.length === 0 ? (
+        <FinishGame onRoundOver={onRoundOver} />
+      ) : (
+        <InRoundScore
+          scores={scores}
+          onClear={onClear}
+          onRoundChange={onRoundChange}
+          isFinished={isFinished}
+        />
+      )}
+    </>
+  )
+}
+
+const FinishGame: FC<{ onRoundOver: () => void }> = ({ onRoundOver }) => {
+  return (
+    <Center>
+      <Button colorScheme='teal' onClick={onRoundOver}>
+        Finish Game! Save result and Start New Game !!
+      </Button>
+    </Center>
+  )
+}
+
+type InRoundScoreProps = {
+  scores: string[]
+  onClear: () => void
+  onRoundChange: () => void
+  isFinished: boolean
+}
+
+const InRoundScore: FC<InRoundScoreProps> = ({ scores, onClear, onRoundChange, isFinished }) => {
   return (
     <Grid templateColumns='repeat(4, 1fr)'>
       <GridItem>
@@ -44,7 +86,7 @@ const RoundScore: FC<RoundScoreProps> = ({ scores, onClear, onRoundChange }) => 
               onClick={() => {
                 onRoundChange()
               }}
-              disabled={scores.length !== 3}
+              disabled={!(scores.length === 3 || isFinished)}
             >
               Round Change
             </Button>

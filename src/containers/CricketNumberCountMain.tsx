@@ -11,6 +11,7 @@ import TargetBoard from '@/components/TargetBoard'
 import useGame from '@/hooks/game'
 import useLocale from '@/hooks/locale'
 import CricketNumberCountGame from '@/lib/CricketNumberCountGame/CricketNumberCountGame'
+import { saveGameHistory } from '@/lib/GameHistoryManager/GameHistory'
 
 const CricketNumberCountMain: FC = () => {
   const [game, setGame] = useGame(new CricketNumberCountGame(10))
@@ -18,9 +19,11 @@ const CricketNumberCountMain: FC = () => {
     <div data-cy='cricket-number-count-main'>
       <NavigationBar items={GetNavItem()} />
       <CricketNumberCountSettings
-        onNewGame={(targetNumber) => {
+        onNewGame={(targetNumber, save) => {
+          if (save) saveGameHistory(game.getGameResult())
           setGame(new CricketNumberCountGame(targetNumber))
         }}
+        isFinished={game.isFinished()}
       />
       <Grid templateColumns='repeat(2, auto)' gap={6} p={4}>
         <GridItem>
@@ -63,6 +66,11 @@ const CricketNumberCountMain: FC = () => {
                   const g = Object.assign(new CricketNumberCountGame(10), game)
                   g.roundChange()
                   setGame(g)
+                }}
+                isFinished={game.isFinished()}
+                onRoundOver={() => {
+                  saveGameHistory(game.getGameResult())
+                  setGame(new CricketNumberCountGame(game.getTargetCount()))
                 }}
               />
             </GridItem>
@@ -118,6 +126,10 @@ const GetNavItem = () => {
     {
       label: 'Respects',
       href: '#',
+    },
+    {
+      label: 'History',
+      href: '/history',
     },
   ]
 }

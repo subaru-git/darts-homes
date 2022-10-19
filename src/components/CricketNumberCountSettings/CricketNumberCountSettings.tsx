@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, useRef } from 'react'
 import {
   Box,
   Button,
@@ -16,21 +16,36 @@ import {
   NumberInputStepper,
   useDisclosure,
   Text,
+  AlertDialog,
+  AlertDialogOverlay,
+  AlertDialogContent,
+  AlertDialogHeader,
+  AlertDialogCloseButton,
+  AlertDialogBody,
+  AlertDialogFooter,
 } from '@chakra-ui/react'
 import { FiSettings } from 'react-icons/fi'
 import CricketNumberCountDescription from '@/components/CricketNumberCountDescription'
+import useLocale from '@/hooks/locale'
 
 type CricketNumberCountSettingsProps = {
-  onNewGame: (targetCount: number) => void
+  onNewGame: (targetCount: number, save: boolean) => void
+  isFinished: boolean
 }
 
-const CricketNumberCountSettings: FC<CricketNumberCountSettingsProps> = ({ onNewGame }) => {
+const CricketNumberCountSettings: FC<CricketNumberCountSettingsProps> = ({
+  onNewGame,
+  isFinished,
+}) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
+  const { isOpen: isAlertOpen, onOpen: onAlertOpen, onClose: onAlertClose } = useDisclosure()
+  const cancelRef = useRef<HTMLButtonElement>(null)
   const [targetCount, setTargetCount] = React.useState(10)
+  const { t } = useLocale()
   return (
     <>
       <Button leftIcon={<FiSettings />} aria-label='setting' variant='ghost' onClick={onOpen}>
-        Settings
+        New Game
       </Button>
       <Modal isOpen={isOpen} onClose={onClose} size='2xl'>
         <ModalOverlay />
@@ -58,7 +73,11 @@ const CricketNumberCountSettings: FC<CricketNumberCountSettingsProps> = ({ onNew
               colorScheme='blue'
               mr={3}
               onClick={() => {
-                onNewGame(targetCount)
+                if (!isFinished) {
+                  onAlertOpen()
+                  return
+                }
+                onNewGame(targetCount, true)
                 onClose()
               }}
             >
@@ -68,6 +87,37 @@ const CricketNumberCountSettings: FC<CricketNumberCountSettingsProps> = ({ onNew
               Cancel
             </Button>
           </ModalFooter>
+          <AlertDialog
+            isOpen={isAlertOpen}
+            onClose={onAlertClose}
+            leastDestructiveRef={cancelRef}
+            blockScrollOnMount={false}
+          >
+            <AlertDialogOverlay />
+            <AlertDialogContent>
+              <AlertDialogHeader fontSize='lg' fontWeight='bold'>
+                Start New Game?
+              </AlertDialogHeader>
+              <AlertDialogCloseButton />
+              <AlertDialogBody>{t.CRICKET_NUMBER_COUNT_START_NEW_GAME_WARNING}</AlertDialogBody>
+              <AlertDialogFooter>
+                <Button
+                  colorScheme='blue'
+                  ml={3}
+                  onClick={() => {
+                    onNewGame(targetCount, false)
+                    onAlertClose()
+                    onClose()
+                  }}
+                >
+                  OK
+                </Button>
+                <Button onClick={onAlertClose} ref={cancelRef} ml={3}>
+                  Cancel
+                </Button>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialog>
         </ModalContent>
       </Modal>
     </>
