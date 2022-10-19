@@ -12,6 +12,8 @@ const text = {
   CRICKET_NUMBER_COUNT_RULE_STEP2:
     'Shoot for each cricket numbers from 20 to 15 and Bull until the target count of times, like Cricket.',
   CRICKET_NUMBER_COUNT_RULE_MORE: 'For more information, please watch this video.',
+  CRICKET_NUMBER_COUNT_START_NEW_GAME_WARNING:
+    'If you start a new game, the current game will be lost.',
 }
 
 export default text

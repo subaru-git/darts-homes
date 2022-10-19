@@ -38,6 +38,8 @@ const N01main: FC = () => {
                   g.changePlayer()
                   setGame(g)
                 }}
+                isFinished={false}
+                onRoundOver={() => {}}
               />
             </GridItem>
             <GridItem>
@@ -98,6 +100,10 @@ const GetNavItem = () => {
     {
       label: 'Respects',
       href: '#',
+    },
+    {
+      label: 'History',
+      href: '/history',
     },
   ]
 }
