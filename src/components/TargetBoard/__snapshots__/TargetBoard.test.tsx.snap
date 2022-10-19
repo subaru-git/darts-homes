@@ -2,15 +2,19 @@
 
 exports[`should rendering 1`] = `
 <div>
-  <h2
-    class="chakra-heading css-1y3vej2"
+  <div
+    class="css-1v5z18m"
   >
-    next target
-  </h2>
-  <h2
-    class="chakra-heading css-ztrn0v"
-  >
-    501
-  </h2>
+    <h2
+      class="chakra-heading css-1y3vej2"
+    >
+      next target
+    </h2>
+    <h2
+      class="chakra-heading css-ztrn0v"
+    >
+      501
+    </h2>
+  </div>
 </div>
 `;

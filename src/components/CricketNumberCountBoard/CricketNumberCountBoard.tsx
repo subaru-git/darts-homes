@@ -18,11 +18,11 @@ const CricketNumberCountBoard: FC<CricketNumberCountBoardProps> = ({ data }) => 
         <Table variant='simple'>
           <Tbody>
             {scores.map((number) => (
-              <Tr key={`number-${number.number}`}>
-                <Td key={`number-${number.number}`}>
+              <Tr key={`number-${number.number}`} h='69px'>
+                <Td>
                   <Text fontSize='lg'>{number.number === 25 ? 'BULL' : number.number}</Text>
                 </Td>
-                <Td key={`score-${number.number}`}>
+                <Td>
                   <Grid templateColumns='repeat(4, 50px)' gap={1}>
                     {convertNumberOfCountToMarkCount(
                       scores.find((score) => score.number === number.number)?.count ?? 0,
