@@ -4,7 +4,7 @@ import { AiFillGithub, AiOutlineTwitter } from 'react-icons/ai'
 
 const Footer: FC = () => {
   return (
-    <Box bg='gray.700' h='24px' w='100%' bottom={0} position='absolute' mb='-32px'>
+    <Box bg='gray.700' h='24px' w='100%' bottom={0} position='absolute' mb='-24px'>
       <Center>
         <HStack gap={8}>
           <Text color='white'>{`(c) 2022 okadat`}</Text>
