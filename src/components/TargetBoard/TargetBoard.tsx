@@ -9,7 +9,7 @@ type TargetBoardProps = {
 
 const TargetBoard: FC<TargetBoardProps> = ({ target, message, size = 'md' }) => {
   return (
-    <Box width={300}>
+    <Box>
       <Heading fontSize={size === 'md' ? '32px' : '24px'} color='green.500' pl={4} pt={4}>
         {message}
       </Heading>

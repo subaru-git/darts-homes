@@ -30,7 +30,7 @@ const CricketNumberCountMain: FC = () => {
         <GridItem>
           <Grid templateRows='repeat(3, auto)' gap={10}>
             <GridItem>
-              <Grid templateColumns='repeat(2, auto)' gap={6}>
+              <Grid templateColumns='repeat(2, minmax(240px, auto))' gap={6}>
                 <GridItem m={0}>
                   <Grid templateRows='repeat(2, auto)'>
                     <GridItem>
