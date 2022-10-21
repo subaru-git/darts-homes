@@ -1,5 +1,5 @@
 import React, { FC, Fragment } from 'react'
-import { Button, Center, Grid, GridItem, Heading, IconButton } from '@chakra-ui/react'
+import { Button, Center, Flex, Grid, GridItem, Heading, IconButton } from '@chakra-ui/react'
 import { TbTargetOff } from 'react-icons/tb'
 
 type CountButtonsProps = {
@@ -7,6 +7,7 @@ type CountButtonsProps = {
   begin: number
   end: number
   reversed?: boolean
+  bull?: boolean
   disabled?: boolean
   other?: boolean
 }
@@ -16,6 +17,7 @@ const CountButtons: FC<CountButtonsProps> = ({
   begin,
   end,
   reversed,
+  bull = true,
   disabled = false,
   other = false,
 }) => {
@@ -23,42 +25,44 @@ const CountButtons: FC<CountButtonsProps> = ({
   if (reversed) buttons.reverse()
   return (
     <>
-      <Grid templateRows={`repeat(${other ? 3 : 2}, auto)`} gap={2} maxW={320}>
-        <GridItem>
-          <Grid templateColumns='repeat(3, auto)' columnGap={3}>
-            <GridItem>
-              <Button
-                colorScheme='red'
-                w='100%'
-                onClick={() => onCount('S-BULL')}
-                disabled={disabled}
-              >
-                outer Bull
-              </Button>
-            </GridItem>
-            <GridItem>
-              <Button
-                colorScheme='facebook'
-                w='100%'
-                onClick={() => onCount('D-BULL')}
-                disabled={disabled}
-              >
-                inner Bull
-              </Button>
-            </GridItem>
-            <GridItem>
-              <IconButton
-                aria-label='out board'
-                variant='outline'
-                icon={<TbTargetOff />}
-                colorScheme='gray'
-                w='100%'
-                onClick={() => onCount('OUT')}
-                disabled={disabled}
-              ></IconButton>
-            </GridItem>
-          </Grid>
-        </GridItem>
+      <Grid templateRows={`repeat(${other ? 3 : 2}, auto)`} gap={2} maxW={320} m='auto'>
+        {!bull ? null : (
+          <GridItem>
+            <Grid templateColumns='repeat(3, auto)' columnGap={3}>
+              <GridItem>
+                <Button
+                  colorScheme='red'
+                  w='100%'
+                  onClick={() => onCount('S-BULL')}
+                  disabled={disabled}
+                >
+                  outer Bull
+                </Button>
+              </GridItem>
+              <GridItem>
+                <Button
+                  colorScheme='facebook'
+                  w='100%'
+                  onClick={() => onCount('D-BULL')}
+                  disabled={disabled}
+                >
+                  inner Bull
+                </Button>
+              </GridItem>
+              <GridItem>
+                <IconButton
+                  aria-label='out board'
+                  variant='outline'
+                  icon={<TbTargetOff />}
+                  colorScheme='gray'
+                  w='100%'
+                  onClick={() => onCount('OUT')}
+                  disabled={disabled}
+                ></IconButton>
+              </GridItem>
+            </Grid>
+          </GridItem>
+        )}
         <GridItem>
           <Grid
             templateColumns='repeat(3, 1fr)'
@@ -66,27 +70,31 @@ const CountButtons: FC<CountButtonsProps> = ({
             columnGap={3}
             rowGap={1}
           >
-            <GridItem>
-              <Center h='100%'>
-                <Heading as='h5' size='sm' color={disabled ? 'blackAlpha.500' : 'black'}>
-                  Single
-                </Heading>
-              </Center>
-            </GridItem>
-            <GridItem>
-              <Center h='100%'>
-                <Heading as='h5' size='sm' color={disabled ? 'blackAlpha.500' : 'black'}>
-                  Double
-                </Heading>
-              </Center>
-            </GridItem>
-            <GridItem>
-              <Center h='100%'>
-                <Heading as='h5' size='sm' color={disabled ? 'blackAlpha.500' : 'black'}>
-                  Triple
-                </Heading>
-              </Center>
-            </GridItem>
+            {bull ? null : (
+              <>
+                <GridItem>
+                  <Center h='100%'>
+                    <Heading as='h5' size='sm' color={disabled ? 'blackAlpha.500' : 'black'}>
+                      Single
+                    </Heading>
+                  </Center>
+                </GridItem>
+                <GridItem>
+                  <Center h='100%'>
+                    <Heading as='h5' size='sm' color={disabled ? 'blackAlpha.500' : 'black'}>
+                      Double
+                    </Heading>
+                  </Center>
+                </GridItem>
+                <GridItem>
+                  <Center h='100%'>
+                    <Heading as='h5' size='sm' color={disabled ? 'blackAlpha.500' : 'black'}>
+                      Triple
+                    </Heading>
+                  </Center>
+                </GridItem>
+              </>
+            )}
             {buttons.map((i) => (
               <Fragment key={`${i}-count`}>
                 <GridItem>
@@ -128,9 +136,21 @@ const CountButtons: FC<CountButtonsProps> = ({
         </GridItem>
         {other ? (
           <GridItem>
-            <Button w='100%' variant='outline' onClick={() => onCount('0')} disabled={disabled}>
-              Other
-            </Button>
+            <Flex gap={2}>
+              <Button w='100%' variant='outline' onClick={() => onCount('0')} disabled={disabled}>
+                Other
+              </Button>
+              {bull ? null : (
+                <IconButton
+                  aria-label='out board'
+                  variant='outline'
+                  icon={<TbTargetOff />}
+                  colorScheme='gray'
+                  onClick={() => onCount('OUT')}
+                  disabled={disabled}
+                ></IconButton>
+              )}
+            </Flex>
           </GridItem>
         ) : null}
       </Grid>

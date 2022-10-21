@@ -4,7 +4,7 @@ exports[`should rendering 1`] = `
 <div>
   <button
     aria-label="setting"
-    class="chakra-button css-4xx2wk"
+    class="chakra-button css-1x4o3bv"
     type="button"
   >
     <span
@@ -35,5 +35,9 @@ exports[`should rendering 1`] = `
     </span>
     New Game
   </button>
+  <span
+    hidden=""
+    id="__chakra_env"
+  />
 </div>
 `;

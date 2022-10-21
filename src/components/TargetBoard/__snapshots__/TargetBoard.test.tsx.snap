@@ -6,15 +6,19 @@ exports[`should rendering 1`] = `
     class="css-0"
   >
     <h2
-      class="chakra-heading css-1y3vej2"
+      class="chakra-heading css-19cqpm0"
     >
       next target
     </h2>
     <h2
-      class="chakra-heading css-ztrn0v"
+      class="chakra-heading css-2sb8by"
     >
       501
     </h2>
   </div>
+  <span
+    hidden=""
+    id="__chakra_env"
+  />
 </div>
 `;

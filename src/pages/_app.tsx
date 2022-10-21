@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <meta charSet='utf-8' />
-        <meta name='viewport' content='width=device-width;initial-scale=1' />
+        {/* <meta name='viewport' content='width=device-width;initial-scale=1' /> */}
       </Head>
       <ChakraProvider>
         <Global styles={{ body: { minHeight: 'calc(100vh - 24px)' } }} />
