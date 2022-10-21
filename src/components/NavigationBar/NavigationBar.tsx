@@ -55,7 +55,7 @@ const NavigationBar: FC<NavigationBarProps> = ({ items }) => {
             aria-label={'Toggle Navigation'}
           />
         </Flex>
-        <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
+        <Flex flex={{ base: 'auto' }} justify={{ base: 'center', md: 'start' }}>
           <Box
             _hover={{
               textDecoration: 'none',

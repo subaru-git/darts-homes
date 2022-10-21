@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { Grid, GridItem } from '@chakra-ui/react'
+import { Box, Flex, Grid, GridItem } from '@chakra-ui/react'
 import CountButtons from '@/components/CountButtons'
 import CricketNumberCountBoard from '@/components/CricketNumberCountBoard'
 import CricketNumberCountSettings from '@/components/CricketNumberCountSettings'
@@ -18,6 +18,23 @@ const CricketNumberCountMain: FC = () => {
   return (
     <div data-cy='cricket-number-count-main'>
       <NavigationBar items={GetNavItem()} />
+      <Box display={{ base: 'none', md: 'block' }}>
+        <DesktopMain game={game} setGame={setGame} />
+      </Box>
+      <Box display={{ base: 'block', md: 'none' }}>
+        <MobileMain game={game} setGame={setGame} />
+      </Box>
+      <Footer />
+    </div>
+  )
+}
+
+const DesktopMain: FC<{
+  game: CricketNumberCountGame
+  setGame: (game: CricketNumberCountGame) => void
+}> = ({ game, setGame }) => {
+  return (
+    <div>
       <CricketNumberCountSettings
         onNewGame={(targetNumber, save) => {
           if (save) saveGameHistory(game.getGameResult())
@@ -95,8 +112,81 @@ const CricketNumberCountMain: FC = () => {
           />
         </GridItem>
       </Grid>
-      <Footer />
     </div>
+  )
+}
+
+const MobileMain: FC<{
+  game: CricketNumberCountGame
+  setGame: (game: CricketNumberCountGame) => void
+}> = ({ game, setGame }) => {
+  return (
+    <>
+      <Grid gap={4} justifyItems='center'>
+        <GridItem w='100%'>
+          <Flex justifyContent='space-between'>
+            <CricketNumberCountSettings
+              onNewGame={(targetNumber, save) => {
+                if (save) saveGameHistory(game.getGameResult())
+                setGame(new CricketNumberCountGame(targetNumber))
+              }}
+              targetCount={game.getTargetCount()}
+              isFinished={game.isFinished()}
+            />
+            <Flex alignItems='end' w='100%' justifyContent='space-around'>
+              <TargetBoard
+                target={
+                  game.getCurrentTarget() === '-1'
+                    ? 'Fin'
+                    : game.getCurrentTarget() === 'S-BULL'
+                    ? 'BULL'
+                    : game.getCurrentTarget()
+                }
+                message='Target'
+              />
+              <TargetBoard target={game.getCount().toString()} message='Count' size='sm' />
+            </Flex>
+          </Flex>
+        </GridItem>
+        <Box maxH={250} overflow='scroll'>
+          <CricketNumberCountBoard data={game.getScore()} />
+        </Box>
+        <RoundScore
+          scores={game.getRoundScore()}
+          onClear={() => {
+            const g = Object.assign(new CricketNumberCountGame(10), game)
+            g.removeScore()
+            setGame(g)
+          }}
+          onRoundChange={() => {
+            const g = Object.assign(new CricketNumberCountGame(10), game)
+            g.roundChange()
+            setGame(g)
+          }}
+          isFinished={game.isFinished()}
+          onRoundOver={() => {
+            saveGameHistory(game.getGameResult())
+            setGame(new CricketNumberCountGame(game.getTargetCount()))
+          }}
+        />
+        <Box w='100%'>
+          <CountButtons
+            onCount={(n) => {
+              const g = Object.assign(new CricketNumberCountGame(10), game)
+              g.addScore(n)
+              setGame(g)
+            }}
+            begin={parseInt(game.getCurrentTarget())}
+            end={parseInt(game.getCurrentTarget())}
+            reversed={true}
+            bull={game.getCurrentTarget() === 'S-BULL'}
+            disabled={game.getRoundScore().length >= 3 || game.isFinished()}
+            other
+          />
+          <RoundBoard score={game.getRoundsScore()} />
+        </Box>
+      </Grid>
+    </>
   )
 }
 

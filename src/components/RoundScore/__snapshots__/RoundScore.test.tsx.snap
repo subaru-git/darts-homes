@@ -3,47 +3,47 @@
 exports[`should rendering 1`] = `
 <div>
   <div
-    class="css-12dmjen"
+    class="css-p284m"
   >
     <div
-      class="css-1gvp5h0"
+      class="css-0"
     >
       <h2
-        class="chakra-heading css-1wv5tjd"
+        class="chakra-heading css-82d3ew"
       >
         20T
       </h2>
     </div>
     <div
-      class="css-1gvp5h0"
+      class="css-0"
     >
       <h2
-        class="chakra-heading css-1wv5tjd"
+        class="chakra-heading css-82d3ew"
       >
         19T
       </h2>
     </div>
     <div
-      class="css-1gvp5h0"
+      class="css-0"
     >
       <h2
-        class="chakra-heading css-1wv5tjd"
+        class="chakra-heading css-82d3ew"
       >
         18T
       </h2>
     </div>
     <div
-      class="css-1gvp5h0"
+      class="css-0"
     >
       <div
-        class="css-agu6zq"
+        class="css-1ensw45"
       >
         <div
-          class="css-1gvp5h0"
+          class="css-0"
         >
           <button
             aria-label="clear scores"
-            class="chakra-button css-p7mkev"
+            class="chakra-button css-b7k6lj"
             type="button"
           >
             <svg
@@ -66,10 +66,10 @@ exports[`should rendering 1`] = `
           </button>
         </div>
         <div
-          class="css-1gvp5h0"
+          class="css-0"
         >
           <button
-            class="chakra-button css-uxt1e8"
+            class="chakra-button css-1kg18wp"
             type="button"
           >
             Round Change
@@ -78,5 +78,9 @@ exports[`should rendering 1`] = `
       </div>
     </div>
   </div>
+  <span
+    hidden=""
+    id="__chakra_env"
+  />
 </div>
 `;

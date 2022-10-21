@@ -3,240 +3,240 @@
 exports[`should rendering 1`] = `
 <div>
   <div
-    class="chakra-table__container css-zipzvv"
+    class="chakra-table__container css-c53i0p"
   >
     <table
-      class="chakra-table css-0"
+      class="chakra-table css-5605sr"
     >
       <tbody
         class="css-0"
       >
         <tr
-          class="css-1auja6l"
+          class="css-x4muuh"
         >
           <td
-            class="css-0"
+            class="css-1hg6byp"
           >
             <p
-              class="chakra-text css-1ezsviu"
+              class="chakra-text css-1ps7yy3"
             >
               20
             </p>
           </td>
           <td
-            class="css-0"
+            class="css-1hg6byp"
           >
             <div
-              class="css-1ntzyee"
+              class="css-1h3cqa9"
             >
               <div
-                class="css-1gvp5h0"
+                class="css-0"
               />
             </div>
           </td>
           <td
-            class="css-0"
+            class="css-1hg6byp"
           >
             <p
-              class="chakra-text css-1ezsviu"
+              class="chakra-text css-1ps7yy3"
             >
               0
             </p>
           </td>
         </tr>
         <tr
-          class="css-1auja6l"
+          class="css-x4muuh"
         >
           <td
-            class="css-0"
+            class="css-1hg6byp"
           >
             <p
-              class="chakra-text css-1ezsviu"
+              class="chakra-text css-1ps7yy3"
             >
               19
             </p>
           </td>
           <td
-            class="css-0"
+            class="css-1hg6byp"
           >
             <div
-              class="css-1ntzyee"
+              class="css-1h3cqa9"
             >
               <div
-                class="css-1gvp5h0"
+                class="css-0"
               />
             </div>
           </td>
           <td
-            class="css-0"
+            class="css-1hg6byp"
           >
             <p
-              class="chakra-text css-1ezsviu"
+              class="chakra-text css-1ps7yy3"
             >
               0
             </p>
           </td>
         </tr>
         <tr
-          class="css-1auja6l"
+          class="css-x4muuh"
         >
           <td
-            class="css-0"
+            class="css-1hg6byp"
           >
             <p
-              class="chakra-text css-1ezsviu"
+              class="chakra-text css-1ps7yy3"
             >
               18
             </p>
           </td>
           <td
-            class="css-0"
+            class="css-1hg6byp"
           >
             <div
-              class="css-1ntzyee"
+              class="css-1h3cqa9"
             >
               <div
-                class="css-1gvp5h0"
+                class="css-0"
               />
             </div>
           </td>
           <td
-            class="css-0"
+            class="css-1hg6byp"
           >
             <p
-              class="chakra-text css-1ezsviu"
+              class="chakra-text css-1ps7yy3"
             >
               0
             </p>
           </td>
         </tr>
         <tr
-          class="css-1auja6l"
+          class="css-x4muuh"
         >
           <td
-            class="css-0"
+            class="css-1hg6byp"
           >
             <p
-              class="chakra-text css-1ezsviu"
+              class="chakra-text css-1ps7yy3"
             >
               17
             </p>
           </td>
           <td
-            class="css-0"
+            class="css-1hg6byp"
           >
             <div
-              class="css-1ntzyee"
+              class="css-1h3cqa9"
             >
               <div
-                class="css-1gvp5h0"
+                class="css-0"
               />
             </div>
           </td>
           <td
-            class="css-0"
+            class="css-1hg6byp"
           >
             <p
-              class="chakra-text css-1ezsviu"
+              class="chakra-text css-1ps7yy3"
             >
               0
             </p>
           </td>
         </tr>
         <tr
-          class="css-1auja6l"
+          class="css-x4muuh"
         >
           <td
-            class="css-0"
+            class="css-1hg6byp"
           >
             <p
-              class="chakra-text css-1ezsviu"
+              class="chakra-text css-1ps7yy3"
             >
               16
             </p>
           </td>
           <td
-            class="css-0"
+            class="css-1hg6byp"
           >
             <div
-              class="css-1ntzyee"
+              class="css-1h3cqa9"
             >
               <div
-                class="css-1gvp5h0"
+                class="css-0"
               />
             </div>
           </td>
           <td
-            class="css-0"
+            class="css-1hg6byp"
           >
             <p
-              class="chakra-text css-1ezsviu"
+              class="chakra-text css-1ps7yy3"
             >
               0
             </p>
           </td>
         </tr>
         <tr
-          class="css-1auja6l"
+          class="css-x4muuh"
         >
           <td
-            class="css-0"
+            class="css-1hg6byp"
           >
             <p
-              class="chakra-text css-1ezsviu"
+              class="chakra-text css-1ps7yy3"
             >
               15
             </p>
           </td>
           <td
-            class="css-0"
+            class="css-1hg6byp"
           >
             <div
-              class="css-1ntzyee"
+              class="css-1h3cqa9"
             >
               <div
-                class="css-1gvp5h0"
+                class="css-0"
               />
             </div>
           </td>
           <td
-            class="css-0"
+            class="css-1hg6byp"
           >
             <p
-              class="chakra-text css-1ezsviu"
+              class="chakra-text css-1ps7yy3"
             >
               0
             </p>
           </td>
         </tr>
         <tr
-          class="css-1auja6l"
+          class="css-x4muuh"
         >
           <td
-            class="css-0"
+            class="css-1hg6byp"
           >
             <p
-              class="chakra-text css-1ezsviu"
+              class="chakra-text css-1ps7yy3"
             >
               BULL
             </p>
           </td>
           <td
-            class="css-0"
+            class="css-1hg6byp"
           >
             <div
-              class="css-1ntzyee"
+              class="css-1h3cqa9"
             >
               <div
-                class="css-1gvp5h0"
+                class="css-0"
               />
             </div>
           </td>
           <td
-            class="css-0"
+            class="css-1hg6byp"
           >
             <p
-              class="chakra-text css-1ezsviu"
+              class="chakra-text css-1ps7yy3"
             >
               0
             </p>
@@ -245,5 +245,9 @@ exports[`should rendering 1`] = `
       </tbody>
     </table>
   </div>
+  <span
+    hidden=""
+    id="__chakra_env"
+  />
 </div>
 `;

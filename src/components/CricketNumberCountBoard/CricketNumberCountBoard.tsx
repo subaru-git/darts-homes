@@ -14,16 +14,21 @@ const CricketNumberCountBoard: FC<CricketNumberCountBoardProps> = ({ data }) => 
   const scores = convertCountScoreToNumberOfCount(data, 15, 20)
   return (
     <>
-      <TableContainer>
-        <Table variant='simple'>
+      <TableContainer w={{ base: '100%' }}>
+        <Table variant='simple' size={{ base: 'sm', md: 'md' }}>
           <Tbody>
             {scores.map((number) => (
-              <Tr key={`number-${number.number}`} h='69px'>
+              <Tr key={`number-${number.number}`} h={{ base: '34.5px', md: '69px' }}>
                 <Td>
-                  <Text fontSize='lg'>{number.number === 25 ? 'BULL' : number.number}</Text>
+                  <Text fontSize={{ base: 'sm', md: 'lg' }}>
+                    {number.number === 25 ? 'BULL' : number.number}
+                  </Text>
                 </Td>
                 <Td>
-                  <Grid templateColumns='repeat(4, 50px)' gap={1}>
+                  <Grid
+                    templateColumns={{ base: 'repeat(4, 50px)', md: 'repeat(4, 50px)' }}
+                    gap={1}
+                  >
                     {convertNumberOfCountToMarkCount(
                       scores.find((score) => score.number === number.number)?.count ?? 0,
                     ).map((count, i) => (
@@ -34,7 +39,7 @@ const CricketNumberCountBoard: FC<CricketNumberCountBoardProps> = ({ data }) => 
                   </Grid>
                 </Td>
                 <Td>
-                  <Text fontSize='lg'>{number.total}</Text>
+                  <Text fontSize={{ base: 'sm', md: 'lg' }}>{number.total}</Text>
                 </Td>
               </Tr>
             ))}

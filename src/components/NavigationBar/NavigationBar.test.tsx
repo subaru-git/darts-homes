@@ -1,12 +1,10 @@
 import { ChakraProvider } from '@chakra-ui/react'
 import { render, screen } from '@testing-library/react'
-import MatchMediaMock from 'jest-matchmedia-mock'
+import { createMatchMedia } from '../../lib/TestUtils/MatchMediaMock'
 import NavigationBar, { NavItem } from './NavigationBar'
-let matchMediaMock: MatchMediaMock
-beforeEach(() => (matchMediaMock = new MatchMediaMock()))
-afterEach(() => matchMediaMock.clear())
 
 test('should rendering', () => {
+  window.matchMedia = createMatchMedia(1100)
   const { container } = render(
     <ChakraProvider>
       <NavigationBar items={items} />
