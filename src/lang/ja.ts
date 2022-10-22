@@ -1,11 +1,11 @@
 const text = {
   HOME_DESCRIPTION:
-    'このアプリケーションにはいくつかのゲームがあります。そのゲームはソロ用です。（01はソロじゃない？ソフトウェアの勉強用に作ったのです）\nこれらのゲームはDartsLive Homeではサポートされていません。DartsLive Homeでサポートされたゲームは非推奨になります。',
+    'このサイトは自宅でダーツ練習をするときのゲームを作っていこうという目的で作成されています。\nゲームはYouTubeなどを参考にして作成しています。',
   HOME_RESPECT:
-    'このアプリケーションは、youtubeの動画やブログなどのあらゆるダーツコンテンツを尊重します。',
-  N01_DESCRIPTION: '有名なダーツゲーム',
-  EAGLES_EYE_DESCRIPTION: 'BULL練習用のダーツゲーム',
-  CRICKET_NUMBER_COUNT_SHORT_DESCRIPTION: '菊地山口によるオリジナルのダーツ練習ゲーム。',
+    'このサイトはYouTubeの動画やブログなどのあらゆるダーツコンテンツに感謝し、その全てを尊重します。',
+  N01_DESCRIPTION: '有名なダーツゲーム [WIP]',
+  EAGLES_EYE_DESCRIPTION: 'BULL練習用のダーツゲーム [WIP]',
+  CRICKET_NUMBER_COUNT_SHORT_DESCRIPTION: '菊地山口によるオリジナルのダーツ練習ゲーム',
   CRICKET_NUMBER_COUNT_DESCRIPTION:
     'このゲームは菊地山口によるオリジナルのダーツ練習ゲームです。\nゲームのルールは、',
   CRICKET_NUMBER_COUNT_RULE_STEP1: '目標の回数を設定します（推奨10回）',

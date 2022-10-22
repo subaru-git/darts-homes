@@ -3,25 +3,25 @@
 exports[`should rendering 1`] = `
 <div>
   <div
-    class="css-1siilhg"
+    class="css-vyd9jy"
   >
     <div
-      class="css-1gvp5h0"
+      class="css-0"
     >
       <img
         alt="darts"
-        class="chakra-image css-i63f07"
-        src="/darts.jpg"
+        class="chakra-image css-qexl9x"
+        src="/darts.png"
       />
     </div>
     <div
-      class="css-1gvp5h0"
+      class="css-0"
     >
       <div
         class="css-tkevr6"
       >
         <p
-          class="chakra-text css-94e4p5"
+          class="chakra-text css-1ngz931"
         >
           This application has some darts games.The games are for solo practice. (Is the 01 game not solo? It's for software development learning)
 Some games are not supported by DartsLive Home. So if a game will support by DartsLive Home, the game changes to deprecated.
@@ -29,5 +29,9 @@ Some games are not supported by DartsLive Home. So if a game will support by Dar
       </div>
     </div>
   </div>
+  <span
+    hidden=""
+    id="__chakra_env"
+  />
 </div>
 `;
