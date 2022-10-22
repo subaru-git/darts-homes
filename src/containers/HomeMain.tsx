@@ -10,7 +10,7 @@ const HomeMain: FC = () => {
   return (
     <div data-cy='home-main'>
       <NavigationBar items={GetNavItem()} />
-      <Grid templateRows='repeat(2, auto)' gap={2} pb={2}>
+      <Grid templateRows='repeat(2, auto)' gap={2} pb={2} px={{ base: 2, md: 4 }}>
         <HomeDescription />
         <HomeDescriptionRespect />
       </Grid>

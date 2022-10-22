@@ -4,23 +4,23 @@ exports[`should rendering 1`] = `
 <div>
   <div>
     <div
-      class="css-1siilhg"
+      class="css-vyd9jy"
     >
       <div
-        class="css-1gvp5h0"
+        class="css-0"
       >
         <div
           class="css-tkevr6"
         >
           <p
-            class="chakra-text css-6dvxm2"
+            class="chakra-text css-9833tc"
           >
             This application respects all darts content like youtube videos, blogs, and more.
           </p>
         </div>
       </div>
       <div
-        class="css-1gvp5h0"
+        class="css-0"
       >
         <div
           class=""
@@ -33,5 +33,9 @@ exports[`should rendering 1`] = `
       </div>
     </div>
   </div>
+  <span
+    hidden=""
+    id="__chakra_env"
+  />
 </div>
 `;
