@@ -97,7 +97,7 @@ export default class CricketNumberCountGame {
   }
   getGameResult(): GameResult {
     return {
-      game: 'CricketNumberCountGame',
+      game: 'CricketNumberCount',
       setting: { targetCount: this.targetCount },
       result: { count: this.getCount() },
       scores: convertCountScoreToNumberOfCount(this.getScore(), 15, 20),

@@ -1,4 +1,5 @@
 import React, { FC } from 'react'
+import Footer from '@/components/Footer'
 import HistoryBoard from '@/components/HistoryBoard'
 import NavigationBar from '@/components/NavigationBar'
 import useLocale from '@/hooks/locale'
@@ -8,6 +9,7 @@ const HistoryMain: FC = () => {
     <div data-cy='history-main'>
       <NavigationBar items={GetNavItem()} />
       <HistoryBoard />
+      <Footer />
     </div>
   )
 }
