@@ -3,18 +3,18 @@
 exports[`should rendering 1`] = `
 <div>
   <div
-    class="css-2rlxtj"
+    class="css-18mp148"
   >
     <div
       class="chakra-collapse"
       style="overflow: hidden; display: none; opacity: 0; height: 0px;"
     >
       <div
-        class="chakra-alert css-1hwd9xd"
+        class="chakra-alert css-17ba83t"
         role="alert"
       >
         <span
-          class="chakra-alert__icon css-1c6vscd"
+          class="chakra-alert__icon css-14ogjxt"
         >
           <svg
             class="chakra-icon css-fi0ww0"
@@ -28,27 +28,27 @@ exports[`should rendering 1`] = `
           </svg>
         </span>
         <div
-          class="chakra-alert__title css-0"
+          class="chakra-alert__title css-tidvy5"
         >
           Invalid Import File.
         </div>
         <div
-          class="chakra-alert__desc css-6n7j50"
+          class="chakra-alert__desc css-zzks76"
         >
           Your import file is invalid.
         </div>
       </div>
     </div>
     <div
-      class="css-1m1ay21"
+      class="css-zdfn8s"
     >
       <h2
-        class="chakra-heading css-0"
+        class="chakra-heading css-ozfqyb"
       >
         History
       </h2>
       <div
-        class="css-uw6bn5"
+        class="css-142mtwu"
       >
         <input
           accept=".json"
@@ -56,7 +56,7 @@ exports[`should rendering 1`] = `
           type="file"
         />
         <button
-          class="chakra-button css-4xx2wk"
+          class="chakra-button css-bsl9zi"
           type="button"
         >
           <span
@@ -84,7 +84,7 @@ exports[`should rendering 1`] = `
           Import
         </button>
         <button
-          class="chakra-button css-4xx2wk"
+          class="chakra-button css-4z7u5h"
           type="button"
         >
           <span
@@ -117,7 +117,7 @@ exports[`should rendering 1`] = `
       class="chakra-table__container css-zipzvv"
     >
       <table
-        class="chakra-table css-0"
+        class="chakra-table css-5605sr"
       >
         <tbody
           class="css-0"
@@ -125,5 +125,9 @@ exports[`should rendering 1`] = `
       </table>
     </div>
   </div>
+  <span
+    hidden=""
+    id="__chakra_env"
+  />
 </div>
 `;
