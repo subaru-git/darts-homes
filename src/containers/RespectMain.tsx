@@ -1,20 +1,22 @@
 import React, { FC } from 'react'
 import Footer from '@/components/Footer'
-import HistoryBoard from '@/components/HistoryBoard'
 import NavigationBar from '@/components/NavigationBar'
+import RespectCardView from '@/components/RespectCardView'
 import useLocale from '@/hooks/locale'
 
-const HistoryMain: FC = () => {
+type RespectMainProps = {
+  data: RespectResult
+}
+
+const RespectMain: FC<RespectMainProps> = ({ data }) => {
   return (
-    <div data-cy='history-main'>
+    <div data-cy='respect-main'>
       <NavigationBar items={GetNavItem()} />
-      <HistoryBoard />
+      <RespectCardView data={data} />
       <Footer />
     </div>
   )
 }
-
-export default HistoryMain
 
 const GetNavItem = () => {
   const { t } = useLocale()
@@ -42,11 +44,13 @@ const GetNavItem = () => {
     },
     {
       label: 'Respect',
-      href: '/respect',
+      href: '#',
     },
     {
       label: 'History',
-      href: '#',
+      href: '/history',
     },
   ]
 }
+
+export default RespectMain

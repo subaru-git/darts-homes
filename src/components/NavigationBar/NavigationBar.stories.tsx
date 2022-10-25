@@ -34,7 +34,7 @@ Default.args = {
       ],
     },
     {
-      label: 'Respects',
+      label: 'Respect',
       href: '#',
     },
   ],
