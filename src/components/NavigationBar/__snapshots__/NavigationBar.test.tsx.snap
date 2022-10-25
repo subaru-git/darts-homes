@@ -228,7 +228,7 @@ exports[`should rendering 1`] = `
                 <a
                   href="/#"
                 >
-                  Respects
+                  Respect
                 </a>
               </div>
             </div>
@@ -370,7 +370,7 @@ exports[`should rendering 1`] = `
             <p
               class="chakra-text css-9y4vnp"
             >
-              Respects
+              Respect
             </p>
           </div>
           <div

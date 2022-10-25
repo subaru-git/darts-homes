@@ -36,7 +36,7 @@ const items: Array<NavItem> = [
     ],
   },
   {
-    label: 'Respects',
+    label: 'Respect',
     href: '#',
   },
 ]
