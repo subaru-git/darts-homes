@@ -1,8 +1,9 @@
-import React, { FC } from 'react'
+import React from 'react'
 import { Box } from '@chakra-ui/react'
+import { NextPage } from 'next'
 import HomeMain from '@/containers/HomeMain'
 
-const Home: FC = () => {
+const Home: NextPage = () => {
   return (
     <Box>
       <HomeMain />
