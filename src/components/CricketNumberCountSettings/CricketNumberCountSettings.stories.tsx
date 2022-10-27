@@ -13,4 +13,7 @@ const Template: ComponentStory<typeof CricketNumberCountSettings> = (args) => (
 )
 
 export const Default = Template.bind({})
-Default.args = {}
+Default.args = {
+  targetCount: 10,
+  isFinished: false,
+}
