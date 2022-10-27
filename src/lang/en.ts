@@ -14,6 +14,12 @@ const text = {
   CRICKET_NUMBER_COUNT_RULE_MORE: 'For more information, please watch this video.',
   CRICKET_NUMBER_COUNT_START_NEW_GAME_WARNING:
     'If you start a new game, the current game will be lost.',
+  IMPORT_ERROR_TITLE: 'Invalid Import File.',
+  IMPORT_ERROR_DESCRIPTION: 'Your import file is invalid. Please check the import file.',
+  IMPORT_DESCRIPTION:
+    "Please choose add or overwrite. If you choose overwrite, you can't undo this action afterward.",
+  IMPORT_ADD: 'Add',
+  IMPORT_OVERWRITE: 'Overwrite',
 }
 
 export default text
