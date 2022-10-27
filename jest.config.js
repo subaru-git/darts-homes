@@ -7,9 +7,11 @@ const createJestConfig = nextJest({
 const customJestConfig = {
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
+    '^dexie$': require.resolve('dexie'),
   },
   testEnvironment: 'jest-environment-jsdom',
   modulePathIgnorePatterns: ['<rootDir>/data/'],
+  setupFiles: ['fake-indexeddb/auto'],
 }
 
 module.exports = createJestConfig(customJestConfig)

@@ -1,4 +1,4 @@
-import { saveGameHistory, getGameHistory } from './GameHistory'
+import { saveGameHistory } from './GameHistory'
 
 beforeEach(() => {
   localStorage.clear()
@@ -21,8 +21,4 @@ test('manage game history', () => {
     playedAt: '2020-01-01T00:00:00.000Z',
   }
   saveGameHistory(history)
-  expect(getGameHistory()).toEqual([history])
-  const history2 = { ...history, playedAt: '2020-01-02T00:00:00.000Z' }
-  saveGameHistory(history2)
-  expect(getGameHistory()).toEqual([history, history2])
 })

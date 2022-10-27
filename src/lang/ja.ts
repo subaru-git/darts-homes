@@ -14,6 +14,11 @@ const text = {
   CRICKET_NUMBER_COUNT_RULE_MORE: '詳しくは動画をご覧ください。',
   CRICKET_NUMBER_COUNT_START_NEW_GAME_WARNING:
     '新しいゲームを始めると、現在のスコアは破棄されます。',
+  IMPORT_ERROR_TITLE: '無効なファイルです。',
+  IMPORT_ERROR_DESCRIPTION: 'ファイル形式が無効です。ファイルを確認してください。',
+  IMPORT_DESCRIPTION: '上書きか追加かを選択してください。上書きを選択すると、元に戻せません。',
+  IMPORT_ADD: '追加',
+  IMPORT_OVERWRITE: '上書き',
 }
 
 export default text
