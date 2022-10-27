@@ -39,12 +39,15 @@ exports[`should rendering 1`] = `
         <div
           class="css-8fa26g"
         >
-          <img
-            alt="logo"
-            class="chakra-image css-u1jr60"
+          <a
             href="/"
-            src="/logo.svg"
-          />
+          >
+            <img
+              alt="logo"
+              class="chakra-image css-u1jr60"
+              src="/logo.svg"
+            />
+          </a>
         </div>
         <div
           class="css-1ynfsgs"
@@ -100,7 +103,7 @@ exports[`should rendering 1`] = `
                           <p
                             class="chakra-text css-itvw0n"
                           >
-                            The popular dart game
+                            The popular darts game
                           </p>
                         </div>
                         <div
@@ -143,7 +146,7 @@ exports[`should rendering 1`] = `
                           <p
                             class="chakra-text css-itvw0n"
                           >
-                            A dart game for BULL practice
+                            A darts game for BULL practice
                           </p>
                         </div>
                         <div
@@ -186,7 +189,7 @@ exports[`should rendering 1`] = `
                           <p
                             class="chakra-text css-itvw0n"
                           >
-                            A original dart game for practice. designed by kikuyama.
+                            A original darts game for practice. designed by Kikchi Yamaguchi.
                           </p>
                         </div>
                         <div
@@ -226,9 +229,26 @@ exports[`should rendering 1`] = `
                 id="popover-trigger-:r4:"
               >
                 <a
-                  href="/#"
+                  href="/respect"
                 >
                   Respect
+                </a>
+              </div>
+            </div>
+            <div
+              class="css-0"
+            >
+              <div
+                aria-controls="popover-content-:r6:"
+                aria-expanded="false"
+                aria-haspopup="dialog"
+                class="css-13fflh2"
+                id="popover-trigger-:r6:"
+              >
+                <a
+                  href="/history"
+                >
+                  History
                 </a>
               </div>
             </div>
@@ -238,12 +258,12 @@ exports[`should rendering 1`] = `
           class="css-17xejub"
         />
         <button
-          aria-controls="popover-content-:r6:"
+          aria-controls="popover-content-:r8:"
           aria-expanded="false"
           aria-haspopup="dialog"
           aria-label="Change language"
           class="chakra-button css-13zvu4r"
-          id="popover-trigger-:r6:"
+          id="popover-trigger-:r8:"
           type="button"
         >
           <svg
@@ -268,7 +288,7 @@ exports[`should rendering 1`] = `
         >
           <section
             class="chakra-popover__content css-1l1b222"
-            id="popover-content-:r6:"
+            id="popover-content-:r8:"
             role="dialog"
             style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
             tabindex="-1"
@@ -365,12 +385,34 @@ exports[`should rendering 1`] = `
         >
           <div
             class="css-lxmzlz"
-            href="/#"
+            href="/respect"
           >
             <p
               class="chakra-text css-9y4vnp"
             >
               Respect
+            </p>
+          </div>
+          <div
+            class="chakra-collapse"
+            style="overflow: hidden; display: none; opacity: 0; height: 0px;"
+          >
+            <div
+              class="chakra-stack css-11sp92w"
+            />
+          </div>
+        </div>
+        <div
+          class="chakra-stack css-egoftb"
+        >
+          <div
+            class="css-lxmzlz"
+            href="/history"
+          >
+            <p
+              class="chakra-text css-9y4vnp"
+            >
+              History
             </p>
           </div>
           <div
