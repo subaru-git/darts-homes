@@ -20,13 +20,11 @@ import { GiHamburgerMenu } from 'react-icons/gi'
 import { GoChevronDown, GoChevronRight } from 'react-icons/go'
 import { GrClose } from 'react-icons/gr'
 import LanguageChangeButton from '@/components/LanguageChangeButton'
+import useLocale from '@/hooks/locale'
 
-type NavigationBarProps = {
-  items: NavItem[]
-}
-
-const NavigationBar: FC<NavigationBarProps> = ({ items }) => {
+const NavigationBar: FC = () => {
   const { isOpen, onToggle } = useDisclosure()
+  const items = GetNavItem()
 
   return (
     <Box>
@@ -63,7 +61,9 @@ const NavigationBar: FC<NavigationBarProps> = ({ items }) => {
             }}
           >
             <Link href='/' passHref>
-              <Image src='/logo.svg' alt='logo' h='40px' />
+              <a>
+                <Image src='/logo.svg' alt='logo' h='40px' />
+              </a>
             </Link>
           </Box>
           <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
@@ -80,7 +80,7 @@ const NavigationBar: FC<NavigationBarProps> = ({ items }) => {
   )
 }
 
-const DesktopNav: FC<NavigationBarProps> = ({ items }) => {
+const DesktopNav: FC<{ items: NavItem[] }> = ({ items }) => {
   const linkColor = useColorModeValue('gray.600', 'gray.200')
   const linkHoverColor = useColorModeValue('gray.800', 'white')
   const popoverContentBgColor = useColorModeValue('white', 'gray.800')
@@ -164,7 +164,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
   )
 }
 
-const MobileNav: FC<NavigationBarProps> = ({ items }) => {
+const MobileNav: FC<{ items: NavItem[] }> = ({ items }) => {
   return (
     <Stack bg={useColorModeValue('white', 'gray.800')} p={4} display={{ md: 'none' }}>
       {items.map((navItem) => (
@@ -231,4 +231,38 @@ export interface NavItem {
   href?: string
 }
 
+const GetNavItem = () => {
+  const { t } = useLocale()
+
+  return [
+    {
+      label: 'Games',
+      children: [
+        {
+          label: '501',
+          subLabel: t.N01_DESCRIPTION,
+          href: '#',
+        },
+        {
+          label: "Eagle's Eye",
+          subLabel: t.EAGLES_EYE_DESCRIPTION,
+          href: '/eagleseye',
+        },
+        {
+          label: 'Cricket Number Count',
+          subLabel: t.CRICKET_NUMBER_COUNT_SHORT_DESCRIPTION,
+          href: '/cricketnumbercount',
+        },
+      ],
+    },
+    {
+      label: 'Respect',
+      href: '/respect',
+    },
+    {
+      label: 'History',
+      href: '/history',
+    },
+  ]
+}
 export default NavigationBar

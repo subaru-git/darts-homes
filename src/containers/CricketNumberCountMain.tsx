@@ -9,7 +9,6 @@ import RoundBoard from '@/components/RoundBoard'
 import RoundScore from '@/components/RoundScore'
 import TargetBoard from '@/components/TargetBoard'
 import useGame from '@/hooks/game'
-import useLocale from '@/hooks/locale'
 import CricketNumberCountGame from '@/lib/CricketNumberCountGame/CricketNumberCountGame'
 import { saveGameHistory } from '@/lib/GameHistoryManager/GameHistory'
 
@@ -17,7 +16,7 @@ const CricketNumberCountMain: FC = () => {
   const [game, setGame] = useGame(new CricketNumberCountGame(10))
   return (
     <div data-cy='cricket-number-count-main'>
-      <NavigationBar items={GetNavItem()} />
+      <NavigationBar />
       <Box display={{ base: 'none', md: 'block' }}>
         <DesktopMain game={game} setGame={setGame} />
       </Box>
@@ -188,41 +187,6 @@ const MobileMain: FC<{
       </Grid>
     </>
   )
-}
-
-const GetNavItem = () => {
-  const { t } = useLocale()
-
-  return [
-    {
-      label: 'Games',
-      children: [
-        {
-          label: '501',
-          subLabel: t.N01_DESCRIPTION,
-          href: '/n01',
-        },
-        {
-          label: "Eagle's Eye",
-          subLabel: t.EAGLES_EYE_DESCRIPTION,
-          href: '/eagleseye',
-        },
-        {
-          label: 'Cricket Number Count',
-          subLabel: t.CRICKET_NUMBER_COUNT_SHORT_DESCRIPTION,
-          href: '/#',
-        },
-      ],
-    },
-    {
-      label: 'Respect',
-      href: '/respect',
-    },
-    {
-      label: 'History',
-      href: '/history',
-    },
-  ]
 }
 
 export default CricketNumberCountMain
