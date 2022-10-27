@@ -13,4 +13,11 @@ const Template: ComponentStory<typeof RoundScore> = (args) => <RoundScore {...ar
 export const Default = Template.bind({})
 Default.args = {
   scores: ['19T', '0', 'D-BULL'],
+  isFinished: false,
+}
+
+export const Finished = Template.bind({})
+Finished.args = {
+  scores: [],
+  isFinished: true,
 }

@@ -70,7 +70,7 @@ const CountButtons: FC<CountButtonsProps> = ({
             columnGap={3}
             rowGap={1}
           >
-            {bull ? null : (
+            {buttons.length === 0 ? null : (
               <>
                 <GridItem>
                   <Center h='100%'>

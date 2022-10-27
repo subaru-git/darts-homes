@@ -8,7 +8,12 @@ export default {
   component: CricketNumberCountSettingModal,
 } as ComponentMeta<typeof CricketNumberCountSettingModal>
 
-const Template: ComponentStory<typeof CricketNumberCountSettingModal> = (args) => <CricketNumberCountSettingModal {...args} />
+const Template: ComponentStory<typeof CricketNumberCountSettingModal> = (args) => (
+  <CricketNumberCountSettingModal {...args} />
+)
 
 export const Default = Template.bind({})
-Default.args = {}
+Default.args = {
+  isOpen: true,
+  targetCount: 10,
+}

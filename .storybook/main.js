@@ -9,6 +9,7 @@ module.exports = {
     '@storybook/addon-interactions',
     '@chakra-ui/storybook-addon',
     '@storybook/addon-viewport',
+    '@ecubelabs/storybook-addon-intl',
     'storybook-addon-next-router',
   ],
   framework: '@storybook/react',

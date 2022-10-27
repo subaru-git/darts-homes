@@ -8,7 +8,11 @@ export default {
   component: CricketNumberCountSettingAlert,
 } as ComponentMeta<typeof CricketNumberCountSettingAlert>
 
-const Template: ComponentStory<typeof CricketNumberCountSettingAlert> = (args) => <CricketNumberCountSettingAlert {...args} />
+const Template: ComponentStory<typeof CricketNumberCountSettingAlert> = (args) => (
+  <CricketNumberCountSettingAlert {...args} />
+)
 
 export const Default = Template.bind({})
-Default.args = {}
+Default.args = {
+  isOpen: true,
+}

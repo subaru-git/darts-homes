@@ -84,6 +84,45 @@ exports[`should rendering and clickable input 1`] = `
         <div
           class="css-1gvp5h0"
         >
+          <div
+            class="css-tkevr6"
+          >
+            <h5
+              class="chakra-heading css-1xu3tth"
+            >
+              Single
+            </h5>
+          </div>
+        </div>
+        <div
+          class="css-1gvp5h0"
+        >
+          <div
+            class="css-tkevr6"
+          >
+            <h5
+              class="chakra-heading css-1xu3tth"
+            >
+              Double
+            </h5>
+          </div>
+        </div>
+        <div
+          class="css-1gvp5h0"
+        >
+          <div
+            class="css-tkevr6"
+          >
+            <h5
+              class="chakra-heading css-1xu3tth"
+            >
+              Triple
+            </h5>
+          </div>
+        </div>
+        <div
+          class="css-1gvp5h0"
+        >
           <button
             class="chakra-button css-uxt1e8"
             type="button"
@@ -771,6 +810,45 @@ exports[`should rendering and disable input 1`] = `
       <div
         class="css-1qoey9r"
       >
+        <div
+          class="css-1gvp5h0"
+        >
+          <div
+            class="css-tkevr6"
+          >
+            <h5
+              class="chakra-heading css-14dydzm"
+            >
+              Single
+            </h5>
+          </div>
+        </div>
+        <div
+          class="css-1gvp5h0"
+        >
+          <div
+            class="css-tkevr6"
+          >
+            <h5
+              class="chakra-heading css-14dydzm"
+            >
+              Double
+            </h5>
+          </div>
+        </div>
+        <div
+          class="css-1gvp5h0"
+        >
+          <div
+            class="css-tkevr6"
+          >
+            <h5
+              class="chakra-heading css-14dydzm"
+            >
+              Triple
+            </h5>
+          </div>
+        </div>
         <div
           class="css-1gvp5h0"
         >
@@ -1521,6 +1599,45 @@ exports[`should rendering only cricket numbers 1`] = `
       <div
         class="css-96zv3r"
       >
+        <div
+          class="css-1gvp5h0"
+        >
+          <div
+            class="css-tkevr6"
+          >
+            <h5
+              class="chakra-heading css-14dydzm"
+            >
+              Single
+            </h5>
+          </div>
+        </div>
+        <div
+          class="css-1gvp5h0"
+        >
+          <div
+            class="css-tkevr6"
+          >
+            <h5
+              class="chakra-heading css-14dydzm"
+            >
+              Double
+            </h5>
+          </div>
+        </div>
+        <div
+          class="css-1gvp5h0"
+        >
+          <div
+            class="css-tkevr6"
+          >
+            <h5
+              class="chakra-heading css-14dydzm"
+            >
+              Triple
+            </h5>
+          </div>
+        </div>
         <div
           class="css-1gvp5h0"
         >
