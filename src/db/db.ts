@@ -3,21 +3,21 @@ import Dexie, { Table } from 'dexie'
 export interface GameResultModel {
   id?: number
   game: string
-  setting: CricketNumberCountSettingModel
-  result: CricketNumberCountResultModel
-  scores: CricketNumberCountScoreModel[]
+  setting: CricketMarkUpSettingModel
+  result: CricketMarkUpResultModel
+  scores: CricketMarkUpScoreModel[]
   playedAt: string
 }
 
-export interface CricketNumberCountSettingModel {
+export interface CricketMarkUpSettingModel {
   targetCount: number
 }
 
-export interface CricketNumberCountResultModel {
+export interface CricketMarkUpResultModel {
   count: number
 }
 
-export interface CricketNumberCountScoreModel {
+export interface CricketMarkUpScoreModel {
   number: number
   count: number
   total: number

@@ -184,7 +184,7 @@ exports[`should rendering 1`] = `
                       role="group"
                     >
                       <a
-                        href="/cricketnumbercount"
+                        href="/cricketmarkup"
                       >
                         <div
                           class="chakra-stack css-84zodg"
@@ -195,7 +195,7 @@ exports[`should rendering 1`] = `
                             <p
                               class="chakra-text css-sc37ud"
                             >
-                              Cricket Number Count
+                              Cricket Mark-Up
                             </p>
                             <p
                               class="chakra-text css-itvw0n"
@@ -387,7 +387,7 @@ exports[`should rendering 1`] = `
               <div
                 class="css-1j1i25b"
               >
-                Cricket Number Count
+                Cricket Mark-Up
               </div>
             </div>
           </div>

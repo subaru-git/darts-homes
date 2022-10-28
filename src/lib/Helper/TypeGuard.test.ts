@@ -3,7 +3,7 @@ import { isGameHistory } from './TypeGuard'
 test('isGameHistory', () => {
   const history: GameResult[] = [
     {
-      game: 'CricketNumberCount',
+      game: 'Cricket Mark-Up',
       setting: { targetCount: 10 },
       result: { count: 10 },
       scores: [
