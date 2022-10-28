@@ -1,15 +1,7 @@
 import React, { FC } from 'react'
-import {
-  Button,
-  Center,
-  Grid,
-  GridItem,
-  Heading,
-  IconButton,
-  useBreakpointValue,
-} from '@chakra-ui/react'
-import { MdOutlineChangeCircle } from 'react-icons/md'
+import { Grid, GridItem, Heading, IconButton } from '@chakra-ui/react'
 import { VscTrash } from 'react-icons/vsc'
+import RoundScoreButton from '../RoundScoreButton'
 
 type RoundScoreProps = {
   scores: string[]
@@ -26,41 +18,6 @@ const RoundScore: FC<RoundScoreProps> = ({
   isFinished,
   onRoundOver,
 }) => {
-  return (
-    <>
-      {isFinished && scores.length === 0 ? (
-        <FinishGame onRoundOver={onRoundOver} />
-      ) : (
-        <InRoundScore
-          scores={scores}
-          onClear={onClear}
-          onRoundChange={onRoundChange}
-          isFinished={isFinished}
-        />
-      )}
-    </>
-  )
-}
-
-const FinishGame: FC<{ onRoundOver: () => void }> = ({ onRoundOver }) => {
-  return (
-    <Center>
-      <Button colorScheme='teal' onClick={onRoundOver}>
-        Finish Game! Save result and Start New Game !!
-      </Button>
-    </Center>
-  )
-}
-
-type InRoundScoreProps = {
-  scores: string[]
-  onClear: () => void
-  onRoundChange: () => void
-  isFinished: boolean
-}
-
-const InRoundScore: FC<InRoundScoreProps> = ({ scores, onClear, onRoundChange, isFinished }) => {
-  const isMd = useBreakpointValue({ base: false, md: true })
   return (
     <Grid templateColumns='repeat(4, 1fr)' alignItems='center' gap={2}>
       <GridItem>
@@ -109,30 +66,12 @@ const InRoundScore: FC<InRoundScoreProps> = ({ scores, onClear, onRoundChange, i
             ></IconButton>
           </GridItem>
           <GridItem>
-            {!isMd ? (
-              <IconButton
-                aria-label='Round Change'
-                icon={<MdOutlineChangeCircle />}
-                colorScheme='green'
-                size='sm'
-                width='100%'
-                onClick={() => {
-                  onRoundChange()
-                }}
-                disabled={!(scores.length === 3 || isFinished)}
-              />
-            ) : (
-              <Button
-                colorScheme='green'
-                w='100%'
-                onClick={() => {
-                  onRoundChange()
-                }}
-                disabled={!(scores.length === 3 || isFinished)}
-              >
-                Round Change
-              </Button>
-            )}
+            <RoundScoreButton
+              isFinished={isFinished}
+              disabled={scores.length !== 3}
+              onRoundChange={onRoundChange}
+              onRoundOver={onRoundOver}
+            />
           </GridItem>
         </Grid>
       </GridItem>

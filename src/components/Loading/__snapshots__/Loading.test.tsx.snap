@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should rendering 1`] = `
+<div>
+  <div
+    class="css-1unzjzx"
+  >
+    <div
+      class="chakra-spinner css-1kmaskw"
+    >
+      <span
+        class="css-8b45rq"
+      >
+        Loading...
+      </span>
+    </div>
+  </div>
+</div>
+`;

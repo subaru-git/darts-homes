@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should rendering 1`] = `
+<div>
+  <button
+    class="chakra-button css-1kg18wp"
+    type="button"
+  >
+    Round Change
+  </button>
+  <span
+    hidden=""
+    id="__chakra_env"
+  />
+</div>
+`;
