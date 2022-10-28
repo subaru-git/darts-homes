@@ -4,6 +4,7 @@ import CountButtons from '@/components/CountButtons'
 import CricketNumberCountBoard from '@/components/CricketNumberCountBoard'
 import CricketNumberCountSettings from '@/components/CricketNumberCountSettings'
 import Footer from '@/components/Footer'
+import Loading from '@/components/Loading'
 import NavigationBar from '@/components/NavigationBar'
 import RoundBoard from '@/components/RoundBoard'
 import RoundScore from '@/components/RoundScore'
@@ -18,16 +19,21 @@ import { saveGameHistory } from '@/lib/GameHistoryManager/GameHistory'
 const CricketNumberCountMain: FC = () => {
   const game = useCricketNumberCountGame()
   const setGame = useCricketNumberCountGameSet()
-  if (!game) return null
   return (
     <div data-cy='cricket-number-count-main'>
       <NavigationBar />
-      <Box display={{ base: 'none', md: 'block' }}>
-        <DesktopMain game={game} setGame={setGame} />
-      </Box>
-      <Box display={{ base: 'block', md: 'none' }}>
-        <MobileMain game={game} setGame={setGame} />
-      </Box>
+      {!game ? (
+        <Loading />
+      ) : (
+        <>
+          <Box display={{ base: 'none', md: 'block' }}>
+            <DesktopMain game={game} setGame={setGame} />
+          </Box>
+          <Box display={{ base: 'block', md: 'none' }}>
+            <MobileMain game={game} setGame={setGame} />
+          </Box>
+        </>
+      )}
       <Footer />
     </div>
   )
