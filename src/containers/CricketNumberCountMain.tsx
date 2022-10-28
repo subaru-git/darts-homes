@@ -8,12 +8,17 @@ import NavigationBar from '@/components/NavigationBar'
 import RoundBoard from '@/components/RoundBoard'
 import RoundScore from '@/components/RoundScore'
 import TargetBoard from '@/components/TargetBoard'
-import useGame from '@/hooks/game'
+import {
+  useCricketNumberCountGame,
+  useCricketNumberCountGameSet,
+} from '@/contexts/CricketNumberCountGameContext'
 import CricketNumberCountGame from '@/lib/CricketNumberCountGame/CricketNumberCountGame'
 import { saveGameHistory } from '@/lib/GameHistoryManager/GameHistory'
 
 const CricketNumberCountMain: FC = () => {
-  const [game, setGame] = useGame(new CricketNumberCountGame(10))
+  const game = useCricketNumberCountGame()
+  const setGame = useCricketNumberCountGameSet()
+  if (!game) return null
   return (
     <div data-cy='cricket-number-count-main'>
       <NavigationBar />
