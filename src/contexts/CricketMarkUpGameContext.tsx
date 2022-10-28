@@ -18,12 +18,10 @@ const setCricketMarkUpGameContext = createContext<
 const CricketMarkUpGameContextProvider: FC<{ children: ReactNode[] }> = ({ children }) => {
   const [game, setGame] = useState<CricketMarkUpGame | null>(null)
   useEffect(() => {
+    const g = new CricketMarkUpGame(10)
     const memoGame = localStorage.getItem('game')
-    if (memoGame) {
-      const g = new CricketMarkUpGame(0)
-      g.resumeGame(JSON.parse(memoGame))
-      setGame(g)
-    }
+    if (memoGame) g.resumeGame(JSON.parse(memoGame))
+    setGame(g)
   }, [])
   useEffect(() => {
     if (!game) return
