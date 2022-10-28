@@ -11,7 +11,7 @@ import {
   Text,
 } from '@chakra-ui/react'
 import { TwitterShareButton, TwitterIcon, LineShareButton, LineIcon } from 'react-share'
-import { useCricketNumberCountGame } from '@/contexts/CricketNumberCountGameContext'
+import { useCricketMarkUpGame } from '@/contexts/CricketMarkUpGameContext'
 
 type RoundOverDialogProps = {
   isOpen: boolean
@@ -21,7 +21,7 @@ type RoundOverDialogProps = {
 
 const RoundOverDialog: FC<RoundOverDialogProps> = ({ isOpen, onClose, onNewGame }) => {
   const cancelRef = useRef<HTMLButtonElement>(null)
-  const game = useCricketNumberCountGame()
+  const game = useCricketMarkUpGame()
   if (!game) return null
   const result = `Total: ${game.getGameResult().result.count}\n${game
     .getGameResult()

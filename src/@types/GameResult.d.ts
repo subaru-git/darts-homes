@@ -1,20 +1,20 @@
 interface GameResult {
   game: string
-  setting: CricketNumberCountSetting
-  result: CricketNumberCountResult
-  scores: CricketNumberCountScore[]
+  setting: CricketMarkUpSetting
+  result: CricketMarkUpResult
+  scores: CricketMarkUpScore[]
   playedAt: string
 }
 
-interface CricketNumberCountSetting {
+interface CricketMarkUpSetting {
   targetCount: number
 }
 
-interface CricketNumberCountResult {
+interface CricketMarkUpResult {
   count: number
 }
 
-interface CricketNumberCountScore {
+interface CricketMarkUpScore {
   number: number
   count: number
   total: number

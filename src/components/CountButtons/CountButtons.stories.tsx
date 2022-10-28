@@ -33,8 +33,8 @@ Cricket.args = {
   reversed: true,
 }
 
-export const MobileCricketNumberCount = Template.bind({})
-MobileCricketNumberCount.args = {
+export const MobileCricketMarkUp = Template.bind({})
+MobileCricketMarkUp.args = {
   begin: 20,
   end: 20,
   reversed: true,
@@ -42,8 +42,8 @@ MobileCricketNumberCount.args = {
   other: true,
 }
 
-export const MobileCricketNumberCountBull = Template.bind({})
-MobileCricketNumberCountBull.args = {
+export const MobileCricketMarkUpBull = Template.bind({})
+MobileCricketMarkUpBull.args = {
   begin: 0,
   end: 0,
   reversed: true,

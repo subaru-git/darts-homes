@@ -255,9 +255,9 @@ const GetNavItem = () => {
           href: '/eagleseye',
         },
         {
-          label: 'Cricket Number Count',
+          label: 'Cricket Mark-Up',
           subLabel: t.CRICKET_NUMBER_COUNT_SHORT_DESCRIPTION,
-          href: '/cricketnumbercount',
+          href: '/cricketmarkup',
         },
       ],
     },
