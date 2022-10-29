@@ -11,17 +11,13 @@ import {
 } from '@chakra-ui/react'
 import useLocale from '@/hooks/locale'
 
-type CricketMarkUpSettingAlertProps = {
+type NewGameAlertProps = {
   isOpen: boolean
   onClose: () => void
   onNewGame: () => void
 }
 
-const CricketMarkUpSettingAlert: FC<CricketMarkUpSettingAlertProps> = ({
-  isOpen,
-  onClose,
-  onNewGame,
-}) => {
+const NewGameAlert: FC<NewGameAlertProps> = ({ isOpen, onClose, onNewGame }) => {
   const cancelRef = useRef<HTMLButtonElement>(null)
   const { t } = useLocale()
   return (
@@ -57,4 +53,4 @@ const CricketMarkUpSettingAlert: FC<CricketMarkUpSettingAlertProps> = ({
     </AlertDialog>
   )
 }
-export default CricketMarkUpSettingAlert
+export default NewGameAlert

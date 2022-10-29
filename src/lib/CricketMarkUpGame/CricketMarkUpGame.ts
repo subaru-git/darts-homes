@@ -95,11 +95,10 @@ export default class CricketMarkUpGame {
   getProgressJson() {
     return { targetCount: this.targetCount, round: this.roundScore, score: this.player.getScore() }
   }
-  getGameResult(): GameResult {
+  getGameResult(): CricketMarkUpResult {
     return {
-      game: 'Cricket Mark-Up',
-      setting: { targetCount: this.targetCount },
-      result: { count: this.getCount() },
+      targetCount: this.targetCount,
+      result: this.getCount(),
       scores: convertCountScoreToNumberOfCount(this.getScore(), 15, 20),
       playedAt: new Date().toJSON(),
     }

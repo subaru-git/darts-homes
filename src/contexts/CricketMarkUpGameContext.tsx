@@ -15,17 +15,19 @@ const setCricketMarkUpGameContext = createContext<
   Dispatch<SetStateAction<CricketMarkUpGame | null>>
 >(() => undefined)
 
-const CricketMarkUpGameContextProvider: FC<{ children: ReactNode[] }> = ({ children }) => {
+const CricketMarkUpGameContextProvider: FC<{ children: ReactNode | ReactNode[] }> = ({
+  children,
+}) => {
   const [game, setGame] = useState<CricketMarkUpGame | null>(null)
   useEffect(() => {
     const g = new CricketMarkUpGame(10)
-    const memoGame = localStorage.getItem('game')
+    const memoGame = localStorage.getItem('CricketMarkUp')
     if (memoGame) g.resumeGame(JSON.parse(memoGame))
     setGame(g)
   }, [])
   useEffect(() => {
     if (!game) return
-    localStorage.setItem('game', JSON.stringify(game.getProgressJson()))
+    localStorage.setItem('CricketMarkUp', JSON.stringify(game.getProgressJson()))
   }, [game])
   return (
     <cricketMarkUpGameContext.Provider value={game}>

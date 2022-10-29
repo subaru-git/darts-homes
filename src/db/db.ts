@@ -1,20 +1,11 @@
 import Dexie, { Table } from 'dexie'
 
-export interface GameResultModel {
+export interface CricketMarkUpResultModel {
   id?: number
-  game: string
-  setting: CricketMarkUpSettingModel
-  result: CricketMarkUpResultModel
+  targetCount: number
+  result: number
   scores: CricketMarkUpScoreModel[]
   playedAt: string
-}
-
-export interface CricketMarkUpSettingModel {
-  targetCount: number
-}
-
-export interface CricketMarkUpResultModel {
-  count: number
 }
 
 export interface CricketMarkUpScoreModel {
@@ -23,13 +14,22 @@ export interface CricketMarkUpScoreModel {
   total: number
 }
 
+export interface EaglesEyeResultModel {
+  id?: number
+  result: number
+  scores: point[][]
+  playedAt: string
+}
+
 export class GameResultDexie extends Dexie {
-  gameResult!: Table<GameResultModel>
+  cricketMarkUpResult!: Table<CricketMarkUpResultModel>
+  eaglesEyeResult!: Table<EaglesEyeResultModel>
 
   constructor() {
-    super('gameDatabase')
+    super('DartsGames')
     this.version(1).stores({
-      gameResult: '++id',
+      cricketMarkUpResult: '++id',
+      eaglesEyeResult: '++id',
     })
   }
 }

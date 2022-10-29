@@ -21,7 +21,7 @@ type HistoryImportExportProps = {
 
 const HistoryImportExport: FC<HistoryImportExportProps> = ({ onError }) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
-  const [history, setHistory] = useState<GameResult[]>([])
+  const [history, setHistory] = useState<GameResult>({ cricketmarkup: [], eagleseye: [] })
   const inputRef = useRef<HTMLInputElement>(null)
   const cancelRef = useRef<HTMLButtonElement>(null)
   const { t } = useLocale()

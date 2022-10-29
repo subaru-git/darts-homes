@@ -1,25 +1,44 @@
 import fileDownload from 'js-file-download'
 import { db } from '@/db/db'
 
-const saveGameHistory = (history: GameResult) => {
-  saveDB(history)
+const saveCricketMarkUpHistory = (history: CricketMarkUpResult) => {
+  saveCricketMarkUpResultToDB(history)
 }
 
-const deleteGameHistory = async (id: number | undefined) => {
+const saveEaglesEyeHistory = (history: EaglesEyeResult) => {
+  saveEaglesEyeResultToDB(history)
+}
+
+const deleteCricketMarkUpHistory = async (id: number | undefined) => {
   if (!id) return
   try {
-    await db.gameResult.delete(id)
+    await db.cricketMarkUpResult.delete(id)
   } catch (error) {
     console.error(error)
   }
 }
 
-const importGameHistory = (gameHistory: GameResult[], overwrite: boolean) => {
+const deleteEaglesEyeHistory = async (id: number | undefined) => {
+  if (!id) return
   try {
-    db.transaction('rw', db.gameResult, () => {
-      if (overwrite) db.gameResult.clear()
-      for (const history of gameHistory) {
-        saveDB(history)
+    await db.eaglesEyeResult.delete(id)
+  } catch (error) {
+    console.error(error)
+  }
+}
+
+const importGameHistory = (gameHistory: GameResult, overwrite: boolean) => {
+  try {
+    db.transaction('rw', db.cricketMarkUpResult, () => {
+      if (overwrite) db.cricketMarkUpResult.clear()
+      for (const history of gameHistory.cricketmarkup) {
+        saveCricketMarkUpResultToDB(history)
+      }
+    })
+    db.transaction('rw', db.eaglesEyeResult, () => {
+      if (overwrite) db.eaglesEyeResult.clear()
+      for (const history of gameHistory.eagleseye) {
+        saveEaglesEyeResultToDB(history)
       }
     })
   } catch (error) {
@@ -29,23 +48,43 @@ const importGameHistory = (gameHistory: GameResult[], overwrite: boolean) => {
 
 const exportGameHistory = async () => {
   try {
-    const results = await db.gameResult.toArray()
-    const json = results.map((r) => {
+    const cricketmarkupResult = await db.cricketMarkUpResult.toArray()
+    const cricketmarkup = cricketmarkupResult.map((r) => {
       delete r.id
       return r
     })
-    fileDownload(JSON.stringify(json), 'darts-games-history.json')
+    const eagleseyeResult = await db.eaglesEyeResult.toArray()
+    const eagleseye = eagleseyeResult.map((r) => {
+      delete r.id
+      return r
+    })
+    fileDownload(JSON.stringify({ cricketmarkup, eagleseye }), 'darts-games-history.json')
   } catch (error) {
     console.error(error)
   }
 }
 
-const saveDB = async (history: GameResult) => {
+const saveCricketMarkUpResultToDB = async (history: CricketMarkUpResult) => {
   try {
-    await db.gameResult.add(history)
+    await db.cricketMarkUpResult.add(history)
   } catch (error) {
     console.error(error)
   }
 }
 
-export { saveGameHistory, deleteGameHistory, importGameHistory, exportGameHistory }
+const saveEaglesEyeResultToDB = async (history: EaglesEyeResult) => {
+  try {
+    await db.eaglesEyeResult.add(history)
+  } catch (error) {
+    console.error(error)
+  }
+}
+
+export {
+  saveCricketMarkUpHistory,
+  saveEaglesEyeHistory,
+  deleteCricketMarkUpHistory,
+  deleteEaglesEyeHistory,
+  importGameHistory,
+  exportGameHistory,
+}
