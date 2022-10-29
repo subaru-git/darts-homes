@@ -1,8 +1,8 @@
 import React, { FC } from 'react'
 import { Button, IconButton, useBreakpointValue, useDisclosure } from '@chakra-ui/react'
 import { FiSettings } from 'react-icons/fi'
-import CricketMarkUpSettingAlert from '../CricketMarkUpSettingAlert'
-import CricketMarkUpSettingModal from '../CricketMarkUpSettingModal'
+import CricketMarkUpSettingModal from '@/components/CricketMarkUpSettingModal'
+import NewGameAlert from '@/components/NewGameAlert'
 
 type CricketMarkUpSettingsProps = {
   onNewGame: (targetCount: number, save: boolean) => void
@@ -42,7 +42,7 @@ const CricketMarkUpSettings: FC<CricketMarkUpSettingsProps> = ({
           onClose()
         }}
       />
-      <CricketMarkUpSettingAlert
+      <NewGameAlert
         isOpen={isAlertOpen}
         onClose={onAlertClose}
         onNewGame={() => {

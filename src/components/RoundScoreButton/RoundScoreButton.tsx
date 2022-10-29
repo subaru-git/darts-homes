@@ -9,6 +9,7 @@ type RoundScoreButtonProps = {
   disabled: boolean
   onRoundChange: () => void
   onRoundOver: () => void
+  kind: GameKind
 }
 
 const RoundScoreButton: FC<RoundScoreButtonProps> = ({
@@ -16,6 +17,7 @@ const RoundScoreButton: FC<RoundScoreButtonProps> = ({
   disabled,
   onRoundChange,
   onRoundOver,
+  kind,
 }) => {
   const isMd = useBreakpointValue({ base: false, md: true })
   return (
@@ -26,6 +28,7 @@ const RoundScoreButton: FC<RoundScoreButtonProps> = ({
           disabled={disabled}
           onRoundChange={onRoundChange}
           onRoundOver={onRoundOver}
+          kind={kind}
         />
       ) : (
         <DesktopRoundScoreButton
@@ -33,6 +36,7 @@ const RoundScoreButton: FC<RoundScoreButtonProps> = ({
           disabled={disabled}
           onRoundChange={onRoundChange}
           onRoundOver={onRoundOver}
+          kind={kind}
         />
       )}
     </>
@@ -44,6 +48,7 @@ const DesktopRoundScoreButton: FC<RoundScoreButtonProps> = ({
   disabled,
   onRoundChange,
   onRoundOver,
+  kind,
 }) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   return (
@@ -51,7 +56,7 @@ const DesktopRoundScoreButton: FC<RoundScoreButtonProps> = ({
       {!isFinished ? (
         <Button
           colorScheme='green'
-          w='100%'
+          w='145px'
           onClick={() => {
             onRoundChange()
           }}
@@ -63,7 +68,7 @@ const DesktopRoundScoreButton: FC<RoundScoreButtonProps> = ({
         <>
           <Button
             colorScheme='orange'
-            w='100%'
+            w='145px'
             onClick={() => {
               onOpen()
             }}
@@ -77,6 +82,7 @@ const DesktopRoundScoreButton: FC<RoundScoreButtonProps> = ({
               onRoundOver()
               onClose()
             }}
+            kind={kind}
           />
         </>
       )}
@@ -89,6 +95,7 @@ const MobileRoundScoreButton: FC<RoundScoreButtonProps> = ({
   disabled,
   onRoundChange,
   onRoundOver,
+  kind,
 }) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   return (
@@ -124,6 +131,7 @@ const MobileRoundScoreButton: FC<RoundScoreButtonProps> = ({
               onRoundOver()
               onClose()
             }}
+            kind={kind}
           />
         </>
       )}

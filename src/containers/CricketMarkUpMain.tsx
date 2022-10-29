@@ -11,7 +11,7 @@ import RoundScore from '@/components/RoundScore'
 import TargetBoard from '@/components/TargetBoard'
 import { useCricketMarkUpGame, useCricketMarkUpGameSet } from '@/contexts/CricketMarkUpGameContext'
 import CricketMarkUpGame from '@/lib/CricketMarkUpGame/CricketMarkUpGame'
-import { saveGameHistory } from '@/lib/GameHistoryManager/GameHistory'
+import { saveCricketMarkUpHistory } from '@/lib/GameHistoryManager/GameHistory'
 
 const CricketMarkUpMain: FC = () => {
   const game = useCricketMarkUpGame()
@@ -44,7 +44,7 @@ const DesktopMain: FC<{
     <div>
       <CricketMarkUpSettings
         onNewGame={(targetNumber, save) => {
-          if (save) saveGameHistory(game.getGameResult())
+          if (save) saveCricketMarkUpHistory(game.getGameResult())
           setGame(new CricketMarkUpGame(targetNumber))
         }}
         targetCount={game.getTargetCount()}
@@ -94,9 +94,10 @@ const DesktopMain: FC<{
                 }}
                 isFinished={game.isFinished()}
                 onRoundOver={() => {
-                  saveGameHistory(game.getGameResult())
+                  saveCricketMarkUpHistory(game.getGameResult())
                   setGame(new CricketMarkUpGame(game.getTargetCount()))
                 }}
+                kind='Cricket MarkUp'
               />
             </GridItem>
             <GridItem>
@@ -128,72 +129,71 @@ const MobileMain: FC<{
   setGame: (game: CricketMarkUpGame) => void
 }> = ({ game, setGame }) => {
   return (
-    <>
-      <Grid gap={4} justifyItems='center'>
-        <GridItem w='100%'>
-          <Flex justifyContent='space-between'>
-            <CricketMarkUpSettings
-              onNewGame={(targetNumber, save) => {
-                if (save) saveGameHistory(game.getGameResult())
-                setGame(new CricketMarkUpGame(targetNumber))
-              }}
-              targetCount={game.getTargetCount()}
-              isFinished={game.isFinished()}
-            />
-            <Flex alignItems='end' w='100%' justifyContent='space-around'>
-              <TargetBoard
-                target={
-                  game.getCurrentTarget() === '-1'
-                    ? 'Fin'
-                    : game.getCurrentTarget() === 'S-BULL'
-                    ? 'BULL'
-                    : game.getCurrentTarget()
-                }
-                message='Target'
-              />
-              <TargetBoard target={game.getCount().toString()} message='Count' size='sm' />
-            </Flex>
-          </Flex>
-        </GridItem>
-        <Box maxH={250} overflow='scroll'>
-          <CricketMarkUpBoard data={game.getScore()} />
-        </Box>
-        <RoundScore
-          scores={game.getRoundScore()}
-          onClear={() => {
-            const g = Object.assign(new CricketMarkUpGame(10), game)
-            g.removeScore()
-            setGame(g)
-          }}
-          onRoundChange={() => {
-            const g = Object.assign(new CricketMarkUpGame(10), game)
-            g.roundChange()
-            setGame(g)
-          }}
-          isFinished={game.isFinished()}
-          onRoundOver={() => {
-            saveGameHistory(game.getGameResult())
-            setGame(new CricketMarkUpGame(game.getTargetCount()))
-          }}
-        />
-        <Box w='100%'>
-          <CountButtons
-            onCount={(n) => {
-              const g = Object.assign(new CricketMarkUpGame(10), game)
-              g.addScore(n)
-              setGame(g)
+    <Grid gap={4} justifyItems='center'>
+      <GridItem w='100%'>
+        <Flex justifyContent='space-between'>
+          <CricketMarkUpSettings
+            onNewGame={(targetNumber, save) => {
+              if (save) saveCricketMarkUpHistory(game.getGameResult())
+              setGame(new CricketMarkUpGame(targetNumber))
             }}
-            begin={parseInt(game.getCurrentTarget())}
-            end={parseInt(game.getCurrentTarget())}
-            reversed={true}
-            bull={game.getCurrentTarget() === 'S-BULL'}
-            disabled={game.getRoundScore().length >= 3 || game.isFinished()}
-            other
+            targetCount={game.getTargetCount()}
+            isFinished={game.isFinished()}
           />
-          <RoundBoard score={game.getRoundsScore()} />
-        </Box>
-      </Grid>
-    </>
+          <Flex alignItems='end' w='100%' justifyContent='space-around'>
+            <TargetBoard
+              target={
+                game.getCurrentTarget() === '-1'
+                  ? 'Fin'
+                  : game.getCurrentTarget() === 'S-BULL'
+                  ? 'BULL'
+                  : game.getCurrentTarget()
+              }
+              message='Target'
+            />
+            <TargetBoard target={game.getCount().toString()} message='Count' size='sm' />
+          </Flex>
+        </Flex>
+      </GridItem>
+      <Box maxH={250} overflow='scroll'>
+        <CricketMarkUpBoard data={game.getScore()} />
+      </Box>
+      <RoundScore
+        scores={game.getRoundScore()}
+        onClear={() => {
+          const g = Object.assign(new CricketMarkUpGame(10), game)
+          g.removeScore()
+          setGame(g)
+        }}
+        onRoundChange={() => {
+          const g = Object.assign(new CricketMarkUpGame(10), game)
+          g.roundChange()
+          setGame(g)
+        }}
+        isFinished={game.isFinished()}
+        onRoundOver={() => {
+          saveCricketMarkUpHistory(game.getGameResult())
+          setGame(new CricketMarkUpGame(game.getTargetCount()))
+        }}
+        kind='Cricket MarkUp'
+      />
+      <Box w='100%'>
+        <CountButtons
+          onCount={(n) => {
+            const g = Object.assign(new CricketMarkUpGame(10), game)
+            g.addScore(n)
+            setGame(g)
+          }}
+          begin={parseInt(game.getCurrentTarget())}
+          end={parseInt(game.getCurrentTarget())}
+          reversed={true}
+          bull={game.getCurrentTarget() === 'S-BULL'}
+          disabled={game.getRoundScore().length >= 3 || game.isFinished()}
+          other
+        />
+        <RoundBoard score={game.getRoundsScore()} />
+      </Box>
+    </Grid>
   )
 }
 

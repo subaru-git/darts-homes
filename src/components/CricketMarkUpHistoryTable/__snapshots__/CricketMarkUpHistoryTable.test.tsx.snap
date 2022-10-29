@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should rendering 1`] = `
+<div>
+  <div
+    class="chakra-table__container css-zipzvv"
+  >
+    <table
+      class="chakra-table css-5605sr"
+    >
+      <tbody
+        class="css-0"
+      />
+    </table>
+  </div>
+  <span
+    hidden=""
+    id="__chakra_env"
+  />
+</div>
+`;

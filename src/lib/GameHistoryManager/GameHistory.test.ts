@@ -1,4 +1,4 @@
-import { saveGameHistory } from './GameHistory'
+import { saveCricketMarkUpHistory } from './GameHistory'
 
 beforeEach(() => {
   localStorage.clear()
@@ -6,9 +6,8 @@ beforeEach(() => {
 
 test('manage game history', () => {
   const history = {
-    game: 'cricket-number-count',
-    setting: { targetCount: 10 },
-    result: { count: 10 },
+    targetCount: 10,
+    result: 10,
     scores: [
       { number: 20, count: 10, total: 10 },
       { number: 19, count: 10, total: 11 },
@@ -20,5 +19,5 @@ test('manage game history', () => {
     ],
     playedAt: '2020-01-01T00:00:00.000Z',
   }
-  saveGameHistory(history)
+  saveCricketMarkUpHistory(history)
 })

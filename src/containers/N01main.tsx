@@ -39,6 +39,7 @@ const N01main: FC = () => {
                 }}
                 isFinished={false}
                 onRoundOver={() => {}}
+                kind='Cricket MarkUp'
               />
             </GridItem>
             <GridItem>

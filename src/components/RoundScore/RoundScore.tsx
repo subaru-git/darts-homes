@@ -9,6 +9,7 @@ type RoundScoreProps = {
   onRoundChange: () => void
   isFinished: boolean
   onRoundOver: () => void
+  kind: GameKind
 }
 
 const RoundScore: FC<RoundScoreProps> = ({
@@ -17,6 +18,7 @@ const RoundScore: FC<RoundScoreProps> = ({
   onRoundChange,
   isFinished,
   onRoundOver,
+  kind,
 }) => {
   return (
     <Grid templateColumns='repeat(4, 1fr)' alignItems='center' gap={2}>
@@ -71,6 +73,7 @@ const RoundScore: FC<RoundScoreProps> = ({
               disabled={scores.length !== 3}
               onRoundChange={onRoundChange}
               onRoundOver={onRoundOver}
+              kind={kind}
             />
           </GridItem>
         </Grid>
