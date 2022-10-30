@@ -10,18 +10,21 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
     <>
       <DefaultSeo
         defaultTitle='Darts Homes'
-        description='ダーツ練習のソロゲームがあります。'
+        canonical='https://darts.homes'
+        description='家ダーツ練習のソロゲームがあります。'
         twitter={{ cardType: 'summary' }}
         openGraph={{
           type: 'website',
           title: 'Darts Homes',
-          description: 'ダーツ練習のソロゲームがあります。',
+          description: '家ダーツ練習のソロゲームがあります。',
           site_name: 'Darts Homes',
+          url: 'https://darts.homes',
           images: [
             {
-              url: 'https://darts-games-git-feature-add-seo-settings-subaru-git.vercel.app/ogp.png',
+              url: 'https://darts.homes/ogp.png',
               width: 800,
               height: 600,
+              alt: 'Darts Homes',
             },
           ],
         }}
