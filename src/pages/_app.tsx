@@ -9,17 +9,17 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <DefaultSeo
-        defaultTitle='Darts Games'
+        defaultTitle='Darts Homes'
         description='ダーツ練習のソロゲームがあります。'
         twitter={{ cardType: 'summary' }}
         openGraph={{
           type: 'website',
-          title: 'Darts Games',
+          title: 'Darts Homes',
           description: 'ダーツ練習のソロゲームがあります。',
-          site_name: 'Darts Games',
+          site_name: 'Darts Homes',
           images: [
             {
-              url: 'https://darts-games.vercel.app/ogp.png',
+              url: 'https://darts-games-git-feature-add-seo-settings-subaru-git.vercel.app/ogp.png',
               width: 800,
               height: 600,
             },
