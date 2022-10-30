@@ -26,7 +26,7 @@ export class GameResultDexie extends Dexie {
   eaglesEyeResult!: Table<EaglesEyeResultModel>
 
   constructor() {
-    super('DartsGames')
+    super('DartsHomes')
     this.version(1).stores({
       cricketMarkUpResult: '++id',
       eaglesEyeResult: '++id',

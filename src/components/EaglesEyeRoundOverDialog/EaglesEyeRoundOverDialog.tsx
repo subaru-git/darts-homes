@@ -50,10 +50,10 @@ const EaglesEyeRoundOverDialog: FC<EaglesEyeRoundOverDialogProps> = ({
             <Flex direction='column' gap={3}>
               <Text whiteSpace='pre-wrap'>{result}</Text>
               <Flex justify='center' gap={2}>
-                <TwitterShareButton title={result} url='http://exsample.com'>
+                <TwitterShareButton title={result} url='http://darts.homes'>
                   <TwitterIcon size={32} round />
                 </TwitterShareButton>
-                <LineShareButton title={result} url='http://exsample.com'>
+                <LineShareButton title={result} url='http://darts.homes'>
                   <LineIcon size={32} round />
                 </LineShareButton>
               </Flex>

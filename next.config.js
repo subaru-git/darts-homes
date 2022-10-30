@@ -4,7 +4,7 @@ const nextConfig = {
   swcMinify: true,
   i18n: {
     locales: ['en', 'ja'],
-    defaultLocale: 'en',
+    defaultLocale: 'ja',
   },
   webpack: (config) => {
     const path = require('path')
