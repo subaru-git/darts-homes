@@ -17,8 +17,8 @@ export default class Document extends NextDocument {
           <meta name='theme-color' content='#ffffff' />
           <meta property='og:title' content='Darts Games' />
           <meta property='og:description' content='ダーツのソロ練習ゲームがあります。' />
-          <meta property='og:image' content='logo.svg' />
-          <meta name='twitter:card' content='logo.svg' />
+          <meta property='og:image' content='logo.png' />
+          <meta name='twitter:card' content='logo.png' />
         </Head>
         <body>
           <Main />
