@@ -1,6 +1,6 @@
 import { ChakraProvider } from '@chakra-ui/react'
 import { Global } from '@emotion/react'
-import Head from 'next/head'
+import { DefaultSeo } from 'next-seo'
 import type { AppProps } from 'next/app'
 import { CricketMarkUpGameContextProvider } from '@/contexts/CricketMarkUpGameContext'
 import { EaglesEyeUpGameContextProvider } from '@/contexts/EaglesEyeGameContext'
@@ -8,10 +8,24 @@ import { EaglesEyeUpGameContextProvider } from '@/contexts/EaglesEyeGameContext'
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <>
-      <Head>
-        <meta charSet='utf-8' />
-        <title>Darts Games</title>
-      </Head>
+      <DefaultSeo
+        defaultTitle='Darts Games'
+        description='ダーツ練習のソロゲームがあります。'
+        twitter={{ cardType: 'summary' }}
+        openGraph={{
+          type: 'website',
+          title: 'Darts Games',
+          description: 'ダーツ練習のソロゲームがあります。',
+          site_name: 'Darts Games',
+          images: [
+            {
+              url: 'https://darts-games.vercel.app/ogp.png',
+              width: 800,
+              height: 600,
+            },
+          ],
+        }}
+      />
       <ChakraProvider>
         <CricketMarkUpGameContextProvider>
           <EaglesEyeUpGameContextProvider>
