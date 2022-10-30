@@ -10,6 +10,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
     <>
       <Head>
         <meta charSet='utf-8' />
+        <title>Darts Games</title>
       </Head>
       <ChakraProvider>
         <CricketMarkUpGameContextProvider>

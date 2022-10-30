@@ -15,6 +15,10 @@ export default class Document extends NextDocument {
           <meta name='msapplication-TileColor' content='#da532c' />
           <meta name='msapplication-config' content='/favicons/browserconfig.xml' />
           <meta name='theme-color' content='#ffffff' />
+          <meta property='og:title' content='Darts Games' />
+          <meta property='og:description' content='ダーツのソロ練習ゲームがあります。' />
+          <meta property='og:image' content='logo.svg' />
+          <meta name='twitter:card' content='logo.svg' />
         </Head>
         <body>
           <Main />
