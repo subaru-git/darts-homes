@@ -15,7 +15,7 @@ const RespectCard: FC<RespectCardProps> = ({ data }) => {
           <Image
             src={data.image ?? ''}
             alt={`${data.title} image`}
-            fallbackSrc='/fallback.png'
+            fallbackSrc='/fallback.webp'
             height='150px'
           />
         </Link>

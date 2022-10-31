@@ -64,7 +64,7 @@ const NavigationBar: FC = () => {
             <Link href='/' passHref>
               <a>
                 <Heading as='h1'>
-                  <Image src='/logo.svg' alt='darts homes logo' h='40px' />
+                  <Image src='/logo.svg' alt='darts homes logo' h='40px' w='200px' />
                 </Heading>
               </a>
             </Link>
