@@ -12,6 +12,6 @@ test('should rendering', () => {
       <NavigationBar />
     </ChakraProvider>,
   )
-  expect(screen.getByAltText('logo')).not.toBeNull()
+  expect(screen.getByAltText('darts homes logo')).not.toBeNull()
   expect(container).toMatchSnapshot()
 })
