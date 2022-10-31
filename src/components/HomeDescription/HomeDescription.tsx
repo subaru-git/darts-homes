@@ -30,7 +30,7 @@ const MobileHomeDescription: FC = () => {
   return (
     <>
       <Center>
-        <Img src='/darts.png' alt='darts homes' boxSize={200} objectFit='cover' loading='lazy' />
+        <Img src='/darts.webp' alt='darts homes' boxSize={200} objectFit='cover' loading='lazy' />
       </Center>
       <Center h='100%'>
         <Text fontSize={'md'} whiteSpace='pre-wrap'>
