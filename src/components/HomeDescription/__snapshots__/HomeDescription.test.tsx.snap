@@ -12,7 +12,7 @@ exports[`should rendering 1`] = `
         alt="darts homes"
         class="chakra-image css-1ymdu7n"
         loading="lazy"
-        src="/darts.png"
+        src="/darts.webp"
       />
     </div>
     <div
