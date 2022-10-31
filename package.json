@@ -1,5 +1,6 @@
 {
   "name": "darts-homes",
+  "description": "Darts games at home.",
   "version": "0.1.0",
   "private": true,
   "scripts": {
