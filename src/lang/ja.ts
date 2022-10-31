@@ -4,7 +4,7 @@ const text = {
   HOME_RESPECT:
     'このサイトはYouTubeの動画やブログなどのあらゆるダーツコンテンツに感謝し、その全てを尊重します。',
   N01_DESCRIPTION: '有名なダーツゲーム [WIP]',
-  EAGLES_EYE_DESCRIPTION: 'BULL練習用のダーツゲーム [WIP]',
+  EAGLES_EYE_DESCRIPTION: 'BULL練習用のダーツゲーム',
   CRICKET_NUMBER_COUNT_SHORT_DESCRIPTION: '菊地山口によるオリジナルのダーツ練習ゲーム',
   CRICKET_NUMBER_COUNT_DESCRIPTION:
     'このゲームは菊地山口によるオリジナルのダーツ練習ゲームです。\nゲームのルールは、',

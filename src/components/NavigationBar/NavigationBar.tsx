@@ -245,11 +245,6 @@ const GetNavItem = () => {
       label: 'Games',
       children: [
         {
-          label: '501',
-          subLabel: t.N01_DESCRIPTION,
-          href: '/n01',
-        },
-        {
           label: "Eagle's Eye",
           subLabel: t.EAGLES_EYE_DESCRIPTION,
           href: '/eagleseye',
