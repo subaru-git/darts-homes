@@ -1,6 +1,7 @@
 import { ChakraProvider } from '@chakra-ui/react'
 import { Global } from '@emotion/react'
 import { DefaultSeo } from 'next-seo'
+import Script from 'next/script'
 import type { AppProps } from 'next/app'
 import { CricketMarkUpGameContextProvider } from '@/contexts/CricketMarkUpGameContext'
 import { EaglesEyeUpGameContextProvider } from '@/contexts/EaglesEyeGameContext'
@@ -29,6 +30,18 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
           ],
         }}
       />
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_ANALYTICS_ID}`}
+      />
+      <Script id='google-analytics' strategy='afterInteractive'>
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', '${process.env.NEXT_PUBLIC_ANALYTICS_ID}');
+        `}
+      </Script>
       <ChakraProvider>
         <CricketMarkUpGameContextProvider>
           <EaglesEyeUpGameContextProvider>
