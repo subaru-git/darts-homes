@@ -11,6 +11,6 @@ test('should rendering', () => {
       <HomeDescription />
     </ChakraProvider>,
   )
-  expect(screen.getByAltText('darts')).not.toBeNull()
+  expect(screen.getByAltText('darts homes')).not.toBeNull()
   expect(container).toMatchSnapshot()
 })

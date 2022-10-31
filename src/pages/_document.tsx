@@ -15,6 +15,10 @@ export default class Document extends NextDocument {
           <meta name='msapplication-TileColor' content='#da532c' />
           <meta name='msapplication-config' content='/favicons/browserconfig.xml' />
           <meta name='theme-color' content='#ffffff' />
+          <meta
+            name='keywords'
+            content='ダーツ,ダーツ練習,ダーツゲーム,自宅ダーツ,darts,ソロダーツ'
+          />
         </Head>
         <body>
           <Main />

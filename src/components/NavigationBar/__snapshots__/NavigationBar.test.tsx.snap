@@ -42,11 +42,15 @@ exports[`should rendering 1`] = `
           <a
             href="/"
           >
-            <img
-              alt="logo"
-              class="chakra-image css-u1jr60"
-              src="/logo.svg"
-            />
+            <h1
+              class="chakra-heading css-1dklj6k"
+            >
+              <img
+                alt="darts homes logo"
+                class="chakra-image css-u1jr60"
+                src="/logo.svg"
+              />
+            </h1>
           </a>
         </div>
         <div

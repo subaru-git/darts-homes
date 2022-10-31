@@ -14,6 +14,7 @@ import {
   useDisclosure,
   Image,
   Spacer,
+  Heading,
 } from '@chakra-ui/react'
 import Link from 'next/link'
 import { GiHamburgerMenu } from 'react-icons/gi'
@@ -62,7 +63,9 @@ const NavigationBar: FC = () => {
           >
             <Link href='/' passHref>
               <a>
-                <Image src='/logo.svg' alt='logo' h='40px' />
+                <Heading as='h1'>
+                  <Image src='/logo.svg' alt='darts homes logo' h='40px' />
+                </Heading>
               </a>
             </Link>
           </Box>

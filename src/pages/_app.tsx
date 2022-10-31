@@ -12,12 +12,12 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       <DefaultSeo
         defaultTitle='Darts Homes'
         canonical='https://darts.homes'
-        description='家ダーツ練習のソロゲームがあります。'
+        description='自宅でダーツ練習をするときのゲームがあります'
         twitter={{ cardType: 'summary' }}
         openGraph={{
           type: 'website',
           title: 'Darts Homes',
-          description: '家ダーツ練習のソロゲームがあります。',
+          description: '自宅でダーツ練習をするときのゲームがあります',
           site_name: 'Darts Homes',
           url: 'https://darts.homes',
           images: [

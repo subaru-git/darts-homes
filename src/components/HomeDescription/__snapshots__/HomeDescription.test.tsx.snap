@@ -9,8 +9,9 @@ exports[`should rendering 1`] = `
       class="css-0"
     >
       <img
-        alt="darts"
-        class="chakra-image css-qexl9x"
+        alt="darts homes"
+        class="chakra-image css-1ymdu7n"
+        loading="lazy"
         src="/darts.png"
       />
     </div>
