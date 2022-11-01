@@ -8,29 +8,29 @@ exports[`should rendering 1`] = `
     <div
       class="css-0"
     >
-      <h2
-        class="chakra-heading css-82d3ew"
+      <p
+        class="chakra-text css-judz0o"
       >
         20T
-      </h2>
+      </p>
     </div>
     <div
       class="css-0"
     >
-      <h2
-        class="chakra-heading css-82d3ew"
+      <p
+        class="chakra-text css-judz0o"
       >
         19T
-      </h2>
+      </p>
     </div>
     <div
       class="css-0"
     >
-      <h2
-        class="chakra-heading css-82d3ew"
+      <p
+        class="chakra-text css-judz0o"
       >
         18T
-      </h2>
+      </p>
     </div>
     <div
       class="css-0"

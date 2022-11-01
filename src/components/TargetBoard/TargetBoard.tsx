@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { Box, Heading, useBreakpointValue } from '@chakra-ui/react'
+import { Box, Text, useBreakpointValue } from '@chakra-ui/react'
 
 type TargetBoardProps = {
   target?: string
@@ -18,17 +18,17 @@ const TargetBoard: FC<TargetBoardProps> = ({ target, message, size = 'md' }) => 
   })
   return (
     <Box>
-      <Heading
+      <Text
         fontSize={messageFontSize}
         color='green.500'
         pl={{ base: 1, md: 4 }}
         pt={{ base: 1, md: 4 }}
       >
         {message}
-      </Heading>
-      <Heading textAlign='center' fontSize={targetFontSize} py={{ base: 1, md: 8 }}>
+      </Text>
+      <Text textAlign='center' fontSize={targetFontSize} py={{ base: 1, md: 8 }}>
         {target}
-      </Heading>
+      </Text>
     </Box>
   )
 }

@@ -87,11 +87,11 @@ exports[`should rendering and clickable input 1`] = `
           <div
             class="css-tkevr6"
           >
-            <h5
-              class="chakra-heading css-1xu3tth"
+            <p
+              class="chakra-text css-1xu3tth"
             >
               Single
-            </h5>
+            </p>
           </div>
         </div>
         <div
@@ -100,11 +100,11 @@ exports[`should rendering and clickable input 1`] = `
           <div
             class="css-tkevr6"
           >
-            <h5
-              class="chakra-heading css-1xu3tth"
+            <p
+              class="chakra-text css-1xu3tth"
             >
               Double
-            </h5>
+            </p>
           </div>
         </div>
         <div
@@ -113,11 +113,11 @@ exports[`should rendering and clickable input 1`] = `
           <div
             class="css-tkevr6"
           >
-            <h5
-              class="chakra-heading css-1xu3tth"
+            <p
+              class="chakra-text css-1xu3tth"
             >
               Triple
-            </h5>
+            </p>
           </div>
         </div>
         <div
@@ -816,11 +816,11 @@ exports[`should rendering and disable input 1`] = `
           <div
             class="css-tkevr6"
           >
-            <h5
-              class="chakra-heading css-14dydzm"
+            <p
+              class="chakra-text css-14dydzm"
             >
               Single
-            </h5>
+            </p>
           </div>
         </div>
         <div
@@ -829,11 +829,11 @@ exports[`should rendering and disable input 1`] = `
           <div
             class="css-tkevr6"
           >
-            <h5
-              class="chakra-heading css-14dydzm"
+            <p
+              class="chakra-text css-14dydzm"
             >
               Double
-            </h5>
+            </p>
           </div>
         </div>
         <div
@@ -842,11 +842,11 @@ exports[`should rendering and disable input 1`] = `
           <div
             class="css-tkevr6"
           >
-            <h5
-              class="chakra-heading css-14dydzm"
+            <p
+              class="chakra-text css-14dydzm"
             >
               Triple
-            </h5>
+            </p>
           </div>
         </div>
         <div
@@ -1605,11 +1605,11 @@ exports[`should rendering only cricket numbers 1`] = `
           <div
             class="css-tkevr6"
           >
-            <h5
-              class="chakra-heading css-14dydzm"
+            <p
+              class="chakra-text css-14dydzm"
             >
               Single
-            </h5>
+            </p>
           </div>
         </div>
         <div
@@ -1618,11 +1618,11 @@ exports[`should rendering only cricket numbers 1`] = `
           <div
             class="css-tkevr6"
           >
-            <h5
-              class="chakra-heading css-14dydzm"
+            <p
+              class="chakra-text css-14dydzm"
             >
               Double
-            </h5>
+            </p>
           </div>
         </div>
         <div
@@ -1631,11 +1631,11 @@ exports[`should rendering only cricket numbers 1`] = `
           <div
             class="css-tkevr6"
           >
-            <h5
-              class="chakra-heading css-14dydzm"
+            <p
+              class="chakra-text css-14dydzm"
             >
               Triple
-            </h5>
+            </p>
           </div>
         </div>
         <div

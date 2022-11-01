@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { Grid, GridItem, Heading, IconButton } from '@chakra-ui/react'
+import { Grid, GridItem, Text, IconButton } from '@chakra-ui/react'
 import { VscTrash } from 'react-icons/vsc'
 import RoundScoreButton from '../RoundScoreButton'
 
@@ -23,37 +23,34 @@ const RoundScore: FC<RoundScoreProps> = ({
   return (
     <Grid templateColumns='repeat(4, 1fr)' alignItems='center' gap={2}>
       <GridItem>
-        <Heading
-          as='h2'
+        <Text
           size={{ base: 'md', md: 'xl' }}
           textAlign='center'
           color='gray.500'
           fontStyle='italic'
         >
           {scores[0] === '0' ? '-' : scores[0]}
-        </Heading>
+        </Text>
       </GridItem>
       <GridItem>
-        <Heading
-          as='h2'
+        <Text
           size={{ base: 'md', md: 'xl' }}
           textAlign='center'
           color='gray.500'
           fontStyle='italic'
         >
           {scores[1] === '0' ? '-' : scores[1]}
-        </Heading>
+        </Text>
       </GridItem>
       <GridItem>
-        <Heading
-          as='h2'
+        <Text
           size={{ base: 'md', md: 'xl' }}
           textAlign='center'
           color='gray.500'
           fontStyle='italic'
         >
           {scores[2] === '0' ? '-' : scores[2]}
-        </Heading>
+        </Text>
       </GridItem>
       <GridItem>
         <Grid templateColumns='repeat(2, auto)' columnGap={2}>

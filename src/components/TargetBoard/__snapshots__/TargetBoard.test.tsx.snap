@@ -5,16 +5,16 @@ exports[`should rendering 1`] = `
   <div
     class="css-0"
   >
-    <h2
-      class="chakra-heading css-19cqpm0"
+    <p
+      class="chakra-text css-f62uxg"
     >
       next target
-    </h2>
-    <h2
-      class="chakra-heading css-2sb8by"
+    </p>
+    <p
+      class="chakra-text css-t9cs4q"
     >
       501
-    </h2>
+    </p>
   </div>
   <span
     hidden=""
