@@ -12,7 +12,7 @@ const DesktopHomeDescription: FC = () => {
   return (
     <Grid templateColumns='repeat(2, auto)' justifyContent='center' gap={4}>
       <GridItem>
-        <Img src='/darts.webp' alt='darts homes' boxSize={450} objectFit='cover' loading='lazy' />
+        <Img src='/darts.webp' alt='darts homes' boxSize={450} objectFit='cover' />
       </GridItem>
       <GridItem>
         <Center h='100%'>
