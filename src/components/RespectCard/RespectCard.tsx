@@ -20,7 +20,7 @@ const RespectCard: FC<RespectCardProps> = ({ data }) => {
           />
         </Link>
       </Center>
-      <Heading as='h2' size={{ base: 'md', md: 'lg' }} py={2}>
+      <Heading as='h3' size={{ base: 'md', md: 'lg' }} py={2}>
         {data.title}
       </Heading>
       <Text fontSize={{ base: 'sm', md: 'md' }} wordBreak='break-word'>

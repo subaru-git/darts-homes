@@ -1,5 +1,5 @@
 import React, { FC, Fragment } from 'react'
-import { Button, Center, Flex, Grid, GridItem, Heading, IconButton } from '@chakra-ui/react'
+import { Button, Center, Flex, Grid, GridItem, IconButton, Text } from '@chakra-ui/react'
 import { TbTargetOff } from 'react-icons/tb'
 
 type CountButtonsProps = {
@@ -74,23 +74,23 @@ const CountButtons: FC<CountButtonsProps> = ({
               <>
                 <GridItem>
                   <Center h='100%'>
-                    <Heading as='h5' size='sm' color={disabled ? 'blackAlpha.500' : 'black'}>
+                    <Text size='sm' color={disabled ? 'blackAlpha.500' : 'black'}>
                       Single
-                    </Heading>
+                    </Text>
                   </Center>
                 </GridItem>
                 <GridItem>
                   <Center h='100%'>
-                    <Heading as='h5' size='sm' color={disabled ? 'blackAlpha.500' : 'black'}>
+                    <Text size='sm' color={disabled ? 'blackAlpha.500' : 'black'}>
                       Double
-                    </Heading>
+                    </Text>
                   </Center>
                 </GridItem>
                 <GridItem>
                   <Center h='100%'>
-                    <Heading as='h5' size='sm' color={disabled ? 'blackAlpha.500' : 'black'}>
+                    <Text size='sm' color={disabled ? 'blackAlpha.500' : 'black'}>
                       Triple
-                    </Heading>
+                    </Text>
                   </Center>
                 </GridItem>
               </>

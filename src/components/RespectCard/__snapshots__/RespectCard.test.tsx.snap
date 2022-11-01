@@ -21,11 +21,11 @@ exports[`should rendering 1`] = `
         />
       </a>
     </div>
-    <h2
+    <h3
       class="chakra-heading css-o5g2qp"
     >
       title
-    </h2>
+    </h3>
     <p
       class="chakra-text css-4h8fht"
     >

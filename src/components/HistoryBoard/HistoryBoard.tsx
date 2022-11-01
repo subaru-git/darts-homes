@@ -52,7 +52,9 @@ const HistoryBoard: FC = () => {
         </Alert>
       </Collapse>
       <Flex pb={4} justifyContent='space-between' alignItems='center' mt={2}>
-        <Heading size={{ base: 'lg', md: 'xl' }}>History</Heading>
+        <Heading as='h2' size={{ base: 'lg', md: 'xl' }}>
+          History
+        </Heading>
         <HistoryImportExport onError={onOpen} />
       </Flex>
       <Tabs>

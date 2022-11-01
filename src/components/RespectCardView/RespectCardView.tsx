@@ -10,7 +10,9 @@ const RespectCardView: FC<RespectCardViewProps> = ({ data }) => {
   return (
     <Flex direction='column' p={4}>
       <Box>
-        <Heading pb={4}>Companies</Heading>
+        <Heading as='h2' pb={4}>
+          Companies
+        </Heading>
         <Flex wrap={'wrap'} gap={2}>
           {data.companies.map((item) => (
             <div key={item.title}>
@@ -20,7 +22,9 @@ const RespectCardView: FC<RespectCardViewProps> = ({ data }) => {
         </Flex>
       </Box>
       <Box pt={4}>
-        <Heading pb={4}>Professional</Heading>
+        <Heading as='h2' pb={4}>
+          Professional
+        </Heading>
         <Flex wrap={'wrap'} gap={2}>
           {data.professionals.map((item) => (
             <div key={item.title}>
@@ -30,7 +34,9 @@ const RespectCardView: FC<RespectCardViewProps> = ({ data }) => {
         </Flex>
       </Box>
       <Box pt={4}>
-        <Heading pb={4}>Youtube</Heading>
+        <Heading as='h2' pb={4}>
+          Youtube
+        </Heading>
         <Flex wrap={'wrap'} gap={2}>
           {data.youtube.map((item) => (
             <div key={item.title}>
