@@ -1,7 +1,8 @@
 import React, { FC } from 'react'
-import { Center, Grid, GridItem, Text, useBreakpointValue } from '@chakra-ui/react'
-import YouTube from 'react-youtube'
+import { Box, Center, Grid, GridItem, Text, useBreakpointValue } from '@chakra-ui/react'
+import LiteYoutubeEmbed from 'react-lite-youtube-embed'
 import useLocale from '@/hooks/locale'
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css'
 
 const HomeDescriptionRespect: FC = () => {
   const isMd = useBreakpointValue({ base: false, md: true })
@@ -18,8 +19,11 @@ const DesktopHomeDescriptionRespect: FC = () => {
             <Text fontSize={{ base: 'md', md: 'xl' }}>{t.HOME_RESPECT}</Text>
           </Center>
         </GridItem>
-        <GridItem>
-          <YouTube videoId='HiNOjEYbUXc' opts={{ height: 390, width: 640 }} />
+        <GridItem height='390px' width='640px'>
+          <LiteYoutubeEmbed
+            id='HiNOjEYbUXc'
+            title='【ダーツ】友達にダーツをさせる方法【菊地山口】'
+          />
         </GridItem>
       </Grid>
     </div>
@@ -31,7 +35,12 @@ const MobileHomeDescriptionRespect: FC = () => {
   return (
     <>
       <Center>
-        <YouTube videoId='HiNOjEYbUXc' opts={{ height: 195, width: 320 }} />
+        <Box width='320px' height='195px'>
+          <LiteYoutubeEmbed
+            id='HiNOjEYbUXc'
+            title='【ダーツ】友達にダーツをさせる方法【菊地山口】'
+          />
+        </Box>
       </Center>
       <Center>
         <Text fontSize={{ base: 'md', md: 'xl' }}>{t.HOME_RESPECT}</Text>

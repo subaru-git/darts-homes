@@ -20,16 +20,23 @@ exports[`should rendering 1`] = `
         </div>
       </div>
       <div
-        class="css-0"
+        class="css-b6bcyj"
       >
-        <div
-          class=""
+        <link
+          as="image"
+          href="https://i.ytimg.com/vi/HiNOjEYbUXc/hqdefault.jpg"
+          rel="preload"
+        />
+        <article
+          class="yt-lite "
+          data-title="【ダーツ】友達にダーツをさせる方法【菊地山口】"
+          style="background-image: url(https://i.ytimg.com/vi/HiNOjEYbUXc/hqdefault.jpg); --aspect-ratio: 56.25%;"
         >
-          <div
-            class=""
-            id=""
+          <button
+            aria-label="Watch 【ダーツ】友達にダーツをさせる方法【菊地山口】"
+            class="lty-playbtn"
           />
-        </div>
+        </article>
       </div>
     </div>
   </div>
