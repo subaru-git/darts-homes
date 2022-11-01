@@ -1,8 +1,9 @@
 import React, { FC } from 'react'
 import { Button, Collapse, useDisclosure, Text, UnorderedList, ListItem } from '@chakra-ui/react'
 import { GrCircleInformation } from 'react-icons/gr'
-import YouTube from 'react-youtube'
+import LiteYoutubeEmbed from 'react-lite-youtube-embed'
 import useLocale from '@/hooks/locale'
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css'
 
 const CricketMarkUpDescription: FC = () => {
   const { isOpen, onToggle } = useDisclosure()
@@ -19,7 +20,10 @@ const CricketMarkUpDescription: FC = () => {
           <ListItem>{t.CRICKET_NUMBER_COUNT_RULE_STEP2}</ListItem>
         </UnorderedList>
         <Text>{t.CRICKET_NUMBER_COUNT_RULE_MORE}</Text>
-        <YouTube videoId='RFl52NNvWhw' />
+        <LiteYoutubeEmbed
+          id='RFl52NNvWhw'
+          title='【ダーツ】菊地山口練習法　2週間でRt.4からRt.8になった練習法'
+        />
       </Collapse>
     </>
   )

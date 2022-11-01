@@ -60,14 +60,21 @@ The game rule is:
     >
       For more information, please watch this video.
     </p>
-    <div
-      class=""
+    <link
+      as="image"
+      href="https://i.ytimg.com/vi/RFl52NNvWhw/hqdefault.jpg"
+      rel="preload"
+    />
+    <article
+      class="yt-lite "
+      data-title="【ダーツ】菊地山口練習法　2週間でRt.4からRt.8になった練習法"
+      style="background-image: url(https://i.ytimg.com/vi/RFl52NNvWhw/hqdefault.jpg); --aspect-ratio: 56.25%;"
     >
-      <div
-        class=""
-        id=""
+      <button
+        aria-label="Watch 【ダーツ】菊地山口練習法　2週間でRt.4からRt.8になった練習法"
+        class="lty-playbtn"
       />
-    </div>
+    </article>
   </div>
 </div>
 `;
