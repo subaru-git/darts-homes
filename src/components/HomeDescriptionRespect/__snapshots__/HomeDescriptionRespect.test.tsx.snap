@@ -24,13 +24,13 @@ exports[`should rendering 1`] = `
       >
         <link
           as="image"
-          href="https://i.ytimg.com/vi/HiNOjEYbUXc/hqdefault.jpg"
+          href="https://i.ytimg.com/vi_webp/HiNOjEYbUXc/hqdefault.webp"
           rel="preload"
         />
         <article
           class="yt-lite "
           data-title="【ダーツ】友達にダーツをさせる方法【菊地山口】"
-          style="background-image: url(https://i.ytimg.com/vi/HiNOjEYbUXc/hqdefault.jpg); --aspect-ratio: 56.25%;"
+          style="background-image: url(https://i.ytimg.com/vi_webp/HiNOjEYbUXc/hqdefault.webp); --aspect-ratio: 56.25%;"
         >
           <button
             aria-label="Watch 【ダーツ】友達にダーツをさせる方法【菊地山口】"

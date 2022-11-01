@@ -23,6 +23,7 @@ const CricketMarkUpDescription: FC = () => {
         <LiteYoutubeEmbed
           id='RFl52NNvWhw'
           title='【ダーツ】菊地山口練習法　2週間でRt.4からRt.8になった練習法'
+          webp
         />
       </Collapse>
     </>

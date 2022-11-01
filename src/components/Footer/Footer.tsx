@@ -9,10 +9,10 @@ const Footer: FC = () => {
         <HStack gap={8}>
           <Text color='white'>{`(c) 2022 okadat`}</Text>
           <HStack gap={2}>
-            <Link href='https://github.com/subaru-git'>
+            <Link href='https://github.com/subaru-git' aria-label='subaru-git github page'>
               <AiFillGithub size='24px' color='white' />
             </Link>
-            <Link href='https://twitter.com/subaru_m_'>
+            <Link href='https://twitter.com/subaru_m_' aria-label='subaru_m_ twitter'>
               <AiOutlineTwitter size='24px' color='white' />
             </Link>
           </HStack>

@@ -20,6 +20,7 @@ exports[`should rendering 1`] = `
           class="chakra-stack css-1gz5y8w"
         >
           <a
+            aria-label="subaru-git github page"
             class="chakra-link css-0"
             href="https://github.com/subaru-git"
           >
@@ -40,6 +41,7 @@ exports[`should rendering 1`] = `
             </svg>
           </a>
           <a
+            aria-label="subaru_m_ twitter"
             class="chakra-link css-0"
             href="https://twitter.com/subaru_m_"
           >
