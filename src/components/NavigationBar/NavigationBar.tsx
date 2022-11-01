@@ -104,7 +104,7 @@ const DesktopNav: FC<{ items: NavItem[] }> = ({ items }) => {
                   color: linkHoverColor,
                 }}
               >
-                <Link href={navItem.href ?? '#'} passHref>
+                <Link href={navItem.href ?? '#'} passHref aria-label={navItem.label}>
                   {navItem.label}
                 </Link>
               </Box>
@@ -143,7 +143,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
       _hover={{ bg: useColorModeValue('pink.50', 'gray.900') }}
     >
       <Link href={href ?? '/'}>
-        <a>
+        <a aria-label={label}>
           <Stack direction={'row'} align={'center'}>
             <Box>
               <Text
