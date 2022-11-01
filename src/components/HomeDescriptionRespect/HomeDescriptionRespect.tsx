@@ -23,6 +23,7 @@ const DesktopHomeDescriptionRespect: FC = () => {
           <LiteYoutubeEmbed
             id='HiNOjEYbUXc'
             title='【ダーツ】友達にダーツをさせる方法【菊地山口】'
+            webp
           />
         </GridItem>
       </Grid>
@@ -39,6 +40,7 @@ const MobileHomeDescriptionRespect: FC = () => {
           <LiteYoutubeEmbed
             id='HiNOjEYbUXc'
             title='【ダーツ】友達にダーツをさせる方法【菊地山口】'
+            webp
           />
         </Box>
       </Center>
