@@ -2,13 +2,9 @@ import { ChakraProvider } from '@chakra-ui/react'
 import { Global } from '@emotion/react'
 import { DefaultSeo } from 'next-seo'
 import Script from 'next/script'
-import type { AppProps, NextWebVitalsMetric } from 'next/app'
+import type { AppProps } from 'next/app'
 import { CricketMarkUpGameContextProvider } from '@/contexts/CricketMarkUpGameContext'
 import { EaglesEyeUpGameContextProvider } from '@/contexts/EaglesEyeGameContext'
-
-export function reportWebVitals(metric: NextWebVitalsMetric) {
-  console.log(metric)
-}
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
