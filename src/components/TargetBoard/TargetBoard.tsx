@@ -32,7 +32,7 @@ const TargetBoard: FC<TargetBoardProps> = ({ target, message, size = 'md' }) => 
         fontSize={targetFontSize}
         py={{ base: 1, md: 8 }}
         fontWeight='bold'
-        fontFamily='roboto'
+        fontFamily='roboto, sans-serif'
         minWidth={{ base: '110px', md: '260px' }}
       >
         {target}
