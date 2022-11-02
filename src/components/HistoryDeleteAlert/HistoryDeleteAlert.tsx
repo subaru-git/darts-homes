@@ -40,7 +40,7 @@ const HistoryDeleteAlert: FC<HistoryDeleteAlertProps> = ({
             Delete History
           </AlertDialogHeader>
           <AlertDialogBody>
-            {t.HISTORY_DELETE_WARNING}
+            {t.warning.deletehistory}
             <Text mt={4}>{message}</Text>
           </AlertDialogBody>
           <AlertDialogFooter>

@@ -111,7 +111,7 @@ exports[`should rendering 1`] = `
                             <p
                               class="chakra-text css-itvw0n"
                             >
-                              A darts game for BULL practice
+                              BULL only count up
                             </p>
                           </div>
                           <div
@@ -159,7 +159,7 @@ exports[`should rendering 1`] = `
                             <p
                               class="chakra-text css-itvw0n"
                             >
-                              A darts game for practice by Kikuchi Yamaguchi.
+                              Darts training game by "Kikuchi Yamaguchi"
                             </p>
                           </div>
                           <div

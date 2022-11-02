@@ -1,6 +1,5 @@
 import React, { FC } from 'react'
 import {
-  Box,
   Button,
   Modal,
   ModalBody,
@@ -16,7 +15,6 @@ import {
   NumberInputStepper,
   Text,
 } from '@chakra-ui/react'
-import CricketMarkUpDescription from '../CricketMarkUpDescription'
 
 type CricketMarkUpSettingModalProps = {
   isOpen: boolean
@@ -36,12 +34,9 @@ const CricketMarkUpSettingModal: FC<CricketMarkUpSettingModalProps> = ({
     <Modal isOpen={isOpen} onClose={onClose} size='2xl'>
       <ModalOverlay />
       <ModalContent>
-        <ModalHeader>Cricket Number Count Settings</ModalHeader>
+        <ModalHeader>Cricket Mark-Up Settings</ModalHeader>
         <ModalCloseButton />
         <ModalBody>
-          <Box py={4}>
-            <CricketMarkUpDescription />
-          </Box>
           <Text fontSize='sm'>Target Count</Text>
           <NumberInput
             defaultValue={innerTargetCount}
@@ -56,12 +51,11 @@ const CricketMarkUpSettingModal: FC<CricketMarkUpSettingModalProps> = ({
           </NumberInput>
         </ModalBody>
         <ModalFooter>
-          <Button variant='ghost' onClick={onClose} aria-label='cancel'>
+          <Button variant='ghost' onClick={onClose} aria-label='cancel' mr={3}>
             Cancel
           </Button>
           <Button
             colorScheme='blue'
-            mr={3}
             onClick={() => {
               onNewGame(innerTargetCount)
             }}

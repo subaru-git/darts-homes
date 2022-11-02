@@ -45,8 +45,8 @@ const HistoryBoard: FC = () => {
         <Alert status='error' justifyContent='space-between'>
           <Flex>
             <AlertIcon />
-            <AlertTitle>{t.IMPORT_ERROR_TITLE}</AlertTitle>
-            <AlertDescription>{t.IMPORT_ERROR_DESCRIPTION}</AlertDescription>
+            <AlertTitle>{t.import.errortitle}</AlertTitle>
+            <AlertDescription>{t.import.errordescription}</AlertDescription>
           </Flex>
           <CloseButton alignSelf='flex-start' position='relative' right={-1} onClick={onClose} />
         </Alert>
