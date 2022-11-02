@@ -15,7 +15,7 @@ const DesktopHomeDescriptionRespect: FC = () => {
     <Grid templateColumns='repeat(2, auto)' justifyContent='center' gap={4}>
       <GridItem>
         <Center h='100%'>
-          <Text fontSize={{ base: 'md', md: 'xl' }}>{t.HOME_RESPECT}</Text>
+          <Text fontSize={{ base: 'md', md: 'xl' }}>{t.home.respect}</Text>
         </Center>
       </GridItem>
       <GridItem height='390px' width='640px'>
@@ -43,7 +43,7 @@ const MobileHomeDescriptionRespect: FC = () => {
         </Box>
       </Center>
       <Center>
-        <Text fontSize={{ base: 'md', md: 'xl' }}>{t.HOME_RESPECT}</Text>
+        <Text fontSize={{ base: 'md', md: 'xl' }}>{t.home.respect}</Text>
       </Center>
     </>
   )

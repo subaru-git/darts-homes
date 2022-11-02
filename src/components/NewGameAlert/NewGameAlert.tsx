@@ -33,7 +33,7 @@ const NewGameAlert: FC<NewGameAlertProps> = ({ isOpen, onClose, onNewGame }) => 
           Start New Game?
         </AlertDialogHeader>
         <AlertDialogCloseButton />
-        <AlertDialogBody>{t.CRICKET_NUMBER_COUNT_START_NEW_GAME_WARNING}</AlertDialogBody>
+        <AlertDialogBody>{t.warning.newgame}</AlertDialogBody>
         <AlertDialogFooter>
           <Button onClick={onClose} ref={cancelRef} ml={3} aria-label='cancel'>
             Cancel

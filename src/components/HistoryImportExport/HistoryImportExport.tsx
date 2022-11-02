@@ -83,7 +83,7 @@ const HistoryImportExport: FC<HistoryImportExportProps> = ({ onError }) => {
             <AlertDialogHeader fontSize='lg' fontWeight='bold'>
               Import History
             </AlertDialogHeader>
-            <AlertDialogBody>{t.IMPORT_DESCRIPTION}</AlertDialogBody>
+            <AlertDialogBody>{t.import.description}</AlertDialogBody>
             <AlertDialogFooter>
               <Button colorScheme='gray' ml={3} onClick={onClose} ref={cancelRef}>
                 Cancel
@@ -96,7 +96,7 @@ const HistoryImportExport: FC<HistoryImportExportProps> = ({ onError }) => {
                 }}
                 ml={3}
               >
-                {t.IMPORT_ADD}
+                {t.common.add}
               </Button>
               <Button
                 colorScheme='red'
@@ -106,7 +106,7 @@ const HistoryImportExport: FC<HistoryImportExportProps> = ({ onError }) => {
                 }}
                 ml={3}
               >
-                {t.IMPORT_OVERWRITE}
+                {t.common.overwrite}
               </Button>
             </AlertDialogFooter>
           </AlertDialogContent>

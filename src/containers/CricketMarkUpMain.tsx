@@ -2,6 +2,7 @@ import React, { FC } from 'react'
 import { Box, Flex, Grid, GridItem } from '@chakra-ui/react'
 import CountButtons from '@/components/CountButtons'
 import CricketMarkUpBoard from '@/components/CricketMarkUpBoard'
+import CricketMarkUpDescription from '@/components/CricketMarkUpDescription'
 import CricketMarkUpSettings from '@/components/CricketMarkUpSettings'
 import Footer from '@/components/Footer'
 import Loading from '@/components/Loading'
@@ -42,14 +43,17 @@ const DesktopMain: FC<{
 }> = ({ game, setGame }) => {
   return (
     <div>
-      <CricketMarkUpSettings
-        onNewGame={(targetNumber, save) => {
-          if (save) saveCricketMarkUpHistory(game.getGameResult())
-          setGame(new CricketMarkUpGame(targetNumber))
-        }}
-        targetCount={game.getTargetCount()}
-        isFinished={game.isFinished()}
-      />
+      <Flex justifyContent='space-between'>
+        <CricketMarkUpSettings
+          onNewGame={(targetNumber, save) => {
+            if (save) saveCricketMarkUpHistory(game.getGameResult())
+            setGame(new CricketMarkUpGame(targetNumber))
+          }}
+          targetCount={game.getTargetCount()}
+          isFinished={game.isFinished()}
+        />
+        <CricketMarkUpDescription />
+      </Flex>
       <Grid templateColumns='repeat(2, auto)' gap={6} p={4}>
         <GridItem>
           <Grid templateRows='repeat(3, auto)' gap={10}>
@@ -153,6 +157,7 @@ const MobileMain: FC<{
             />
             <TargetBoard target={game.getCount().toString()} message='Count' size='sm' />
           </Flex>
+          <CricketMarkUpDescription />
         </Flex>
       </GridItem>
       <Box maxH={250} overflow='scroll'>

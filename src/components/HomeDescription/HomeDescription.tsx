@@ -14,7 +14,7 @@ const DesktopHomeDescription: FC = () => {
       <Img src='/darts.webp' alt='darts homes' boxSize={450} objectFit='cover' />
       <Center h='100%'>
         <Text fontSize={'xl'} whiteSpace='pre-wrap'>
-          {t.HOME_DESCRIPTION}
+          {t.home.description.join('\n')}
         </Text>
       </Center>
     </Flex>
@@ -30,7 +30,7 @@ const MobileHomeDescription: FC = () => {
       </Center>
       <Center h='100%'>
         <Text fontSize={'md'} whiteSpace='pre-wrap'>
-          {t.HOME_DESCRIPTION}
+          {t.home.description.join('\n')}
         </Text>
       </Center>
     </>

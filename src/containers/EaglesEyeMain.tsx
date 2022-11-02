@@ -2,6 +2,7 @@ import React, { FC } from 'react'
 import { Box, Center, Flex, Grid, GridItem } from '@chakra-ui/react'
 import CountBullButtons from '@/components/CountBullButtons'
 import EaglesEyeBoard from '@/components/EaglesEyeBoard'
+import EaglesEyeDescription from '@/components/EaglesEyeDescription'
 import EaglesEyeNewGame from '@/components/EaglesEyeNewGame'
 import Footer from '@/components/Footer'
 import Loading from '@/components/Loading'
@@ -41,7 +42,10 @@ const DesktopMain: FC<{ game: EaglesEyeGame; setGame: (game: EaglesEyeGame) => v
 }) => {
   return (
     <>
-      <EaglesEyeNewGame onNewGame={() => setGame(new EaglesEyeGame())} />
+      <Flex justifyContent='space-between' alignItems='center'>
+        <EaglesEyeNewGame onNewGame={() => setGame(new EaglesEyeGame())} />
+        <EaglesEyeDescription />
+      </Flex>
       <Grid templateRows={'repeat(3, auto)'} gap={10} justifyContent='center' p={10}>
         <GridItem>
           <Flex justifyContent='space-around' gap={10}>
@@ -105,6 +109,7 @@ const MobileMain: FC<{ game: EaglesEyeGame; setGame: (game: EaglesEyeGame) => vo
               />
             </Center>
           </Box>
+          <EaglesEyeDescription />
         </Flex>
       </GridItem>
       <GridItem>

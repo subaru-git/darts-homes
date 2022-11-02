@@ -249,12 +249,12 @@ const GetNavItem = () => {
       children: [
         {
           label: "Eagle's Eye",
-          subLabel: t.EAGLES_EYE_DESCRIPTION,
+          subLabel: t.navigation.eagleseye,
           href: '/eagleseye',
         },
         {
           label: 'Cricket Mark-Up',
-          subLabel: t.CRICKET_NUMBER_COUNT_SHORT_DESCRIPTION,
+          subLabel: t.navigation.cricketmarkup,
           href: '/cricketmarkup',
         },
       ],
