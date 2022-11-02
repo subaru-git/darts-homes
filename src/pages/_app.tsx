@@ -1,7 +1,5 @@
 import { ChakraProvider } from '@chakra-ui/react'
 import { Global } from '@emotion/react'
-// eslint-disable-next-line import/no-unresolved
-import { Analytics } from '@vercel/analytics/react'
 import { DefaultSeo } from 'next-seo'
 import Script from 'next/script'
 import type { AppProps } from 'next/app'
@@ -52,7 +50,6 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
           </EaglesEyeUpGameContextProvider>
         </CricketMarkUpGameContextProvider>
       </ChakraProvider>
-      <Analytics />
     </>
   )
 }
