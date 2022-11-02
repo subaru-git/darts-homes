@@ -3,7 +3,7 @@
 exports[`should rendering 1`] = `
 <div>
   <button
-    aria-label="setting"
+    aria-label="what is new game?"
     class="chakra-button css-1x4o3bv"
     type="button"
   >

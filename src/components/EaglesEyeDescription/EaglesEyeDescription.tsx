@@ -25,7 +25,7 @@ const EaglesEyeDescription: FC = () => {
       {isMd ? (
         <Button
           leftIcon={<GrCircleInformation />}
-          aria-label='setting'
+          aria-label='what is new game?'
           variant='ghost'
           onClick={onToggle}
         >
@@ -33,7 +33,7 @@ const EaglesEyeDescription: FC = () => {
         </Button>
       ) : (
         <IconButton
-          aria-label='setting'
+          aria-label='what is new game?'
           icon={<GrCircleInformation size='20px' />}
           variant='ghost'
           onClick={onToggle}
