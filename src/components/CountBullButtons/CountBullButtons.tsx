@@ -10,9 +10,24 @@ const CountBullButtons: FC<CountBullButtonsProps> = ({ onCount, disabled = false
   return (
     <div css={styles}>
       <div css={[disableStyle, disabled ? null : css({ display: 'none' })]} />
-      <button css={outerBullStyles} onClick={() => onCount('S-BULL')} disabled={disabled} />
-      <button css={inBullStyles} onClick={() => onCount('D-BULL')} disabled={disabled} />
-      <button css={nonBullStyles} onClick={() => onCount('0')} disabled={disabled} />
+      <button
+        css={outerBullStyles}
+        onClick={() => onCount('S-BULL')}
+        disabled={disabled}
+        aria-label='outer bull'
+      />
+      <button
+        css={innerBullStyles}
+        onClick={() => onCount('D-BULL')}
+        disabled={disabled}
+        aria-label='inner bull'
+      />
+      <button
+        css={nonBullStyles}
+        onClick={() => onCount('0')}
+        disabled={disabled}
+        aria-label='non bull'
+      />
     </div>
   )
 }
@@ -26,7 +41,7 @@ const styles = css({
   maxWidth: '40vh',
   maxHeight: '40vh',
 })
-const inBullStyles = css({
+const innerBullStyles = css({
   position: 'absolute',
   borderRadius: '100%',
   height: '15vw',
@@ -53,9 +68,9 @@ const inBullStyles = css({
     verticalAlign: 'text-top',
     background: '#777777',
     opacity: 0,
-    animation: 'ripple 0.3s ease-out',
+    animation: 'ripple-in 0.3s ease-out',
   },
-  '@keyframes ripple': {
+  '@keyframes ripple-in': {
     '0%': {
       opacity: 0.8,
       transform: 'scale(1.3)',
@@ -93,9 +108,9 @@ const outerBullStyles = css({
     verticalAlign: 'text-top',
     background: '#dd7777',
     opacity: 0,
-    animation: 'ripple 0.3s ease-out',
+    animation: 'ripple-out 0.3s ease-out',
   },
-  '@keyframes ripple': {
+  '@keyframes ripple-out': {
     '0%': {
       opacity: 0.8,
       transform: 'scale(0.6)',

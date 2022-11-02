@@ -9,6 +9,7 @@ import {
   Button,
   Text,
 } from '@chakra-ui/react'
+import useLocale from '@/hooks/locale'
 
 type HistoryDeleteAlertProps = {
   message: string
@@ -24,6 +25,7 @@ const HistoryDeleteAlert: FC<HistoryDeleteAlertProps> = ({
   onDelete,
 }) => {
   const cancelRef = useRef<HTMLButtonElement>(null)
+  const { t } = useLocale()
   if (!history) return null
   return (
     <AlertDialog
@@ -38,14 +40,14 @@ const HistoryDeleteAlert: FC<HistoryDeleteAlertProps> = ({
             Delete History
           </AlertDialogHeader>
           <AlertDialogBody>
-            {"Are you sure? You can't undo this action afterward."}
+            {t.HISTORY_DELETE_WARNING}
             <Text mt={4}>{message}</Text>
           </AlertDialogBody>
           <AlertDialogFooter>
-            <Button colorScheme='gray' ml={3} onClick={onClose} ref={cancelRef}>
+            <Button colorScheme='gray' ml={3} onClick={onClose} ref={cancelRef} aria-label='cancel'>
               Cancel
             </Button>
-            <Button colorScheme='red' onClick={onDelete} ml={3}>
+            <Button colorScheme='red' onClick={onDelete} ml={3} aria-label='delete'>
               Delete
             </Button>
           </AlertDialogFooter>

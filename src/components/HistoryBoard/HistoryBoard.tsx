@@ -59,8 +59,8 @@ const HistoryBoard: FC = () => {
       </Flex>
       <Tabs>
         <TabList>
-          <Tab>Cricket Mark-Up</Tab>
-          <Tab>{"Eagle's Eye"}</Tab>
+          <Tab aria-label='cricket mark up'>Cricket Mark-Up</Tab>
+          <Tab aria-label="eagle's eye">{"Eagle's Eye"}</Tab>
         </TabList>
         <TabPanels>
           <TabPanel>

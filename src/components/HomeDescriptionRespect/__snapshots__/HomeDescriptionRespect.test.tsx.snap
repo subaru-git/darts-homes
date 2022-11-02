@@ -2,42 +2,40 @@
 
 exports[`should rendering 1`] = `
 <div>
-  <div>
+  <div
+    class="css-vyd9jy"
+  >
     <div
-      class="css-vyd9jy"
+      class="css-0"
     >
       <div
-        class="css-0"
+        class="css-tkevr6"
       >
-        <div
-          class="css-tkevr6"
+        <p
+          class="chakra-text css-9833tc"
         >
-          <p
-            class="chakra-text css-9833tc"
-          >
-            This site appreciates and respects all darts content, including YouTube videos.
-          </p>
-        </div>
+          This site appreciates and respects all darts content, including YouTube videos.
+        </p>
       </div>
-      <div
-        class="css-b6bcyj"
+    </div>
+    <div
+      class="css-b6bcyj"
+    >
+      <link
+        as="image"
+        href="https://i.ytimg.com/vi_webp/HiNOjEYbUXc/hqdefault.webp"
+        rel="preload"
+      />
+      <article
+        class="yt-lite "
+        data-title="【ダーツ】友達にダーツをさせる方法【菊地山口】"
+        style="background-image: url(https://i.ytimg.com/vi_webp/HiNOjEYbUXc/hqdefault.webp); --aspect-ratio: 56.25%;"
       >
-        <link
-          as="image"
-          href="https://i.ytimg.com/vi_webp/HiNOjEYbUXc/hqdefault.webp"
-          rel="preload"
+        <button
+          aria-label="Watch 【ダーツ】友達にダーツをさせる方法【菊地山口】"
+          class="lty-playbtn"
         />
-        <article
-          class="yt-lite "
-          data-title="【ダーツ】友達にダーツをさせる方法【菊地山口】"
-          style="background-image: url(https://i.ytimg.com/vi_webp/HiNOjEYbUXc/hqdefault.webp); --aspect-ratio: 56.25%;"
-        >
-          <button
-            aria-label="Watch 【ダーツ】友達にダーツをさせる方法【菊地山口】"
-            class="lty-playbtn"
-          />
-        </article>
-      </div>
+      </article>
     </div>
   </div>
   <span

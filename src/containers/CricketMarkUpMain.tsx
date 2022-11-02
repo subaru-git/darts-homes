@@ -75,7 +75,7 @@ const DesktopMain: FC<{
                   </Grid>
                 </GridItem>
                 <GridItem maxW='500px' alignSelf='center'>
-                  <CricketMarkUpBoard data={game.getScore()} />
+                  <CricketMarkUpBoard scores={game.getNumberOfCount()} />
                 </GridItem>
               </Grid>
             </GridItem>
@@ -156,7 +156,7 @@ const MobileMain: FC<{
         </Flex>
       </GridItem>
       <Box maxH={250} overflow='scroll'>
-        <CricketMarkUpBoard data={game.getScore()} />
+        <CricketMarkUpBoard scores={game.getNumberOfCount()} />
       </Box>
       <RoundScore
         scores={game.getRoundScore()}

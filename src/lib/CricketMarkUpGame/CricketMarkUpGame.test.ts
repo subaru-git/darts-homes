@@ -181,6 +181,11 @@ test('in gaming', () => {
   ])
   expect(game.getCurrentTarget()).toEqual('-1')
   game.roundChange()
+  expect(game.getGameResult().result).toEqual(34)
+  expect(game.getGameResult().targetCount).toEqual(10)
+  expect(game.getGameResult().scores[0].number).toEqual(20)
+  expect(game.getGameResult().scores[0].count).toEqual(10)
+  expect(game.getGameResult().scores[0].total).toEqual(5)
 })
 test('should output progress and resume game', () => {
   const game = new Game(10)

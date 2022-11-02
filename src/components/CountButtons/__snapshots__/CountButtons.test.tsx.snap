@@ -15,6 +15,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="outer bull"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -25,6 +26,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="inner bull"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -88,7 +90,7 @@ exports[`should rendering and clickable input 1`] = `
             class="css-tkevr6"
           >
             <p
-              class="chakra-text css-1xu3tth"
+              class="chakra-text css-1qgr8dx"
             >
               Single
             </p>
@@ -101,7 +103,7 @@ exports[`should rendering and clickable input 1`] = `
             class="css-tkevr6"
           >
             <p
-              class="chakra-text css-1xu3tth"
+              class="chakra-text css-1qgr8dx"
             >
               Double
             </p>
@@ -114,7 +116,7 @@ exports[`should rendering and clickable input 1`] = `
             class="css-tkevr6"
           >
             <p
-              class="chakra-text css-1xu3tth"
+              class="chakra-text css-1qgr8dx"
             >
               Triple
             </p>
@@ -124,6 +126,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="1"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -134,6 +137,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="1 double"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -144,6 +148,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="1 triple"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -154,6 +159,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="2"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -164,6 +170,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="2 double"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -174,6 +181,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="2 triple"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -184,6 +192,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="3"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -194,6 +203,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="3 double"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -204,6 +214,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="3 triple"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -214,6 +225,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="4"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -224,6 +236,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="4 double"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -234,6 +247,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="4 triple"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -244,6 +258,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="5"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -254,6 +269,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="5 double"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -264,6 +280,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="5 triple"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -274,6 +291,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="6"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -284,6 +302,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="6 double"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -294,6 +313,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="6 triple"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -304,6 +324,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="7"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -314,6 +335,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="7 double"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -324,6 +346,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="7 triple"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -334,6 +357,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="8"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -344,6 +368,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="8 double"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -354,6 +379,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="8 triple"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -364,6 +390,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="9"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -374,6 +401,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="9 double"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -384,6 +412,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="9 triple"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -394,6 +423,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="10"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -404,6 +434,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="10 double"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -414,6 +445,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="10 triple"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -424,6 +456,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="11"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -434,6 +467,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="11 double"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -444,6 +478,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="11 triple"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -454,6 +489,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="12"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -464,6 +500,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="12 double"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -474,6 +511,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="12 triple"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -484,6 +522,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="13"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -494,6 +533,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="13 double"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -504,6 +544,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="13 triple"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -514,6 +555,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="14"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -524,6 +566,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="14 double"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -534,6 +577,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="14 triple"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -544,6 +588,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="15"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -554,6 +599,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="15 double"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -564,6 +610,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="15 triple"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -574,6 +621,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="16"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -584,6 +632,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="16 double"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -594,6 +643,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="16 triple"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -604,6 +654,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="17"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -614,6 +665,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="17 double"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -624,6 +676,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="17 triple"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -634,6 +687,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="18"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -644,6 +698,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="18 double"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -654,6 +709,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="18 triple"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -664,6 +720,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="19"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -674,6 +731,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="19 double"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -684,6 +742,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="19 triple"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -694,6 +753,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="20"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -704,6 +764,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="20 double"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -714,6 +775,7 @@ exports[`should rendering and clickable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="20 triple"
             class="chakra-button css-uxt1e8"
             type="button"
           >
@@ -741,6 +803,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="outer bull"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -752,6 +815,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="inner bull"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -817,7 +881,7 @@ exports[`should rendering and disable input 1`] = `
             class="css-tkevr6"
           >
             <p
-              class="chakra-text css-14dydzm"
+              class="chakra-text css-80eqy4"
             >
               Single
             </p>
@@ -830,7 +894,7 @@ exports[`should rendering and disable input 1`] = `
             class="css-tkevr6"
           >
             <p
-              class="chakra-text css-14dydzm"
+              class="chakra-text css-80eqy4"
             >
               Double
             </p>
@@ -843,7 +907,7 @@ exports[`should rendering and disable input 1`] = `
             class="css-tkevr6"
           >
             <p
-              class="chakra-text css-14dydzm"
+              class="chakra-text css-80eqy4"
             >
               Triple
             </p>
@@ -853,6 +917,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="1"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -864,6 +929,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="1 double"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -875,6 +941,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="1 triple"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -886,6 +953,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="2"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -897,6 +965,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="2 double"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -908,6 +977,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="2 triple"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -919,6 +989,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="3"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -930,6 +1001,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="3 double"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -941,6 +1013,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="3 triple"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -952,6 +1025,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="4"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -963,6 +1037,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="4 double"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -974,6 +1049,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="4 triple"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -985,6 +1061,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="5"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -996,6 +1073,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="5 double"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1007,6 +1085,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="5 triple"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1018,6 +1097,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="6"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1029,6 +1109,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="6 double"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1040,6 +1121,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="6 triple"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1051,6 +1133,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="7"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1062,6 +1145,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="7 double"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1073,6 +1157,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="7 triple"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1084,6 +1169,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="8"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1095,6 +1181,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="8 double"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1106,6 +1193,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="8 triple"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1117,6 +1205,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="9"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1128,6 +1217,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="9 double"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1139,6 +1229,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="9 triple"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1150,6 +1241,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="10"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1161,6 +1253,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="10 double"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1172,6 +1265,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="10 triple"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1183,6 +1277,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="11"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1194,6 +1289,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="11 double"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1205,6 +1301,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="11 triple"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1216,6 +1313,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="12"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1227,6 +1325,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="12 double"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1238,6 +1337,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="12 triple"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1249,6 +1349,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="13"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1260,6 +1361,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="13 double"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1271,6 +1373,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="13 triple"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1282,6 +1385,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="14"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1293,6 +1397,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="14 double"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1304,6 +1409,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="14 triple"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1315,6 +1421,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="15"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1326,6 +1433,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="15 double"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1337,6 +1445,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="15 triple"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1348,6 +1457,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="16"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1359,6 +1469,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="16 double"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1370,6 +1481,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="16 triple"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1381,6 +1493,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="17"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1392,6 +1505,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="17 double"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1403,6 +1517,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="17 triple"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1414,6 +1529,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="18"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1425,6 +1541,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="18 double"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1436,6 +1553,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="18 triple"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1447,6 +1565,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="19"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1458,6 +1577,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="19 double"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1469,6 +1589,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="19 triple"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1480,6 +1601,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="20"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1491,6 +1613,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="20 double"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1502,6 +1625,7 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="20 triple"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1530,6 +1654,7 @@ exports[`should rendering only cricket numbers 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="outer bull"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1541,6 +1666,7 @@ exports[`should rendering only cricket numbers 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="inner bull"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1606,7 +1732,7 @@ exports[`should rendering only cricket numbers 1`] = `
             class="css-tkevr6"
           >
             <p
-              class="chakra-text css-14dydzm"
+              class="chakra-text css-80eqy4"
             >
               Single
             </p>
@@ -1619,7 +1745,7 @@ exports[`should rendering only cricket numbers 1`] = `
             class="css-tkevr6"
           >
             <p
-              class="chakra-text css-14dydzm"
+              class="chakra-text css-80eqy4"
             >
               Double
             </p>
@@ -1632,7 +1758,7 @@ exports[`should rendering only cricket numbers 1`] = `
             class="css-tkevr6"
           >
             <p
-              class="chakra-text css-14dydzm"
+              class="chakra-text css-80eqy4"
             >
               Triple
             </p>
@@ -1642,6 +1768,7 @@ exports[`should rendering only cricket numbers 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="15"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1653,6 +1780,7 @@ exports[`should rendering only cricket numbers 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="15 double"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1664,6 +1792,7 @@ exports[`should rendering only cricket numbers 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="15 triple"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1675,6 +1804,7 @@ exports[`should rendering only cricket numbers 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="16"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1686,6 +1816,7 @@ exports[`should rendering only cricket numbers 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="16 double"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1697,6 +1828,7 @@ exports[`should rendering only cricket numbers 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="16 triple"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1708,6 +1840,7 @@ exports[`should rendering only cricket numbers 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="17"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1719,6 +1852,7 @@ exports[`should rendering only cricket numbers 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="17 double"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1730,6 +1864,7 @@ exports[`should rendering only cricket numbers 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="17 triple"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1741,6 +1876,7 @@ exports[`should rendering only cricket numbers 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="18"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1752,6 +1888,7 @@ exports[`should rendering only cricket numbers 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="18 double"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1763,6 +1900,7 @@ exports[`should rendering only cricket numbers 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="18 triple"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1774,6 +1912,7 @@ exports[`should rendering only cricket numbers 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="19"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1785,6 +1924,7 @@ exports[`should rendering only cricket numbers 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="19 double"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1796,6 +1936,7 @@ exports[`should rendering only cricket numbers 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="19 triple"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1807,6 +1948,7 @@ exports[`should rendering only cricket numbers 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="20"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1818,6 +1960,7 @@ exports[`should rendering only cricket numbers 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="20 double"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
@@ -1829,6 +1972,7 @@ exports[`should rendering only cricket numbers 1`] = `
           class="css-1gvp5h0"
         >
           <button
+            aria-label="20 triple"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"

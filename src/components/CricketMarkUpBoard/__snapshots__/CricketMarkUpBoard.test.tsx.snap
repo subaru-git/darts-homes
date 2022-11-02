@@ -31,106 +31,32 @@ exports[`should rendering 1`] = `
             >
               <div
                 class="css-0"
-              />
-            </div>
-          </td>
-          <td
-            class="css-1hg6byp"
-          >
-            <p
-              class="chakra-text css-1ps7yy3"
-            >
-              0
-            </p>
-          </td>
-        </tr>
-        <tr
-          class="css-x4muuh"
-        >
-          <td
-            class="css-1hg6byp"
-          >
-            <p
-              class="chakra-text css-1ps7yy3"
-            >
-              19
-            </p>
-          </td>
-          <td
-            class="css-1hg6byp"
-          >
-            <div
-              class="css-1h3cqa9"
-            >
+              >
+                <div
+                  css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+                />
+              </div>
               <div
                 class="css-0"
-              />
-            </div>
-          </td>
-          <td
-            class="css-1hg6byp"
-          >
-            <p
-              class="chakra-text css-1ps7yy3"
-            >
-              0
-            </p>
-          </td>
-        </tr>
-        <tr
-          class="css-x4muuh"
-        >
-          <td
-            class="css-1hg6byp"
-          >
-            <p
-              class="chakra-text css-1ps7yy3"
-            >
-              18
-            </p>
-          </td>
-          <td
-            class="css-1hg6byp"
-          >
-            <div
-              class="css-1h3cqa9"
-            >
+              >
+                <div
+                  css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+                />
+              </div>
               <div
                 class="css-0"
-              />
-            </div>
-          </td>
-          <td
-            class="css-1hg6byp"
-          >
-            <p
-              class="chakra-text css-1ps7yy3"
-            >
-              0
-            </p>
-          </td>
-        </tr>
-        <tr
-          class="css-x4muuh"
-        >
-          <td
-            class="css-1hg6byp"
-          >
-            <p
-              class="chakra-text css-1ps7yy3"
-            >
-              17
-            </p>
-          </td>
-          <td
-            class="css-1hg6byp"
-          >
-            <div
-              class="css-1h3cqa9"
-            >
+              >
+                <div
+                  css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+                />
+              </div>
               <div
                 class="css-0"
-              />
+              >
+                <div
+                  css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+                />
+              </div>
             </div>
           </td>
           <td
@@ -139,106 +65,7 @@ exports[`should rendering 1`] = `
             <p
               class="chakra-text css-1ps7yy3"
             >
-              0
-            </p>
-          </td>
-        </tr>
-        <tr
-          class="css-x4muuh"
-        >
-          <td
-            class="css-1hg6byp"
-          >
-            <p
-              class="chakra-text css-1ps7yy3"
-            >
-              16
-            </p>
-          </td>
-          <td
-            class="css-1hg6byp"
-          >
-            <div
-              class="css-1h3cqa9"
-            >
-              <div
-                class="css-0"
-              />
-            </div>
-          </td>
-          <td
-            class="css-1hg6byp"
-          >
-            <p
-              class="chakra-text css-1ps7yy3"
-            >
-              0
-            </p>
-          </td>
-        </tr>
-        <tr
-          class="css-x4muuh"
-        >
-          <td
-            class="css-1hg6byp"
-          >
-            <p
-              class="chakra-text css-1ps7yy3"
-            >
-              15
-            </p>
-          </td>
-          <td
-            class="css-1hg6byp"
-          >
-            <div
-              class="css-1h3cqa9"
-            >
-              <div
-                class="css-0"
-              />
-            </div>
-          </td>
-          <td
-            class="css-1hg6byp"
-          >
-            <p
-              class="chakra-text css-1ps7yy3"
-            >
-              0
-            </p>
-          </td>
-        </tr>
-        <tr
-          class="css-x4muuh"
-        >
-          <td
-            class="css-1hg6byp"
-          >
-            <p
-              class="chakra-text css-1ps7yy3"
-            >
-              BULL
-            </p>
-          </td>
-          <td
-            class="css-1hg6byp"
-          >
-            <div
-              class="css-1h3cqa9"
-            >
-              <div
-                class="css-0"
-              />
-            </div>
-          </td>
-          <td
-            class="css-1hg6byp"
-          >
-            <p
-              class="chakra-text css-1ps7yy3"
-            >
-              0
+              5
             </p>
           </td>
         </tr>

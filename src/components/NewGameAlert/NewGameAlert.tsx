@@ -35,6 +35,9 @@ const NewGameAlert: FC<NewGameAlertProps> = ({ isOpen, onClose, onNewGame }) => 
         <AlertDialogCloseButton />
         <AlertDialogBody>{t.CRICKET_NUMBER_COUNT_START_NEW_GAME_WARNING}</AlertDialogBody>
         <AlertDialogFooter>
+          <Button onClick={onClose} ref={cancelRef} ml={3} aria-label='cancel'>
+            Cancel
+          </Button>
           <Button
             colorScheme='blue'
             ml={3}
@@ -42,11 +45,9 @@ const NewGameAlert: FC<NewGameAlertProps> = ({ isOpen, onClose, onNewGame }) => 
               onNewGame()
               onClose()
             }}
+            aria-label='ok'
           >
             OK
-          </Button>
-          <Button onClick={onClose} ref={cancelRef} ml={3}>
-            Cancel
           </Button>
         </AlertDialogFooter>
       </AlertDialogContent>

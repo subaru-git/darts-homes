@@ -39,7 +39,7 @@ const replaceDescription = (description: string) => {
       return (
         <Fragment key={i}>
           <br />
-          <Link href={match} isExternal color='teal.500'>
+          <Link href={match} isExternal color='teal.700' fontStyle='italic'>
             {match} <ExternalLinkIcon />
           </Link>
           <br />

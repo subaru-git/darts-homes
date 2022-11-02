@@ -47,18 +47,16 @@ const DesktopMain: FC<{ game: EaglesEyeGame; setGame: (game: EaglesEyeGame) => v
           <Flex justifyContent='space-around' gap={10}>
             <TargetBoard
               message={`Round ${game.getRound()}`}
-              target={game.getTotalScore().toString()}
+              target={game.getTotalScore().toString().padStart(3)}
             />
-            <GridItem>
-              <CountBullButtons
-                onCount={(n) => {
-                  const g = Object.assign(new EaglesEyeGame(), game)
-                  g.addScore(n)
-                  setGame(g)
-                }}
-                disabled={game.getRoundScore().length >= 3}
-              />
-            </GridItem>
+            <CountBullButtons
+              onCount={(n) => {
+                const g = Object.assign(new EaglesEyeGame(), game)
+                g.addScore(n)
+                setGame(g)
+              }}
+              disabled={game.getRoundScore().length >= 3}
+            />
           </Flex>
         </GridItem>
         <GridItem maxW={1280}>

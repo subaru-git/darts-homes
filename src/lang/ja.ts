@@ -19,6 +19,7 @@ const text = {
   IMPORT_DESCRIPTION: '上書きか追加かを選択してください。上書きを選択すると、元に戻せません。',
   IMPORT_ADD: '追加',
   IMPORT_OVERWRITE: '上書き',
+  HISTORY_DELETE_WARNING: '履歴を削除すると、元に戻せません。',
 }
 
 export default text

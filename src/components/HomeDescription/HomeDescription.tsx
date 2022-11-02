@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { Center, Grid, GridItem, Img, Text, useBreakpointValue } from '@chakra-ui/react'
+import { Center, Flex, Img, Text, useBreakpointValue } from '@chakra-ui/react'
 import useLocale from '@/hooks/locale'
 
 const HomeDescription: FC = () => {
@@ -10,18 +10,14 @@ const HomeDescription: FC = () => {
 const DesktopHomeDescription: FC = () => {
   const { t } = useLocale()
   return (
-    <Grid templateColumns='repeat(2, auto)' justifyContent='center' gap={4}>
-      <GridItem>
-        <Img src='/darts.webp' alt='darts homes' boxSize={450} objectFit='cover' />
-      </GridItem>
-      <GridItem>
-        <Center h='100%'>
-          <Text fontSize={'xl'} whiteSpace='pre-wrap'>
-            {t.HOME_DESCRIPTION}
-          </Text>
-        </Center>
-      </GridItem>
-    </Grid>
+    <Flex justifyContent='center' gap={4}>
+      <Img src='/darts.webp' alt='darts homes' boxSize={450} objectFit='cover' />
+      <Center h='100%'>
+        <Text fontSize={'xl'} whiteSpace='pre-wrap'>
+          {t.HOME_DESCRIPTION}
+        </Text>
+      </Center>
+    </Flex>
   )
 }
 

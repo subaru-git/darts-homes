@@ -20,13 +20,21 @@ const TargetBoard: FC<TargetBoardProps> = ({ target, message, size = 'md' }) => 
     <Box>
       <Text
         fontSize={messageFontSize}
+        fontWeight='bold'
         color='green.500'
         pl={{ base: 1, md: 4 }}
         pt={{ base: 1, md: 4 }}
       >
         {message}
       </Text>
-      <Text textAlign='center' fontSize={targetFontSize} py={{ base: 1, md: 8 }}>
+      <Text
+        textAlign='center'
+        fontSize={targetFontSize}
+        py={{ base: 1, md: 8 }}
+        fontWeight='bold'
+        fontFamily='roboto'
+        minWidth={{ base: '110px', md: '260px' }}
+      >
         {target}
       </Text>
     </Box>
