@@ -31,7 +31,7 @@ exports[`should rendering 1`] = `
               >
                 <img
                   alt="title image"
-                  class="chakra-image__placeholder css-2y8fku"
+                  class="chakra-image__placeholder css-1l0a0ng"
                   src="/fallback.webp"
                 />
               </a>
