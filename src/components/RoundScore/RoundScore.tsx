@@ -24,30 +24,33 @@ const RoundScore: FC<RoundScoreProps> = ({
     <Grid templateColumns='repeat(4, 1fr)' alignItems='center' gap={2}>
       <GridItem>
         <Text
-          size={{ base: 'md', md: 'xl' }}
+          fontSize={{ base: 'xl', md: '4xl' }}
           textAlign='center'
           color='gray.500'
           fontStyle='italic'
+          fontWeight='bold'
         >
           {scores[0] === '0' ? '-' : scores[0]}
         </Text>
       </GridItem>
       <GridItem>
         <Text
-          size={{ base: 'md', md: 'xl' }}
+          fontSize={{ base: 'xl', md: '4xl' }}
           textAlign='center'
           color='gray.500'
           fontStyle='italic'
+          fontWeight='bold'
         >
           {scores[1] === '0' ? '-' : scores[1]}
         </Text>
       </GridItem>
       <GridItem>
         <Text
-          size={{ base: 'md', md: 'xl' }}
+          fontSize={{ base: 'xl', md: '4xl' }}
           textAlign='center'
           color='gray.500'
           fontStyle='italic'
+          fontWeight='bold'
         >
           {scores[2] === '0' ? '-' : scores[2]}
         </Text>

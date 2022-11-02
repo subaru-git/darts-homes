@@ -7,7 +7,7 @@ import {
   AlertDialogHeader,
   AlertDialogOverlay,
   Button,
-  Grid,
+  Flex,
   useDisclosure,
 } from '@chakra-ui/react'
 import { BiExport, BiImport } from 'react-icons/bi'
@@ -27,7 +27,7 @@ const HistoryImportExport: FC<HistoryImportExportProps> = ({ onError }) => {
   const { t } = useLocale()
   return (
     <>
-      <Grid templateColumns='repeat(2, 1fr)' gap={4}>
+      <Flex gap={4}>
         <input
           type='file'
           accept='.json'
@@ -71,7 +71,7 @@ const HistoryImportExport: FC<HistoryImportExportProps> = ({ onError }) => {
         >
           Export
         </Button>
-      </Grid>
+      </Flex>
       <AlertDialog
         isOpen={isOpen}
         leastDestructiveRef={cancelRef}

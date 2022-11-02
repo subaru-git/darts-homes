@@ -3,6 +3,7 @@
 exports[`should rendering 1`] = `
 <div>
   <button
+    aria-label="round change"
     class="chakra-button css-lmenfi"
     type="button"
   >

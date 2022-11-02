@@ -12,22 +12,20 @@ const HomeDescriptionRespect: FC = () => {
 const DesktopHomeDescriptionRespect: FC = () => {
   const { t } = useLocale()
   return (
-    <div>
-      <Grid templateColumns='repeat(2, auto)' justifyContent='center' gap={4}>
-        <GridItem>
-          <Center h='100%'>
-            <Text fontSize={{ base: 'md', md: 'xl' }}>{t.HOME_RESPECT}</Text>
-          </Center>
-        </GridItem>
-        <GridItem height='390px' width='640px'>
-          <LiteYoutubeEmbed
-            id='HiNOjEYbUXc'
-            title='【ダーツ】友達にダーツをさせる方法【菊地山口】'
-            webp
-          />
-        </GridItem>
-      </Grid>
-    </div>
+    <Grid templateColumns='repeat(2, auto)' justifyContent='center' gap={4}>
+      <GridItem>
+        <Center h='100%'>
+          <Text fontSize={{ base: 'md', md: 'xl' }}>{t.HOME_RESPECT}</Text>
+        </Center>
+      </GridItem>
+      <GridItem height='390px' width='640px'>
+        <LiteYoutubeEmbed
+          id='HiNOjEYbUXc'
+          title='【ダーツ】友達にダーツをさせる方法【菊地山口】'
+          webp
+        />
+      </GridItem>
+    </Grid>
   )
 }
 

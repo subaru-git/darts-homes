@@ -26,7 +26,7 @@ const CricketMarkUpSettings: FC<CricketMarkUpSettingsProps> = ({
           New Game
         </Button>
       ) : (
-        <IconButton aria-label='New Game' icon={<FiSettings />} variant='ghost' onClick={onOpen} />
+        <IconButton aria-label='setting' icon={<FiSettings />} variant='ghost' onClick={onOpen} />
       )}
       <CricketMarkUpSettingModal
         isOpen={isOpen}

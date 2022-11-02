@@ -61,6 +61,7 @@ const DesktopRoundScoreButton: FC<RoundScoreButtonProps> = ({
             onRoundChange()
           }}
           disabled={disabled}
+          aria-label='round change'
         >
           Round Change
         </Button>
@@ -72,6 +73,7 @@ const DesktopRoundScoreButton: FC<RoundScoreButtonProps> = ({
             onClick={() => {
               onOpen()
             }}
+            aria-label='round over'
           >
             Round Over
           </Button>
@@ -102,7 +104,6 @@ const MobileRoundScoreButton: FC<RoundScoreButtonProps> = ({
     <>
       {!isFinished ? (
         <IconButton
-          aria-label='Round Change'
           icon={<MdOutlineChangeCircle />}
           colorScheme='green'
           size='sm'
@@ -111,11 +112,11 @@ const MobileRoundScoreButton: FC<RoundScoreButtonProps> = ({
             onRoundChange()
           }}
           disabled={disabled}
+          aria-label='round change'
         />
       ) : (
         <>
           <IconButton
-            aria-label='Round Over'
             icon={<GiPartyPopper />}
             colorScheme='orange'
             size='sm'
@@ -123,6 +124,7 @@ const MobileRoundScoreButton: FC<RoundScoreButtonProps> = ({
             onClick={() => {
               onOpen()
             }}
+            aria-label='round over'
           />
           <RoundOverDialog
             isOpen={isOpen}

@@ -46,6 +46,7 @@ const CricketMarkUpSettingModal: FC<CricketMarkUpSettingModalProps> = ({
           <NumberInput
             defaultValue={innerTargetCount}
             onChange={(value) => setInnerTargetCount(parseInt(value))}
+            aria-label='target count'
           >
             <NumberInputField />
             <NumberInputStepper>
@@ -55,17 +56,18 @@ const CricketMarkUpSettingModal: FC<CricketMarkUpSettingModalProps> = ({
           </NumberInput>
         </ModalBody>
         <ModalFooter>
+          <Button variant='ghost' onClick={onClose} aria-label='cancel'>
+            Cancel
+          </Button>
           <Button
             colorScheme='blue'
             mr={3}
             onClick={() => {
               onNewGame(innerTargetCount)
             }}
+            aria-label='new game'
           >
             New Game
-          </Button>
-          <Button variant='ghost' onClick={onClose}>
-            Cancel
           </Button>
         </ModalFooter>
       </ModalContent>

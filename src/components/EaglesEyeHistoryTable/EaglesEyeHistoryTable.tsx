@@ -114,13 +114,13 @@ const DesktopEaglesEyeHistoryRow: FC<{
         </Td>
         <Td>
           <Text fontSize='sm'>
-            S-BULL:
+            {'S-BULL: '}
             {history.scores.flat().reduce((pre, crr) => pre + (crr === 'S-BULL' ? 1 : 0), 0)}
           </Text>
         </Td>
         <Td>
           <Text fontSize='sm'>
-            D-BULL:
+            {'D-BULL: '}
             {history.scores.flat().reduce((pre, crr) => pre + (crr === 'D-BULL' ? 1 : 0), 0)}
           </Text>
         </Td>

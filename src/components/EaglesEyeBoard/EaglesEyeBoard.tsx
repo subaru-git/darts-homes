@@ -7,23 +7,21 @@ type EaglesEyeBoardProps = {
 
 const EaglesEyeBoard: FC<EaglesEyeBoardProps> = ({ data }) => {
   return (
-    <div>
-      <Grid>
-        <TableContainer>
-          <Table variant='simple'>
-            <Tbody>
-              {data.map((round, i) => (
-                <Tr key={`round-${round}-${i}`}>
-                  {round.map((score, j) => (
-                    <Td key={`score-${score}-${j}`}>{score.includes('BULL') ? score : '-'}</Td>
-                  ))}
-                </Tr>
-              ))}
-            </Tbody>
-          </Table>
-        </TableContainer>
-      </Grid>
-    </div>
+    <Grid>
+      <TableContainer>
+        <Table variant='simple'>
+          <Tbody>
+            {data.map((round, i) => (
+              <Tr key={`round-${round}-${i}`}>
+                {round.map((score, j) => (
+                  <Td key={`score-${score}-${j}`}>{score.includes('BULL') ? score : '-'}</Td>
+                ))}
+              </Tr>
+            ))}
+          </Tbody>
+        </Table>
+      </TableContainer>
+    </Grid>
   )
 }
 

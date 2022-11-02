@@ -60,10 +60,10 @@ const EaglesEyeRoundOverDialog: FC<EaglesEyeRoundOverDialogProps> = ({
             </Flex>
           </AlertDialogBody>
           <AlertDialogFooter>
-            <Button colorScheme='gray' ml={3} onClick={onClose} ref={cancelRef}>
+            <Button colorScheme='gray' ml={3} onClick={onClose} ref={cancelRef} aria-label='cancel'>
               Cancel
             </Button>
-            <Button colorScheme='teal' ml={3} onClick={onNewGame}>
+            <Button colorScheme='teal' ml={3} onClick={onNewGame} aria-label='new game'>
               New Game
             </Button>
           </AlertDialogFooter>

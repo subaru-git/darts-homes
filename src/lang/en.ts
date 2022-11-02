@@ -19,6 +19,7 @@ const text = {
     "Please choose add or overwrite. If you choose overwrite, you can't undo this action afterward.",
   IMPORT_ADD: 'Add',
   IMPORT_OVERWRITE: 'Overwrite',
+  HISTORY_DELETE_WARNING: 'If you delete the history, you can not undo this action.',
 }
 
 export default text
