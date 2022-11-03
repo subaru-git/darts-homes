@@ -1,10 +1,10 @@
-import React, { FC } from 'react'
-import { Box, Flex, Heading } from '@chakra-ui/react'
-import RespectCard from '@/components/RespectCard'
+import React, { FC } from 'react';
+import { Box, Flex, Heading } from '@chakra-ui/react';
+import RespectCard from '@/components/RespectCard';
 
 type RespectCardViewProps = {
-  data: RespectResult
-}
+  data: RespectResult;
+};
 
 const RespectCardView: FC<RespectCardViewProps> = ({ data }) => {
   return (
@@ -46,7 +46,7 @@ const RespectCardView: FC<RespectCardViewProps> = ({ data }) => {
         </Flex>
       </Box>
     </Flex>
-  )
-}
+  );
+};
 
-export default RespectCardView
+export default RespectCardView;

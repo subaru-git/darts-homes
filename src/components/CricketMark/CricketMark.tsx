@@ -1,16 +1,16 @@
-import React, { FC } from 'react'
-import { useBreakpointValue } from '@chakra-ui/react'
-import { css } from '@emotion/react'
+import React, { FC } from 'react';
+import { useBreakpointValue } from '@chakra-ui/react';
+import { css } from '@emotion/react';
 
 type CricketMarkProps = {
-  count: number
-}
+  count: number;
+};
 
 const CricketMark: FC<CricketMarkProps> = ({ count }) => {
-  const isMd = useBreakpointValue({ base: false, md: true })
-  const oneMark = isMd ? oneMarkStylesMd : oneMarkStyles
-  const twoMarks = isMd ? twoMarkStylesMd : twoMarkStyles
-  const threeMarks = isMd ? threeMarkStylesMd : threeMarkStyles
+  const isMd = useBreakpointValue({ base: false, md: true });
+  const oneMark = isMd ? oneMarkStylesMd : oneMarkStyles;
+  const twoMarks = isMd ? twoMarkStylesMd : twoMarkStyles;
+  const threeMarks = isMd ? threeMarkStylesMd : threeMarkStyles;
   return (
     <>
       {count === 3 ? (
@@ -21,8 +21,8 @@ const CricketMark: FC<CricketMarkProps> = ({ count }) => {
         <div css={oneMark} />
       ) : null}
     </>
-  )
-}
+  );
+};
 
 const oneMarkStylesMd = css({
   display: 'inline-block',
@@ -40,7 +40,7 @@ const oneMarkStylesMd = css({
     borderRadius: '2.5px',
     transform: 'translate(-50%, -50%) rotate(-45deg)',
   },
-})
+});
 
 const oneMarkStyles = css({
   display: 'inline-block',
@@ -58,7 +58,7 @@ const oneMarkStyles = css({
     borderRadius: '1.25px',
     transform: 'translate(-50%, -50%) rotate(-45deg)',
   },
-})
+});
 
 const twoMarkStylesMd = css({
   display: 'inline-block',
@@ -81,7 +81,7 @@ const twoMarkStylesMd = css({
   '&::after': {
     transform: 'translate(-50%, -50%) rotate(-45deg)',
   },
-})
+});
 
 const twoMarkStyles = css({
   display: 'inline-block',
@@ -104,7 +104,7 @@ const twoMarkStyles = css({
   '&::after': {
     transform: 'translate(-50%, -50%) rotate(-45deg)',
   },
-})
+});
 
 const threeMarkStylesMd = css({
   display: 'inline-block',
@@ -129,7 +129,7 @@ const threeMarkStylesMd = css({
   '&::after': {
     transform: 'translate(-50%, -50%) rotate(-45deg)',
   },
-})
+});
 
 const threeMarkStyles = css({
   display: 'inline-block',
@@ -154,6 +154,6 @@ const threeMarkStyles = css({
   '&::after': {
     transform: 'translate(-50%, -50%) rotate(-45deg)',
   },
-})
+});
 
-export default CricketMark
+export default CricketMark;

@@ -1,1 +1,1 @@
-export { default } from './CricketMark'
+export { default } from './CricketMark';

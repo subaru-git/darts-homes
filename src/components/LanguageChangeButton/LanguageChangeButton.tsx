@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC } from 'react';
 import {
   IconButton,
   Popover,
@@ -7,9 +7,9 @@ import {
   Text,
   useColorModeValue,
   Box,
-} from '@chakra-ui/react'
-import Link from 'next/link'
-import { IoLanguage } from 'react-icons/io5'
+} from '@chakra-ui/react';
+import Link from 'next/link';
+import { IoLanguage } from 'react-icons/io5';
 
 const LanguageChangeButton: FC = () => {
   return (
@@ -46,7 +46,7 @@ const LanguageChangeButton: FC = () => {
         </Link>
       </PopoverContent>
     </Popover>
-  )
-}
+  );
+};
 
-export default LanguageChangeButton
+export default LanguageChangeButton;

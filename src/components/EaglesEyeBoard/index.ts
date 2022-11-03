@@ -1,1 +1,1 @@
-export { default } from './EaglesEyeBoard'
+export { default } from './EaglesEyeBoard';

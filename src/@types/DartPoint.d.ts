@@ -62,4 +62,4 @@ type point =
   | '20T'
   | 'S-BULL'
   | 'D-BULL'
-  | 'OUT'
+  | 'OUT';

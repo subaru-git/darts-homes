@@ -39,6 +39,6 @@ const text = {
     add: 'Add',
     overwrite: 'Overwrite',
   },
-}
+};
 
-export default text
+export default text;

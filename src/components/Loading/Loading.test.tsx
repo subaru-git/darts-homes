@@ -1,7 +1,7 @@
-import { render } from '@testing-library/react'
-import Loading from './Loading'
+import { render } from '@testing-library/react';
+import Loading from './Loading';
 
 test('should rendering', () => {
-  const { container } = render(<Loading />)
-  expect(container).toMatchSnapshot()
-})
+  const { container } = render(<Loading />);
+  expect(container).toMatchSnapshot();
+});

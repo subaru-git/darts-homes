@@ -1,1 +1,1 @@
-export { default } from './EaglesEyeRoundOverDialog'
+export { default } from './EaglesEyeRoundOverDialog';

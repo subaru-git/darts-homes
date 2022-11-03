@@ -1,1 +1,1 @@
-export { default } from './RoundScoreButton'
+export { default } from './RoundScoreButton';

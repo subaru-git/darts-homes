@@ -1,14 +1,14 @@
-import React, { FC } from 'react'
-import { Center, Flex, Img, Text, useBreakpointValue } from '@chakra-ui/react'
-import useLocale from '@/hooks/locale'
+import React, { FC } from 'react';
+import { Center, Flex, Img, Text, useBreakpointValue } from '@chakra-ui/react';
+import useLocale from '@/hooks/locale';
 
 const HomeDescription: FC = () => {
-  const isMd = useBreakpointValue({ base: false, md: true })
-  return <>{isMd ? <DesktopHomeDescription /> : <MobileHomeDescription />}</>
-}
+  const isMd = useBreakpointValue({ base: false, md: true });
+  return <>{isMd ? <DesktopHomeDescription /> : <MobileHomeDescription />}</>;
+};
 
 const DesktopHomeDescription: FC = () => {
-  const { t } = useLocale()
+  const { t } = useLocale();
   return (
     <Flex justifyContent='center' gap={4}>
       <Img src='/darts.webp' alt='darts homes' boxSize={450} objectFit='cover' />
@@ -18,11 +18,11 @@ const DesktopHomeDescription: FC = () => {
         </Text>
       </Center>
     </Flex>
-  )
-}
+  );
+};
 
 const MobileHomeDescription: FC = () => {
-  const { t } = useLocale()
+  const { t } = useLocale();
   return (
     <>
       <Center>
@@ -34,6 +34,6 @@ const MobileHomeDescription: FC = () => {
         </Text>
       </Center>
     </>
-  )
-}
-export default HomeDescription
+  );
+};
+export default HomeDescription;

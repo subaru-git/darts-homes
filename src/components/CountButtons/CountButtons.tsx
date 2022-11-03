@@ -1,16 +1,16 @@
-import React, { FC, Fragment } from 'react'
-import { Button, Center, Flex, Grid, GridItem, IconButton, Text } from '@chakra-ui/react'
-import { TbTargetOff } from 'react-icons/tb'
+import React, { FC, Fragment } from 'react';
+import { Button, Center, Flex, Grid, GridItem, IconButton, Text } from '@chakra-ui/react';
+import { TbTargetOff } from 'react-icons/tb';
 
 type CountButtonsProps = {
-  onCount: (count: point) => void
-  begin: number
-  end: number
-  reversed?: boolean
-  bull?: boolean
-  disabled?: boolean
-  other?: boolean
-}
+  onCount: (count: point) => void;
+  begin: number;
+  end: number;
+  reversed?: boolean;
+  bull?: boolean;
+  disabled?: boolean;
+  other?: boolean;
+};
 
 const CountButtons: FC<CountButtonsProps> = ({
   onCount,
@@ -21,8 +21,8 @@ const CountButtons: FC<CountButtonsProps> = ({
   disabled = false,
   other = false,
 }) => {
-  const buttons = [...Array(20).keys()].filter((n) => n >= begin - 1 && n <= end - 1)
-  if (reversed) buttons.reverse()
+  const buttons = [...Array(20).keys()].filter((n) => n >= begin - 1 && n <= end - 1);
+  if (reversed) buttons.reverse();
   return (
     <Grid templateRows={`repeat(${other ? 3 : 2}, auto)`} gap={2} maxW={320} m='auto'>
       {!bull ? null : (
@@ -158,7 +158,7 @@ const CountButtons: FC<CountButtonsProps> = ({
         </GridItem>
       ) : null}
     </Grid>
-  )
-}
+  );
+};
 
-export default CountButtons
+export default CountButtons;

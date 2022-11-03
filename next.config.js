@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
-})
+});
 
 const nextConfig = withBundleAnalyzer({
   reactStrictMode: true,
@@ -11,10 +11,10 @@ const nextConfig = withBundleAnalyzer({
     defaultLocale: 'ja',
   },
   webpack: (config) => {
-    const path = require('path')
-    config.resolve.alias['@'] = path.resolve(__dirname, 'src')
-    return config
+    const path = require('path');
+    config.resolve.alias['@'] = path.resolve(__dirname, 'src');
+    return config;
   },
-})
+});
 
-module.exports = nextConfig
+module.exports = nextConfig;

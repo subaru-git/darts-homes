@@ -1,4 +1,4 @@
-import React, { FC, useRef } from 'react'
+import React, { FC, useRef } from 'react';
 import {
   AlertDialog,
   AlertDialogBody,
@@ -9,31 +9,31 @@ import {
   Button,
   Flex,
   Text,
-} from '@chakra-ui/react'
-import { TwitterShareButton, TwitterIcon, LineShareButton, LineIcon } from 'react-share'
-import { useEaglesEyeGame } from '@/contexts/EaglesEyeGameContext'
+} from '@chakra-ui/react';
+import { TwitterShareButton, TwitterIcon, LineShareButton, LineIcon } from 'react-share';
+import { useEaglesEyeGame } from '@/contexts/EaglesEyeGameContext';
 
 type EaglesEyeRoundOverDialogProps = {
-  isOpen: boolean
-  onClose: () => void
-  onNewGame: () => void
-}
+  isOpen: boolean;
+  onClose: () => void;
+  onNewGame: () => void;
+};
 
 const EaglesEyeRoundOverDialog: FC<EaglesEyeRoundOverDialogProps> = ({
   isOpen,
   onClose,
   onNewGame,
 }) => {
-  const cancelRef = useRef<HTMLButtonElement>(null)
-  const game = useEaglesEyeGame()
-  if (!game) return null
+  const cancelRef = useRef<HTMLButtonElement>(null);
+  const game = useEaglesEyeGame();
+  if (!game) return null;
   const result = `Total: ${game.getGameResult().result}\nD-BULL: ${game
     .getGameResult()
     .scores.flat()
     .reduce((pre, crr) => pre + (crr === 'D-BULL' ? 1 : 0), 0)}\nS-BULL: ${game
     .getGameResult()
     .scores.flat()
-    .reduce((pre, crr) => pre + (crr === 'S-BULL' ? 1 : 0), 0)}\n`
+    .reduce((pre, crr) => pre + (crr === 'S-BULL' ? 1 : 0), 0)}\n`;
   return (
     <AlertDialog
       isOpen={isOpen}
@@ -70,7 +70,7 @@ const EaglesEyeRoundOverDialog: FC<EaglesEyeRoundOverDialogProps> = ({
         </AlertDialogContent>
       </AlertDialogOverlay>
     </AlertDialog>
-  )
-}
+  );
+};
 
-export default EaglesEyeRoundOverDialog
+export default EaglesEyeRoundOverDialog;

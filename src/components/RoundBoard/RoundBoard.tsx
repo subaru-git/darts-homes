@@ -1,9 +1,9 @@
-import React, { FC } from 'react'
-import { Box, Table, TableContainer, Tbody, Td, Tr } from '@chakra-ui/react'
+import React, { FC } from 'react';
+import { Box, Table, TableContainer, Tbody, Td, Tr } from '@chakra-ui/react';
 
 type RoundBoardProps = {
-  score: point[][]
-}
+  score: point[][];
+};
 
 const RoundBoard: FC<RoundBoardProps> = ({ score }) => {
   return (
@@ -22,7 +22,7 @@ const RoundBoard: FC<RoundBoardProps> = ({ score }) => {
         </Table>
       </TableContainer>
     </Box>
-  )
-}
+  );
+};
 
-export default RoundBoard
+export default RoundBoard;

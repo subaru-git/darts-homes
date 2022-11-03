@@ -1,16 +1,16 @@
-import React, { FC } from 'react'
-import { Box, Center, Grid, GridItem, Text, useBreakpointValue } from '@chakra-ui/react'
-import LiteYoutubeEmbed from 'react-lite-youtube-embed'
-import useLocale from '@/hooks/locale'
-import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css'
+import React, { FC } from 'react';
+import { Box, Center, Grid, GridItem, Text, useBreakpointValue } from '@chakra-ui/react';
+import LiteYoutubeEmbed from 'react-lite-youtube-embed';
+import useLocale from '@/hooks/locale';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 const HomeDescriptionRespect: FC = () => {
-  const isMd = useBreakpointValue({ base: false, md: true })
-  return <>{isMd ? <DesktopHomeDescriptionRespect /> : <MobileHomeDescriptionRespect />}</>
-}
+  const isMd = useBreakpointValue({ base: false, md: true });
+  return <>{isMd ? <DesktopHomeDescriptionRespect /> : <MobileHomeDescriptionRespect />}</>;
+};
 
 const DesktopHomeDescriptionRespect: FC = () => {
-  const { t } = useLocale()
+  const { t } = useLocale();
   return (
     <Grid templateColumns='repeat(2, auto)' justifyContent='center' gap={4}>
       <GridItem>
@@ -26,11 +26,11 @@ const DesktopHomeDescriptionRespect: FC = () => {
         />
       </GridItem>
     </Grid>
-  )
-}
+  );
+};
 
 const MobileHomeDescriptionRespect: FC = () => {
-  const { t } = useLocale()
+  const { t } = useLocale();
   return (
     <>
       <Center>
@@ -46,7 +46,7 @@ const MobileHomeDescriptionRespect: FC = () => {
         <Text fontSize={{ base: 'md', md: 'xl' }}>{t.home.respect}</Text>
       </Center>
     </>
-  )
-}
+  );
+};
 
-export default HomeDescriptionRespect
+export default HomeDescriptionRespect;

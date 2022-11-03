@@ -1,7 +1,7 @@
-import React, { FC } from 'react'
-import Footer from '@/components/Footer'
-import HistoryBoard from '@/components/HistoryBoard'
-import NavigationBar from '@/components/NavigationBar'
+import React, { FC } from 'react';
+import Footer from '@/components/Footer';
+import HistoryBoard from '@/components/HistoryBoard';
+import NavigationBar from '@/components/NavigationBar';
 
 const HistoryMain: FC = () => {
   return (
@@ -10,7 +10,7 @@ const HistoryMain: FC = () => {
       <HistoryBoard />
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default HistoryMain
+export default HistoryMain;

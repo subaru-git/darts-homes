@@ -1,11 +1,11 @@
-import React, { FC } from 'react'
-import { Grid, GridItem, Table, TableContainer, Tbody, Td, Tr, Text } from '@chakra-ui/react'
-import CricketMark from '@/components/CricketMark'
-import { convertNumberOfCountToMarkCount } from '@/lib/Helper/Converter'
+import React, { FC } from 'react';
+import { Grid, GridItem, Table, TableContainer, Tbody, Td, Tr, Text } from '@chakra-ui/react';
+import CricketMark from '@/components/CricketMark';
+import { convertNumberOfCountToMarkCount } from '@/lib/Helper/Converter';
 
 type CricketMarkUpBoardProps = {
-  scores: CricketMarkUpScore[]
-}
+  scores: CricketMarkUpScore[];
+};
 
 const CricketMarkUpBoard: FC<CricketMarkUpBoardProps> = ({ scores }) => {
   return (
@@ -38,7 +38,7 @@ const CricketMarkUpBoard: FC<CricketMarkUpBoardProps> = ({ scores }) => {
         </Tbody>
       </Table>
     </TableContainer>
-  )
-}
+  );
+};
 
-export default CricketMarkUpBoard
+export default CricketMarkUpBoard;

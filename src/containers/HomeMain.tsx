@@ -1,9 +1,9 @@
-import React, { FC } from 'react'
-import { Grid } from '@chakra-ui/react'
-import Footer from '@/components/Footer'
-import HomeDescription from '@/components/HomeDescription'
-import HomeDescriptionRespect from '@/components/HomeDescriptionRespect'
-import NavigationBar from '@/components/NavigationBar'
+import React, { FC } from 'react';
+import { Grid } from '@chakra-ui/react';
+import Footer from '@/components/Footer';
+import HomeDescription from '@/components/HomeDescription';
+import HomeDescriptionRespect from '@/components/HomeDescriptionRespect';
+import NavigationBar from '@/components/NavigationBar';
 
 const HomeMain: FC = () => {
   return (
@@ -15,7 +15,7 @@ const HomeMain: FC = () => {
       </Grid>
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default HomeMain
+export default HomeMain;

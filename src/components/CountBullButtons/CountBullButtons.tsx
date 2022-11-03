@@ -1,10 +1,10 @@
-import React, { FC } from 'react'
-import { css } from '@emotion/react'
+import React, { FC } from 'react';
+import { css } from '@emotion/react';
 
 type CountBullButtonsProps = {
-  onCount: (n: point) => void
-  disabled?: boolean
-}
+  onCount: (n: point) => void;
+  disabled?: boolean;
+};
 
 const CountBullButtons: FC<CountBullButtonsProps> = ({ onCount, disabled = false }) => {
   return (
@@ -29,8 +29,8 @@ const CountBullButtons: FC<CountBullButtonsProps> = ({ onCount, disabled = false
         aria-label='non bull'
       />
     </div>
-  )
-}
+  );
+};
 
 const styles = css({
   display: 'flex',
@@ -40,7 +40,7 @@ const styles = css({
   Width: '40vw',
   maxWidth: '40vh',
   maxHeight: '40vh',
-})
+});
 const innerBullStyles = css({
   position: 'absolute',
   borderRadius: '100%',
@@ -80,7 +80,7 @@ const innerBullStyles = css({
       transform: 'scale(0.0)',
     },
   },
-})
+});
 const outerBullStyles = css({
   position: 'absolute',
   borderRadius: '100%',
@@ -120,7 +120,7 @@ const outerBullStyles = css({
       transform: 'scale(1.3)',
     },
   },
-})
+});
 const nonBullStyles = css({
   height: '40vw',
   width: '40vw',
@@ -132,7 +132,7 @@ const nonBullStyles = css({
   '&:hover': {
     backgroundImage: 'radial-gradient(circle, #666666 0% 70%, #555555 90% 100%)',
   },
-})
+});
 const disableStyle = css({
   backgroundColor: '#222222',
   width: '40vw',
@@ -142,6 +142,6 @@ const disableStyle = css({
   opacity: '50%',
   maxWidth: '40vh',
   maxHeight: '40vh',
-})
+});
 
-export default CountBullButtons
+export default CountBullButtons;

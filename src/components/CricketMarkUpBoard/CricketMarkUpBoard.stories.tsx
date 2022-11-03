@@ -1,18 +1,18 @@
 /* eslint-disable import/named */
-import React from 'react'
-import { ComponentMeta, ComponentStory } from '@storybook/react'
-import CricketMarkUpBoard from './CricketMarkUpBoard'
+import React from 'react';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+import CricketMarkUpBoard from './CricketMarkUpBoard';
 
 export default {
   title: 'Components/CricketMarkUpBoard',
   component: CricketMarkUpBoard,
-} as ComponentMeta<typeof CricketMarkUpBoard>
+} as ComponentMeta<typeof CricketMarkUpBoard>;
 
 const Template: ComponentStory<typeof CricketMarkUpBoard> = (args) => (
   <CricketMarkUpBoard {...args} />
-)
+);
 
-export const Default = Template.bind({})
+export const Default = Template.bind({});
 Default.args = {
   scores: [
     { number: 20, count: 3, total: 1 },
@@ -23,4 +23,4 @@ Default.args = {
     { number: 15, count: 6, total: 1 },
     { number: 25, count: 4, total: 1 },
   ],
-}
+};

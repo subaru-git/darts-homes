@@ -1,5 +1,5 @@
-import { render } from '@testing-library/react'
-import RespectCard from './RespectCard'
+import { render } from '@testing-library/react';
+import RespectCard from './RespectCard';
 
 test('should rendering', () => {
   const { container } = render(
@@ -12,6 +12,6 @@ test('should rendering', () => {
         type: 'type',
       }}
     />,
-  )
-  expect(container).toMatchSnapshot()
-})
+  );
+  expect(container).toMatchSnapshot();
+});

@@ -1,1 +1,1 @@
-export { default } from './CricketMarkUpBoard'
+export { default } from './CricketMarkUpBoard';

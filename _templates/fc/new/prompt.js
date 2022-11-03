@@ -1,4 +1,4 @@
-const inputValidator = (input) => input !== ''
+const inputValidator = (input) => input !== '';
 
 module.exports = [
   {
@@ -7,4 +7,4 @@ module.exports = [
     message: 'What is the name of the new component?',
     validate: inputValidator,
   },
-]
+];

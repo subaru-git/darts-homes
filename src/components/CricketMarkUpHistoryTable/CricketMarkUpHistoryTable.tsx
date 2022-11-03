@@ -1,4 +1,4 @@
-import React, { FC, Fragment, useState } from 'react'
+import React, { FC, Fragment, useState } from 'react';
 import {
   IconButton,
   Table,
@@ -10,22 +10,22 @@ import {
   useDisclosure,
   useBreakpointValue,
   Box,
-} from '@chakra-ui/react'
-import { MdDeleteForever } from 'react-icons/md'
-import HistoryDeleteAlert from '../HistoryDeleteAlert'
-import { CricketMarkUpResultModel } from '@/db/db'
-import { deleteCricketMarkUpHistory } from '@/lib/GameHistoryManager/GameHistory'
+} from '@chakra-ui/react';
+import { MdDeleteForever } from 'react-icons/md';
+import HistoryDeleteAlert from '../HistoryDeleteAlert';
+import { CricketMarkUpResultModel } from '@/db/db';
+import { deleteCricketMarkUpHistory } from '@/lib/GameHistoryManager/GameHistory';
 
 type CricketMarkUpHistoryTableProps = {
-  history: CricketMarkUpResultModel[]
-}
+  history: CricketMarkUpResultModel[];
+};
 
 const CricketMarkUpHistoryTable: FC<CricketMarkUpHistoryTableProps> = ({ history }) => {
   const [deleteHistory, setDeleteHistory] = useState<CricketMarkUpResultModel | undefined>(
     undefined,
-  )
-  const isMd = useBreakpointValue({ base: false, md: true })
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  );
+  const isMd = useBreakpointValue({ base: false, md: true });
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
       <TableContainer>
@@ -37,16 +37,16 @@ const CricketMarkUpHistoryTable: FC<CricketMarkUpHistoryTableProps> = ({ history
                   <DesktopCricketMarkUpHistoryRow
                     history={item}
                     onDelete={() => {
-                      setDeleteHistory(item)
-                      onOpen()
+                      setDeleteHistory(item);
+                      onOpen();
                     }}
                   />
                 ) : (
                   <MobileCricketMarkUpHistoryRow
                     history={item}
                     onDelete={() => {
-                      setDeleteHistory(item)
-                      onOpen()
+                      setDeleteHistory(item);
+                      onOpen();
                     }}
                   />
                 )}
@@ -69,18 +69,18 @@ const CricketMarkUpHistoryTable: FC<CricketMarkUpHistoryTableProps> = ({ history
           isOpen={isOpen}
           onClose={onClose}
           onDelete={() => {
-            deleteCricketMarkUpHistory(deleteHistory.id)
-            onClose()
+            deleteCricketMarkUpHistory(deleteHistory.id);
+            onClose();
           }}
         />
       ) : null}
     </>
-  )
-}
+  );
+};
 
 const DesktopCricketMarkUpHistoryRow: FC<{
-  history: CricketMarkUpResultModel
-  onDelete: () => void
+  history: CricketMarkUpResultModel;
+  onDelete: () => void;
 }> = ({ history, onDelete }) => {
   return (
     <>
@@ -128,12 +128,12 @@ const DesktopCricketMarkUpHistoryRow: FC<{
         ))}
       </Tr>
     </>
-  )
-}
+  );
+};
 
 const MobileCricketMarkUpHistoryRow: FC<{
-  history: CricketMarkUpResultModel
-  onDelete: () => void
+  history: CricketMarkUpResultModel;
+  onDelete: () => void;
 }> = ({ history, onDelete }) => {
   return (
     <>
@@ -179,7 +179,7 @@ const MobileCricketMarkUpHistoryRow: FC<{
         </Td>
       </Tr>
     </>
-  )
-}
+  );
+};
 
-export default CricketMarkUpHistoryTable
+export default CricketMarkUpHistoryTable;

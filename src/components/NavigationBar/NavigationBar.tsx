@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC } from 'react';
 import {
   Box,
   Flex,
@@ -15,17 +15,17 @@ import {
   Image,
   Spacer,
   Heading,
-} from '@chakra-ui/react'
-import Link from 'next/link'
-import { GiHamburgerMenu } from 'react-icons/gi'
-import { GoChevronDown, GoChevronRight } from 'react-icons/go'
-import { GrClose } from 'react-icons/gr'
-import LanguageChangeButton from '@/components/LanguageChangeButton'
-import useLocale from '@/hooks/locale'
+} from '@chakra-ui/react';
+import Link from 'next/link';
+import { GiHamburgerMenu } from 'react-icons/gi';
+import { GoChevronDown, GoChevronRight } from 'react-icons/go';
+import { GrClose } from 'react-icons/gr';
+import LanguageChangeButton from '@/components/LanguageChangeButton';
+import useLocale from '@/hooks/locale';
 
 const NavigationBar: FC = () => {
-  const { isOpen, onToggle } = useDisclosure()
-  const items = GetNavItem()
+  const { isOpen, onToggle } = useDisclosure();
+  const items = GetNavItem();
 
   return (
     <Box>
@@ -80,13 +80,13 @@ const NavigationBar: FC = () => {
         <MobileNav items={items} />
       </Collapse>
     </Box>
-  )
-}
+  );
+};
 
 const DesktopNav: FC<{ items: NavItem[] }> = ({ items }) => {
-  const linkColor = useColorModeValue('gray.600', 'gray.200')
-  const linkHoverColor = useColorModeValue('gray.800', 'white')
-  const popoverContentBgColor = useColorModeValue('white', 'gray.800')
+  const linkColor = useColorModeValue('gray.600', 'gray.200');
+  const linkHoverColor = useColorModeValue('gray.800', 'white');
+  const popoverContentBgColor = useColorModeValue('white', 'gray.800');
 
   return (
     <Stack direction={'row'} spacing={4} alignItems='center'>
@@ -130,8 +130,8 @@ const DesktopNav: FC<{ items: NavItem[] }> = ({ items }) => {
         </Box>
       ))}
     </Stack>
-  )
-}
+  );
+};
 
 const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
   return (
@@ -170,8 +170,8 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
         </a>
       </Link>
     </Box>
-  )
-}
+  );
+};
 
 const MobileNav: FC<{ items: NavItem[] }> = ({ items }) => {
   return (
@@ -180,11 +180,11 @@ const MobileNav: FC<{ items: NavItem[] }> = ({ items }) => {
         <MobileNavItem key={navItem.label} {...navItem} />
       ))}
     </Stack>
-  )
-}
+  );
+};
 
 const MobileNavItem = ({ label, children, href }: NavItem) => {
-  const { isOpen, onToggle } = useDisclosure()
+  const { isOpen, onToggle } = useDisclosure();
 
   return (
     <Stack spacing={4} onClick={children && onToggle}>
@@ -230,18 +230,18 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
         </Stack>
       </Collapse>
     </Stack>
-  )
-}
+  );
+};
 
 export interface NavItem {
-  label: string
-  subLabel?: string
-  children?: Array<NavItem>
-  href?: string
+  label: string;
+  subLabel?: string;
+  children?: Array<NavItem>;
+  href?: string;
 }
 
 const GetNavItem = () => {
-  const { t } = useLocale()
+  const { t } = useLocale();
 
   return [
     {
@@ -267,6 +267,6 @@ const GetNavItem = () => {
       label: 'History',
       href: '/history',
     },
-  ]
-}
-export default NavigationBar
+  ];
+};
+export default NavigationBar;

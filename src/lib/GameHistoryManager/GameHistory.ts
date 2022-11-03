@@ -1,84 +1,84 @@
-import fileDownload from 'js-file-download'
-import { db } from '@/db/db'
+import fileDownload from 'js-file-download';
+import { db } from '@/db/db';
 
 const saveCricketMarkUpHistory = (history: CricketMarkUpResult) => {
-  saveCricketMarkUpResultToDB(history)
-}
+  saveCricketMarkUpResultToDB(history);
+};
 
 const saveEaglesEyeHistory = (history: EaglesEyeResult) => {
-  saveEaglesEyeResultToDB(history)
-}
+  saveEaglesEyeResultToDB(history);
+};
 
 const deleteCricketMarkUpHistory = async (id: number | undefined) => {
-  if (!id) return
+  if (!id) return;
   try {
-    await db.cricketMarkUpResult.delete(id)
+    await db.cricketMarkUpResult.delete(id);
   } catch (error) {
-    console.error(error)
+    console.error(error);
   }
-}
+};
 
 const deleteEaglesEyeHistory = async (id: number | undefined) => {
-  if (!id) return
+  if (!id) return;
   try {
-    await db.eaglesEyeResult.delete(id)
+    await db.eaglesEyeResult.delete(id);
   } catch (error) {
-    console.error(error)
+    console.error(error);
   }
-}
+};
 
 const importGameHistory = (gameHistory: GameResult, overwrite: boolean) => {
   try {
     db.transaction('rw', db.cricketMarkUpResult, () => {
-      if (overwrite) db.cricketMarkUpResult.clear()
+      if (overwrite) db.cricketMarkUpResult.clear();
       for (const history of gameHistory.cricketmarkup) {
-        saveCricketMarkUpResultToDB(history)
+        saveCricketMarkUpResultToDB(history);
       }
-    })
+    });
     db.transaction('rw', db.eaglesEyeResult, () => {
-      if (overwrite) db.eaglesEyeResult.clear()
+      if (overwrite) db.eaglesEyeResult.clear();
       for (const history of gameHistory.eagleseye) {
-        saveEaglesEyeResultToDB(history)
+        saveEaglesEyeResultToDB(history);
       }
-    })
+    });
   } catch (error) {
-    console.log(error)
+    console.log(error);
   }
-}
+};
 
 const exportGameHistory = async () => {
   try {
-    const cricketmarkupResult = await db.cricketMarkUpResult.toArray()
+    const cricketmarkupResult = await db.cricketMarkUpResult.toArray();
     const cricketmarkup = cricketmarkupResult.map((r) => {
-      delete r.id
-      return r
-    })
-    const eagleseyeResult = await db.eaglesEyeResult.toArray()
+      delete r.id;
+      return r;
+    });
+    const eagleseyeResult = await db.eaglesEyeResult.toArray();
     const eagleseye = eagleseyeResult.map((r) => {
-      delete r.id
-      return r
-    })
-    fileDownload(JSON.stringify({ cricketmarkup, eagleseye }), 'darts-games-history.json')
+      delete r.id;
+      return r;
+    });
+    fileDownload(JSON.stringify({ cricketmarkup, eagleseye }), 'darts-games-history.json');
   } catch (error) {
-    console.error(error)
+    console.error(error);
   }
-}
+};
 
 const saveCricketMarkUpResultToDB = async (history: CricketMarkUpResult) => {
   try {
-    await db.cricketMarkUpResult.add(history)
+    await db.cricketMarkUpResult.add(history);
   } catch (error) {
-    console.error(error)
+    console.error(error);
   }
-}
+};
 
 const saveEaglesEyeResultToDB = async (history: EaglesEyeResult) => {
   try {
-    await db.eaglesEyeResult.add(history)
+    await db.eaglesEyeResult.add(history);
   } catch (error) {
-    console.error(error)
+    console.error(error);
   }
-}
+};
 
 export {
   saveCricketMarkUpHistory,
@@ -87,4 +87,4 @@ export {
   deleteEaglesEyeHistory,
   importGameHistory,
   exportGameHistory,
-}
+};

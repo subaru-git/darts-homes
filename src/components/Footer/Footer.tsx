@@ -1,6 +1,6 @@
-import React, { FC } from 'react'
-import { Box, Center, HStack, Link, Text } from '@chakra-ui/react'
-import { AiFillGithub, AiOutlineTwitter } from 'react-icons/ai'
+import React, { FC } from 'react';
+import { Box, Center, HStack, Link, Text } from '@chakra-ui/react';
+import { AiFillGithub, AiOutlineTwitter } from 'react-icons/ai';
 
 const Footer: FC = () => {
   return (
@@ -19,7 +19,7 @@ const Footer: FC = () => {
         </HStack>
       </Center>
     </Box>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

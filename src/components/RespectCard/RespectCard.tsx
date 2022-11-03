@@ -1,11 +1,11 @@
-import React, { FC, Fragment } from 'react'
-import { ExternalLinkIcon } from '@chakra-ui/icons'
-import { Box, Center, Link, Image, Heading, Text } from '@chakra-ui/react'
-import replace from 'react-string-replace'
+import React, { FC, Fragment } from 'react';
+import { ExternalLinkIcon } from '@chakra-ui/icons';
+import { Box, Center, Link, Image, Heading, Text } from '@chakra-ui/react';
+import replace from 'react-string-replace';
 
 type RespectCardProps = {
-  data: WebsiteResult
-}
+  data: WebsiteResult;
+};
 
 const RespectCard: FC<RespectCardProps> = ({ data }) => {
   return (
@@ -28,8 +28,8 @@ const RespectCard: FC<RespectCardProps> = ({ data }) => {
         {replaceDescription(data.description ?? '')}
       </Text>
     </Box>
-  )
-}
+  );
+};
 
 const replaceDescription = (description: string) => {
   const urlReplaced = replace(
@@ -44,10 +44,10 @@ const replaceDescription = (description: string) => {
           </Link>
           <br />
         </Fragment>
-      )
+      );
     },
-  )
-  return urlReplaced
-}
+  );
+  return urlReplaced;
+};
 
-export default RespectCard
+export default RespectCard;

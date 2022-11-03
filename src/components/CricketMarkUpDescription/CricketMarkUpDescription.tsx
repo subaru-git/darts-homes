@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC } from 'react';
 import {
   Button,
   useDisclosure,
@@ -13,16 +13,16 @@ import {
   ModalBody,
   IconButton,
   useBreakpointValue,
-} from '@chakra-ui/react'
-import { GrCircleInformation } from 'react-icons/gr'
-import LiteYoutubeEmbed from 'react-lite-youtube-embed'
-import useLocale from '@/hooks/locale'
-import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css'
+} from '@chakra-ui/react';
+import { GrCircleInformation } from 'react-icons/gr';
+import LiteYoutubeEmbed from 'react-lite-youtube-embed';
+import useLocale from '@/hooks/locale';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 const CricketMarkUpDescription: FC = () => {
-  const { isOpen, onToggle } = useDisclosure()
-  const isMd = useBreakpointValue({ base: false, md: true })
-  const { t } = useLocale()
+  const { isOpen, onToggle } = useDisclosure();
+  const isMd = useBreakpointValue({ base: false, md: true });
+  const { t } = useLocale();
   return (
     <>
       {isMd ? (
@@ -64,7 +64,7 @@ const CricketMarkUpDescription: FC = () => {
         </ModalContent>
       </Modal>
     </>
-  )
-}
+  );
+};
 
-export default CricketMarkUpDescription
+export default CricketMarkUpDescription;

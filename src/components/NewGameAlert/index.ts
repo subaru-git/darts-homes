@@ -1,1 +1,1 @@
-export { default } from './NewGameAlert'
+export { default } from './NewGameAlert';

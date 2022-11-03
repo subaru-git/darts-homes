@@ -1,22 +1,22 @@
-import React, { FC } from 'react'
-import { Box, Flex, Grid, GridItem } from '@chakra-ui/react'
-import CountButtons from '@/components/CountButtons'
-import CricketMarkUpBoard from '@/components/CricketMarkUpBoard'
-import CricketMarkUpDescription from '@/components/CricketMarkUpDescription'
-import CricketMarkUpSettings from '@/components/CricketMarkUpSettings'
-import Footer from '@/components/Footer'
-import Loading from '@/components/Loading'
-import NavigationBar from '@/components/NavigationBar'
-import RoundBoard from '@/components/RoundBoard'
-import RoundScore from '@/components/RoundScore'
-import TargetBoard from '@/components/TargetBoard'
-import { useCricketMarkUpGame, useCricketMarkUpGameSet } from '@/contexts/CricketMarkUpGameContext'
-import CricketMarkUpGame from '@/lib/CricketMarkUpGame/CricketMarkUpGame'
-import { saveCricketMarkUpHistory } from '@/lib/GameHistoryManager/GameHistory'
+import React, { FC } from 'react';
+import { Box, Flex, Grid, GridItem } from '@chakra-ui/react';
+import CountButtons from '@/components/CountButtons';
+import CricketMarkUpBoard from '@/components/CricketMarkUpBoard';
+import CricketMarkUpDescription from '@/components/CricketMarkUpDescription';
+import CricketMarkUpSettings from '@/components/CricketMarkUpSettings';
+import Footer from '@/components/Footer';
+import Loading from '@/components/Loading';
+import NavigationBar from '@/components/NavigationBar';
+import RoundBoard from '@/components/RoundBoard';
+import RoundScore from '@/components/RoundScore';
+import TargetBoard from '@/components/TargetBoard';
+import { useCricketMarkUpGame, useCricketMarkUpGameSet } from '@/contexts/CricketMarkUpGameContext';
+import CricketMarkUpGame from '@/lib/CricketMarkUpGame/CricketMarkUpGame';
+import { saveCricketMarkUpHistory } from '@/lib/GameHistoryManager/GameHistory';
 
 const CricketMarkUpMain: FC = () => {
-  const game = useCricketMarkUpGame()
-  const setGame = useCricketMarkUpGameSet()
+  const game = useCricketMarkUpGame();
+  const setGame = useCricketMarkUpGameSet();
   return (
     <div data-cy='cricket-mark-up-main'>
       <NavigationBar />
@@ -34,20 +34,20 @@ const CricketMarkUpMain: FC = () => {
       )}
       <Footer />
     </div>
-  )
-}
+  );
+};
 
 const DesktopMain: FC<{
-  game: CricketMarkUpGame
-  setGame: (game: CricketMarkUpGame) => void
+  game: CricketMarkUpGame;
+  setGame: (game: CricketMarkUpGame) => void;
 }> = ({ game, setGame }) => {
   return (
     <div>
       <Flex justifyContent='space-between'>
         <CricketMarkUpSettings
           onNewGame={(targetNumber, save) => {
-            if (save) saveCricketMarkUpHistory(game.getGameResult())
-            setGame(new CricketMarkUpGame(targetNumber))
+            if (save) saveCricketMarkUpHistory(game.getGameResult());
+            setGame(new CricketMarkUpGame(targetNumber));
           }}
           targetCount={game.getTargetCount()}
           isFinished={game.isFinished()}
@@ -87,19 +87,19 @@ const DesktopMain: FC<{
               <RoundScore
                 scores={game.getRoundScore()}
                 onClear={() => {
-                  const g = Object.assign(new CricketMarkUpGame(10), game)
-                  g.removeScore()
-                  setGame(g)
+                  const g = Object.assign(new CricketMarkUpGame(10), game);
+                  g.removeScore();
+                  setGame(g);
                 }}
                 onRoundChange={() => {
-                  const g = Object.assign(new CricketMarkUpGame(10), game)
-                  g.roundChange()
-                  setGame(g)
+                  const g = Object.assign(new CricketMarkUpGame(10), game);
+                  g.roundChange();
+                  setGame(g);
                 }}
                 isFinished={game.isFinished()}
                 onRoundOver={() => {
-                  saveCricketMarkUpHistory(game.getGameResult())
-                  setGame(new CricketMarkUpGame(game.getTargetCount()))
+                  saveCricketMarkUpHistory(game.getGameResult());
+                  setGame(new CricketMarkUpGame(game.getTargetCount()));
                 }}
                 kind='Cricket MarkUp'
               />
@@ -112,9 +112,9 @@ const DesktopMain: FC<{
         <GridItem pt={4}>
           <CountButtons
             onCount={(n) => {
-              const g = Object.assign(new CricketMarkUpGame(10), game)
-              g.addScore(n)
-              setGame(g)
+              const g = Object.assign(new CricketMarkUpGame(10), game);
+              g.addScore(n);
+              setGame(g);
             }}
             begin={15}
             end={20}
@@ -125,12 +125,12 @@ const DesktopMain: FC<{
         </GridItem>
       </Grid>
     </div>
-  )
-}
+  );
+};
 
 const MobileMain: FC<{
-  game: CricketMarkUpGame
-  setGame: (game: CricketMarkUpGame) => void
+  game: CricketMarkUpGame;
+  setGame: (game: CricketMarkUpGame) => void;
 }> = ({ game, setGame }) => {
   return (
     <Grid gap={4} justifyItems='center'>
@@ -138,8 +138,8 @@ const MobileMain: FC<{
         <Flex justifyContent='space-between'>
           <CricketMarkUpSettings
             onNewGame={(targetNumber, save) => {
-              if (save) saveCricketMarkUpHistory(game.getGameResult())
-              setGame(new CricketMarkUpGame(targetNumber))
+              if (save) saveCricketMarkUpHistory(game.getGameResult());
+              setGame(new CricketMarkUpGame(targetNumber));
             }}
             targetCount={game.getTargetCount()}
             isFinished={game.isFinished()}
@@ -166,28 +166,28 @@ const MobileMain: FC<{
       <RoundScore
         scores={game.getRoundScore()}
         onClear={() => {
-          const g = Object.assign(new CricketMarkUpGame(10), game)
-          g.removeScore()
-          setGame(g)
+          const g = Object.assign(new CricketMarkUpGame(10), game);
+          g.removeScore();
+          setGame(g);
         }}
         onRoundChange={() => {
-          const g = Object.assign(new CricketMarkUpGame(10), game)
-          g.roundChange()
-          setGame(g)
+          const g = Object.assign(new CricketMarkUpGame(10), game);
+          g.roundChange();
+          setGame(g);
         }}
         isFinished={game.isFinished()}
         onRoundOver={() => {
-          saveCricketMarkUpHistory(game.getGameResult())
-          setGame(new CricketMarkUpGame(game.getTargetCount()))
+          saveCricketMarkUpHistory(game.getGameResult());
+          setGame(new CricketMarkUpGame(game.getTargetCount()));
         }}
         kind='Cricket MarkUp'
       />
       <Box w='100%'>
         <CountButtons
           onCount={(n) => {
-            const g = Object.assign(new CricketMarkUpGame(10), game)
-            g.addScore(n)
-            setGame(g)
+            const g = Object.assign(new CricketMarkUpGame(10), game);
+            g.addScore(n);
+            setGame(g);
           }}
           begin={parseInt(game.getCurrentTarget())}
           end={parseInt(game.getCurrentTarget())}
@@ -199,7 +199,7 @@ const MobileMain: FC<{
         <RoundBoard score={game.getRoundsScore()} />
       </Box>
     </Grid>
-  )
-}
+  );
+};
 
-export default CricketMarkUpMain
+export default CricketMarkUpMain;

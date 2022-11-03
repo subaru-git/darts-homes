@@ -1,11 +1,11 @@
-import React, { FC } from 'react'
-import Footer from '@/components/Footer'
-import NavigationBar from '@/components/NavigationBar'
-import RespectCardView from '@/components/RespectCardView'
+import React, { FC } from 'react';
+import Footer from '@/components/Footer';
+import NavigationBar from '@/components/NavigationBar';
+import RespectCardView from '@/components/RespectCardView';
 
 type RespectMainProps = {
-  data: RespectResult
-}
+  data: RespectResult;
+};
 
 const RespectMain: FC<RespectMainProps> = ({ data }) => {
   return (
@@ -14,7 +14,7 @@ const RespectMain: FC<RespectMainProps> = ({ data }) => {
       <RespectCardView data={data} />
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default RespectMain
+export default RespectMain;

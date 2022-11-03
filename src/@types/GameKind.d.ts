@@ -1,1 +1,1 @@
-type GameKind = 'Cricket MarkUp' | 'EaglesEye'
+type GameKind = 'Cricket MarkUp' | 'EaglesEye';

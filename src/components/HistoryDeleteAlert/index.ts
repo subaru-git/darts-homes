@@ -1,1 +1,1 @@
-export { default } from './HistoryDeleteAlert'
+export { default } from './HistoryDeleteAlert';

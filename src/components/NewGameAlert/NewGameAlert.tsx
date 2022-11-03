@@ -1,4 +1,4 @@
-import React, { FC, useRef } from 'react'
+import React, { FC, useRef } from 'react';
 import {
   AlertDialog,
   AlertDialogBody,
@@ -8,18 +8,18 @@ import {
   AlertDialogHeader,
   AlertDialogOverlay,
   Button,
-} from '@chakra-ui/react'
-import useLocale from '@/hooks/locale'
+} from '@chakra-ui/react';
+import useLocale from '@/hooks/locale';
 
 type NewGameAlertProps = {
-  isOpen: boolean
-  onClose: () => void
-  onNewGame: () => void
-}
+  isOpen: boolean;
+  onClose: () => void;
+  onNewGame: () => void;
+};
 
 const NewGameAlert: FC<NewGameAlertProps> = ({ isOpen, onClose, onNewGame }) => {
-  const cancelRef = useRef<HTMLButtonElement>(null)
-  const { t } = useLocale()
+  const cancelRef = useRef<HTMLButtonElement>(null);
+  const { t } = useLocale();
   return (
     <AlertDialog
       isOpen={isOpen}
@@ -42,8 +42,8 @@ const NewGameAlert: FC<NewGameAlertProps> = ({ isOpen, onClose, onNewGame }) => 
             colorScheme='blue'
             ml={3}
             onClick={() => {
-              onNewGame()
-              onClose()
+              onNewGame();
+              onClose();
             }}
             aria-label='ok'
           >
@@ -52,6 +52,6 @@ const NewGameAlert: FC<NewGameAlertProps> = ({ isOpen, onClose, onNewGame }) => 
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>
-  )
-}
-export default NewGameAlert
+  );
+};
+export default NewGameAlert;

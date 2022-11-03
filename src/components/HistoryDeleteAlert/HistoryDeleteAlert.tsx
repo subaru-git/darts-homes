@@ -1,4 +1,4 @@
-import React, { FC, useRef } from 'react'
+import React, { FC, useRef } from 'react';
 import {
   AlertDialog,
   AlertDialogBody,
@@ -8,15 +8,15 @@ import {
   AlertDialogOverlay,
   Button,
   Text,
-} from '@chakra-ui/react'
-import useLocale from '@/hooks/locale'
+} from '@chakra-ui/react';
+import useLocale from '@/hooks/locale';
 
 type HistoryDeleteAlertProps = {
-  message: string
-  isOpen: boolean
-  onClose: () => void
-  onDelete: () => void
-}
+  message: string;
+  isOpen: boolean;
+  onClose: () => void;
+  onDelete: () => void;
+};
 
 const HistoryDeleteAlert: FC<HistoryDeleteAlertProps> = ({
   message,
@@ -24,9 +24,9 @@ const HistoryDeleteAlert: FC<HistoryDeleteAlertProps> = ({
   onClose,
   onDelete,
 }) => {
-  const cancelRef = useRef<HTMLButtonElement>(null)
-  const { t } = useLocale()
-  if (!history) return null
+  const cancelRef = useRef<HTMLButtonElement>(null);
+  const { t } = useLocale();
+  if (!history) return null;
   return (
     <AlertDialog
       isOpen={isOpen}
@@ -54,7 +54,7 @@ const HistoryDeleteAlert: FC<HistoryDeleteAlertProps> = ({
         </AlertDialogContent>
       </AlertDialogOverlay>
     </AlertDialog>
-  )
-}
+  );
+};
 
-export default HistoryDeleteAlert
+export default HistoryDeleteAlert;
