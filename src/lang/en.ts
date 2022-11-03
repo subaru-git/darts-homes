@@ -13,6 +13,7 @@ const text = {
     n01: 'The popular darts game',
     eagleseye: 'BULL only count up',
     cricketmarkup: 'Darts training game by "Kikuchi Yamaguchi"',
+    doubletrouble: 'Double practice game',
   },
   eagleseye: {
     description: ['It is a count-up where only BULLs are added.', 'BULL is separate.'],
@@ -24,6 +25,12 @@ const text = {
       'Shoot for each cricket numbers from 20 to 15 and Bull until the target count of times, like Cricket.',
     ],
     rulemore: 'For more information, please watch this video.',
+  },
+  doubletrouble: {
+    description: [
+      'You throw three darts at each double in turn, i.e. three darts at double one, three at double two etc through to double top.',
+      'Receive five points for every double you hit. 15 points available every 3darts; 300 overall.',
+    ],
   },
   import: {
     errortitle: 'Invalid Import File.',

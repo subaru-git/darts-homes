@@ -21,7 +21,11 @@ type HistoryImportExportProps = {
 
 const HistoryImportExport: FC<HistoryImportExportProps> = ({ onError }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [history, setHistory] = useState<GameResult>({ cricketmarkup: [], eagleseye: [] });
+  const [history, setHistory] = useState<GameResult>({
+    cricketmarkup: [],
+    eagleseye: [],
+    doubletrouble: [],
+  });
   const inputRef = useRef<HTMLInputElement>(null);
   const cancelRef = useRef<HTMLButtonElement>(null);
   const { t } = useLocale();
@@ -39,6 +43,7 @@ const HistoryImportExport: FC<HistoryImportExportProps> = ({ onError }) => {
               const roader = new FileReader();
               roader.onload = (e) => {
                 const history = JSON.parse(e.target?.result as string);
+                console.log(history);
                 if (!isGameHistory(history)) {
                   onError();
                   return;

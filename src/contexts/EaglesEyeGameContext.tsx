@@ -15,9 +15,7 @@ const setEaglesEyeGameContext = createContext<Dispatch<SetStateAction<EaglesEyeG
   () => undefined,
 );
 
-const EaglesEyeUpGameContextProvider: FC<{ children: ReactNode | ReactNode[] }> = ({
-  children,
-}) => {
+const EaglesEyeGameContextProvider: FC<{ children: ReactNode | ReactNode[] }> = ({ children }) => {
   const [game, setGame] = useState<EaglesEyeGame | null>(null);
   useEffect(() => {
     const g = new EaglesEyeGame();
@@ -41,4 +39,4 @@ const EaglesEyeUpGameContextProvider: FC<{ children: ReactNode | ReactNode[] }> 
 const useEaglesEyeGame = () => useContext(eaglesEyeGameContext);
 const useEaglesEyeGameSet = () => useContext(setEaglesEyeGameContext);
 
-export { EaglesEyeUpGameContextProvider, useEaglesEyeGame, useEaglesEyeGameSet };
+export { EaglesEyeGameContextProvider, useEaglesEyeGame, useEaglesEyeGameSet };

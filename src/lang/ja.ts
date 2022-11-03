@@ -15,6 +15,7 @@ const text = {
     n01: '有名なダーツゲーム [WIP]',
     eagleseye: 'BULLだけカウントアップ',
     cricketmarkup: '菊地山口によるダーツ練習ゲーム',
+    doubletrouble: 'ダブル練習ゲーム',
   },
   eagleseye: {
     description: ['BULLだけが加点されるカウントアップです。', 'BULLはセパレートです。'],
@@ -29,6 +30,12 @@ const text = {
       '20から15、BULLまでのクリケットナンバーを目標の回数狙っていきます。',
     ],
     rulemore: '詳しくは動画をご覧ください。',
+  },
+  doubletrouble: {
+    description: [
+      'ダブル1に3本、ダブル2に3本など、ダブルトップまで順番にダーツを投げていきます。',
+      'ダブルに命中するごとに5ポイント獲得できます。3ダーツごとに15ポイント、全体で300ポイント獲得できます。',
+    ],
   },
   import: {
     errortitle: '無効なファイルです。',

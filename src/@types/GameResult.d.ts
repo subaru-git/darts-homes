@@ -1,6 +1,7 @@
 interface GameResult {
   cricketmarkup: CricketMarkUpResult[];
   eagleseye: EaglesEyeResult[];
+  doubletrouble: DoubleTroubleResult[];
 }
 
 interface CricketMarkUpResult {
@@ -17,6 +18,12 @@ interface CricketMarkUpScore {
 }
 
 interface EaglesEyeResult {
+  result: number;
+  scores: point[][];
+  playedAt: string;
+}
+
+interface DoubleTroubleResult {
   result: number;
   scores: point[][];
   playedAt: string;

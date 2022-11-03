@@ -18,6 +18,7 @@ import {
 } from '@chakra-ui/react';
 import { useLiveQuery } from 'dexie-react-hooks';
 import CricketMarkUpHistoryTable from '../CricketMarkUpHistoryTable';
+import DoubleTroubleHistoryTable from '../DoubleTroubleHistoryTable';
 import EaglesEyeHistoryTable from '../EaglesEyeHistoryTable';
 import HistoryImportExport from '../HistoryImportExport';
 import Loading from '../Loading';
@@ -33,9 +34,12 @@ const HistoryBoard: FC = () => {
     const eaglesEyeHistory = await (
       await db.eaglesEyeResult.toCollection().sortBy('playedAt')
     ).reverse();
+    const doubleTroubleHistory = await (
+      await db.doubleTroubleResult.toCollection().sortBy('playedAt')
+    ).reverse();
     setLoading(false);
-    return { cricketMarkUpHistory, eaglesEyeHistory };
-  }) || { cricketMarkUpHistory: [], eaglesEyeHistory: [] };
+    return { cricketMarkUpHistory, eaglesEyeHistory, doubleTroubleHistory };
+  }) || { cricketMarkUpHistory: [], eaglesEyeHistory: [], doubleTroubleHistory: [] };
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { t } = useLocale();
   if (loading) return <Loading />;
@@ -61,6 +65,7 @@ const HistoryBoard: FC = () => {
         <TabList>
           <Tab aria-label='cricket mark up'>Cricket Mark-Up</Tab>
           <Tab aria-label="eagle's eye">{"Eagle's Eye"}</Tab>
+          <Tab aria-label='double trouble'>Double Trouble</Tab>
         </TabList>
         <TabPanels>
           <TabPanel>
@@ -68,6 +73,9 @@ const HistoryBoard: FC = () => {
           </TabPanel>
           <TabPanel>
             <EaglesEyeHistoryTable history={gameHistory.eaglesEyeHistory} />
+          </TabPanel>
+          <TabPanel>
+            <DoubleTroubleHistoryTable history={gameHistory.doubleTroubleHistory} />
           </TabPanel>
         </TabPanels>
       </Tabs>
