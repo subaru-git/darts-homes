@@ -1,1 +1,1 @@
-export { default } from './EaglesEyeDescription'
+export { default } from './EaglesEyeDescription';

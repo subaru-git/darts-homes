@@ -1,1 +1,1 @@
-export { default } from './CricketMarkUpDescription'
+export { default } from './CricketMarkUpDescription';

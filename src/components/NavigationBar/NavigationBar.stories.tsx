@@ -1,16 +1,16 @@
 /* eslint-disable import/named */
-import React from 'react'
-import { ComponentMeta, ComponentStory } from '@storybook/react'
-import NavigationBar from './NavigationBar'
+import React from 'react';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+import NavigationBar from './NavigationBar';
 
 export default {
   title: 'Components/NavigationBar',
   component: NavigationBar,
-} as ComponentMeta<typeof NavigationBar>
+} as ComponentMeta<typeof NavigationBar>;
 
-const Template: ComponentStory<typeof NavigationBar> = (args) => <NavigationBar {...args} />
+const Template: ComponentStory<typeof NavigationBar> = (args) => <NavigationBar {...args} />;
 
-export const Default = Template.bind({})
+export const Default = Template.bind({});
 Default.args = {
   items: [
     {
@@ -38,4 +38,4 @@ Default.args = {
       href: '#',
     },
   ],
-}
+};

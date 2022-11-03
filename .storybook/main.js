@@ -1,5 +1,5 @@
-const path = require('path')
-const toPath = (_path) => path.join(process.cwd(), _path)
+const path = require('path');
+const toPath = (_path) => path.join(process.cwd(), _path);
 
 module.exports = {
   stories: ['../src/components/**/*.stories.@(js|jsx|ts|tsx)'],
@@ -32,6 +32,6 @@ module.exports = {
           'emotion-theming': toPath('node_modules/@emotion/react'),
         },
       },
-    }
+    };
   },
-}
+};

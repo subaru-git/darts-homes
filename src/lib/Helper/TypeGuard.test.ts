@@ -1,4 +1,4 @@
-import { isGameHistory } from './TypeGuard'
+import { isGameHistory } from './TypeGuard';
 
 test('isGameHistory', () => {
   const history: GameResult = {
@@ -34,14 +34,14 @@ test('isGameHistory', () => {
         playedAt: '2022-10-28T17:28:27.908Z',
       },
     ],
-  }
-  expect(isGameHistory(history)).toBeTruthy()
-})
+  };
+  expect(isGameHistory(history)).toBeTruthy();
+});
 
 test('isGameHistory empty data', () => {
-  expect(isGameHistory({ cricketmarkup: [], eagleseye: [] })).toBeTruthy()
-})
+  expect(isGameHistory({ cricketmarkup: [], eagleseye: [] })).toBeTruthy();
+});
 
 test('isGameHistory invalid data', () => {
-  expect(isGameHistory({})).toBeFalsy()
-})
+  expect(isGameHistory({})).toBeFalsy();
+});

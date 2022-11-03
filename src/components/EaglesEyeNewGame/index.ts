@@ -1,1 +1,1 @@
-export { default } from './EaglesEyeNewGame'
+export { default } from './EaglesEyeNewGame';

@@ -1,1 +1,1 @@
-export { default } from './CricketMarkUpRoundOverDialog'
+export { default } from './CricketMarkUpRoundOverDialog';

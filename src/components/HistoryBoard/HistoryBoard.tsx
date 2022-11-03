@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react'
+import React, { FC, useState } from 'react';
 import {
   Alert,
   AlertDescription,
@@ -15,30 +15,30 @@ import {
   TabPanels,
   Tabs,
   useDisclosure,
-} from '@chakra-ui/react'
-import { useLiveQuery } from 'dexie-react-hooks'
-import CricketMarkUpHistoryTable from '../CricketMarkUpHistoryTable'
-import EaglesEyeHistoryTable from '../EaglesEyeHistoryTable'
-import HistoryImportExport from '../HistoryImportExport'
-import Loading from '../Loading'
-import { db } from '@/db/db'
-import useLocale from '@/hooks/locale'
+} from '@chakra-ui/react';
+import { useLiveQuery } from 'dexie-react-hooks';
+import CricketMarkUpHistoryTable from '../CricketMarkUpHistoryTable';
+import EaglesEyeHistoryTable from '../EaglesEyeHistoryTable';
+import HistoryImportExport from '../HistoryImportExport';
+import Loading from '../Loading';
+import { db } from '@/db/db';
+import useLocale from '@/hooks/locale';
 
 const HistoryBoard: FC = () => {
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(true);
   const gameHistory = useLiveQuery(async () => {
     const cricketMarkUpHistory = await (
       await db.cricketMarkUpResult.toCollection().sortBy('playedAt')
-    ).reverse()
+    ).reverse();
     const eaglesEyeHistory = await (
       await db.eaglesEyeResult.toCollection().sortBy('playedAt')
-    ).reverse()
-    setLoading(false)
-    return { cricketMarkUpHistory, eaglesEyeHistory }
-  }) || { cricketMarkUpHistory: [], eaglesEyeHistory: [] }
-  const { isOpen, onOpen, onClose } = useDisclosure()
-  const { t } = useLocale()
-  if (loading) return <Loading />
+    ).reverse();
+    setLoading(false);
+    return { cricketMarkUpHistory, eaglesEyeHistory };
+  }) || { cricketMarkUpHistory: [], eaglesEyeHistory: [] };
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const { t } = useLocale();
+  if (loading) return <Loading />;
   return (
     <Box p={{ base: 1, md: 4 }}>
       <Collapse in={isOpen} animateOpacity>
@@ -72,7 +72,7 @@ const HistoryBoard: FC = () => {
         </TabPanels>
       </Tabs>
     </Box>
-  )
-}
+  );
+};
 
-export default HistoryBoard
+export default HistoryBoard;

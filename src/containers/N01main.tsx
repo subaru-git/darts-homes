@@ -1,16 +1,16 @@
-import React, { FC, useState } from 'react'
-import { Grid, GridItem } from '@chakra-ui/react'
-import CountButtons from '@/components/CountButtons'
-import N01Board from '@/components/N01Board'
-import NavigationBar from '@/components/NavigationBar'
-import Players from '@/components/Players'
-import RoundScore from '@/components/RoundScore'
-import TargetBoard from '@/components/TargetBoard'
-import N01Game from '@/lib/N01Game/N01Game'
-import Player from '@/lib/Player/Player'
+import React, { FC, useState } from 'react';
+import { Grid, GridItem } from '@chakra-ui/react';
+import CountButtons from '@/components/CountButtons';
+import N01Board from '@/components/N01Board';
+import NavigationBar from '@/components/NavigationBar';
+import Players from '@/components/Players';
+import RoundScore from '@/components/RoundScore';
+import TargetBoard from '@/components/TargetBoard';
+import N01Game from '@/lib/N01Game/N01Game';
+import Player from '@/lib/Player/Player';
 
 const N01main: FC = () => {
-  const [game, setGame] = useState(new N01Game(501))
+  const [game, setGame] = useState(new N01Game(501));
   return (
     <div data-cy='n01-main'>
       <NavigationBar />
@@ -27,15 +27,15 @@ const N01main: FC = () => {
               <RoundScore
                 scores={game.getRoundScore()}
                 onClear={() => {
-                  const g = Object.assign(new N01Game(501), game)
-                  g.removeScore()
-                  setGame(g)
+                  const g = Object.assign(new N01Game(501), game);
+                  g.removeScore();
+                  setGame(g);
                 }}
                 onRoundChange={() => {
-                  const g = Object.assign(new N01Game(501), game)
-                  g.roundChange()
-                  g.changePlayer()
-                  setGame(g)
+                  const g = Object.assign(new N01Game(501), game);
+                  g.roundChange();
+                  g.changePlayer();
+                  setGame(g);
                 }}
                 isFinished={false}
                 onRoundOver={() => {}}
@@ -46,9 +46,9 @@ const N01main: FC = () => {
               <Players
                 players={game.getPlayers().map((player: Player) => player.getName())}
                 onUpdateName={(names) => {
-                  const g = Object.assign(new N01Game(501), game)
-                  g.changePlayerName(names)
-                  setGame(g)
+                  const g = Object.assign(new N01Game(501), game);
+                  g.changePlayerName(names);
+                  setGame(g);
                 }}
               />
               <N01Board data={game.getScore()} />
@@ -58,9 +58,9 @@ const N01main: FC = () => {
         <GridItem pt={4}>
           <CountButtons
             onCount={(n) => {
-              const g = Object.assign(new N01Game(501), game)
-              g.addScore(n)
-              setGame(g)
+              const g = Object.assign(new N01Game(501), game);
+              g.addScore(n);
+              setGame(g);
             }}
             begin={1}
             end={20}
@@ -70,7 +70,7 @@ const N01main: FC = () => {
         </GridItem>
       </Grid>
     </div>
-  )
-}
+  );
+};
 
-export default N01main
+export default N01main;

@@ -1,16 +1,16 @@
-import React, { FC } from 'react'
-import { Button, IconButton, useBreakpointValue, useDisclosure } from '@chakra-ui/react'
-import { GiPartyPopper } from 'react-icons/gi'
-import { MdOutlineChangeCircle } from 'react-icons/md'
-import RoundOverDialog from '../RoundOverDialog'
+import React, { FC } from 'react';
+import { Button, IconButton, useBreakpointValue, useDisclosure } from '@chakra-ui/react';
+import { GiPartyPopper } from 'react-icons/gi';
+import { MdOutlineChangeCircle } from 'react-icons/md';
+import RoundOverDialog from '../RoundOverDialog';
 
 type RoundScoreButtonProps = {
-  isFinished: boolean
-  disabled: boolean
-  onRoundChange: () => void
-  onRoundOver: () => void
-  kind: GameKind
-}
+  isFinished: boolean;
+  disabled: boolean;
+  onRoundChange: () => void;
+  onRoundOver: () => void;
+  kind: GameKind;
+};
 
 const RoundScoreButton: FC<RoundScoreButtonProps> = ({
   isFinished,
@@ -19,7 +19,7 @@ const RoundScoreButton: FC<RoundScoreButtonProps> = ({
   onRoundOver,
   kind,
 }) => {
-  const isMd = useBreakpointValue({ base: false, md: true })
+  const isMd = useBreakpointValue({ base: false, md: true });
   return (
     <>
       {!isMd ? (
@@ -40,8 +40,8 @@ const RoundScoreButton: FC<RoundScoreButtonProps> = ({
         />
       )}
     </>
-  )
-}
+  );
+};
 
 const DesktopRoundScoreButton: FC<RoundScoreButtonProps> = ({
   isFinished,
@@ -50,7 +50,7 @@ const DesktopRoundScoreButton: FC<RoundScoreButtonProps> = ({
   onRoundOver,
   kind,
 }) => {
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
       {!isFinished ? (
@@ -58,7 +58,7 @@ const DesktopRoundScoreButton: FC<RoundScoreButtonProps> = ({
           colorScheme='green'
           w='145px'
           onClick={() => {
-            onRoundChange()
+            onRoundChange();
           }}
           disabled={disabled}
           aria-label='round change'
@@ -71,7 +71,7 @@ const DesktopRoundScoreButton: FC<RoundScoreButtonProps> = ({
             colorScheme='orange'
             w='145px'
             onClick={() => {
-              onOpen()
+              onOpen();
             }}
             aria-label='round over'
           >
@@ -81,16 +81,16 @@ const DesktopRoundScoreButton: FC<RoundScoreButtonProps> = ({
             isOpen={isOpen}
             onClose={onClose}
             onNewGame={() => {
-              onRoundOver()
-              onClose()
+              onRoundOver();
+              onClose();
             }}
             kind={kind}
           />
         </>
       )}
     </>
-  )
-}
+  );
+};
 
 const MobileRoundScoreButton: FC<RoundScoreButtonProps> = ({
   isFinished,
@@ -99,7 +99,7 @@ const MobileRoundScoreButton: FC<RoundScoreButtonProps> = ({
   onRoundOver,
   kind,
 }) => {
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
       {!isFinished ? (
@@ -109,7 +109,7 @@ const MobileRoundScoreButton: FC<RoundScoreButtonProps> = ({
           size='sm'
           width='100%'
           onClick={() => {
-            onRoundChange()
+            onRoundChange();
           }}
           disabled={disabled}
           aria-label='round change'
@@ -122,7 +122,7 @@ const MobileRoundScoreButton: FC<RoundScoreButtonProps> = ({
             size='sm'
             width='100%'
             onClick={() => {
-              onOpen()
+              onOpen();
             }}
             aria-label='round over'
           />
@@ -130,15 +130,15 @@ const MobileRoundScoreButton: FC<RoundScoreButtonProps> = ({
             isOpen={isOpen}
             onClose={onClose}
             onNewGame={() => {
-              onRoundOver()
-              onClose()
+              onRoundOver();
+              onClose();
             }}
             kind={kind}
           />
         </>
       )}
     </>
-  )
-}
+  );
+};
 
-export default RoundScoreButton
+export default RoundScoreButton;

@@ -1,4 +1,4 @@
-import React, { FC, useRef } from 'react'
+import React, { FC, useRef } from 'react';
 import {
   AlertDialog,
   AlertDialogBody,
@@ -9,28 +9,28 @@ import {
   Button,
   Flex,
   Text,
-} from '@chakra-ui/react'
-import { TwitterShareButton, TwitterIcon, LineShareButton, LineIcon } from 'react-share'
-import { useCricketMarkUpGame } from '@/contexts/CricketMarkUpGameContext'
+} from '@chakra-ui/react';
+import { TwitterShareButton, TwitterIcon, LineShareButton, LineIcon } from 'react-share';
+import { useCricketMarkUpGame } from '@/contexts/CricketMarkUpGameContext';
 
 type CricketMarkUpRoundOverDialogProps = {
-  isOpen: boolean
-  onClose: () => void
-  onNewGame: () => void
-}
+  isOpen: boolean;
+  onClose: () => void;
+  onNewGame: () => void;
+};
 
 const CricketMarkUpRoundOverDialog: FC<CricketMarkUpRoundOverDialogProps> = ({
   isOpen,
   onClose,
   onNewGame,
 }) => {
-  const cancelRef = useRef<HTMLButtonElement>(null)
-  const game = useCricketMarkUpGame()
-  if (!game) return null
+  const cancelRef = useRef<HTMLButtonElement>(null);
+  const game = useCricketMarkUpGame();
+  if (!game) return null;
   const result = `Total: ${game.getGameResult().result}\n${game
     .getGameResult()
     .scores.map((s) => `${s.number === 25 ? 'BULL' : s.number}: ${s.total}`)
-    .join('\n')}\n`
+    .join('\n')}\n`;
   return (
     <AlertDialog
       isOpen={isOpen}
@@ -67,7 +67,7 @@ const CricketMarkUpRoundOverDialog: FC<CricketMarkUpRoundOverDialogProps> = ({
         </AlertDialogContent>
       </AlertDialogOverlay>
     </AlertDialog>
-  )
-}
+  );
+};
 
-export default CricketMarkUpRoundOverDialog
+export default CricketMarkUpRoundOverDialog;

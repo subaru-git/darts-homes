@@ -43,6 +43,6 @@ const text = {
     add: '追加',
     overwrite: '上書き',
   },
-}
+};
 
-export default text
+export default text;

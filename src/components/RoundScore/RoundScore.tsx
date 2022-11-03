@@ -1,16 +1,16 @@
-import React, { FC } from 'react'
-import { Grid, GridItem, Text, IconButton } from '@chakra-ui/react'
-import { VscTrash } from 'react-icons/vsc'
-import RoundScoreButton from '../RoundScoreButton'
+import React, { FC } from 'react';
+import { Grid, GridItem, Text, IconButton } from '@chakra-ui/react';
+import { VscTrash } from 'react-icons/vsc';
+import RoundScoreButton from '../RoundScoreButton';
 
 type RoundScoreProps = {
-  scores: string[]
-  onClear: () => void
-  onRoundChange: () => void
-  isFinished: boolean
-  onRoundOver: () => void
-  kind: GameKind
-}
+  scores: string[];
+  onClear: () => void;
+  onRoundChange: () => void;
+  isFinished: boolean;
+  onRoundOver: () => void;
+  kind: GameKind;
+};
 
 const RoundScore: FC<RoundScoreProps> = ({
   scores,
@@ -79,7 +79,7 @@ const RoundScore: FC<RoundScoreProps> = ({
         </Grid>
       </GridItem>
     </Grid>
-  )
-}
+  );
+};
 
-export default RoundScore
+export default RoundScore;

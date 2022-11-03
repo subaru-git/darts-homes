@@ -1,1 +1,1 @@
-export { default } from './EaglesEyeHistoryTable'
+export { default } from './EaglesEyeHistoryTable';

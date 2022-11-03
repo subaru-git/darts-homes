@@ -1,9 +1,9 @@
-import React, { FC } from 'react'
-import { Grid, Table, TableContainer, Tbody, Td, Tr } from '@chakra-ui/react'
+import React, { FC } from 'react';
+import { Grid, Table, TableContainer, Tbody, Td, Tr } from '@chakra-ui/react';
 
 type EaglesEyeBoardProps = {
-  data: point[][]
-}
+  data: point[][];
+};
 
 const EaglesEyeBoard: FC<EaglesEyeBoardProps> = ({ data }) => {
   return (
@@ -22,7 +22,7 @@ const EaglesEyeBoard: FC<EaglesEyeBoardProps> = ({ data }) => {
         </Table>
       </TableContainer>
     </Grid>
-  )
-}
+  );
+};
 
-export default EaglesEyeBoard
+export default EaglesEyeBoard;

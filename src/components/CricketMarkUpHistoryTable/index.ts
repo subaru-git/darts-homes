@@ -1,1 +1,1 @@
-export { default } from './CricketMarkUpHistoryTable'
+export { default } from './CricketMarkUpHistoryTable';

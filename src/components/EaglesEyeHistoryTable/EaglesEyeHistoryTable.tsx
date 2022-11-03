@@ -1,4 +1,4 @@
-import React, { FC, Fragment, useState } from 'react'
+import React, { FC, Fragment, useState } from 'react';
 import {
   IconButton,
   Table,
@@ -9,20 +9,20 @@ import {
   Tr,
   useDisclosure,
   useBreakpointValue,
-} from '@chakra-ui/react'
-import { MdDeleteForever } from 'react-icons/md'
-import HistoryDeleteAlert from '../HistoryDeleteAlert'
-import { EaglesEyeResultModel } from '@/db/db'
-import { deleteEaglesEyeHistory } from '@/lib/GameHistoryManager/GameHistory'
+} from '@chakra-ui/react';
+import { MdDeleteForever } from 'react-icons/md';
+import HistoryDeleteAlert from '../HistoryDeleteAlert';
+import { EaglesEyeResultModel } from '@/db/db';
+import { deleteEaglesEyeHistory } from '@/lib/GameHistoryManager/GameHistory';
 
 type EaglesEyeHistoryTableProps = {
-  history: EaglesEyeResultModel[]
-}
+  history: EaglesEyeResultModel[];
+};
 
 const EaglesEyeHistoryTable: FC<EaglesEyeHistoryTableProps> = ({ history }) => {
-  const [deleteHistory, setDeleteHistory] = useState<EaglesEyeResultModel | undefined>(undefined)
-  const isMd = useBreakpointValue({ base: false, md: true })
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  const [deleteHistory, setDeleteHistory] = useState<EaglesEyeResultModel | undefined>(undefined);
+  const isMd = useBreakpointValue({ base: false, md: true });
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
       <TableContainer>
@@ -34,16 +34,16 @@ const EaglesEyeHistoryTable: FC<EaglesEyeHistoryTableProps> = ({ history }) => {
                   <DesktopEaglesEyeHistoryRow
                     history={item}
                     onDelete={() => {
-                      setDeleteHistory(item)
-                      onOpen()
+                      setDeleteHistory(item);
+                      onOpen();
                     }}
                   />
                 ) : (
                   <MobileEaglesEyeHistoryRow
                     history={item}
                     onDelete={() => {
-                      setDeleteHistory(item)
-                      onOpen()
+                      setDeleteHistory(item);
+                      onOpen();
                     }}
                   />
                 )}
@@ -65,18 +65,18 @@ const EaglesEyeHistoryTable: FC<EaglesEyeHistoryTableProps> = ({ history }) => {
           isOpen={isOpen}
           onClose={onClose}
           onDelete={() => {
-            deleteEaglesEyeHistory(deleteHistory.id)
-            onClose()
+            deleteEaglesEyeHistory(deleteHistory.id);
+            onClose();
           }}
         />
       ) : null}
     </>
-  )
-}
+  );
+};
 
 const DesktopEaglesEyeHistoryRow: FC<{
-  history: EaglesEyeResultModel
-  onDelete: () => void
+  history: EaglesEyeResultModel;
+  onDelete: () => void;
 }> = ({ history, onDelete }) => {
   return (
     <>
@@ -126,12 +126,12 @@ const DesktopEaglesEyeHistoryRow: FC<{
         </Td>
       </Tr>
     </>
-  )
-}
+  );
+};
 
 const MobileEaglesEyeHistoryRow: FC<{
-  history: EaglesEyeResultModel
-  onDelete: () => void
+  history: EaglesEyeResultModel;
+  onDelete: () => void;
 }> = ({ history, onDelete }) => {
   return (
     <>
@@ -179,7 +179,7 @@ const MobileEaglesEyeHistoryRow: FC<{
         </Td>
       </Tr>
     </>
-  )
-}
+  );
+};
 
-export default EaglesEyeHistoryTable
+export default EaglesEyeHistoryTable;

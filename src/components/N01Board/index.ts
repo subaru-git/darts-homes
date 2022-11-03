@@ -1,1 +1,1 @@
-export { default } from './N01Board'
+export { default } from './N01Board';

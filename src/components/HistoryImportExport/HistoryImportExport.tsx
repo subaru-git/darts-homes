@@ -1,4 +1,4 @@
-import React, { FC, useRef, useState } from 'react'
+import React, { FC, useRef, useState } from 'react';
 import {
   AlertDialog,
   AlertDialogBody,
@@ -9,22 +9,22 @@ import {
   Button,
   Flex,
   useDisclosure,
-} from '@chakra-ui/react'
-import { BiExport, BiImport } from 'react-icons/bi'
-import useLocale from '@/hooks/locale'
-import { exportGameHistory, importGameHistory } from '@/lib/GameHistoryManager/GameHistory'
-import { isGameHistory } from '@/lib/Helper/TypeGuard'
+} from '@chakra-ui/react';
+import { BiExport, BiImport } from 'react-icons/bi';
+import useLocale from '@/hooks/locale';
+import { exportGameHistory, importGameHistory } from '@/lib/GameHistoryManager/GameHistory';
+import { isGameHistory } from '@/lib/Helper/TypeGuard';
 
 type HistoryImportExportProps = {
-  onError: () => void
-}
+  onError: () => void;
+};
 
 const HistoryImportExport: FC<HistoryImportExportProps> = ({ onError }) => {
-  const { isOpen, onOpen, onClose } = useDisclosure()
-  const [history, setHistory] = useState<GameResult>({ cricketmarkup: [], eagleseye: [] })
-  const inputRef = useRef<HTMLInputElement>(null)
-  const cancelRef = useRef<HTMLButtonElement>(null)
-  const { t } = useLocale()
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const [history, setHistory] = useState<GameResult>({ cricketmarkup: [], eagleseye: [] });
+  const inputRef = useRef<HTMLInputElement>(null);
+  const cancelRef = useRef<HTMLButtonElement>(null);
+  const { t } = useLocale();
   return (
     <>
       <Flex gap={4}>
@@ -34,21 +34,21 @@ const HistoryImportExport: FC<HistoryImportExportProps> = ({ onError }) => {
           ref={inputRef}
           hidden
           onChange={(e) => {
-            if (!e.target.files) return
+            if (!e.target.files) return;
             for (const file of e.target.files) {
-              const roader = new FileReader()
+              const roader = new FileReader();
               roader.onload = (e) => {
-                const history = JSON.parse(e.target?.result as string)
+                const history = JSON.parse(e.target?.result as string);
                 if (!isGameHistory(history)) {
-                  onError()
-                  return
+                  onError();
+                  return;
                 }
-                setHistory(history)
-                onOpen()
-              }
-              roader.readAsText(file)
+                setHistory(history);
+                onOpen();
+              };
+              roader.readAsText(file);
             }
-            e.target.value = ''
+            e.target.value = '';
           }}
         />
         <Button
@@ -56,7 +56,7 @@ const HistoryImportExport: FC<HistoryImportExportProps> = ({ onError }) => {
           size={{ base: 'sm', md: 'md' }}
           colorScheme='red'
           onClick={() => {
-            inputRef.current?.click()
+            inputRef.current?.click();
           }}
           leftIcon={<BiImport />}
         >
@@ -91,8 +91,8 @@ const HistoryImportExport: FC<HistoryImportExportProps> = ({ onError }) => {
               <Button
                 colorScheme='blue'
                 onClick={() => {
-                  importGameHistory(history, false)
-                  onClose()
+                  importGameHistory(history, false);
+                  onClose();
                 }}
                 ml={3}
               >
@@ -101,8 +101,8 @@ const HistoryImportExport: FC<HistoryImportExportProps> = ({ onError }) => {
               <Button
                 colorScheme='red'
                 onClick={() => {
-                  importGameHistory(history, true)
-                  onClose()
+                  importGameHistory(history, true);
+                  onClose();
                 }}
                 ml={3}
               >
@@ -113,7 +113,7 @@ const HistoryImportExport: FC<HistoryImportExportProps> = ({ onError }) => {
         </AlertDialogOverlay>
       </AlertDialog>
     </>
-  )
-}
+  );
+};
 
-export default HistoryImportExport
+export default HistoryImportExport;

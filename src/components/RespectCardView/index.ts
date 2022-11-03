@@ -1,1 +1,1 @@
-export { default } from './RespectCardView'
+export { default } from './RespectCardView';

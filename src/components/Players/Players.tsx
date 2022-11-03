@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC } from 'react';
 import {
   Editable,
   EditableInput,
@@ -8,12 +8,12 @@ import {
   Th,
   Thead,
   Tr,
-} from '@chakra-ui/react'
+} from '@chakra-ui/react';
 
 type PlayersProps = {
-  players: string[]
-  onUpdateName: (names: string[]) => void
-}
+  players: string[];
+  onUpdateName: (names: string[]) => void;
+};
 
 const Players: FC<PlayersProps> = ({ players, onUpdateName }) => {
   return (
@@ -26,7 +26,7 @@ const Players: FC<PlayersProps> = ({ players, onUpdateName }) => {
                 <Editable
                   defaultValue={players[0]}
                   onChange={(e) => {
-                    onUpdateName([e, players[1]])
+                    onUpdateName([e, players[1]]);
                   }}
                 >
                   <EditablePreview />
@@ -37,7 +37,7 @@ const Players: FC<PlayersProps> = ({ players, onUpdateName }) => {
                 <Editable
                   defaultValue={players[1]}
                   onChange={(e) => {
-                    onUpdateName([players[0], e])
+                    onUpdateName([players[0], e]);
                   }}
                 >
                   <EditablePreview />
@@ -49,7 +49,7 @@ const Players: FC<PlayersProps> = ({ players, onUpdateName }) => {
         </Table>
       </TableContainer>
     </>
-  )
-}
+  );
+};
 
-export default Players
+export default Players;

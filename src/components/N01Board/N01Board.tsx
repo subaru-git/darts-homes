@@ -1,14 +1,14 @@
-import React, { FC } from 'react'
-import { Table, TableContainer, Tbody, Td, Tr } from '@chakra-ui/react'
+import React, { FC } from 'react';
+import { Table, TableContainer, Tbody, Td, Tr } from '@chakra-ui/react';
 
 type N01BoardProps = {
-  data: number[][]
-}
+  data: number[][];
+};
 const N01Board: FC<N01BoardProps> = ({ data }) => {
-  const length = data.reduce((a, b) => (a.length > b.length ? a : b)).length
-  const rows = []
+  const length = data.reduce((a, b) => (a.length > b.length ? a : b)).length;
+  const rows = [];
   for (let i = 0; i < length; i++) {
-    rows.push([data[0][i], data[1][i]])
+    rows.push([data[0][i], data[1][i]]);
   }
   return (
     <>
@@ -25,7 +25,7 @@ const N01Board: FC<N01BoardProps> = ({ data }) => {
         </Table>
       </TableContainer>
     </>
-  )
-}
+  );
+};
 
-export default N01Board
+export default N01Board;

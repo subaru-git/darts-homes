@@ -1,5 +1,5 @@
-import { render } from '@testing-library/react'
-import RespectCardView from './RespectCardView'
+import { render } from '@testing-library/react';
+import RespectCardView from './RespectCardView';
 
 test('should rendering', () => {
   const { container } = render(
@@ -18,6 +18,6 @@ test('should rendering', () => {
         youtube: [],
       }}
     />,
-  )
-  expect(container).toMatchSnapshot()
-})
+  );
+  expect(container).toMatchSnapshot();
+});

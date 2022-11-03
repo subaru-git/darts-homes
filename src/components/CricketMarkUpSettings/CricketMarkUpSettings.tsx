@@ -1,24 +1,24 @@
-import React, { FC } from 'react'
-import { Button, IconButton, useBreakpointValue, useDisclosure } from '@chakra-ui/react'
-import { FiSettings } from 'react-icons/fi'
-import CricketMarkUpSettingModal from '@/components/CricketMarkUpSettingModal'
-import NewGameAlert from '@/components/NewGameAlert'
+import React, { FC } from 'react';
+import { Button, IconButton, useBreakpointValue, useDisclosure } from '@chakra-ui/react';
+import { FiSettings } from 'react-icons/fi';
+import CricketMarkUpSettingModal from '@/components/CricketMarkUpSettingModal';
+import NewGameAlert from '@/components/NewGameAlert';
 
 type CricketMarkUpSettingsProps = {
-  onNewGame: (targetCount: number, save: boolean) => void
-  targetCount: number
-  isFinished: boolean
-}
+  onNewGame: (targetCount: number, save: boolean) => void;
+  targetCount: number;
+  isFinished: boolean;
+};
 
 const CricketMarkUpSettings: FC<CricketMarkUpSettingsProps> = ({
   onNewGame,
   targetCount,
   isFinished,
 }) => {
-  const { isOpen, onOpen, onClose } = useDisclosure()
-  const { isOpen: isAlertOpen, onOpen: onAlertOpen, onClose: onAlertClose } = useDisclosure()
-  const [innerTargetCount, setInnerTargetCount] = React.useState(targetCount)
-  const isMd = useBreakpointValue({ base: false, md: true })
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const { isOpen: isAlertOpen, onOpen: onAlertOpen, onClose: onAlertClose } = useDisclosure();
+  const [innerTargetCount, setInnerTargetCount] = React.useState(targetCount);
+  const isMd = useBreakpointValue({ base: false, md: true });
   return (
     <>
       {isMd ? (
@@ -34,24 +34,24 @@ const CricketMarkUpSettings: FC<CricketMarkUpSettingsProps> = ({
         targetCount={innerTargetCount}
         onNewGame={(targetCount) => {
           if (!isFinished) {
-            setInnerTargetCount(targetCount)
-            onAlertOpen()
-            return
+            setInnerTargetCount(targetCount);
+            onAlertOpen();
+            return;
           }
-          onNewGame(targetCount, true)
-          onClose()
+          onNewGame(targetCount, true);
+          onClose();
         }}
       />
       <NewGameAlert
         isOpen={isAlertOpen}
         onClose={onAlertClose}
         onNewGame={() => {
-          onNewGame(innerTargetCount, false)
-          onClose()
+          onNewGame(innerTargetCount, false);
+          onClose();
         }}
       />
     </>
-  )
-}
+  );
+};
 
-export default CricketMarkUpSettings
+export default CricketMarkUpSettings;

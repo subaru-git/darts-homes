@@ -1,21 +1,21 @@
-import React, { FC } from 'react'
-import { Box, Center, Flex, Grid, GridItem } from '@chakra-ui/react'
-import CountBullButtons from '@/components/CountBullButtons'
-import EaglesEyeBoard from '@/components/EaglesEyeBoard'
-import EaglesEyeDescription from '@/components/EaglesEyeDescription'
-import EaglesEyeNewGame from '@/components/EaglesEyeNewGame'
-import Footer from '@/components/Footer'
-import Loading from '@/components/Loading'
-import NavigationBar from '@/components/NavigationBar'
-import RoundScore from '@/components/RoundScore'
-import TargetBoard from '@/components/TargetBoard'
-import { useEaglesEyeGame, useEaglesEyeGameSet } from '@/contexts/EaglesEyeGameContext'
-import EaglesEyeGame from '@/lib/EaglesEyeGame/EaglesEyeGame'
-import { saveEaglesEyeHistory } from '@/lib/GameHistoryManager/GameHistory'
+import React, { FC } from 'react';
+import { Box, Center, Flex, Grid, GridItem } from '@chakra-ui/react';
+import CountBullButtons from '@/components/CountBullButtons';
+import EaglesEyeBoard from '@/components/EaglesEyeBoard';
+import EaglesEyeDescription from '@/components/EaglesEyeDescription';
+import EaglesEyeNewGame from '@/components/EaglesEyeNewGame';
+import Footer from '@/components/Footer';
+import Loading from '@/components/Loading';
+import NavigationBar from '@/components/NavigationBar';
+import RoundScore from '@/components/RoundScore';
+import TargetBoard from '@/components/TargetBoard';
+import { useEaglesEyeGame, useEaglesEyeGameSet } from '@/contexts/EaglesEyeGameContext';
+import EaglesEyeGame from '@/lib/EaglesEyeGame/EaglesEyeGame';
+import { saveEaglesEyeHistory } from '@/lib/GameHistoryManager/GameHistory';
 
 const EaglesEyeMain: FC = () => {
-  const game = useEaglesEyeGame()
-  const setGame = useEaglesEyeGameSet()
+  const game = useEaglesEyeGame();
+  const setGame = useEaglesEyeGameSet();
   return (
     <div data-cy='eagles-eye-main'>
       <NavigationBar />
@@ -33,8 +33,8 @@ const EaglesEyeMain: FC = () => {
       )}
       <Footer />
     </div>
-  )
-}
+  );
+};
 
 const DesktopMain: FC<{ game: EaglesEyeGame; setGame: (game: EaglesEyeGame) => void }> = ({
   game,
@@ -55,9 +55,9 @@ const DesktopMain: FC<{ game: EaglesEyeGame; setGame: (game: EaglesEyeGame) => v
             />
             <CountBullButtons
               onCount={(n) => {
-                const g = Object.assign(new EaglesEyeGame(), game)
-                g.addScore(n)
-                setGame(g)
+                const g = Object.assign(new EaglesEyeGame(), game);
+                g.addScore(n);
+                setGame(g);
               }}
               disabled={game.getRoundScore().length >= 3}
             />
@@ -67,19 +67,19 @@ const DesktopMain: FC<{ game: EaglesEyeGame; setGame: (game: EaglesEyeGame) => v
           <RoundScore
             scores={game.getRoundScore()}
             onClear={() => {
-              const g = Object.assign(new EaglesEyeGame(), game)
-              g.removeScore()
-              setGame(g)
+              const g = Object.assign(new EaglesEyeGame(), game);
+              g.removeScore();
+              setGame(g);
             }}
             onRoundChange={() => {
-              const g = Object.assign(new EaglesEyeGame(), game)
-              g.roundChange()
-              setGame(g)
+              const g = Object.assign(new EaglesEyeGame(), game);
+              g.roundChange();
+              setGame(g);
             }}
             isFinished={game.isFinish()}
             onRoundOver={() => {
-              saveEaglesEyeHistory(game.getGameResult())
-              setGame(new EaglesEyeGame())
+              saveEaglesEyeHistory(game.getGameResult());
+              setGame(new EaglesEyeGame());
             }}
             kind='EaglesEye'
           />
@@ -89,8 +89,8 @@ const DesktopMain: FC<{ game: EaglesEyeGame; setGame: (game: EaglesEyeGame) => v
         </GridItem>
       </Grid>
     </>
-  )
-}
+  );
+};
 
 const MobileMain: FC<{ game: EaglesEyeGame; setGame: (game: EaglesEyeGame) => void }> = ({
   game,
@@ -115,9 +115,9 @@ const MobileMain: FC<{ game: EaglesEyeGame; setGame: (game: EaglesEyeGame) => vo
       <GridItem>
         <CountBullButtons
           onCount={(n) => {
-            const g = Object.assign(new EaglesEyeGame(), game)
-            g.addScore(n)
-            setGame(g)
+            const g = Object.assign(new EaglesEyeGame(), game);
+            g.addScore(n);
+            setGame(g);
           }}
           disabled={game.getRoundScore().length >= 3}
         />
@@ -126,19 +126,19 @@ const MobileMain: FC<{ game: EaglesEyeGame; setGame: (game: EaglesEyeGame) => vo
         <RoundScore
           scores={game.getRoundScore()}
           onClear={() => {
-            const g = Object.assign(new EaglesEyeGame(), game)
-            g.removeScore()
-            setGame(g)
+            const g = Object.assign(new EaglesEyeGame(), game);
+            g.removeScore();
+            setGame(g);
           }}
           onRoundChange={() => {
-            const g = Object.assign(new EaglesEyeGame(), game)
-            g.roundChange()
-            setGame(g)
+            const g = Object.assign(new EaglesEyeGame(), game);
+            g.roundChange();
+            setGame(g);
           }}
           isFinished={game.isFinish()}
           onRoundOver={() => {
-            saveEaglesEyeHistory(game.getGameResult())
-            setGame(new EaglesEyeGame())
+            saveEaglesEyeHistory(game.getGameResult());
+            setGame(new EaglesEyeGame());
           }}
           kind='EaglesEye'
         />
@@ -147,7 +147,7 @@ const MobileMain: FC<{ game: EaglesEyeGame; setGame: (game: EaglesEyeGame) => vo
         <EaglesEyeBoard data={game.getScore()} />
       </GridItem>
     </Grid>
-  )
-}
+  );
+};
 
-export default EaglesEyeMain
+export default EaglesEyeMain;

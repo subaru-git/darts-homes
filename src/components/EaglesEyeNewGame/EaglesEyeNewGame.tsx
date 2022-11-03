@@ -1,15 +1,15 @@
-import React, { FC } from 'react'
-import { Button, IconButton, useBreakpointValue, useDisclosure } from '@chakra-ui/react'
-import { FiSettings } from 'react-icons/fi'
-import NewGameAlert from '../NewGameAlert'
+import React, { FC } from 'react';
+import { Button, IconButton, useBreakpointValue, useDisclosure } from '@chakra-ui/react';
+import { FiSettings } from 'react-icons/fi';
+import NewGameAlert from '../NewGameAlert';
 
 type CricketMarkUpSettingsProps = {
-  onNewGame: () => void
-}
+  onNewGame: () => void;
+};
 
 const EaglesEyeNewGame: FC<CricketMarkUpSettingsProps> = ({ onNewGame }) => {
-  const { isOpen, onOpen, onClose } = useDisclosure()
-  const isMd = useBreakpointValue({ base: false, md: true })
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const isMd = useBreakpointValue({ base: false, md: true });
   return (
     <>
       {isMd ? (
@@ -21,7 +21,7 @@ const EaglesEyeNewGame: FC<CricketMarkUpSettingsProps> = ({ onNewGame }) => {
       )}
       <NewGameAlert isOpen={isOpen} onClose={onClose} onNewGame={onNewGame} />
     </>
-  )
-}
+  );
+};
 
-export default EaglesEyeNewGame
+export default EaglesEyeNewGame;

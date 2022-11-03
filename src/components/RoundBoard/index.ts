@@ -1,1 +1,1 @@
-export { default } from './RoundBoard'
+export { default } from './RoundBoard';

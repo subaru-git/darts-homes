@@ -1,1 +1,1 @@
-export { default } from './CricketMarkUpSettingModal'
+export { default } from './CricketMarkUpSettingModal';

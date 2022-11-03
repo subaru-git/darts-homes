@@ -1,1 +1,1 @@
-export { default } from './CountBullButtons'
+export { default } from './CountBullButtons';
