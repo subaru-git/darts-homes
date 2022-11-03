@@ -3,11 +3,11 @@ import { Button, IconButton, useBreakpointValue, useDisclosure } from '@chakra-u
 import { FiSettings } from 'react-icons/fi';
 import NewGameAlert from '../NewGameAlert';
 
-type EaglesEyeNewGameProps = {
+type DoubleTroubleNewGameProps = {
   onNewGame: () => void;
 };
 
-const EaglesEyeNewGame: FC<EaglesEyeNewGameProps> = ({ onNewGame }) => {
+const DoubleTroubleNewGame: FC<DoubleTroubleNewGameProps> = ({ onNewGame }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const isMd = useBreakpointValue({ base: false, md: true });
   return (
@@ -24,4 +24,4 @@ const EaglesEyeNewGame: FC<EaglesEyeNewGameProps> = ({ onNewGame }) => {
   );
 };
 
-export default EaglesEyeNewGame;
+export default DoubleTroubleNewGame;

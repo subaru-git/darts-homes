@@ -21,15 +21,24 @@ export interface EaglesEyeResultModel {
   playedAt: string;
 }
 
+export interface DoubleTroubleResultModel {
+  id?: number;
+  result: number;
+  scores: point[][];
+  playedAt: string;
+}
+
 export class GameResultDexie extends Dexie {
   cricketMarkUpResult!: Table<CricketMarkUpResultModel>;
   eaglesEyeResult!: Table<EaglesEyeResultModel>;
+  doubleTroubleResult!: Table<DoubleTroubleResultModel>;
 
   constructor() {
     super('DartsHomes');
     this.version(1).stores({
       cricketMarkUpResult: '++id',
       eaglesEyeResult: '++id',
+      doubleTroubleResult: '++id',
     });
   }
 }

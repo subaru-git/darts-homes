@@ -3,8 +3,7 @@ import { Global } from '@emotion/react';
 import { DefaultSeo } from 'next-seo';
 import Script from 'next/script';
 import type { AppProps } from 'next/app';
-import { CricketMarkUpGameContextProvider } from '@/contexts/CricketMarkUpGameContext';
-import { EaglesEyeUpGameContextProvider } from '@/contexts/EaglesEyeGameContext';
+import Providers from '@/contexts/Providers';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
@@ -43,12 +42,10 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         `}
       </Script>
       <ChakraProvider>
-        <CricketMarkUpGameContextProvider>
-          <EaglesEyeUpGameContextProvider>
-            <Global styles={{ body: { minHeight: 'calc(100vh - 24px)' } }} />
-            <Component {...pageProps} />
-          </EaglesEyeUpGameContextProvider>
-        </CricketMarkUpGameContextProvider>
+        <Providers>
+          <Global styles={{ body: { minHeight: 'calc(100vh - 24px)' } }} />
+          <Component {...pageProps} />
+        </Providers>
       </ChakraProvider>
     </>
   );

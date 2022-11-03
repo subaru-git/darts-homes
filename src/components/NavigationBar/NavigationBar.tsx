@@ -257,6 +257,11 @@ const GetNavItem = () => {
           subLabel: t.navigation.cricketmarkup,
           href: '/cricketmarkup',
         },
+        {
+          label: 'Double Trouble',
+          subLabel: t.navigation.doubletrouble,
+          href: '/doubletrouble',
+        },
       ],
     },
     {

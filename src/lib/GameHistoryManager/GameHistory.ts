@@ -9,6 +9,10 @@ const saveEaglesEyeHistory = (history: EaglesEyeResult) => {
   saveEaglesEyeResultToDB(history);
 };
 
+const saveDoubleTroubleHistory = (history: DoubleTroubleResult) => {
+  saveDoubleTroubleResultToDB(history);
+};
+
 const deleteCricketMarkUpHistory = async (id: number | undefined) => {
   if (!id) return;
   try {
@@ -27,20 +31,41 @@ const deleteEaglesEyeHistory = async (id: number | undefined) => {
   }
 };
 
+const deleteDoubleTroubleHistory = async (id: number | undefined) => {
+  if (!id) return;
+  try {
+    await db.doubleTroubleResult.delete(id);
+  } catch (error) {
+    console.error(error);
+  }
+};
+
 const importGameHistory = (gameHistory: GameResult, overwrite: boolean) => {
   try {
-    db.transaction('rw', db.cricketMarkUpResult, () => {
-      if (overwrite) db.cricketMarkUpResult.clear();
-      for (const history of gameHistory.cricketmarkup) {
-        saveCricketMarkUpResultToDB(history);
-      }
-    });
-    db.transaction('rw', db.eaglesEyeResult, () => {
-      if (overwrite) db.eaglesEyeResult.clear();
-      for (const history of gameHistory.eagleseye) {
-        saveEaglesEyeResultToDB(history);
-      }
-    });
+    if (gameHistory.cricketmarkup) {
+      db.transaction('rw', db.cricketMarkUpResult, () => {
+        if (overwrite) db.cricketMarkUpResult.clear();
+        for (const history of gameHistory.cricketmarkup) {
+          saveCricketMarkUpResultToDB(history);
+        }
+      });
+    }
+    if (gameHistory.eagleseye) {
+      db.transaction('rw', db.eaglesEyeResult, () => {
+        if (overwrite) db.eaglesEyeResult.clear();
+        for (const history of gameHistory.eagleseye) {
+          saveEaglesEyeResultToDB(history);
+        }
+      });
+    }
+    if (gameHistory.doubletrouble) {
+      db.transaction('rw', db.doubleTroubleResult, () => {
+        if (overwrite) db.doubleTroubleResult.clear();
+        for (const history of gameHistory.doubletrouble) {
+          saveDoubleTroubleHistory(history);
+        }
+      });
+    }
   } catch (error) {
     console.log(error);
   }
@@ -58,7 +83,15 @@ const exportGameHistory = async () => {
       delete r.id;
       return r;
     });
-    fileDownload(JSON.stringify({ cricketmarkup, eagleseye }), 'darts-games-history.json');
+    const doubletroubleResult = await db.doubleTroubleResult.toArray();
+    const doubletrouble = doubletroubleResult.map((r) => {
+      delete r.id;
+      return r;
+    });
+    fileDownload(
+      JSON.stringify({ cricketmarkup, eagleseye, doubletrouble }),
+      'darts-games-history.json',
+    );
   } catch (error) {
     console.error(error);
   }
@@ -80,11 +113,21 @@ const saveEaglesEyeResultToDB = async (history: EaglesEyeResult) => {
   }
 };
 
+const saveDoubleTroubleResultToDB = async (history: DoubleTroubleResult) => {
+  try {
+    await db.doubleTroubleResult.add(history);
+  } catch (error) {
+    console.error(error);
+  }
+};
+
 export {
   saveCricketMarkUpHistory,
   saveEaglesEyeHistory,
+  saveDoubleTroubleHistory,
   deleteCricketMarkUpHistory,
   deleteEaglesEyeHistory,
+  deleteDoubleTroubleHistory,
   importGameHistory,
   exportGameHistory,
 };

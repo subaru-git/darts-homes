@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import CricketMarkUpRoundOverDialog from '../CricketMarkUpRoundOverDialog';
+import DoubleTroubleRoundOverDialog from '../DoubleTroubleRoundOverDialog';
 import EaglesEyeRoundOverDialog from '../EaglesEyeRoundOverDialog';
 
 type RoundOverDialogProps = {
@@ -14,6 +15,8 @@ const RoundOverDialog: FC<RoundOverDialogProps> = ({ isOpen, onClose, onNewGame,
     return <CricketMarkUpRoundOverDialog isOpen={isOpen} onClose={onClose} onNewGame={onNewGame} />;
   if (kind === 'EaglesEye')
     return <EaglesEyeRoundOverDialog isOpen={isOpen} onClose={onClose} onNewGame={onNewGame} />;
+  if (kind === 'Double Trouble')
+    return <DoubleTroubleRoundOverDialog isOpen={isOpen} onClose={onClose} onNewGame={onNewGame} />;
   return null;
 };
 

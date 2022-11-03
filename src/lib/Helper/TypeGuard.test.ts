@@ -34,14 +34,37 @@ test('isGameHistory', () => {
         playedAt: '2022-10-28T17:28:27.908Z',
       },
     ],
+    doubletrouble: [
+      {
+        result: 225,
+        scores: [
+          ['D-BULL', 'D-BULL', 'D-BULL'],
+          ['S-BULL', 'S-BULL', 'S-BULL'],
+          ['0', '0', '0'],
+          ['0', '0', '0'],
+          ['0', '0', '0'],
+          ['0', '0', '0'],
+          ['0', '0', '0'],
+          ['0', '0', '0'],
+        ],
+        playedAt: '2022-10-28T17:28:27.908Z',
+      },
+    ],
   };
+
   expect(isGameHistory(history)).toBeTruthy();
 });
 
 test('isGameHistory empty data', () => {
-  expect(isGameHistory({ cricketmarkup: [], eagleseye: [] })).toBeTruthy();
+  expect(isGameHistory({ cricketmarkup: [], eagleseye: [], doubletrouble: [] })).toBeTruthy();
+});
+
+test('isGameHistory some game is undefined', () => {
+  expect(isGameHistory({ cricketmarkup: [] })).toBeTruthy();
+  expect(isGameHistory({ doubletrouble: [] })).toBeTruthy();
+  expect(isGameHistory({ doubletrouble: [] })).toBeTruthy();
 });
 
 test('isGameHistory invalid data', () => {
-  expect(isGameHistory({})).toBeFalsy();
+  expect(isGameHistory(1)).toBeFalsy();
 });
