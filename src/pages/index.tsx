@@ -1,12 +1,12 @@
 import React from 'react';
 import { Box } from '@chakra-ui/react';
 import { NextPage } from 'next';
-import HomeMain from '@/containers/HomeMain';
+import Main from '@/containers/Home/Main';
 
 const Home: NextPage = () => {
   return (
     <Box>
-      <HomeMain />
+      <Main />
     </Box>
   );
 };

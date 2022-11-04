@@ -4,7 +4,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import NewGameAlert from './NewGameAlert';
 
 export default {
-  title: 'Components/CricketMarkUpSettingAlert',
+  title: 'Components/NewGameAlert',
   component: NewGameAlert,
 } as ComponentMeta<typeof NewGameAlert>;
 

@@ -1,12 +1,12 @@
 import React from 'react';
 import { Box } from '@chakra-ui/react';
 import { NextPage } from 'next';
-import HistoryMain from '@/containers/HistoryMain';
+import Main from '@/containers/History/Main';
 
 const EaglesEye: NextPage = () => {
   return (
     <Box>
-      <HistoryMain />
+      <Main />
     </Box>
   );
 };

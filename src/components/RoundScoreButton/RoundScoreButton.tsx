@@ -9,7 +9,7 @@ type RoundScoreButtonProps = {
   disabled: boolean;
   onRoundChange: () => void;
   onRoundOver: () => void;
-  kind: GameKind;
+  result: string;
 };
 
 const RoundScoreButton: FC<RoundScoreButtonProps> = ({
@@ -17,7 +17,7 @@ const RoundScoreButton: FC<RoundScoreButtonProps> = ({
   disabled,
   onRoundChange,
   onRoundOver,
-  kind,
+  result,
 }) => {
   const isMd = useBreakpointValue({ base: false, md: true });
   return (
@@ -28,7 +28,7 @@ const RoundScoreButton: FC<RoundScoreButtonProps> = ({
           disabled={disabled}
           onRoundChange={onRoundChange}
           onRoundOver={onRoundOver}
-          kind={kind}
+          result={result}
         />
       ) : (
         <DesktopRoundScoreButton
@@ -36,7 +36,7 @@ const RoundScoreButton: FC<RoundScoreButtonProps> = ({
           disabled={disabled}
           onRoundChange={onRoundChange}
           onRoundOver={onRoundOver}
-          kind={kind}
+          result={result}
         />
       )}
     </>
@@ -48,7 +48,7 @@ const DesktopRoundScoreButton: FC<RoundScoreButtonProps> = ({
   disabled,
   onRoundChange,
   onRoundOver,
-  kind,
+  result,
 }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
@@ -84,7 +84,7 @@ const DesktopRoundScoreButton: FC<RoundScoreButtonProps> = ({
               onRoundOver();
               onClose();
             }}
-            kind={kind}
+            result={result}
           />
         </>
       )}
@@ -97,7 +97,7 @@ const MobileRoundScoreButton: FC<RoundScoreButtonProps> = ({
   disabled,
   onRoundChange,
   onRoundOver,
-  kind,
+  result,
 }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
@@ -133,7 +133,7 @@ const MobileRoundScoreButton: FC<RoundScoreButtonProps> = ({
               onRoundOver();
               onClose();
             }}
-            kind={kind}
+            result={result}
           />
         </>
       )}

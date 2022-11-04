@@ -1,7 +1,7 @@
 import { readFileSync } from 'fs';
 import { Box } from '@chakra-ui/react';
 import { GetStaticProps, NextPage } from 'next';
-import RespectMain from '@/containers/RespectMain';
+import Main from '@/containers/Respect/Main';
 
 type Props = {
   data: RespectResult;
@@ -10,7 +10,7 @@ type Props = {
 const Respect: NextPage<Props> = ({ data }) => {
   return (
     <Box>
-      <RespectMain data={data} />
+      <Main data={data} />
     </Box>
   );
 };
