@@ -9,7 +9,7 @@ type RoundScoreProps = {
   onRoundChange: () => void;
   isFinished: boolean;
   onRoundOver: () => void;
-  kind: GameKind;
+  result: string;
 };
 
 const RoundScore: FC<RoundScoreProps> = ({
@@ -18,10 +18,15 @@ const RoundScore: FC<RoundScoreProps> = ({
   onRoundChange,
   isFinished,
   onRoundOver,
-  kind,
+  result,
 }) => {
   return (
-    <Grid templateColumns='repeat(4, 1fr)' alignItems='center' gap={2}>
+    <Grid
+      templateColumns='repeat(4, 1fr)'
+      alignItems='center'
+      gap={2}
+      height={{ base: 30, md: 54 }}
+    >
       <GridItem>
         <Text
           fontSize={{ base: 'xl', md: '4xl' }}
@@ -73,7 +78,7 @@ const RoundScore: FC<RoundScoreProps> = ({
               disabled={scores.length !== 3}
               onRoundChange={onRoundChange}
               onRoundOver={onRoundOver}
-              kind={kind}
+              result={result}
             />
           </GridItem>
         </Grid>
