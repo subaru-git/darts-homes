@@ -12,8 +12,8 @@ import {
 } from '@chakra-ui/react';
 import { MdDeleteForever } from 'react-icons/md';
 import HistoryDeleteAlert from '@/containers/History/DeleteAlert';
-import { Sweet16ResultModel } from '@/db/db';
-import { deleteSweet16History } from '@/lib/GameHistoryManager/GameHistory';
+import { db, Sweet16ResultModel } from '@/db/db';
+import { deleteFromDB } from '@/lib/GameHistoryManager/GameHistory';
 
 type HistoryTableProps = {
   history: Sweet16ResultModel[];
@@ -65,7 +65,7 @@ const HistoryTable: FC<HistoryTableProps> = ({ history }) => {
           isOpen={isOpen}
           onClose={onClose}
           onDelete={() => {
-            deleteSweet16History(deleteHistory.id);
+            deleteFromDB(deleteHistory.id, db.sweet16Result);
             onClose();
           }}
         />

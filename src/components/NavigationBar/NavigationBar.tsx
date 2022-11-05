@@ -267,6 +267,11 @@ const GetNavItem = () => {
           subLabel: t.navigation.sweet16,
           href: '/sweet16',
         },
+        {
+          label: 'Tops and Tens',
+          subLabel: t.navigation.topsandtens,
+          href: '/topsandtens',
+        },
       ],
     },
     {

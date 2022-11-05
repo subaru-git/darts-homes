@@ -1,92 +1,14 @@
+import { IndexableType, Table } from 'dexie';
 import fileDownload from 'js-file-download';
-import { db } from '@/db/db';
-
-const saveCricketMarkUpHistory = (history: CricketMarkUpResult) => {
-  saveCricketMarkUpResultToDB(history);
-};
-
-const saveEaglesEyeHistory = (history: EaglesEyeResult) => {
-  saveEaglesEyeResultToDB(history);
-};
-
-const saveDoubleTroubleHistory = (history: DoubleTroubleResult) => {
-  saveDoubleTroubleResultToDB(history);
-};
-
-const saveSweet16History = (history: Sweet16Result) => {
-  saveSweet16ResultToDB(history);
-};
-
-const deleteCricketMarkUpHistory = async (id: number | undefined) => {
-  if (!id) return;
-  try {
-    await db.cricketMarkUpResult.delete(id);
-  } catch (error) {
-    console.error(error);
-  }
-};
-
-const deleteEaglesEyeHistory = async (id: number | undefined) => {
-  if (!id) return;
-  try {
-    await db.eaglesEyeResult.delete(id);
-  } catch (error) {
-    console.error(error);
-  }
-};
-
-const deleteDoubleTroubleHistory = async (id: number | undefined) => {
-  if (!id) return;
-  try {
-    await db.doubleTroubleResult.delete(id);
-  } catch (error) {
-    console.error(error);
-  }
-};
-
-const deleteSweet16History = async (id: number | undefined) => {
-  if (!id) return;
-  try {
-    await db.sweet16Result.delete(id);
-  } catch (error) {
-    console.error(error);
-  }
-};
+import { db, ResultModel } from '@/db/db';
 
 const importGameHistory = (gameHistory: GameResult, overwrite: boolean) => {
   try {
-    if (gameHistory.cricketmarkup) {
-      db.transaction('rw', db.cricketMarkUpResult, () => {
-        if (overwrite) db.cricketMarkUpResult.clear();
-        for (const history of gameHistory.cricketmarkup) {
-          saveCricketMarkUpResultToDB(history);
-        }
-      });
-    }
-    if (gameHistory.eagleseye) {
-      db.transaction('rw', db.eaglesEyeResult, () => {
-        if (overwrite) db.eaglesEyeResult.clear();
-        for (const history of gameHistory.eagleseye) {
-          saveEaglesEyeResultToDB(history);
-        }
-      });
-    }
-    if (gameHistory.doubletrouble) {
-      db.transaction('rw', db.doubleTroubleResult, () => {
-        if (overwrite) db.doubleTroubleResult.clear();
-        for (const history of gameHistory.doubletrouble) {
-          saveDoubleTroubleHistory(history);
-        }
-      });
-    }
-    if (gameHistory.sweet16) {
-      db.transaction('rw', db.sweet16Result, () => {
-        if (overwrite) db.sweet16Result.clear();
-        for (const history of gameHistory.sweet16) {
-          saveSweet16History(history);
-        }
-      });
-    }
+    importToDB(gameHistory.cricketmarkup, db.cricketMarkUpResult, overwrite);
+    importToDB(gameHistory.eagleseye, db.eaglesEyeResult, overwrite);
+    importToDB(gameHistory.doubletrouble, db.doubleTroubleResult, overwrite);
+    importToDB(gameHistory.sweet16, db.sweet16Result, overwrite);
+    importToDB(gameHistory.topsandtens, db.topsAndTensResult, overwrite);
   } catch (error) {
     console.log(error);
   }
@@ -94,23 +16,13 @@ const importGameHistory = (gameHistory: GameResult, overwrite: boolean) => {
 
 const exportGameHistory = async () => {
   try {
-    const cricketmarkupResult = await db.cricketMarkUpResult.toArray();
-    const cricketmarkup = cricketmarkupResult.map((r) => {
-      delete r.id;
-      return r;
-    });
-    const eagleseyeResult = await db.eaglesEyeResult.toArray();
-    const eagleseye = eagleseyeResult.map((r) => {
-      delete r.id;
-      return r;
-    });
-    const doubletroubleResult = await db.doubleTroubleResult.toArray();
-    const doubletrouble = doubletroubleResult.map((r) => {
-      delete r.id;
-      return r;
-    });
+    const cricketmarkup = await exportFromDB(db.cricketMarkUpResult);
+    const eagleseye = await exportFromDB(db.eaglesEyeResult);
+    const doubletrouble = await exportFromDB(db.doubleTroubleResult);
+    const sweet16 = await exportFromDB(db.sweet16Result);
+    const topsandtens = await exportFromDB(db.topsAndTensResult);
     fileDownload(
-      JSON.stringify({ cricketmarkup, eagleseye, doubletrouble }),
+      JSON.stringify({ cricketmarkup, eagleseye, doubletrouble, sweet16, topsandtens }),
       'darts-games-history.json',
     );
   } catch (error) {
@@ -118,47 +30,40 @@ const exportGameHistory = async () => {
   }
 };
 
-const saveCricketMarkUpResultToDB = async (history: CricketMarkUpResult) => {
+function saveToDB<T>(history: T, db: Table<T, IndexableType>) {
   try {
-    await db.cricketMarkUpResult.add(history);
+    db.add(history);
   } catch (error) {
     console.error(error);
   }
-};
+}
 
-const saveEaglesEyeResultToDB = async (history: EaglesEyeResult) => {
+function deleteFromDB<T>(id: number | undefined, db: Table<T, IndexableType>) {
+  if (!id) return;
   try {
-    await db.eaglesEyeResult.add(history);
+    db.delete(id);
   } catch (error) {
     console.error(error);
   }
-};
+}
 
-const saveDoubleTroubleResultToDB = async (history: DoubleTroubleResult) => {
-  try {
-    await db.doubleTroubleResult.add(history);
-  } catch (error) {
-    console.error(error);
+function importToDB<T>(history: T[], table: Table<T, IndexableType>, overwrite: boolean) {
+  if (history) {
+    db.transaction('rw', table, () => {
+      if (overwrite) table.clear();
+      for (const h of history) {
+        saveToDB(h, table);
+      }
+    });
   }
+}
+
+const exportFromDB = async (db: Table<ResultModel, IndexableType>) => {
+  const result = await db.toArray();
+  return result.map((r) => {
+    if (r.id) delete r.id;
+    return r;
+  });
 };
 
-const saveSweet16ResultToDB = async (history: Sweet16Result) => {
-  try {
-    await db.sweet16Result.add(history);
-  } catch (error) {
-    console.error(error);
-  }
-};
-
-export {
-  saveCricketMarkUpHistory,
-  saveEaglesEyeHistory,
-  saveDoubleTroubleHistory,
-  saveSweet16History,
-  deleteCricketMarkUpHistory,
-  deleteEaglesEyeHistory,
-  deleteDoubleTroubleHistory,
-  deleteSweet16History,
-  importGameHistory,
-  exportGameHistory,
-};
+export { importGameHistory, exportGameHistory, saveToDB, deleteFromDB };

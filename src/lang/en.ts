@@ -15,6 +15,7 @@ const text = {
     cricketmarkup: 'Darts training game by "Kikuchi Yamaguchi"',
     doubletrouble: 'Double practice game',
     sweet16: '32 double out practice game',
+    topsandtens: '40 double out practice game',
   },
   eagleseye: {
     description: ['It is a count-up where only BULLs are added.', 'BULL is separate.'],
@@ -37,6 +38,12 @@ const text = {
     description: [
       'You have 20 visits to the oche needing 32, which you have to finish in three darts with any combination finishing on a double.',
       'Receive five points every time you finish 32, 15poits available every 3 darts; 300 overall.',
+    ],
+  },
+  topsandtens: {
+    description: [
+      'You have 20 visits to the oche needing 40, which you have to finish in three darts or less only on double top, double ten or double five.',
+      'Receive five points every time you finish 40. 15 points available every 3darts, 300 overall.',
     ],
   },
   import: {

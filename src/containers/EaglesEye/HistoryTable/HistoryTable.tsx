@@ -12,8 +12,8 @@ import {
 } from '@chakra-ui/react';
 import { MdDeleteForever } from 'react-icons/md';
 import HistoryDeleteAlert from '@/containers/History/DeleteAlert';
-import { EaglesEyeResultModel } from '@/db/db';
-import { deleteEaglesEyeHistory } from '@/lib/GameHistoryManager/GameHistory';
+import { db, EaglesEyeResultModel } from '@/db/db';
+import { deleteFromDB } from '@/lib/GameHistoryManager/GameHistory';
 
 type HistoryTableProps = {
   history: EaglesEyeResultModel[];
@@ -65,7 +65,7 @@ const HistoryTable: FC<HistoryTableProps> = ({ history }) => {
           isOpen={isOpen}
           onClose={onClose}
           onDelete={() => {
-            deleteEaglesEyeHistory(deleteHistory.id);
+            deleteFromDB(deleteHistory.id, db.eaglesEyeResult);
             onClose();
           }}
         />

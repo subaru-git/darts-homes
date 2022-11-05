@@ -3,6 +3,7 @@ interface GameResult {
   eagleseye: EaglesEyeResult[];
   doubletrouble: DoubleTroubleResult[];
   sweet16: Sweet16Result[];
+  topsandtens: TopsAndTensResult[];
 }
 
 interface CricketMarkUpResult {
@@ -31,6 +32,12 @@ interface DoubleTroubleResult {
 }
 
 interface Sweet16Result {
+  result: number;
+  scores: point[][];
+  playedAt: string;
+}
+
+interface TopsAndTensResult {
   result: number;
   scores: point[][];
   playedAt: string;
