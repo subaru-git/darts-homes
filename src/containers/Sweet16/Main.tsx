@@ -10,8 +10,9 @@ import RoundBoard from '@/components/RoundBoard';
 import RoundScore from '@/components/RoundScore';
 import TargetBoard from '@/components/TargetBoard';
 import { useSweet16Game, useSweet16GameSet } from '@/contexts/Sweet16Context';
-import { saveSweet16History } from '@/lib/GameHistoryManager/GameHistory';
-import Sweet16 from '@/lib/Sweet16Game/Sweet16Game';
+import { db } from '@/db/db';
+import { saveToDB } from '@/lib/GameHistoryManager/GameHistory';
+import Sweet16Game from '@/lib/Sweet16Game/Sweet16Game';
 
 const Main: FC = () => {
   const game = useSweet16Game();
@@ -36,14 +37,14 @@ const Main: FC = () => {
   );
 };
 
-const DesktopMain: FC<{ game: Sweet16; setGame: (game: Sweet16) => void }> = ({
+const DesktopMain: FC<{ game: Sweet16Game; setGame: (game: Sweet16Game) => void }> = ({
   game,
   setGame,
 }) => {
   return (
     <div>
       <Flex justifyContent='space-between' alignItems='center'>
-        <NewGame onNewGame={() => setGame(new Sweet16(20))} />
+        <NewGame onNewGame={() => setGame(new Sweet16Game(20))} />
         <Description />
       </Flex>
       <Flex justifyContent='space-around' gap={4} alignItems='center' p={4}>
@@ -58,19 +59,19 @@ const DesktopMain: FC<{ game: Sweet16; setGame: (game: Sweet16) => void }> = ({
           <RoundScore
             scores={game.getRoundScore()}
             onClear={() => {
-              const g = Object.assign(new Sweet16(20), game);
+              const g = Object.assign(new Sweet16Game(20), game);
               g.removeScore();
               setGame(g);
             }}
             onRoundChange={() => {
-              const g = Object.assign(new Sweet16(20), game);
+              const g = Object.assign(new Sweet16Game(20), game);
               g.roundChange();
               setGame(g);
             }}
             isFinished={game.isFinish()}
             onRoundOver={() => {
-              saveSweet16History(game.getGameResult());
-              setGame(new Sweet16(20));
+              saveToDB(game.getGameResult(), db.sweet16Result);
+              setGame(new Sweet16Game(20));
             }}
             result={getResult(game)}
           />
@@ -79,7 +80,7 @@ const DesktopMain: FC<{ game: Sweet16; setGame: (game: Sweet16) => void }> = ({
           <CountButtons
             buttons={[16, 8, 4, 2, 1]}
             onCount={(n) => {
-              const g = Object.assign(new Sweet16(20), game);
+              const g = Object.assign(new Sweet16Game(20), game);
               g.addScore(n);
               setGame(g);
             }}
@@ -95,11 +96,14 @@ const DesktopMain: FC<{ game: Sweet16; setGame: (game: Sweet16) => void }> = ({
   );
 };
 
-const MobileMain: FC<{ game: Sweet16; setGame: (game: Sweet16) => void }> = ({ game, setGame }) => {
+const MobileMain: FC<{ game: Sweet16Game; setGame: (game: Sweet16Game) => void }> = ({
+  game,
+  setGame,
+}) => {
   return (
     <Flex direction='column' gap={4}>
       <Flex justifyContent='space-between' width='100%'>
-        <NewGame onNewGame={() => setGame(new Sweet16(20))} />
+        <NewGame onNewGame={() => setGame(new Sweet16Game(20))} />
         <Flex alignItems='center' gap={4}>
           <TargetBoard message='Target' target={game.getCurrentTarget().toString()} />
           <TargetBoard message='Score' target={game.getTotalScore().toString()} size='sm' />
@@ -110,19 +114,19 @@ const MobileMain: FC<{ game: Sweet16; setGame: (game: Sweet16) => void }> = ({ g
         <RoundScore
           scores={game.getRoundScore()}
           onClear={() => {
-            const g = Object.assign(new Sweet16(20), game);
+            const g = Object.assign(new Sweet16Game(20), game);
             g.removeScore();
             setGame(g);
           }}
           onRoundChange={() => {
-            const g = Object.assign(new Sweet16(20), game);
+            const g = Object.assign(new Sweet16Game(20), game);
             g.roundChange();
             setGame(g);
           }}
           isFinished={game.isFinish()}
           onRoundOver={() => {
-            saveSweet16History(game.getGameResult());
-            setGame(new Sweet16(20));
+            saveToDB(game.getGameResult(), db.sweet16Result);
+            setGame(new Sweet16Game(20));
           }}
           result={getResult(game)}
         />
@@ -131,7 +135,7 @@ const MobileMain: FC<{ game: Sweet16; setGame: (game: Sweet16) => void }> = ({ g
         <CountButtons
           buttons={[16, 8, 4, 2, 1]}
           onCount={(n) => {
-            const g = Object.assign(new Sweet16(20), game);
+            const g = Object.assign(new Sweet16Game(20), game);
             g.addScore(n);
             setGame(g);
           }}
@@ -146,6 +150,6 @@ const MobileMain: FC<{ game: Sweet16; setGame: (game: Sweet16) => void }> = ({ g
   );
 };
 
-const getResult = (game: Sweet16) => `Total: ${game.getGameResult().result}`;
+const getResult = (game: Sweet16Game) => `Total: ${game.getGameResult().result}`;
 
 export default Main;

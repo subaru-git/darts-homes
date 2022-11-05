@@ -13,8 +13,8 @@ import {
 } from '@chakra-ui/react';
 import { MdDeleteForever } from 'react-icons/md';
 import HistoryDeleteAlert from '@/containers/History/DeleteAlert';
-import { CricketMarkUpResultModel } from '@/db/db';
-import { deleteCricketMarkUpHistory } from '@/lib/GameHistoryManager/GameHistory';
+import { CricketMarkUpResultModel, db } from '@/db/db';
+import { deleteFromDB } from '@/lib/GameHistoryManager/GameHistory';
 
 type HistoryTableProps = {
   history: CricketMarkUpResultModel[];
@@ -69,7 +69,7 @@ const HistoryTable: FC<HistoryTableProps> = ({ history }) => {
           isOpen={isOpen}
           onClose={onClose}
           onDelete={() => {
-            deleteCricketMarkUpHistory(deleteHistory.id);
+            deleteFromDB(deleteHistory.id, db.cricketMarkUpResult);
             onClose();
           }}
         />

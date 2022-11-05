@@ -11,8 +11,9 @@ import CricketMarkUpBoard from '@/containers/CricketMarkUp/Board';
 import CricketMarkUpDescription from '@/containers/CricketMarkUp/Description';
 import CricketMarkUpSettings from '@/containers/CricketMarkUp/Settings';
 import { useCricketMarkUpGame, useCricketMarkUpGameSet } from '@/contexts/CricketMarkUpGameContext';
+import { db } from '@/db/db';
 import CricketMarkUpGame from '@/lib/CricketMarkUpGame/CricketMarkUpGame';
-import { saveCricketMarkUpHistory } from '@/lib/GameHistoryManager/GameHistory';
+import { saveToDB } from '@/lib/GameHistoryManager/GameHistory';
 
 const Main: FC = () => {
   const game = useCricketMarkUpGame();
@@ -46,7 +47,7 @@ const DesktopMain: FC<{
       <Flex justifyContent='space-between'>
         <CricketMarkUpSettings
           onNewGame={(targetNumber, save) => {
-            if (save) saveCricketMarkUpHistory(game.getGameResult());
+            if (save) saveToDB(game.getGameResult(), db.cricketMarkUpResult);
             setGame(new CricketMarkUpGame(targetNumber));
           }}
           targetCount={game.getTargetCount()}
@@ -98,7 +99,7 @@ const DesktopMain: FC<{
                 }}
                 isFinished={game.isFinished()}
                 onRoundOver={() => {
-                  saveCricketMarkUpHistory(game.getGameResult());
+                  saveToDB(game.getGameResult(), db.cricketMarkUpResult);
                   setGame(new CricketMarkUpGame(game.getTargetCount()));
                 }}
                 result={getResult(game)}
@@ -136,7 +137,7 @@ const MobileMain: FC<{
         <Flex justifyContent='space-between'>
           <CricketMarkUpSettings
             onNewGame={(targetNumber, save) => {
-              if (save) saveCricketMarkUpHistory(game.getGameResult());
+              if (save) saveToDB(game.getGameResult(), db.cricketMarkUpResult);
               setGame(new CricketMarkUpGame(targetNumber));
             }}
             targetCount={game.getTargetCount()}
@@ -175,7 +176,7 @@ const MobileMain: FC<{
         }}
         isFinished={game.isFinished()}
         onRoundOver={() => {
-          saveCricketMarkUpHistory(game.getGameResult());
+          saveToDB(game.getGameResult(), db.cricketMarkUpResult);
           setGame(new CricketMarkUpGame(game.getTargetCount()));
         }}
         result={getResult(game)}

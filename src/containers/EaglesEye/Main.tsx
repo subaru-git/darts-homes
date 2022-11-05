@@ -10,8 +10,9 @@ import TargetBoard from '@/components/TargetBoard';
 import Description from '@/containers/EaglesEye/Description';
 import NewGame from '@/containers/EaglesEye/NewGame';
 import { useEaglesEyeGame, useEaglesEyeGameSet } from '@/contexts/EaglesEyeGameContext';
+import { db } from '@/db/db';
 import EaglesEyeGame from '@/lib/EaglesEyeGame/EaglesEyeGame';
-import { saveEaglesEyeHistory } from '@/lib/GameHistoryManager/GameHistory';
+import { saveToDB } from '@/lib/GameHistoryManager/GameHistory';
 
 const EaglesEyeMain: FC = () => {
   const game = useEaglesEyeGame();
@@ -78,7 +79,7 @@ const DesktopMain: FC<{ game: EaglesEyeGame; setGame: (game: EaglesEyeGame) => v
             }}
             isFinished={game.isFinish()}
             onRoundOver={() => {
-              saveEaglesEyeHistory(game.getGameResult());
+              saveToDB(game.getGameResult(), db.eaglesEyeResult);
               setGame(new EaglesEyeGame());
             }}
             result={getResult(game)}
@@ -137,7 +138,7 @@ const MobileMain: FC<{ game: EaglesEyeGame; setGame: (game: EaglesEyeGame) => vo
           }}
           isFinished={game.isFinish()}
           onRoundOver={() => {
-            saveEaglesEyeHistory(game.getGameResult());
+            saveToDB(game.getGameResult(), db.eaglesEyeResult);
             setGame(new EaglesEyeGame());
           }}
           result={getResult(game)}

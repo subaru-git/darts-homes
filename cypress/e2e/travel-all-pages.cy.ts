@@ -12,6 +12,8 @@ describe('Travel all pages', () => {
     cy.get('div[data-cy="double-trouble-main"]').should('be.visible');
     cy.visit('/sweet16');
     cy.get('div[data-cy="sweet16-main"]').should('be.visible');
+    cy.visit('/topsandtens');
+    cy.get('div[data-cy="tops-and-tens-main"]').should('be.visible');
     cy.visit('/respect');
     cy.get('div[data-cy="respect-main"]').should('be.visible');
     cy.visit('/history');
@@ -28,6 +30,8 @@ describe('Travel all pages', () => {
     cy.get('div[data-cy="double-trouble-main"]').should('be.visible');
     cy.visit('/ja/sweet16');
     cy.get('div[data-cy="sweet16-main"]').should('be.visible');
+    cy.visit('/ja/topsandtens');
+    cy.get('div[data-cy="tops-and-tens-main"]').should('be.visible');
     cy.visit('/ja/respect');
     cy.get('div[data-cy="respect-main"]').should('be.visible');
     cy.visit('/ja/history');
@@ -44,6 +48,8 @@ describe('Travel all pages', () => {
     cy.get('div[data-cy="double-trouble-main"]').should('be.visible');
     cy.visit('/en/sweet16');
     cy.get('div[data-cy="sweet16-main"]').should('be.visible');
+    cy.visit('/en/topsandtens');
+    cy.get('div[data-cy="tops-and-tens-main"]').should('be.visible');
     cy.visit('/en/respect');
     cy.get('div[data-cy="respect-main"]').should('be.visible');
     cy.visit('/en/history');

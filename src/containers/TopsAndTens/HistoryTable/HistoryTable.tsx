@@ -12,17 +12,15 @@ import {
 } from '@chakra-ui/react';
 import { MdDeleteForever } from 'react-icons/md';
 import HistoryDeleteAlert from '@/containers/History/DeleteAlert';
-import { db, DoubleTroubleResultModel } from '@/db/db';
+import { db, TopsAndTensResultModel } from '@/db/db';
 import { deleteFromDB } from '@/lib/GameHistoryManager/GameHistory';
 
 type HistoryTableProps = {
-  history: DoubleTroubleResultModel[];
+  history: TopsAndTensResultModel[];
 };
 
 const HistoryTable: FC<HistoryTableProps> = ({ history }) => {
-  const [deleteHistory, setDeleteHistory] = useState<DoubleTroubleResultModel | undefined>(
-    undefined,
-  );
+  const [deleteHistory, setDeleteHistory] = useState<TopsAndTensResultModel | undefined>(undefined);
   const isMd = useBreakpointValue({ base: false, md: true });
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
@@ -33,7 +31,7 @@ const HistoryTable: FC<HistoryTableProps> = ({ history }) => {
             {history.map((item) => (
               <Fragment key={`${item.id}`}>
                 {isMd ? (
-                  <DesktopDoubleTroubleHistoryRow
+                  <DesktopHistoryRow
                     history={item}
                     onDelete={() => {
                       setDeleteHistory(item);
@@ -41,7 +39,7 @@ const HistoryTable: FC<HistoryTableProps> = ({ history }) => {
                     }}
                   />
                 ) : (
-                  <MobileDoubleTroubleRow
+                  <MobileRow
                     history={item}
                     onDelete={() => {
                       setDeleteHistory(item);
@@ -56,7 +54,7 @@ const HistoryTable: FC<HistoryTableProps> = ({ history }) => {
       </TableContainer>
       {deleteHistory ? (
         <HistoryDeleteAlert
-          message={`Double Trouble: ${new Date(deleteHistory.playedAt).toLocaleString('ja-JP', {
+          message={`Top and Tens: ${new Date(deleteHistory.playedAt).toLocaleString('ja-JP', {
             year: 'numeric',
             month: '2-digit',
             day: '2-digit',
@@ -67,7 +65,7 @@ const HistoryTable: FC<HistoryTableProps> = ({ history }) => {
           isOpen={isOpen}
           onClose={onClose}
           onDelete={() => {
-            deleteFromDB(deleteHistory.id, db.doubleTroubleResult);
+            deleteFromDB(deleteHistory.id, db.topsAndTensResult);
             onClose();
           }}
         />
@@ -76,15 +74,15 @@ const HistoryTable: FC<HistoryTableProps> = ({ history }) => {
   );
 };
 
-const DesktopDoubleTroubleHistoryRow: FC<{
-  history: DoubleTroubleResultModel;
+const DesktopHistoryRow: FC<{
+  history: TopsAndTensResultModel;
   onDelete: () => void;
 }> = ({ history, onDelete }) => {
   return (
     <>
       <Tr key={`${history.playedAt}-game`} bg='green.100'>
         <Td colSpan={4} p={1}>
-          Double Trouble
+          Tops and Tens
         </Td>
         <Td colSpan={2} p={1} textAlign='end'>
           <Text>
@@ -119,15 +117,15 @@ const DesktopDoubleTroubleHistoryRow: FC<{
   );
 };
 
-const MobileDoubleTroubleRow: FC<{
-  history: DoubleTroubleResultModel;
+const MobileRow: FC<{
+  history: TopsAndTensResultModel;
   onDelete: () => void;
 }> = ({ history, onDelete }) => {
   return (
     <>
       <Tr bg='green.100'>
         <Td p={0} fontSize='xs'>
-          Double Trouble
+          Tops and Tens
         </Td>
         <Td p={0} fontSize='xs' textAlign='start'>
           <Text>
