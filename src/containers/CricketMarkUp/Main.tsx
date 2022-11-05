@@ -116,9 +116,7 @@ const DesktopMain: FC<{
               g.addScore(n);
               setGame(g);
             }}
-            begin={15}
-            end={20}
-            reversed={true}
+            buttons={[20, 19, 18, 17, 16, 15]}
             disabled={game.getRoundScore().length >= 3 || game.isFinished()}
             other
           />
@@ -189,9 +187,7 @@ const MobileMain: FC<{
             g.addScore(n);
             setGame(g);
           }}
-          begin={parseInt(game.getCurrentTarget())}
-          end={parseInt(game.getCurrentTarget())}
-          reversed={true}
+          buttons={[parseInt(game.getCurrentTarget())]}
           bull={game.getCurrentTarget() === 'S-BULL'}
           disabled={game.getRoundScore().length >= 3 || game.isFinished()}
           other

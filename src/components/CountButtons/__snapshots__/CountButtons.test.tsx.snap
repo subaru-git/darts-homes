@@ -3,7 +3,7 @@
 exports[`should rendering and clickable input 1`] = `
 <div>
   <div
-    class="css-cevvcn"
+    class="css-gnoliz"
   >
     <div
       class="css-1gvp5h0"
@@ -81,7 +81,7 @@ exports[`should rendering and clickable input 1`] = `
       class="css-1gvp5h0"
     >
       <div
-        class="css-1qoey9r"
+        class="css-1k4xfrm"
       >
         <div
           class="css-1gvp5h0"
@@ -219,567 +219,6 @@ exports[`should rendering and clickable input 1`] = `
             type="button"
           >
             3
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="4"
-            class="chakra-button css-uxt1e8"
-            type="button"
-          >
-            4
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="4 double"
-            class="chakra-button css-uxt1e8"
-            type="button"
-          >
-            4
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="4 triple"
-            class="chakra-button css-uxt1e8"
-            type="button"
-          >
-            4
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="5"
-            class="chakra-button css-uxt1e8"
-            type="button"
-          >
-            5
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="5 double"
-            class="chakra-button css-uxt1e8"
-            type="button"
-          >
-            5
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="5 triple"
-            class="chakra-button css-uxt1e8"
-            type="button"
-          >
-            5
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="6"
-            class="chakra-button css-uxt1e8"
-            type="button"
-          >
-            6
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="6 double"
-            class="chakra-button css-uxt1e8"
-            type="button"
-          >
-            6
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="6 triple"
-            class="chakra-button css-uxt1e8"
-            type="button"
-          >
-            6
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="7"
-            class="chakra-button css-uxt1e8"
-            type="button"
-          >
-            7
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="7 double"
-            class="chakra-button css-uxt1e8"
-            type="button"
-          >
-            7
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="7 triple"
-            class="chakra-button css-uxt1e8"
-            type="button"
-          >
-            7
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="8"
-            class="chakra-button css-uxt1e8"
-            type="button"
-          >
-            8
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="8 double"
-            class="chakra-button css-uxt1e8"
-            type="button"
-          >
-            8
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="8 triple"
-            class="chakra-button css-uxt1e8"
-            type="button"
-          >
-            8
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="9"
-            class="chakra-button css-uxt1e8"
-            type="button"
-          >
-            9
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="9 double"
-            class="chakra-button css-uxt1e8"
-            type="button"
-          >
-            9
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="9 triple"
-            class="chakra-button css-uxt1e8"
-            type="button"
-          >
-            9
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="10"
-            class="chakra-button css-uxt1e8"
-            type="button"
-          >
-            10
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="10 double"
-            class="chakra-button css-uxt1e8"
-            type="button"
-          >
-            10
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="10 triple"
-            class="chakra-button css-uxt1e8"
-            type="button"
-          >
-            10
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="11"
-            class="chakra-button css-uxt1e8"
-            type="button"
-          >
-            11
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="11 double"
-            class="chakra-button css-uxt1e8"
-            type="button"
-          >
-            11
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="11 triple"
-            class="chakra-button css-uxt1e8"
-            type="button"
-          >
-            11
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="12"
-            class="chakra-button css-uxt1e8"
-            type="button"
-          >
-            12
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="12 double"
-            class="chakra-button css-uxt1e8"
-            type="button"
-          >
-            12
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="12 triple"
-            class="chakra-button css-uxt1e8"
-            type="button"
-          >
-            12
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="13"
-            class="chakra-button css-uxt1e8"
-            type="button"
-          >
-            13
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="13 double"
-            class="chakra-button css-uxt1e8"
-            type="button"
-          >
-            13
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="13 triple"
-            class="chakra-button css-uxt1e8"
-            type="button"
-          >
-            13
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="14"
-            class="chakra-button css-uxt1e8"
-            type="button"
-          >
-            14
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="14 double"
-            class="chakra-button css-uxt1e8"
-            type="button"
-          >
-            14
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="14 triple"
-            class="chakra-button css-uxt1e8"
-            type="button"
-          >
-            14
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="15"
-            class="chakra-button css-uxt1e8"
-            type="button"
-          >
-            15
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="15 double"
-            class="chakra-button css-uxt1e8"
-            type="button"
-          >
-            15
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="15 triple"
-            class="chakra-button css-uxt1e8"
-            type="button"
-          >
-            15
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="16"
-            class="chakra-button css-uxt1e8"
-            type="button"
-          >
-            16
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="16 double"
-            class="chakra-button css-uxt1e8"
-            type="button"
-          >
-            16
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="16 triple"
-            class="chakra-button css-uxt1e8"
-            type="button"
-          >
-            16
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="17"
-            class="chakra-button css-uxt1e8"
-            type="button"
-          >
-            17
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="17 double"
-            class="chakra-button css-uxt1e8"
-            type="button"
-          >
-            17
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="17 triple"
-            class="chakra-button css-uxt1e8"
-            type="button"
-          >
-            17
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="18"
-            class="chakra-button css-uxt1e8"
-            type="button"
-          >
-            18
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="18 double"
-            class="chakra-button css-uxt1e8"
-            type="button"
-          >
-            18
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="18 triple"
-            class="chakra-button css-uxt1e8"
-            type="button"
-          >
-            18
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="19"
-            class="chakra-button css-uxt1e8"
-            type="button"
-          >
-            19
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="19 double"
-            class="chakra-button css-uxt1e8"
-            type="button"
-          >
-            19
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="19 triple"
-            class="chakra-button css-uxt1e8"
-            type="button"
-          >
-            19
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="20"
-            class="chakra-button css-uxt1e8"
-            type="button"
-          >
-            20
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="20 double"
-            class="chakra-button css-uxt1e8"
-            type="button"
-          >
-            20
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="20 triple"
-            class="chakra-button css-uxt1e8"
-            type="button"
-          >
-            20
           </button>
         </div>
       </div>
@@ -791,7 +230,7 @@ exports[`should rendering and clickable input 1`] = `
 exports[`should rendering and disable input 1`] = `
 <div>
   <div
-    class="css-cevvcn"
+    class="css-gnoliz"
   >
     <div
       class="css-1gvp5h0"
@@ -872,7 +311,7 @@ exports[`should rendering and disable input 1`] = `
       class="css-1gvp5h0"
     >
       <div
-        class="css-1qoey9r"
+        class="css-1k4xfrm"
       >
         <div
           class="css-1gvp5h0"
@@ -917,648 +356,36 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
-            aria-label="1"
+            aria-label="20"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
           >
-            1
+            20
           </button>
         </div>
         <div
           class="css-1gvp5h0"
         >
           <button
-            aria-label="1 double"
+            aria-label="20 double"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
           >
-            1
+            20
           </button>
         </div>
         <div
           class="css-1gvp5h0"
         >
           <button
-            aria-label="1 triple"
+            aria-label="20 triple"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
           >
-            1
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="2"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            2
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="2 double"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            2
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="2 triple"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            2
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="3"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            3
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="3 double"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            3
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="3 triple"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            3
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="4"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            4
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="4 double"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            4
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="4 triple"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            4
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="5"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            5
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="5 double"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            5
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="5 triple"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            5
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="6"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            6
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="6 double"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            6
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="6 triple"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            6
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="7"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            7
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="7 double"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            7
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="7 triple"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            7
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="8"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            8
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="8 double"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            8
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="8 triple"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            8
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="9"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            9
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="9 double"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            9
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="9 triple"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            9
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="10"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            10
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="10 double"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            10
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="10 triple"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            10
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="11"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            11
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="11 double"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            11
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="11 triple"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            11
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="12"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            12
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="12 double"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            12
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="12 triple"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            12
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="13"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            13
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="13 double"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            13
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="13 triple"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            13
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="14"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            14
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="14 double"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            14
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="14 triple"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            14
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="15"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            15
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="15 double"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            15
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="15 triple"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            15
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="16"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            16
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="16 double"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            16
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="16 triple"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            16
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="17"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            17
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="17 double"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            17
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="17 triple"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            17
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="18"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            18
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="18 double"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            18
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="18 triple"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            18
+            20
           </button>
         </div>
         <div
@@ -1601,36 +428,36 @@ exports[`should rendering and disable input 1`] = `
           class="css-1gvp5h0"
         >
           <button
-            aria-label="20"
+            aria-label="18"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
           >
-            20
+            18
           </button>
         </div>
         <div
           class="css-1gvp5h0"
         >
           <button
-            aria-label="20 double"
+            aria-label="18 double"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
           >
-            20
+            18
           </button>
         </div>
         <div
           class="css-1gvp5h0"
         >
           <button
-            aria-label="20 triple"
+            aria-label="18 triple"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
           >
-            20
+            18
           </button>
         </div>
       </div>
@@ -1642,7 +469,7 @@ exports[`should rendering and disable input 1`] = `
 exports[`should rendering only cricket numbers 1`] = `
 <div>
   <div
-    class="css-cevvcn"
+    class="css-gnoliz"
   >
     <div
       class="css-1gvp5h0"
@@ -1768,144 +595,36 @@ exports[`should rendering only cricket numbers 1`] = `
           class="css-1gvp5h0"
         >
           <button
-            aria-label="15"
+            aria-label="20"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
           >
-            15
+            20
           </button>
         </div>
         <div
           class="css-1gvp5h0"
         >
           <button
-            aria-label="15 double"
+            aria-label="20 double"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
           >
-            15
+            20
           </button>
         </div>
         <div
           class="css-1gvp5h0"
         >
           <button
-            aria-label="15 triple"
+            aria-label="20 triple"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
           >
-            15
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="16"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            16
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="16 double"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            16
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="16 triple"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            16
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="17"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            17
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="17 double"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            17
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="17 triple"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            17
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="18"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            18
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="18 double"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            18
-          </button>
-        </div>
-        <div
-          class="css-1gvp5h0"
-        >
-          <button
-            aria-label="18 triple"
-            class="chakra-button css-uxt1e8"
-            disabled=""
-            type="button"
-          >
-            18
+            20
           </button>
         </div>
         <div
@@ -1948,36 +667,144 @@ exports[`should rendering only cricket numbers 1`] = `
           class="css-1gvp5h0"
         >
           <button
-            aria-label="20"
+            aria-label="18"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
           >
-            20
+            18
           </button>
         </div>
         <div
           class="css-1gvp5h0"
         >
           <button
-            aria-label="20 double"
+            aria-label="18 double"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
           >
-            20
+            18
           </button>
         </div>
         <div
           class="css-1gvp5h0"
         >
           <button
-            aria-label="20 triple"
+            aria-label="18 triple"
             class="chakra-button css-uxt1e8"
             disabled=""
             type="button"
           >
-            20
+            18
+          </button>
+        </div>
+        <div
+          class="css-1gvp5h0"
+        >
+          <button
+            aria-label="17"
+            class="chakra-button css-uxt1e8"
+            disabled=""
+            type="button"
+          >
+            17
+          </button>
+        </div>
+        <div
+          class="css-1gvp5h0"
+        >
+          <button
+            aria-label="17 double"
+            class="chakra-button css-uxt1e8"
+            disabled=""
+            type="button"
+          >
+            17
+          </button>
+        </div>
+        <div
+          class="css-1gvp5h0"
+        >
+          <button
+            aria-label="17 triple"
+            class="chakra-button css-uxt1e8"
+            disabled=""
+            type="button"
+          >
+            17
+          </button>
+        </div>
+        <div
+          class="css-1gvp5h0"
+        >
+          <button
+            aria-label="16"
+            class="chakra-button css-uxt1e8"
+            disabled=""
+            type="button"
+          >
+            16
+          </button>
+        </div>
+        <div
+          class="css-1gvp5h0"
+        >
+          <button
+            aria-label="16 double"
+            class="chakra-button css-uxt1e8"
+            disabled=""
+            type="button"
+          >
+            16
+          </button>
+        </div>
+        <div
+          class="css-1gvp5h0"
+        >
+          <button
+            aria-label="16 triple"
+            class="chakra-button css-uxt1e8"
+            disabled=""
+            type="button"
+          >
+            16
+          </button>
+        </div>
+        <div
+          class="css-1gvp5h0"
+        >
+          <button
+            aria-label="15"
+            class="chakra-button css-uxt1e8"
+            disabled=""
+            type="button"
+          >
+            15
+          </button>
+        </div>
+        <div
+          class="css-1gvp5h0"
+        >
+          <button
+            aria-label="15 double"
+            class="chakra-button css-uxt1e8"
+            disabled=""
+            type="button"
+          >
+            15
+          </button>
+        </div>
+        <div
+          class="css-1gvp5h0"
+        >
+          <button
+            aria-label="15 triple"
+            class="chakra-button css-uxt1e8"
+            disabled=""
+            type="button"
+          >
+            15
           </button>
         </div>
       </div>

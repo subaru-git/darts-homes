@@ -22,24 +22,20 @@ import Loading from '@/components/Loading';
 import CricketMarkUpHistoryTable from '@/containers/CricketMarkUp/HistoryTable';
 import DoubleTroubleHistoryTable from '@/containers/DoubleTrouble/HistoryTable';
 import EaglesEyeHistoryTable from '@/containers/EaglesEye/HistoryTable';
+import Sweet16HistoryTable from '@/containers/Sweet16/HistoryTable';
 import { db } from '@/db/db';
 import useLocale from '@/hooks/locale';
 
 const HistoryBoard: FC = () => {
   const [loading, setLoading] = useState(true);
   const gameHistory = useLiveQuery(async () => {
-    const cricketMarkUpHistory = await (
-      await db.cricketMarkUpResult.toCollection().sortBy('playedAt')
-    ).reverse();
-    const eaglesEyeHistory = await (
-      await db.eaglesEyeResult.toCollection().sortBy('playedAt')
-    ).reverse();
-    const doubleTroubleHistory = await (
-      await db.doubleTroubleResult.toCollection().sortBy('playedAt')
-    ).reverse();
+    const cricketMarkUp = await db.cricketMarkUpResult.toCollection().reverse().sortBy('playedAt');
+    const eaglesEye = await db.eaglesEyeResult.toCollection().reverse().sortBy('playedAt');
+    const doubleTrouble = await db.doubleTroubleResult.toCollection().reverse().sortBy('playedAt');
+    const sweet16 = await db.sweet16Result.toCollection().reverse().sortBy('playedAt');
     setLoading(false);
-    return { cricketMarkUpHistory, eaglesEyeHistory, doubleTroubleHistory };
-  }) || { cricketMarkUpHistory: [], eaglesEyeHistory: [], doubleTroubleHistory: [] };
+    return { cricketMarkUp, eaglesEye, doubleTrouble, sweet16 };
+  }) || { cricketMarkUp: [], eaglesEye: [], doubleTrouble: [], sweet16: [] };
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { t } = useLocale();
   if (loading) return <Loading />;
@@ -66,16 +62,20 @@ const HistoryBoard: FC = () => {
           <Tab aria-label='cricket mark up'>Cricket Mark-Up</Tab>
           <Tab aria-label="eagle's eye">{"Eagle's Eye"}</Tab>
           <Tab aria-label='double trouble'>Double Trouble</Tab>
+          <Tab aria-label='sweet 16'>Sweet 16</Tab>
         </TabList>
         <TabPanels>
           <TabPanel>
-            <CricketMarkUpHistoryTable history={gameHistory.cricketMarkUpHistory} />
+            <CricketMarkUpHistoryTable history={gameHistory.cricketMarkUp} />
           </TabPanel>
           <TabPanel>
-            <EaglesEyeHistoryTable history={gameHistory.eaglesEyeHistory} />
+            <EaglesEyeHistoryTable history={gameHistory.eaglesEye} />
           </TabPanel>
           <TabPanel>
-            <DoubleTroubleHistoryTable history={gameHistory.doubleTroubleHistory} />
+            <DoubleTroubleHistoryTable history={gameHistory.doubleTrouble} />
+          </TabPanel>
+          <TabPanel>
+            <Sweet16HistoryTable history={gameHistory.sweet16} />
           </TabPanel>
         </TabPanels>
       </Tabs>

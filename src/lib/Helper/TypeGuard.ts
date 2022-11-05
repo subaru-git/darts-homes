@@ -41,6 +41,19 @@ const isGameHistory = (instance: any) => {
       if (typeof i.playedAt !== 'string') return false;
     }
   }
+  if (instance.sweet16) {
+    for (const i of instance.sweet16) {
+      if (typeof i.result !== 'number') return false;
+      if (typeof i.scores !== 'object') return false;
+      for (const s of i.scores) {
+        if (typeof s !== 'object') return false;
+        for (const p of s) {
+          if (typeof p !== 'string') return false;
+        }
+      }
+      if (typeof i.playedAt !== 'string') return false;
+    }
+  }
   return true;
 };
 

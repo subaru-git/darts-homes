@@ -1,30 +1,45 @@
 import React, { FC, Fragment } from 'react';
-import { Button, Center, Flex, Grid, GridItem, IconButton, Text } from '@chakra-ui/react';
+import {
+  Button,
+  Center,
+  Flex,
+  Grid,
+  GridItem,
+  IconButton,
+  Modal,
+  ModalBody,
+  ModalContent,
+  ModalOverlay,
+  Text,
+  useDisclosure,
+} from '@chakra-ui/react';
 import { TbTargetOff } from 'react-icons/tb';
 
 type CountButtonsProps = {
   onCount: (count: point) => void;
-  begin: number;
-  end: number;
-  reversed?: boolean;
+  buttons: number[];
   bull?: boolean;
   disabled?: boolean;
   other?: boolean;
+  full?: boolean;
 };
 
-const CountButtons: FC<CountButtonsProps> = ({
-  onCount,
-  begin,
-  end,
-  reversed,
-  bull = true,
-  disabled = false,
-  other = false,
-}) => {
-  const buttons = [...Array(20).keys()].filter((n) => n >= begin - 1 && n <= end - 1);
-  if (reversed) buttons.reverse();
+const CountButtons: FC<CountButtonsProps> = ({ onCount, buttons, bull, disabled, other, full }) => {
   return (
-    <Grid templateRows={`repeat(${other ? 3 : 2}, auto)`} gap={2} maxW={320} m='auto'>
+    <Flex maxW={320} direction='column' gap={1} m='auto'>
+      <Buttons onCount={onCount} buttons={buttons} bull={bull} disabled={disabled} other={other} />
+      {other ? (
+        <Other onCount={onCount} disabled={disabled} bull={bull} />
+      ) : full ? (
+        <Full onCount={onCount} disabled={disabled} bull={bull} />
+      ) : null}
+    </Flex>
+  );
+};
+
+const Buttons: FC<CountButtonsProps> = ({ onCount, buttons, bull = true, disabled = false }) => {
+  return (
+    <>
       {!bull ? null : (
         <GridItem>
           <Grid templateColumns='repeat(3, auto)' columnGap={3}>
@@ -67,7 +82,7 @@ const CountButtons: FC<CountButtonsProps> = ({
       <GridItem>
         <Grid
           templateColumns='repeat(3, 1fr)'
-          templateRows={`repeat(${end - begin + 1}, 1fr)`}
+          templateRows={`repeat(${buttons.length}, 1fr)`}
           columnGap={3}
           rowGap={1}
         >
@@ -103,11 +118,11 @@ const CountButtons: FC<CountButtonsProps> = ({
                   colorScheme='gray'
                   variant='outline'
                   width='100%'
-                  onClick={() => onCount(`${i + 1}` as point)}
+                  onClick={() => onCount(`${i}` as point)}
                   disabled={disabled}
-                  aria-label={`${i + 1}`}
+                  aria-label={`${i}`}
                 >
-                  {i + 1}
+                  {i}
                 </Button>
               </GridItem>
               <GridItem>
@@ -115,11 +130,11 @@ const CountButtons: FC<CountButtonsProps> = ({
                   colorScheme='teal'
                   variant='outline'
                   width='100%'
-                  onClick={() => onCount(`${i + 1}D` as point)}
+                  onClick={() => onCount(`${i}D` as point)}
                   disabled={disabled}
-                  aria-label={`${i + 1} double`}
+                  aria-label={`${i} double`}
                 >
-                  {i + 1}
+                  {i}
                 </Button>
               </GridItem>
               <GridItem>
@@ -127,37 +142,84 @@ const CountButtons: FC<CountButtonsProps> = ({
                   colorScheme='pink'
                   variant='outline'
                   width='100%'
-                  onClick={() => onCount(`${i + 1}T` as point)}
+                  onClick={() => onCount(`${i}T` as point)}
                   disabled={disabled}
-                  aria-label={`${i + 1} triple`}
+                  aria-label={`${i} triple`}
                 >
-                  {i + 1}
+                  {i}
                 </Button>
               </GridItem>
             </Fragment>
           ))}
         </Grid>
       </GridItem>
-      {other ? (
-        <GridItem>
-          <Flex gap={2}>
-            <Button w='100%' variant='outline' onClick={() => onCount('0')} disabled={disabled}>
-              Other
-            </Button>
-            {bull ? null : (
-              <IconButton
-                aria-label='out board'
-                variant='outline'
-                icon={<TbTargetOff />}
-                colorScheme='gray'
-                onClick={() => onCount('OUT')}
-                disabled={disabled}
-              ></IconButton>
-            )}
-          </Flex>
-        </GridItem>
-      ) : null}
-    </Grid>
+    </>
+  );
+};
+
+const Other: FC<{ disabled?: boolean; bull?: boolean; onCount: (n: point) => void }> = ({
+  disabled,
+  bull,
+  onCount,
+}) => {
+  return (
+    <Flex gap={2}>
+      <Button w='100%' variant='outline' onClick={() => onCount('0')} disabled={disabled}>
+        Other
+      </Button>
+      {bull ? null : (
+        <IconButton
+          aria-label='out board'
+          variant='outline'
+          icon={<TbTargetOff />}
+          colorScheme='gray'
+          onClick={() => onCount('OUT')}
+          disabled={disabled}
+        ></IconButton>
+      )}
+    </Flex>
+  );
+};
+
+const Full: FC<{ disabled?: boolean; bull?: boolean; onCount: (n: point) => void }> = ({
+  disabled,
+  bull,
+  onCount,
+}) => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  return (
+    <>
+      <Flex gap={2}>
+        <Button w='100%' variant='outline' onClick={onOpen} disabled={disabled}>
+          Full
+        </Button>
+        {bull ? null : (
+          <IconButton
+            aria-label='out board'
+            variant='outline'
+            icon={<TbTargetOff />}
+            colorScheme='gray'
+            onClick={() => onCount('OUT')}
+            disabled={disabled}
+          ></IconButton>
+        )}
+      </Flex>
+      <Modal isOpen={isOpen} onClose={onClose}>
+        <ModalOverlay />
+        <ModalContent>
+          <ModalBody>
+            <Buttons
+              onCount={(n) => {
+                onCount(n);
+                onClose();
+              }}
+              buttons={[20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1]}
+              bull={true}
+            />
+          </ModalBody>
+        </ModalContent>
+      </Modal>
+    </>
   );
 };
 

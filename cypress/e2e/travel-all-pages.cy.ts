@@ -8,6 +8,10 @@ describe('Travel all pages', () => {
     cy.get('div[data-cy="eagles-eye-main"]').should('be.visible');
     cy.visit('/cricketmarkup');
     cy.get('div[data-cy="cricket-mark-up-main"]').should('be.visible');
+    cy.visit('/doubletrouble');
+    cy.get('div[data-cy="double-trouble-main"]').should('be.visible');
+    cy.visit('/sweet16');
+    cy.get('div[data-cy="sweet16-main"]').should('be.visible');
     cy.visit('/respect');
     cy.get('div[data-cy="respect-main"]').should('be.visible');
     cy.visit('/history');
@@ -20,6 +24,10 @@ describe('Travel all pages', () => {
     cy.get('div[data-cy="eagles-eye-main"]').should('be.visible');
     cy.visit('/ja/cricketmarkup');
     cy.get('div[data-cy="cricket-mark-up-main"]').should('be.visible');
+    cy.visit('/ja/doubletrouble');
+    cy.get('div[data-cy="double-trouble-main"]').should('be.visible');
+    cy.visit('/ja/sweet16');
+    cy.get('div[data-cy="sweet16-main"]').should('be.visible');
     cy.visit('/ja/respect');
     cy.get('div[data-cy="respect-main"]').should('be.visible');
     cy.visit('/ja/history');
@@ -32,6 +40,10 @@ describe('Travel all pages', () => {
     cy.get('div[data-cy="eagles-eye-main"]').should('be.visible');
     cy.visit('/en/cricketmarkup');
     cy.get('div[data-cy="cricket-mark-up-main"]').should('be.visible');
+    cy.visit('/en/doubletrouble');
+    cy.get('div[data-cy="double-trouble-main"]').should('be.visible');
+    cy.visit('/en/sweet16');
+    cy.get('div[data-cy="sweet16-main"]').should('be.visible');
     cy.visit('/en/respect');
     cy.get('div[data-cy="respect-main"]').should('be.visible');
     cy.visit('/en/history');
