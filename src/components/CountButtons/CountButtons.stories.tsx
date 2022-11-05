@@ -13,40 +13,30 @@ const Template: ComponentStory<typeof CountButtons> = (args) => <CountButtons {.
 
 export const Default = Template.bind({});
 Default.args = {
-  begin: 1,
-  end: 20,
-  reversed: true,
+  buttons: [20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
 };
 
 export const Disabled = Template.bind({});
 Disabled.args = {
-  begin: 1,
-  end: 20,
-  reversed: true,
+  buttons: [20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
   disabled: true,
 };
 
 export const Cricket = Template.bind({});
 Cricket.args = {
-  begin: 15,
-  end: 20,
-  reversed: true,
+  buttons: [20, 19, 18, 17, 16, 15],
 };
 
 export const MobileCricketMarkUp = Template.bind({});
 MobileCricketMarkUp.args = {
-  begin: 20,
-  end: 20,
-  reversed: true,
+  buttons: [20],
   bull: false,
   other: true,
 };
 
 export const MobileCricketMarkUpBull = Template.bind({});
 MobileCricketMarkUpBull.args = {
-  begin: 0,
-  end: 0,
-  reversed: true,
+  buttons: [],
   bull: true,
   other: true,
 };

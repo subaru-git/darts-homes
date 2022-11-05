@@ -28,10 +28,18 @@ export interface DoubleTroubleResultModel {
   playedAt: string;
 }
 
+export interface Sweet16ResultModel {
+  id?: number;
+  result: number;
+  scores: point[][];
+  playedAt: string;
+}
+
 export class GameResultDexie extends Dexie {
   cricketMarkUpResult!: Table<CricketMarkUpResultModel>;
   eaglesEyeResult!: Table<EaglesEyeResultModel>;
   doubleTroubleResult!: Table<DoubleTroubleResultModel>;
+  sweet16Result!: Table<Sweet16ResultModel>;
 
   constructor() {
     super('DartsHomes');
@@ -39,6 +47,7 @@ export class GameResultDexie extends Dexie {
       cricketMarkUpResult: '++id',
       eaglesEyeResult: '++id',
       doubleTroubleResult: '++id',
+      sweet16Result: '++id',
     });
   }
 }

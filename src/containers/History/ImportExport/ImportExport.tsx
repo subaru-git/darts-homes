@@ -25,6 +25,7 @@ const ImportExport: FC<ImportExportProps> = ({ onError }) => {
     cricketmarkup: [],
     eagleseye: [],
     doubletrouble: [],
+    sweet16: [],
   });
   const inputRef = useRef<HTMLInputElement>(null);
   const cancelRef = useRef<HTMLButtonElement>(null);

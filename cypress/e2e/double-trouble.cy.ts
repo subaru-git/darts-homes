@@ -1,4 +1,4 @@
-describe("gaming Eagle's Eye", () => {
+describe('gaming Double Trouble', () => {
   it('fun gaming', () => {
     cy.clearLocalStorage();
     indexedDB.deleteDatabase('DartsHomes');

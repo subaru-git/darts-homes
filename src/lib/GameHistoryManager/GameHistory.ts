@@ -13,6 +13,10 @@ const saveDoubleTroubleHistory = (history: DoubleTroubleResult) => {
   saveDoubleTroubleResultToDB(history);
 };
 
+const saveSweet16History = (history: Sweet16Result) => {
+  saveSweet16ResultToDB(history);
+};
+
 const deleteCricketMarkUpHistory = async (id: number | undefined) => {
   if (!id) return;
   try {
@@ -35,6 +39,15 @@ const deleteDoubleTroubleHistory = async (id: number | undefined) => {
   if (!id) return;
   try {
     await db.doubleTroubleResult.delete(id);
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+const deleteSweet16History = async (id: number | undefined) => {
+  if (!id) return;
+  try {
+    await db.sweet16Result.delete(id);
   } catch (error) {
     console.error(error);
   }
@@ -63,6 +76,14 @@ const importGameHistory = (gameHistory: GameResult, overwrite: boolean) => {
         if (overwrite) db.doubleTroubleResult.clear();
         for (const history of gameHistory.doubletrouble) {
           saveDoubleTroubleHistory(history);
+        }
+      });
+    }
+    if (gameHistory.sweet16) {
+      db.transaction('rw', db.sweet16Result, () => {
+        if (overwrite) db.sweet16Result.clear();
+        for (const history of gameHistory.sweet16) {
+          saveSweet16History(history);
         }
       });
     }
@@ -121,13 +142,23 @@ const saveDoubleTroubleResultToDB = async (history: DoubleTroubleResult) => {
   }
 };
 
+const saveSweet16ResultToDB = async (history: Sweet16Result) => {
+  try {
+    await db.sweet16Result.add(history);
+  } catch (error) {
+    console.error(error);
+  }
+};
+
 export {
   saveCricketMarkUpHistory,
   saveEaglesEyeHistory,
   saveDoubleTroubleHistory,
+  saveSweet16History,
   deleteCricketMarkUpHistory,
   deleteEaglesEyeHistory,
   deleteDoubleTroubleHistory,
+  deleteSweet16History,
   importGameHistory,
   exportGameHistory,
 };

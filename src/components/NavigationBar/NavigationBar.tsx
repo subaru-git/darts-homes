@@ -262,6 +262,11 @@ const GetNavItem = () => {
           subLabel: t.navigation.doubletrouble,
           href: '/doubletrouble',
         },
+        {
+          label: 'Sweet 16',
+          subLabel: t.navigation.sweet16,
+          href: '/sweet16',
+        },
       ],
     },
     {
