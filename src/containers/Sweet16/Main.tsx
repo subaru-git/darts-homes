@@ -49,7 +49,10 @@ const DesktopMain: FC<{ game: Sweet16; setGame: (game: Sweet16) => void }> = ({
       <Flex justifyContent='space-around' gap={4} alignItems='center' p={4}>
         <Box>
           <Flex justifyContent='center' alignItems='end'>
-            <TargetBoard message='Target' target={game.getCurrentTarget().toString()} />
+            <TargetBoard
+              message={`Round ${game.getRound()}`}
+              target={game.getCurrentTarget().toString()}
+            />
             <TargetBoard message='Score' target={game.getTotalScore().toString()} size='sm' />
           </Flex>
           <RoundScore
