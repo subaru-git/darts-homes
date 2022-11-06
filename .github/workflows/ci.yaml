@@ -27,6 +27,5 @@ jobs:
           browser: chrome
           headless: true
           record: false
-          parallel: true
           wait-on: 'http://127.0.0.1:3000'
           wait-on-timeout: 300
