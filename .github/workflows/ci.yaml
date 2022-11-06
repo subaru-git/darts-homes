@@ -29,3 +29,9 @@ jobs:
           record: false
           wait-on: 'http://127.0.0.1:3000'
           wait-on-timeout: 300
+      - name: upload artifact
+        uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          name: Cypress E2E Videos
+          path: cypress/videos
