@@ -19,7 +19,7 @@ describe('gaming Double Trouble', () => {
     cy.get('button[aria-label="new game"]').click();
     cy.visit('/history');
     cy.get('button[aria-label="double trouble"]').click();
-    // cy.get('tr').should('have.length', 2);
+    cy.get('tr').should('have.length', 2);
     cy.get('tr').first().children('td').should('have.length', 3);
     cy.get('tr').first().children('td').eq(0).should('have.text', 'Double Trouble');
     cy.get('tr').last().children('td').should('have.length', 1);
