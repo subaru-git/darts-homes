@@ -14,6 +14,8 @@ describe('Travel all pages', () => {
     cy.get('div[data-cy="sweet16-main"]').should('be.visible');
     cy.visit('/topsandtens');
     cy.get('div[data-cy="tops-and-tens-main"]').should('be.visible');
+    cy.visit('/twodartcombinations');
+    cy.get('div[data-cy="two-dart-combinations-main"]').should('be.visible');
     cy.visit('/respect');
     cy.get('div[data-cy="respect-main"]').should('be.visible');
     cy.visit('/history');
@@ -32,6 +34,8 @@ describe('Travel all pages', () => {
     cy.get('div[data-cy="sweet16-main"]').should('be.visible');
     cy.visit('/ja/topsandtens');
     cy.get('div[data-cy="tops-and-tens-main"]').should('be.visible');
+    cy.visit('/ja/twodartcombinations');
+    cy.get('div[data-cy="two-dart-combinations-main"]').should('be.visible');
     cy.visit('/ja/respect');
     cy.get('div[data-cy="respect-main"]').should('be.visible');
     cy.visit('/ja/history');
@@ -50,6 +54,8 @@ describe('Travel all pages', () => {
     cy.get('div[data-cy="sweet16-main"]').should('be.visible');
     cy.visit('/en/topsandtens');
     cy.get('div[data-cy="tops-and-tens-main"]').should('be.visible');
+    cy.visit('/en/twodartcombinations');
+    cy.get('div[data-cy="two-dart-combinations-main"]').should('be.visible');
     cy.visit('/en/respect');
     cy.get('div[data-cy="respect-main"]').should('be.visible');
     cy.visit('/en/history');

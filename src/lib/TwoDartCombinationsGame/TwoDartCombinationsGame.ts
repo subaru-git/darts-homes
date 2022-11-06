@@ -21,6 +21,7 @@ class TwoDartCombinationsGame {
   addScore(score: point) {
     if (this.roundScore.length >= 3) return;
     this.roundScore.push(score);
+    if (this.getCurrentTarget() === 0) this.addScore('0');
   }
   removeScore() {
     this.roundScore = [];
@@ -58,7 +59,6 @@ class TwoDartCombinationsGame {
     return round.reduce(
       (pre, crr) => {
         const { target, point } = this.calcTarget(pre.target, crr);
-        if (target === 0) this.addScore('0');
         return { target, point: pre.point + point };
       },
       { target, point: 0 },

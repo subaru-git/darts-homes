@@ -1,6 +1,3 @@
----
-to: src/containers/<%= name %>/HistoryTable/HistoryTable.tsx
----
 import React, { FC, Fragment, useState } from 'react';
 import {
   IconButton,
@@ -15,16 +12,18 @@ import {
 } from '@chakra-ui/react';
 import { MdDeleteForever } from 'react-icons/md';
 import HistoryDeleteAlert from '@/containers/History/DeleteAlert';
-import { <%= name %>ResultModel } from '@/db/<%= name %>ResultModel';
+import { TwoDartCombinationsResultModel } from '@/db/TwoDartCombinationsResultModel';
 import { db } from '@/db/db';
 import { deleteFromDB } from '@/lib/GameHistoryManager/GameHistory';
 
 type HistoryTableProps = {
-  history: <%= name %>ResultModel[];
+  history: TwoDartCombinationsResultModel[];
 };
 
 const HistoryTable: FC<HistoryTableProps> = ({ history }) => {
-  const [deleteHistory, setDeleteHistory] = useState<<%= name %>ResultModel | undefined>(undefined);
+  const [deleteHistory, setDeleteHistory] = useState<TwoDartCombinationsResultModel | undefined>(
+    undefined,
+  );
   const isMd = useBreakpointValue({ base: false, md: true });
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
@@ -58,18 +57,21 @@ const HistoryTable: FC<HistoryTableProps> = ({ history }) => {
       </TableContainer>
       {deleteHistory ? (
         <HistoryDeleteAlert
-          message={`<%= c.changeCase.title(name) %>: ${new Date(deleteHistory.playedAt).toLocaleString('ja-JP', {
-            year: 'numeric',
-            month: '2-digit',
-            day: '2-digit',
-            hour: '2-digit',
-            minute: '2-digit',
-            second: '2-digit',
-          })}`}
+          message={`Two-Dart Combinations: ${new Date(deleteHistory.playedAt).toLocaleString(
+            'ja-JP',
+            {
+              year: 'numeric',
+              month: '2-digit',
+              day: '2-digit',
+              hour: '2-digit',
+              minute: '2-digit',
+              second: '2-digit',
+            },
+          )}`}
           isOpen={isOpen}
           onClose={onClose}
           onDelete={() => {
-            deleteFromDB(deleteHistory.id, db.<%= h.changeCase.camel(name) %>Result);
+            deleteFromDB(deleteHistory.id, db.twoDartCombinationsResult);
             onClose();
           }}
         />
@@ -79,14 +81,14 @@ const HistoryTable: FC<HistoryTableProps> = ({ history }) => {
 };
 
 const DesktopHistoryRow: FC<{
-  history: <%= name %>ResultModel;
+  history: TwoDartCombinationsResultModel;
   onDelete: () => void;
 }> = ({ history, onDelete }) => {
   return (
     <>
       <Tr key={`${history.playedAt}-game`} bg='green.100'>
         <Td colSpan={4} p={1}>
-          <%= c.changeCase.title(name) %>
+          Two-Dart Combinations
         </Td>
         <Td colSpan={2} p={1} textAlign='end'>
           <Text>
@@ -122,14 +124,14 @@ const DesktopHistoryRow: FC<{
 };
 
 const MobileRow: FC<{
-  history: <%= name %>ResultModel;
+  history: TwoDartCombinationsResultModel;
   onDelete: () => void;
 }> = ({ history, onDelete }) => {
   return (
     <>
       <Tr bg='green.100'>
         <Td p={0} fontSize='xs'>
-          <%= c.changeCase.title(name) %>
+          Two-Dart Combinations
         </Td>
         <Td p={0} fontSize='xs' textAlign='start'>
           <Text>

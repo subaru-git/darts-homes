@@ -24,6 +24,7 @@ import DoubleTroubleHistoryTable from '@/containers/DoubleTrouble/HistoryTable';
 import EaglesEyeHistoryTable from '@/containers/EaglesEye/HistoryTable';
 import Sweet16HistoryTable from '@/containers/Sweet16/HistoryTable';
 import TopsAndTensHistoryTable from '@/containers/TopsAndTens/HistoryTable';
+import TwoDartCombinationsHistoryTable from '@/containers/TwoDartCombinations/HistoryTable';
 import { db } from '@/db/db';
 import useLocale from '@/hooks/locale';
 
@@ -35,9 +36,20 @@ const HistoryBoard: FC = () => {
     const doubleTrouble = await db.doubleTroubleResult.toCollection().reverse().sortBy('playedAt');
     const sweet16 = await db.sweet16Result.toCollection().reverse().sortBy('playedAt');
     const topsAndTens = await db.topsAndTensResult.toCollection().reverse().sortBy('playedAt');
+    const twoDartCombinations = await db.twoDartCombinationsResult
+      .toCollection()
+      .reverse()
+      .sortBy('playedAt');
     setLoading(false);
-    return { cricketMarkUp, eaglesEye, doubleTrouble, sweet16, topsAndTens };
-  }) || { cricketMarkUp: [], eaglesEye: [], doubleTrouble: [], sweet16: [], topsAndTens: [] };
+    return { cricketMarkUp, eaglesEye, doubleTrouble, sweet16, topsAndTens, twoDartCombinations };
+  }) || {
+    cricketMarkUp: [],
+    eaglesEye: [],
+    doubleTrouble: [],
+    sweet16: [],
+    topsAndTens: [],
+    twoDartCombinations: [],
+  };
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { t } = useLocale();
   if (loading) return <Loading />;
@@ -66,6 +78,7 @@ const HistoryBoard: FC = () => {
           <Tab aria-label='double trouble'>Double Trouble</Tab>
           <Tab aria-label='sweet 16'>Sweet 16</Tab>
           <Tab aria-label='tops and tens'>Tops and Tens</Tab>
+          <Tab aria-label='two dart combinations'>Two-Dart Combinations</Tab>
         </TabList>
         <TabPanels>
           <TabPanel>
@@ -82,6 +95,9 @@ const HistoryBoard: FC = () => {
           </TabPanel>
           <TabPanel>
             <TopsAndTensHistoryTable history={gameHistory.topsAndTens} />
+          </TabPanel>
+          <TabPanel>
+            <TwoDartCombinationsHistoryTable history={gameHistory.twoDartCombinations} />
           </TabPanel>
         </TabPanels>
       </Tabs>

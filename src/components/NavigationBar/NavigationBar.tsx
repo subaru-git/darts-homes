@@ -272,6 +272,11 @@ const GetNavItem = () => {
           subLabel: t.navigation.topsandtens,
           href: '/topsandtens',
         },
+        {
+          label: 'Two-Dart Combinations',
+          subLabel: t.navigation.twodartcombinations,
+          href: '/twodartcombinations',
+        },
       ],
     },
     {
