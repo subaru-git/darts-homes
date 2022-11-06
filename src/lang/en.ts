@@ -16,6 +16,7 @@ const text = {
     doubletrouble: 'Double practice game',
     sweet16: '32 double out practice game',
     topsandtens: '40 double out practice game',
+    twodartcombinations: 'Two darts double out practice game',
   },
   eagleseye: {
     description: ['It is a count-up where only BULLs are added.', 'BULL is separate.'],
@@ -44,6 +45,12 @@ const text = {
     description: [
       'You have 20 visits to the oche needing 40, which you have to finish in three darts or less only on double top, double ten or double five.',
       'Receive five points every time you finish 40. 15 points available every 3darts, 300 overall.',
+    ],
+  },
+  twodartcombinations: {
+    description: [
+      'You have just three darts at each finish from 41-60, which you must finish on a double with any combination you wish.',
+      'Receive 15 points for every finish you complete. 15 points available every 3 darts; 300 overall.',
     ],
   },
   import: {

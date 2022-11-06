@@ -18,6 +18,7 @@ const text = {
     doubletrouble: 'ダブル練習ゲーム',
     sweet16: '32ダブルアウト練習ゲーム',
     topsandtens: '40ダブルアウト練習ゲーム',
+    twodartcombinations: '2ダーツダブルアウト練習ゲーム',
   },
   eagleseye: {
     description: ['BULLだけが加点されるカウントアップです。', 'BULLはセパレートです。'],
@@ -49,6 +50,12 @@ const text = {
     description: [
       '20ラウンドで40点をダブルトップ、ダブル10またはダブル5でフィニッシュする必要があります。',
       '40点をフィニッシュするごとに5点、3ダーツごとに15点、合計300点を獲得します。',
+    ],
+  },
+  twodartcombinations: {
+    description: [
+      '41から60まで、各ラウンドでダブルフィニッシュをする必要があります。',
+      'ダブルフィニッシュ15点、合計300点を獲得します。',
     ],
   },
   import: {
