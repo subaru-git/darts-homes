@@ -19,11 +19,6 @@ export default class Document extends NextDocument {
             name='keywords'
             content='ダーツ,ダーツ練習,ダーツゲーム,自宅ダーツ,darts,ソロダーツ'
           />
-          <script
-            async
-            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_ADSENSE_ID}`}
-            crossOrigin='anonymous'
-          ></script>
         </Head>
         <body>
           <Main />
