@@ -1,3 +1,6 @@
+---
+to: src/containers/<%= name %>/HistoryTable/HistoryTable.tsx
+---
 import React, { FC, Fragment, useState } from 'react';
 import {
   IconButton,
@@ -12,16 +15,16 @@ import {
 } from '@chakra-ui/react';
 import { MdDeleteForever } from 'react-icons/md';
 import HistoryDeleteAlert from '@/containers/History/DeleteAlert';
-import { Sweet16ResultModel } from '@/db/Sweet16ResultModel';
+import { <%= name %>ResultModel } from '@/db/<%= name %>ResultModel';
 import { db } from '@/db/db';
 import { deleteFromDB } from '@/lib/GameHistoryManager/GameHistory';
 
 type HistoryTableProps = {
-  history: Sweet16ResultModel[];
+  history: <%= name %>ResultModel[];
 };
 
 const HistoryTable: FC<HistoryTableProps> = ({ history }) => {
-  const [deleteHistory, setDeleteHistory] = useState<Sweet16ResultModel | undefined>(undefined);
+  const [deleteHistory, setDeleteHistory] = useState<<%= name %>ResultModel | undefined>(undefined);
   const isMd = useBreakpointValue({ base: false, md: true });
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
@@ -66,7 +69,7 @@ const HistoryTable: FC<HistoryTableProps> = ({ history }) => {
           isOpen={isOpen}
           onClose={onClose}
           onDelete={() => {
-            deleteFromDB(deleteHistory.id, db.sweet16Result);
+            deleteFromDB(deleteHistory.id, db.<%= h.changeCase.camel(name) %>Result);
             onClose();
           }}
         />
@@ -76,7 +79,7 @@ const HistoryTable: FC<HistoryTableProps> = ({ history }) => {
 };
 
 const DesktopHistoryRow: FC<{
-  history: Sweet16ResultModel;
+  history: <%= name %>ResultModel;
   onDelete: () => void;
 }> = ({ history, onDelete }) => {
   return (
@@ -119,7 +122,7 @@ const DesktopHistoryRow: FC<{
 };
 
 const MobileRow: FC<{
-  history: Sweet16ResultModel;
+  history: <%= name %>ResultModel;
   onDelete: () => void;
 }> = ({ history, onDelete }) => {
   return (

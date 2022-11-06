@@ -1,10 +1,13 @@
+---
+to: src/containers/<%= name %>/NewGame/NewGame.stories.tsx
+---
 /* eslint-disable import/named */
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import NewGame from './NewGame';
 
 export default {
-  title: 'Containers/Sweet16/NewGame',
+  title: 'Containers/<%= name %>/NewGame',
   component: NewGame,
 } as ComponentMeta<typeof NewGame>;
 
