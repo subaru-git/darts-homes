@@ -13,7 +13,8 @@ import {
 } from '@chakra-ui/react';
 import { MdDeleteForever } from 'react-icons/md';
 import HistoryDeleteAlert from '@/containers/History/DeleteAlert';
-import { CricketMarkUpResultModel, db } from '@/db/db';
+import { CricketMarkUpResultModel } from '@/db/CricketMarkUpResultModel';
+import { db } from '@/db/db';
 import { deleteFromDB } from '@/lib/GameHistoryManager/GameHistory';
 
 type HistoryTableProps = {
