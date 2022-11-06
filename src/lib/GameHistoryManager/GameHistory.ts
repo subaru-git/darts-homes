@@ -1,6 +1,7 @@
 import { IndexableType, Table } from 'dexie';
 import fileDownload from 'js-file-download';
-import { db, ResultModel } from '@/db/db';
+import { ResultModel } from '@/db/ResultModel';
+import { db } from '@/db/db';
 
 const importGameHistory = (gameHistory: GameResult, overwrite: boolean) => {
   try {

@@ -1,45 +1,9 @@
 import Dexie, { Table } from 'dexie';
-
-export interface ResultModel {
-  id?: number;
-}
-
-export interface CricketMarkUpResultModel extends ResultModel {
-  targetCount: number;
-  result: number;
-  scores: CricketMarkUpScoreModel[];
-  playedAt: string;
-}
-
-export interface CricketMarkUpScoreModel {
-  number: number;
-  count: number;
-  total: number;
-}
-
-export interface EaglesEyeResultModel extends ResultModel {
-  result: number;
-  scores: point[][];
-  playedAt: string;
-}
-
-export interface DoubleTroubleResultModel extends ResultModel {
-  result: number;
-  scores: point[][];
-  playedAt: string;
-}
-
-export interface Sweet16ResultModel extends ResultModel {
-  result: number;
-  scores: point[][];
-  playedAt: string;
-}
-
-export interface TopsAndTensResultModel extends ResultModel {
-  result: number;
-  scores: point[][];
-  playedAt: string;
-}
+import { CricketMarkUpResultModel } from './CricketMarkUpResultModel';
+import { DoubleTroubleResultModel } from './DoubleTroubleResultModel';
+import { EaglesEyeResultModel } from './EaglesEyeResultModel';
+import { Sweet16ResultModel } from './Sweet16ResultModel';
+import { TopsAndTensResultModel } from './TopsAndTensResultModel';
 
 export class GameResultDexie extends Dexie {
   cricketMarkUpResult!: Table<CricketMarkUpResultModel>;

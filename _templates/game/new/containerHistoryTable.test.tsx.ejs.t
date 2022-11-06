@@ -1,3 +1,6 @@
+---
+to: src/containers/<%= name %>/HistoryTable/HistoryTable.test.tsx
+---
 import { ChakraProvider } from '@chakra-ui/react';
 import { render } from '@testing-library/react';
 import HistoryTable from './HistoryTable';

@@ -1,3 +1,6 @@
+---
+to: src/containers/<%= name %>/HistoryTable/HistoryTable.tsx
+---
 import React, { FC, Fragment, useState } from 'react';
 import {
   IconButton,
@@ -12,16 +15,16 @@ import {
 } from '@chakra-ui/react';
 import { MdDeleteForever } from 'react-icons/md';
 import HistoryDeleteAlert from '@/containers/History/DeleteAlert';
-import { TopsAndTensResultModel } from '@/db/TopsAndTensResultModel';
+import { <%= name %>ResultModel } from '@/db/<%= name %>ResultModel';
 import { db } from '@/db/db';
 import { deleteFromDB } from '@/lib/GameHistoryManager/GameHistory';
 
 type HistoryTableProps = {
-  history: TopsAndTensResultModel[];
+  history: <%= name %>ResultModel[];
 };
 
 const HistoryTable: FC<HistoryTableProps> = ({ history }) => {
-  const [deleteHistory, setDeleteHistory] = useState<TopsAndTensResultModel | undefined>(undefined);
+  const [deleteHistory, setDeleteHistory] = useState<<%= name %>ResultModel | undefined>(undefined);
   const isMd = useBreakpointValue({ base: false, md: true });
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
@@ -55,7 +58,7 @@ const HistoryTable: FC<HistoryTableProps> = ({ history }) => {
       </TableContainer>
       {deleteHistory ? (
         <HistoryDeleteAlert
-          message={`Top and Tens: ${new Date(deleteHistory.playedAt).toLocaleString('ja-JP', {
+          message={`Sweet 16: ${new Date(deleteHistory.playedAt).toLocaleString('ja-JP', {
             year: 'numeric',
             month: '2-digit',
             day: '2-digit',
@@ -66,7 +69,7 @@ const HistoryTable: FC<HistoryTableProps> = ({ history }) => {
           isOpen={isOpen}
           onClose={onClose}
           onDelete={() => {
-            deleteFromDB(deleteHistory.id, db.topsAndTensResult);
+            deleteFromDB(deleteHistory.id, db.<%= h.changeCase.camel(name) %>Result);
             onClose();
           }}
         />
@@ -76,14 +79,14 @@ const HistoryTable: FC<HistoryTableProps> = ({ history }) => {
 };
 
 const DesktopHistoryRow: FC<{
-  history: TopsAndTensResultModel;
+  history: <%= name %>ResultModel;
   onDelete: () => void;
 }> = ({ history, onDelete }) => {
   return (
     <>
       <Tr key={`${history.playedAt}-game`} bg='green.100'>
         <Td colSpan={4} p={1}>
-          Tops and Tens
+          Sweet 16
         </Td>
         <Td colSpan={2} p={1} textAlign='end'>
           <Text>
@@ -119,14 +122,14 @@ const DesktopHistoryRow: FC<{
 };
 
 const MobileRow: FC<{
-  history: TopsAndTensResultModel;
+  history: <%= name %>ResultModel;
   onDelete: () => void;
 }> = ({ history, onDelete }) => {
   return (
     <>
       <Tr bg='green.100'>
         <Td p={0} fontSize='xs'>
-          Tops and Tens
+          Sweet 16
         </Td>
         <Td p={0} fontSize='xs' textAlign='start'>
           <Text>

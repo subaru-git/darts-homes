@@ -1,10 +1,13 @@
+---
+to: src/containers/<%= name %>/HistoryTable/HistoryTable.stories.tsx
+---
 /* eslint-disable import/named */
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import HistoryTable from './HistoryTable';
 
 export default {
-  title: 'Containers/Sweet16/HistoryTable',
+  title: 'Containers/<%= name %>/HistoryTable',
   component: HistoryTable,
 } as ComponentMeta<typeof HistoryTable>;
 

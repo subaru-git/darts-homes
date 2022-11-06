@@ -1,3 +1,6 @@
+---
+to: src/containers/<%= name %>/Description/Description.test.tsx
+---
 import { ChakraProvider } from '@chakra-ui/react';
 import { render, screen } from '@testing-library/react';
 import Description from './Description';

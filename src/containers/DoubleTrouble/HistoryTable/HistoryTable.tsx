@@ -12,7 +12,8 @@ import {
 } from '@chakra-ui/react';
 import { MdDeleteForever } from 'react-icons/md';
 import HistoryDeleteAlert from '@/containers/History/DeleteAlert';
-import { db, DoubleTroubleResultModel } from '@/db/db';
+import { DoubleTroubleResultModel } from '@/db/DoubleTroubleResultModel';
+import { db } from '@/db/db';
 import { deleteFromDB } from '@/lib/GameHistoryManager/GameHistory';
 
 type HistoryTableProps = {
