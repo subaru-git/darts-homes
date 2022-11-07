@@ -72,3 +72,9 @@ interface ShanghaiNightsResult {
   scores: point[][];
   playedAt: string;
 }
+
+interface SwitchHitterResult {
+  result: number;
+  scores: point[][];
+  playedAt: string;
+}

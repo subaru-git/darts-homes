@@ -7,6 +7,7 @@ import { EightyThrewResultModel } from './EightyThrewResultModel';
 import { Route64ResultModel } from './Route64ResultModel';
 import { ShanghaiNightsResultModel } from './ShanghaiNightsResultModel';
 import { Sweet16ResultModel } from './Sweet16ResultModel';
+import { SwitchHitterResultModel } from './SwitchHitterResultModel';
 import { TonsUpResultModel } from './TonsUpResultModel';
 import { TopsAndTensResultModel } from './TopsAndTensResultModel';
 import { TwoDartCombinationsResultModel } from './TwoDartCombinationsResultModel';
@@ -23,6 +24,7 @@ export class GameResultDexie extends Dexie {
   route64Result!: Table<Route64ResultModel>;
   eightyThrewResult!: Table<EightyThrewResultModel>;
   shanghaiNightsResult!: Table<ShanghaiNightsResultModel>;
+  switchHitterResult!: Table<SwitchHitterResultModel>;
 
   constructor() {
     super('DartsHomes');
@@ -38,6 +40,7 @@ export class GameResultDexie extends Dexie {
       route64Result: '++id',
       eightyThrewResult: '++id',
       shanghaiNightsResult: '++id',
+      switchHitterResult: '++id',
     });
   }
 }
