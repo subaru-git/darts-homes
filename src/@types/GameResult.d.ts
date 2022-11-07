@@ -54,3 +54,9 @@ interface TonsUpResult {
   scores: point[][];
   playedAt: string;
 }
+
+interface Route64Result {
+  result: number;
+  scores: point[][];
+  playedAt: string;
+}
