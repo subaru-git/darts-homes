@@ -287,6 +287,11 @@ const GetNavItem = () => {
           subLabel: t.navigation.tonsup,
           href: '/tonsup',
         },
+        {
+          label: 'Route 64',
+          subLabel: t.navigation.route64,
+          href: '/route64',
+        },
       ],
     },
     {

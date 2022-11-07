@@ -23,6 +23,7 @@ import AroundTheCompassHistoryTable from '@/containers/AroundTheCompass/HistoryT
 import CricketMarkUpHistoryTable from '@/containers/CricketMarkUp/HistoryTable';
 import DoubleTroubleHistoryTable from '@/containers/DoubleTrouble/HistoryTable';
 import EaglesEyeHistoryTable from '@/containers/EaglesEye/HistoryTable';
+import Route64HistoryTable from '@/containers/Route64/HistoryTable';
 import Sweet16HistoryTable from '@/containers/Sweet16/HistoryTable';
 import TonsUpHistoryTable from '@/containers/TonsUp/HistoryTable';
 import TopsAndTensHistoryTable from '@/containers/TopsAndTens/HistoryTable';
@@ -64,6 +65,7 @@ const HistoryBoard: FC = () => {
           <Tab aria-label='two dart combinations'>Two-Dart Combinations</Tab>
           <Tab aria-label='around the compass'>Around The Compass</Tab>
           <Tab aria-label='tons up'>Tons Up</Tab>
+          <Tab aria-label='route 64'>Route 64</Tab>
         </TabList>
         <TabPanels>
           <TabPanel>
@@ -90,6 +92,9 @@ const HistoryBoard: FC = () => {
           <TabPanel>
             <TonsUpHistoryTable history={gameHistory.tonsUp} />
           </TabPanel>
+          <TabPanel>
+            <Route64HistoryTable history={gameHistory.route64} />
+          </TabPanel>
         </TabPanels>
       </Tabs>
     </Box>
@@ -112,6 +117,7 @@ const querier = async (setLoading: (isLoading: boolean) => void) => {
     .sortBy('playedAt');
   const tonsUp = await db.tonsUpResult.toCollection().reverse().sortBy('playedAt');
   setLoading(false);
+  const route64 = await db.route64Result.toCollection().reverse().sortBy('playedAt');
   return {
     cricketMarkUp,
     eaglesEye,
@@ -121,6 +127,7 @@ const querier = async (setLoading: (isLoading: boolean) => void) => {
     twoDartCombinations,
     aroundTheCompass,
     tonsUp,
+    route64,
   };
 };
 
@@ -133,5 +140,6 @@ const initialQuery = {
   twoDartCombinations: [],
   aroundTheCompass: [],
   tonsUp: [],
+  route64: [],
 };
 export default HistoryBoard;
