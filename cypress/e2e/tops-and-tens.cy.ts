@@ -3,6 +3,7 @@ describe('gaming Tops and Tens', () => {
     cy.clearLocalStorage();
     indexedDB.deleteDatabase('DartsHomes');
     cy.visit('/topsandtens');
+    cy.wait(100);
     cy.get('button[aria-label="setting"]').first().click();
     cy.get('button[aria-label="ok"]').click();
     [...Array(19)].forEach(() => {

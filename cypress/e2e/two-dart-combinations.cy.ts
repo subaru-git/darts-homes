@@ -26,6 +26,7 @@ describe('gaming Two-Dart Combinations', () => {
     cy.clearLocalStorage();
     indexedDB.deleteDatabase('DartsHomes');
     cy.visit('/twodartcombinations');
+    cy.wait(100);
     cy.get('button[aria-label="setting"]').first().click();
     cy.get('button[aria-label="ok"]').click();
     arrange.forEach((target, i) => {
