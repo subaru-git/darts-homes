@@ -10,12 +10,16 @@ import {
 } from 'react';
 import TwoDartCombinationsGame from '@/lib/TwoDartCombinationsGame/TwoDartCombinationsGame';
 
-const twoDartCombinationsGameContext = createContext<TwoDartCombinationsGame | null>(new TwoDartCombinationsGame());
-const setTwoDartCombinationsGameContext = createContext<Dispatch<SetStateAction<TwoDartCombinationsGame | null>>>(
-  () => undefined,
+const twoDartCombinationsGameContext = createContext<TwoDartCombinationsGame | null>(
+  new TwoDartCombinationsGame(),
 );
+const setTwoDartCombinationsGameContext = createContext<
+  Dispatch<SetStateAction<TwoDartCombinationsGame | null>>
+>(() => undefined);
 
-const TwoDartCombinationsGameContextProvider: FC<{ children: ReactNode | ReactNode[] }> = ({ children }) => {
+const TwoDartCombinationsGameContextProvider: FC<{ children: ReactNode | ReactNode[] }> = ({
+  children,
+}) => {
   const [game, setGame] = useState<TwoDartCombinationsGame | null>(null);
   useEffect(() => {
     const g = new TwoDartCombinationsGame();
@@ -29,7 +33,9 @@ const TwoDartCombinationsGameContextProvider: FC<{ children: ReactNode | ReactNo
   }, [game]);
   return (
     <twoDartCombinationsGameContext.Provider value={game}>
-      <setTwoDartCombinationsGameContext.Provider value={setGame}>{children}</setTwoDartCombinationsGameContext.Provider>
+      <setTwoDartCombinationsGameContext.Provider value={setGame}>
+        {children}
+      </setTwoDartCombinationsGameContext.Provider>
     </twoDartCombinationsGameContext.Provider>
   );
 };
@@ -37,4 +43,8 @@ const TwoDartCombinationsGameContextProvider: FC<{ children: ReactNode | ReactNo
 const useTwoDartCombinationsGame = () => useContext(twoDartCombinationsGameContext);
 const useTwoDartCombinationsGameSet = () => useContext(setTwoDartCombinationsGameContext);
 
-export { TwoDartCombinationsGameContextProvider, useTwoDartCombinationsGame, useTwoDartCombinationsGameSet };
+export {
+  TwoDartCombinationsGameContextProvider,
+  useTwoDartCombinationsGame,
+  useTwoDartCombinationsGameSet,
+};

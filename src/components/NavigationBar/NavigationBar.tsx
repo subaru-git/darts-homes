@@ -277,6 +277,11 @@ const GetNavItem = () => {
           subLabel: t.navigation.twodartcombinations,
           href: '/twodartcombinations',
         },
+        {
+          label: 'Around The Compass',
+          subLabel: t.navigation.aroundthecompass,
+          href: '/aroundthecompass',
+        },
       ],
     },
     {

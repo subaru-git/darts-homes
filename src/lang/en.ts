@@ -17,6 +17,7 @@ const text = {
     sweet16: '32 double out practice game',
     topsandtens: '40 double out practice game',
     twodartcombinations: 'Two darts double out practice game',
+    aroundthecompass: '24 double out practice game',
   },
   eagleseye: {
     description: ['It is a count-up where only BULLs are added.', 'BULL is separate.'],
@@ -51,6 +52,12 @@ const text = {
     description: [
       'You have just three darts at each finish from 41-60, which you must finish on a double with any combination you wish.',
       'Receive 15 points for every finish you complete. 15 points available every 3 darts; 300 overall.',
+    ],
+  },
+  aroundthecompass: {
+    description: [
+      'You have 20 visits to finish 24 using any combination but always finishing on a double, Recieve five points every time you complete the finish.',
+      "10point bonus for three double 12's (i.e. you get the double 12 first dart then follow it up with two more). 15 points available every 3 darts; 300 overall.",
     ],
   },
   import: {
