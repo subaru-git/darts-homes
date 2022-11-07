@@ -1,5 +1,6 @@
 import Dexie, { Table } from 'dexie';
 import { AroundTheCompassResultModel } from './AroundTheCompassResultModel';
+import { BullyBullyResultModel } from './BullyBullyResultModel';
 import { CricketMarkUpResultModel } from './CricketMarkUpResultModel';
 import { DoubleTroubleResultModel } from './DoubleTroubleResultModel';
 import { EaglesEyeResultModel } from './EaglesEyeResultModel';
@@ -25,6 +26,7 @@ export class GameResultDexie extends Dexie {
   eightyThrewResult!: Table<EightyThrewResultModel>;
   shanghaiNightsResult!: Table<ShanghaiNightsResultModel>;
   switchHitterResult!: Table<SwitchHitterResultModel>;
+  bullyBullyResult!: Table<BullyBullyResultModel>;
 
   constructor() {
     super('DartsHomes');
@@ -41,6 +43,7 @@ export class GameResultDexie extends Dexie {
       eightyThrewResult: '++id',
       shanghaiNightsResult: '++id',
       switchHitterResult: '++id',
+      bullyBullyResult: '++id',
     });
   }
 }

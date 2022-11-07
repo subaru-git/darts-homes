@@ -20,6 +20,7 @@ import { useLiveQuery } from 'dexie-react-hooks';
 import HistoryImportExport from '../ImportExport';
 import Loading from '@/components/Loading';
 import AroundTheCompassHistoryTable from '@/containers/AroundTheCompass/HistoryTable';
+import BullyBullyHistoryTable from '@/containers/BullyBully/HistoryTable';
 import CricketMarkUpHistoryTable from '@/containers/CricketMarkUp/HistoryTable';
 import DoubleTroubleHistoryTable from '@/containers/DoubleTrouble/HistoryTable';
 import EaglesEyeHistoryTable from '@/containers/EaglesEye/HistoryTable';
@@ -72,6 +73,7 @@ const HistoryBoard: FC = () => {
           <Tab aria-label='eighty threw'>Eighty Threw</Tab>
           <Tab aria-label='shanghai nights'>Shanghai Nights</Tab>
           <Tab aria-label='switch hitter'>Switch Hitter</Tab>
+          <Tab aria-label='bully bully'>Bully Bully</Tab>
         </TabList>
         <TabPanels>
           <TabPanel>
@@ -110,6 +112,9 @@ const HistoryBoard: FC = () => {
           <TabPanel>
             <SwitchHitterHistoryTable history={gameHistory.switchHitter} />
           </TabPanel>
+          <TabPanel>
+            <BullyBullyHistoryTable history={gameHistory.bullyBully} />
+          </TabPanel>
         </TabPanels>
       </Tabs>
     </Box>
@@ -136,6 +141,7 @@ const querier = async (setLoading: (isLoading: boolean) => void) => {
   const eightyThrew = await db.eightyThrewResult.toCollection().reverse().sortBy('playedAt');
   const shanghaiNights = await db.shanghaiNightsResult.toCollection().reverse().sortBy('playedAt');
   const switchHitter = await db.switchHitterResult.toCollection().reverse().sortBy('playedAt');
+  const bullyBully = await db.bullyBullyResult.toCollection().reverse().sortBy('playedAt');
   return {
     cricketMarkUp,
     eaglesEye,
@@ -149,6 +155,7 @@ const querier = async (setLoading: (isLoading: boolean) => void) => {
     eightyThrew,
     shanghaiNights,
     switchHitter,
+    bullyBully,
   };
 };
 
@@ -165,5 +172,6 @@ const initialQuery = {
   eightyThrew: [],
   shanghaiNights: [],
   switchHitter: [],
+  bullyBully: [],
 };
 export default HistoryBoard;

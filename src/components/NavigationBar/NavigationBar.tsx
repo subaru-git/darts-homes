@@ -307,6 +307,11 @@ const GetNavItem = () => {
           subLabel: t.navigation.switchhitter,
           href: '/switchhitter',
         },
+        {
+          label: 'Bully Bully',
+          subLabel: t.navigation.bullybully,
+          href: '/bullybully',
+        },
       ],
     },
     {

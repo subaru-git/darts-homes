@@ -78,3 +78,9 @@ interface SwitchHitterResult {
   scores: point[][];
   playedAt: string;
 }
+
+interface BullyBullyResult {
+  result: number;
+  scores: point[][];
+  playedAt: string;
+}
