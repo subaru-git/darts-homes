@@ -114,16 +114,6 @@ const MobileMain: FC<{ game: EaglesEyeGame; setGame: (game: EaglesEyeGame) => vo
         </Flex>
       </GridItem>
       <GridItem>
-        <CountBullButtons
-          onCount={(n) => {
-            const g = Object.assign(new EaglesEyeGame(), game);
-            g.addScore(n);
-            setGame(g);
-          }}
-          disabled={game.getRoundScore().length >= 3}
-        />
-      </GridItem>
-      <GridItem>
         <RoundScore
           scores={game.getRoundScore()}
           onClear={() => {
@@ -144,6 +134,17 @@ const MobileMain: FC<{ game: EaglesEyeGame; setGame: (game: EaglesEyeGame) => vo
           result={getResult(game)}
         />
       </GridItem>
+      <GridItem>
+        <CountBullButtons
+          onCount={(n) => {
+            const g = Object.assign(new EaglesEyeGame(), game);
+            g.addScore(n);
+            setGame(g);
+          }}
+          disabled={game.getRoundScore().length >= 3}
+        />
+      </GridItem>
+
       <GridItem>
         <RoundBoard score={game.getScore()} />
       </GridItem>

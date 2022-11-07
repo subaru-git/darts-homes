@@ -25,6 +25,7 @@ const text = {
     eightythrew: '82ダブルアウト練習ゲーム',
     shanghainights: '120ダブルアウト練習ゲーム',
     switchhitter: '19練習ゲーム',
+    bullybully: 'BULL練習ゲーム',
   },
   eagleseye: {
     description: ['BULLだけが加点されるカウントアップです。', 'BULLはセパレートです。'],
@@ -98,6 +99,13 @@ const text = {
     description: [
       '各ラウンドで19点を狙います。',
       'トリプルが5点、それ以外が2点で、19を外すと0点です。171点を取るとボーナス10点です。',
+      'ラウンドごとに25点、合計500点を獲得します。',
+    ],
+  },
+  bullybully: {
+    description: [
+      '各ラウンドでBULLを狙います。',
+      'InnerBULLが5点、OuterBULLが2点で、BULLを外すと0点です。BULLに3回入るとボーナス10点です。',
       'ラウンドごとに25点、合計500点を獲得します。',
     ],
   },
