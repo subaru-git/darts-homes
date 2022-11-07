@@ -18,6 +18,7 @@ describe('gaming Cricket Mark-Up', () => {
     cy.get('button[aria-label="outer bull"]').first().click();
     cy.get('button[aria-label="inner bull"]').first().click();
     cy.get('button[aria-label="round over"]').first().click();
+    cy.wait(1000);
     cy.get('button[aria-label="new game"]').first().click();
     cy.visit('/history');
     cy.get('tr').should('have.length', 2);

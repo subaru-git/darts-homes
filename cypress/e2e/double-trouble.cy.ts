@@ -16,6 +16,7 @@ describe('gaming Double Trouble', () => {
     cy.get('button[aria-label="20 double"]').first().click({ force: true });
     cy.get('button[aria-label="20 double"]').first().click({ force: true });
     cy.get('button[aria-label="round over"]').first().click({ force: true });
+    cy.wait(1000);
     cy.get('button[aria-label="new game"]').first().click();
     cy.visit('/history');
     cy.get('button[aria-label="double trouble"]').click();

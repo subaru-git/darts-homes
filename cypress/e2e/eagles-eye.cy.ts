@@ -37,6 +37,7 @@ describe("gaming Eagle's Eye", () => {
     cy.get('button[aria-label="outer bull"]').first().click({ force: true });
     cy.get('button[aria-label="non bull"]').first().click({ force: true });
     cy.get('button[aria-label="round over"]').first().click({ force: true });
+    cy.wait(1000);
     cy.get('button[aria-label="new game"]').first().click();
     cy.visit('/history');
     cy.get('button[aria-label="eagle\'s eye"]').click();

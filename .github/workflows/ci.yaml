@@ -26,7 +26,6 @@ jobs:
           start: yarn start
           browser: chrome
           headless: true
-          record: false
           wait-on: 'http://127.0.0.1:3000'
           wait-on-timeout: 300
       - name: upload artifact
