@@ -26,6 +26,8 @@ describe('Travel all pages', () => {
     cy.get('div[data-cy="eighty-threw-main"]').should('be.visible');
     cy.visit('/shanghainights');
     cy.get('div[data-cy="shanghai-nights-main"]').should('be.visible');
+    cy.visit('/switchhitter');
+    cy.get('div[data-cy="switch-hitter-main"]').should('be.visible');
     cy.visit('/respect');
     cy.get('div[data-cy="respect-main"]').should('be.visible');
     cy.visit('/history');
@@ -54,6 +56,8 @@ describe('Travel all pages', () => {
     cy.get('div[data-cy="eighty-threw-main"]').should('be.visible');
     cy.visit('/ja/shanghainights');
     cy.get('div[data-cy="shanghai-nights-main"]').should('be.visible');
+    cy.visit('/ja/switchhitter');
+    cy.get('div[data-cy="switch-hitter-main"]').should('be.visible');
     cy.visit('/ja/respect');
     cy.get('div[data-cy="respect-main"]').should('be.visible');
     cy.visit('/ja/history');
@@ -82,6 +86,8 @@ describe('Travel all pages', () => {
     cy.get('div[data-cy="eighty-threw-main"]').should('be.visible');
     cy.visit('/en/shanghainights');
     cy.get('div[data-cy="shanghai-nights-main"]').should('be.visible');
+    cy.visit('/en/switchhitter');
+    cy.get('div[data-cy="switch-hitter-main"]').should('be.visible');
     cy.visit('/en/respect');
     cy.get('div[data-cy="respect-main"]').should('be.visible');
     cy.visit('/en/history');

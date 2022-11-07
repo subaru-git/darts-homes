@@ -27,6 +27,7 @@ import EightyThrewHistoryTable from '@/containers/EightyThrew/HistoryTable';
 import Route64HistoryTable from '@/containers/Route64/HistoryTable';
 import ShanghaiNightsHistoryTable from '@/containers/ShanghaiNights/HistoryTable';
 import Sweet16HistoryTable from '@/containers/Sweet16/HistoryTable';
+import SwitchHitterHistoryTable from '@/containers/SwitchHitter/HistoryTable';
 import TonsUpHistoryTable from '@/containers/TonsUp/HistoryTable';
 import TopsAndTensHistoryTable from '@/containers/TopsAndTens/HistoryTable';
 import TwoDartCombinationsHistoryTable from '@/containers/TwoDartCombinations/HistoryTable';
@@ -70,6 +71,7 @@ const HistoryBoard: FC = () => {
           <Tab aria-label='route 64'>Route 64</Tab>
           <Tab aria-label='eighty threw'>Eighty Threw</Tab>
           <Tab aria-label='shanghai nights'>Shanghai Nights</Tab>
+          <Tab aria-label='switch hitter'>Switch Hitter</Tab>
         </TabList>
         <TabPanels>
           <TabPanel>
@@ -105,6 +107,9 @@ const HistoryBoard: FC = () => {
           <TabPanel>
             <ShanghaiNightsHistoryTable history={gameHistory.shanghaiNights} />
           </TabPanel>
+          <TabPanel>
+            <SwitchHitterHistoryTable history={gameHistory.switchHitter} />
+          </TabPanel>
         </TabPanels>
       </Tabs>
     </Box>
@@ -130,6 +135,7 @@ const querier = async (setLoading: (isLoading: boolean) => void) => {
   const route64 = await db.route64Result.toCollection().reverse().sortBy('playedAt');
   const eightyThrew = await db.eightyThrewResult.toCollection().reverse().sortBy('playedAt');
   const shanghaiNights = await db.shanghaiNightsResult.toCollection().reverse().sortBy('playedAt');
+  const switchHitter = await db.switchHitterResult.toCollection().reverse().sortBy('playedAt');
   return {
     cricketMarkUp,
     eaglesEye,
@@ -142,6 +148,7 @@ const querier = async (setLoading: (isLoading: boolean) => void) => {
     route64,
     eightyThrew,
     shanghaiNights,
+    switchHitter,
   };
 };
 
@@ -157,5 +164,6 @@ const initialQuery = {
   route64: [],
   eightyThrew: [],
   shanghaiNights: [],
+  switchHitter: [],
 };
 export default HistoryBoard;

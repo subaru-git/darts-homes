@@ -119,7 +119,7 @@ const DesktopNav: FC<{ items: NavItem[] }> = ({ items }) => {
                 rounded={'xl'}
                 minW={'sm'}
               >
-                <Stack>
+                <Stack maxH='80vh' overflowY='scroll'>
                   {navItem.children.map((child) => (
                     <DesktopSubNav key={child.label} {...child} />
                   ))}
@@ -301,6 +301,11 @@ const GetNavItem = () => {
           label: 'Shanghai Nights',
           subLabel: t.navigation.shanghainights,
           href: '/shanghainights',
+        },
+        {
+          label: 'Switch Hitter',
+          subLabel: t.navigation.switchhitter,
+          href: '/switchhitter',
         },
       ],
     },

@@ -22,6 +22,7 @@ const text = {
     route64: '64 double out practice game',
     eightythrew: '82 double out practice game',
     shanghainights: '120 double out practice game',
+    switchhitter: '19 practice game',
   },
   eagleseye: {
     description: ['It is a count-up where only BULLs are added.', 'BULL is separate.'],
@@ -89,6 +90,13 @@ const text = {
       'You have 20 visits and your task is to finish 120 as any times as possible.',
       'Receive ten points every time you take out the combination. Ten points bonuses for three double-tops.',
       '20 points available every 3 darts; 400 overall.',
+    ],
+  },
+  switchhitter: {
+    description: [
+      'You have 60 darts at treble 19 - receive five points per treble 19, two points for a single 19 and a ten point bonus for a 171.',
+      'You receive no points for a dart which lands outside of the treble or single 19 beds.',
+      '25 points available every 3 darts; 500 overall.',
     ],
   },
   import: {

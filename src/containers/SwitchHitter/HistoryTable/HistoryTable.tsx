@@ -12,16 +12,16 @@ import {
 } from '@chakra-ui/react';
 import { MdDeleteForever } from 'react-icons/md';
 import HistoryDeleteAlert from '@/containers/History/DeleteAlert';
-import { ShanghaiNightsResultModel } from '@/db/ShanghaiNightsResultModel';
+import { SwitchHitterResultModel } from '@/db/SwitchHitterResultModel';
 import { db } from '@/db/db';
 import { deleteFromDB } from '@/lib/GameHistoryManager/GameHistory';
 
 type HistoryTableProps = {
-  history: ShanghaiNightsResultModel[];
+  history: SwitchHitterResultModel[];
 };
 
 const HistoryTable: FC<HistoryTableProps> = ({ history }) => {
-  const [deleteHistory, setDeleteHistory] = useState<ShanghaiNightsResultModel | undefined>(
+  const [deleteHistory, setDeleteHistory] = useState<SwitchHitterResultModel | undefined>(
     undefined,
   );
   const isMd = useBreakpointValue({ base: false, md: true });
@@ -57,7 +57,7 @@ const HistoryTable: FC<HistoryTableProps> = ({ history }) => {
       </TableContainer>
       {deleteHistory ? (
         <HistoryDeleteAlert
-          message={`Shanghai Nights: ${new Date(deleteHistory.playedAt).toLocaleString('ja-JP', {
+          message={`Switch Hitter: ${new Date(deleteHistory.playedAt).toLocaleString('ja-JP', {
             year: 'numeric',
             month: '2-digit',
             day: '2-digit',
@@ -68,7 +68,7 @@ const HistoryTable: FC<HistoryTableProps> = ({ history }) => {
           isOpen={isOpen}
           onClose={onClose}
           onDelete={() => {
-            deleteFromDB(deleteHistory.id, db.shanghaiNightsResult);
+            deleteFromDB(deleteHistory.id, db.switchHitterResult);
             onClose();
           }}
         />
@@ -78,14 +78,14 @@ const HistoryTable: FC<HistoryTableProps> = ({ history }) => {
 };
 
 const DesktopHistoryRow: FC<{
-  history: ShanghaiNightsResultModel;
+  history: SwitchHitterResultModel;
   onDelete: () => void;
 }> = ({ history, onDelete }) => {
   return (
     <>
       <Tr key={`${history.playedAt}-game`} bg='green.100'>
         <Td colSpan={4} p={1}>
-          Shanghai Nights
+          Switch Hitter
         </Td>
         <Td colSpan={2} p={1} textAlign='end'>
           <Text>
@@ -121,14 +121,14 @@ const DesktopHistoryRow: FC<{
 };
 
 const MobileRow: FC<{
-  history: ShanghaiNightsResultModel;
+  history: SwitchHitterResultModel;
   onDelete: () => void;
 }> = ({ history, onDelete }) => {
   return (
     <>
       <Tr bg='green.100'>
         <Td p={0} fontSize='xs'>
-          Shanghai Nights
+          Switch Hitter
         </Td>
         <Td p={0} fontSize='xs' textAlign='start'>
           <Text>
