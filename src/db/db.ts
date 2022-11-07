@@ -3,6 +3,7 @@ import { AroundTheCompassResultModel } from './AroundTheCompassResultModel';
 import { CricketMarkUpResultModel } from './CricketMarkUpResultModel';
 import { DoubleTroubleResultModel } from './DoubleTroubleResultModel';
 import { EaglesEyeResultModel } from './EaglesEyeResultModel';
+import { EightyThrewResultModel } from './EightyThrewResultModel';
 import { Route64ResultModel } from './Route64ResultModel';
 import { Sweet16ResultModel } from './Sweet16ResultModel';
 import { TonsUpResultModel } from './TonsUpResultModel';
@@ -19,6 +20,7 @@ export class GameResultDexie extends Dexie {
   aroundTheCompassResult!: Table<AroundTheCompassResultModel>;
   tonsUpResult!: Table<TonsUpResultModel>;
   route64Result!: Table<Route64ResultModel>;
+  eightyThrewResult!: Table<EightyThrewResultModel>;
 
   constructor() {
     super('DartsHomes');
@@ -32,6 +34,7 @@ export class GameResultDexie extends Dexie {
       aroundTheCompassResult: '++id',
       tonsUpResult: '++id',
       route64Result: '++id',
+      eightyThrewResult: '++id',
     });
   }
 }
