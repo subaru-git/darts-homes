@@ -3,18 +3,18 @@ describe('gaming Sweet 16', () => {
     cy.clearLocalStorage();
     indexedDB.deleteDatabase('DartsHomes');
     cy.visit('/sweet16');
-    cy.get('button[aria-label="setting"]').first().click({ force: true });
+    cy.get('button[aria-label="setting"]').first().click();
     cy.get('button[aria-label="ok"]').click();
     [...Array(19)].forEach(() => {
-      cy.get(`button[aria-label="16 double"]`).first().click({ force: true });
-      cy.get(`button[aria-label="16"]`).first().click({ force: true });
-      cy.get(`button[aria-label="8 double"]`).first().click({ force: true });
-      cy.get('button[aria-label="round change"]').first().click({ force: true });
+      cy.get(`button[aria-label="16 double"]`).first().click();
+      cy.get(`button[aria-label="16"]`).first().click();
+      cy.get(`button[aria-label="8 double"]`).first().click();
+      cy.get('button[aria-label="round change"]').first().click();
     });
-    cy.get('button[aria-label="16 double"]').first().click({ force: true });
-    cy.get('button[aria-label="16 double"]').first().click({ force: true });
-    cy.get('button[aria-label="16 double"]').first().click({ force: true });
-    cy.get('button[aria-label="round over"]').first().click({ force: true });
+    cy.get('button[aria-label="16 double"]').first().click();
+    cy.get('button[aria-label="16 double"]').first().click();
+    cy.get('button[aria-label="16 double"]').first().click();
+    cy.get('button[aria-label="round over"]').first().click();
     cy.wait(1000);
     cy.get('button[aria-label="new game"]').first().click();
     cy.visit('/history');
