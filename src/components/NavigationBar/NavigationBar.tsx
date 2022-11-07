@@ -292,6 +292,11 @@ const GetNavItem = () => {
           subLabel: t.navigation.route64,
           href: '/route64',
         },
+        {
+          label: 'Eighty Threw',
+          subLabel: t.navigation.eightythrew,
+          href: '/eightythrew',
+        },
       ],
     },
     {

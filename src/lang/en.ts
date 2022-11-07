@@ -20,6 +20,7 @@ const text = {
     aroundthecompass: '24 double out practice game',
     tonsup: '100 double out practice game',
     route64: '64 double out practice game',
+    eightythrew: '82 double out practice game',
   },
   eagleseye: {
     description: ['It is a count-up where only BULLs are added.', 'BULL is separate.'],
@@ -72,6 +73,13 @@ const text = {
     description: [
       'You have 20 visits to the oche needing 64, which you have to finish in three darts using any combination you wish.',
       'Receive ten points for every finish you complete and a ten point bonus for first two dart finishes.',
+      '20 points available every 3 darts; 400 overall.',
+    ],
+  },
+  eightythrew: {
+    description: [
+      'You have 20 visits to the oche needing 82, which is one of the most popular combinations and you have to finish in two or three darts using any method you wish. ',
+      'Receive ten points for every finish you complete and ten point bonuses for two darters.',
       '20 points available every 3 darts; 400 overall.',
     ],
   },

@@ -60,3 +60,9 @@ interface Route64Result {
   scores: point[][];
   playedAt: string;
 }
+
+interface EightyThrewResult {
+  result: number;
+  scores: point[][];
+  playedAt: string;
+}
