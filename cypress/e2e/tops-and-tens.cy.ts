@@ -17,7 +17,7 @@ describe('gaming Tops and Tens', () => {
     cy.get('button[aria-label="5 double"]').first().click();
     cy.get('button[aria-label="round over"]').first().click();
     cy.wait(1000);
-    cy.get('button[aria-label="new game"]').first().click({ force: true });
+    cy.get('button[aria-label="new game"]').first().click();
     cy.visit('/history');
     cy.get('button[aria-label="tops and tens"]').click();
     cy.get('tr').should('have.length', 2);
