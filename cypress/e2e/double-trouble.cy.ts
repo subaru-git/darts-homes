@@ -4,7 +4,7 @@ describe('gaming Double Trouble', () => {
     indexedDB.deleteDatabase('DartsHomes');
     cy.visit('/doubletrouble');
     cy.wait(100);
-    cy.get('button[aria-label="setting"]').first().click();
+    cy.get('button[aria-label="setting"]').first().click({ force: true });
     cy.get('button[aria-label="ok"]').click();
     [...Array(19)].forEach((_, i) => {
       const n = i + 1;

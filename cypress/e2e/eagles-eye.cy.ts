@@ -4,7 +4,7 @@ describe("gaming Eagle's Eye", () => {
     indexedDB.deleteDatabase('DartsHomes');
     cy.visit('/eagleseye');
     cy.wait(100);
-    cy.get('button[aria-label="setting"]').first().click();
+    cy.get('button[aria-label="setting"]').first().click({ force: true });
     cy.get('button[aria-label="ok"]').click();
     cy.get('button[aria-label="inner bull"]').first().click();
     cy.get('button[aria-label="outer bull"]').first().click({ force: true });
