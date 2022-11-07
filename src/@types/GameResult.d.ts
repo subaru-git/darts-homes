@@ -48,3 +48,9 @@ interface AroundTheCompassResult {
   scores: point[][];
   playedAt: string;
 }
+
+interface TonsUpResult {
+  result: number;
+  scores: point[][];
+  playedAt: string;
+}

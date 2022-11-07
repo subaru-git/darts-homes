@@ -24,6 +24,7 @@ import CricketMarkUpHistoryTable from '@/containers/CricketMarkUp/HistoryTable';
 import DoubleTroubleHistoryTable from '@/containers/DoubleTrouble/HistoryTable';
 import EaglesEyeHistoryTable from '@/containers/EaglesEye/HistoryTable';
 import Sweet16HistoryTable from '@/containers/Sweet16/HistoryTable';
+import TonsUpHistoryTable from '@/containers/TonsUp/HistoryTable';
 import TopsAndTensHistoryTable from '@/containers/TopsAndTens/HistoryTable';
 import TwoDartCombinationsHistoryTable from '@/containers/TwoDartCombinations/HistoryTable';
 import { db } from '@/db/db';
@@ -31,39 +32,7 @@ import useLocale from '@/hooks/locale';
 
 const HistoryBoard: FC = () => {
   const [loading, setLoading] = useState(true);
-  const gameHistory = useLiveQuery(async () => {
-    const cricketMarkUp = await db.cricketMarkUpResult.toCollection().reverse().sortBy('playedAt');
-    const eaglesEye = await db.eaglesEyeResult.toCollection().reverse().sortBy('playedAt');
-    const doubleTrouble = await db.doubleTroubleResult.toCollection().reverse().sortBy('playedAt');
-    const sweet16 = await db.sweet16Result.toCollection().reverse().sortBy('playedAt');
-    const topsAndTens = await db.topsAndTensResult.toCollection().reverse().sortBy('playedAt');
-    const twoDartCombinations = await db.twoDartCombinationsResult
-      .toCollection()
-      .reverse()
-      .sortBy('playedAt');
-    setLoading(false);
-    const aroundTheCompass = await db.aroundTheCompassResult
-      .toCollection()
-      .reverse()
-      .sortBy('playedAt');
-    return {
-      cricketMarkUp,
-      eaglesEye,
-      doubleTrouble,
-      sweet16,
-      topsAndTens,
-      twoDartCombinations,
-      aroundTheCompass,
-    };
-  }) || {
-    cricketMarkUp: [],
-    eaglesEye: [],
-    doubleTrouble: [],
-    sweet16: [],
-    topsAndTens: [],
-    twoDartCombinations: [],
-    aroundTheCompass: [],
-  };
+  const gameHistory = useLiveQuery(async () => querier(setLoading)) || initialQuery;
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { t } = useLocale();
   if (loading) return <Loading />;
@@ -86,7 +55,7 @@ const HistoryBoard: FC = () => {
         <HistoryImportExport onError={onOpen} />
       </Flex>
       <Tabs>
-        <TabList>
+        <TabList overflowX='scroll' whiteSpace='nowrap'>
           <Tab aria-label='cricket mark up'>Cricket Mark-Up</Tab>
           <Tab aria-label="eagle's eye">{"Eagle's Eye"}</Tab>
           <Tab aria-label='double trouble'>Double Trouble</Tab>
@@ -94,6 +63,7 @@ const HistoryBoard: FC = () => {
           <Tab aria-label='tops and tens'>Tops and Tens</Tab>
           <Tab aria-label='two dart combinations'>Two-Dart Combinations</Tab>
           <Tab aria-label='around the compass'>Around The Compass</Tab>
+          <Tab aria-label='tons up'>Tons Up</Tab>
         </TabList>
         <TabPanels>
           <TabPanel>
@@ -117,10 +87,51 @@ const HistoryBoard: FC = () => {
           <TabPanel>
             <AroundTheCompassHistoryTable history={gameHistory.aroundTheCompass} />
           </TabPanel>
+          <TabPanel>
+            <TonsUpHistoryTable history={gameHistory.tonsUp} />
+          </TabPanel>
         </TabPanels>
       </Tabs>
     </Box>
   );
 };
 
+const querier = async (setLoading: (isLoading: boolean) => void) => {
+  const cricketMarkUp = await db.cricketMarkUpResult.toCollection().reverse().sortBy('playedAt');
+  const eaglesEye = await db.eaglesEyeResult.toCollection().reverse().sortBy('playedAt');
+  const doubleTrouble = await db.doubleTroubleResult.toCollection().reverse().sortBy('playedAt');
+  const sweet16 = await db.sweet16Result.toCollection().reverse().sortBy('playedAt');
+  const topsAndTens = await db.topsAndTensResult.toCollection().reverse().sortBy('playedAt');
+  const twoDartCombinations = await db.twoDartCombinationsResult
+    .toCollection()
+    .reverse()
+    .sortBy('playedAt');
+  const aroundTheCompass = await db.aroundTheCompassResult
+    .toCollection()
+    .reverse()
+    .sortBy('playedAt');
+  const tonsUp = await db.tonsUpResult.toCollection().reverse().sortBy('playedAt');
+  setLoading(false);
+  return {
+    cricketMarkUp,
+    eaglesEye,
+    doubleTrouble,
+    sweet16,
+    topsAndTens,
+    twoDartCombinations,
+    aroundTheCompass,
+    tonsUp,
+  };
+};
+
+const initialQuery = {
+  cricketMarkUp: [],
+  eaglesEye: [],
+  doubleTrouble: [],
+  sweet16: [],
+  topsAndTens: [],
+  twoDartCombinations: [],
+  aroundTheCompass: [],
+  tonsUp: [],
+};
 export default HistoryBoard;

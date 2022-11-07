@@ -1,6 +1,7 @@
 export const convertScoreToNumber = (score: point, separate: boolean = false) => {
   if (score === 'S-BULL') return separate ? 25 : 50;
   if (score === 'D-BULL') return 50;
+  if (score === 'OUT') return 0;
   if (score.includes('T')) return Number(score.split('T')[0]) * 3;
   if (score.includes('D')) return Number(score.split('D')[0]) * 2;
   return Number(score);
