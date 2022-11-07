@@ -4,6 +4,7 @@ import { CricketMarkUpResultModel } from './CricketMarkUpResultModel';
 import { DoubleTroubleResultModel } from './DoubleTroubleResultModel';
 import { EaglesEyeResultModel } from './EaglesEyeResultModel';
 import { Sweet16ResultModel } from './Sweet16ResultModel';
+import { TonsUpResultModel } from './TonsUpResultModel';
 import { TopsAndTensResultModel } from './TopsAndTensResultModel';
 import { TwoDartCombinationsResultModel } from './TwoDartCombinationsResultModel';
 
@@ -15,6 +16,7 @@ export class GameResultDexie extends Dexie {
   topsAndTensResult!: Table<TopsAndTensResultModel>;
   twoDartCombinationsResult!: Table<TwoDartCombinationsResultModel>;
   aroundTheCompassResult!: Table<AroundTheCompassResultModel>;
+  tonsUpResult!: Table<TonsUpResultModel>;
 
   constructor() {
     super('DartsHomes');
@@ -26,6 +28,7 @@ export class GameResultDexie extends Dexie {
       topsAndTensResult: '++id',
       twoDartCombinationsResult: '++id',
       aroundTheCompassResult: '++id',
+      tonsUpResult: '++id',
     });
   }
 }

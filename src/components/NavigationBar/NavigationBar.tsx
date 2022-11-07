@@ -282,6 +282,11 @@ const GetNavItem = () => {
           subLabel: t.navigation.aroundthecompass,
           href: '/aroundthecompass',
         },
+        {
+          label: 'Tons Up',
+          subLabel: t.navigation.tonsup,
+          href: '/tonsup',
+        },
       ],
     },
     {

@@ -1,5 +1,7 @@
 describe('Travel all pages', () => {
   it('by URL', () => {
+    cy.clearLocalStorage();
+    indexedDB.deleteDatabase('DartsHomes');
     cy.visit('/');
     cy.get('div[data-cy="home-main"]').should('be.visible');
     cy.visit('/n01');
@@ -16,6 +18,8 @@ describe('Travel all pages', () => {
     cy.get('div[data-cy="tops-and-tens-main"]').should('be.visible');
     cy.visit('/twodartcombinations');
     cy.get('div[data-cy="two-dart-combinations-main"]').should('be.visible');
+    cy.visit('/tonsup');
+    cy.get('div[data-cy="tons-up-main"]').should('be.visible');
     cy.visit('/respect');
     cy.get('div[data-cy="respect-main"]').should('be.visible');
     cy.visit('/history');
@@ -36,6 +40,8 @@ describe('Travel all pages', () => {
     cy.get('div[data-cy="tops-and-tens-main"]').should('be.visible');
     cy.visit('/ja/twodartcombinations');
     cy.get('div[data-cy="two-dart-combinations-main"]').should('be.visible');
+    cy.visit('/ja/tonsup');
+    cy.get('div[data-cy="tons-up-main"]').should('be.visible');
     cy.visit('/ja/respect');
     cy.get('div[data-cy="respect-main"]').should('be.visible');
     cy.visit('/ja/history');
@@ -56,6 +62,8 @@ describe('Travel all pages', () => {
     cy.get('div[data-cy="tops-and-tens-main"]').should('be.visible');
     cy.visit('/en/twodartcombinations');
     cy.get('div[data-cy="two-dart-combinations-main"]').should('be.visible');
+    cy.visit('/en/tonsup');
+    cy.get('div[data-cy="tons-up-main"]').should('be.visible');
     cy.visit('/en/respect');
     cy.get('div[data-cy="respect-main"]').should('be.visible');
     cy.visit('/en/history');

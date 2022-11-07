@@ -1,6 +1,3 @@
----
-to: src/containers/<%= name %>/Main.tsx
----
 import React, { FC } from 'react';
 import { Box, Flex } from '@chakra-ui/react';
 import Description from './Description';
@@ -12,16 +9,16 @@ import NavigationBar from '@/components/NavigationBar';
 import RoundBoard from '@/components/RoundBoard';
 import RoundScore from '@/components/RoundScore';
 import TargetBoard from '@/components/TargetBoard';
-import { use<%= name %>Game, use<%= name %>GameSet } from '@/contexts/<%= name %>GameContext';
+import { useTonsUpGame, useTonsUpGameSet } from '@/contexts/TonsUpGameContext';
 import { db } from '@/db/db';
 import { saveToDB } from '@/lib/GameHistoryManager/GameHistory';
-import <%= name %>Game from '@/lib/<%= name %>Game/<%= name %>Game';
+import TonsUpGame from '@/lib/TonsUpGame/TonsUpGame';
 
 const Main: FC = () => {
-  const game = use<%= name %>Game();
-  const setGame = use<%= name %>GameSet();
+  const game = useTonsUpGame();
+  const setGame = useTonsUpGameSet();
   return (
-    <div data-cy='<%= h.changeCase.title(name) %>-main'>
+    <div data-cy='tons-up-main'>
       <NavigationBar />
       {!game ? (
         <Loading />
@@ -40,14 +37,14 @@ const Main: FC = () => {
   );
 };
 
-const DesktopMain: FC<{ game: <%= name %>Game; setGame: (game: <%= name %>Game) => void }> = ({
+const DesktopMain: FC<{ game: TonsUpGame; setGame: (game: TonsUpGame) => void }> = ({
   game,
   setGame,
 }) => {
   return (
     <div>
       <Flex justifyContent='space-between' alignItems='center'>
-        <NewGame onNewGame={() => setGame(new <%= name %>Game())} />
+        <NewGame onNewGame={() => setGame(new TonsUpGame(20))} />
         <Description />
       </Flex>
       <Flex justifyContent='space-around' gap={4} alignItems='center' p={4}>
@@ -62,28 +59,28 @@ const DesktopMain: FC<{ game: <%= name %>Game; setGame: (game: <%= name %>Game) 
           <RoundScore
             scores={game.getRoundScore()}
             onClear={() => {
-              const g = Object.assign(new <%= name %>Game(), game);
+              const g = Object.assign(new TonsUpGame(20), game);
               g.removeScore();
               setGame(g);
             }}
             onRoundChange={() => {
-              const g = Object.assign(new <%= name %>Game(), game);
+              const g = Object.assign(new TonsUpGame(20), game);
               g.roundChange();
               setGame(g);
             }}
             isFinished={game.isFinish()}
             onRoundOver={() => {
-              saveToDB(game.getGameResult(), db.<%= h.changeCase.camel(name) %>Result);
-              setGame(new <%= name %>Game());
+              saveToDB(game.getGameResult(), db.tonsUpResult);
+              setGame(new TonsUpGame(20));
             }}
             result={getResult(game)}
           />
         </Box>
         <Box minWidth={250}>
           <CountButtons
-            buttons={[16, 8, 4, 2, 1]}
+            buttons={[20, 19, 10, 5, 1]}
             onCount={(n) => {
-              const g = Object.assign(new <%= name %>Game(), game);
+              const g = Object.assign(new TonsUpGame(20), game);
               g.addScore(n);
               setGame(g);
             }}
@@ -99,16 +96,16 @@ const DesktopMain: FC<{ game: <%= name %>Game; setGame: (game: <%= name %>Game) 
   );
 };
 
-const MobileMain: FC<{ game: <%= name %>Game; setGame: (game: <%= name %>Game) => void }> = ({
+const MobileMain: FC<{ game: TonsUpGame; setGame: (game: TonsUpGame) => void }> = ({
   game,
   setGame,
 }) => {
   return (
     <Flex direction='column' gap={4}>
       <Flex justifyContent='space-between' width='100%'>
-        <NewGame onNewGame={() => setGame(new <%= name %>Game())} />
+        <NewGame onNewGame={() => setGame(new TonsUpGame(20))} />
         <Flex alignItems='center' gap={4}>
-          <TargetBoard 
+          <TargetBoard
             message={`Round ${game.getRound()}`}
             target={game.getCurrentTarget().toString()}
           />
@@ -120,28 +117,28 @@ const MobileMain: FC<{ game: <%= name %>Game; setGame: (game: <%= name %>Game) =
         <RoundScore
           scores={game.getRoundScore()}
           onClear={() => {
-            const g = Object.assign(new <%= name %>Game(), game);
+            const g = Object.assign(new TonsUpGame(20), game);
             g.removeScore();
             setGame(g);
           }}
           onRoundChange={() => {
-            const g = Object.assign(new <%= name %>Game(), game);
+            const g = Object.assign(new TonsUpGame(20), game);
             g.roundChange();
             setGame(g);
           }}
           isFinished={game.isFinish()}
           onRoundOver={() => {
-            saveToDB(game.getGameResult(), db.<%= h.changeCase.camel(name) %>Result);
-            setGame(new <%= name %>Game());
+            saveToDB(game.getGameResult(), db.tonsUpResult);
+            setGame(new TonsUpGame(20));
           }}
           result={getResult(game)}
         />
       </Box>
       <Box px={2}>
         <CountButtons
-          buttons={[16, 8, 4, 2, 1]}
+          buttons={[20, 19, 10, 5, 1]}
           onCount={(n) => {
-            const g = Object.assign(new <%= name %>Game(), game);
+            const g = Object.assign(new TonsUpGame(20), game);
             g.addScore(n);
             setGame(g);
           }}
@@ -156,6 +153,6 @@ const MobileMain: FC<{ game: <%= name %>Game; setGame: (game: <%= name %>Game) =
   );
 };
 
-const getResult = (game: <%= name %>Game) => `Total: ${game.getGameResult().result}`;
+const getResult = (game: TonsUpGame) => `Total: ${game.getGameResult().result}`;
 
 export default Main;
