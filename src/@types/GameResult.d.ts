@@ -42,3 +42,9 @@ interface TopsAndTensResult {
   scores: point[][];
   playedAt: string;
 }
+
+interface AroundTheCompassResult {
+  result: number;
+  scores: point[][];
+  playedAt: string;
+}

@@ -19,6 +19,7 @@ const text = {
     sweet16: '32ダブルアウト練習ゲーム',
     topsandtens: '40ダブルアウト練習ゲーム',
     twodartcombinations: '2ダーツダブルアウト練習ゲーム',
+    aroundthecompass: '24ダブルアウト練習ゲーム',
   },
   eagleseye: {
     description: ['BULLだけが加点されるカウントアップです。', 'BULLはセパレートです。'],
@@ -56,6 +57,12 @@ const text = {
     description: [
       '41から60まで、各ラウンドでダブルフィニッシュをする必要があります。',
       'ダブルフィニッシュ15点、合計300点を獲得します。',
+    ],
+  },
+  aroundthecompass: {
+    description: [
+      '20ラウンドで24点をダブルアウトする必要があります。',
+      '24点をフィニッシュするごとに5点、3ダーツごとに15点、合計300点を獲得します。',
     ],
   },
   import: {

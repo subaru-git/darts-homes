@@ -19,6 +19,7 @@ import {
 import { useLiveQuery } from 'dexie-react-hooks';
 import HistoryImportExport from '../ImportExport';
 import Loading from '@/components/Loading';
+import AroundTheCompassHistoryTable from '@/containers/AroundTheCompass/HistoryTable';
 import CricketMarkUpHistoryTable from '@/containers/CricketMarkUp/HistoryTable';
 import DoubleTroubleHistoryTable from '@/containers/DoubleTrouble/HistoryTable';
 import EaglesEyeHistoryTable from '@/containers/EaglesEye/HistoryTable';
@@ -41,7 +42,19 @@ const HistoryBoard: FC = () => {
       .reverse()
       .sortBy('playedAt');
     setLoading(false);
-    return { cricketMarkUp, eaglesEye, doubleTrouble, sweet16, topsAndTens, twoDartCombinations };
+    const aroundTheCompass = await db.aroundTheCompassResult
+      .toCollection()
+      .reverse()
+      .sortBy('playedAt');
+    return {
+      cricketMarkUp,
+      eaglesEye,
+      doubleTrouble,
+      sweet16,
+      topsAndTens,
+      twoDartCombinations,
+      aroundTheCompass,
+    };
   }) || {
     cricketMarkUp: [],
     eaglesEye: [],
@@ -49,6 +62,7 @@ const HistoryBoard: FC = () => {
     sweet16: [],
     topsAndTens: [],
     twoDartCombinations: [],
+    aroundTheCompass: [],
   };
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { t } = useLocale();
@@ -79,6 +93,7 @@ const HistoryBoard: FC = () => {
           <Tab aria-label='sweet 16'>Sweet 16</Tab>
           <Tab aria-label='tops and tens'>Tops and Tens</Tab>
           <Tab aria-label='two dart combinations'>Two-Dart Combinations</Tab>
+          <Tab aria-label='around the compass'>Around The Compass</Tab>
         </TabList>
         <TabPanels>
           <TabPanel>
@@ -98,6 +113,9 @@ const HistoryBoard: FC = () => {
           </TabPanel>
           <TabPanel>
             <TwoDartCombinationsHistoryTable history={gameHistory.twoDartCombinations} />
+          </TabPanel>
+          <TabPanel>
+            <AroundTheCompassHistoryTable history={gameHistory.aroundTheCompass} />
           </TabPanel>
         </TabPanels>
       </Tabs>
