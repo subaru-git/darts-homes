@@ -66,3 +66,9 @@ interface EightyThrewResult {
   scores: point[][];
   playedAt: string;
 }
+
+interface ShanghaiNightsResult {
+  result: number;
+  scores: point[][];
+  playedAt: string;
+}

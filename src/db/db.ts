@@ -5,6 +5,7 @@ import { DoubleTroubleResultModel } from './DoubleTroubleResultModel';
 import { EaglesEyeResultModel } from './EaglesEyeResultModel';
 import { EightyThrewResultModel } from './EightyThrewResultModel';
 import { Route64ResultModel } from './Route64ResultModel';
+import { ShanghaiNightsResultModel } from './ShanghaiNightsResultModel';
 import { Sweet16ResultModel } from './Sweet16ResultModel';
 import { TonsUpResultModel } from './TonsUpResultModel';
 import { TopsAndTensResultModel } from './TopsAndTensResultModel';
@@ -21,6 +22,7 @@ export class GameResultDexie extends Dexie {
   tonsUpResult!: Table<TonsUpResultModel>;
   route64Result!: Table<Route64ResultModel>;
   eightyThrewResult!: Table<EightyThrewResultModel>;
+  shanghaiNightsResult!: Table<ShanghaiNightsResultModel>;
 
   constructor() {
     super('DartsHomes');
@@ -35,6 +37,7 @@ export class GameResultDexie extends Dexie {
       tonsUpResult: '++id',
       route64Result: '++id',
       eightyThrewResult: '++id',
+      shanghaiNightsResult: '++id',
     });
   }
 }

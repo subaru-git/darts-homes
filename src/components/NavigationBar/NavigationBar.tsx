@@ -297,6 +297,11 @@ const GetNavItem = () => {
           subLabel: t.navigation.eightythrew,
           href: '/eightythrew',
         },
+        {
+          label: 'Shanghai Nights',
+          subLabel: t.navigation.shanghainights,
+          href: '/shanghainights',
+        },
       ],
     },
     {
