@@ -39,7 +39,7 @@ describe('gaming Two-Dart Combinations', () => {
       cy.get('button[aria-label="round change"]').first().click();
     });
     cy.wait(1000);
-    cy.get('button[aria-label="new game"]').first().click();
+    cy.get('button[aria-label="new game"]').first().click({ force: true });
     cy.visit('/history');
     cy.get('button[aria-label="two dart combinations"]').click();
     cy.get('tr').should('have.length', 2);

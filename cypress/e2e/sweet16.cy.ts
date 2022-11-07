@@ -17,7 +17,7 @@ describe('gaming Sweet 16', () => {
     cy.get('button[aria-label="16 double"]').first().click();
     cy.get('button[aria-label="round over"]').first().click();
     cy.wait(1000);
-    cy.get('button[aria-label="new game"]').first().click();
+    cy.get('button[aria-label="new game"]').first().click({ force: true });
     cy.visit('/history');
     cy.get('button[aria-label="sweet 16"]').click();
     cy.get('tr').should('have.length', 2);
