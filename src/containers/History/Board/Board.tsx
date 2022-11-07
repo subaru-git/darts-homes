@@ -25,6 +25,7 @@ import DoubleTroubleHistoryTable from '@/containers/DoubleTrouble/HistoryTable';
 import EaglesEyeHistoryTable from '@/containers/EaglesEye/HistoryTable';
 import EightyThrewHistoryTable from '@/containers/EightyThrew/HistoryTable';
 import Route64HistoryTable from '@/containers/Route64/HistoryTable';
+import ShanghaiNightsHistoryTable from '@/containers/ShanghaiNights/HistoryTable';
 import Sweet16HistoryTable from '@/containers/Sweet16/HistoryTable';
 import TonsUpHistoryTable from '@/containers/TonsUp/HistoryTable';
 import TopsAndTensHistoryTable from '@/containers/TopsAndTens/HistoryTable';
@@ -68,6 +69,7 @@ const HistoryBoard: FC = () => {
           <Tab aria-label='tons up'>Tons Up</Tab>
           <Tab aria-label='route 64'>Route 64</Tab>
           <Tab aria-label='eighty threw'>Eighty Threw</Tab>
+          <Tab aria-label='shanghai nights'>Shanghai Nights</Tab>
         </TabList>
         <TabPanels>
           <TabPanel>
@@ -100,6 +102,9 @@ const HistoryBoard: FC = () => {
           <TabPanel>
             <EightyThrewHistoryTable history={gameHistory.eightyThrew} />
           </TabPanel>
+          <TabPanel>
+            <ShanghaiNightsHistoryTable history={gameHistory.shanghaiNights} />
+          </TabPanel>
         </TabPanels>
       </Tabs>
     </Box>
@@ -124,6 +129,7 @@ const querier = async (setLoading: (isLoading: boolean) => void) => {
   setLoading(false);
   const route64 = await db.route64Result.toCollection().reverse().sortBy('playedAt');
   const eightyThrew = await db.eightyThrewResult.toCollection().reverse().sortBy('playedAt');
+  const shanghaiNights = await db.shanghaiNightsResult.toCollection().reverse().sortBy('playedAt');
   return {
     cricketMarkUp,
     eaglesEye,
@@ -135,6 +141,7 @@ const querier = async (setLoading: (isLoading: boolean) => void) => {
     tonsUp,
     route64,
     eightyThrew,
+    shanghaiNights,
   };
 };
 
@@ -149,5 +156,6 @@ const initialQuery = {
   tonsUp: [],
   route64: [],
   eightyThrew: [],
+  shanghaiNights: [],
 };
 export default HistoryBoard;
