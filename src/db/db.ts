@@ -32,7 +32,7 @@ export class GameResultDexie extends Dexie {
 
   constructor() {
     super('DartsHomes');
-    this.version(1.2).stores({
+    this.version(1.3).stores({
       cricketMarkUpResult: '++id',
       eaglesEyeResult: '++id',
       doubleTroubleResult: '++id',
