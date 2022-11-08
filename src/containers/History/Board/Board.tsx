@@ -31,6 +31,7 @@ import Sweet16HistoryTable from '@/containers/Sweet16/HistoryTable';
 import SwitchHitterHistoryTable from '@/containers/SwitchHitter/HistoryTable';
 import TonsUpHistoryTable from '@/containers/TonsUp/HistoryTable';
 import TopsAndTensHistoryTable from '@/containers/TopsAndTens/HistoryTable';
+import TreblesForShowHistoryTable from '@/containers/TreblesForShow/HistoryTable';
 import TwoDartCombinationsHistoryTable from '@/containers/TwoDartCombinations/HistoryTable';
 import { db } from '@/db/db';
 import useLocale from '@/hooks/locale';
@@ -74,6 +75,7 @@ const HistoryBoard: FC = () => {
           <Tab aria-label='shanghai nights'>Shanghai Nights</Tab>
           <Tab aria-label='switch hitter'>Switch Hitter</Tab>
           <Tab aria-label='bully bully'>Bully Bully</Tab>
+          <Tab aria-label='trebles for show'>Trebles For Show</Tab>
         </TabList>
         <TabPanels>
           <TabPanel>
@@ -115,6 +117,9 @@ const HistoryBoard: FC = () => {
           <TabPanel>
             <BullyBullyHistoryTable history={gameHistory.bullyBully} />
           </TabPanel>
+          <TabPanel>
+            <TreblesForShowHistoryTable history={gameHistory.treblesForShow} />
+          </TabPanel>
         </TabPanels>
       </Tabs>
     </Box>
@@ -142,6 +147,7 @@ const querier = async (setLoading: (isLoading: boolean) => void) => {
   const shanghaiNights = await db.shanghaiNightsResult.toCollection().reverse().sortBy('playedAt');
   const switchHitter = await db.switchHitterResult.toCollection().reverse().sortBy('playedAt');
   const bullyBully = await db.bullyBullyResult.toCollection().reverse().sortBy('playedAt');
+  const treblesForShow = await db.treblesForShowResult.toCollection().reverse().sortBy('playedAt');
   return {
     cricketMarkUp,
     eaglesEye,
@@ -156,6 +162,7 @@ const querier = async (setLoading: (isLoading: boolean) => void) => {
     shanghaiNights,
     switchHitter,
     bullyBully,
+    treblesForShow,
   };
 };
 
@@ -173,5 +180,6 @@ const initialQuery = {
   shanghaiNights: [],
   switchHitter: [],
   bullyBully: [],
+  treblesForShow: [],
 };
 export default HistoryBoard;

@@ -11,35 +11,40 @@ import { Sweet16GameContextProvider } from './Sweet16Context';
 import { SwitchHitterGameContextProvider } from './SwitchHitterGameContext';
 import { TonsUpGameContextProvider } from './TonsUpGameContext';
 import { TopsAndTensGameContextProvider } from './TopsAndTensContext';
+import { TreblesForShowGameContextProvider } from './TreblesForShowGameContext';
 import { TwoDartCombinationsGameContextProvider } from './TwoDartCombinationsGameContext';
 
 const Providers: FC<{ children: ReactNode | ReactNode[] }> = ({ children }) => {
   return (
-    <BullyBullyGameContextProvider>
-      <SwitchHitterGameContextProvider>
-        <ShanghaiNightsGameContextProvider>
-          <EightyThrewGameContextProvider>
-            <Route64GameContextProvider>
-              <TonsUpGameContextProvider>
-                <AroundTheCompassGameContextProvider>
-                  <TwoDartCombinationsGameContextProvider>
-                    <TopsAndTensGameContextProvider>
-                      <Sweet16GameContextProvider>
-                        <DoubleTroubleGameContextProvider>
-                          <CricketMarkUpGameContextProvider>
-                            <EaglesEyeGameContextProvider>{children}</EaglesEyeGameContextProvider>
-                          </CricketMarkUpGameContextProvider>
-                        </DoubleTroubleGameContextProvider>
-                      </Sweet16GameContextProvider>
-                    </TopsAndTensGameContextProvider>
-                  </TwoDartCombinationsGameContextProvider>
-                </AroundTheCompassGameContextProvider>
-              </TonsUpGameContextProvider>
-            </Route64GameContextProvider>
-          </EightyThrewGameContextProvider>
-        </ShanghaiNightsGameContextProvider>
-      </SwitchHitterGameContextProvider>
-    </BullyBullyGameContextProvider>
+    <TreblesForShowGameContextProvider>
+      <BullyBullyGameContextProvider>
+        <SwitchHitterGameContextProvider>
+          <ShanghaiNightsGameContextProvider>
+            <EightyThrewGameContextProvider>
+              <Route64GameContextProvider>
+                <TonsUpGameContextProvider>
+                  <AroundTheCompassGameContextProvider>
+                    <TwoDartCombinationsGameContextProvider>
+                      <TopsAndTensGameContextProvider>
+                        <Sweet16GameContextProvider>
+                          <DoubleTroubleGameContextProvider>
+                            <CricketMarkUpGameContextProvider>
+                              <EaglesEyeGameContextProvider>
+                                {children}
+                              </EaglesEyeGameContextProvider>
+                            </CricketMarkUpGameContextProvider>
+                          </DoubleTroubleGameContextProvider>
+                        </Sweet16GameContextProvider>
+                      </TopsAndTensGameContextProvider>
+                    </TwoDartCombinationsGameContextProvider>
+                  </AroundTheCompassGameContextProvider>
+                </TonsUpGameContextProvider>
+              </Route64GameContextProvider>
+            </EightyThrewGameContextProvider>
+          </ShanghaiNightsGameContextProvider>
+        </SwitchHitterGameContextProvider>
+      </BullyBullyGameContextProvider>
+    </TreblesForShowGameContextProvider>
   );
 };
 

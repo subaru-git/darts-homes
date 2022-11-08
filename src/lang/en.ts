@@ -24,6 +24,7 @@ const text = {
     shanghainights: '120 double out practice game',
     switchhitter: '19 practice game',
     bullybully: 'BULL practice game',
+    treblesforshow: '20 practice game',
   },
   eagleseye: {
     description: ['It is a count-up where only BULLs are added.', 'BULL is separate.'],
@@ -104,6 +105,12 @@ const text = {
     description: [
       'Throw 60 darts at the bullseye - earn five points for every bull hit and two for every outer bull.',
       '10 point bonus for 3 bulls. 25 points available every 3 darts; 500 overall.',
+    ],
+  },
+  treblesforshow: {
+    description: [
+      'Throw 60 darts at treble 20 - receive five points per treble 20. two points for a single 20 and a fifteen point bonus for a 180.',
+      'You receive no points for a dart which lands outside of the treble or single 20 beds. 30 points available every 3 darts; 600 overall.',
     ],
   },
   import: {

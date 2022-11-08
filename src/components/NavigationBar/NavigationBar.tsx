@@ -312,6 +312,11 @@ const GetNavItem = () => {
           subLabel: t.navigation.bullybully,
           href: '/bullybully',
         },
+        {
+          label: 'Treble For Show',
+          subLabel: t.navigation.treblesforshow,
+          href: '/treblesforshow',
+        },
       ],
     },
     {
