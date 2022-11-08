@@ -11,6 +11,7 @@ import { Sweet16ResultModel } from './Sweet16ResultModel';
 import { SwitchHitterResultModel } from './SwitchHitterResultModel';
 import { TonsUpResultModel } from './TonsUpResultModel';
 import { TopsAndTensResultModel } from './TopsAndTensResultModel';
+import { TreblesForShowResultModel } from './TreblesForShowResultModel';
 import { TwoDartCombinationsResultModel } from './TwoDartCombinationsResultModel';
 
 export class GameResultDexie extends Dexie {
@@ -27,6 +28,7 @@ export class GameResultDexie extends Dexie {
   shanghaiNightsResult!: Table<ShanghaiNightsResultModel>;
   switchHitterResult!: Table<SwitchHitterResultModel>;
   bullyBullyResult!: Table<BullyBullyResultModel>;
+  treblesForShowResult!: Table<TreblesForShowResultModel>;
 
   constructor() {
     super('DartsHomes');
@@ -44,6 +46,7 @@ export class GameResultDexie extends Dexie {
       shanghaiNightsResult: '++id',
       switchHitterResult: '++id',
       bullyBullyResult: '++id',
+      treblesForShowResult: '++id',
     });
   }
 }

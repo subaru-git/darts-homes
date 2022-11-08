@@ -84,3 +84,9 @@ interface BullyBullyResult {
   scores: point[][];
   playedAt: string;
 }
+
+interface TreblesForShowResult {
+  result: number;
+  scores: point[][];
+  playedAt: string;
+}
