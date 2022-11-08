@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 import { Box, Flex } from '@chakra-ui/react';
 import Description from './Description';
 import NewGame from './NewGame';
+import CameraView from '@/components/CameraView';
 import CountButtons from '@/components/CountButtons';
 import Footer from '@/components/Footer';
 import Loading from '@/components/Loading';
@@ -71,7 +72,10 @@ const DesktopMain: FC<{
     <div>
       <Flex justifyContent='space-between' alignItems='center'>
         <NewGame onNewGame={() => setGame(new TwoDartCombinationsGame())} />
-        <Description />
+        <Flex gap={2}>
+          <Description />
+          <CameraView />
+        </Flex>
       </Flex>
       <Flex justifyContent='space-around' gap={4} alignItems='center' p={4}>
         <Box>
@@ -134,7 +138,10 @@ const MobileMain: FC<{
           <TargetBoard message='Target' target={game.getCurrentTarget().toString()} />
           <TargetBoard message='Score' target={game.getTotalScore().toString()} size='sm' />
         </Flex>
-        <Description />
+        <Flex direction='column'>
+          <Description />
+          <CameraView />
+        </Flex>
       </Flex>
       <Box px={2}>
         <RoundScore
