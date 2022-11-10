@@ -41,7 +41,7 @@ const Description: FC = () => {
       <Modal isOpen={isOpen} onClose={onToggle} size='2xl'>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>TwoDartCombinations</ModalHeader>
+          <ModalHeader>Two-Dart Combinations</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
             <Text whiteSpace='pre-wrap'>{t.twodartcombinations.description.join('\n')}</Text>

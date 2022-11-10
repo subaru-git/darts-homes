@@ -1,10 +1,10 @@
 ---
 to: src/components/<%= name %>/<%= name %>.tsx
 ---
-import React, { FC } from 'react'
+import React, { FC } from 'react';
 
 const <%= name %>: FC = () => {
-  return <div><%= name %></div>
-}
+  return <div><%= name %></div>;
+};
 
-export default <%= name %>
+export default <%= name %>;

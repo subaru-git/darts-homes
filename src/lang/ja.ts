@@ -11,6 +11,78 @@ const text = {
       'このサイトはYouTubeの動画などのあらゆるダーツコンテンツに感謝し、その全てを尊重します。',
     ],
   },
+  seo: {
+    default: {
+      title: 'Darts Homes - ただ投げるだけの家ダーツじゃつまらなくない？',
+      description: '家ダーツがただ投げるだけになっていませんか？練習メニューありますよ',
+    },
+    eagleseye: {
+      title: "Eagle's Eye",
+      description: 'BULLのみでカウントアップするゲームです。ブルはセパレートです。',
+    },
+    cricketmarkup: {
+      title: 'Cricket Mark-Up',
+      description:
+        '「菊池山口」さんの紹介したダーツ練習ゲームです。クリケットナンバーを狙っていきます。',
+    },
+    doubletrouble: {
+      title: 'Double Trouble',
+      description: 'ダブル練習ゲームです。1から20までのダブルを狙っていきます。',
+    },
+    sweet16: {
+      title: 'Sweet 16',
+      description: '32ダブルアウト練習ゲームです。32はメジャーなアレンジなのでぜひ練習しましょう。',
+    },
+    topsandtens: {
+      title: 'Tops and Tens',
+      description: '40ダブルアウト練習ゲームです。40はメジャーなアレンジなのでぜひ練習しましょう。',
+    },
+    twodartcombinations: {
+      title: 'Two-Dart Combinations',
+      description:
+        '41から60までをダブルアウトする練習ゲームです。全て2ダーツでアウトするのが目標です。',
+    },
+    aroundthecompass: {
+      title: 'Around The Compass',
+      description: '24ダブルアウト練習ゲームです。24はメジャーなアレンジなのでぜひ練習しましょう。',
+    },
+    tonsup: {
+      title: 'Tons Up',
+      description: '100ダブルアウト練習ゲームです。2本でアウトできたら素晴らしい。',
+    },
+    route64: {
+      title: 'Route 64',
+      description: '64ダブルアウト練習ゲームです。2本でアウトできたら素晴らしい。',
+    },
+    eightythrew: {
+      title: 'Eighty Threw',
+      description: '82ダブルアウト練習ゲームです。2本でアウトできたら素晴らしい。',
+    },
+    shanghainights: {
+      title: 'Shanghai Night',
+      description: '120ダブルアウト練習ゲームです。20ダブル3本でアウトできたらボーナス。',
+    },
+    switchhitter: {
+      title: 'Switch Hitter',
+      description: '19練習ゲームです。19トリプルにガンガン入れていこう。',
+    },
+    bullybully: {
+      title: 'Bully Bully',
+      description: 'BULL練習ゲームです。やっぱりBULLでしょう。',
+    },
+    treblesforshow: {
+      title: 'Treble For Show',
+      description: '20練習ゲームです。セパレートやクリケットだと20は基本だよね。',
+    },
+    respect: {
+      title: 'Respect',
+      description: 'リスペクトするダーツコンテンツを紹介します。一緒に応援していきましょう。',
+    },
+    history: {
+      title: 'History',
+      description: 'あなたの成長を確認できます。ブラウザ間の同期はできません。',
+    },
+  },
   navigation: {
     n01: '有名なダーツゲーム [WIP]',
     eagleseye: 'BULLだけカウントアップ',
@@ -44,7 +116,7 @@ const text = {
   },
   doubletrouble: {
     description: [
-      'ダブル1に3本、ダブル2に3本など、ダブルトップまで順番にダーツを投げていきます。',
+      '1のダブルに3本、2のダブルに3本と、ダブルトップまで順番にダーツを投げていきます。',
       'ダブルに命中するごとに5ポイント獲得できます。3ダーツごとに15ポイント、全体で300ポイント獲得できます。',
     ],
   },
