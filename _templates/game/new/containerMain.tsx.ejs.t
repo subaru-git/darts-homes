@@ -48,7 +48,10 @@ const DesktopMain: FC<{ game: <%= name %>Game; setGame: (game: <%= name %>Game) 
     <div>
       <Flex justifyContent='space-between' alignItems='center'>
         <NewGame onNewGame={() => setGame(new <%= name %>Game())} />
-        <Description />
+        <Flex gap={2}>
+          <Description />
+          <CameraView />
+        </Flex>
       </Flex>
       <Flex justifyContent='space-around' gap={4} alignItems='center' p={4}>
         <Box>
@@ -114,7 +117,10 @@ const MobileMain: FC<{ game: <%= name %>Game; setGame: (game: <%= name %>Game) =
           />
           <TargetBoard message='Score' target={game.getTotalScore().toString()} size='sm' />
         </Flex>
-        <Description />
+        <Flex direction='column'>
+          <Description />
+          <CameraView />
+        </Flex>
       </Flex>
       <Box px={2}>
         <RoundScore

@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import { Box, Center, Flex, Grid, GridItem } from '@chakra-ui/react';
+import CameraView from '@/components/CameraView';
 import CountBullButtons from '@/components/CountBullButtons';
 import Footer from '@/components/Footer';
 import Loading from '@/components/Loading';
@@ -45,7 +46,10 @@ const DesktopMain: FC<{ game: EaglesEyeGame; setGame: (game: EaglesEyeGame) => v
     <>
       <Flex justifyContent='space-between' alignItems='center'>
         <NewGame onNewGame={() => setGame(new EaglesEyeGame())} />
-        <Description />
+        <Flex gap={2}>
+          <Description />
+          <CameraView />
+        </Flex>
       </Flex>
       <Grid templateRows={'repeat(3, auto)'} gap={10} justifyContent='center' p={10}>
         <GridItem>
@@ -110,7 +114,10 @@ const MobileMain: FC<{ game: EaglesEyeGame; setGame: (game: EaglesEyeGame) => vo
               />
             </Center>
           </Box>
-          <Description />
+          <Flex direction='column'>
+            <Description />
+            <CameraView />
+          </Flex>
         </Flex>
       </GridItem>
       <GridItem>

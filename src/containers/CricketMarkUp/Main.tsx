@@ -1,5 +1,9 @@
 import React, { FC } from 'react';
 import { Box, Flex, Grid, GridItem } from '@chakra-ui/react';
+import Board from './Board';
+import Description from './Description';
+import Settings from './Settings';
+import CameraView from '@/components/CameraView';
 import CountButtons from '@/components/CountButtons';
 import Footer from '@/components/Footer';
 import Loading from '@/components/Loading';
@@ -7,9 +11,6 @@ import NavigationBar from '@/components/NavigationBar';
 import RoundBoard from '@/components/RoundBoard';
 import RoundScore from '@/components/RoundScore';
 import TargetBoard from '@/components/TargetBoard';
-import CricketMarkUpBoard from '@/containers/CricketMarkUp/Board';
-import CricketMarkUpDescription from '@/containers/CricketMarkUp/Description';
-import CricketMarkUpSettings from '@/containers/CricketMarkUp/Settings';
 import { useCricketMarkUpGame, useCricketMarkUpGameSet } from '@/contexts/CricketMarkUpGameContext';
 import { db } from '@/db/db';
 import CricketMarkUpGame from '@/lib/CricketMarkUpGame/CricketMarkUpGame';
@@ -45,7 +46,7 @@ const DesktopMain: FC<{
   return (
     <div>
       <Flex justifyContent='space-between'>
-        <CricketMarkUpSettings
+        <Settings
           onNewGame={(targetNumber, save) => {
             if (save) saveToDB(game.getGameResult(), db.cricketMarkUpResult);
             setGame(new CricketMarkUpGame(targetNumber));
@@ -53,7 +54,10 @@ const DesktopMain: FC<{
           targetCount={game.getTargetCount()}
           isFinished={game.isFinished()}
         />
-        <CricketMarkUpDescription />
+        <Flex gap={2}>
+          <Description />
+          <CameraView />
+        </Flex>
       </Flex>
       <Grid templateColumns='repeat(2, auto)' gap={6} p={4}>
         <GridItem>
@@ -80,7 +84,7 @@ const DesktopMain: FC<{
                   </Grid>
                 </GridItem>
                 <GridItem maxW='500px' alignSelf='center'>
-                  <CricketMarkUpBoard scores={game.getNumberOfCount()} />
+                  <Board scores={game.getNumberOfCount()} />
                 </GridItem>
               </Grid>
             </GridItem>
@@ -135,7 +139,7 @@ const MobileMain: FC<{
     <Grid gap={4} justifyItems='center'>
       <GridItem w='100%'>
         <Flex justifyContent='space-between'>
-          <CricketMarkUpSettings
+          <Settings
             onNewGame={(targetNumber, save) => {
               if (save) saveToDB(game.getGameResult(), db.cricketMarkUpResult);
               setGame(new CricketMarkUpGame(targetNumber));
@@ -156,11 +160,14 @@ const MobileMain: FC<{
             />
             <TargetBoard target={game.getCount().toString()} message='Count' size='sm' />
           </Flex>
-          <CricketMarkUpDescription />
+          <Flex direction='column'>
+            <Description />
+            <CameraView />
+          </Flex>
         </Flex>
       </GridItem>
       <Box maxH={250} overflow='scroll'>
-        <CricketMarkUpBoard scores={game.getNumberOfCount()} />
+        <Board scores={game.getNumberOfCount()} />
       </Box>
       <RoundScore
         scores={game.getRoundScore()}

@@ -34,6 +34,7 @@ exports[`should rendering 1`] = `
         <button
           aria-label="Watch 【ダーツ】友達にダーツをさせる方法【菊地山口】"
           class="lty-playbtn"
+          type="button"
         />
       </article>
     </div>
