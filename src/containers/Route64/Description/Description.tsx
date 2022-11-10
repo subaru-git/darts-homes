@@ -41,7 +41,7 @@ const Description: FC = () => {
       <Modal isOpen={isOpen} onClose={onToggle} size='2xl'>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Route64</ModalHeader>
+          <ModalHeader>Route 64</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
             <Text whiteSpace='pre-wrap'>{t.route64.description.join('\n')}</Text>

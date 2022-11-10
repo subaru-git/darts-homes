@@ -9,6 +9,83 @@ const text = {
     ],
     respect: ['This site appreciates and respects all darts content, including YouTube videos.'],
   },
+  seo: {
+    default: {
+      title: "Darts Homes - It's dull throwing darts monotonously, right?",
+      description:
+        'Are you just throwing darts at home monotonously? We have a practice menu for you!',
+    },
+    eagleseye: {
+      title: "Eagle's Eye",
+      description: 'This game is counted up by BULL only. Bulls are separate.',
+    },
+    cricketmarkup: {
+      title: 'Cricket Mark-Up',
+      description:
+        'This is a darts practice game introduced by "Kikuchi Yamaguchi." You will aim for the cricket number.',
+    },
+    doubletrouble: {
+      title: 'Double Trouble',
+      description: 'This is a double practice game, where you aim for a double from 1 to 20.',
+    },
+    respect: {
+      title: 'Respect',
+      description: "Here are some darts contents that we respect. Let's support them together.",
+    },
+    sweet16: {
+      title: 'Sweet 16',
+      description:
+        "This is a game to practice 32 double-outs. 32 is a major arrangement, so let's practice it!",
+    },
+    topsandtens: {
+      title: 'Tops and Tens',
+      description:
+        "This is a game to practice 40 double-outs. 40 is a major arrangement, so let's practice it!",
+    },
+    twodartcombinations: {
+      title: 'Two-Dart Combinations',
+      description:
+        'This is a practice game to double out from 41 to 60. The goal is to get all of them out in 2 darts.',
+    },
+    aroundthecompass: {
+      title: 'Around The Compass',
+      description:
+        "This is a game to practice 24 double-outs. 24 is a major arrangement, so let's practice it!",
+    },
+    tonsup: {
+      title: 'Tons Up',
+      description: 'This is a 100 double out practice game. if you can make it out in two, great.',
+    },
+    route64: {
+      title: 'Route 64',
+      description: 'This is a 64 double out practice game. if you can make it out in two, great.',
+    },
+    eightythrew: {
+      title: 'Eighty Threw',
+      description: 'This is a 82 double out practice game. if you can make it out in two, great.',
+    },
+    shanghainights: {
+      title: 'Shanghai Night',
+      description:
+        '120 double out practice game. If you can make it out with three 20-doubles, you get a bonus!',
+    },
+    switchhitter: {
+      title: 'Switch Hitter',
+      description: "19 Practice Game. Let's put in 19 triples.",
+    },
+    bullybully: {
+      title: 'Bully Bully',
+      description: 'This is a BULL practice game. After all, it is a BULL.',
+    },
+    treblesforshow: {
+      title: 'Treble For Show',
+      description: "It's a 20 practice game. In separates and cricket, 20 is basic.",
+    },
+    history: {
+      title: 'History',
+      description: 'You can check your growth. Synchronization between browsers is not supported.',
+    },
+  },
   navigation: {
     n01: 'The popular darts game',
     eagleseye: 'BULL only count up',

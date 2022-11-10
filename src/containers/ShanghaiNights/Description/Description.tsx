@@ -41,7 +41,7 @@ const Description: FC = () => {
       <Modal isOpen={isOpen} onClose={onToggle} size='2xl'>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>ShanghaiNights</ModalHeader>
+          <ModalHeader>Shanghai Nights</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
             <Text whiteSpace='pre-wrap'>{t.shanghainights.description.join('\n')}</Text>

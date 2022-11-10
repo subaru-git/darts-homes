@@ -1,6 +1,7 @@
 import { readFileSync } from 'fs';
 import { Box } from '@chakra-ui/react';
 import { GetStaticProps, NextPage } from 'next';
+import AppSeo from '@/components/AppSeo';
 import Main from '@/containers/Respect/Main';
 
 type Props = {
@@ -9,9 +10,12 @@ type Props = {
 
 const Respect: NextPage<Props> = ({ data }) => {
   return (
-    <Box>
-      <Main data={data} />
-    </Box>
+    <>
+      <AppSeo page='respect' />
+      <Box>
+        <Main data={data} />
+      </Box>
+    </>
   );
 };
 
