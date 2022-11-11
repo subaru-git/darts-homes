@@ -1,1 +1,1 @@
-export { default } from './AppDefaultSeo'
+export { default } from './AppDefaultSeo';

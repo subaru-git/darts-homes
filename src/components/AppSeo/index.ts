@@ -1,1 +1,1 @@
-export { default } from './AppSeo'
+export { default } from './AppSeo';

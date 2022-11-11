@@ -11,6 +11,6 @@ test('should rendering', () => {
       <Description />
     </ChakraProvider>,
   );
-  expect(screen.getByAltText('darts homes')).not.toBeNull();
+  expect(screen.getByAltText('description image')).not.toBeNull();
   expect(container).toMatchSnapshot();
 });

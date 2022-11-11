@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should rendering 1`] = `
+<div>
+  <div
+    class="css-1m3k68e"
+  />
+</div>
+`;

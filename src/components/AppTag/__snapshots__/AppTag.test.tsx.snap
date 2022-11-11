@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should rendering 1`] = `
+<div>
+  <span
+    class="css-1dl6jat"
+  >
+    cricket
+  </span>
+</div>
+`;

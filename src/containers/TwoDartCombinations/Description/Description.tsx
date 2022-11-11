@@ -44,7 +44,7 @@ const Description: FC = () => {
           <ModalHeader>Two-Dart Combinations</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <Text whiteSpace='pre-wrap'>{t.twodartcombinations.description.join('\n')}</Text>
+            <Text whiteSpace='pre-wrap'>{t.games.twodartcombinations.description.join('\n')}</Text>
           </ModalBody>
         </ModalContent>
       </Modal>

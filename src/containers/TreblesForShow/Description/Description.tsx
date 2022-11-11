@@ -44,7 +44,7 @@ const Description: FC = () => {
           <ModalHeader>TreblesForShow</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <Text whiteSpace='pre-wrap'>{t.treblesforshow.description.join('\n')}</Text>
+            <Text whiteSpace='pre-wrap'>{t.games.treblesforshow.description.join('\n')}</Text>
           </ModalBody>
         </ModalContent>
       </Modal>

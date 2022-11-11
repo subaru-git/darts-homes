@@ -3,8 +3,6 @@ import {
   Button,
   useDisclosure,
   Text,
-  UnorderedList,
-  ListItem,
   Modal,
   ModalOverlay,
   ModalContent,
@@ -48,13 +46,7 @@ const Description: FC = () => {
           <ModalHeader>Cricket Mark-Up</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <Text whiteSpace='pre-wrap'>{t.cricketmarkup.description.join('\n')}</Text>
-            <UnorderedList py={2}>
-              {t.cricketmarkup.rulestep.map((item, index) => (
-                <ListItem key={index}>{item}</ListItem>
-              ))}
-            </UnorderedList>
-            <Text>{t.cricketmarkup.rulemore}</Text>
+            <Text whiteSpace='pre-wrap'>{t.games.cricketmarkup.description.join('\n')}</Text>
             <LiteYoutubeEmbed
               id='RFl52NNvWhw'
               title='【ダーツ】菊地山口練習法　2週間でRt.4からRt.8になった練習法'

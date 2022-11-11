@@ -44,7 +44,7 @@ const Description: FC = () => {
           <ModalHeader>Route 64</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <Text whiteSpace='pre-wrap'>{t.route64.description.join('\n')}</Text>
+            <Text whiteSpace='pre-wrap'>{t.games.route64.description.join('\n')}</Text>
           </ModalBody>
         </ModalContent>
       </Modal>

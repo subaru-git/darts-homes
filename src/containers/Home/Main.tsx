@@ -1,16 +1,26 @@
 import React, { FC } from 'react';
 import { Grid } from '@chakra-ui/react';
+import Description from './Description';
+import History from './History';
+import Respect from './Respect';
+import Title from './Title';
 import Footer from '@/components/Footer';
 import NavigationBar from '@/components/NavigationBar';
-import Description from '@/containers/Home/Description';
-import Respect from '@/containers/Home/Respect';
 
 const Main: FC = () => {
   return (
     <div data-cy='home-main'>
       <NavigationBar />
-      <Grid templateRows='repeat(2, auto)' gap={2} p={2} px={{ base: 2, md: 4 }}>
+      <Title />
+      <Grid
+        templateRows='repeat(3, auto)'
+        gap={{ base: 16, md: 32 }}
+        p={2}
+        px={{ base: 2, md: 4 }}
+        mt={{ base: 16, md: 32 }}
+      >
         <Description />
+        <History />
         <Respect />
       </Grid>
       <Footer />

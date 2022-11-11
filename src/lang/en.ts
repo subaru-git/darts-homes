@@ -1,13 +1,32 @@
 const text = {
   home: {
-    description: [
-      'This website was created with the goal of creating a game for practicing darts at home.',
-      'Games are created based on YouTube and more.',
-      'Also, this website is processed on the client side, so it is impossible to synchronize results between devices.',
-      'You can do this by importing and exporting results, or you can manage it by posting to social networking sites such as Twitter.',
-      "(You don't want to sign into this incomprehensible site, do you?)",
-    ],
-    respect: ['This site appreciates and respects all darts content, including YouTube videos.'],
+    title: {
+      title: ["It's dull throwing darts monotonously,", 'right?'],
+      description: ['It supports home darts, which tend to be monotonous.'],
+      button: "Let's see the practice games.",
+    },
+    description: {
+      title: ['Suggest practicing home darts'],
+      description: [
+        'We propose practice methods for home darts, which tend to be monotonous.',
+        'The practice is supported as an application with references to YouTube, Blogs, etc.',
+      ],
+    },
+    history: {
+      title: ['A little help for your growth'],
+      description: ['Record your practice results and make your growth transparent.'],
+      disclaimer: [
+        'Records are saved only in this browser.',
+        'They cannot be viewed on other devices or browsers.',
+        'So just a little support.',
+      ],
+    },
+    respect: {
+      title: ['Thanks for all the darts content'],
+      description: [
+        'This site appreciates and respects all content, including each darts manufacturer, players, YouTube, blogs, etc.',
+      ],
+    },
   },
   seo: {
     default: {
@@ -27,10 +46,6 @@ const text = {
     doubletrouble: {
       title: 'Double Trouble',
       description: 'This is a double practice game, where you aim for a double from 1 to 20.',
-    },
-    respect: {
-      title: 'Respect',
-      description: "Here are some darts contents that we respect. Let's support them together.",
     },
     sweet16: {
       title: 'Sweet 16',
@@ -81,6 +96,14 @@ const text = {
       title: 'Treble For Show',
       description: "It's a 20 practice game. In separates and cricket, 20 is basic.",
     },
+    games: {
+      title: 'Games',
+      description: 'Here are some darts practice games. We hope you find one that you like.',
+    },
+    respect: {
+      title: 'Respect',
+      description: "Here are some darts contents that we respect. Let's support them together.",
+    },
     history: {
       title: 'History',
       description: 'You can check your growth. Synchronization between browsers is not supported.',
@@ -103,92 +126,122 @@ const text = {
     bullybully: 'BULL practice game',
     treblesforshow: '20 practice game',
   },
-  eagleseye: {
-    description: ['It is a count-up where only BULLs are added.', 'BULL is separate.'],
-  },
-  cricketmarkup: {
-    description: ['This game was introduction by "Kikuchi Yamaguchi."', 'The game rule is:'],
-    rulestep: [
-      'Setting target count (recommended 10 times)',
-      'Shoot for each cricket numbers from 20 to 15 and Bull until the target count of times, like Cricket.',
-    ],
-    rulemore: 'For more information, please watch this video.',
-  },
-  doubletrouble: {
-    description: [
-      'You throw three darts at each double in turn, i.e. three darts at double one, three at double two etc through to double top.',
-      'Receive five points for every double you hit. 15 points available every 3darts; 300 overall.',
-    ],
-  },
-  sweet16: {
-    description: [
-      'You have 20 visits to the oche needing 32, which you have to finish in three darts with any combination finishing on a double.',
-      'Receive five points every time you finish 32, 15poits available every 3 darts; 300 overall.',
-    ],
-  },
-  topsandtens: {
-    description: [
-      'You have 20 visits to the oche needing 40, which you have to finish in three darts or less only on double top, double ten or double five.',
-      'Receive five points every time you finish 40. 15 points available every 3darts, 300 overall.',
-    ],
-  },
-  twodartcombinations: {
-    description: [
-      'You have just three darts at each finish from 41-60, which you must finish on a double with any combination you wish.',
-      'Receive 15 points for every finish you complete. 15 points available every 3 darts; 300 overall.',
-    ],
-  },
-  aroundthecompass: {
-    description: [
-      'You have 20 visits to finish 24 using any combination but always finishing on a double, Recieve five points every time you complete the finish.',
-      "10point bonus for three double 12's (i.e. you get the double 12 first dart then follow it up with two more). 15 points available every 3 darts; 300 overall.",
-    ],
-  },
-  tonsup: {
-    description: [
-      'You have 20 visits and your task is to finish 100 on a double using any combination as many times as possible.',
-      'Receive ten points every time you complete the finish and a ten-point bonus if you complete the finish in just two darts (i.e. treble 20 and double top) so 20 points available every 3 darts; 400 overall.',
-    ],
-  },
-  route64: {
-    description: [
-      'You have 20 visits to the oche needing 64, which you have to finish in three darts using any combination you wish.',
-      'Receive ten points for every finish you complete and a ten point bonus for first two dart finishes.',
-      '20 points available every 3 darts; 400 overall.',
-    ],
-  },
-  eightythrew: {
-    description: [
-      'You have 20 visits to the oche needing 82, which is one of the most popular combinations and you have to finish in two or three darts using any method you wish. ',
-      'Receive ten points for every finish you complete and ten point bonuses for two darters.',
-      '20 points available every 3 darts; 400 overall.',
-    ],
-  },
-  shanghainights: {
-    description: [
-      'You have 20 visits and your task is to finish 120 as any times as possible.',
-      'Receive ten points every time you take out the combination. Ten points bonuses for three double-tops.',
-      '20 points available every 3 darts; 400 overall.',
-    ],
-  },
-  switchhitter: {
-    description: [
-      'You have 60 darts at treble 19 - receive five points per treble 19, two points for a single 19 and a ten point bonus for a 171.',
-      'You receive no points for a dart which lands outside of the treble or single 19 beds.',
-      '25 points available every 3 darts; 500 overall.',
-    ],
-  },
-  bullybully: {
-    description: [
-      'Throw 60 darts at the bullseye - earn five points for every bull hit and two for every outer bull.',
-      '10 point bonus for 3 bulls. 25 points available every 3 darts; 500 overall.',
-    ],
-  },
-  treblesforshow: {
-    description: [
-      'Throw 60 darts at treble 20 - receive five points per treble 20. two points for a single 20 and a fifteen point bonus for a 180.',
-      'You receive no points for a dart which lands outside of the treble or single 20 beds. 30 points available every 3 darts; 600 overall.',
-    ],
+  games: {
+    eagleseye: {
+      title: "Eagle's Eye",
+      description: ['It is a count-up where only BULLs are added.', 'BULL is separate.'],
+      tags: ['BULL', 'count up'],
+    },
+    cricketmarkup: {
+      title: 'Cricket Mark-Up',
+      description: [
+        'This game was introduced by "Kikuchi Yamaguchi."',
+        'First, Setting target count (recommended 10 times)',
+        'Shoot for each cricket numbers from 20 to 15 and Bull until the target count of times, like Cricket.',
+        'For more information, please watch this video.',
+      ],
+      tags: ['cricket', 'count up'],
+    },
+    doubletrouble: {
+      title: 'Double Trouble',
+      description: [
+        'You throw three darts at each double in turn, i.e. three darts at double one, three at double two etc through to double top.',
+        'Receive five points for every double you hit. 15 points available every 3darts; 300 overall.',
+      ],
+      tags: ['double', 'count up'],
+    },
+    sweet16: {
+      title: 'Sweet 16',
+      description: [
+        'You have 20 visits to the oche needing 32, which you have to finish in three darts with any combination finishing on a double.',
+        'Receive five points every time you finish 32, 15poits available every 3 darts; 300 overall.',
+      ],
+      tags: ['double', 'finish'],
+    },
+    topsandtens: {
+      title: 'Tops and Tens',
+      description: [
+        'You have 20 visits to the oche needing 40, which you have to finish in three darts or less only on double top, double ten or double five.',
+        'Receive five points every time you finish 40. 15 points available every 3darts, 300 overall.',
+      ],
+      tags: ['double', 'finish'],
+    },
+    twodartcombinations: {
+      title: 'Two-Dart Combinations',
+      description: [
+        'You have just three darts at each finish from 41-60, which you must finish on a double with any combination you wish.',
+        'Receive 15 points for every finish you complete. 15 points available every 3 darts; 300 overall.',
+      ],
+      tags: ['double', 'finish'],
+    },
+    aroundthecompass: {
+      title: 'Around The Compass',
+      description: [
+        'You have 20 visits to finish 24 using any combination but always finishing on a double, Recieve five points every time you complete the finish.',
+        "10point bonus for three double 12's (i.e. you get the double 12 first dart then follow it up with two more). 15 points available every 3 darts; 300 overall.",
+      ],
+      tags: ['double', 'finish'],
+    },
+    tonsup: {
+      title: 'Tons Up',
+      description: [
+        'You have 20 visits and your task is to finish 100 on a double using any combination as many times as possible.',
+        'Receive ten points every time you complete the finish and a ten-point bonus if you complete the finish in just two darts (i.e. treble 20 and double top) so 20 points available every 3 darts; 400 overall.',
+      ],
+      tags: ['double', 'finish'],
+    },
+    route64: {
+      title: 'Route 64',
+      description: [
+        'You have 20 visits to the oche needing 64, which you have to finish in three darts using any combination you wish.',
+        'Receive ten points for every finish you complete and a ten point bonus for first two dart finishes.',
+        '20 points available every 3 darts; 400 overall.',
+      ],
+      tags: ['double', 'finish'],
+    },
+    eightythrew: {
+      title: 'Eighty Threw',
+      description: [
+        'You have 20 visits to the oche needing 82, which is one of the most popular combinations and you have to finish in two or three darts using any method you wish. ',
+        'Receive ten points for every finish you complete and ten point bonuses for two darters.',
+        '20 points available every 3 darts; 400 overall.',
+      ],
+      tags: ['double', 'finish'],
+    },
+    shanghainights: {
+      title: 'Shanghai Nights',
+      description: [
+        'You have 20 visits and your task is to finish 120 as any times as possible.',
+        'Receive ten points every time you take out the combination. Ten points bonuses for three double-tops.',
+        '20 points available every 3 darts; 400 overall.',
+      ],
+      tags: ['double', 'finish'],
+    },
+    switchhitter: {
+      title: 'Switch Hitter',
+      description: [
+        'You have 60 darts at treble 19 - receive five points per treble 19, two points for a single 19 and a ten point bonus for a 171.',
+        'You receive no points for a dart which lands outside of the treble or single 19 beds.',
+        '25 points available every 3 darts; 500 overall.',
+      ],
+      tags: ['19', 'count up'],
+    },
+    bullybully: {
+      title: 'Bully Bully',
+      description: [
+        'Throw 60 darts at the bullseye - earn five points for every bull hit and two for every outer bull.',
+        '10 point bonus for 3 bulls. 25 points available every 3 darts; 500 overall.',
+      ],
+      tags: ['BULL', 'count up'],
+    },
+    treblesforshow: {
+      title: 'Trebles For Show',
+      description: [
+        'Throw 60 darts at treble 20 - receive five points per treble 20. two points for a single 20 and a fifteen point bonus for a 180.',
+        'You receive no points for a dart which lands outside of the treble or single 20 beds. 30 points available every 3 darts; 600 overall.',
+      ],
+      tags: ['20', 'count up'],
+    },
   },
   import: {
     errortitle: 'Invalid Import File.',

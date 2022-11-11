@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should rendering 1`] = `
+<div>
+  <div
+    class="css-az2kbc"
+  >
+    <h1
+      class="chakra-heading css-rapkbq"
+    >
+      It's dull throwing darts monotonously,
+right?
+    </h1>
+    <p
+      class="chakra-text css-1t2w1fb"
+    >
+      It supports home darts, which tend to be monotonous.
+    </p>
+    <div
+      class="css-gmuwbf"
+    >
+      <button
+        class="chakra-button css-45r4b7"
+        type="button"
+      >
+        Let's see the practice games.
+      </button>
+    </div>
+  </div>
+  <span
+    hidden=""
+    id="__chakra_env"
+  />
+</div>
+`;

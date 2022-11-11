@@ -2,8 +2,8 @@
 
 exports[`should rendering 1`] = `
 <div>
-  <div
-    class="css-0"
+  <header
+    class="css-1wuf7qn"
   >
     <div
       class="css-1v5zkfs"
@@ -42,15 +42,11 @@ exports[`should rendering 1`] = `
           <a
             href="/"
           >
-            <h1
-              class="chakra-heading css-1dklj6k"
-            >
-              <img
-                alt="darts homes logo"
-                class="chakra-image css-1kil0uo"
-                src="/logo.svg"
-              />
-            </h1>
+            <img
+              alt="darts homes logo"
+              class="chakra-image css-1kil0uo"
+              src="/logo.svg"
+            />
           </a>
         </div>
         <div
@@ -70,7 +66,7 @@ exports[`should rendering 1`] = `
                 id="popover-trigger-:r2:"
               >
                 <a
-                  href="/#"
+                  href="/games"
                 >
                   Games
                 </a>
@@ -1028,7 +1024,10 @@ exports[`should rendering 1`] = `
         </div>
       </div>
     </div>
-  </div>
+  </header>
+  <div
+    class="css-1t2fh6z"
+  />
   <span
     hidden=""
     id="__chakra_env"

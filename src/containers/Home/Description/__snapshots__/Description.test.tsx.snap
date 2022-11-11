@@ -3,24 +3,26 @@
 exports[`should rendering 1`] = `
 <div>
   <div
-    class="css-jzax74"
+    class="css-9p431j"
   >
     <img
-      alt="darts homes"
-      class="chakra-image css-1ymdu7n"
+      alt="description image"
+      class="chakra-image css-o4xn9l"
       src="/darts.webp"
     />
     <div
-      class="css-tkevr6"
+      class="css-1ligtzy"
     >
-      <p
-        class="chakra-text css-1ngz931"
+      <h2
+        class="chakra-heading css-1jb3vzl"
       >
-        This website was created with the goal of creating a game for practicing darts at home.
-Games are created based on YouTube and more.
-Also, this website is processed on the client side, so it is impossible to synchronize results between devices.
-You can do this by importing and exporting results, or you can manage it by posting to social networking sites such as Twitter.
-(You don't want to sign into this incomprehensible site, do you?)
+        Suggest practicing home darts
+      </h2>
+      <p
+        class="chakra-text css-1lfynoq"
+      >
+        We propose practice methods for home darts, which tend to be monotonous.
+The practice is supported as an application with references to YouTube, Blogs, etc.
       </p>
     </div>
   </div>
