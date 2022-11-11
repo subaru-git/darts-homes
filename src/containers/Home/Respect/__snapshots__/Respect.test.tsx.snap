@@ -3,23 +3,10 @@
 exports[`should rendering 1`] = `
 <div>
   <div
-    class="css-vyd9jy"
+    class="css-9p431j"
   >
     <div
-      class="css-0"
-    >
-      <div
-        class="css-tkevr6"
-      >
-        <p
-          class="chakra-text css-9833tc"
-        >
-          This site appreciates and respects all darts content, including YouTube videos.
-        </p>
-      </div>
-    </div>
-    <div
-      class="css-b6bcyj"
+      class="css-dw5mbt"
     >
       <link
         as="image"
@@ -37,6 +24,20 @@ exports[`should rendering 1`] = `
           type="button"
         />
       </article>
+    </div>
+    <div
+      class="css-1ligtzy"
+    >
+      <h2
+        class="chakra-heading css-1jb3vzl"
+      >
+        Thanks for all the darts content
+      </h2>
+      <p
+        class="chakra-text css-1lfynoq"
+      >
+        This site appreciates and respects all content, including each darts manufacturer, players, YouTube, blogs, etc.
+      </p>
     </div>
   </div>
   <span

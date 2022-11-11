@@ -14,7 +14,6 @@ import {
   useDisclosure,
   Image,
   Spacer,
-  Heading,
 } from '@chakra-ui/react';
 import Link from 'next/link';
 import { GiHamburgerMenu } from 'react-icons/gi';
@@ -28,58 +27,59 @@ const NavigationBar: FC = () => {
   const items = GetNavItem();
 
   return (
-    <Box>
-      <Flex
-        bg={useColorModeValue('white', 'gray.800')}
-        color={useColorModeValue('gray.600', 'white')}
-        minH={'60px'}
-        py={{ base: 2 }}
-        px={{ base: 4 }}
-        borderBottom={1}
-        borderStyle={'solid'}
-        borderColor={useColorModeValue('gray.200', 'gray.900')}
-        align={'center'}
-      >
+    <>
+      <Box position={{ md: 'fixed' }} width='100%' zIndex={200} as='header'>
         <Flex
-          flex={{ base: 1, md: 'auto' }}
-          ml={{ base: -2 }}
-          display={{ base: 'flex', md: 'none' }}
+          bg={useColorModeValue('white', 'gray.800')}
+          color={useColorModeValue('gray.600', 'white')}
+          minH={'60px'}
+          py={{ base: 2 }}
+          px={{ base: 4 }}
+          borderBottom={1}
+          borderStyle={'solid'}
+          borderColor={useColorModeValue('gray.200', 'gray.900')}
+          align={'center'}
         >
-          <IconButton
-            onClick={onToggle}
-            icon={
-              isOpen ? <GrClose width={3} height={3} /> : <GiHamburgerMenu width={5} height={5} />
-            }
-            variant={'ghost'}
-            aria-label={'Toggle Navigation'}
-          />
-        </Flex>
-        <Flex flex={{ base: 'auto' }} justify={{ base: 'center', md: 'start' }}>
-          <Box
-            _hover={{
-              textDecoration: 'none',
-              color: useColorModeValue('gray.800', 'white'),
-            }}
+          <Flex
+            flex={{ base: 1, md: 'auto' }}
+            ml={{ base: -2 }}
+            display={{ base: 'flex', md: 'none' }}
           >
-            <Link href='/' passHref>
-              <a>
-                <Heading as='h1'>
-                  <Image src='/logo.svg' alt='darts homes logo' h='40px' w='200px' />
-                </Heading>
-              </a>
-            </Link>
-          </Box>
-          <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
-            <DesktopNav items={items} />
+            <IconButton
+              onClick={onToggle}
+              icon={
+                isOpen ? <GrClose width={3} height={3} /> : <GiHamburgerMenu width={5} height={5} />
+              }
+              variant={'ghost'}
+              aria-label={'Toggle Navigation'}
+            />
           </Flex>
-          <Spacer />
-          <LanguageChangeButton />
+          <Flex flex={{ base: 'auto' }} justify={{ base: 'center', md: 'start' }}>
+            <Box
+              _hover={{
+                textDecoration: 'none',
+                color: useColorModeValue('gray.800', 'white'),
+              }}
+            >
+              <Link href='/' passHref>
+                <a>
+                  <Image src='/logo.svg' alt='darts homes logo' h='40px' w='200px' />
+                </a>
+              </Link>
+            </Box>
+            <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
+              <DesktopNav items={items} />
+            </Flex>
+            <Spacer />
+            <LanguageChangeButton />
+          </Flex>
         </Flex>
-      </Flex>
-      <Collapse in={isOpen} animateOpacity>
-        <MobileNav items={items} />
-      </Collapse>
-    </Box>
+        <Collapse in={isOpen} animateOpacity>
+          <MobileNav items={items} />
+        </Collapse>
+      </Box>
+      <Box pt='60px' display={{ base: 'none', md: 'block' }} />
+    </>
   );
 };
 
@@ -188,7 +188,7 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
 
   return (
     <Stack spacing={4} onClick={children && onToggle}>
-      <Link href={href ?? '#'} passHref>
+      <Link href={href && !children ? href : '#'} passHref>
         <Flex
           py={2}
           justify={'space-between'}
@@ -246,6 +246,7 @@ const GetNavItem = () => {
   return [
     {
       label: 'Games',
+      href: '/games',
       children: [
         {
           label: "Eagle's Eye",

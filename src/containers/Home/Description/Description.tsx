@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Center, Flex, Img, Text, useBreakpointValue } from '@chakra-ui/react';
+import { Center, Flex, Grid, Heading, Img, Text, useBreakpointValue } from '@chakra-ui/react';
 import useLocale from '@/hooks/locale';
 
 const Description: FC = () => {
@@ -10,30 +10,48 @@ const Description: FC = () => {
 const DesktopDescription: FC = () => {
   const { t } = useLocale();
   return (
-    <Flex justifyContent='center' gap={4}>
-      <Img src='/darts.webp' alt='darts homes' boxSize={450} objectFit='cover' />
-      <Center h='100%'>
-        <Text fontSize={'xl'} whiteSpace='pre-wrap'>
-          {t.home.description.join('\n')}
+    <Grid templateColumns='repeat(2, 1fr)' justifyContent='center' gap={8}>
+      <Img
+        src='/darts.webp'
+        alt='description image'
+        objectFit='contain'
+        width='640px'
+        height='360px'
+      />
+      <Flex direction='column' gap={4} justifyContent='center'>
+        <Heading as={'h2'} size={'lg'}>
+          {t.home.description.title}
+        </Heading>
+        <Text fontSize={'md'} whiteSpace='pre-wrap'>
+          {t.home.description.description.join('\n')}
         </Text>
-      </Center>
-    </Flex>
+      </Flex>
+    </Grid>
   );
 };
 
 const MobileDescription: FC = () => {
   const { t } = useLocale();
   return (
-    <>
+    <Flex direction='column' gap={4}>
       <Center>
-        <Img src='/darts.webp' alt='darts homes' boxSize={200} objectFit='cover' loading='lazy' />
+        <Img
+          src='/darts.webp'
+          alt='darts homes'
+          objectFit='contain'
+          loading='lazy'
+          height='180px'
+        />
       </Center>
-      <Center h='100%'>
-        <Text fontSize={'md'} whiteSpace='pre-wrap'>
-          {t.home.description.join('\n')}
+      <Flex direction='column' gap={4}>
+        <Heading as={'h2'} size={'md'} textAlign='center'>
+          {t.home.description.title}
+        </Heading>
+        <Text fontSize={'sm'} whiteSpace='pre-wrap'>
+          {t.home.description.description.join('\n')}
         </Text>
-      </Center>
-    </>
+      </Flex>
+    </Flex>
   );
 };
 export default Description;

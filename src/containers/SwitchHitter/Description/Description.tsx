@@ -44,7 +44,7 @@ const Description: FC = () => {
           <ModalHeader>SwitchHitter</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <Text whiteSpace='pre-wrap'>{t.switchhitter.description.join('\n')}</Text>
+            <Text whiteSpace='pre-wrap'>{t.games.switchhitter.description.join('\n')}</Text>
           </ModalBody>
         </ModalContent>
       </Modal>

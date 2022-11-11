@@ -44,7 +44,7 @@ const Description: FC = () => {
           <ModalHeader>EightyThrew</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <Text whiteSpace='pre-wrap'>{t.eightythrew.description.join('\n')}</Text>
+            <Text whiteSpace='pre-wrap'>{t.games.eightythrew.description.join('\n')}</Text>
           </ModalBody>
         </ModalContent>
       </Modal>

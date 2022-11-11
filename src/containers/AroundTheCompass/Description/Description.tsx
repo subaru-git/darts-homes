@@ -44,7 +44,7 @@ const Description: FC = () => {
           <ModalHeader>Around The Compass</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <Text whiteSpace='pre-wrap'>{t.aroundthecompass.description.join('\n')}</Text>
+            <Text whiteSpace='pre-wrap'>{t.games.aroundthecompass.description.join('\n')}</Text>
           </ModalBody>
         </ModalContent>
       </Modal>

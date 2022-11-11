@@ -1,1 +1,1 @@
-export { default } from './RecordingMark'
+export { default } from './RecordingMark';

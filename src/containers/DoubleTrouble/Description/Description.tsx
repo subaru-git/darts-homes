@@ -44,7 +44,7 @@ const Description: FC = () => {
           <ModalHeader>Double Trouble</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <Text whiteSpace='pre-wrap'>{t.doubletrouble.description.join('\n')}</Text>
+            <Text whiteSpace='pre-wrap'>{t.games.doubletrouble.description.join('\n')}</Text>
           </ModalBody>
         </ModalContent>
       </Modal>

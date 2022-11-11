@@ -45,7 +45,7 @@ const Description: FC = () => {
           <ModalHeader>{"Eagle's Eye"}</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <Text whiteSpace='pre-wrap'>{t.eagleseye.description.join('\n')}</Text>
+            <Text whiteSpace='pre-wrap'>{t.games.eagleseye.description.join('\n')}</Text>
           </ModalBody>
         </ModalContent>
       </Modal>

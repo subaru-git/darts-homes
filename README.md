@@ -29,3 +29,7 @@ yarn cypress:ci
 ## How to deploy
 
 When you push to the main branch with pull request, the application will be deployed by Vercel.
+
+## Say Thanks
+
+- Photo by <a href="https://unsplash.com/@edwardhowellphotography?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Edward Howell</a> on <a href="https://unsplash.com/s/photos/graph?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
