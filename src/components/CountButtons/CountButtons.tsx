@@ -1,19 +1,28 @@
-import React, { FC, Fragment } from 'react';
+import React, { FC, Fragment, useState } from 'react';
 import {
+  Box,
   Button,
   Center,
+  Drawer,
+  DrawerBody,
+  DrawerCloseButton,
+  DrawerContent,
+  DrawerHeader,
+  DrawerOverlay,
   Flex,
   Grid,
   GridItem,
   IconButton,
-  Modal,
-  ModalBody,
-  ModalContent,
-  ModalOverlay,
+  Tab,
+  TabList,
+  TabPanel,
+  TabPanels,
+  Tabs,
   Text,
   useDisclosure,
 } from '@chakra-ui/react';
 import { TbTargetOff } from 'react-icons/tb';
+import DartBoard from '../DartBoard';
 
 type CountButtonsProps = {
   onCount: (count: point) => void;
@@ -187,6 +196,7 @@ const Full: FC<{ disabled?: boolean; bull?: boolean; onCount: (n: point) => void
   onCount,
 }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const [index, setIndex] = useState(0);
   return (
     <>
       <Flex gap={2}>
@@ -204,21 +214,47 @@ const Full: FC<{ disabled?: boolean; bull?: boolean; onCount: (n: point) => void
           ></IconButton>
         )}
       </Flex>
-      <Modal isOpen={isOpen} onClose={onClose}>
-        <ModalOverlay />
-        <ModalContent>
-          <ModalBody>
-            <Buttons
-              onCount={(n) => {
-                onCount(n);
-                onClose();
-              }}
-              buttons={[20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1]}
-              bull={true}
-            />
-          </ModalBody>
-        </ModalContent>
-      </Modal>
+      <Drawer isOpen={isOpen} onClose={onClose} size='lg' placement='right'>
+        <DrawerOverlay />
+        <DrawerContent>
+          <DrawerCloseButton />
+          <DrawerHeader>Full Inputs</DrawerHeader>
+          <DrawerBody>
+            <Tabs variant='enclosed' isFitted index={index} onChange={(i) => setIndex(i)}>
+              <TabList>
+                <Tab>Full Buttons</Tab>
+                <Tab>Dart Board</Tab>
+              </TabList>
+              <TabPanels>
+                <TabPanel>
+                  <Buttons
+                    onCount={(n) => {
+                      onCount(n);
+                      onClose();
+                    }}
+                    buttons={[
+                      20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1,
+                    ]}
+                    bull={true}
+                  />
+                </TabPanel>
+                <TabPanel>
+                  <Center>
+                    <Box w='100%' h='100%'>
+                      <DartBoard
+                        onCount={(n) => {
+                          onCount(n);
+                          onClose();
+                        }}
+                      />
+                    </Box>
+                  </Center>
+                </TabPanel>
+              </TabPanels>
+            </Tabs>
+          </DrawerBody>
+        </DrawerContent>
+      </Drawer>
     </>
   );
 };
