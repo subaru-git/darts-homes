@@ -78,46 +78,46 @@ const HistoryBoard: FC = () => {
           <Tab aria-label='trebles for show'>Trebles For Show</Tab>
         </TabList>
         <TabPanels>
-          <TabPanel>
+          <TabPanel aria-label='cricket mark up history'>
             <CricketMarkUpHistoryTable history={gameHistory.cricketMarkUp} />
           </TabPanel>
-          <TabPanel>
+          <TabPanel aria-label="eagle's eye history">
             <EaglesEyeHistoryTable history={gameHistory.eaglesEye} />
           </TabPanel>
-          <TabPanel>
+          <TabPanel aria-label='double trouble history'>
             <DoubleTroubleHistoryTable history={gameHistory.doubleTrouble} />
           </TabPanel>
-          <TabPanel>
+          <TabPanel aria-label='sweet 16 history'>
             <Sweet16HistoryTable history={gameHistory.sweet16} />
           </TabPanel>
-          <TabPanel>
+          <TabPanel aria-label='tops and tens history'>
             <TopsAndTensHistoryTable history={gameHistory.topsAndTens} />
           </TabPanel>
-          <TabPanel>
+          <TabPanel aria-label='two dart combinations history'>
             <TwoDartCombinationsHistoryTable history={gameHistory.twoDartCombinations} />
           </TabPanel>
-          <TabPanel>
+          <TabPanel aria-label='around the compass history'>
             <AroundTheCompassHistoryTable history={gameHistory.aroundTheCompass} />
           </TabPanel>
-          <TabPanel>
+          <TabPanel aria-label='tons up history'>
             <TonsUpHistoryTable history={gameHistory.tonsUp} />
           </TabPanel>
-          <TabPanel>
+          <TabPanel aria-label='route 64 history'>
             <Route64HistoryTable history={gameHistory.route64} />
           </TabPanel>
-          <TabPanel>
+          <TabPanel aria-label='eighty threw history'>
             <EightyThrewHistoryTable history={gameHistory.eightyThrew} />
           </TabPanel>
-          <TabPanel>
+          <TabPanel aria-label='shanghai nights history'>
             <ShanghaiNightsHistoryTable history={gameHistory.shanghaiNights} />
           </TabPanel>
-          <TabPanel>
+          <TabPanel aria-label='switch hitter history'>
             <SwitchHitterHistoryTable history={gameHistory.switchHitter} />
           </TabPanel>
-          <TabPanel>
+          <TabPanel aria-label='bully bully history'>
             <BullyBullyHistoryTable history={gameHistory.bullyBully} />
           </TabPanel>
-          <TabPanel>
+          <TabPanel aria-label='trebles for show history'>
             <TreblesForShowHistoryTable history={gameHistory.treblesForShow} />
           </TabPanel>
         </TabPanels>

@@ -32,10 +32,10 @@ const ImportExport: FC<ImportExportProps> = ({ onError }) => {
     tonsup: [],
     route64: [],
     eightythrew: [],
-    shanghainight: [],
+    shanghainights: [],
     switchhitter: [],
     bullybully: [],
-    trebleforshow: [],
+    treblesforshow: [],
   });
   const inputRef = useRef<HTMLInputElement>(null);
   const cancelRef = useRef<HTMLButtonElement>(null);
@@ -54,7 +54,6 @@ const ImportExport: FC<ImportExportProps> = ({ onError }) => {
               const roader = new FileReader();
               roader.onload = (e) => {
                 const history = JSON.parse(e.target?.result as string);
-                console.log(history);
                 if (!isGameHistory(history)) {
                   onError();
                   return;
@@ -75,6 +74,7 @@ const ImportExport: FC<ImportExportProps> = ({ onError }) => {
             inputRef.current?.click();
           }}
           leftIcon={<BiImport />}
+          aria-label='import'
         >
           Import
         </Button>
@@ -84,6 +84,7 @@ const ImportExport: FC<ImportExportProps> = ({ onError }) => {
           colorScheme='teal'
           onClick={() => exportGameHistory()}
           leftIcon={<BiExport />}
+          aria-label='export'
         >
           Export
         </Button>
@@ -101,7 +102,13 @@ const ImportExport: FC<ImportExportProps> = ({ onError }) => {
             </AlertDialogHeader>
             <AlertDialogBody>{t.import.description}</AlertDialogBody>
             <AlertDialogFooter>
-              <Button colorScheme='gray' ml={3} onClick={onClose} ref={cancelRef}>
+              <Button
+                colorScheme='gray'
+                ml={3}
+                onClick={onClose}
+                ref={cancelRef}
+                aria-label='cancel'
+              >
                 Cancel
               </Button>
               <Button
@@ -111,6 +118,7 @@ const ImportExport: FC<ImportExportProps> = ({ onError }) => {
                   onClose();
                 }}
                 ml={3}
+                aria-label='add'
               >
                 {t.common.add}
               </Button>
@@ -121,6 +129,7 @@ const ImportExport: FC<ImportExportProps> = ({ onError }) => {
                   onClose();
                 }}
                 ml={3}
+                aria-label='overwrite'
               >
                 {t.common.overwrite}
               </Button>

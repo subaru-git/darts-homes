@@ -11,6 +11,7 @@ exports[`should rendering 1`] = `
       type="file"
     />
     <button
+      aria-label="import"
       class="chakra-button css-4xx2wk"
       type="button"
     >
@@ -39,6 +40,7 @@ exports[`should rendering 1`] = `
       Import
     </button>
     <button
+      aria-label="export"
       class="chakra-button css-4xx2wk"
       type="button"
     >
