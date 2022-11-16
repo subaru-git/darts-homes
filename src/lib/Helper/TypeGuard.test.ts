@@ -64,10 +64,28 @@ test('isGameHistory', () => {
           ['16D', '16', '8D'],
           ['16D', '16', '8D'],
         ],
+        round: 20,
         playedAt: '2022-10-28T17:28:27.908Z',
       },
     ],
     topsandtens: [
+      {
+        result: 90,
+        scores: [
+          ['20D', '20', '8D'],
+          ['20D', '20', '8D'],
+          ['20D', '20', '8D'],
+          ['20D', '20', '8D'],
+          ['20D', '20', '8D'],
+          ['20D', '20', '8D'],
+          ['20D', '20', '8D'],
+          ['20D', '20', '8D'],
+          ['20D', '20', '8D'],
+        ],
+        playedAt: '2022-10-28T17:28:27.908Z',
+      },
+    ],
+    twodartcombinations: [
       {
         result: 90,
         scores: [
@@ -98,6 +116,7 @@ test('isGameHistory', () => {
           ['0', '0', '0'],
           ['0', '0', '0'],
         ],
+        round: 20,
         playedAt: '2022-10-28T17:28:27.908Z',
       },
     ],
@@ -115,6 +134,7 @@ test('isGameHistory', () => {
           ['0', '0', '0'],
           ['0', '0', '0'],
         ],
+        round: 20,
         playedAt: '2022-10-28T17:28:27.908Z',
       },
     ],
@@ -132,6 +152,7 @@ test('isGameHistory', () => {
           ['0', '0', '0'],
           ['0', '0', '0'],
         ],
+        round: 20,
         playedAt: '2022-10-28T17:28:27.908Z',
       },
     ],
@@ -149,10 +170,11 @@ test('isGameHistory', () => {
           ['0', '0', '0'],
           ['0', '0', '0'],
         ],
+        round: 20,
         playedAt: '2022-10-28T17:28:27.908Z',
       },
     ],
-    shanghainight: [
+    shanghainights: [
       {
         result: 0,
         scores: [
@@ -166,6 +188,7 @@ test('isGameHistory', () => {
           ['0', '0', '0'],
           ['0', '0', '0'],
         ],
+        round: 20,
         playedAt: '2022-10-28T17:28:27.908Z',
       },
     ],
@@ -183,13 +206,13 @@ test('isGameHistory', () => {
           ['0', '0', '0'],
           ['0', '0', '0'],
         ],
+        round: 20,
         playedAt: '2022-10-28T17:28:27.908Z',
       },
     ],
     bullybully: [
       {
         result: 0,
-        round: 20,
         scores: [
           ['0', '0', '0'],
           ['0', '0', '0'],
@@ -201,10 +224,11 @@ test('isGameHistory', () => {
           ['0', '0', '0'],
           ['0', '0', '0'],
         ],
+        round: 20,
         playedAt: '2022-10-28T17:28:27.908Z',
       },
     ],
-    trebleforshow: [
+    treblesforshow: [
       {
         result: 0,
         scores: [
@@ -218,6 +242,7 @@ test('isGameHistory', () => {
           ['0', '0', '0'],
           ['0', '0', '0'],
         ],
+        round: 20,
         playedAt: '2022-10-28T17:28:27.908Z',
       },
     ],

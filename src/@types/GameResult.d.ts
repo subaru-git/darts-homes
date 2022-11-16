@@ -9,10 +9,10 @@ interface GameResult {
   tonsup: TonsUpResult[];
   route64: Route64Result[];
   eightythrew: EightyThrewResult[];
-  shanghainight: ShanghaiNightsResult[];
+  shanghainights: ShanghaiNightsResult[];
   switchhitter: SwitchHitterResult[];
   bullybully: BullyBullyResult[];
-  trebleforshow: TreblesForShowResult[];
+  treblesforshow: TreblesForShowResult[];
 }
 
 interface CricketMarkUpResult {
