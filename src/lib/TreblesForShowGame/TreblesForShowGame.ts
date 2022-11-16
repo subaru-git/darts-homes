@@ -9,11 +9,15 @@ class TreblesForShowGame {
   constructor(round: number) {
     this.round = round;
   }
-  resumeGame(progress: { round: point[]; score: point[][] }) {
+  resumeGame(progress: TreblesForShowProgress) {
     for (const round of progress.score) {
       this.player.roundScore(round);
     }
-    this.roundScore = progress.round;
+    this.roundScore = progress.roundScore;
+    this.round = progress.round;
+  }
+  getTargetRound() {
+    return this.round;
   }
   getRound() {
     return this.player.getScore().length + 1;
@@ -46,13 +50,14 @@ class TreblesForShowGame {
   isFinish() {
     return this.getScore().length === this.round - 1 && this.roundScore.length === 3;
   }
-  getProgressJson() {
-    return { round: this.roundScore, score: this.player.getScore() };
+  getProgressJson(): TreblesForShowProgress {
+    return { roundScore: this.roundScore, score: this.player.getScore(), round: this.round };
   }
   getGameResult(): TreblesForShowResult {
     return {
       result: this.getTotalScore(),
       scores: [...this.player.getScore(), this.roundScore],
+      round: this.round,
       playedAt: new Date().toJSON(),
     };
   }

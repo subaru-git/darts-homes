@@ -27,6 +27,15 @@ const ImportExport: FC<ImportExportProps> = ({ onError }) => {
     doubletrouble: [],
     sweet16: [],
     topsandtens: [],
+    twodartcombinations: [],
+    aroundthecompass: [],
+    tonsup: [],
+    route64: [],
+    eightythrew: [],
+    shanghainight: [],
+    switchhitter: [],
+    bullybully: [],
+    trebleforshow: [],
   });
   const inputRef = useRef<HTMLInputElement>(null);
   const cancelRef = useRef<HTMLButtonElement>(null);

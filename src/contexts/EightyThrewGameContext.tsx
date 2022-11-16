@@ -8,7 +8,9 @@ import {
   useEffect,
   useState,
 } from 'react';
+import { createCheckers } from 'ts-interface-checker';
 import EightyThrewGame from '@/lib/EightyThrewGame/EightyThrewGame';
+import types from '@/schemas/Types-ti';
 
 const eightyThrewGameContext = createContext<EightyThrewGame | null>(new EightyThrewGame(20));
 const setEightyThrewGameContext = createContext<Dispatch<SetStateAction<EightyThrewGame | null>>>(
@@ -22,7 +24,11 @@ const EightyThrewGameContextProvider: FC<{ children: ReactNode | ReactNode[] }> 
   useEffect(() => {
     const g = new EightyThrewGame(20);
     const memoGame = localStorage.getItem('EightyThrew');
-    if (memoGame) g.resumeGame(JSON.parse(memoGame));
+    if (memoGame) {
+      const progress = JSON.parse(memoGame);
+      const { EightyThrewProgress } = createCheckers(types);
+      if (EightyThrewProgress.test(progress)) g.resumeGame(progress);
+    }
     setGame(g);
   }, []);
   useEffect(() => {

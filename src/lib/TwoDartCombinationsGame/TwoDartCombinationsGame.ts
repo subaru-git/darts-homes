@@ -1,16 +1,16 @@
-import { isDoubleOut } from '../Helper/Check';
 import { convertScoreToNumber } from '../Helper/Converter';
+import { isDoubleOut } from '../Helper/Validation';
 import Player from '../Player/Player';
 
 class TwoDartCombinationsGame {
   private player: Player = new Player('Player1');
   private roundScore: point[] = [];
 
-  resumeGame(progress: { round: point[]; score: point[][] }) {
+  resumeGame(progress: TwoDartCombinationsProgress) {
     for (const round of progress.score) {
       this.player.roundScore(round);
     }
-    this.roundScore = progress.round;
+    this.roundScore = progress.roundScore;
   }
   getRound() {
     return this.player.getScore().length + 1;
@@ -44,10 +44,10 @@ class TwoDartCombinationsGame {
   isFinish() {
     return this.getScore().length === 19 && this.roundScore.length === 3;
   }
-  getProgressJson() {
-    return { round: this.roundScore, score: this.player.getScore() };
+  getProgressJson(): TwoDartCombinationsProgress {
+    return { roundScore: this.roundScore, score: this.player.getScore() };
   }
-  getGameResult(): Sweet16Result {
+  getGameResult(): TwoDartCombinationsResult {
     return {
       result: this.getTotalScore(),
       scores: [...this.player.getScore(), this.roundScore],

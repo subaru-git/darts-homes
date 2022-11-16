@@ -1,26 +1,48 @@
-import React, { FC } from 'react';
-import { Button, IconButton, useBreakpointValue, useDisclosure } from '@chakra-ui/react';
-import { FiSettings } from 'react-icons/fi';
-import NewGameAlert from '@/components/NewGameAlert';
+import React, { FC, useState } from 'react';
+import {
+  NumberDecrementStepper,
+  NumberIncrementStepper,
+  NumberInput,
+  NumberInputField,
+  NumberInputStepper,
+  Text,
+} from '@chakra-ui/react';
+import NewGameModal from '@/components/NewGameModal';
 
 type NewGameProps = {
-  onNewGame: () => void;
+  onNewGame: (round: number) => void;
+  currentRound: number;
+  isFinished: boolean;
 };
 
-const NewGame: FC<NewGameProps> = ({ onNewGame }) => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const isMd = useBreakpointValue({ base: false, md: true });
+const NewGame: FC<NewGameProps> = ({ onNewGame, currentRound, isFinished }) => {
+  const [round, setRound] = useState(currentRound);
+  const format = (n: number) =>
+    n === 20 ? `${n} - (recommended)` : n === currentRound ? `${n} - (current)` : n;
+  const parse = (s: string) => Number(s.replace(/\D/g, ''));
   return (
-    <>
-      {isMd ? (
-        <Button leftIcon={<FiSettings />} aria-label='setting' variant='ghost' onClick={onOpen}>
-          New Game
-        </Button>
-      ) : (
-        <IconButton aria-label='New Game' icon={<FiSettings />} variant='ghost' onClick={onOpen} />
-      )}
-      <NewGameAlert isOpen={isOpen} onClose={onClose} onNewGame={onNewGame} />
-    </>
+    <NewGameModal
+      onNewGame={() => onNewGame(round)}
+      settings={
+        <>
+          <Text fontSize='sm'>Round</Text>
+          <NumberInput
+            defaultValue={round}
+            onChange={(value) => setRound(parse(value))}
+            value={format(round)}
+            min={1}
+            aria-label='round setting'
+          >
+            <NumberInputField />
+            <NumberInputStepper>
+              <NumberIncrementStepper />
+              <NumberDecrementStepper />
+            </NumberInputStepper>
+          </NumberInput>
+        </>
+      }
+      isFinished={isFinished}
+    />
   );
 };
 

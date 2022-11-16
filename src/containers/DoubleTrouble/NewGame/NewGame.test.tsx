@@ -10,7 +10,7 @@ test('should rendering', () => {
   const onNewGameMock = jest.fn();
   const { container } = render(
     <ChakraProvider>
-      <NewGame onNewGame={onNewGameMock} />
+      <NewGame onNewGame={onNewGameMock} isFinished={false} />
     </ChakraProvider>,
   );
   expect(container).toMatchSnapshot();

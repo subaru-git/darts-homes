@@ -1,21 +1,16 @@
 import { ChakraProvider } from '@chakra-ui/react';
-import { fireEvent, render, screen } from '@testing-library/react';
-import Settings from './Settings';
+import { render } from '@testing-library/react';
+import NewGame from './NewGame';
 import { createMatchMedia } from '@/lib/TestUtils/MatchMediaMock';
 
 jest.mock('next/router', () => ({ useRouter: jest.fn().mockReturnValue({ locale: 'en' }) }));
-
 test('should rendering', () => {
   window.matchMedia = createMatchMedia(1100);
-  const mockOnNewGame = jest.fn();
+  const onNewGameMock = jest.fn();
   const { container } = render(
     <ChakraProvider>
-      <Settings onNewGame={mockOnNewGame} isFinished={false} targetCount={10} />
+      <NewGame onNewGame={onNewGameMock} isFinished={false} currentTargetCount={20} />
     </ChakraProvider>,
   );
-  fireEvent.click(screen.getByText('New Game'));
-  fireEvent.click(screen.getAllByText('New Game')[1]);
-  fireEvent.click(screen.getByText('OK'));
-  expect(mockOnNewGame).toBeCalledTimes(1);
   expect(container).toMatchSnapshot();
 });

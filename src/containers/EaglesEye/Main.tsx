@@ -45,7 +45,7 @@ const DesktopMain: FC<{ game: EaglesEyeGame; setGame: (game: EaglesEyeGame) => v
   return (
     <>
       <Flex justifyContent='space-between' alignItems='center'>
-        <NewGame onNewGame={() => setGame(new EaglesEyeGame())} />
+        <NewGame onNewGame={() => setGame(new EaglesEyeGame())} isFinished={game.isFinish()} />
         <Flex gap={2}>
           <Description />
           <CameraView />
@@ -105,7 +105,7 @@ const MobileMain: FC<{ game: EaglesEyeGame; setGame: (game: EaglesEyeGame) => vo
     <Grid gap={4} justifyItems='center'>
       <GridItem width='100%'>
         <Flex justifyContent='space-between'>
-          <NewGame onNewGame={() => setGame(new EaglesEyeGame())} />
+          <NewGame onNewGame={() => setGame(new EaglesEyeGame())} isFinished={game.isFinish()} />
           <Box width='100%' pr='40px'>
             <Center>
               <TargetBoard

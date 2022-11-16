@@ -7,7 +7,6 @@ describe('gaming Cricket Mark-Up', () => {
     cy.get('button[aria-label="setting"]').first().click({ force: true });
     cy.get('input[aria-label="target count"]').clear().type('3');
     cy.get('button[aria-label="new game"]').click();
-    cy.get('button[aria-label="ok"]').click();
     cy.get('button[aria-label="20 triple"]').first().click();
     cy.get('button[aria-label="19 triple"]').first().click();
     cy.get('button[aria-label="18 triple"]').first().click();

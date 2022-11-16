@@ -8,7 +8,9 @@ import {
   useEffect,
   useState,
 } from 'react';
+import { createCheckers } from 'ts-interface-checker';
 import Route64Game from '@/lib/Route64Game/Route64Game';
+import types from '@/schemas/Types-ti';
 
 const route64GameContext = createContext<Route64Game | null>(new Route64Game(20));
 const setRoute64GameContext = createContext<Dispatch<SetStateAction<Route64Game | null>>>(
@@ -20,7 +22,11 @@ const Route64GameContextProvider: FC<{ children: ReactNode | ReactNode[] }> = ({
   useEffect(() => {
     const g = new Route64Game(20);
     const memoGame = localStorage.getItem('Route64');
-    if (memoGame) g.resumeGame(JSON.parse(memoGame));
+    if (memoGame) {
+      const progress = JSON.parse(memoGame);
+      const { Route64Progress } = createCheckers(types);
+      if (Route64Progress.test(progress)) g.resumeGame(progress);
+    }
     setGame(g);
   }, []);
   useEffect(() => {

@@ -15,6 +15,7 @@ import HistoryDeleteAlert from '@/containers/History/DeleteAlert';
 import { ShanghaiNightsResultModel } from '@/db/ShanghaiNightsResultModel';
 import { db } from '@/db/db';
 import { deleteFromDB } from '@/lib/GameHistoryManager/GameHistory';
+import { DateFormat } from '@/lib/Helper/Format';
 
 type HistoryTableProps = {
   history: ShanghaiNightsResultModel[];
@@ -57,14 +58,7 @@ const HistoryTable: FC<HistoryTableProps> = ({ history }) => {
       </TableContainer>
       {deleteHistory ? (
         <HistoryDeleteAlert
-          message={`Shanghai Nights: ${new Date(deleteHistory.playedAt).toLocaleString('ja-JP', {
-            year: 'numeric',
-            month: '2-digit',
-            day: '2-digit',
-            hour: '2-digit',
-            minute: '2-digit',
-            second: '2-digit',
-          })}`}
+          message={`Shanghai Nights: ${DateFormat(deleteHistory.playedAt)}`}
           isOpen={isOpen}
           onClose={onClose}
           onDelete={() => {
@@ -87,17 +81,11 @@ const DesktopHistoryRow: FC<{
         <Td colSpan={4} p={1}>
           Shanghai Nights
         </Td>
+        <Td colSpan={1} p={1} textAlign='end'>
+          Round: {history.round}
+        </Td>
         <Td colSpan={2} p={1} textAlign='end'>
-          <Text>
-            {new Date(history.playedAt).toLocaleString('ja-JP', {
-              year: 'numeric',
-              month: '2-digit',
-              day: '2-digit',
-              hour: '2-digit',
-              minute: '2-digit',
-              second: '2-digit',
-            })}
-          </Text>
+          <Text>{DateFormat(history.playedAt)}</Text>
         </Td>
         <Td colSpan={1} p={1} textAlign='center'>
           <IconButton
@@ -130,17 +118,11 @@ const MobileRow: FC<{
         <Td p={0} fontSize='xs'>
           Shanghai Nights
         </Td>
+        <Td p={0} fontSize='xs'>
+          Round: {history.round}
+        </Td>
         <Td p={0} fontSize='xs' textAlign='start'>
-          <Text>
-            {new Date(history.playedAt).toLocaleString('ja-JP', {
-              year: 'numeric',
-              month: '2-digit',
-              day: '2-digit',
-              hour: '2-digit',
-              minute: '2-digit',
-              second: '2-digit',
-            })}
-          </Text>
+          <Text>{DateFormat(history.playedAt)}</Text>
         </Td>
         <Td p={0} textAlign='start'>
           <IconButton

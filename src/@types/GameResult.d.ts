@@ -4,6 +4,15 @@ interface GameResult {
   doubletrouble: DoubleTroubleResult[];
   sweet16: Sweet16Result[];
   topsandtens: TopsAndTensResult[];
+  twodartcombinations: TwoDartCombinationsResult[];
+  aroundthecompass: AroundTheCompassResult[];
+  tonsup: TonsUpResult[];
+  route64: Route64Result[];
+  eightythrew: EightyThrewResult[];
+  shanghainight: ShanghaiNightsResult[];
+  switchhitter: SwitchHitterResult[];
+  bullybully: BullyBullyResult[];
+  trebleforshow: TreblesForShowResult[];
 }
 
 interface CricketMarkUpResult {
@@ -34,6 +43,7 @@ interface DoubleTroubleResult {
 interface Sweet16Result {
   result: number;
   scores: point[][];
+  round: number;
   playedAt: string;
 }
 
@@ -43,50 +53,64 @@ interface TopsAndTensResult {
   playedAt: string;
 }
 
+interface TwoDartCombinationsResult {
+  result: number;
+  scores: point[][];
+  playedAt: string;
+}
+
 interface AroundTheCompassResult {
   result: number;
   scores: point[][];
+  round: number;
   playedAt: string;
 }
 
 interface TonsUpResult {
   result: number;
   scores: point[][];
+  round: number;
   playedAt: string;
 }
 
 interface Route64Result {
   result: number;
   scores: point[][];
+  round: number;
   playedAt: string;
 }
 
 interface EightyThrewResult {
   result: number;
   scores: point[][];
+  round: number;
   playedAt: string;
 }
 
 interface ShanghaiNightsResult {
   result: number;
   scores: point[][];
+  round: number;
   playedAt: string;
 }
 
 interface SwitchHitterResult {
   result: number;
   scores: point[][];
+  round: number;
   playedAt: string;
 }
 
 interface BullyBullyResult {
   result: number;
   scores: point[][];
+  round: number;
   playedAt: string;
 }
 
 interface TreblesForShowResult {
   result: number;
   scores: point[][];
+  round: number;
   playedAt: string;
 }

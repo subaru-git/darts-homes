@@ -45,7 +45,11 @@ const DesktopMain: FC<{ game: BullyBullyGame; setGame: (game: BullyBullyGame) =>
   return (
     <div>
       <Flex justifyContent='space-between' alignItems='center'>
-        <NewGame onNewGame={() => setGame(new BullyBullyGame(20))} />
+        <NewGame
+          onNewGame={(round) => setGame(new BullyBullyGame(round))}
+          isFinished={game.isFinish()}
+          currentRound={game.getTargetRound()}
+        />
         <Flex gap={2}>
           <Description />
           <CameraView />
@@ -54,7 +58,10 @@ const DesktopMain: FC<{ game: BullyBullyGame; setGame: (game: BullyBullyGame) =>
       <Flex justifyContent='space-around' gap={4} alignItems='center' p={4}>
         <Box>
           <Flex justifyContent='center' alignItems='end'>
-            <TargetBoard message={`Round ${game.getRound()}`} target='BULL' />
+            <TargetBoard
+              message={`Round ${game.getRound()} / ${game.getTargetRound()}`}
+              target='BULL'
+            />
             <TargetBoard message='Score' target={game.getTotalScore().toString()} size='sm' />
           </Flex>
           <RoundScore
@@ -101,7 +108,11 @@ const MobileMain: FC<{ game: BullyBullyGame; setGame: (game: BullyBullyGame) => 
   return (
     <Flex direction='column' gap={4}>
       <Flex justifyContent='space-between' width='100%'>
-        <NewGame onNewGame={() => setGame(new BullyBullyGame(20))} />
+        <NewGame
+          onNewGame={(round) => setGame(new BullyBullyGame(round))}
+          isFinished={game.isFinish()}
+          currentRound={game.getTargetRound()}
+        />
         <Flex alignItems='center' gap={4}>
           <TargetBoard message={`Round ${game.getRound()}`} target='BULL' />
           <TargetBoard message='Score' target={game.getTotalScore().toString()} size='sm' />
@@ -150,6 +161,7 @@ const MobileMain: FC<{ game: BullyBullyGame; setGame: (game: BullyBullyGame) => 
   );
 };
 
-const getResult = (game: BullyBullyGame) => `Total: ${game.getGameResult().result}`;
+const getResult = (game: BullyBullyGame) =>
+  `Round: ${game.getTargetRound()}\nTotal: ${game.getGameResult().result}`;
 
 export default Main;

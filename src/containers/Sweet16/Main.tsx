@@ -45,7 +45,11 @@ const DesktopMain: FC<{ game: Sweet16Game; setGame: (game: Sweet16Game) => void 
   return (
     <div>
       <Flex justifyContent='space-between' alignItems='center'>
-        <NewGame onNewGame={() => setGame(new Sweet16Game(20))} />
+        <NewGame
+          onNewGame={(targetCount) => setGame(new Sweet16Game(targetCount))}
+          isFinished={game.isFinish()}
+          currentRound={game.getTargetRound()}
+        />
         <Flex gap={2}>
           <Description />
           <CameraView />
@@ -55,7 +59,7 @@ const DesktopMain: FC<{ game: Sweet16Game; setGame: (game: Sweet16Game) => void 
         <Box>
           <Flex justifyContent='center' alignItems='end'>
             <TargetBoard
-              message={`Round ${game.getRound()}`}
+              message={`Round ${game.getRound()} / ${game.getTargetRound()}`}
               target={game.getCurrentTarget().toString()}
             />
             <TargetBoard message='Score' target={game.getTotalScore().toString()} size='sm' />
@@ -75,7 +79,7 @@ const DesktopMain: FC<{ game: Sweet16Game; setGame: (game: Sweet16Game) => void 
             isFinished={game.isFinish()}
             onRoundOver={() => {
               saveToDB(game.getGameResult(), db.sweet16Result);
-              setGame(new Sweet16Game(20));
+              setGame(new Sweet16Game(game.getTargetRound()));
             }}
             result={getResult(game)}
           />
@@ -107,9 +111,16 @@ const MobileMain: FC<{ game: Sweet16Game; setGame: (game: Sweet16Game) => void }
   return (
     <Flex direction='column' gap={4}>
       <Flex justifyContent='space-between' width='100%'>
-        <NewGame onNewGame={() => setGame(new Sweet16Game(20))} />
+        <NewGame
+          onNewGame={(targetCount) => setGame(new Sweet16Game(targetCount))}
+          isFinished={game.isFinish()}
+          currentRound={game.getTargetRound()}
+        />
         <Flex alignItems='center' gap={4}>
-          <TargetBoard message='Target' target={game.getCurrentTarget().toString()} />
+          <TargetBoard
+            message={`Round ${game.getRound()} / ${game.getTargetRound()}`}
+            target={game.getCurrentTarget().toString()}
+          />
           <TargetBoard message='Score' target={game.getTotalScore().toString()} size='sm' />
         </Flex>
         <Flex direction='column'>
@@ -133,7 +144,7 @@ const MobileMain: FC<{ game: Sweet16Game; setGame: (game: Sweet16Game) => void }
           isFinished={game.isFinish()}
           onRoundOver={() => {
             saveToDB(game.getGameResult(), db.sweet16Result);
-            setGame(new Sweet16Game(20));
+            setGame(new Sweet16Game(game.getTargetRound()));
           }}
           result={getResult(game)}
         />
@@ -157,6 +168,7 @@ const MobileMain: FC<{ game: Sweet16Game; setGame: (game: Sweet16Game) => void }
   );
 };
 
-const getResult = (game: Sweet16Game) => `Total: ${game.getGameResult().result}`;
+const getResult = (game: Sweet16Game) =>
+  `Round: ${game.getTargetRound()}\nTotal: ${game.getGameResult().result}`;
 
 export default Main;

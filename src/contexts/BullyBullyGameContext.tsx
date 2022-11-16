@@ -8,7 +8,9 @@ import {
   useEffect,
   useState,
 } from 'react';
+import { createCheckers } from 'ts-interface-checker';
 import BullyBullyGame from '@/lib/BullyBullyGame/BullyBullyGame';
+import types from '@/schemas/Types-ti';
 
 const bullyBullyGameContext = createContext<BullyBullyGame | null>(new BullyBullyGame(20));
 const setBullyBullyGameContext = createContext<Dispatch<SetStateAction<BullyBullyGame | null>>>(
@@ -20,7 +22,11 @@ const BullyBullyGameContextProvider: FC<{ children: ReactNode | ReactNode[] }> =
   useEffect(() => {
     const g = new BullyBullyGame(20);
     const memoGame = localStorage.getItem('BullyBully');
-    if (memoGame) g.resumeGame(JSON.parse(memoGame));
+    if (memoGame) {
+      const progress = JSON.parse(memoGame);
+      const { BullyBullyProgress } = createCheckers(types);
+      if (BullyBullyProgress.test(progress)) g.resumeGame(progress);
+    }
     setGame(g);
   }, []);
   useEffect(() => {

@@ -8,7 +8,9 @@ import {
   useEffect,
   useState,
 } from 'react';
+import { createCheckers } from 'ts-interface-checker';
 import SwitchHitterGame from '@/lib/SwitchHitterGame/SwitchHitterGame';
+import types from '@/schemas/Types-ti';
 
 const switchHitterGameContext = createContext<SwitchHitterGame | null>(new SwitchHitterGame(20));
 const setSwitchHitterGameContext = createContext<Dispatch<SetStateAction<SwitchHitterGame | null>>>(
@@ -22,7 +24,11 @@ const SwitchHitterGameContextProvider: FC<{ children: ReactNode | ReactNode[] }>
   useEffect(() => {
     const g = new SwitchHitterGame(20);
     const memoGame = localStorage.getItem('SwitchHitter');
-    if (memoGame) g.resumeGame(JSON.parse(memoGame));
+    if (memoGame) {
+      const progress = JSON.parse(memoGame);
+      const { SwitchHitterProgress } = createCheckers(types);
+      if (SwitchHitterProgress.test(progress)) g.resumeGame(progress);
+    }
     setGame(g);
   }, []);
   useEffect(() => {
