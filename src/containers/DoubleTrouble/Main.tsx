@@ -45,7 +45,7 @@ const DesktopMain: FC<{ game: DoubleTroubleGame; setGame: (game: DoubleTroubleGa
   return (
     <div>
       <Flex justifyContent='space-between' alignItems='center'>
-        <NewGame onNewGame={() => setGame(new DoubleTroubleGame())} />
+        <NewGame onNewGame={() => setGame(new DoubleTroubleGame())} isFinished={game.isFinish()} />
         <Flex gap={2}>
           <Description />
           <CameraView />
@@ -104,7 +104,7 @@ const MobileMain: FC<{ game: DoubleTroubleGame; setGame: (game: DoubleTroubleGam
   return (
     <Flex direction='column' gap={4}>
       <Flex justifyContent='space-between' width='100%'>
-        <NewGame onNewGame={() => setGame(new DoubleTroubleGame())} />
+        <NewGame onNewGame={() => setGame(new DoubleTroubleGame())} isFinished={game.isFinish()} />
         <Flex alignItems='center' gap={4}>
           <TargetBoard message='Target' target={game.getCurrentTarget().toString()} />
           <TargetBoard message='Score' target={game.getTotalScore().toString()} size='sm' />

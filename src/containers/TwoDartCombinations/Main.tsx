@@ -71,7 +71,10 @@ const DesktopMain: FC<{
   return (
     <div>
       <Flex justifyContent='space-between' alignItems='center'>
-        <NewGame onNewGame={() => setGame(new TwoDartCombinationsGame())} />
+        <NewGame
+          onNewGame={() => setGame(new TwoDartCombinationsGame())}
+          isFinished={game.isFinish()}
+        />
         <Flex gap={2}>
           <Description />
           <CameraView />
@@ -133,7 +136,10 @@ const MobileMain: FC<{
   return (
     <Flex direction='column' gap={4}>
       <Flex justifyContent='space-between' width='100%'>
-        <NewGame onNewGame={() => setGame(new TwoDartCombinationsGame())} />
+        <NewGame
+          onNewGame={() => setGame(new TwoDartCombinationsGame())}
+          isFinished={game.isFinish()}
+        />
         <Flex alignItems='center' gap={4}>
           <TargetBoard message='Target' target={game.getCurrentTarget().toString()} />
           <TargetBoard message='Score' target={game.getTotalScore().toString()} size='sm' />

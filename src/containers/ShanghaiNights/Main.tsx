@@ -48,7 +48,11 @@ const DesktopMain: FC<{
   return (
     <div>
       <Flex justifyContent='space-between' alignItems='center'>
-        <NewGame onNewGame={() => setGame(new ShanghaiNightsGame(20))} />
+        <NewGame
+          onNewGame={(targetRound) => setGame(new ShanghaiNightsGame(targetRound))}
+          isFinished={game.isFinish()}
+          currentRound={game.getTargetRound()}
+        />
         <Flex gap={2}>
           <Description />
           <CameraView />
@@ -58,7 +62,7 @@ const DesktopMain: FC<{
         <Box>
           <Flex justifyContent='center' alignItems='end'>
             <TargetBoard
-              message={`Round ${game.getRound()}`}
+              message={`Round ${game.getRound()} / ${game.getTargetRound()}`}
               target={game.getCurrentTarget().toString()}
             />
             <TargetBoard message='Score' target={game.getTotalScore().toString()} size='sm' />
@@ -78,7 +82,7 @@ const DesktopMain: FC<{
             isFinished={game.isFinish()}
             onRoundOver={() => {
               saveToDB(game.getGameResult(), db.shanghaiNightsResult);
-              setGame(new ShanghaiNightsGame(20));
+              setGame(new ShanghaiNightsGame(game.getTargetRound()));
             }}
             result={getResult(game)}
           />
@@ -110,10 +114,14 @@ const MobileMain: FC<{ game: ShanghaiNightsGame; setGame: (game: ShanghaiNightsG
   return (
     <Flex direction='column' gap={4}>
       <Flex justifyContent='space-between' width='100%'>
-        <NewGame onNewGame={() => setGame(new ShanghaiNightsGame(20))} />
+        <NewGame
+          onNewGame={(targetRound) => setGame(new ShanghaiNightsGame(targetRound))}
+          isFinished={game.isFinish()}
+          currentRound={game.getTargetRound()}
+        />
         <Flex alignItems='center' gap={4}>
           <TargetBoard
-            message={`Round ${game.getRound()}`}
+            message={`Round ${game.getRound()} / ${game.getTargetRound()}`}
             target={game.getCurrentTarget().toString()}
           />
           <TargetBoard message='Score' target={game.getTotalScore().toString()} size='sm' />
@@ -139,7 +147,7 @@ const MobileMain: FC<{ game: ShanghaiNightsGame; setGame: (game: ShanghaiNightsG
           isFinished={game.isFinish()}
           onRoundOver={() => {
             saveToDB(game.getGameResult(), db.shanghaiNightsResult);
-            setGame(new ShanghaiNightsGame(20));
+            setGame(new ShanghaiNightsGame(game.getTargetRound()));
           }}
           result={getResult(game)}
         />
@@ -163,6 +171,7 @@ const MobileMain: FC<{ game: ShanghaiNightsGame; setGame: (game: ShanghaiNightsG
   );
 };
 
-const getResult = (game: ShanghaiNightsGame) => `Total: ${game.getGameResult().result}`;
+const getResult = (game: ShanghaiNightsGame) =>
+  `Round: ${game.getTargetRound()}\nTotal: ${game.getGameResult().result}`;
 
 export default Main;

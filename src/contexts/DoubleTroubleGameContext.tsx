@@ -8,7 +8,9 @@ import {
   useEffect,
   useState,
 } from 'react';
+import { createCheckers } from 'ts-interface-checker';
 import DoubleTroubleGame from '@/lib/DoubleTroubleGame/DoubleTroubleGame';
+import types from '@/schemas/Types-ti';
 
 const doubleTroubleGameContext = createContext<DoubleTroubleGame | null>(new DoubleTroubleGame());
 const setDoubleTroubleGameContext = createContext<
@@ -22,7 +24,11 @@ const DoubleTroubleGameContextProvider: FC<{ children: ReactNode | ReactNode[] }
   useEffect(() => {
     const g = new DoubleTroubleGame();
     const memoGame = localStorage.getItem('DoubleTrouble');
-    if (memoGame) g.resumeGame(JSON.parse(memoGame));
+    if (memoGame) {
+      const progress = JSON.parse(memoGame);
+      const { DoubleTroubleProgress } = createCheckers(types);
+      if (DoubleTroubleProgress.test(progress)) g.resumeGame(progress);
+    }
     setGame(g);
   }, []);
   useEffect(() => {

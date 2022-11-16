@@ -4,11 +4,11 @@ class DoubleTroubleGame {
   private player: Player = new Player('Player1');
   private roundScore: point[] = [];
 
-  resumeGame(progress: { round: point[]; score: point[][] }) {
+  resumeGame(progress: DoubleTroubleProgress) {
     for (const round of progress.score) {
       this.player.roundScore(round);
     }
-    this.roundScore = progress.round;
+    this.roundScore = progress.roundScore;
   }
   roundChange() {
     if (this.roundScore.length > 3) return;
@@ -46,8 +46,8 @@ class DoubleTroubleGame {
   isFinish() {
     return this.getScore().length === 19 && this.roundScore.length === 3;
   }
-  getProgressJson() {
-    return { round: this.roundScore, score: this.player.getScore() };
+  getProgressJson(): DoubleTroubleProgress {
+    return { roundScore: this.roundScore, score: this.player.getScore() };
   }
   getGameResult(): DoubleTroubleResult {
     return {

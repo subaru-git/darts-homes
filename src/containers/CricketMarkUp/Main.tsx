@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { Box, Flex, Grid, GridItem } from '@chakra-ui/react';
 import Board from './Board';
 import Description from './Description';
-import Settings from './Settings';
+import NewGame from './NewGame';
 import CameraView from '@/components/CameraView';
 import CountButtons from '@/components/CountButtons';
 import Footer from '@/components/Footer';
@@ -46,12 +46,12 @@ const DesktopMain: FC<{
   return (
     <div>
       <Flex justifyContent='space-between'>
-        <Settings
-          onNewGame={(targetNumber, save) => {
-            if (save) saveToDB(game.getGameResult(), db.cricketMarkUpResult);
-            setGame(new CricketMarkUpGame(targetNumber));
+        <NewGame
+          onNewGame={(targetCount) => {
+            if (game.isFinished()) saveToDB(game.getGameResult(), db.cricketMarkUpResult);
+            setGame(new CricketMarkUpGame(targetCount));
           }}
-          targetCount={game.getTargetCount()}
+          currentTargetCount={game.getTargetCount()}
           isFinished={game.isFinished()}
         />
         <Flex gap={2}>
@@ -139,12 +139,12 @@ const MobileMain: FC<{
     <Grid gap={4} justifyItems='center'>
       <GridItem w='100%'>
         <Flex justifyContent='space-between'>
-          <Settings
-            onNewGame={(targetNumber, save) => {
-              if (save) saveToDB(game.getGameResult(), db.cricketMarkUpResult);
-              setGame(new CricketMarkUpGame(targetNumber));
+          <NewGame
+            onNewGame={(targetCount) => {
+              if (game.isFinished()) saveToDB(game.getGameResult(), db.cricketMarkUpResult);
+              setGame(new CricketMarkUpGame(targetCount));
             }}
-            targetCount={game.getTargetCount()}
+            currentTargetCount={game.getTargetCount()}
             isFinished={game.isFinished()}
           />
           <Flex alignItems='end' w='100%' justifyContent='space-around'>

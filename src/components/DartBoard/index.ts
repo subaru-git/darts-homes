@@ -1,1 +1,1 @@
-export { default } from './DartBoard'
+export { default } from './DartBoard';

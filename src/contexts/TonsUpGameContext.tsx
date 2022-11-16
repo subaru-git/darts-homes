@@ -8,7 +8,9 @@ import {
   useEffect,
   useState,
 } from 'react';
+import { createCheckers } from 'ts-interface-checker';
 import TonsUpGame from '@/lib/TonsUpGame/TonsUpGame';
+import types from '@/schemas/Types-ti';
 
 const tonsUpGameContext = createContext<TonsUpGame | null>(new TonsUpGame(20));
 const setTonsUpGameContext = createContext<Dispatch<SetStateAction<TonsUpGame | null>>>(
@@ -20,7 +22,11 @@ const TonsUpGameContextProvider: FC<{ children: ReactNode | ReactNode[] }> = ({ 
   useEffect(() => {
     const g = new TonsUpGame(20);
     const memoGame = localStorage.getItem('TonsUp');
-    if (memoGame) g.resumeGame(JSON.parse(memoGame));
+    if (memoGame) {
+      const progress = JSON.parse(memoGame);
+      const { TonsUpProgress } = createCheckers(types);
+      if (TonsUpProgress.test(progress)) g.resumeGame(progress);
+    }
     setGame(g);
   }, []);
   useEffect(() => {

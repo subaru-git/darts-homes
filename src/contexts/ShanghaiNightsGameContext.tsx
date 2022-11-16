@@ -8,7 +8,9 @@ import {
   useEffect,
   useState,
 } from 'react';
+import { createCheckers } from 'ts-interface-checker';
 import ShanghaiNightsGame from '@/lib/ShanghaiNightsGame/ShanghaiNightsGame';
+import types from '@/schemas/Types-ti';
 
 const shanghaiNightsGameContext = createContext<ShanghaiNightsGame | null>(
   new ShanghaiNightsGame(20),
@@ -24,7 +26,11 @@ const ShanghaiNightsGameContextProvider: FC<{ children: ReactNode | ReactNode[] 
   useEffect(() => {
     const g = new ShanghaiNightsGame(20);
     const memoGame = localStorage.getItem('ShanghaiNights');
-    if (memoGame) g.resumeGame(JSON.parse(memoGame));
+    if (memoGame) {
+      const progress = JSON.parse(memoGame);
+      const { ShanghaiNightsProgress } = createCheckers(types);
+      if (ShanghaiNightsProgress.test(progress)) g.resumeGame(progress);
+    }
     setGame(g);
   }, []);
   useEffect(() => {

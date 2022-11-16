@@ -8,7 +8,9 @@ import {
   useEffect,
   useState,
 } from 'react';
+import { createCheckers } from 'ts-interface-checker';
 import AroundTheCompassGame from '@/lib/AroundTheCompassGame/AroundTheCompassGame';
+import types from '@/schemas/Types-ti';
 
 const aroundTheCompassGameContext = createContext<AroundTheCompassGame | null>(
   new AroundTheCompassGame(20),
@@ -24,7 +26,11 @@ const AroundTheCompassGameContextProvider: FC<{ children: ReactNode | ReactNode[
   useEffect(() => {
     const g = new AroundTheCompassGame(20);
     const memoGame = localStorage.getItem('AroundTheCompass');
-    if (memoGame) g.resumeGame(JSON.parse(memoGame));
+    if (memoGame) {
+      const progress = JSON.parse(memoGame);
+      const { AroundTheCompassProgress } = createCheckers(types);
+      if (AroundTheCompassProgress.test(progress)) g.resumeGame(progress);
+    }
     setGame(g);
   }, []);
   useEffect(() => {

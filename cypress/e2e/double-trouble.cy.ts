@@ -5,7 +5,7 @@ describe('gaming Double Trouble', () => {
     cy.visit('/doubletrouble');
     cy.wait(100);
     cy.get('button[aria-label="setting"]').first().click({ force: true });
-    cy.get('button[aria-label="ok"]').click();
+    cy.get('button[aria-label="new game"]').click();
     [...Array(19)].forEach((_, i) => {
       const n = i + 1;
       cy.get(`button[aria-label="${n} double"]`).first().click();

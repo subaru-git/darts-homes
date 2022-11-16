@@ -45,7 +45,11 @@ const DesktopMain: FC<{ game: Route64Game; setGame: (game: Route64Game) => void 
   return (
     <div>
       <Flex justifyContent='space-between' alignItems='center'>
-        <NewGame onNewGame={() => setGame(new Route64Game(20))} />
+        <NewGame
+          onNewGame={(targetRound) => setGame(new Route64Game(targetRound))}
+          isFinished={game.isFinish()}
+          currentRound={game.getTargetRound()}
+        />
         <Flex gap={2}>
           <Description />
           <CameraView />
@@ -55,7 +59,7 @@ const DesktopMain: FC<{ game: Route64Game; setGame: (game: Route64Game) => void 
         <Box>
           <Flex justifyContent='center' alignItems='end'>
             <TargetBoard
-              message={`Round ${game.getRound()}`}
+              message={`Round ${game.getRound()} / ${game.getTargetRound()}`}
               target={game.getCurrentTarget().toString()}
             />
             <TargetBoard message='Score' target={game.getTotalScore().toString()} size='sm' />
@@ -75,7 +79,7 @@ const DesktopMain: FC<{ game: Route64Game; setGame: (game: Route64Game) => void 
             isFinished={game.isFinish()}
             onRoundOver={() => {
               saveToDB(game.getGameResult(), db.route64Result);
-              setGame(new Route64Game(20));
+              setGame(new Route64Game(game.getTargetRound()));
             }}
             result={getResult(game)}
           />
@@ -107,10 +111,14 @@ const MobileMain: FC<{ game: Route64Game; setGame: (game: Route64Game) => void }
   return (
     <Flex direction='column' gap={4}>
       <Flex justifyContent='space-between' width='100%'>
-        <NewGame onNewGame={() => setGame(new Route64Game(20))} />
+        <NewGame
+          onNewGame={(targetRound) => setGame(new Route64Game(targetRound))}
+          isFinished={game.isFinish()}
+          currentRound={game.getTargetRound()}
+        />
         <Flex alignItems='center' gap={4}>
           <TargetBoard
-            message={`Round ${game.getRound()}`}
+            message={`Round ${game.getRound()} / ${game.getTargetRound()}`}
             target={game.getCurrentTarget().toString()}
           />
           <TargetBoard message='Score' target={game.getTotalScore().toString()} size='sm' />
@@ -136,7 +144,7 @@ const MobileMain: FC<{ game: Route64Game; setGame: (game: Route64Game) => void }
           isFinished={game.isFinish()}
           onRoundOver={() => {
             saveToDB(game.getGameResult(), db.route64Result);
-            setGame(new Route64Game(20));
+            setGame(new Route64Game(game.getTargetRound()));
           }}
           result={getResult(game)}
         />
@@ -160,6 +168,7 @@ const MobileMain: FC<{ game: Route64Game; setGame: (game: Route64Game) => void }
   );
 };
 
-const getResult = (game: Route64Game) => `Total: ${game.getGameResult().result}`;
+const getResult = (game: Route64Game) =>
+  `Round: ${game.getTargetRound()}\nTotal: ${game.getGameResult().result}`;
 
 export default Main;

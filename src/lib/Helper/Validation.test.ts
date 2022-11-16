@@ -1,4 +1,4 @@
-import { isDoubleOut } from './Check';
+import { isDoubleOut } from './Validation';
 
 test('isDoubleOut', () => {
   expect(isDoubleOut(40, '20D')).toBe(true);

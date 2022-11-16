@@ -8,7 +8,9 @@ import {
   useEffect,
   useState,
 } from 'react';
+import { createCheckers } from 'ts-interface-checker';
 import TwoDartCombinationsGame from '@/lib/TwoDartCombinationsGame/TwoDartCombinationsGame';
+import types from '@/schemas/Types-ti';
 
 const twoDartCombinationsGameContext = createContext<TwoDartCombinationsGame | null>(
   new TwoDartCombinationsGame(),
@@ -24,7 +26,11 @@ const TwoDartCombinationsGameContextProvider: FC<{ children: ReactNode | ReactNo
   useEffect(() => {
     const g = new TwoDartCombinationsGame();
     const memoGame = localStorage.getItem('TwoDartCombinations');
-    if (memoGame) g.resumeGame(JSON.parse(memoGame));
+    if (memoGame) {
+      const progress = JSON.parse(memoGame);
+      const { TwoDartCombinationsProgress } = createCheckers(types);
+      if (TwoDartCombinationsProgress.test(progress)) g.resumeGame(progress);
+    }
     setGame(g);
   }, []);
   useEffect(() => {

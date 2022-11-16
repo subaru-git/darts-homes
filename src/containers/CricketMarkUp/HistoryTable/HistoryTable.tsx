@@ -16,6 +16,7 @@ import HistoryDeleteAlert from '@/containers/History/DeleteAlert';
 import { CricketMarkUpResultModel } from '@/db/CricketMarkUpResultModel';
 import { db } from '@/db/db';
 import { deleteFromDB } from '@/lib/GameHistoryManager/GameHistory';
+import { DateFormat } from '@/lib/Helper/Format';
 
 type HistoryTableProps = {
   history: CricketMarkUpResultModel[];
@@ -58,15 +59,7 @@ const HistoryTable: FC<HistoryTableProps> = ({ history }) => {
       </TableContainer>
       {deleteHistory ? (
         <HistoryDeleteAlert
-          message={`Cricket Mark-Up:
-              ${new Date(deleteHistory.playedAt).toLocaleString('ja-JP', {
-                year: 'numeric',
-                month: '2-digit',
-                day: '2-digit',
-                hour: '2-digit',
-                minute: '2-digit',
-                second: '2-digit',
-              })}`}
+          message={`Cricket Mark-Up: ${DateFormat(deleteHistory.playedAt)}`}
           isOpen={isOpen}
           onClose={onClose}
           onDelete={() => {
@@ -93,16 +86,7 @@ const DesktopCricketMarkUpHistoryRow: FC<{
           Target: {history.targetCount}
         </Td>
         <Td colSpan={2} p={1} textAlign='end'>
-          <Text>
-            {new Date(history.playedAt).toLocaleString('ja-JP', {
-              year: 'numeric',
-              month: '2-digit',
-              day: '2-digit',
-              hour: '2-digit',
-              minute: '2-digit',
-              second: '2-digit',
-            })}
-          </Text>
+          <Text>{DateFormat(history.playedAt)}</Text>
         </Td>
         <Td colSpan={1} p={1} textAlign='center'>
           <IconButton
@@ -146,16 +130,7 @@ const MobileCricketMarkUpHistoryRow: FC<{
           Target: {history.targetCount}
         </Td>
         <Td p={0} fontSize='xs' textAlign='start'>
-          <Text>
-            {new Date(history.playedAt).toLocaleString('ja-JP', {
-              year: 'numeric',
-              month: '2-digit',
-              day: '2-digit',
-              hour: '2-digit',
-              minute: '2-digit',
-              second: '2-digit',
-            })}
-          </Text>
+          <Text>{DateFormat(history.playedAt)}</Text>
         </Td>
         <Td p={0} textAlign='start'>
           <IconButton
