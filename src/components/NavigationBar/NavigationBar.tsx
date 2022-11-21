@@ -318,6 +318,11 @@ const GetNavItem = () => {
           subLabel: t.navigation.treblesforshow,
           href: '/treblesforshow',
         },
+        {
+          label: 'Arrange',
+          subLabel: t.navigation.arrange,
+          href: '/arrange',
+        },
       ],
     },
     {

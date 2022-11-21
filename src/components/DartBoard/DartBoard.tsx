@@ -8,7 +8,7 @@ type DartBoardProps = {
 const DartBoard: FC<DartBoardProps> = ({ onCount }) => {
   const numbers = [20, 1, 18, 4, 13, 6, 10, 15, 2, 17, 3, 19, 7, 16, 8, 11, 14, 9, 12, 5];
   return (
-    <div css={{ aspectRatio: '1', position: 'relative' }}>
+    <div css={{ aspectRatio: '1', position: 'relative', overflow: 'hidden' }}>
       <button onClick={() => onCount('OUT')} css={outStyle} aria-label={`out board`}>
         <div css={numberCircleStyle}>
           {numbers.map((n, i) => (

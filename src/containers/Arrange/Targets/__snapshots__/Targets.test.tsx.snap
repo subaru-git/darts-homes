@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should rendering 1`] = `
+<div>
+  <div
+    class="css-17ur22"
+  >
+    <p
+      class="chakra-text css-18kwk26"
+    >
+      [
+    </p>
+    <p
+      class="chakra-text css-18kwk26"
+    >
+      -
+    </p>
+    <p
+      class="chakra-text css-18kwk26"
+    >
+      -
+    </p>
+    <p
+      class="chakra-text css-18kwk26"
+    >
+      -
+    </p>
+    <p
+      class="chakra-text css-18kwk26"
+    >
+      -
+    </p>
+    <p
+      class="chakra-text css-18kwk26"
+    >
+      -
+    </p>
+    <p
+      class="chakra-text css-18kwk26"
+    >
+      -
+    </p>
+    <p
+      class="chakra-text css-18kwk26"
+    >
+      -
+    </p>
+    <p
+      class="chakra-text css-18kwk26"
+    >
+      -
+    </p>
+    <p
+      class="chakra-text css-18kwk26"
+    >
+      ]
+    </p>
+  </div>
+</div>
+`;

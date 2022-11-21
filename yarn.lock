@@ -4041,6 +4041,11 @@
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-0.0.51.tgz#cfd70924a25a3fd32b218e5e420e6897e1ac4f40"
   integrity sha512-CuPgU6f3eT/XgKKPqKd/gLZV1Xmvf1a2R5POBOGQa6uv82xpls89HU5zKeVoyR8XzHd1RGNOlQlvUe3CFkjWNQ==
 
+"@types/gaussian@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@types/gaussian/-/gaussian-1.2.0.tgz#8bb3e1a7cec9d17d901c2b5fb1892ad33daa783b"
+  integrity sha512-4rHzt7QTNDGGnlWGzgBc3S+W0fCwkENSfGhDYhUb/fM4vdP0o7fT8OCuQ8kqnVFu3MACGy9KOWG1ugcZuMIsXw==
+
 "@types/glob@*":
   version "8.0.0"
   resolved "https://registry.yarnpkg.com/@types/glob/-/glob-8.0.0.tgz#321607e9cbaec54f687a0792b2d1d370739455d2"
@@ -8424,6 +8429,11 @@ gauge@^3.0.0:
     string-width "^4.2.3"
     strip-ansi "^6.0.1"
     wide-align "^1.1.2"
+
+gaussian@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/gaussian/-/gaussian-1.2.0.tgz#5b081744008c1b0a8eb510da695ed7328fb8913a"
+  integrity sha512-Pz/InFmDZ6VqCbXF+2+O6USIbPUPWhJ7DnqrZKfo9mMHszCd4pBad3WCVa9ruzzrBizYonsv0ZBmuv4rR8NRQg==
 
 gensync@^1.0.0-beta.1, gensync@^1.0.0-beta.2:
   version "1.0.0-beta.2"

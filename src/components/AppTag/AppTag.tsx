@@ -19,12 +19,15 @@ const AppTag: FC<AppTagProps> = ({ tag }) => {
 
 const ConstantTags = [
   { name: 'BULL', color: { font: 'gray.100', bg: 'blue.400' } },
+  { name: 'single', color: { font: 'gray.100', bg: 'cyan.600' } },
   { name: 'double', color: { font: 'gray.100', bg: 'cyan.400' } },
+  { name: 'master', color: { font: 'gray.100', bg: 'cyan.800' } },
   { name: 'cricket', color: { font: 'gray.100', bg: 'teal.400' } },
   { name: '19', color: { font: 'gray.100', bg: 'green.400' } },
   { name: '20', color: { font: 'gray.100', bg: 'green.400' } },
   { name: 'count up', color: { font: 'gray.100', bg: 'pink.400' } },
   { name: 'finish', color: { font: 'gray.100', bg: 'orange.400' } },
+  { name: 'simulation', color: { font: 'gray.100', bg: 'purple.400' } },
 ];
 
 export default AppTag;

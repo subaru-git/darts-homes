@@ -76,6 +76,13 @@ export const TreblesForShowProgress = t.iface([], {
   "round": "number",
 });
 
+export const ArrangeGameProgress = t.iface([], {
+  "roundScore": t.array("point"),
+  "score": t.array(t.array("point")),
+  "targetOutCont": "number",
+  "targets": t.array("number"),
+});
+
 export const GameResult = t.iface([], {
   "cricketmarkup": t.array("CricketMarkUpResult"),
   "eagleseye": t.array("EaglesEyeResult"),
@@ -87,10 +94,10 @@ export const GameResult = t.iface([], {
   "tonsup": t.array("TonsUpResult"),
   "route64": t.array("Route64Result"),
   "eightythrew": t.array("EightyThrewResult"),
-  "shanghainight": t.array("ShanghaiNightsResult"),
+  "shanghainights": t.array("ShanghaiNightsResult"),
   "switchhitter": t.array("SwitchHitterResult"),
   "bullybully": t.array("BullyBullyResult"),
-  "trebleforshow": t.array("TreblesForShowResult"),
+  "treblesforshow": t.array("TreblesForShowResult"),
 });
 
 export const CricketMarkUpResult = t.iface([], {
@@ -227,6 +234,7 @@ const exportedTypeSuite: t.ITypeSuite = {
   ShanghaiNightsProgress,
   SwitchHitterProgress,
   TreblesForShowProgress,
+  ArrangeGameProgress,
   GameResult,
   CricketMarkUpResult,
   CricketMarkUpScore,
