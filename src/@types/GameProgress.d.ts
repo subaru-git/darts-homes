@@ -67,3 +67,19 @@ interface TreblesForShowProgress {
   score: point[][];
   round: number;
 }
+
+interface ArrangeGameProgress {
+  roundScore: point[];
+  score: point[][];
+  targetOutCont: number;
+  targets: number[];
+  settings: ArrangeGameSettings;
+}
+
+interface ArrangeGameSettings {
+  targets?: number[];
+  out: OutOption;
+  range: number;
+  simulation: boolean;
+  separate: boolean;
+}

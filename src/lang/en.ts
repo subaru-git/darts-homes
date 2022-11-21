@@ -96,6 +96,11 @@ const text = {
       title: 'Treble For Show',
       description: "It's a 20 practice game. In separates and cricket, 20 is basic.",
     },
+    arrange: {
+      title: 'Arrange',
+      description:
+        'This is a Arrange practice game. In simulation mode, it is necessary to take into account deviation from the aim.',
+    },
     games: {
       title: 'Games',
       description: 'Here are some darts practice games. We hope you find one that you like.',
@@ -125,6 +130,7 @@ const text = {
     switchhitter: '19 practice game',
     bullybully: 'BULL practice game',
     treblesforshow: '20 practice game',
+    arrange: 'Arrange practice game',
   },
   games: {
     eagleseye: {
@@ -241,6 +247,44 @@ const text = {
         'You receive no points for a dart which lands outside of the treble or single 20 beds. 30 points available every 3 darts; 600 overall.',
       ],
       tags: ['20', 'count up'],
+    },
+    arrange: {
+      title: 'Arrange',
+      description: [
+        'Out for random scores with set options.',
+        'The simulation mode must include the specified range of deviations.',
+      ],
+      tags: ['double', 'single', 'master', 'finish', 'simulation'],
+      help: [
+        {
+          title: 'Simulation Mode',
+          hint: {
+            header: 'Simulation Mode?',
+            body: 'The simulation mode must include the specified range of deviations.',
+          },
+        },
+        {
+          title: 'Range',
+          hint: {
+            header: 'Range?',
+            body: 'Sets the deviation from the aim. You can set the value on the actual board, but it is not exact.',
+          },
+        },
+        {
+          title: 'Out Option',
+          hint: {
+            header: 'Out Option?',
+            body: 'Set the out settings. In the case of a double out, it will be a separate bull.',
+          },
+        },
+        {
+          title: 'Bull Option',
+          hint: {
+            header: 'Bull Option?',
+            body: 'Set the bull settings. In the case of a double out, it will be a separate bull.',
+          },
+        },
+      ],
     },
   },
   import: {

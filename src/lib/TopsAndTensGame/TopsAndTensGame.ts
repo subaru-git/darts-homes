@@ -1,5 +1,5 @@
 import { convertScoreToNumber } from '../Helper/Converter';
-import { isDoubleOut } from '../Helper/Validation';
+import { isDoubleOut } from '../Helper/OutOption';
 import Player from '../Player/Player';
 
 class TopsAndTensGame {
@@ -74,7 +74,7 @@ class TopsAndTensGame {
   private calcTarget(t: number, s: point) {
     const availablePoint = ['20D', '20', '10D', '10', '5D'];
     const score = availablePoint.includes(s) ? s : '0';
-    if (isDoubleOut(t, score)) return { target: 40, point: 5 };
+    if (isDoubleOut(t, score, true)) return { target: 40, point: 5 };
     let target = t - convertScoreToNumber(score, true);
     if (target === 0) target = 40;
     return { target, point: 0 };

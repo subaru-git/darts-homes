@@ -1,5 +1,5 @@
 import { convertScoreToNumber } from '../Helper/Converter';
-import { isDoubleOut } from '../Helper/Validation';
+import { isDoubleOut } from '../Helper/OutOption';
 import Player from '../Player/Player';
 
 class AroundTheCompassGame {
@@ -73,7 +73,7 @@ class AroundTheCompassGame {
     );
   }
   private calcTarget(t: number, s: point) {
-    if (isDoubleOut(t, s)) return { target: 24, point: 5 };
+    if (isDoubleOut(t, s, true)) return { target: 24, point: 5 };
     let target = t - convertScoreToNumber(s, true);
     if (target <= 0) target = t;
     return { target, point: 0 };

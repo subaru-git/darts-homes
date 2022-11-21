@@ -1,5 +1,5 @@
 import { convertScoreToNumber } from '../Helper/Converter';
-import { isDoubleOut } from '../Helper/Validation';
+import { isDoubleOut } from '../Helper/OutOption';
 import Player from '../Player/Player';
 
 class EightyThrewGame {
@@ -74,7 +74,7 @@ class EightyThrewGame {
     );
   }
   private calcTarget(t: number, s: point) {
-    if (isDoubleOut(t, s)) return { target: 0, point: 10 };
+    if (isDoubleOut(t, s, true)) return { target: 0, point: 10 };
     let target = t - convertScoreToNumber(s, true);
     if (target <= 0) target = t;
     return { target: target, point: 0 };

@@ -32,6 +32,8 @@ describe('Travel all pages', () => {
     cy.get('div[data-cy="bully-bully-main"]').should('be.visible');
     cy.visit('/treblesforshow');
     cy.get('div[data-cy="trebles-for-show-main"]').should('be.visible');
+    cy.visit('/arrange');
+    cy.get('div[data-cy="arrange-main"]').should('be.visible');
     cy.visit('/games');
     cy.get('div[data-cy="games-main"]').should('be.visible');
     cy.visit('/respect');
@@ -68,6 +70,8 @@ describe('Travel all pages', () => {
     cy.get('div[data-cy="bully-bully-main"]').should('be.visible');
     cy.visit('/ja/treblesforshow');
     cy.get('div[data-cy="trebles-for-show-main"]').should('be.visible');
+    cy.visit('/ja/arrange');
+    cy.get('div[data-cy="arrange-main"]').should('be.visible');
     cy.visit('/ja/games');
     cy.get('div[data-cy="games-main"]').should('be.visible');
     cy.visit('/ja/respect');
@@ -104,6 +108,8 @@ describe('Travel all pages', () => {
     cy.get('div[data-cy="bully-bully-main"]').should('be.visible');
     cy.visit('/en/treblesforshow');
     cy.get('div[data-cy="trebles-for-show-main"]').should('be.visible');
+    cy.visit('/en/arrange');
+    cy.get('div[data-cy="arrange-main"]').should('be.visible');
     cy.visit('/en/games');
     cy.get('div[data-cy="games-main"]').should('be.visible');
     cy.visit('/en/respect');

@@ -91,6 +91,11 @@ const text = {
       title: 'Treble For Show',
       description: '20練習ゲームです。セパレートやクリケットだと20は基本だよね。',
     },
+    arrange: {
+      title: 'Arrange',
+      description:
+        'アレンジの練習です。シミュレーションモードではねらいに対してズレを考慮する必要があります。',
+    },
     games: {
       title: 'Games',
       description: 'ダーツの練習ゲームを紹介します。あなたに合ったものがあると嬉しいです。',
@@ -120,6 +125,7 @@ const text = {
     switchhitter: '19練習ゲーム',
     bullybully: 'BULL練習ゲーム',
     treblesforshow: '20練習ゲーム',
+    arrange: 'アレンジ練習ゲーム',
   },
   games: {
     eagleseye: {
@@ -235,6 +241,44 @@ const text = {
         'ラウンドごとに30点、合計600点を獲得します。',
       ],
       tags: ['20', 'count up'],
+    },
+    arrange: {
+      title: 'Arrange',
+      description: [
+        'ランダムで設定されるスコアに対して、設定に応じたアウトを目指します。',
+        'シミュレーションモードでは、指定したレンジ分のずれを考慮する必要があります。',
+      ],
+      tags: ['double', 'single', 'master', 'finish', 'simulation'],
+      help: [
+        {
+          title: 'Simulation Mode',
+          hint: {
+            header: 'Simulation Mode?',
+            body: 'シミュレーションモードでは、指定したレンジ分のずれを考慮する必要があります。',
+          },
+        },
+        {
+          title: 'Range',
+          hint: {
+            header: 'Range?',
+            body: '狙いとのズレを設定します。実際のボードでの値を設定できますが、正確なものではありません。',
+          },
+        },
+        {
+          title: 'Out Option',
+          hint: {
+            header: 'Out Option?',
+            body: 'アウトの設定を行います。ダブルアウトの場合は、セパレートブルとなります。',
+          },
+        },
+        {
+          title: 'Bull Option',
+          hint: {
+            header: 'Bull Option?',
+            body: 'BULLの設定を行います。ダブルアウトの場合は、セパレートブルとなります。',
+          },
+        },
+      ],
     },
   },
   import: {
