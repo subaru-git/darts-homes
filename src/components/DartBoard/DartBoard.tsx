@@ -53,6 +53,17 @@ const DartBoard: FC<DartBoardProps> = ({ onCount }) => {
         css={[boardStyle, innerBullStyle]}
         aria-label={`double bull`}
       />
+      <div
+        css={{
+          position: 'absolute',
+          width: '100%',
+          height: '100%',
+          top: 0,
+          background: 'url(./noise.svg)',
+          opacity: 0.5,
+          pointerEvents: 'none',
+        }}
+      />
       <svg height='0' viewBox='0 0 1000 1000' width='0'>
         <clipPath id='triple' clipPathUnits='objectBoundingBox'>
           <path
@@ -92,50 +103,37 @@ const buttonStyle = css({
 });
 
 const redStyle = css({
-  background:
-    'radial-gradient(circle, #77000099 20% 40%, #aa000055 60% 90%), url(./noise.svg), linear-gradient(to right,#ff0000, #cc0000 );',
+  background: 'radial-gradient(circle, #aa0000 20% 40%, #cc0000 60% 90%);',
   '&:hover': {
-    background:
-      'radial-gradient(circle, #cc444499 20% 40%, #ff999999 60% 90%), url(./noise.svg), linear-gradient(to right,#ff0000, #cc0000 );',
+    background: 'radial-gradient(circle, #ff4444 20% 40%, #ff5555 60% 90%);',
   },
 });
 
 const blueStyle = css({
-  background:
-    'radial-gradient(circle, #00007799 20% 40%, #0000aa55 60% 90%), url(./noise.svg), linear-gradient(to right,#0000ff, #0000cc );',
+  background: 'radial-gradient(circle, #000099 20% 40%, #0000aa 60% 90%);',
   '&:hover': {
-    background:
-      'radial-gradient(circle, #8888ee99 20% 40%, #8888ff99 60% 90%), url(./noise.svg), linear-gradient(to right,#0000ff, #0000cc );',
+    background: 'radial-gradient(circle, #4444ff 20% 40%, #6666ff 60% 90%);',
   },
 });
 
 const blackStyle = css({
-  background:
-    'radial-gradient(circle, #111111aa 20% 40%, #555555aa 60% 90%), url(./noise.svg), linear-gradient(to right,#000000, #333333 );',
+  background: 'radial-gradient(circle, #111111 20% 40%, #444444 60% 90%);',
   '&:hover': {
-    background:
-      'radial-gradient(circle, #777777aa 20% 40%, #aaaaaa66 60% 90%), url(./noise.svg), linear-gradient(to right,#000000, #333333 );',
+    background: 'radial-gradient(circle, #555555 20% 40%, #777777 60% 90%);',
   },
 });
 
 const whiteStyle = css({
-  background:
-    'radial-gradient(circle, #88888833 20% 40%, #bbbbbb66 60% 90%), url(./noise.svg), linear-gradient(to right,#dddddd, #aaaaaa );',
+  background: 'radial-gradient(circle, #999999 20% 40%, #bbbbbb 60% 90%);',
   '&:hover': {
-    background:
-      'radial-gradient(circle, #eeeeee33 20% 40%, #ffffff55 60% 90%), url(./noise.svg), linear-gradient(to right,#dddddd, #cccccc );',
+    background: 'radial-gradient(circle, #bbbbbb 20% 40%, #cccccc 60% 90%);',
   },
 });
 
 const numberCircleStyle = css({
   width: '100%',
   height: '100%',
-  background:
-    'radial-gradient(circle, #88888833 20% 40%, #000000aa 60% 90%), url(./noise.svg), linear-gradient(to right,#000000, #111111 );',
-  '&:hover': {
-    background:
-      'radial-gradient(circle, #eeeeee33 20% 40%, #ffffff77 60% 90%), url(./noise.svg), linear-gradient(to right,#dddddd, #cccccc );',
-  },
+  background: 'radial-gradient(circle, #aaaaaa 20% 40%, #000000 60% 90%);',
   clipPath: 'circle(50% at 50% 50%)',
   pointerEvents: 'none',
 });
@@ -143,8 +141,7 @@ const numberCircleStyle = css({
 const outStyle = css({
   width: '100%',
   height: '100%',
-  background:
-    'radial-gradient(circle, #ffffff33 20% 60%, #888888aa 80% 90%), url(./noise.svg), linear-gradient(to right,#333333, #555555 );',
+  background: 'radial-gradient(circle, #666666 20% 60%, #888888 80% 90%);',
   position: 'relative',
 });
 
@@ -183,23 +180,19 @@ const numberStyle = css({
 
 const outerBullStyle = css({
   aspectRatio: '1',
-  background:
-    'radial-gradient(circle, #cc000099 2% 3%, #cc444499 5% 6%, #cc000099 9% 10%), url(./noise.svg), linear-gradient(to right,#ff0000, #cc0000 );',
+  background: 'radial-gradient(circle, #cc0000 2% 3%, #cc3333 5% 6%, #cc0000 9% 10%);',
   '&:hover': {
-    background:
-      'radial-gradient(circle, #cc444499 2% 3%, #ff999999 5% 6%, #cc444499 9% 10%), url(./noise.svg), linear-gradient(to right,#ff0000, #cc0000 );',
+    background: 'radial-gradient(circle, #cc0000 2% 3%, #ff5555 5% 6%, #cc0000 9% 10%);',
   },
   clipPath: 'circle(7% at 50% 50%)',
 });
 
 const innerBullStyle = css({
   aspectRatio: '1',
-  background:
-    'radial-gradient(circle, #11111199 0% 1%, #33333399 2% 3%, #11111199 4.5% 5%), url(./noise.svg), linear-gradient(to right,#333333, #111111 );',
+  background: 'radial-gradient(circle, #111111 0% 1%, #333333 2% 3%, #111111 4.5% 5%);',
   clipPath: 'circle(3% at 50% 50%)',
   '&:hover': {
-    background:
-      'radial-gradient(circle, #33333399 0% 1%, #77777799 2% 3%, #33333399 4.5% 5%), url(./noise.svg), linear-gradient(to right,#333333, #111111 );',
+    background: 'radial-gradient(circle, #333333 0% 1%, #777777 2% 3%, #333333 4.5% 5%);',
   },
 });
 
