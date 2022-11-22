@@ -1,8 +1,6 @@
 import { convertScoreToNumber } from '../Helper/Converter';
-import { isDoubleOut, isMasterOut, isSingleOut } from '../Helper/OutOption';
+import { isBust, isDoubleOut, isMasterOut, isSingleOut } from '../Helper/OutOption';
 import Player from '../Player/Player';
-
-export type OutOption = 'double' | 'single' | 'master';
 
 class ArrangeGame {
   private settings: ArrangeGameSettings;
@@ -108,11 +106,11 @@ class ArrangeGame {
     }, target);
   }
   private calcTarget(t: number, s: point, out: OutOption, separate: boolean) {
-    const outOption = out === 'master' ? isMasterOut : out === 'double' ? isDoubleOut : isSingleOut;
     if (t === 0) return 0;
+    const outOption = out === 'master' ? isMasterOut : out === 'double' ? isDoubleOut : isSingleOut;
     if (outOption(t, s, separate)) return 0;
     const target = t - convertScoreToNumber(s, separate);
-    if (target <= 0) return -1;
+    if (isBust(target, out)) return -1;
     return target;
   }
   private getNextTarget(index: number, targets?: number[]) {
