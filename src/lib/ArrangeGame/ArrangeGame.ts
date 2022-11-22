@@ -111,7 +111,7 @@ class ArrangeGame {
     const outOption = out === 'master' ? isMasterOut : out === 'double' ? isDoubleOut : isSingleOut;
     if (t === 0) return 0;
     if (outOption(t, s, separate)) return 0;
-    const target = t - convertScoreToNumber(s, true);
+    const target = t - convertScoreToNumber(s, separate);
     if (target <= 0) return -1;
     return target;
   }
