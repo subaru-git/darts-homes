@@ -121,7 +121,7 @@ class ArrangeGame {
   private getNextTarget(index: number, out: OutOption, targets?: number[]) {
     if (targets && targets[index]) return targets[index];
     const table = out === 'master' ? masterOut : out === 'double' ? doubleOut : singleOut;
-    return table[Math.random() * table.length];
+    return table[Math.floor(Math.random() * table.length)];
   }
 }
 
