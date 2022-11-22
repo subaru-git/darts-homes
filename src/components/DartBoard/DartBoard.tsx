@@ -64,29 +64,41 @@ const DartBoard: FC<DartBoardProps> = ({ onCount }) => {
           pointerEvents: 'none',
         }}
       />
-      <svg height='0' viewBox='0 0 1000 1000' width='0'>
+      <svg height='0' viewBox='0 0 3900 3900' width='0'>
         <clipPath id='triple' clipPathUnits='objectBoundingBox'>
           <path
-            transform='scale(0.001,0.001)'
-            d='M500 175C482.69 175 465.703 176.394 449.125 179L455 216.031C469.665 213.725 484.687 212.5 500 212.5C515.313 212.5 530.335 213.725 545 216.031L550.875 179C534.297 176.394 517.31 175 500 175Z'
+            transform='scale(0.00025641,0.00025641)'
+            d='M1950 720C1884.53 720 1820.27 725.176 1757.56 735.031L1785.72 912.812C1839.25 904.401 1894.11 900 1950 900C2005.89 900 2060.75 904.401 2114.28 912.812L2142.44 735.031C2079.73 725.178 2015.47 720 1950 720Z'
           />
         </clipPath>
         <clipPath id='double' clipPathUnits='objectBoundingBox'>
           <path
-            transform='scale(0.001,0.001)'
-            d='M500 2.27374e-12C473.367 3.54636e-06 447.225 2.11439 421.719 6.12501L427.594 43.1875C451.188 39.4774 475.364 37.5 500 37.5C524.636 37.5 548.812 39.4774 572.406 43.1875L578.281 6.12499C552.775 2.11438 526.633-3.54636e-06 500 2.27374e-12Z'
+            transform='scale(0.00025641,0.00025641)'
+            d='M1950 0C1846.21 0 1744.34 8.19425 1644.94 23.8125L1674.66 211.5C1764.38 197.403 1856.32 190 1950 190C2043.68 190 2135.62 197.403 2225.34 211.5L2255.06 23.8125C2155.66 8.19425 2053.79 0 1950 0Z'
           />
         </clipPath>
         <clipPath id='innerSingle' clipPathUnits='objectBoundingBox'>
           <path
-            transform='scale(0.001,0.001)'
-            d='M500 212.5C484.687 212.5 469.665 213.725 455 216.031L500 500L545 216.031C530.335 213.725 515.313 212.5 500 212.5Z'
+            transform='scale(0.00025641,0.00025641)'
+            d='M1950 900C1894.12 900 1839.27 904.404 1785.75 912.812L1915.59 1732.69C1926.81 1730.93 1938.29 1730 1950 1730C1961.71 1730 1973.19 1730.93 1984.41 1732.69L2114.25 912.812C2060.73 904.404 2005.88 900 1950 900Z'
           />
         </clipPath>
         <clipPath id='outerSingle' clipPathUnits='objectBoundingBox'>
           <path
-            transform='scale(0.001,0.001)'
-            d='M500 37.5C475.364 37.5 451.188 39.4774 427.594 43.1875L449.125 179C465.703 176.394 482.69 175 500 175C517.31 175 534.297 176.394 550.875 179L572.406 43.1875C548.812 39.4774 524.636 37.5 500 37.5Z'
+            transform='scale(0.00025641,0.00025641)'
+            d='M1950 190C1856.32 190 1764.38 197.403 1674.66 211.5L1757.56 735.031C1820.27 725.177 1884.53 720 1950 720C2015.47 720 2079.73 725.177 2142.44 735.031L2225.34 211.5C2135.62 197.403 2043.68 190 1950 190Z'
+          />
+        </clipPath>
+        <clipPath id='outerBull' clipPathUnits='objectBoundingBox'>
+          <path
+            transform='scale(0.00025641,0.00025641)'
+            d='M1950 1730C1828.5 1730 1730 1828.5 1730 1950C1730 2071.5 1828.5 2170 1950 2170C2071.5 2170 2170 2071.5 2170 1950C2170 1828.5 2071.5 1730 1950 1730ZM1950 1860C1999.71 1860 2040 1900.29 2040 1950C2040 1999.71 1999.71 2040 1950 2040C1900.29 2040 1860 1999.71 1860 1950C1860 1900.29 1900.29 1860 1950 1860Z'
+          />
+        </clipPath>
+        <clipPath id='innerBull' clipPathUnits='objectBoundingBox'>
+          <path
+            transform='scale(0.00025641,0.00025641)'
+            d='M1860 1950C1860 1900.29 1900.29 1860 1950 1860C1999.71 1860 2040 1900.29 2040 1950C2040 1999.71 1999.71 2040 1950 2040C1900.29 2040 1860 1999.71 1860 1950Z'
           />
         </clipPath>
       </svg>
@@ -176,6 +188,7 @@ const numberStyle = css({
   pointerEvents: 'none',
   textAlign: 'center',
   color: 'white',
+  fontSize: '1rem',
 });
 
 const outerBullStyle = css({
@@ -184,16 +197,18 @@ const outerBullStyle = css({
   '&:hover': {
     background: 'radial-gradient(circle, #cc0000 2% 3%, #ff5555 5% 6%, #cc0000 9% 10%);',
   },
-  clipPath: 'circle(7% at 50% 50%)',
+  clipPath: 'url(#outerBull)',
+  WebkitTapHighlightColor: 'transparent',
 });
 
 const innerBullStyle = css({
   aspectRatio: '1',
   background: 'radial-gradient(circle, #111111 0% 1%, #333333 2% 3%, #111111 4.5% 5%);',
-  clipPath: 'circle(3% at 50% 50%)',
+  clipPath: 'url(#innerBull)',
   '&:hover': {
     background: 'radial-gradient(circle, #333333 0% 1%, #777777 2% 3%, #333333 4.5% 5%);',
   },
+  WebkitTapHighlightColor: 'transparent',
 });
 
 export default DartBoard;

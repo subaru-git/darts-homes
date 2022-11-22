@@ -14,7 +14,10 @@ const Targets: FC<TargetsProps> = ({ count, targets, isFinished }) => {
   };
   return (
     <Grid
-      templateColumns={{ base: `repeat(${count + 2}, 25px)`, md: `repeat(${count + 2}, 38px)` }}
+      templateColumns={{
+        base: `15px repeat(${count}, 27px) 15px`,
+        md: `20px repeat(${count}, 38px) 20px`,
+      }}
       gap={1}
       textAlign='center'
     >

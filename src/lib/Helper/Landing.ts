@@ -6,12 +6,12 @@ export const getLandingPosition = (
   range: number,
 ) => {
   if (range === 0) range = 0.001;
-  const rx = (range * rect.width) / 394;
-  const ry = (range * rect.height) / 394;
-  const ax = ((aim.x - rect.x) * rect.width) / 394;
-  const ay = ((aim.y - rect.y) * rect.height) / 394;
-  const gx = gaussian(ax / 10, rx / 10).ppf(Math.random()) * 10;
-  const gy = gaussian(ay / 10, ry / 10).ppf(Math.random()) * 10;
+  const rx = (range * rect.width) / 390;
+  const ry = (range * rect.height) / 390;
+  const ax = ((aim.x - rect.x) * rect.width) / 390;
+  const ay = ((aim.y - rect.y) * rect.height) / 390;
+  const gx = gaussian(ax / 10, rx / 20).ppf(Math.random()) * 10;
+  const gy = gaussian(ay / 10, ry / 20).ppf(Math.random()) * 10;
   const x = (gx * 394) / rect.width + rect.x;
   const y = (gy * 394) / rect.height + rect.y;
 
