@@ -1,3 +1,4 @@
+import { doubleOut, masterOut, singleOut } from '../Helper/Arrange';
 import { convertScoreToNumber } from '../Helper/Converter';
 import { isBust, isDoubleOut, isMasterOut, isSingleOut } from '../Helper/OutOption';
 import Player from '../Player/Player';
@@ -13,7 +14,9 @@ class ArrangeGame {
     settings: ArrangeGameSettings = { range: 0, out: 'single', simulation: true, separate: false },
   ) {
     this.settings = settings;
-    this.targets.push(this.getNextTarget(this.targets.length, this.settings.targets));
+    this.targets.push(
+      this.getNextTarget(this.targets.length, this.settings.out, this.settings.targets),
+    );
   }
   resumeGame(progress: ArrangeGameProgress) {
     for (const round of progress.score) {
@@ -43,7 +46,9 @@ class ArrangeGame {
   roundChange() {
     if (this.roundScore.length > 3) return;
     if (this.getCurrentTarget() === 0)
-      this.targets.push(this.getNextTarget(this.targets.length, this.settings.targets));
+      this.targets.push(
+        this.getNextTarget(this.targets.length, this.settings.out, this.settings.targets),
+      );
     this.player.roundScore(this.roundScore);
     this.roundScore = [];
   }
@@ -113,9 +118,10 @@ class ArrangeGame {
     if (isBust(target, out)) return -1;
     return target;
   }
-  private getNextTarget(index: number, targets?: number[]) {
+  private getNextTarget(index: number, out: OutOption, targets?: number[]) {
     if (targets && targets[index]) return targets[index];
-    return Math.floor(Math.random() * 180);
+    const table = out === 'master' ? masterOut : out === 'double' ? doubleOut : singleOut;
+    return table[Math.random() * table.length];
   }
 }
 
