@@ -19,4 +19,10 @@ const isMasterOut = (target: number, score: point, separate: boolean) => {
   return false;
 };
 
-export { isDoubleOut, isSingleOut, isMasterOut };
+const isBust = (target: number, out: OutOption) => {
+  const bust = out === 'master' ? 1 : out === 'double' ? 1 : 0;
+  if (target <= bust) return true;
+  return false;
+};
+
+export { isDoubleOut, isSingleOut, isMasterOut, isBust };

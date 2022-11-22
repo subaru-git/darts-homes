@@ -76,6 +76,8 @@ interface ArrangeGameProgress {
   settings: ArrangeGameSettings;
 }
 
+type OutOption = 'double' | 'single' | 'master';
+
 interface ArrangeGameSettings {
   targets?: number[];
   out: OutOption;

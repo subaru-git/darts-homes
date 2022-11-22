@@ -88,6 +88,13 @@ test('double out', () => {
   game.roundChange();
   expect(game.getCurrentTarget()).toBe(80);
   expect(game.getLastTargetOutCount()).toBe(4);
+  game.addScore('20T');
+  expect(game.getRoundScore()).toEqual(['20T']);
+  game.addScore('19');
+  expect(game.getRoundScore()).toEqual(['20T', '19', '0']);
+  game.roundChange();
+  expect(game.getCurrentTarget()).toBe(80);
+  expect(game.getLastTargetOutCount()).toBe(4);
   game.addScore('20D');
   expect(game.getRoundScore()).toEqual(['20D']);
   game.addScore('20D');
