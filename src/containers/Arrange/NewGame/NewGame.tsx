@@ -15,7 +15,6 @@ import {
 import NewGameModal from '@/components/NewGameModal';
 import SettingHeading from '@/components/SettingHeading';
 import useLocale from '@/hooks/locale';
-import { OutOption } from '@/lib/ArrangeGame/ArrangeGame';
 
 type NewGameProps = {
   onNewGame: (settings: ArrangeGameSettings) => void;
