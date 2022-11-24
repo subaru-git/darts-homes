@@ -59,6 +59,7 @@ const NewGame: FC<NewGameProps> = ({ onNewGame, isFinished, currentSettings }) =
                 value={settings.range}
                 max={210}
                 isDisabled={!settings.simulation}
+                aria-label='range'
               >
                 <SliderMark value={0}>0</SliderMark>
                 <SliderMark value={44}>44</SliderMark>
@@ -98,9 +99,15 @@ const NewGame: FC<NewGameProps> = ({ onNewGame, isFinished, currentSettings }) =
               value={settings.out}
             >
               <Flex gap={4}>
-                <Radio value='single'>Single Out</Radio>
-                <Radio value='double'>Double Out</Radio>
-                <Radio value='master'>Master Out</Radio>
+                <Radio value='single' aria-label='single out'>
+                  Single Out
+                </Radio>
+                <Radio value='double' aria-label='double out'>
+                  Double Out
+                </Radio>
+                <Radio value='master' aria-label='master out'>
+                  Master Out
+                </Radio>
               </Flex>
             </RadioGroup>
           </Box>

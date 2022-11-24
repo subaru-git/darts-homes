@@ -601,6 +601,7 @@ exports[`should rendering 1`] = `
       >
         <div
           class="css-91mzxk"
+          data-cy="arrange-board-base"
         >
           <div
             class="css-4hw0ah"
