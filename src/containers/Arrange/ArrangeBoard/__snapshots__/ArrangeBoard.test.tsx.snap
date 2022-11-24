@@ -607,11 +607,12 @@ exports[`should rendering 1`] = `
           />
           <svg
             color="white"
+            css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
             fill="currentColor"
             height="32"
             stroke="currentColor"
             stroke-width="0"
-            style="color: white; position: absolute; left: -16px; top: -16px;"
+            style="color: white;"
             version="1.1"
             viewBox="0 0 17 17"
             visibility="hidden"
@@ -625,11 +626,12 @@ exports[`should rendering 1`] = `
           </svg>
           <svg
             color="green"
+            css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop).,"
             fill="currentColor"
             height="32"
             stroke="currentColor"
             stroke-width="0"
-            style="color: green; position: absolute; left: -16px; top: -16px;"
+            style="color: green;"
             version="1.1"
             viewBox="0 0 17 17"
             visibility="hidden"
