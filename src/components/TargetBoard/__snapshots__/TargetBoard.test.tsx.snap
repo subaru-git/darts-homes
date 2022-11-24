@@ -3,14 +3,17 @@
 exports[`should rendering 1`] = `
 <div>
   <div
+    aria-label="target board"
     class="css-0"
   >
     <p
+      aria-label="message next target"
       class="chakra-text css-uzy2cd"
     >
       next target
     </p>
     <p
+      aria-label="target next target"
       class="chakra-text css-17ue8gu"
     >
       501

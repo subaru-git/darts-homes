@@ -46,6 +46,7 @@ const ArrangeBoard: FC<ArrangeBoardProps> = ({ onCount, range, simulation, disab
               pointerEvents={'auto'}
               width={'100%'}
               height={'100%'}
+              data-cy={'arrange-board-base'}
               onClick={(e) => {
                 if (disabled) return;
                 let pos = { x: e.clientX, y: e.clientY };
