@@ -11,7 +11,6 @@ import {
   DrawerOverlay,
   Flex,
   Grid,
-  GridItem,
   IconButton,
   Tab,
   TabList,
@@ -35,7 +34,7 @@ type CountButtonsProps = {
 
 const CountButtons: FC<CountButtonsProps> = ({ onCount, buttons, bull, disabled, other, full }) => {
   return (
-    <Flex maxW={320} direction='column' gap={1} m='auto'>
+    <Flex maxW={320} direction={'column'} gap={1} m={'auto'}>
       <Buttons onCount={onCount} buttons={buttons} bull={bull} disabled={disabled} other={other} />
       {other ? (
         <Other onCount={onCount} disabled={disabled} bull={bull} />
@@ -49,120 +48,87 @@ const CountButtons: FC<CountButtonsProps> = ({ onCount, buttons, bull, disabled,
 const Buttons: FC<CountButtonsProps> = ({ onCount, buttons, bull = true, disabled = false }) => {
   return (
     <>
-      {!bull ? null : (
-        <GridItem>
-          <Grid templateColumns='repeat(3, auto)' columnGap={3}>
-            <GridItem>
-              <Button
-                colorScheme='red'
-                w='100%'
-                onClick={() => onCount('S-BULL')}
-                disabled={disabled}
-                aria-label='outer bull'
-              >
-                outer Bull
-              </Button>
-            </GridItem>
-            <GridItem>
-              <Button
-                colorScheme='facebook'
-                w='100%'
-                onClick={() => onCount('D-BULL')}
-                disabled={disabled}
-                aria-label='inner bull'
-              >
-                inner Bull
-              </Button>
-            </GridItem>
-            <GridItem>
-              <IconButton
-                aria-label='out board'
-                variant='outline'
-                icon={<TbTargetOff />}
-                colorScheme='gray'
-                w='100%'
-                onClick={() => onCount('OUT')}
-                disabled={disabled}
-              ></IconButton>
-            </GridItem>
-          </Grid>
-        </GridItem>
-      )}
-      <GridItem>
-        <Grid
-          templateColumns='repeat(3, 1fr)'
-          templateRows={`repeat(${buttons.length}, 1fr)`}
-          columnGap={3}
-          rowGap={1}
-        >
-          {buttons.length === 0 ? null : (
-            <>
-              <GridItem>
-                <Center h='100%'>
-                  <Text size='sm' color={disabled ? 'blackAlpha.500' : 'black'} fontWeight='bold'>
-                    Single
-                  </Text>
-                </Center>
-              </GridItem>
-              <GridItem>
-                <Center h='100%'>
-                  <Text size='sm' color={disabled ? 'blackAlpha.500' : 'black'} fontWeight='bold'>
-                    Double
-                  </Text>
-                </Center>
-              </GridItem>
-              <GridItem>
-                <Center h='100%'>
-                  <Text size='sm' color={disabled ? 'blackAlpha.500' : 'black'} fontWeight='bold'>
-                    Triple
-                  </Text>
-                </Center>
-              </GridItem>
-            </>
-          )}
-          {buttons.map((i) => (
-            <Fragment key={`${i}-count`}>
-              <GridItem>
-                <Button
-                  colorScheme='gray'
-                  variant='outline'
-                  width='100%'
-                  onClick={() => onCount(`${i}` as point)}
-                  disabled={disabled}
-                  aria-label={`${i}`}
-                >
-                  {i}
-                </Button>
-              </GridItem>
-              <GridItem>
-                <Button
-                  colorScheme='teal'
-                  variant='outline'
-                  width='100%'
-                  onClick={() => onCount(`${i}D` as point)}
-                  disabled={disabled}
-                  aria-label={`${i} double`}
-                >
-                  {i}
-                </Button>
-              </GridItem>
-              <GridItem>
-                <Button
-                  colorScheme='pink'
-                  variant='outline'
-                  width='100%'
-                  onClick={() => onCount(`${i}T` as point)}
-                  disabled={disabled}
-                  aria-label={`${i} triple`}
-                >
-                  {i}
-                </Button>
-              </GridItem>
-            </Fragment>
-          ))}
-        </Grid>
-      </GridItem>
+      {!bull ? null : <Bull onCount={onCount} disabled={disabled} />}
+      <Grid
+        templateColumns='repeat(3, 1fr)'
+        templateRows={`repeat(${buttons.length}, 1fr)`}
+        columnGap={3}
+        rowGap={1}
+      >
+        {buttons.length === 0
+          ? null
+          : ['Single', 'Double', 'Triple'].map((label) => (
+              <Center key={label} h='100%'>
+                <Text size='sm' color={disabled ? 'blackAlpha.500' : 'black'} fontWeight='bold'>
+                  {label}
+                </Text>
+              </Center>
+            ))}
+        {buttons.map((i) => (
+          <Fragment key={`${i}-count`}>
+            <Button
+              colorScheme={'gray'}
+              variant={'outline'}
+              width={'100%'}
+              onClick={() => onCount(`${i}` as point)}
+              disabled={disabled}
+              aria-label={`${i}`}
+            >
+              {i}
+            </Button>
+            <Button
+              colorScheme={'teal'}
+              variant={'outline'}
+              width={'100%'}
+              onClick={() => onCount(`${i}D` as point)}
+              disabled={disabled}
+              aria-label={`${i} double`}
+            >
+              {i}
+            </Button>
+            <Button
+              colorScheme={'pink'}
+              variant={'outline'}
+              width={'100%'}
+              onClick={() => onCount(`${i}T` as point)}
+              disabled={disabled}
+              aria-label={`${i} triple`}
+            >
+              {i}
+            </Button>
+          </Fragment>
+        ))}
+      </Grid>
     </>
+  );
+};
+
+const Bull: FC<{ onCount: (count: point) => void; disabled: boolean }> = ({
+  onCount,
+  disabled,
+}) => {
+  return (
+    <Grid templateColumns='repeat(3, auto)' gap={3}>
+      <Button
+        colorScheme={'red'}
+        width={'100%'}
+        onClick={() => onCount('S-BULL')}
+        disabled={disabled}
+        aria-label={'outer bull'}
+      >
+        Outer Bull
+      </Button>
+      <Button
+        colorScheme={'facebook'}
+        width={'100%'}
+        onClick={() => onCount('D-BULL')}
+        disabled={disabled}
+        aria-label={'inner bull'}
+      >
+        Inner Bull
+      </Button>
+      <OutBoard onCount={onCount} disabled={disabled} width={'100%'} />
+    </Grid>
   );
 };
 
@@ -173,19 +139,10 @@ const Other: FC<{ disabled?: boolean; bull?: boolean; onCount: (n: point) => voi
 }) => {
   return (
     <Flex gap={2}>
-      <Button w='100%' variant='outline' onClick={() => onCount('0')} disabled={disabled}>
+      <Button w={'100%'} variant={'outline'} onClick={() => onCount('0')} disabled={disabled}>
         Other
       </Button>
-      {bull ? null : (
-        <IconButton
-          aria-label='out board'
-          variant='outline'
-          icon={<TbTargetOff />}
-          colorScheme='gray'
-          onClick={() => onCount('OUT')}
-          disabled={disabled}
-        ></IconButton>
-      )}
+      {bull ? null : <OutBoard onCount={onCount} disabled={disabled} />}
     </Flex>
   );
 };
@@ -200,27 +157,18 @@ const Full: FC<{ disabled?: boolean; bull?: boolean; onCount: (n: point) => void
   return (
     <>
       <Flex gap={2}>
-        <Button w='100%' variant='outline' onClick={onOpen} disabled={disabled}>
+        <Button width={'100%'} variant={'outline'} onClick={onOpen} disabled={disabled}>
           Full
         </Button>
-        {bull ? null : (
-          <IconButton
-            aria-label='out board'
-            variant='outline'
-            icon={<TbTargetOff />}
-            colorScheme='gray'
-            onClick={() => onCount('OUT')}
-            disabled={disabled}
-          ></IconButton>
-        )}
+        {bull ? null : <OutBoard onCount={onCount} disabled={disabled} />}
       </Flex>
-      <Drawer isOpen={isOpen} onClose={onClose} size='lg' placement='right'>
+      <Drawer isOpen={isOpen} onClose={onClose} size={'lg'} placement={'right'}>
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
           <DrawerHeader>Full Inputs</DrawerHeader>
           <DrawerBody>
-            <Tabs variant='enclosed' isFitted index={index} onChange={(i) => setIndex(i)}>
+            <Tabs variant={'enclosed'} isFitted index={index} onChange={(i) => setIndex(i)}>
               <TabList>
                 <Tab>Full Buttons</Tab>
                 <Tab>Dart Board</Tab>
@@ -235,12 +183,12 @@ const Full: FC<{ disabled?: boolean; bull?: boolean; onCount: (n: point) => void
                     buttons={[
                       20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1,
                     ]}
-                    bull={true}
+                    bull
                   />
                 </TabPanel>
                 <TabPanel>
                   <Center>
-                    <Box w='100%' h='100%'>
+                    <Box w={'100%'} h={'100%'}>
                       <DartBoard
                         onCount={(n) => {
                           onCount(n);
@@ -258,5 +206,21 @@ const Full: FC<{ disabled?: boolean; bull?: boolean; onCount: (n: point) => void
     </>
   );
 };
+
+const OutBoard: FC<{ disabled?: boolean; onCount: (n: point) => void; width?: string }> = ({
+  disabled,
+  onCount,
+  width = 'inherit',
+}) => (
+  <IconButton
+    aria-label={'out board'}
+    variant={'outline'}
+    width={width}
+    icon={<TbTargetOff />}
+    colorScheme={'gray'}
+    onClick={() => onCount('OUT')}
+    disabled={disabled}
+  />
+);
 
 export default CountButtons;

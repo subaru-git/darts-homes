@@ -17,11 +17,11 @@ const TargetBoard: FC<TargetBoardProps> = ({ target, message, size = 'md' }) => 
     md: size === 'md' ? '96px' : '64px',
   });
   return (
-    <Box aria-label='target board'>
+    <Box aria-label={'target board'}>
       <Text
         fontSize={messageFontSize}
-        fontWeight='bold'
-        color='green.500'
+        fontWeight={'bold'}
+        color={'green.500'}
         pl={{ base: 1, md: 4 }}
         pt={{ base: 1, md: 4 }}
         aria-label={`message ${message}`}
@@ -29,11 +29,11 @@ const TargetBoard: FC<TargetBoardProps> = ({ target, message, size = 'md' }) => 
         {message}
       </Text>
       <Text
-        textAlign='center'
+        textAlign={'center'}
         fontSize={targetFontSize}
         py={{ base: 1, md: 8 }}
-        fontWeight='bold'
-        fontFamily='roboto, sans-serif'
+        fontWeight={'bold'}
+        fontFamily={'roboto, sans-serif'}
         minWidth={{ base: '110px', md: '260px' }}
         aria-label={`target ${message}`}
       >

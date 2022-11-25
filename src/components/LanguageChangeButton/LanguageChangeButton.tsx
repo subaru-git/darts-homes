@@ -15,10 +15,10 @@ const LanguageChangeButton: FC = () => {
   return (
     <Popover>
       <PopoverTrigger>
-        <IconButton icon={<IoLanguage />} variant='ghost' aria-label='Change language' />
+        <IconButton icon={<IoLanguage />} variant={'ghost'} aria-label={'change language'} />
       </PopoverTrigger>
       <PopoverContent>
-        <Link href='/' locale='ja' passHref>
+        <Link href={'/'} locale={'ja'} passHref>
           <Box
             role={'group'}
             display={'block'}
@@ -31,7 +31,7 @@ const LanguageChangeButton: FC = () => {
             </Text>
           </Box>
         </Link>
-        <Link href='/' locale='en' passHref>
+        <Link href={'/'} locale={'en'} passHref>
           <Box
             role={'group'}
             display={'block'}

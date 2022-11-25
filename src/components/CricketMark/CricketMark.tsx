@@ -8,39 +8,18 @@ type CricketMarkProps = {
 
 const CricketMark: FC<CricketMarkProps> = ({ count }) => {
   const isMd = useBreakpointValue({ base: false, md: true });
-  const oneMark = isMd ? oneMarkStylesMd : oneMarkStyles;
-  const twoMarks = isMd ? twoMarkStylesMd : twoMarkStyles;
-  const threeMarks = isMd ? threeMarkStylesMd : threeMarkStyles;
   return (
     <>
       {count === 3 ? (
-        <div css={threeMarks} />
+        <div css={[threeMarkStyles, isMd ? threeMarkStylesMd : null]} />
       ) : count === 2 ? (
-        <div css={twoMarks} />
+        <div css={[twoMarkStyles, isMd ? twoMarkStylesMd : null]} />
       ) : count === 1 ? (
-        <div css={oneMark} />
+        <div css={[oneMarkStyles, isMd ? oneMarkStylesMd : null]} />
       ) : null}
     </>
   );
 };
-
-const oneMarkStylesMd = css({
-  display: 'inline-block',
-  position: 'relative',
-  width: '32px',
-  height: '32px',
-  '&::after': {
-    content: '""',
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    width: '5px',
-    height: '44px',
-    background: 'black',
-    borderRadius: '2.5px',
-    transform: 'translate(-50%, -50%) rotate(-45deg)',
-  },
-});
 
 const oneMarkStyles = css({
   display: 'inline-block',
@@ -59,27 +38,13 @@ const oneMarkStyles = css({
     transform: 'translate(-50%, -50%) rotate(-45deg)',
   },
 });
-
-const twoMarkStylesMd = css({
-  display: 'inline-block',
-  position: 'relative',
+const oneMarkStylesMd = css({
   width: '32px',
   height: '32px',
-  '&::before, &::after': {
-    content: '""',
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
+  '&::after': {
     width: '5px',
     height: '44px',
-    background: 'black',
     borderRadius: '2.5px',
-  },
-  '&::before': {
-    transform: 'translate(-50%, -50%) rotate(45deg)',
-  },
-  '&::after': {
-    transform: 'translate(-50%, -50%) rotate(-45deg)',
   },
 });
 
@@ -105,29 +70,13 @@ const twoMarkStyles = css({
     transform: 'translate(-50%, -50%) rotate(-45deg)',
   },
 });
-
-const threeMarkStylesMd = css({
-  display: 'inline-block',
-  position: 'relative',
+const twoMarkStylesMd = css({
   width: '32px',
   height: '32px',
-  borderRadius: '100%',
-  border: '5px solid black',
   '&::before, &::after': {
-    content: '""',
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
     width: '5px',
     height: '44px',
-    background: 'black',
     borderRadius: '2.5px',
-  },
-  '&::before': {
-    transform: 'translate(-50%, -50%) rotate(45deg)',
-  },
-  '&::after': {
-    transform: 'translate(-50%, -50%) rotate(-45deg)',
   },
 });
 
@@ -153,6 +102,16 @@ const threeMarkStyles = css({
   },
   '&::after': {
     transform: 'translate(-50%, -50%) rotate(-45deg)',
+  },
+});
+const threeMarkStylesMd = css({
+  width: '32px',
+  height: '32px',
+  border: '5px solid black',
+  '&::before, &::after': {
+    width: '5px',
+    height: '44px',
+    borderRadius: '2.5px',
   },
 });
 

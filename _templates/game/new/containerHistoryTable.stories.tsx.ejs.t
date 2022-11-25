@@ -1,7 +1,6 @@
 ---
 to: src/containers/<%= name %>/HistoryTable/HistoryTable.stories.tsx
 ---
-/* eslint-disable import/named */
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import HistoryTable from './HistoryTable';

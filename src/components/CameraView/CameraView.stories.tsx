@@ -1,14 +1,13 @@
-/* eslint-disable import/named */
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import Camera from './CameraView';
+import CameraView from './CameraView';
 
 export default {
-  title: 'Components/Camera',
-  component: Camera,
-} as ComponentMeta<typeof Camera>;
+  title: 'Components/CameraView',
+  component: CameraView,
+} as ComponentMeta<typeof CameraView>;
 
-const Template: ComponentStory<typeof Camera> = (args) => <Camera {...args} />;
+const Template: ComponentStory<typeof CameraView> = (args) => <CameraView {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {};

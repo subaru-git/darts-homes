@@ -1,4 +1,3 @@
-/* eslint-disable import/named */
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import RoundBoard from './RoundBoard';
@@ -14,6 +13,27 @@ export const Default = Template.bind({});
 Default.args = {
   score: [
     ['20T', '20', 'S-BULL'],
+    ['19', '19T', '0'],
+  ],
+};
+
+export const Overflow = Template.bind({});
+Overflow.args = {
+  score: [
+    ['20T', '20', 'S-BULL'],
+    ['19', '19T', '0'],
+    ['19', '19T', '0'],
+    ['19', '19T', '0'],
+    ['19', '19T', '0'],
+    ['19', '19T', '0'],
+    ['19', '19T', '0'],
+    ['19', '19T', '0'],
+    ['19', '19T', '0'],
+    ['19', '19T', '0'],
+    ['19', '19T', '0'],
+    ['19', '19T', '0'],
+    ['19', '19T', '0'],
+    ['19', '19T', '0'],
     ['19', '19T', '0'],
   ],
 };

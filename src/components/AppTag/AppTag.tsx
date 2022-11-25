@@ -6,12 +6,12 @@ type AppTagProps = {
 };
 
 const AppTag: FC<AppTagProps> = ({ tag }) => {
-  const color = ConstantTags.find((t) => t.name === tag)?.color || {
+  const { font, bg } = ConstantTags.find((t) => t.name === tag)?.color ?? {
     font: 'gray.200',
     bg: 'gray.400',
   };
   return (
-    <Tag color={color.font} backgroundColor={color.bg}>
+    <Tag color={font} backgroundColor={bg}>
       {tag}
     </Tag>
   );

@@ -1,3 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should rendering 1`] = `<div />`;
+exports[`should rendering 1`] = `
+<head>
+  <title>
+    Cricket Mark-Up
+  </title>
+  <meta
+    content="index,follow"
+    name="robots"
+  />
+  <meta
+    content="This is a darts practice game introduced by "Kikuchi Yamaguchi." You will aim for the cricket number."
+    name="description"
+  />
+  <meta
+    content="Cricket Mark-Up"
+    property="og:title"
+  />
+  <meta
+    content="This is a darts practice game introduced by "Kikuchi Yamaguchi." You will aim for the cricket number."
+    property="og:description"
+  />
+</head>
+`;

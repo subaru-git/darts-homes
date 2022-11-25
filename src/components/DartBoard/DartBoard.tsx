@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import { css } from '@emotion/react';
+import isEven from 'is-even';
 
 type DartBoardProps = {
   onCount: (count: point) => void;
@@ -22,23 +23,22 @@ const DartBoard: FC<DartBoardProps> = ({ onCount }) => {
         <div key={n} css={[boardStyle, { rotate: `${i * 18}deg`, pointerEvents: 'none' }]}>
           <button
             onClick={() => onCount(`${n}` as point)}
-            css={[buttonStyle, innerSingleStyle, i % 2 === 0 ? blackStyle : whiteStyle]}
+            css={[buttonStyle, innerSingleStyle, isEven(i) ? blackStyle : whiteStyle]}
             aria-label={`${n} inner single`}
-            onLoadStart={() => console.log('loaded')}
           />
           <button
             onClick={() => onCount(`${n}` as point)}
-            css={[buttonStyle, outerSingleStyle, i % 2 === 0 ? blackStyle : whiteStyle]}
+            css={[buttonStyle, outerSingleStyle, isEven(i) ? blackStyle : whiteStyle]}
             aria-label={`${n} outer single`}
           />
           <button
             onClick={() => onCount(`${n}D` as point)}
-            css={[buttonStyle, doubleStyle, i % 2 === 0 ? redStyle : blueStyle]}
+            css={[buttonStyle, doubleStyle, isEven(i) ? redStyle : blueStyle]}
             aria-label={`${n} double`}
           />
           <button
             onClick={() => onCount(`${n}T` as point)}
-            css={[buttonStyle, tripleStyle, i % 2 === 0 ? redStyle : blueStyle]}
+            css={[buttonStyle, tripleStyle, isEven(i) ? redStyle : blueStyle]}
             aria-label={`${n} triple`}
           />
         </div>
@@ -53,17 +53,7 @@ const DartBoard: FC<DartBoardProps> = ({ onCount }) => {
         css={[boardStyle, innerBullStyle]}
         aria-label={`double bull`}
       />
-      <div
-        css={{
-          position: 'absolute',
-          width: '100%',
-          height: '100%',
-          top: 0,
-          background: 'url(./noise.svg)',
-          opacity: 0.5,
-          pointerEvents: 'none',
-        }}
-      />
+      <div css={dressStyle} />
       <svg height='0' viewBox='0 0 3900 3900' width='0'>
         <clipPath id='triple' clipPathUnits='objectBoundingBox'>
           <path
@@ -209,6 +199,16 @@ const innerBullStyle = css({
     background: 'radial-gradient(circle, #333333 0% 1%, #777777 2% 3%, #333333 4.5% 5%);',
   },
   WebkitTapHighlightColor: 'transparent',
+});
+
+const dressStyle = css({
+  position: 'absolute',
+  width: '100%',
+  height: '100%',
+  top: 0,
+  background: 'url(./noise.svg)',
+  opacity: 0.5,
+  pointerEvents: 'none',
 });
 
 export default DartBoard;

@@ -21,26 +21,26 @@ type SettingHeadingProps = {
 
 const SettingHeading: FC<SettingHeadingProps> = ({ title, hintHeader, hintBody }) => {
   return (
-    <Flex alignItems='center'>
-      <Text fontSize='sm' fontWeight='bold' color='gray.500'>
+    <Flex alignItems={'center'}>
+      <Text fontSize={'sm'} fontWeight={'bold'} color={'gray.500'}>
         {title}
       </Text>
       <Popover>
         <PopoverTrigger>
           <IconButton
             icon={<IoIosHelpCircleOutline />}
-            aria-label='simulation mode help'
-            variant='ghost'
-            color='gray.500'
+            variant={'ghost'}
+            color={'gray.500'}
+            aria-label={`${title} help`}
           />
         </PopoverTrigger>
         <PopoverContent>
           <PopoverArrow />
           <PopoverCloseButton />
-          <PopoverHeader border='0'>{hintHeader}</PopoverHeader>
+          <PopoverHeader border={'0'}>{hintHeader}</PopoverHeader>
           <PopoverBody>{hintBody}</PopoverBody>
         </PopoverContent>
-      </Popover>{' '}
+      </Popover>
     </Flex>
   );
 };

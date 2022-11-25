@@ -4,6 +4,10 @@ exports[`should rendering 1`] = `
 <div>
   <div
     class="css-1m3k68e"
-  />
+  >
+    <p>
+      The Card
+    </p>
+  </div>
 </div>
 `;

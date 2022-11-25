@@ -1,4 +1,3 @@
-/* eslint-disable import/named */
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import CountBullButtons from './CountBullButtons';
@@ -11,4 +10,6 @@ export default {
 const Template: ComponentStory<typeof CountBullButtons> = (args) => <CountBullButtons {...args} />;
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = {
+  disabled: false,
+};

@@ -14,12 +14,12 @@ import { LineIcon, LineShareButton, TwitterIcon, TwitterShareButton } from 'reac
 
 type RoundOverDialogProps = {
   isOpen: boolean;
+  result: string;
   onClose: () => void;
   onNewGame: () => void;
-  result: string;
 };
 
-const RoundOverDialog: FC<RoundOverDialogProps> = ({ isOpen, onClose, onNewGame, result }) => {
+const RoundOverDialog: FC<RoundOverDialogProps> = ({ isOpen, result, onClose, onNewGame }) => {
   const cancelRef = useRef<HTMLButtonElement>(null);
   return (
     <AlertDialog
@@ -30,27 +30,33 @@ const RoundOverDialog: FC<RoundOverDialogProps> = ({ isOpen, onClose, onNewGame,
     >
       <AlertDialogOverlay>
         <AlertDialogContent>
-          <AlertDialogHeader fontSize='lg' fontWeight='bold'>
+          <AlertDialogHeader fontSize={'lg'} fontWeight={'bold'}>
             Congratulations 🎉
           </AlertDialogHeader>
           <AlertDialogBody>
-            <Flex direction='column' gap={3}>
-              <Text whiteSpace='pre-wrap'>{result}</Text>
-              <Flex justify='center' gap={2}>
-                <TwitterShareButton title={result} url='http://darts.homes'>
+            <Flex direction={'column'} gap={3}>
+              <Text whiteSpace={'pre-wrap'}>{result}</Text>
+              <Flex justify={'center'} gap={2}>
+                <TwitterShareButton title={result} url={'http://darts.homes'}>
                   <TwitterIcon size={32} round />
                 </TwitterShareButton>
-                <LineShareButton title={result} url='http://darts.homes'>
+                <LineShareButton title={result} url={'http://darts.homes'}>
                   <LineIcon size={32} round />
                 </LineShareButton>
               </Flex>
             </Flex>
           </AlertDialogBody>
           <AlertDialogFooter>
-            <Button colorScheme='gray' ml={3} onClick={onClose} ref={cancelRef} aria-label='cancel'>
+            <Button
+              colorScheme={'gray'}
+              ml={3}
+              onClick={onClose}
+              ref={cancelRef}
+              aria-label={'cancel'}
+            >
               Cancel
             </Button>
-            <Button colorScheme='teal' ml={3} onClick={onNewGame} aria-label='new game'>
+            <Button colorScheme='teal' ml={3} onClick={onNewGame} aria-label={'new game'}>
               New Game
             </Button>
           </AlertDialogFooter>

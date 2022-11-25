@@ -7,9 +7,9 @@ type RoundBoardProps = {
 
 const RoundBoard: FC<RoundBoardProps> = ({ score }) => {
   return (
-    <Box overflowY='auto' maxHeight={300}>
+    <Box overflowY={'auto'} maxHeight={300}>
       <TableContainer>
-        <Table variant='simple'>
+        <Table variant={'simple'}>
           <Tbody>
             {score.map((round, i) => (
               <Tr key={`round-${i}`}>

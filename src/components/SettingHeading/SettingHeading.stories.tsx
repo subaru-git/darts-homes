@@ -1,4 +1,3 @@
-/* eslint-disable import/named */
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import SettingHeading from './SettingHeading';
@@ -11,4 +10,8 @@ export default {
 const Template: ComponentStory<typeof SettingHeading> = (args) => <SettingHeading {...args} />;
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = {
+  title: 'Setting',
+  hintHeader: 'Hint',
+  hintBody: 'This is a hint',
+};

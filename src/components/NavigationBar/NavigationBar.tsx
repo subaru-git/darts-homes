@@ -19,16 +19,15 @@ import Link from 'next/link';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { GoChevronDown, GoChevronRight } from 'react-icons/go';
 import { GrClose } from 'react-icons/gr';
+import { GetNavItem, NavItem } from './NavigationItem';
 import LanguageChangeButton from '@/components/LanguageChangeButton';
-import useLocale from '@/hooks/locale';
 
 const NavigationBar: FC = () => {
   const { isOpen, onToggle } = useDisclosure();
   const items = GetNavItem();
-
   return (
     <>
-      <Box position={{ md: 'fixed' }} width='100%' zIndex={200} as='header'>
+      <Box position={{ md: 'fixed' }} width={'100%'} zIndex={200} as={'header'}>
         <Flex
           bg={useColorModeValue('white', 'gray.800')}
           color={useColorModeValue('gray.600', 'white')}
@@ -51,7 +50,7 @@ const NavigationBar: FC = () => {
                 isOpen ? <GrClose width={3} height={3} /> : <GiHamburgerMenu width={5} height={5} />
               }
               variant={'ghost'}
-              aria-label={'Toggle Navigation'}
+              aria-label={'toggle navigation'}
             />
           </Flex>
           <Flex flex={{ base: 'auto' }} justify={{ base: 'center', md: 'start' }}>
@@ -61,9 +60,9 @@ const NavigationBar: FC = () => {
                 color: useColorModeValue('gray.800', 'white'),
               }}
             >
-              <Link href='/' passHref>
+              <Link href={'/'} passHref>
                 <a>
-                  <Image src='/logo.svg' alt='darts homes logo' h='40px' w='200px' />
+                  <Image src={'/logo.svg'} alt={'darts homes logo'} h={'40px'} w={'200px'} />
                 </a>
               </Link>
             </Box>
@@ -78,7 +77,7 @@ const NavigationBar: FC = () => {
           <MobileNav items={items} />
         </Collapse>
       </Box>
-      <Box pt='60px' display={{ base: 'none', md: 'block' }} />
+      <Box pt={'60px'} display={{ base: 'none', md: 'block' }} />
     </>
   );
 };
@@ -87,9 +86,8 @@ const DesktopNav: FC<{ items: NavItem[] }> = ({ items }) => {
   const linkColor = useColorModeValue('gray.600', 'gray.200');
   const linkHoverColor = useColorModeValue('gray.800', 'white');
   const popoverContentBgColor = useColorModeValue('white', 'gray.800');
-
   return (
-    <Stack direction={'row'} spacing={4} alignItems='center'>
+    <Stack direction={'row'} spacing={4} alignItems={'center'}>
       {items.map((navItem) => (
         <Box key={navItem.label}>
           <Popover trigger={'hover'} placement={'bottom-start'}>
@@ -109,7 +107,6 @@ const DesktopNav: FC<{ items: NavItem[] }> = ({ items }) => {
                 </Link>
               </Box>
             </PopoverTrigger>
-
             {navItem.children && (
               <PopoverContent
                 border={0}
@@ -119,7 +116,7 @@ const DesktopNav: FC<{ items: NavItem[] }> = ({ items }) => {
                 rounded={'xl'}
                 minW={'sm'}
               >
-                <Stack maxH='80vh' overflowY='scroll'>
+                <Stack maxH={'80vh'} overflowY={'scroll'}>
                   {navItem.children.map((child) => (
                     <DesktopSubNav key={child.label} {...child} />
                   ))}
@@ -185,7 +182,6 @@ const MobileNav: FC<{ items: NavItem[] }> = ({ items }) => {
 
 const MobileNavItem = ({ label, children, href }: NavItem) => {
   const { isOpen, onToggle } = useDisclosure();
-
   return (
     <Stack spacing={4} onClick={children && onToggle}>
       <Link href={href && !children ? href : '#'} passHref>
@@ -211,7 +207,6 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
           )}
         </Flex>
       </Link>
-
       <Collapse in={isOpen} animateOpacity style={{ marginTop: '0!important' }}>
         <Stack
           mt={2}
@@ -233,106 +228,4 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
   );
 };
 
-export interface NavItem {
-  label: string;
-  subLabel?: string;
-  children?: Array<NavItem>;
-  href?: string;
-}
-
-const GetNavItem = () => {
-  const { t } = useLocale();
-
-  return [
-    {
-      label: 'Games',
-      href: '/games',
-      children: [
-        {
-          label: "Eagle's Eye",
-          subLabel: t.navigation.eagleseye,
-          href: '/eagleseye',
-        },
-        {
-          label: 'Cricket Mark-Up',
-          subLabel: t.navigation.cricketmarkup,
-          href: '/cricketmarkup',
-        },
-        {
-          label: 'Double Trouble',
-          subLabel: t.navigation.doubletrouble,
-          href: '/doubletrouble',
-        },
-        {
-          label: 'Sweet 16',
-          subLabel: t.navigation.sweet16,
-          href: '/sweet16',
-        },
-        {
-          label: 'Tops and Tens',
-          subLabel: t.navigation.topsandtens,
-          href: '/topsandtens',
-        },
-        {
-          label: 'Two-Dart Combinations',
-          subLabel: t.navigation.twodartcombinations,
-          href: '/twodartcombinations',
-        },
-        {
-          label: 'Around The Compass',
-          subLabel: t.navigation.aroundthecompass,
-          href: '/aroundthecompass',
-        },
-        {
-          label: 'Tons Up',
-          subLabel: t.navigation.tonsup,
-          href: '/tonsup',
-        },
-        {
-          label: 'Route 64',
-          subLabel: t.navigation.route64,
-          href: '/route64',
-        },
-        {
-          label: 'Eighty Threw',
-          subLabel: t.navigation.eightythrew,
-          href: '/eightythrew',
-        },
-        {
-          label: 'Shanghai Nights',
-          subLabel: t.navigation.shanghainights,
-          href: '/shanghainights',
-        },
-        {
-          label: 'Switch Hitter',
-          subLabel: t.navigation.switchhitter,
-          href: '/switchhitter',
-        },
-        {
-          label: 'Bully Bully',
-          subLabel: t.navigation.bullybully,
-          href: '/bullybully',
-        },
-        {
-          label: 'Treble For Show',
-          subLabel: t.navigation.treblesforshow,
-          href: '/treblesforshow',
-        },
-        {
-          label: 'Arrange',
-          subLabel: t.navigation.arrange,
-          href: '/arrange',
-        },
-      ],
-    },
-    {
-      label: 'Respect',
-      href: '/respect',
-    },
-    {
-      label: 'History',
-      href: '/history',
-    },
-  ];
-};
 export default NavigationBar;

@@ -7,12 +7,14 @@ exports[`should rendering 1`] = `
   >
     <p
       class="chakra-text css-1sl8k3i"
-    />
+    >
+      title
+    </p>
     <button
       aria-controls="popover-content-:r1:"
       aria-expanded="false"
       aria-haspopup="dialog"
-      aria-label="simulation mode help"
+      aria-label="title help"
       class="chakra-button css-7u5se0"
       id="popover-trigger-:r1:"
       type="button"
@@ -79,14 +81,17 @@ exports[`should rendering 1`] = `
         <header
           class="chakra-popover__header css-107tt68"
           id="popover-header-:r1:"
-        />
+        >
+          hint
+        </header>
         <div
           class="chakra-popover__body css-0"
           id="popover-body-:r1:"
-        />
+        >
+          this is hint.
+        </div>
       </section>
     </div>
-     
   </div>
 </div>
 `;
