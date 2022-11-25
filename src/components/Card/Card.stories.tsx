@@ -1,10 +1,9 @@
-/* eslint-disable import/named */
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import Card from './Card';
 
 export default {
-  title: 'Containers/Respect/Card',
+  title: 'Components/Card',
   component: Card,
 } as ComponentMeta<typeof Card>;
 

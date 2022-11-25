@@ -33,21 +33,26 @@ const NewGameModal: FC<NewGameModalProps> = ({ onNewGame, settings, isFinished }
   return (
     <>
       {isMd ? (
-        <Button leftIcon={<FiSettings />} aria-label='setting' variant='ghost' onClick={onOpen}>
+        <Button leftIcon={<FiSettings />} variant={'ghost'} onClick={onOpen} aria-label={'setting'}>
           New Game
         </Button>
       ) : (
-        <IconButton aria-label='setting' icon={<FiSettings />} variant='ghost' onClick={onOpen} />
+        <IconButton
+          icon={<FiSettings />}
+          variant={'ghost'}
+          onClick={onOpen}
+          aria-label={'setting'}
+        />
       )}
-      <Modal isOpen={isOpen} onClose={onClose} size='2xl'>
+      <Modal isOpen={isOpen} onClose={onClose} size={'2xl'}>
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>Start New Game?</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <Flex direction='column' gap={4}>
+            <Flex direction={'column'} gap={4}>
               {!isFinished ? (
-                <Alert status='warning' fontSize={{ base: 'sm', md: 'md' }}>
+                <Alert status={'warning'} fontSize={{ base: 'sm', md: 'md' }}>
                   <AlertIcon />
                   <Text>{t.warning.newgame}</Text>
                 </Alert>
@@ -56,16 +61,16 @@ const NewGameModal: FC<NewGameModalProps> = ({ onNewGame, settings, isFinished }
             </Flex>
           </ModalBody>
           <ModalFooter>
-            <Button variant='ghost' onClick={onClose} aria-label='cancel' mr={3}>
+            <Button variant={'ghost'} onClick={onClose} mr={3} aria-label={'cancel'}>
               Cancel
             </Button>
             <Button
-              colorScheme='blue'
+              colorScheme={'blue'}
               onClick={() => {
                 onNewGame();
                 onClose();
               }}
-              aria-label='new game'
+              aria-label={'new game'}
             >
               New Game
             </Button>

@@ -8,12 +8,12 @@ type CardProps = {
 const Card: FC<CardProps> = ({ children }) => {
   return (
     <Box
-      borderRadius='xl'
+      borderRadius={'xl'}
       p={5}
-      shadow='md'
-      borderWidth='1px'
+      shadow={'md'}
+      borderWidth={'1px'}
       maxWidth={'md'}
-      height='100%'
+      height={'100%'}
       backgroundColor={'gray.50'}
     >
       {children}

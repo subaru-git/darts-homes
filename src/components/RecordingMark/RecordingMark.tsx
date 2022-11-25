@@ -6,10 +6,10 @@ type RecordingMarkProps = {
 };
 
 const RecordingMark: FC<RecordingMarkProps> = ({ recording = false }) => {
-  return <div css={[Style, recording ? RecordingStyle : notRecordingStyle]} />;
+  return <div css={[style, recording ? recordingStyle : notRecordingStyle]} />;
 };
 
-const Style = css({
+const style = css({
   width: '100%',
   height: '100%',
   backgroundColor: 'red',
@@ -22,12 +22,11 @@ const notRecordingStyle = css({
   backgroundColor: 'darkred',
 });
 
-const RecordingStyle = css({
+const recordingStyle = css({
   animationName: 'pulse',
   animationDuration: '1.5s',
   animationIterationCount: 'infinite',
   animationTimingFunction: 'linear',
-
   '@keyframes pulse': {
     '0%': {
       boxShadow: '0px 0px 0.14em 0px rgba(173,0,0,.3)',

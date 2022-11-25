@@ -12,9 +12,10 @@ test('should rendering', () => {
     <ChakraProvider>
       <RoundScore
         scores={['20T', '19T', '18T']}
+        isFinished={false}
+        result={'Result'}
         onClear={clear}
         onRoundChange={roundChange}
-        isFinished={false}
         onRoundOver={roundOver}
       />
     </ChakraProvider>,

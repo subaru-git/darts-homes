@@ -1,4 +1,3 @@
-/* eslint-disable import/named */
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import RoundOverDialog from './RoundOverDialog';
@@ -11,4 +10,7 @@ export default {
 const Template: ComponentStory<typeof RoundOverDialog> = (args) => <RoundOverDialog {...args} />;
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = {
+  isOpen: true,
+  result: 'Result',
+};

@@ -1,3 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should rendering 1`] = `<div />`;
+exports[`should rendering 1`] = `
+<div
+  aria-hidden="true"
+  data-aria-hidden="true"
+/>
+`;

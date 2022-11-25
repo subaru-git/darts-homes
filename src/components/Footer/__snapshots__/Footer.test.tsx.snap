@@ -27,12 +27,12 @@ exports[`should rendering 1`] = `
             <svg
               color="white"
               fill="currentColor"
-              height="24px"
+              height="24"
               stroke="currentColor"
               stroke-width="0"
               style="color: white;"
               viewBox="0 0 1024 1024"
-              width="24px"
+              width="24"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -48,12 +48,12 @@ exports[`should rendering 1`] = `
             <svg
               color="white"
               fill="currentColor"
-              height="24px"
+              height="24"
               stroke="currentColor"
               stroke-width="0"
               style="color: white;"
               viewBox="0 0 1024 1024"
-              width="24px"
+              width="24"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path

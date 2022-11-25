@@ -1,4 +1,3 @@
-/* eslint-disable import/named */
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import NavigationBar from './NavigationBar';

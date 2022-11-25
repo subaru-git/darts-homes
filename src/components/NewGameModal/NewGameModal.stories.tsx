@@ -4,7 +4,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import NewGameModal from './NewGameModal';
 
 export default {
-  title: 'Component/NewGameModal',
+  title: 'Components/NewGameModal',
   component: NewGameModal,
 } as ComponentMeta<typeof NewGameModal>;
 
@@ -13,4 +13,5 @@ const Template: ComponentStory<typeof NewGameModal> = (args) => <NewGameModal {.
 export const Default = Template.bind({});
 Default.args = {
   isFinished: false,
+  settings: <div>Settings</div>,
 };

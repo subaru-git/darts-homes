@@ -7,17 +7,17 @@ import RoundOverDialog from '../RoundOverDialog';
 type RoundScoreButtonProps = {
   isFinished: boolean;
   disabled: boolean;
+  result: string;
   onRoundChange: () => void;
   onRoundOver: () => void;
-  result: string;
 };
 
 const RoundScoreButton: FC<RoundScoreButtonProps> = ({
   isFinished,
   disabled,
+  result,
   onRoundChange,
   onRoundOver,
-  result,
 }) => {
   const isMd = useBreakpointValue({ base: false, md: true });
   return (
@@ -46,34 +46,30 @@ const RoundScoreButton: FC<RoundScoreButtonProps> = ({
 const DesktopRoundScoreButton: FC<RoundScoreButtonProps> = ({
   isFinished,
   disabled,
+  result,
   onRoundChange,
   onRoundOver,
-  result,
 }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
       {!isFinished ? (
         <Button
-          colorScheme='green'
-          w='145px'
-          onClick={() => {
-            onRoundChange();
-          }}
+          colorScheme={'green'}
+          width={'auto'}
+          onClick={() => onRoundChange()}
           disabled={disabled}
-          aria-label='round change'
+          aria-label={'round change'}
         >
           Round Change
         </Button>
       ) : (
         <>
           <Button
-            colorScheme='orange'
-            w='145px'
-            onClick={() => {
-              onOpen();
-            }}
-            aria-label='round over'
+            colorScheme={'orange'}
+            w={'auto'}
+            onClick={() => onOpen()}
+            aria-label={'round over'}
           >
             Round Over
           </Button>
@@ -95,9 +91,9 @@ const DesktopRoundScoreButton: FC<RoundScoreButtonProps> = ({
 const MobileRoundScoreButton: FC<RoundScoreButtonProps> = ({
   isFinished,
   disabled,
+  result,
   onRoundChange,
   onRoundOver,
-  result,
 }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
@@ -105,26 +101,22 @@ const MobileRoundScoreButton: FC<RoundScoreButtonProps> = ({
       {!isFinished ? (
         <IconButton
           icon={<MdOutlineChangeCircle />}
-          colorScheme='green'
-          size='sm'
-          width='100%'
-          onClick={() => {
-            onRoundChange();
-          }}
+          colorScheme={'green'}
+          size={'sm'}
+          width={'auto'}
+          onClick={() => onRoundChange()}
           disabled={disabled}
-          aria-label='round change'
+          aria-label={'round change'}
         />
       ) : (
         <>
           <IconButton
             icon={<GiPartyPopper />}
-            colorScheme='orange'
-            size='sm'
-            width='100%'
-            onClick={() => {
-              onOpen();
-            }}
-            aria-label='round over'
+            colorScheme={'orange'}
+            size={'sm'}
+            width={'auto'}
+            onClick={() => onOpen()}
+            aria-label={'round over'}
           />
           <RoundOverDialog
             isOpen={isOpen}

@@ -12,7 +12,7 @@ exports[`should rendering 1`] = `
         class="css-1twb9xo"
       >
         <button
-          aria-label="Toggle Navigation"
+          aria-label="toggle navigation"
           class="chakra-button css-13zvu4r"
           type="button"
         >
@@ -852,7 +852,7 @@ exports[`should rendering 1`] = `
           aria-controls="popover-content-:r8:"
           aria-expanded="false"
           aria-haspopup="dialog"
-          aria-label="Change language"
+          aria-label="change language"
           class="chakra-button css-13zvu4r"
           id="popover-trigger-:r8:"
           type="button"

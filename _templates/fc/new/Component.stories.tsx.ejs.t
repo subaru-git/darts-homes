@@ -1,7 +1,6 @@
 ---
 to: src/components/<%= name %>/<%= name %>.stories.tsx
 ---
-/* eslint-disable import/named */
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import <%= name %> from './<%= name %>';

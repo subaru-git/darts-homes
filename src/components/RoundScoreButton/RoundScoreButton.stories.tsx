@@ -1,4 +1,3 @@
-/* eslint-disable import/named */
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import RoundScoreButton from './RoundScoreButton';
@@ -11,4 +10,13 @@ export default {
 const Template: ComponentStory<typeof RoundScoreButton> = (args) => <RoundScoreButton {...args} />;
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = {
+  isFinished: false,
+};
+
+export const Finished = Template.bind({});
+Finished.args = {
+  isFinished: true,
+  disabled: false,
+  result: 'Result',
+};
