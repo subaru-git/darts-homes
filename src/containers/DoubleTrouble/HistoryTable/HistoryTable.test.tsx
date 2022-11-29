@@ -1,14 +1,7 @@
-import { ChakraProvider } from '@chakra-ui/react';
-import { render } from '@testing-library/react';
 import CricketMarkUpHistoryTable from './HistoryTable';
-import { createMatchMedia } from '@/lib/TestUtils/MatchMediaMock';
+import { render } from '@/lib/TestUtils/RenderMock';
 
 test('should rendering', () => {
-  window.matchMedia = createMatchMedia(1100);
-  const { container } = render(
-    <ChakraProvider>
-      <CricketMarkUpHistoryTable history={[]} />
-    </ChakraProvider>,
-  );
+  const { container } = render(<CricketMarkUpHistoryTable history={[]} />);
   expect(container).toMatchSnapshot();
 });

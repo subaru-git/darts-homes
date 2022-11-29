@@ -1,5 +1,5 @@
-import { render } from '@testing-library/react';
 import CardView from './CardView';
+import { render } from '@/lib/TestUtils/RenderMock';
 
 test('should rendering', () => {
   const { container } = render(

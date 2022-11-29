@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React, { FC } from 'react';
 import {
   Alert,
   AlertDescription,
@@ -16,9 +16,7 @@ import {
   Tabs,
   useDisclosure,
 } from '@chakra-ui/react';
-import { useLiveQuery } from 'dexie-react-hooks';
 import HistoryImportExport from '../ImportExport';
-import Loading from '@/components/Loading';
 import AroundTheCompassHistoryTable from '@/containers/AroundTheCompass/HistoryTable';
 import BullyBullyHistoryTable from '@/containers/BullyBully/HistoryTable';
 import CricketMarkUpHistoryTable from '@/containers/CricketMarkUp/HistoryTable';
@@ -33,15 +31,16 @@ import TonsUpHistoryTable from '@/containers/TonsUp/HistoryTable';
 import TopsAndTensHistoryTable from '@/containers/TopsAndTens/HistoryTable';
 import TreblesForShowHistoryTable from '@/containers/TreblesForShow/HistoryTable';
 import TwoDartCombinationsHistoryTable from '@/containers/TwoDartCombinations/HistoryTable';
-import { db } from '@/db/db';
+import { Queries } from '@/db/Queries';
 import useLocale from '@/hooks/locale';
 
-const HistoryBoard: FC = () => {
-  const [loading, setLoading] = useState(true);
-  const gameHistory = useLiveQuery(async () => querier(setLoading)) || initialQuery;
+type HistoryBoardProps = {
+  history: Queries;
+};
+
+const HistoryBoard: FC<HistoryBoardProps> = ({ history }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { t } = useLocale();
-  if (loading) return <Loading />;
   return (
     <Box p={{ base: 1, md: 4 }}>
       <Collapse in={isOpen} animateOpacity>
@@ -79,46 +78,46 @@ const HistoryBoard: FC = () => {
         </TabList>
         <TabPanels>
           <TabPanel aria-label='cricket mark up history'>
-            <CricketMarkUpHistoryTable history={gameHistory.cricketMarkUp} />
+            <CricketMarkUpHistoryTable history={history.cricketMarkUp} />
           </TabPanel>
           <TabPanel aria-label="eagle's eye history">
-            <EaglesEyeHistoryTable history={gameHistory.eaglesEye} />
+            <EaglesEyeHistoryTable history={history.eaglesEye} />
           </TabPanel>
           <TabPanel aria-label='double trouble history'>
-            <DoubleTroubleHistoryTable history={gameHistory.doubleTrouble} />
+            <DoubleTroubleHistoryTable history={history.doubleTrouble} />
           </TabPanel>
           <TabPanel aria-label='sweet 16 history'>
-            <Sweet16HistoryTable history={gameHistory.sweet16} />
+            <Sweet16HistoryTable history={history.sweet16} />
           </TabPanel>
           <TabPanel aria-label='tops and tens history'>
-            <TopsAndTensHistoryTable history={gameHistory.topsAndTens} />
+            <TopsAndTensHistoryTable history={history.topsAndTens} />
           </TabPanel>
           <TabPanel aria-label='two dart combinations history'>
-            <TwoDartCombinationsHistoryTable history={gameHistory.twoDartCombinations} />
+            <TwoDartCombinationsHistoryTable history={history.twoDartCombinations} />
           </TabPanel>
           <TabPanel aria-label='around the compass history'>
-            <AroundTheCompassHistoryTable history={gameHistory.aroundTheCompass} />
+            <AroundTheCompassHistoryTable history={history.aroundTheCompass} />
           </TabPanel>
           <TabPanel aria-label='tons up history'>
-            <TonsUpHistoryTable history={gameHistory.tonsUp} />
+            <TonsUpHistoryTable history={history.tonsUp} />
           </TabPanel>
           <TabPanel aria-label='route 64 history'>
-            <Route64HistoryTable history={gameHistory.route64} />
+            <Route64HistoryTable history={history.route64} />
           </TabPanel>
           <TabPanel aria-label='eighty threw history'>
-            <EightyThrewHistoryTable history={gameHistory.eightyThrew} />
+            <EightyThrewHistoryTable history={history.eightyThrew} />
           </TabPanel>
           <TabPanel aria-label='shanghai nights history'>
-            <ShanghaiNightsHistoryTable history={gameHistory.shanghaiNights} />
+            <ShanghaiNightsHistoryTable history={history.shanghaiNights} />
           </TabPanel>
           <TabPanel aria-label='switch hitter history'>
-            <SwitchHitterHistoryTable history={gameHistory.switchHitter} />
+            <SwitchHitterHistoryTable history={history.switchHitter} />
           </TabPanel>
           <TabPanel aria-label='bully bully history'>
-            <BullyBullyHistoryTable history={gameHistory.bullyBully} />
+            <BullyBullyHistoryTable history={history.bullyBully} />
           </TabPanel>
           <TabPanel aria-label='trebles for show history'>
-            <TreblesForShowHistoryTable history={gameHistory.treblesForShow} />
+            <TreblesForShowHistoryTable history={history.treblesForShow} />
           </TabPanel>
         </TabPanels>
       </Tabs>
@@ -126,60 +125,4 @@ const HistoryBoard: FC = () => {
   );
 };
 
-const querier = async (setLoading: (isLoading: boolean) => void) => {
-  const cricketMarkUp = await db.cricketMarkUpResult.toCollection().reverse().sortBy('playedAt');
-  const eaglesEye = await db.eaglesEyeResult.toCollection().reverse().sortBy('playedAt');
-  const doubleTrouble = await db.doubleTroubleResult.toCollection().reverse().sortBy('playedAt');
-  const sweet16 = await db.sweet16Result.toCollection().reverse().sortBy('playedAt');
-  const topsAndTens = await db.topsAndTensResult.toCollection().reverse().sortBy('playedAt');
-  const twoDartCombinations = await db.twoDartCombinationsResult
-    .toCollection()
-    .reverse()
-    .sortBy('playedAt');
-  const aroundTheCompass = await db.aroundTheCompassResult
-    .toCollection()
-    .reverse()
-    .sortBy('playedAt');
-  const tonsUp = await db.tonsUpResult.toCollection().reverse().sortBy('playedAt');
-  setLoading(false);
-  const route64 = await db.route64Result.toCollection().reverse().sortBy('playedAt');
-  const eightyThrew = await db.eightyThrewResult.toCollection().reverse().sortBy('playedAt');
-  const shanghaiNights = await db.shanghaiNightsResult.toCollection().reverse().sortBy('playedAt');
-  const switchHitter = await db.switchHitterResult.toCollection().reverse().sortBy('playedAt');
-  const bullyBully = await db.bullyBullyResult.toCollection().reverse().sortBy('playedAt');
-  const treblesForShow = await db.treblesForShowResult.toCollection().reverse().sortBy('playedAt');
-  return {
-    cricketMarkUp,
-    eaglesEye,
-    doubleTrouble,
-    sweet16,
-    topsAndTens,
-    twoDartCombinations,
-    aroundTheCompass,
-    tonsUp,
-    route64,
-    eightyThrew,
-    shanghaiNights,
-    switchHitter,
-    bullyBully,
-    treblesForShow,
-  };
-};
-
-const initialQuery = {
-  cricketMarkUp: [],
-  eaglesEye: [],
-  doubleTrouble: [],
-  sweet16: [],
-  topsAndTens: [],
-  twoDartCombinations: [],
-  aroundTheCompass: [],
-  tonsUp: [],
-  route64: [],
-  eightyThrew: [],
-  shanghaiNights: [],
-  switchHitter: [],
-  bullyBully: [],
-  treblesForShow: [],
-};
 export default HistoryBoard;

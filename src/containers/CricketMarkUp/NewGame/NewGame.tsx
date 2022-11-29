@@ -12,10 +12,10 @@ import NewGameModal from '@/components/NewGameModal';
 type NewGameProps = {
   onNewGame: (targetCount: number) => void;
   currentTargetCount: number;
-  isFinished: boolean;
+  isFinished?: boolean;
 };
 
-const NewGame: FC<NewGameProps> = ({ onNewGame, currentTargetCount, isFinished }) => {
+const NewGame: FC<NewGameProps> = ({ onNewGame, currentTargetCount, isFinished = false }) => {
   const [targetCount, setTargetCount] = useState(currentTargetCount);
   const format = (n: number) =>
     n === 10 ? `${n} - (recommended)` : n === currentTargetCount ? `${n} - (current)` : n;

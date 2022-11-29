@@ -4,11 +4,14 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import NewGame from './NewGame';
 
 export default {
-  title: 'Components/NewGame',
+  title: 'Containers/CricketMarkUp/NewGame',
   component: NewGame,
 } as ComponentMeta<typeof NewGame>;
 
 const Template: ComponentStory<typeof NewGame> = (args) => <NewGame {...args} />;
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = {
+  currentTargetCount: 10,
+  isFinished: false,
+};

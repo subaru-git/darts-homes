@@ -1,48 +1,53 @@
 import React, { FC } from 'react';
-import { Box, Flex, Grid, GridItem } from '@chakra-ui/react';
+import { Box, Text, Flex, Grid, GridItem, useBreakpointValue } from '@chakra-ui/react';
 import Board from './Board';
-import Description from './Description';
 import NewGame from './NewGame';
 import CameraView from '@/components/CameraView';
 import CountButtons from '@/components/CountButtons';
-import Footer from '@/components/Footer';
-import Loading from '@/components/Loading';
-import NavigationBar from '@/components/NavigationBar';
+import DescriptionModal from '@/components/DescriptionModal';
 import RoundBoard from '@/components/RoundBoard';
 import RoundScore from '@/components/RoundScore';
 import TargetBoard from '@/components/TargetBoard';
 import { useCricketMarkUpGame, useCricketMarkUpGameSet } from '@/contexts/CricketMarkUpGameContext';
 import { db } from '@/db/db';
+import useLocale from '@/hooks/locale';
 import CricketMarkUpGame from '@/lib/CricketMarkUpGame/CricketMarkUpGame';
 import { saveToDB } from '@/lib/GameHistoryManager/GameHistory';
+import { updateObject } from '@/lib/Helper/updateObjectState';
+import MainTemplate from '@/templates/MainTemplate';
 
 const Main: FC = () => {
   const game = useCricketMarkUpGame();
   const setGame = useCricketMarkUpGameSet();
+  const isMd = useBreakpointValue({ base: false, md: true });
+  const { t } = useLocale();
+  if (!game) return <MainTemplate label={'cricket-mark-up-main'} isLoading />;
   return (
-    <div data-cy='cricket-mark-up-main'>
-      <NavigationBar />
-      {!game ? (
-        <Loading />
+    <MainTemplate label='cricket-mark-up-main'>
+      {isMd ? (
+        <DesktopMain
+          game={game}
+          setGame={setGame}
+          description={t.games.cricketmarkup.description.join('\n')}
+        />
       ) : (
-        <>
-          <Box display={{ base: 'none', md: 'block' }}>
-            <DesktopMain game={game} setGame={setGame} />
-          </Box>
-          <Box display={{ base: 'block', md: 'none' }}>
-            <MobileMain game={game} setGame={setGame} />
-          </Box>
-        </>
+        <MobileMain
+          game={game}
+          setGame={setGame}
+          description={t.games.cricketmarkup.description.join('\n')}
+        />
       )}
-      <Footer />
-    </div>
+    </MainTemplate>
   );
 };
 
-const DesktopMain: FC<{
+type MainProps = {
   game: CricketMarkUpGame;
   setGame: (game: CricketMarkUpGame) => void;
-}> = ({ game, setGame }) => {
+  description?: string;
+};
+
+const DesktopMain: FC<MainProps> = ({ game, setGame, description }) => {
   return (
     <div>
       <Flex justifyContent='space-between'>
@@ -55,7 +60,10 @@ const DesktopMain: FC<{
           isFinished={game.isFinished()}
         />
         <Flex gap={2}>
-          <Description />
+          <DescriptionModal
+            header={'Cricket Mark-Up'}
+            description={<Text whiteSpace='pre-wrap'>{description}</Text>}
+          />
           <CameraView />
         </Flex>
       </Flex>
@@ -89,25 +97,7 @@ const DesktopMain: FC<{
               </Grid>
             </GridItem>
             <GridItem>
-              <RoundScore
-                scores={game.getRoundScore()}
-                onClear={() => {
-                  const g = Object.assign(new CricketMarkUpGame(10), game);
-                  g.removeScore();
-                  setGame(g);
-                }}
-                onRoundChange={() => {
-                  const g = Object.assign(new CricketMarkUpGame(10), game);
-                  g.roundChange();
-                  setGame(g);
-                }}
-                isFinished={game.isFinished()}
-                onRoundOver={() => {
-                  saveToDB(game.getGameResult(), db.cricketMarkUpResult);
-                  setGame(new CricketMarkUpGame(game.getTargetCount()));
-                }}
-                result={getResult(game)}
-              />
+              <MyRoundScore game={game} setGame={setGame} />
             </GridItem>
             <GridItem>
               <RoundBoard score={game.getRoundsScore()} />
@@ -116,13 +106,10 @@ const DesktopMain: FC<{
         </GridItem>
         <GridItem pt={4}>
           <CountButtons
-            onCount={(n) => {
-              const g = Object.assign(new CricketMarkUpGame(10), game);
-              g.addScore(n);
-              setGame(g);
-            }}
+            onCount={(n) => updateObject(game, new CricketMarkUpGame(10), 'addScore', setGame, n)}
             buttons={[20, 19, 18, 17, 16, 15]}
             disabled={game.getRoundScore().length >= 3 || game.isFinished()}
+            bull
             other
           />
         </GridItem>
@@ -131,10 +118,7 @@ const DesktopMain: FC<{
   );
 };
 
-const MobileMain: FC<{
-  game: CricketMarkUpGame;
-  setGame: (game: CricketMarkUpGame) => void;
-}> = ({ game, setGame }) => {
+const MobileMain: FC<MainProps> = ({ game, setGame, description }) => {
   return (
     <Grid gap={4} justifyItems='center'>
       <GridItem w='100%'>
@@ -161,7 +145,10 @@ const MobileMain: FC<{
             <TargetBoard target={game.getCount().toString()} message='Count' size='sm' />
           </Flex>
           <Flex direction='column'>
-            <Description />
+            <DescriptionModal
+              header={'Cricket Mark-Up'}
+              description={<Text whiteSpace='pre-wrap'>{description}</Text>}
+            />
             <CameraView />
           </Flex>
         </Flex>
@@ -169,32 +156,10 @@ const MobileMain: FC<{
       <Box maxH={250} overflow='scroll'>
         <Board scores={game.getNumberOfCount()} />
       </Box>
-      <RoundScore
-        scores={game.getRoundScore()}
-        onClear={() => {
-          const g = Object.assign(new CricketMarkUpGame(10), game);
-          g.removeScore();
-          setGame(g);
-        }}
-        onRoundChange={() => {
-          const g = Object.assign(new CricketMarkUpGame(10), game);
-          g.roundChange();
-          setGame(g);
-        }}
-        isFinished={game.isFinished()}
-        onRoundOver={() => {
-          saveToDB(game.getGameResult(), db.cricketMarkUpResult);
-          setGame(new CricketMarkUpGame(game.getTargetCount()));
-        }}
-        result={getResult(game)}
-      />
+      <MyRoundScore game={game} setGame={setGame} />
       <Box w='100%'>
         <CountButtons
-          onCount={(n) => {
-            const g = Object.assign(new CricketMarkUpGame(10), game);
-            g.addScore(n);
-            setGame(g);
-          }}
+          onCount={(n) => updateObject(game, new CricketMarkUpGame(10), 'addScore', setGame, n)}
           buttons={[parseInt(game.getCurrentTarget())]}
           bull={game.getCurrentTarget() === 'S-BULL'}
           disabled={game.getRoundScore().length >= 3 || game.isFinished()}
@@ -205,6 +170,20 @@ const MobileMain: FC<{
     </Grid>
   );
 };
+
+const MyRoundScore: FC<MainProps> = ({ game, setGame }) => (
+  <RoundScore
+    scores={game.getRoundScore()}
+    onClear={() => updateObject(game, new CricketMarkUpGame(10), 'removeScore', setGame)}
+    onRoundChange={() => updateObject(game, new CricketMarkUpGame(10), 'roundChange', setGame)}
+    isFinished={game.isFinished()}
+    onRoundOver={() => {
+      saveToDB(game.getGameResult(), db.cricketMarkUpResult);
+      setGame(new CricketMarkUpGame(10));
+    }}
+    result={getResult(game)}
+  />
+);
 
 const getResult = (game: CricketMarkUpGame) =>
   `Total: ${game.getGameResult().result}\n${game

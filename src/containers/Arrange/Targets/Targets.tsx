@@ -4,10 +4,10 @@ import { Grid, Text } from '@chakra-ui/react';
 type TargetsProps = {
   count: number;
   targets: number[];
-  isFinished: boolean;
+  isFinished?: boolean;
 };
 
-const Targets: FC<TargetsProps> = ({ count, targets, isFinished }) => {
+const Targets: FC<TargetsProps> = ({ count, targets, isFinished = false }) => {
   const rest = () => {
     const t = isFinished ? targets : targets.slice(0, -1);
     return new Array(count).fill(' - ').map((_, i) => t[i] ?? '-');

@@ -4,7 +4,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import List from './List';
 
 export default {
-  title: 'Components/List',
+  title: 'Containers/Games/List',
   component: List,
 } as ComponentMeta<typeof List>;
 

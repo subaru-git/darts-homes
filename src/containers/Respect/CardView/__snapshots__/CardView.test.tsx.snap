@@ -3,28 +3,28 @@
 exports[`should rendering 1`] = `
 <div>
   <div
-    class="css-qq6tp8"
+    class="css-15wiczr"
   >
     <div
       class="css-0"
     >
       <h2
-        class="chakra-heading css-b0qdn7"
+        class="chakra-heading css-1uy00aa"
       >
         Companies
       </h2>
       <div
-        class="css-1ywof4l"
+        class="css-18z2gjh"
       >
         <div>
           <div
-            class="css-1m3k68e"
+            class="css-18xfez7"
           >
             <div
               class="css-gmuwbf"
             >
               <a
-                class="chakra-link css-0"
+                class="chakra-link css-spn4bz"
                 href="url"
                 rel="noopener"
                 target="_blank"
@@ -37,12 +37,12 @@ exports[`should rendering 1`] = `
               </a>
             </div>
             <h3
-              class="chakra-heading css-o5g2qp"
+              class="chakra-heading css-1mbs55a"
             >
               title
             </h3>
             <p
-              class="chakra-text css-4h8fht"
+              class="chakra-text css-1ykf6wi"
             >
               description
             </p>
@@ -51,29 +51,33 @@ exports[`should rendering 1`] = `
       </div>
     </div>
     <div
-      class="css-37urdo"
+      class="css-1rwovhe"
     >
       <h2
-        class="chakra-heading css-b0qdn7"
+        class="chakra-heading css-1uy00aa"
       >
         Professional
       </h2>
       <div
-        class="css-1ywof4l"
+        class="css-18z2gjh"
       />
     </div>
     <div
-      class="css-37urdo"
+      class="css-1rwovhe"
     >
       <h2
-        class="chakra-heading css-b0qdn7"
+        class="chakra-heading css-1uy00aa"
       >
         Youtube
       </h2>
       <div
-        class="css-1ywof4l"
+        class="css-18z2gjh"
       />
     </div>
   </div>
+  <span
+    hidden=""
+    id="__chakra_env"
+  />
 </div>
 `;

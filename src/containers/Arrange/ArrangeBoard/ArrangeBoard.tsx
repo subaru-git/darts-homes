@@ -9,8 +9,8 @@ import { getLandingPosition } from '@/lib/Helper/Landing';
 type ArrangeBoardProps = {
   onCount: (count: point) => void;
   range: number;
-  simulation: boolean;
-  disabled: boolean;
+  simulation?: boolean;
+  disabled?: boolean;
 };
 
 type Target = {
@@ -20,7 +20,12 @@ type Target = {
 };
 const initialTarget: Target = { x: 0, y: 0, visible: 'hidden' };
 
-const ArrangeBoard: FC<ArrangeBoardProps> = ({ onCount, range, simulation, disabled }) => {
+const ArrangeBoard: FC<ArrangeBoardProps> = ({
+  onCount,
+  range,
+  simulation = false,
+  disabled = false,
+}) => {
   const base = useRef<HTMLDivElement>(null);
   const [aim, setAim] = useState<Target>(initialTarget);
   const [landing, setLanding] = useState<Target>(initialTarget);

@@ -1,7 +1,5 @@
-import { render } from '@testing-library/react';
 import List from './List';
-
-jest.mock('next/router', () => ({ useRouter: jest.fn().mockReturnValue({ locale: 'en' }) }));
+import { render } from '@/lib/TestUtils/RenderMock';
 
 test('should rendering', () => {
   const { container } = render(<List />);

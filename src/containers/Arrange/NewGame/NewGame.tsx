@@ -18,11 +18,11 @@ import useLocale from '@/hooks/locale';
 
 type NewGameProps = {
   onNewGame: (settings: ArrangeGameSettings) => void;
-  isFinished: boolean;
   currentSettings: ArrangeGameSettings;
+  isFinished?: boolean;
 };
 
-const NewGame: FC<NewGameProps> = ({ onNewGame, isFinished, currentSettings }) => {
+const NewGame: FC<NewGameProps> = ({ onNewGame, currentSettings, isFinished = false }) => {
   const [settings, setSettings] = useState<ArrangeGameSettings>(currentSettings);
   const { t } = useLocale();
   const defaultHelp = { title: '', hint: { header: '', body: '' } };
