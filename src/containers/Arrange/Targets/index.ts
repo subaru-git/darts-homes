@@ -1,1 +1,1 @@
-export { default } from './Targets'
+export { default } from './Targets';

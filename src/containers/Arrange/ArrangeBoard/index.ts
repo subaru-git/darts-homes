@@ -1,1 +1,1 @@
-export { default } from './ArrangeBoard'
+export { default } from './ArrangeBoard';
