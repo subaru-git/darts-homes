@@ -26,4 +26,4 @@ test('should rendering', async () => {
   await user.click(screen.getByRole('button', { name: 'round over' }));
   expect(screen.getByText(/Total: 300/i)).toBeInTheDocument();
   expect(container).toMatchSnapshot();
-}, 30000);
+}, 60000);
