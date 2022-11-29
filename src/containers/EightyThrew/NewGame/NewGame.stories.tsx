@@ -11,4 +11,7 @@ export default {
 const Template: ComponentStory<typeof NewGame> = (args) => <NewGame {...args} />;
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = {
+  currentRound: 20,
+  isFinished: false,
+};

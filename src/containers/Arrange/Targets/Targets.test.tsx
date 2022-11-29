@@ -1,7 +1,7 @@
-import { render } from '@testing-library/react';
 import Targets from './Targets';
+import { render } from '@/lib/TestUtils/RenderMock';
 
 test('should rendering', () => {
-  const { container } = render(<Targets count={8} targets={[]} isFinished={false} />);
+  const { container } = render(<Targets count={8} targets={[]} />);
   expect(container).toMatchSnapshot();
 });

@@ -4,11 +4,14 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import ArrangeBoard from './ArrangeBoard';
 
 export default {
-  title: 'Components/ArrangeBoard',
+  title: 'Containers/Arrange/ArrangeBoard',
   component: ArrangeBoard,
 } as ComponentMeta<typeof ArrangeBoard>;
 
 const Template: ComponentStory<typeof ArrangeBoard> = (args) => <ArrangeBoard {...args} />;
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = {
+  range: 44,
+  simulation: true,
+};

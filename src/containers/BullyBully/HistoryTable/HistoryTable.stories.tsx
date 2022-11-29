@@ -11,4 +11,17 @@ export default {
 const Template: ComponentStory<typeof HistoryTable> = (args) => <HistoryTable {...args} />;
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = {
+  history: [
+    {
+      result: 21,
+      scores: [
+        ['D-BULL', 'S-BULL', '0'],
+        ['D-BULL', 'S-BULL', '0'],
+        ['D-BULL', 'S-BULL', '0'],
+      ],
+      round: 3,
+      playedAt: '2022-11-16T01:44:01.238Z',
+    },
+  ],
+};

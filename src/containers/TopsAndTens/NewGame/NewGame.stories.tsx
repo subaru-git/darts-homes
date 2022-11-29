@@ -4,11 +4,14 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import NewGame from './NewGame';
 
 export default {
-  title: 'Containers/DoubleTrouble/NewGame',
+  title: 'Containers/TopsAndTens/NewGame',
   component: NewGame,
 } as ComponentMeta<typeof NewGame>;
 
 const Template: ComponentStory<typeof NewGame> = (args) => <NewGame {...args} />;
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = {
+  currentRound: 20,
+  isFinished: false,
+};

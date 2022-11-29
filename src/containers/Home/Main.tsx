@@ -4,13 +4,11 @@ import Description from './Description';
 import History from './History';
 import Respect from './Respect';
 import Title from './Title';
-import Footer from '@/components/Footer';
-import NavigationBar from '@/components/NavigationBar';
+import MainTemplate from '@/templates/MainTemplate';
 
 const Main: FC = () => {
   return (
-    <div data-cy='home-main'>
-      <NavigationBar />
+    <MainTemplate label='home-main'>
       <Title />
       <Grid
         templateRows='repeat(3, auto)'
@@ -23,8 +21,7 @@ const Main: FC = () => {
         <History />
         <Respect />
       </Grid>
-      <Footer />
-    </div>
+    </MainTemplate>
   );
 };
 

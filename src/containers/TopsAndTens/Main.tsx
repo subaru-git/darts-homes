@@ -1,49 +1,54 @@
 import React, { FC } from 'react';
-import { Box, Flex } from '@chakra-ui/react';
-import Description from './Description';
+import { Box, Text, Flex, useBreakpointValue } from '@chakra-ui/react';
 import NewGame from './NewGame';
 import CameraView from '@/components/CameraView';
 import CountButtons from '@/components/CountButtons';
-import Footer from '@/components/Footer';
-import Loading from '@/components/Loading';
-import NavigationBar from '@/components/NavigationBar';
+import DescriptionModal from '@/components/DescriptionModal';
 import RoundBoard from '@/components/RoundBoard';
 import RoundScore from '@/components/RoundScore';
 import TargetBoard from '@/components/TargetBoard';
 import { useTopsAndTensGame, useTopsAndTensGameSet } from '@/contexts/TopsAndTensContext';
 import { db } from '@/db/db';
+import useLocale from '@/hooks/locale';
 import { saveToDB } from '@/lib/GameHistoryManager/GameHistory';
+import { updateObject } from '@/lib/Helper/updateObjectState';
 import TopsAndTensGame from '@/lib/TopsAndTensGame/TopsAndTensGame';
+import MainTemplate from '@/templates/MainTemplate';
 
 const Main: FC = () => {
   const game = useTopsAndTensGame();
   const setGame = useTopsAndTensGameSet();
+  const isMd = useBreakpointValue({ base: false, md: true });
+  const { t } = useLocale();
+  if (!game) return <MainTemplate label={'tops-and-tens-main'} isLoading />;
   return (
-    <div data-cy='tops-and-tens-main'>
-      <NavigationBar />
-      {!game ? (
-        <Loading />
+    <MainTemplate label='tops-and-tens-main'>
+      {isMd ? (
+        <DesktopMain
+          game={game}
+          setGame={setGame}
+          description={t.games.topsandtens.description.join('\n')}
+        />
       ) : (
-        <>
-          <Box display={{ base: 'none', md: 'block' }}>
-            <DesktopMain game={game} setGame={setGame} />
-          </Box>
-          <Box display={{ base: 'block', md: 'none' }}>
-            <MobileMain game={game} setGame={setGame} />
-          </Box>
-        </>
+        <MobileMain
+          game={game}
+          setGame={setGame}
+          description={t.games.topsandtens.description.join('\n')}
+        />
       )}
-      <Footer />
-    </div>
+    </MainTemplate>
   );
 };
 
-const DesktopMain: FC<{ game: TopsAndTensGame; setGame: (game: TopsAndTensGame) => void }> = ({
-  game,
-  setGame,
-}) => {
+type MainProps = {
+  game: TopsAndTensGame;
+  setGame: (game: TopsAndTensGame) => void;
+  description?: string;
+};
+
+const DesktopMain: FC<MainProps> = ({ game, setGame, description }) => {
   return (
-    <div>
+    <>
       <Flex justifyContent='space-between' alignItems='center'>
         <NewGame
           onNewGame={(targetRound) => setGame(new TopsAndTensGame(targetRound))}
@@ -51,7 +56,10 @@ const DesktopMain: FC<{ game: TopsAndTensGame; setGame: (game: TopsAndTensGame) 
           currentRound={game.getTargetRound()}
         />
         <Flex gap={2}>
-          <Description />
+          <DescriptionModal
+            header={'Tops And Tens'}
+            description={<Text whiteSpace='pre-wrap'>{description}</Text>}
+          />
           <CameraView />
         </Flex>
       </Flex>
@@ -64,35 +72,12 @@ const DesktopMain: FC<{ game: TopsAndTensGame; setGame: (game: TopsAndTensGame) 
             />
             <TargetBoard message='Score' target={game.getTotalScore().toString()} size='sm' />
           </Flex>
-          <RoundScore
-            scores={game.getRoundScore()}
-            onClear={() => {
-              const g = Object.assign(new TopsAndTensGame(20), game);
-              g.removeScore();
-              setGame(g);
-            }}
-            onRoundChange={() => {
-              const g = Object.assign(new TopsAndTensGame(20), game);
-              g.roundChange();
-              setGame(g);
-            }}
-            isFinished={game.isFinish()}
-            onRoundOver={() => {
-              saveToDB(game.getGameResult(), db.topsAndTensResult);
-              setGame(new TopsAndTensGame(game.getTargetRound()));
-            }}
-            result={getResult(game)}
-          />
+          <MyRoundScore game={game} setGame={setGame} />
         </Box>
         <Box minWidth={250}>
           <CountButtons
             buttons={[20, 10, 5]}
-            onCount={(n) => {
-              const g = Object.assign(new TopsAndTensGame(20), game);
-              g.addScore(n);
-              setGame(g);
-            }}
-            bull={false}
+            onCount={(n) => updateObject(game, new TopsAndTensGame(20), 'addScore', setGame, n)}
             other
           />
         </Box>
@@ -100,14 +85,11 @@ const DesktopMain: FC<{ game: TopsAndTensGame; setGame: (game: TopsAndTensGame) 
       <Box p={4}>
         <RoundBoard score={game.getScore()} />
       </Box>
-    </div>
+    </>
   );
 };
 
-const MobileMain: FC<{ game: TopsAndTensGame; setGame: (game: TopsAndTensGame) => void }> = ({
-  game,
-  setGame,
-}) => {
+const MobileMain: FC<MainProps> = ({ game, setGame, description }) => {
   return (
     <Flex direction='column' gap={4}>
       <Flex justifyContent='space-between' width='100%'>
@@ -124,40 +106,20 @@ const MobileMain: FC<{ game: TopsAndTensGame; setGame: (game: TopsAndTensGame) =
           <TargetBoard message='Score' target={game.getTotalScore().toString()} size='sm' />
         </Flex>
         <Flex direction='column'>
-          <Description />
+          <DescriptionModal
+            header={'Tops And Tens'}
+            description={<Text whiteSpace='pre-wrap'>{description}</Text>}
+          />
           <CameraView />
         </Flex>
       </Flex>
       <Box px={2}>
-        <RoundScore
-          scores={game.getRoundScore()}
-          onClear={() => {
-            const g = Object.assign(new TopsAndTensGame(20), game);
-            g.removeScore();
-            setGame(g);
-          }}
-          onRoundChange={() => {
-            const g = Object.assign(new TopsAndTensGame(20), game);
-            g.roundChange();
-            setGame(g);
-          }}
-          isFinished={game.isFinish()}
-          onRoundOver={() => {
-            saveToDB(game.getGameResult(), db.topsAndTensResult);
-            setGame(new TopsAndTensGame(game.getTargetRound()));
-          }}
-          result={getResult(game)}
-        />
+        <MyRoundScore game={game} setGame={setGame} />
       </Box>
       <Box px={2}>
         <CountButtons
           buttons={[20, 10, 5]}
-          onCount={(n) => {
-            const g = Object.assign(new TopsAndTensGame(20), game);
-            g.addScore(n);
-            setGame(g);
-          }}
-          bull={false}
+          onCount={(n) => updateObject(game, new TopsAndTensGame(20), 'addScore', setGame, n)}
           other
         />
       </Box>
@@ -167,6 +129,20 @@ const MobileMain: FC<{ game: TopsAndTensGame; setGame: (game: TopsAndTensGame) =
     </Flex>
   );
 };
+
+const MyRoundScore: FC<MainProps> = ({ game, setGame }) => (
+  <RoundScore
+    scores={game.getRoundScore()}
+    onClear={() => updateObject(game, new TopsAndTensGame(20), 'removeScore', setGame)}
+    onRoundChange={() => updateObject(game, new TopsAndTensGame(20), 'roundChange', setGame)}
+    isFinished={game.isFinish()}
+    onRoundOver={() => {
+      saveToDB(game.getGameResult(), db.topsAndTensResult);
+      setGame(new TopsAndTensGame(20));
+    }}
+    result={getResult(game)}
+  />
+);
 
 const getResult = (game: TopsAndTensGame) =>
   `Round: ${game.getTargetRound()}\nTotal: ${game.getGameResult().result}`;

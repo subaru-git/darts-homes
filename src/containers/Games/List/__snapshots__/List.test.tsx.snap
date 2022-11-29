@@ -3,28 +3,28 @@
 exports[`should rendering 1`] = `
 <div>
   <div
-    class="css-2rlxtj"
+    class="css-h94677"
   >
     <h2
-      class="chakra-heading css-b0qdn7"
+      class="chakra-heading css-yl7i8f"
     >
       Games
     </h2>
     <div
-      class="css-8egxip"
+      class="css-1h2orqn"
     >
       <div>
         <div
-          class="css-1m3k68e"
+          class="css-18xfez7"
         >
           <div
-            class="css-1kkt86i"
+            class="css-1811skr"
           >
             <a
               href="/eagleseye"
             >
               <h3
-                class="chakra-heading css-109ke3y"
+                class="chakra-heading css-17drl7a"
               >
                 Eagle's Eye
               </h3>
@@ -33,18 +33,18 @@ exports[`should rendering 1`] = `
               class="chakra-stack css-84zodg"
             >
               <span
-                class="css-wtkao4"
+                class="css-fc73fl"
               >
                 BULL
               </span>
               <span
-                class="css-15gkbgz"
+                class="css-1xuzaeu"
               >
                 count up
               </span>
             </div>
             <p
-              class="chakra-text css-1bx2ap4"
+              class="chakra-text css-12mgru9"
             >
               It is a count-up where only BULLs are added.
 BULL is separate.
@@ -54,16 +54,16 @@ BULL is separate.
       </div>
       <div>
         <div
-          class="css-1m3k68e"
+          class="css-18xfez7"
         >
           <div
-            class="css-1kkt86i"
+            class="css-1811skr"
           >
             <a
               href="/cricketmarkup"
             >
               <h3
-                class="chakra-heading css-109ke3y"
+                class="chakra-heading css-17drl7a"
               >
                 Cricket Mark-Up
               </h3>
@@ -72,18 +72,18 @@ BULL is separate.
               class="chakra-stack css-84zodg"
             >
               <span
-                class="css-1dl6jat"
+                class="css-njsj3h"
               >
                 cricket
               </span>
               <span
-                class="css-15gkbgz"
+                class="css-1xuzaeu"
               >
                 count up
               </span>
             </div>
             <p
-              class="chakra-text css-1bx2ap4"
+              class="chakra-text css-12mgru9"
             >
               This game was introduced by "Kikuchi Yamaguchi."
 First, Setting target count (recommended 10 times)
@@ -95,16 +95,16 @@ For more information, please watch this video.
       </div>
       <div>
         <div
-          class="css-1m3k68e"
+          class="css-18xfez7"
         >
           <div
-            class="css-1kkt86i"
+            class="css-1811skr"
           >
             <a
               href="/doubletrouble"
             >
               <h3
-                class="chakra-heading css-109ke3y"
+                class="chakra-heading css-17drl7a"
               >
                 Double Trouble
               </h3>
@@ -113,18 +113,18 @@ For more information, please watch this video.
               class="chakra-stack css-84zodg"
             >
               <span
-                class="css-18jxp7z"
+                class="css-1a3nkjg"
               >
                 double
               </span>
               <span
-                class="css-15gkbgz"
+                class="css-1xuzaeu"
               >
                 count up
               </span>
             </div>
             <p
-              class="chakra-text css-1bx2ap4"
+              class="chakra-text css-12mgru9"
             >
               You throw three darts at each double in turn, i.e. three darts at double one, three at double two etc through to double top.
 Receive five points for every double you hit. 15 points available every 3darts; 300 overall.
@@ -134,16 +134,16 @@ Receive five points for every double you hit. 15 points available every 3darts; 
       </div>
       <div>
         <div
-          class="css-1m3k68e"
+          class="css-18xfez7"
         >
           <div
-            class="css-1kkt86i"
+            class="css-1811skr"
           >
             <a
               href="/sweet16"
             >
               <h3
-                class="chakra-heading css-109ke3y"
+                class="chakra-heading css-17drl7a"
               >
                 Sweet 16
               </h3>
@@ -152,18 +152,18 @@ Receive five points for every double you hit. 15 points available every 3darts; 
               class="chakra-stack css-84zodg"
             >
               <span
-                class="css-18jxp7z"
+                class="css-1a3nkjg"
               >
                 double
               </span>
               <span
-                class="css-jd4vf8"
+                class="css-1npzaxy"
               >
                 finish
               </span>
             </div>
             <p
-              class="chakra-text css-1bx2ap4"
+              class="chakra-text css-12mgru9"
             >
               You have 20 visits to the oche needing 32, which you have to finish in three darts with any combination finishing on a double.
 Receive five points every time you finish 32, 15poits available every 3 darts; 300 overall.
@@ -173,16 +173,16 @@ Receive five points every time you finish 32, 15poits available every 3 darts; 3
       </div>
       <div>
         <div
-          class="css-1m3k68e"
+          class="css-18xfez7"
         >
           <div
-            class="css-1kkt86i"
+            class="css-1811skr"
           >
             <a
               href="/topsandtens"
             >
               <h3
-                class="chakra-heading css-109ke3y"
+                class="chakra-heading css-17drl7a"
               >
                 Tops and Tens
               </h3>
@@ -191,18 +191,18 @@ Receive five points every time you finish 32, 15poits available every 3 darts; 3
               class="chakra-stack css-84zodg"
             >
               <span
-                class="css-18jxp7z"
+                class="css-1a3nkjg"
               >
                 double
               </span>
               <span
-                class="css-jd4vf8"
+                class="css-1npzaxy"
               >
                 finish
               </span>
             </div>
             <p
-              class="chakra-text css-1bx2ap4"
+              class="chakra-text css-12mgru9"
             >
               You have 20 visits to the oche needing 40, which you have to finish in three darts or less only on double top, double ten or double five.
 Receive five points every time you finish 40. 15 points available every 3darts, 300 overall.
@@ -212,16 +212,16 @@ Receive five points every time you finish 40. 15 points available every 3darts, 
       </div>
       <div>
         <div
-          class="css-1m3k68e"
+          class="css-18xfez7"
         >
           <div
-            class="css-1kkt86i"
+            class="css-1811skr"
           >
             <a
               href="/twodartcombinations"
             >
               <h3
-                class="chakra-heading css-109ke3y"
+                class="chakra-heading css-17drl7a"
               >
                 Two-Dart Combinations
               </h3>
@@ -230,18 +230,18 @@ Receive five points every time you finish 40. 15 points available every 3darts, 
               class="chakra-stack css-84zodg"
             >
               <span
-                class="css-18jxp7z"
+                class="css-1a3nkjg"
               >
                 double
               </span>
               <span
-                class="css-jd4vf8"
+                class="css-1npzaxy"
               >
                 finish
               </span>
             </div>
             <p
-              class="chakra-text css-1bx2ap4"
+              class="chakra-text css-12mgru9"
             >
               You have just three darts at each finish from 41-60, which you must finish on a double with any combination you wish.
 Receive 15 points for every finish you complete. 15 points available every 3 darts; 300 overall.
@@ -251,16 +251,16 @@ Receive 15 points for every finish you complete. 15 points available every 3 dar
       </div>
       <div>
         <div
-          class="css-1m3k68e"
+          class="css-18xfez7"
         >
           <div
-            class="css-1kkt86i"
+            class="css-1811skr"
           >
             <a
               href="/aroundthecompass"
             >
               <h3
-                class="chakra-heading css-109ke3y"
+                class="chakra-heading css-17drl7a"
               >
                 Around The Compass
               </h3>
@@ -269,18 +269,18 @@ Receive 15 points for every finish you complete. 15 points available every 3 dar
               class="chakra-stack css-84zodg"
             >
               <span
-                class="css-18jxp7z"
+                class="css-1a3nkjg"
               >
                 double
               </span>
               <span
-                class="css-jd4vf8"
+                class="css-1npzaxy"
               >
                 finish
               </span>
             </div>
             <p
-              class="chakra-text css-1bx2ap4"
+              class="chakra-text css-12mgru9"
             >
               You have 20 visits to finish 24 using any combination but always finishing on a double, Recieve five points every time you complete the finish.
 10point bonus for three double 12's (i.e. you get the double 12 first dart then follow it up with two more). 15 points available every 3 darts; 300 overall.
@@ -290,16 +290,16 @@ Receive 15 points for every finish you complete. 15 points available every 3 dar
       </div>
       <div>
         <div
-          class="css-1m3k68e"
+          class="css-18xfez7"
         >
           <div
-            class="css-1kkt86i"
+            class="css-1811skr"
           >
             <a
               href="/tonsup"
             >
               <h3
-                class="chakra-heading css-109ke3y"
+                class="chakra-heading css-17drl7a"
               >
                 Tons Up
               </h3>
@@ -308,18 +308,18 @@ Receive 15 points for every finish you complete. 15 points available every 3 dar
               class="chakra-stack css-84zodg"
             >
               <span
-                class="css-18jxp7z"
+                class="css-1a3nkjg"
               >
                 double
               </span>
               <span
-                class="css-jd4vf8"
+                class="css-1npzaxy"
               >
                 finish
               </span>
             </div>
             <p
-              class="chakra-text css-1bx2ap4"
+              class="chakra-text css-12mgru9"
             >
               You have 20 visits and your task is to finish 100 on a double using any combination as many times as possible.
 Receive ten points every time you complete the finish and a ten-point bonus if you complete the finish in just two darts (i.e. treble 20 and double top) so 20 points available every 3 darts; 400 overall.
@@ -329,16 +329,16 @@ Receive ten points every time you complete the finish and a ten-point bonus if y
       </div>
       <div>
         <div
-          class="css-1m3k68e"
+          class="css-18xfez7"
         >
           <div
-            class="css-1kkt86i"
+            class="css-1811skr"
           >
             <a
               href="/route64"
             >
               <h3
-                class="chakra-heading css-109ke3y"
+                class="chakra-heading css-17drl7a"
               >
                 Route 64
               </h3>
@@ -347,18 +347,18 @@ Receive ten points every time you complete the finish and a ten-point bonus if y
               class="chakra-stack css-84zodg"
             >
               <span
-                class="css-18jxp7z"
+                class="css-1a3nkjg"
               >
                 double
               </span>
               <span
-                class="css-jd4vf8"
+                class="css-1npzaxy"
               >
                 finish
               </span>
             </div>
             <p
-              class="chakra-text css-1bx2ap4"
+              class="chakra-text css-12mgru9"
             >
               You have 20 visits to the oche needing 64, which you have to finish in three darts using any combination you wish.
 Receive ten points for every finish you complete and a ten point bonus for first two dart finishes.
@@ -369,16 +369,16 @@ Receive ten points for every finish you complete and a ten point bonus for first
       </div>
       <div>
         <div
-          class="css-1m3k68e"
+          class="css-18xfez7"
         >
           <div
-            class="css-1kkt86i"
+            class="css-1811skr"
           >
             <a
               href="/eightythrew"
             >
               <h3
-                class="chakra-heading css-109ke3y"
+                class="chakra-heading css-17drl7a"
               >
                 Eighty Threw
               </h3>
@@ -387,18 +387,18 @@ Receive ten points for every finish you complete and a ten point bonus for first
               class="chakra-stack css-84zodg"
             >
               <span
-                class="css-18jxp7z"
+                class="css-1a3nkjg"
               >
                 double
               </span>
               <span
-                class="css-jd4vf8"
+                class="css-1npzaxy"
               >
                 finish
               </span>
             </div>
             <p
-              class="chakra-text css-1bx2ap4"
+              class="chakra-text css-12mgru9"
             >
               You have 20 visits to the oche needing 82, which is one of the most popular combinations and you have to finish in two or three darts using any method you wish. 
 Receive ten points for every finish you complete and ten point bonuses for two darters.
@@ -409,16 +409,16 @@ Receive ten points for every finish you complete and ten point bonuses for two d
       </div>
       <div>
         <div
-          class="css-1m3k68e"
+          class="css-18xfez7"
         >
           <div
-            class="css-1kkt86i"
+            class="css-1811skr"
           >
             <a
               href="/shanghainights"
             >
               <h3
-                class="chakra-heading css-109ke3y"
+                class="chakra-heading css-17drl7a"
               >
                 Shanghai Nights
               </h3>
@@ -427,18 +427,18 @@ Receive ten points for every finish you complete and ten point bonuses for two d
               class="chakra-stack css-84zodg"
             >
               <span
-                class="css-18jxp7z"
+                class="css-1a3nkjg"
               >
                 double
               </span>
               <span
-                class="css-jd4vf8"
+                class="css-1npzaxy"
               >
                 finish
               </span>
             </div>
             <p
-              class="chakra-text css-1bx2ap4"
+              class="chakra-text css-12mgru9"
             >
               You have 20 visits and your task is to finish 120 as any times as possible.
 Receive ten points every time you take out the combination. Ten points bonuses for three double-tops.
@@ -449,16 +449,16 @@ Receive ten points every time you take out the combination. Ten points bonuses f
       </div>
       <div>
         <div
-          class="css-1m3k68e"
+          class="css-18xfez7"
         >
           <div
-            class="css-1kkt86i"
+            class="css-1811skr"
           >
             <a
               href="/switchhitter"
             >
               <h3
-                class="chakra-heading css-109ke3y"
+                class="chakra-heading css-17drl7a"
               >
                 Switch Hitter
               </h3>
@@ -467,18 +467,18 @@ Receive ten points every time you take out the combination. Ten points bonuses f
               class="chakra-stack css-84zodg"
             >
               <span
-                class="css-ujtz3p"
+                class="css-17jv3ny"
               >
                 19
               </span>
               <span
-                class="css-15gkbgz"
+                class="css-1xuzaeu"
               >
                 count up
               </span>
             </div>
             <p
-              class="chakra-text css-1bx2ap4"
+              class="chakra-text css-12mgru9"
             >
               You have 60 darts at treble 19 - receive five points per treble 19, two points for a single 19 and a ten point bonus for a 171.
 You receive no points for a dart which lands outside of the treble or single 19 beds.
@@ -489,16 +489,16 @@ You receive no points for a dart which lands outside of the treble or single 19 
       </div>
       <div>
         <div
-          class="css-1m3k68e"
+          class="css-18xfez7"
         >
           <div
-            class="css-1kkt86i"
+            class="css-1811skr"
           >
             <a
               href="/bullybully"
             >
               <h3
-                class="chakra-heading css-109ke3y"
+                class="chakra-heading css-17drl7a"
               >
                 Bully Bully
               </h3>
@@ -507,18 +507,18 @@ You receive no points for a dart which lands outside of the treble or single 19 
               class="chakra-stack css-84zodg"
             >
               <span
-                class="css-wtkao4"
+                class="css-fc73fl"
               >
                 BULL
               </span>
               <span
-                class="css-15gkbgz"
+                class="css-1xuzaeu"
               >
                 count up
               </span>
             </div>
             <p
-              class="chakra-text css-1bx2ap4"
+              class="chakra-text css-12mgru9"
             >
               Throw 60 darts at the bullseye - earn five points for every bull hit and two for every outer bull.
 10 point bonus for 3 bulls. 25 points available every 3 darts; 500 overall.
@@ -528,16 +528,16 @@ You receive no points for a dart which lands outside of the treble or single 19 
       </div>
       <div>
         <div
-          class="css-1m3k68e"
+          class="css-18xfez7"
         >
           <div
-            class="css-1kkt86i"
+            class="css-1811skr"
           >
             <a
               href="/treblesforshow"
             >
               <h3
-                class="chakra-heading css-109ke3y"
+                class="chakra-heading css-17drl7a"
               >
                 Trebles For Show
               </h3>
@@ -546,18 +546,18 @@ You receive no points for a dart which lands outside of the treble or single 19 
               class="chakra-stack css-84zodg"
             >
               <span
-                class="css-ujtz3p"
+                class="css-17jv3ny"
               >
                 20
               </span>
               <span
-                class="css-15gkbgz"
+                class="css-1xuzaeu"
               >
                 count up
               </span>
             </div>
             <p
-              class="chakra-text css-1bx2ap4"
+              class="chakra-text css-12mgru9"
             >
               Throw 60 darts at treble 20 - receive five points per treble 20. two points for a single 20 and a fifteen point bonus for a 180.
 You receive no points for a dart which lands outside of the treble or single 20 beds. 30 points available every 3 darts; 600 overall.
@@ -567,16 +567,16 @@ You receive no points for a dart which lands outside of the treble or single 20 
       </div>
       <div>
         <div
-          class="css-1m3k68e"
+          class="css-18xfez7"
         >
           <div
-            class="css-1kkt86i"
+            class="css-1811skr"
           >
             <a
               href="/arrange"
             >
               <h3
-                class="chakra-heading css-109ke3y"
+                class="chakra-heading css-17drl7a"
               >
                 Arrange
               </h3>
@@ -585,33 +585,33 @@ You receive no points for a dart which lands outside of the treble or single 20 
               class="chakra-stack css-84zodg"
             >
               <span
-                class="css-18jxp7z"
+                class="css-1a3nkjg"
               >
                 double
               </span>
               <span
-                class="css-mykdkv"
+                class="css-fkp1lw"
               >
                 single
               </span>
               <span
-                class="css-1dzi12g"
+                class="css-p7n5d0"
               >
                 master
               </span>
               <span
-                class="css-jd4vf8"
+                class="css-1npzaxy"
               >
                 finish
               </span>
               <span
-                class="css-1budud3"
+                class="css-ttmz6"
               >
                 simulation
               </span>
             </div>
             <p
-              class="chakra-text css-1bx2ap4"
+              class="chakra-text css-12mgru9"
             >
               Out for random scores with set options.
 The simulation mode must include the specified range of deviations.
@@ -621,5 +621,9 @@ The simulation mode must include the specified range of deviations.
       </div>
     </div>
   </div>
+  <span
+    hidden=""
+    id="__chakra_env"
+  />
 </div>
 `;

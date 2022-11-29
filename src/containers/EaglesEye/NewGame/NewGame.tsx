@@ -3,10 +3,10 @@ import NewGameModal from '@/components/NewGameModal';
 
 type NewGameProps = {
   onNewGame: () => void;
-  isFinished: boolean;
+  isFinished?: boolean;
 };
 
-const NewGame: FC<NewGameProps> = ({ onNewGame, isFinished }) => {
+const NewGame: FC<NewGameProps> = ({ onNewGame, isFinished = false }) => {
   return <NewGameModal onNewGame={() => onNewGame()} settings={<></>} isFinished={isFinished} />;
 };
 

@@ -1,40 +1,49 @@
 import React, { FC } from 'react';
 import { Center, Flex, Grid, GridItem, Text, useBreakpointValue } from '@chakra-ui/react';
 import ArrangeBoard from './ArrangeBoard';
-import Description from './Description';
 import NewGame from './NewGame';
 import Targets from './Targets';
-import Footer from '@/components/Footer';
-import Loading from '@/components/Loading';
-import NavigationBar from '@/components/NavigationBar';
+import DescriptionModal from '@/components/DescriptionModal';
 import RoundScore from '@/components/RoundScore';
 import TargetBoard from '@/components/TargetBoard';
 import { useArrangeGame, useArrangeGameSet } from '@/contexts/ArrangeGameContext';
+import useLocale from '@/hooks/locale';
 import ArrangeGame from '@/lib/ArrangeGame/ArrangeGame';
+import { updateObject } from '@/lib/Helper/updateObjectState';
+import MainTemplate from '@/templates/MainTemplate';
 
 const Main: FC = () => {
   const game = useArrangeGame();
   const setGame = useArrangeGameSet();
   const isMd = useBreakpointValue({ base: false, md: true });
+  const { t } = useLocale();
+  if (!game) return <MainTemplate label={'arrange-main'} isLoading />;
   return (
-    <div data-cy='arrange-main'>
-      <NavigationBar />
-      {!game ? (
-        <Loading />
-      ) : isMd ? (
-        <DesktopMain game={game} setGame={setGame} />
+    <MainTemplate label='arrange-main'>
+      {isMd ? (
+        <DesktopMain
+          game={game}
+          setGame={setGame}
+          description={t.games.arrange.description.join('\n')}
+        />
       ) : (
-        <MobileMain game={game} setGame={setGame} />
+        <MobileMain
+          game={game}
+          setGame={setGame}
+          description={t.games.arrange.description.join('\n')}
+        />
       )}
-      <Footer />
-    </div>
+    </MainTemplate>
   );
 };
 
-const DesktopMain: FC<{ game: ArrangeGame; setGame: (game: ArrangeGame) => void }> = ({
-  game,
-  setGame,
-}) => {
+type MainProps = {
+  game: ArrangeGame;
+  setGame: (game: ArrangeGame) => void;
+  description?: string;
+};
+
+const DesktopMain: FC<MainProps> = ({ game, setGame, description }) => {
   return (
     <>
       <Flex justifyContent='space-between' alignItems='center'>
@@ -43,7 +52,10 @@ const DesktopMain: FC<{ game: ArrangeGame; setGame: (game: ArrangeGame) => void 
           isFinished={game.isFinish()}
           currentSettings={game.getSettings()}
         />
-        <Description />
+        <DescriptionModal
+          header={'Arrange'}
+          description={<Text whiteSpace='pre-wrap'>{description}</Text>}
+        />
       </Flex>
       <Flex gap={4} justifyContent='space-around'>
         <Flex direction='column' alignItems='center' gap={4} justifyContent='center'>
@@ -72,45 +84,20 @@ const DesktopMain: FC<{ game: ArrangeGame; setGame: (game: ArrangeGame) => void 
           />
         </Flex>
         <ArrangeBoard
-          onCount={(count) => {
-            const g = Object.assign(new ArrangeGame(), game);
-            g.addScore(count);
-            setGame(g);
-          }}
+          onCount={(n) => updateObject(game, new ArrangeGame(), 'addScore', setGame, n)}
           range={game.getSettings().range}
           simulation={game.getSettings().simulation}
           disabled={game.getRoundScore().length >= 3 || game.isFinish()}
         />
       </Flex>
-      <RoundScore
-        scores={game.getRoundScore()}
-        onClear={() => {
-          const g = Object.assign(new ArrangeGame(), game);
-          g.removeScore();
-          setGame(g);
-        }}
-        onRoundChange={() => {
-          const g = Object.assign(new ArrangeGame(), game);
-          g.roundChange();
-          setGame(g);
-        }}
-        isFinished={game.isFinish()}
-        onRoundOver={() => {
-          // saveToDB(game.getGameResult(), db.bullyBullyResult);
-          setGame(new ArrangeGame());
-        }}
-        result={getResult(game)}
-      />
+      <MyRoundScore game={game} setGame={setGame} />
     </>
   );
 };
 
-const MobileMain: FC<{ game: ArrangeGame; setGame: (game: ArrangeGame) => void }> = ({
-  game,
-  setGame,
-}) => {
+const MobileMain: FC<MainProps> = ({ game, setGame, description }) => {
   return (
-    <Flex direction='column'>
+    <Flex direction='column' pb={2}>
       <Flex justifyContent='space-between' alignItems='center'>
         <NewGame
           onNewGame={(settings) => setGame(new ArrangeGame(settings))}
@@ -122,7 +109,10 @@ const MobileMain: FC<{ game: ArrangeGame; setGame: (game: ArrangeGame) => void }
           targets={game.getTargets()}
           isFinished={game.isFinish()}
         />
-        <Description />
+        <DescriptionModal
+          header={'Arrange'}
+          description={<Text whiteSpace='pre-wrap'>{description}</Text>}
+        />
       </Flex>
       <Flex direction='column' alignItems='center' gap={2} justifyContent='center'>
         <Grid
@@ -158,38 +148,29 @@ const MobileMain: FC<{ game: ArrangeGame; setGame: (game: ArrangeGame) => void }
           </GridItem>
         </Grid>
         <ArrangeBoard
-          onCount={(count) => {
-            const g = Object.assign(new ArrangeGame(), game);
-            g.addScore(count);
-            setGame(g);
-          }}
+          onCount={(n) => updateObject(game, new ArrangeGame(), 'addScore', setGame, n)}
           range={game.getSettings().range}
           simulation={game.getSettings().simulation}
           disabled={game.getRoundScore().length >= 3 || game.isFinish()}
         />
-        <RoundScore
-          scores={game.getRoundScore()}
-          onClear={() => {
-            const g = Object.assign(new ArrangeGame(), game);
-            g.removeScore();
-            setGame(g);
-          }}
-          onRoundChange={() => {
-            const g = Object.assign(new ArrangeGame(), game);
-            g.roundChange();
-            setGame(g);
-          }}
-          isFinished={game.isFinish()}
-          onRoundOver={() => {
-            // saveToDB(game.getGameResult(), db.bullyBullyResult);
-            setGame(new ArrangeGame());
-          }}
-          result={getResult(game)}
-        />
+        <MyRoundScore game={game} setGame={setGame} />
       </Flex>
     </Flex>
   );
 };
+
+const MyRoundScore: FC<MainProps> = ({ game, setGame }) => (
+  <RoundScore
+    scores={game.getRoundScore()}
+    onClear={() => updateObject(game, new ArrangeGame(), 'removeScore', setGame)}
+    onRoundChange={() => updateObject(game, new ArrangeGame(), 'roundChange', setGame)}
+    isFinished={game.isFinish()}
+    onRoundOver={() => {
+      setGame(new ArrangeGame());
+    }}
+    result={getResult(game)}
+  />
+);
 
 const getResult = (game: ArrangeGame) =>
   `[${game.getTargets().join(', ')}]\n${game.getRoundCount()} Round`;

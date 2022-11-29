@@ -32,7 +32,14 @@ type CountButtonsProps = {
   full?: boolean;
 };
 
-const CountButtons: FC<CountButtonsProps> = ({ onCount, buttons, bull, disabled, other, full }) => {
+const CountButtons: FC<CountButtonsProps> = ({
+  onCount,
+  buttons,
+  bull = false,
+  disabled = false,
+  other = false,
+  full = false,
+}) => {
   return (
     <Flex maxW={320} direction={'column'} gap={1} m={'auto'}>
       <Buttons onCount={onCount} buttons={buttons} bull={bull} disabled={disabled} other={other} />

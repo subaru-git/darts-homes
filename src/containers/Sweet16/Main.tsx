@@ -1,49 +1,54 @@
 import React, { FC } from 'react';
-import { Box, Flex } from '@chakra-ui/react';
-import Description from './Description';
+import { Box, Text, Flex, useBreakpointValue } from '@chakra-ui/react';
 import NewGame from './NewGame';
 import CameraView from '@/components/CameraView';
 import CountButtons from '@/components/CountButtons';
-import Footer from '@/components/Footer';
-import Loading from '@/components/Loading';
-import NavigationBar from '@/components/NavigationBar';
+import DescriptionModal from '@/components/DescriptionModal';
 import RoundBoard from '@/components/RoundBoard';
 import RoundScore from '@/components/RoundScore';
 import TargetBoard from '@/components/TargetBoard';
 import { useSweet16Game, useSweet16GameSet } from '@/contexts/Sweet16Context';
 import { db } from '@/db/db';
+import useLocale from '@/hooks/locale';
 import { saveToDB } from '@/lib/GameHistoryManager/GameHistory';
+import { updateObject } from '@/lib/Helper/updateObjectState';
 import Sweet16Game from '@/lib/Sweet16Game/Sweet16Game';
+import MainTemplate from '@/templates/MainTemplate';
 
 const Main: FC = () => {
   const game = useSweet16Game();
   const setGame = useSweet16GameSet();
+  const isMd = useBreakpointValue({ base: false, md: true });
+  const { t } = useLocale();
+  if (!game) return <MainTemplate label={'sweet16-main'} isLoading />;
   return (
-    <div data-cy='sweet16-main'>
-      <NavigationBar />
-      {!game ? (
-        <Loading />
+    <MainTemplate label='sweet16-main'>
+      {isMd ? (
+        <DesktopMain
+          game={game}
+          setGame={setGame}
+          description={t.games.sweet16.description.join('\n')}
+        />
       ) : (
-        <>
-          <Box display={{ base: 'none', md: 'block' }}>
-            <DesktopMain game={game} setGame={setGame} />
-          </Box>
-          <Box display={{ base: 'block', md: 'none' }}>
-            <MobileMain game={game} setGame={setGame} />
-          </Box>
-        </>
+        <MobileMain
+          game={game}
+          setGame={setGame}
+          description={t.games.sweet16.description.join('\n')}
+        />
       )}
-      <Footer />
-    </div>
+    </MainTemplate>
   );
 };
 
-const DesktopMain: FC<{ game: Sweet16Game; setGame: (game: Sweet16Game) => void }> = ({
-  game,
-  setGame,
-}) => {
+type MainProps = {
+  game: Sweet16Game;
+  setGame: (game: Sweet16Game) => void;
+  description?: string;
+};
+
+const DesktopMain: FC<MainProps> = ({ game, setGame, description }) => {
   return (
-    <div>
+    <>
       <Flex justifyContent='space-between' alignItems='center'>
         <NewGame
           onNewGame={(targetCount) => setGame(new Sweet16Game(targetCount))}
@@ -51,7 +56,10 @@ const DesktopMain: FC<{ game: Sweet16Game; setGame: (game: Sweet16Game) => void 
           currentRound={game.getTargetRound()}
         />
         <Flex gap={2}>
-          <Description />
+          <DescriptionModal
+            header={'Sweet 16'}
+            description={<Text whiteSpace='pre-wrap'>{description}</Text>}
+          />
           <CameraView />
         </Flex>
       </Flex>
@@ -64,35 +72,12 @@ const DesktopMain: FC<{ game: Sweet16Game; setGame: (game: Sweet16Game) => void 
             />
             <TargetBoard message='Score' target={game.getTotalScore().toString()} size='sm' />
           </Flex>
-          <RoundScore
-            scores={game.getRoundScore()}
-            onClear={() => {
-              const g = Object.assign(new Sweet16Game(20), game);
-              g.removeScore();
-              setGame(g);
-            }}
-            onRoundChange={() => {
-              const g = Object.assign(new Sweet16Game(20), game);
-              g.roundChange();
-              setGame(g);
-            }}
-            isFinished={game.isFinish()}
-            onRoundOver={() => {
-              saveToDB(game.getGameResult(), db.sweet16Result);
-              setGame(new Sweet16Game(game.getTargetRound()));
-            }}
-            result={getResult(game)}
-          />
+          <MyRoundScore game={game} setGame={setGame} />
         </Box>
         <Box minWidth={250}>
           <CountButtons
             buttons={[16, 8, 4, 2, 1]}
-            onCount={(n) => {
-              const g = Object.assign(new Sweet16Game(20), game);
-              g.addScore(n);
-              setGame(g);
-            }}
-            bull={false}
+            onCount={(n) => updateObject(game, new Sweet16Game(20), 'addScore', setGame, n)}
             full
           />
         </Box>
@@ -100,14 +85,11 @@ const DesktopMain: FC<{ game: Sweet16Game; setGame: (game: Sweet16Game) => void 
       <Box p={4}>
         <RoundBoard score={game.getScore()} />
       </Box>
-    </div>
+    </>
   );
 };
 
-const MobileMain: FC<{ game: Sweet16Game; setGame: (game: Sweet16Game) => void }> = ({
-  game,
-  setGame,
-}) => {
+const MobileMain: FC<MainProps> = ({ game, setGame, description }) => {
   return (
     <Flex direction='column' gap={4}>
       <Flex justifyContent='space-between' width='100%'>
@@ -124,40 +106,20 @@ const MobileMain: FC<{ game: Sweet16Game; setGame: (game: Sweet16Game) => void }
           <TargetBoard message='Score' target={game.getTotalScore().toString()} size='sm' />
         </Flex>
         <Flex direction='column'>
-          <Description />
+          <DescriptionModal
+            header={'Sweet 16'}
+            description={<Text whiteSpace='pre-wrap'>{description}</Text>}
+          />
           <CameraView />
         </Flex>
       </Flex>
       <Box px={2}>
-        <RoundScore
-          scores={game.getRoundScore()}
-          onClear={() => {
-            const g = Object.assign(new Sweet16Game(20), game);
-            g.removeScore();
-            setGame(g);
-          }}
-          onRoundChange={() => {
-            const g = Object.assign(new Sweet16Game(20), game);
-            g.roundChange();
-            setGame(g);
-          }}
-          isFinished={game.isFinish()}
-          onRoundOver={() => {
-            saveToDB(game.getGameResult(), db.sweet16Result);
-            setGame(new Sweet16Game(game.getTargetRound()));
-          }}
-          result={getResult(game)}
-        />
+        <MyRoundScore game={game} setGame={setGame} />
       </Box>
       <Box px={2}>
         <CountButtons
           buttons={[16, 8, 4, 2, 1]}
-          onCount={(n) => {
-            const g = Object.assign(new Sweet16Game(20), game);
-            g.addScore(n);
-            setGame(g);
-          }}
-          bull={false}
+          onCount={(n) => updateObject(game, new Sweet16Game(20), 'addScore', setGame, n)}
           full
         />
       </Box>
@@ -167,6 +129,20 @@ const MobileMain: FC<{ game: Sweet16Game; setGame: (game: Sweet16Game) => void }
     </Flex>
   );
 };
+
+const MyRoundScore: FC<MainProps> = ({ game, setGame }) => (
+  <RoundScore
+    scores={game.getRoundScore()}
+    onClear={() => updateObject(game, new Sweet16Game(20), 'removeScore', setGame)}
+    onRoundChange={() => updateObject(game, new Sweet16Game(20), 'roundChange', setGame)}
+    isFinished={game.isFinish()}
+    onRoundOver={() => {
+      saveToDB(game.getGameResult(), db.sweet16Result);
+      setGame(new Sweet16Game(20));
+    }}
+    result={getResult(game)}
+  />
+);
 
 const getResult = (game: Sweet16Game) =>
   `Round: ${game.getTargetRound()}\nTotal: ${game.getGameResult().result}`;

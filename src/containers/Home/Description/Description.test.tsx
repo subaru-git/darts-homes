@@ -1,16 +1,9 @@
-import { ChakraProvider } from '@chakra-ui/react';
-import { render, screen } from '@testing-library/react';
-import { createMatchMedia } from '../../../lib/TestUtils/MatchMediaMock';
+import { screen } from '@testing-library/react';
 import Description from './Description';
+import { render } from '@/lib/TestUtils/RenderMock';
 
-jest.mock('next/router', () => ({ useRouter: jest.fn().mockReturnValue({ locale: 'en' }) }));
 test('should rendering', () => {
-  window.matchMedia = createMatchMedia(1100);
-  const { container } = render(
-    <ChakraProvider>
-      <Description />
-    </ChakraProvider>,
-  );
+  const { container } = render(<Description />);
   expect(screen.getByAltText('description image')).not.toBeNull();
   expect(container).toMatchSnapshot();
 });

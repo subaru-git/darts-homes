@@ -1,7 +1,6 @@
 import React, { FC } from 'react';
-import Footer from '@/components/Footer';
-import NavigationBar from '@/components/NavigationBar';
 import CardView from '@/containers/Respect/CardView';
+import MainTemplate from '@/templates/MainTemplate';
 
 type MainProps = {
   data: RespectResult;
@@ -9,11 +8,9 @@ type MainProps = {
 
 const Main: FC<MainProps> = ({ data }) => {
   return (
-    <div data-cy='respect-main'>
-      <NavigationBar />
+    <MainTemplate label='respect-main'>
       <CardView data={data} />
-      <Footer />
-    </div>
+    </MainTemplate>
   );
 };
 

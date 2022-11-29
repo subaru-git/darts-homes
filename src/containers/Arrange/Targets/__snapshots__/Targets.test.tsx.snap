@@ -3,58 +3,62 @@
 exports[`should rendering 1`] = `
 <div>
   <div
-    class="css-s42fv"
+    class="css-1o31bit"
   >
     <p
-      class="chakra-text css-18kwk26"
+      class="chakra-text css-guw1tt"
     >
       [
     </p>
     <p
-      class="chakra-text css-18kwk26"
+      class="chakra-text css-guw1tt"
     >
       -
     </p>
     <p
-      class="chakra-text css-18kwk26"
+      class="chakra-text css-guw1tt"
     >
       -
     </p>
     <p
-      class="chakra-text css-18kwk26"
+      class="chakra-text css-guw1tt"
     >
       -
     </p>
     <p
-      class="chakra-text css-18kwk26"
+      class="chakra-text css-guw1tt"
     >
       -
     </p>
     <p
-      class="chakra-text css-18kwk26"
+      class="chakra-text css-guw1tt"
     >
       -
     </p>
     <p
-      class="chakra-text css-18kwk26"
+      class="chakra-text css-guw1tt"
     >
       -
     </p>
     <p
-      class="chakra-text css-18kwk26"
+      class="chakra-text css-guw1tt"
     >
       -
     </p>
     <p
-      class="chakra-text css-18kwk26"
+      class="chakra-text css-guw1tt"
     >
       -
     </p>
     <p
-      class="chakra-text css-18kwk26"
+      class="chakra-text css-guw1tt"
     >
       ]
     </p>
   </div>
+  <span
+    hidden=""
+    id="__chakra_env"
+  />
 </div>
 `;

@@ -12,10 +12,10 @@ import NewGameModal from '@/components/NewGameModal';
 type NewGameProps = {
   onNewGame: (round: number) => void;
   currentRound: number;
-  isFinished: boolean;
+  isFinished?: boolean;
 };
 
-const NewGame: FC<NewGameProps> = ({ onNewGame, currentRound, isFinished }) => {
+const NewGame: FC<NewGameProps> = ({ onNewGame, currentRound, isFinished = false }) => {
   const [round, setRound] = useState(currentRound);
   const format = (n: number) =>
     n === 20 ? `${n} - (recommended)` : n === currentRound ? `${n} - (current)` : n;

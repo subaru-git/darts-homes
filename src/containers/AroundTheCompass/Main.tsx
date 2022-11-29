@@ -1,12 +1,9 @@
 import React, { FC } from 'react';
-import { Box, Flex } from '@chakra-ui/react';
-import Description from './Description';
+import { Box, Flex, Text, useBreakpointValue } from '@chakra-ui/react';
 import NewGame from './NewGame';
 import CameraView from '@/components/CameraView';
 import CountButtons from '@/components/CountButtons';
-import Footer from '@/components/Footer';
-import Loading from '@/components/Loading';
-import NavigationBar from '@/components/NavigationBar';
+import DescriptionModal from '@/components/DescriptionModal';
 import RoundBoard from '@/components/RoundBoard';
 import RoundScore from '@/components/RoundScore';
 import TargetBoard from '@/components/TargetBoard';
@@ -15,46 +12,57 @@ import {
   useAroundTheCompassGameSet,
 } from '@/contexts/AroundTheCompassGameContext';
 import { db } from '@/db/db';
+import useLocale from '@/hooks/locale';
 import AroundTheCompassGame from '@/lib/AroundTheCompassGame/AroundTheCompassGame';
 import { saveToDB } from '@/lib/GameHistoryManager/GameHistory';
+import { updateObject } from '@/lib/Helper/updateObjectState';
+import MainTemplate from '@/templates/MainTemplate';
 
 const Main: FC = () => {
   const game = useAroundTheCompassGame();
   const setGame = useAroundTheCompassGameSet();
+  const isMd = useBreakpointValue({ base: false, md: true });
+  const { t } = useLocale();
+  if (!game) return <MainTemplate label={'around-the-compass-main'} isLoading />;
   return (
-    <div data-cy='around-the-compass-main'>
-      <NavigationBar />
-      {!game ? (
-        <Loading />
+    <MainTemplate label={'around-the-compass-main'}>
+      {isMd ? (
+        <DesktopMain
+          game={game}
+          setGame={setGame}
+          description={t.games.aroundthecompass.description.join('\n')}
+        />
       ) : (
-        <>
-          <Box display={{ base: 'none', md: 'block' }}>
-            <DesktopMain game={game} setGame={setGame} />
-          </Box>
-          <Box display={{ base: 'block', md: 'none' }}>
-            <MobileMain game={game} setGame={setGame} />
-          </Box>
-        </>
+        <MobileMain
+          game={game}
+          setGame={setGame}
+          description={t.games.aroundthecompass.description.join('\n')}
+        />
       )}
-      <Footer />
-    </div>
+    </MainTemplate>
   );
 };
 
-const DesktopMain: FC<{
+type MainProps = {
   game: AroundTheCompassGame;
   setGame: (game: AroundTheCompassGame) => void;
-}> = ({ game, setGame }) => {
+  description?: string;
+};
+
+const DesktopMain: FC<MainProps> = ({ game, setGame, description }) => {
   return (
-    <div>
+    <>
       <Flex justifyContent='space-between' alignItems='center'>
         <NewGame
-          onNewGame={(TargetRound) => setGame(new AroundTheCompassGame(TargetRound))}
+          onNewGame={(r) => setGame(new AroundTheCompassGame(r))}
           isFinished={game.isFinish()}
           currentRound={game.getTargetRound()}
         />
         <Flex gap={2}>
-          <Description />
+          <DescriptionModal
+            header='Around The Compass'
+            description={<Text whiteSpace='pre-wrap'>{description}</Text>}
+          />
           <CameraView />
         </Flex>
       </Flex>
@@ -67,35 +75,14 @@ const DesktopMain: FC<{
             />
             <TargetBoard message='Score' target={game.getTotalScore().toString()} size='sm' />
           </Flex>
-          <RoundScore
-            scores={game.getRoundScore()}
-            onClear={() => {
-              const g = Object.assign(new AroundTheCompassGame(20), game);
-              g.removeScore();
-              setGame(g);
-            }}
-            onRoundChange={() => {
-              const g = Object.assign(new AroundTheCompassGame(20), game);
-              g.roundChange();
-              setGame(g);
-            }}
-            isFinished={game.isFinish()}
-            onRoundOver={() => {
-              saveToDB(game.getGameResult(), db.aroundTheCompassResult);
-              setGame(new AroundTheCompassGame(game.getTargetRound()));
-            }}
-            result={getResult(game)}
-          />
+          <MyRoundScore game={game} setGame={setGame} />
         </Box>
         <Box minWidth={250}>
           <CountButtons
             buttons={[12, 6, 4, 2, 1]}
-            onCount={(n) => {
-              const g = Object.assign(new AroundTheCompassGame(20), game);
-              g.addScore(n);
-              setGame(g);
-            }}
-            bull={false}
+            onCount={(n) =>
+              updateObject(game, new AroundTheCompassGame(20), 'addScore', setGame, n)
+            }
             full
           />
         </Box>
@@ -103,14 +90,11 @@ const DesktopMain: FC<{
       <Box p={4}>
         <RoundBoard score={game.getScore()} />
       </Box>
-    </div>
+    </>
   );
 };
 
-const MobileMain: FC<{
-  game: AroundTheCompassGame;
-  setGame: (game: AroundTheCompassGame) => void;
-}> = ({ game, setGame }) => {
+const MobileMain: FC<MainProps> = ({ game, setGame, description }) => {
   return (
     <Flex direction='column' gap={4}>
       <Flex justifyContent='space-between' width='100%'>
@@ -127,40 +111,20 @@ const MobileMain: FC<{
           <TargetBoard message='Score' target={game.getTotalScore().toString()} size='sm' />
         </Flex>
         <Flex direction='column'>
-          <Description />
+          <DescriptionModal
+            header='Around The Compass'
+            description={<Text whiteSpace='pre-wrap'>{description}</Text>}
+          />
           <CameraView />
         </Flex>
       </Flex>
       <Box px={2}>
-        <RoundScore
-          scores={game.getRoundScore()}
-          onClear={() => {
-            const g = Object.assign(new AroundTheCompassGame(20), game);
-            g.removeScore();
-            setGame(g);
-          }}
-          onRoundChange={() => {
-            const g = Object.assign(new AroundTheCompassGame(20), game);
-            g.roundChange();
-            setGame(g);
-          }}
-          isFinished={game.isFinish()}
-          onRoundOver={() => {
-            saveToDB(game.getGameResult(), db.aroundTheCompassResult);
-            setGame(new AroundTheCompassGame(game.getTargetRound()));
-          }}
-          result={getResult(game)}
-        />
+        <MyRoundScore game={game} setGame={setGame} />
       </Box>
       <Box px={2}>
         <CountButtons
           buttons={[12, 6, 4, 2, 1]}
-          onCount={(n) => {
-            const g = Object.assign(new AroundTheCompassGame(20), game);
-            g.addScore(n);
-            setGame(g);
-          }}
-          bull={false}
+          onCount={(n) => updateObject(game, new AroundTheCompassGame(20), 'addScore', setGame, n)}
           full
         />
       </Box>
@@ -170,6 +134,20 @@ const MobileMain: FC<{
     </Flex>
   );
 };
+
+const MyRoundScore: FC<MainProps> = ({ game, setGame }) => (
+  <RoundScore
+    scores={game.getRoundScore()}
+    onClear={() => updateObject(game, new AroundTheCompassGame(20), 'removeScore', setGame)}
+    onRoundChange={() => updateObject(game, new AroundTheCompassGame(20), 'roundChange', setGame)}
+    isFinished={game.isFinish()}
+    onRoundOver={() => {
+      saveToDB(game.getGameResult(), db.aroundTheCompassResult);
+      setGame(new AroundTheCompassGame(game.getTargetRound()));
+    }}
+    result={getResult(game)}
+  />
+);
 
 const getResult = (game: AroundTheCompassGame) =>
   `Round: ${game.getTargetRound()}\nTotal: ${game.getGameResult().result}`;

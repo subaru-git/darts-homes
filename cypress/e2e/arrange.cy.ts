@@ -10,7 +10,6 @@ describe('gameing Arrange', () => {
     [...Array(8)].forEach((_, i) => {
       cy.get('[aria-label="target board"] > [aria-label*="target"]').then((targets) => {
         const a = arrange.find((a) => a.n === parseInt(targets.text())) ?? { n: 0, t: [] };
-        console.log(a);
         for (const t of a.t) {
           cy.get(`button[aria-label="${t}"]`).click({ force: true });
         }

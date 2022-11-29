@@ -1,14 +1,7 @@
-import { ChakraProvider } from '@chakra-ui/react';
-import { render } from '@testing-library/react';
 import HistoryTable from './HistoryTable';
-import { createMatchMedia } from '@/lib/TestUtils/MatchMediaMock';
+import { render } from '@/lib/TestUtils/RenderMock';
 
 test('should rendering', () => {
-  window.matchMedia = createMatchMedia(1100);
-  const { container } = render(
-    <ChakraProvider>
-      <HistoryTable history={[]} />
-    </ChakraProvider>,
-  );
+  const { container } = render(<HistoryTable history={[]} />);
   expect(container).toMatchSnapshot();
 });

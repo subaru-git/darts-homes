@@ -12,3 +12,4 @@ export const createMatchMedia =
     removeEventListener: jest.fn(),
     dispatchEvent: jest.fn(),
   });
+window.matchMedia = createMatchMedia(1100);

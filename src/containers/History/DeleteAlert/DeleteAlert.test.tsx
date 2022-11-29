@@ -1,7 +1,5 @@
-import { render } from '@testing-library/react';
 import DeleteAlert from './DeleteAlert';
-
-jest.mock('next/router', () => ({ useRouter: jest.fn().mockReturnValue({ locale: 'en' }) }));
+import { render } from '@/lib/TestUtils/RenderMock';
 
 test('should rendering', () => {
   const onCloseMock = jest.fn();

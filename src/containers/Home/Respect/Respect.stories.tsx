@@ -4,7 +4,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import Respect from './Respect';
 
 export default {
-  title: 'Containers/HomeDescriptionRespect',
+  title: 'Containers/Home/Respect',
   component: Respect,
 } as ComponentMeta<typeof Respect>;
 

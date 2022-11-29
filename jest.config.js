@@ -12,6 +12,7 @@ const customJestConfig = {
   testEnvironment: 'jest-environment-jsdom',
   modulePathIgnorePatterns: ['<rootDir>/data/'],
   setupFiles: ['fake-indexeddb/auto'],
+  setupFilesAfterEnv: ['<rootDir>/src/lib/TestUtils/jest.setup.ts'],
 };
 
 module.exports = createJestConfig(customJestConfig);

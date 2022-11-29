@@ -3,16 +3,627 @@
 exports[`should rendering 1`] = `
 <div>
   <div
-    class="css-1unzjzx"
+    class="css-18mp148"
   >
     <div
-      class="chakra-spinner css-1qnpayp"
+      class="chakra-collapse"
+      style="overflow: hidden; display: none; opacity: 0; height: 0px;"
     >
-      <span
-        class="css-8b45rq"
+      <div
+        class="chakra-alert css-vr88kb"
+        role="alert"
       >
-        Loading...
-      </span>
+        <div
+          class="css-k008qs"
+        >
+          <span
+            class="chakra-alert__icon css-14ogjxt"
+          >
+            <svg
+              class="chakra-icon css-fi0ww0"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M11.983,0a12.206,12.206,0,0,0-8.51,3.653A11.8,11.8,0,0,0,0,12.207,11.779,11.779,0,0,0,11.8,24h.214A12.111,12.111,0,0,0,24,11.791h0A11.766,11.766,0,0,0,11.983,0ZM10.5,16.542a1.476,1.476,0,0,1,1.449-1.53h.027a1.527,1.527,0,0,1,1.523,1.47,1.475,1.475,0,0,1-1.449,1.53h-.027A1.529,1.529,0,0,1,10.5,16.542ZM11,12.5v-6a1,1,0,0,1,2,0v6a1,1,0,1,1-2,0Z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+          <div
+            class="chakra-alert__title css-tidvy5"
+          >
+            Invalid Import File.
+          </div>
+          <div
+            class="chakra-alert__desc css-zzks76"
+          >
+            Your import file is invalid. Please check the import file.
+          </div>
+        </div>
+        <button
+          aria-label="Close"
+          class="css-1upqc8t"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="chakra-icon css-onkibi"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M.439,21.44a1.5,1.5,0,0,0,2.122,2.121L11.823,14.3a.25.25,0,0,1,.354,0l9.262,9.263a1.5,1.5,0,1,0,2.122-2.121L14.3,12.177a.25.25,0,0,1,0-.354l9.263-9.262A1.5,1.5,0,0,0,21.439.44L12.177,9.7a.25.25,0,0,1-.354,0L2.561.44A1.5,1.5,0,0,0,.439,2.561L9.7,11.823a.25.25,0,0,1,0,.354Z"
+              fill="currentColor"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div
+      class="css-1vk0cfl"
+    >
+      <h2
+        class="chakra-heading css-ozfqyb"
+      >
+        History
+      </h2>
+      <div
+        class="css-1azotaz"
+      >
+        <input
+          accept=".json"
+          hidden=""
+          type="file"
+        />
+        <button
+          aria-label="import"
+          class="chakra-button css-bsl9zi"
+          type="button"
+        >
+          <span
+            class="chakra-button__icon css-1wh2kri"
+          >
+            <svg
+              aria-hidden="true"
+              fill="currentColor"
+              focusable="false"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m12 18 4-5h-3V2h-2v11H8z"
+              />
+              <path
+                d="M19 9h-4v2h4v9H5v-9h4V9H5c-1.103 0-2 .897-2 2v9c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-9c0-1.103-.897-2-2-2z"
+              />
+            </svg>
+          </span>
+          Import
+        </button>
+        <button
+          aria-label="export"
+          class="chakra-button css-4z7u5h"
+          type="button"
+        >
+          <span
+            class="chakra-button__icon css-1wh2kri"
+          >
+            <svg
+              aria-hidden="true"
+              fill="currentColor"
+              focusable="false"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11 16h2V7h3l-4-5-4 5h3z"
+              />
+              <path
+                d="M5 22h14c1.103 0 2-.897 2-2v-9c0-1.103-.897-2-2-2h-4v2h4v9H5v-9h4V9H5c-1.103 0-2 .897-2 2v9c0 1.103.897 2 2 2z"
+              />
+            </svg>
+          </span>
+          Export
+        </button>
+      </div>
+    </div>
+    <div
+      class="chakra-tabs css-13o7eu2"
+    >
+      <div
+        aria-orientation="horizontal"
+        class="chakra-tabs__tablist css-1gazstw"
+        role="tablist"
+      >
+        <button
+          aria-controls="tabs-:r5:--tabpanel-0"
+          aria-label="cricket mark up"
+          aria-selected="true"
+          class="chakra-tabs__tab css-52dxnr"
+          data-index="0"
+          id="tabs-:r5:--tab-0"
+          role="tab"
+          tabindex="0"
+          type="button"
+        >
+          Cricket Mark-Up
+        </button>
+        <button
+          aria-controls="tabs-:r5:--tabpanel-1"
+          aria-label="eagle's eye"
+          aria-selected="false"
+          class="chakra-tabs__tab css-52dxnr"
+          data-index="1"
+          id="tabs-:r5:--tab-1"
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          Eagle's Eye
+        </button>
+        <button
+          aria-controls="tabs-:r5:--tabpanel-2"
+          aria-label="double trouble"
+          aria-selected="false"
+          class="chakra-tabs__tab css-52dxnr"
+          data-index="2"
+          id="tabs-:r5:--tab-2"
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          Double Trouble
+        </button>
+        <button
+          aria-controls="tabs-:r5:--tabpanel-3"
+          aria-label="sweet 16"
+          aria-selected="false"
+          class="chakra-tabs__tab css-52dxnr"
+          data-index="3"
+          id="tabs-:r5:--tab-3"
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          Sweet 16
+        </button>
+        <button
+          aria-controls="tabs-:r5:--tabpanel-4"
+          aria-label="tops and tens"
+          aria-selected="false"
+          class="chakra-tabs__tab css-52dxnr"
+          data-index="4"
+          id="tabs-:r5:--tab-4"
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          Tops and Tens
+        </button>
+        <button
+          aria-controls="tabs-:r5:--tabpanel-5"
+          aria-label="two dart combinations"
+          aria-selected="false"
+          class="chakra-tabs__tab css-52dxnr"
+          data-index="5"
+          id="tabs-:r5:--tab-5"
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          Two-Dart Combinations
+        </button>
+        <button
+          aria-controls="tabs-:r5:--tabpanel-6"
+          aria-label="around the compass"
+          aria-selected="false"
+          class="chakra-tabs__tab css-52dxnr"
+          data-index="6"
+          id="tabs-:r5:--tab-6"
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          Around The Compass
+        </button>
+        <button
+          aria-controls="tabs-:r5:--tabpanel-7"
+          aria-label="tons up"
+          aria-selected="false"
+          class="chakra-tabs__tab css-52dxnr"
+          data-index="7"
+          id="tabs-:r5:--tab-7"
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          Tons Up
+        </button>
+        <button
+          aria-controls="tabs-:r5:--tabpanel-8"
+          aria-label="route 64"
+          aria-selected="false"
+          class="chakra-tabs__tab css-52dxnr"
+          data-index="8"
+          id="tabs-:r5:--tab-8"
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          Route 64
+        </button>
+        <button
+          aria-controls="tabs-:r5:--tabpanel-9"
+          aria-label="eighty threw"
+          aria-selected="false"
+          class="chakra-tabs__tab css-52dxnr"
+          data-index="9"
+          id="tabs-:r5:--tab-9"
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          Eighty Threw
+        </button>
+        <button
+          aria-controls="tabs-:r5:--tabpanel-10"
+          aria-label="shanghai nights"
+          aria-selected="false"
+          class="chakra-tabs__tab css-52dxnr"
+          data-index="10"
+          id="tabs-:r5:--tab-10"
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          Shanghai Nights
+        </button>
+        <button
+          aria-controls="tabs-:r5:--tabpanel-11"
+          aria-label="switch hitter"
+          aria-selected="false"
+          class="chakra-tabs__tab css-52dxnr"
+          data-index="11"
+          id="tabs-:r5:--tab-11"
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          Switch Hitter
+        </button>
+        <button
+          aria-controls="tabs-:r5:--tabpanel-12"
+          aria-label="bully bully"
+          aria-selected="false"
+          class="chakra-tabs__tab css-52dxnr"
+          data-index="12"
+          id="tabs-:r5:--tab-12"
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          Bully Bully
+        </button>
+        <button
+          aria-controls="tabs-:r5:--tabpanel-13"
+          aria-label="trebles for show"
+          aria-selected="false"
+          class="chakra-tabs__tab css-52dxnr"
+          data-index="13"
+          id="tabs-:r5:--tab-13"
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          Trebles For Show
+        </button>
+      </div>
+      <div
+        class="chakra-tabs__tab-panels css-8atqhb"
+      >
+        <div
+          aria-label="cricket mark up history"
+          aria-labelledby="tabs-:r5:--tab-0"
+          class="chakra-tabs__tab-panel css-a5mhaz"
+          id="tabs-:r5:--tabpanel-0"
+          role="tabpanel"
+          tabindex="0"
+        >
+          <div
+            class="chakra-table__container css-zipzvv"
+          >
+            <table
+              class="chakra-table css-5605sr"
+            >
+              <tbody
+                class="css-0"
+              />
+            </table>
+          </div>
+        </div>
+        <div
+          aria-label="eagle's eye history"
+          aria-labelledby="tabs-:r5:--tab-1"
+          class="chakra-tabs__tab-panel css-a5mhaz"
+          hidden=""
+          id="tabs-:r5:--tabpanel-1"
+          role="tabpanel"
+          tabindex="0"
+        >
+          <div
+            class="chakra-table__container css-zipzvv"
+          >
+            <table
+              class="chakra-table css-5605sr"
+            >
+              <tbody
+                class="css-0"
+              />
+            </table>
+          </div>
+        </div>
+        <div
+          aria-label="double trouble history"
+          aria-labelledby="tabs-:r5:--tab-2"
+          class="chakra-tabs__tab-panel css-a5mhaz"
+          hidden=""
+          id="tabs-:r5:--tabpanel-2"
+          role="tabpanel"
+          tabindex="0"
+        >
+          <div
+            class="chakra-table__container css-zipzvv"
+          >
+            <table
+              class="chakra-table css-5605sr"
+            >
+              <tbody
+                class="css-0"
+              />
+            </table>
+          </div>
+        </div>
+        <div
+          aria-label="sweet 16 history"
+          aria-labelledby="tabs-:r5:--tab-3"
+          class="chakra-tabs__tab-panel css-a5mhaz"
+          hidden=""
+          id="tabs-:r5:--tabpanel-3"
+          role="tabpanel"
+          tabindex="0"
+        >
+          <div
+            class="chakra-table__container css-zipzvv"
+          >
+            <table
+              class="chakra-table css-5605sr"
+            >
+              <tbody
+                class="css-0"
+              />
+            </table>
+          </div>
+        </div>
+        <div
+          aria-label="tops and tens history"
+          aria-labelledby="tabs-:r5:--tab-4"
+          class="chakra-tabs__tab-panel css-a5mhaz"
+          hidden=""
+          id="tabs-:r5:--tabpanel-4"
+          role="tabpanel"
+          tabindex="0"
+        >
+          <div
+            class="chakra-table__container css-zipzvv"
+          >
+            <table
+              class="chakra-table css-5605sr"
+            >
+              <tbody
+                class="css-0"
+              />
+            </table>
+          </div>
+        </div>
+        <div
+          aria-label="two dart combinations history"
+          aria-labelledby="tabs-:r5:--tab-5"
+          class="chakra-tabs__tab-panel css-a5mhaz"
+          hidden=""
+          id="tabs-:r5:--tabpanel-5"
+          role="tabpanel"
+          tabindex="0"
+        >
+          <div
+            class="chakra-table__container css-zipzvv"
+          >
+            <table
+              class="chakra-table css-5605sr"
+            >
+              <tbody
+                class="css-0"
+              />
+            </table>
+          </div>
+        </div>
+        <div
+          aria-label="around the compass history"
+          aria-labelledby="tabs-:r5:--tab-6"
+          class="chakra-tabs__tab-panel css-a5mhaz"
+          hidden=""
+          id="tabs-:r5:--tabpanel-6"
+          role="tabpanel"
+          tabindex="0"
+        >
+          <div
+            class="chakra-table__container css-zipzvv"
+          >
+            <table
+              class="chakra-table css-5605sr"
+            >
+              <tbody
+                class="css-0"
+              />
+            </table>
+          </div>
+        </div>
+        <div
+          aria-label="tons up history"
+          aria-labelledby="tabs-:r5:--tab-7"
+          class="chakra-tabs__tab-panel css-a5mhaz"
+          hidden=""
+          id="tabs-:r5:--tabpanel-7"
+          role="tabpanel"
+          tabindex="0"
+        >
+          <div
+            class="chakra-table__container css-zipzvv"
+          >
+            <table
+              class="chakra-table css-5605sr"
+            >
+              <tbody
+                class="css-0"
+              />
+            </table>
+          </div>
+        </div>
+        <div
+          aria-label="route 64 history"
+          aria-labelledby="tabs-:r5:--tab-8"
+          class="chakra-tabs__tab-panel css-a5mhaz"
+          hidden=""
+          id="tabs-:r5:--tabpanel-8"
+          role="tabpanel"
+          tabindex="0"
+        >
+          <div
+            class="chakra-table__container css-zipzvv"
+          >
+            <table
+              class="chakra-table css-5605sr"
+            >
+              <tbody
+                class="css-0"
+              />
+            </table>
+          </div>
+        </div>
+        <div
+          aria-label="eighty threw history"
+          aria-labelledby="tabs-:r5:--tab-9"
+          class="chakra-tabs__tab-panel css-a5mhaz"
+          hidden=""
+          id="tabs-:r5:--tabpanel-9"
+          role="tabpanel"
+          tabindex="0"
+        >
+          <div
+            class="chakra-table__container css-zipzvv"
+          >
+            <table
+              class="chakra-table css-5605sr"
+            >
+              <tbody
+                class="css-0"
+              />
+            </table>
+          </div>
+        </div>
+        <div
+          aria-label="shanghai nights history"
+          aria-labelledby="tabs-:r5:--tab-10"
+          class="chakra-tabs__tab-panel css-a5mhaz"
+          hidden=""
+          id="tabs-:r5:--tabpanel-10"
+          role="tabpanel"
+          tabindex="0"
+        >
+          <div
+            class="chakra-table__container css-zipzvv"
+          >
+            <table
+              class="chakra-table css-5605sr"
+            >
+              <tbody
+                class="css-0"
+              />
+            </table>
+          </div>
+        </div>
+        <div
+          aria-label="switch hitter history"
+          aria-labelledby="tabs-:r5:--tab-11"
+          class="chakra-tabs__tab-panel css-a5mhaz"
+          hidden=""
+          id="tabs-:r5:--tabpanel-11"
+          role="tabpanel"
+          tabindex="0"
+        >
+          <div
+            class="chakra-table__container css-zipzvv"
+          >
+            <table
+              class="chakra-table css-5605sr"
+            >
+              <tbody
+                class="css-0"
+              />
+            </table>
+          </div>
+        </div>
+        <div
+          aria-label="bully bully history"
+          aria-labelledby="tabs-:r5:--tab-12"
+          class="chakra-tabs__tab-panel css-a5mhaz"
+          hidden=""
+          id="tabs-:r5:--tabpanel-12"
+          role="tabpanel"
+          tabindex="0"
+        >
+          <div
+            class="chakra-table__container css-zipzvv"
+          >
+            <table
+              class="chakra-table css-5605sr"
+            >
+              <tbody
+                class="css-0"
+              />
+            </table>
+          </div>
+        </div>
+        <div
+          aria-label="trebles for show history"
+          aria-labelledby="tabs-:r5:--tab-13"
+          class="chakra-tabs__tab-panel css-a5mhaz"
+          hidden=""
+          id="tabs-:r5:--tabpanel-13"
+          role="tabpanel"
+          tabindex="0"
+        >
+          <div
+            class="chakra-table__container css-zipzvv"
+          >
+            <table
+              class="chakra-table css-5605sr"
+            >
+              <tbody
+                class="css-0"
+              />
+            </table>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <span

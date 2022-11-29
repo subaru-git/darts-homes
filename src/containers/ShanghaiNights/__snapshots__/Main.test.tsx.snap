@@ -1,0 +1,1947 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should rendering 1`] = `
+<div
+  aria-hidden="true"
+  data-aria-hidden="true"
+>
+  <div
+    data-cy="shanghai-nights-main"
+  >
+    <header
+      class="css-1wuf7qn"
+    >
+      <div
+        class="css-1v5zkfs"
+      >
+        <div
+          class="css-1twb9xo"
+        >
+          <button
+            aria-label="toggle navigation"
+            class="chakra-button css-13zvu4r"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              fill="currentColor"
+              focusable="false"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 512 512"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M32 96v64h448V96H32zm0 128v64h448v-64H32zm0 128v64h448v-64H32z"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="css-1h98wyk"
+        >
+          <div
+            class="css-8fa26g"
+          >
+            <a
+              href="/"
+            >
+              <img
+                alt="darts homes logo"
+                class="chakra-image css-1kil0uo"
+                src="/logo.svg"
+              />
+            </a>
+          </div>
+          <div
+            class="css-1ynfsgs"
+          >
+            <div
+              class="chakra-stack css-a9v878"
+            >
+              <div
+                class="css-0"
+              >
+                <div
+                  aria-controls="popover-content-:r2:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="css-13fflh2"
+                  id="popover-trigger-:r2:"
+                >
+                  <a
+                    href="/games"
+                  >
+                    Games
+                  </a>
+                </div>
+                <div
+                  class="chakra-popover__popper css-1qq679y"
+                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+                >
+                  <section
+                    class="chakra-popover__content css-1slp7gy"
+                    id="popover-content-:r2:"
+                    role="tooltip"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="chakra-stack css-i4eu2s"
+                    >
+                      <div
+                        class="css-1rc82uo"
+                        role="group"
+                      >
+                        <a
+                          aria-label="Eagle's Eye"
+                          href="/eagleseye"
+                        >
+                          <div
+                            class="chakra-stack css-84zodg"
+                          >
+                            <div
+                              class="css-0"
+                            >
+                              <p
+                                class="chakra-text css-sc37ud"
+                              >
+                                Eagle's Eye
+                              </p>
+                              <p
+                                class="chakra-text css-itvw0n"
+                              >
+                                BULL only count up
+                              </p>
+                            </div>
+                            <div
+                              class="css-2gz105"
+                            >
+                              <svg
+                                class="chakra-icon css-swb7g"
+                                fill="currentColor"
+                                focusable="false"
+                                height="1em"
+                                stroke="currentColor"
+                                stroke-width="0"
+                                viewBox="0 0 8 16"
+                                width="1em"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M7.5 8l-5 5L1 11.5 4.75 8 1 4.5 2.5 3l5 5z"
+                                  fill-rule="evenodd"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div
+                        class="css-1rc82uo"
+                        role="group"
+                      >
+                        <a
+                          aria-label="Cricket Mark-Up"
+                          href="/cricketmarkup"
+                        >
+                          <div
+                            class="chakra-stack css-84zodg"
+                          >
+                            <div
+                              class="css-0"
+                            >
+                              <p
+                                class="chakra-text css-sc37ud"
+                              >
+                                Cricket Mark-Up
+                              </p>
+                              <p
+                                class="chakra-text css-itvw0n"
+                              >
+                                Darts training game by "Kikuchi Yamaguchi"
+                              </p>
+                            </div>
+                            <div
+                              class="css-2gz105"
+                            >
+                              <svg
+                                class="chakra-icon css-swb7g"
+                                fill="currentColor"
+                                focusable="false"
+                                height="1em"
+                                stroke="currentColor"
+                                stroke-width="0"
+                                viewBox="0 0 8 16"
+                                width="1em"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M7.5 8l-5 5L1 11.5 4.75 8 1 4.5 2.5 3l5 5z"
+                                  fill-rule="evenodd"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div
+                        class="css-1rc82uo"
+                        role="group"
+                      >
+                        <a
+                          aria-label="Double Trouble"
+                          href="/doubletrouble"
+                        >
+                          <div
+                            class="chakra-stack css-84zodg"
+                          >
+                            <div
+                              class="css-0"
+                            >
+                              <p
+                                class="chakra-text css-sc37ud"
+                              >
+                                Double Trouble
+                              </p>
+                              <p
+                                class="chakra-text css-itvw0n"
+                              >
+                                Double practice game
+                              </p>
+                            </div>
+                            <div
+                              class="css-2gz105"
+                            >
+                              <svg
+                                class="chakra-icon css-swb7g"
+                                fill="currentColor"
+                                focusable="false"
+                                height="1em"
+                                stroke="currentColor"
+                                stroke-width="0"
+                                viewBox="0 0 8 16"
+                                width="1em"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M7.5 8l-5 5L1 11.5 4.75 8 1 4.5 2.5 3l5 5z"
+                                  fill-rule="evenodd"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div
+                        class="css-1rc82uo"
+                        role="group"
+                      >
+                        <a
+                          aria-label="Sweet 16"
+                          href="/sweet16"
+                        >
+                          <div
+                            class="chakra-stack css-84zodg"
+                          >
+                            <div
+                              class="css-0"
+                            >
+                              <p
+                                class="chakra-text css-sc37ud"
+                              >
+                                Sweet 16
+                              </p>
+                              <p
+                                class="chakra-text css-itvw0n"
+                              >
+                                32 double out practice game
+                              </p>
+                            </div>
+                            <div
+                              class="css-2gz105"
+                            >
+                              <svg
+                                class="chakra-icon css-swb7g"
+                                fill="currentColor"
+                                focusable="false"
+                                height="1em"
+                                stroke="currentColor"
+                                stroke-width="0"
+                                viewBox="0 0 8 16"
+                                width="1em"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M7.5 8l-5 5L1 11.5 4.75 8 1 4.5 2.5 3l5 5z"
+                                  fill-rule="evenodd"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div
+                        class="css-1rc82uo"
+                        role="group"
+                      >
+                        <a
+                          aria-label="Tops and Tens"
+                          href="/topsandtens"
+                        >
+                          <div
+                            class="chakra-stack css-84zodg"
+                          >
+                            <div
+                              class="css-0"
+                            >
+                              <p
+                                class="chakra-text css-sc37ud"
+                              >
+                                Tops and Tens
+                              </p>
+                              <p
+                                class="chakra-text css-itvw0n"
+                              >
+                                40 double out practice game
+                              </p>
+                            </div>
+                            <div
+                              class="css-2gz105"
+                            >
+                              <svg
+                                class="chakra-icon css-swb7g"
+                                fill="currentColor"
+                                focusable="false"
+                                height="1em"
+                                stroke="currentColor"
+                                stroke-width="0"
+                                viewBox="0 0 8 16"
+                                width="1em"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M7.5 8l-5 5L1 11.5 4.75 8 1 4.5 2.5 3l5 5z"
+                                  fill-rule="evenodd"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div
+                        class="css-1rc82uo"
+                        role="group"
+                      >
+                        <a
+                          aria-label="Two-Dart Combinations"
+                          href="/twodartcombinations"
+                        >
+                          <div
+                            class="chakra-stack css-84zodg"
+                          >
+                            <div
+                              class="css-0"
+                            >
+                              <p
+                                class="chakra-text css-sc37ud"
+                              >
+                                Two-Dart Combinations
+                              </p>
+                              <p
+                                class="chakra-text css-itvw0n"
+                              >
+                                Two darts double out practice game
+                              </p>
+                            </div>
+                            <div
+                              class="css-2gz105"
+                            >
+                              <svg
+                                class="chakra-icon css-swb7g"
+                                fill="currentColor"
+                                focusable="false"
+                                height="1em"
+                                stroke="currentColor"
+                                stroke-width="0"
+                                viewBox="0 0 8 16"
+                                width="1em"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M7.5 8l-5 5L1 11.5 4.75 8 1 4.5 2.5 3l5 5z"
+                                  fill-rule="evenodd"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div
+                        class="css-1rc82uo"
+                        role="group"
+                      >
+                        <a
+                          aria-label="Around The Compass"
+                          href="/aroundthecompass"
+                        >
+                          <div
+                            class="chakra-stack css-84zodg"
+                          >
+                            <div
+                              class="css-0"
+                            >
+                              <p
+                                class="chakra-text css-sc37ud"
+                              >
+                                Around The Compass
+                              </p>
+                              <p
+                                class="chakra-text css-itvw0n"
+                              >
+                                24 double out practice game
+                              </p>
+                            </div>
+                            <div
+                              class="css-2gz105"
+                            >
+                              <svg
+                                class="chakra-icon css-swb7g"
+                                fill="currentColor"
+                                focusable="false"
+                                height="1em"
+                                stroke="currentColor"
+                                stroke-width="0"
+                                viewBox="0 0 8 16"
+                                width="1em"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M7.5 8l-5 5L1 11.5 4.75 8 1 4.5 2.5 3l5 5z"
+                                  fill-rule="evenodd"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div
+                        class="css-1rc82uo"
+                        role="group"
+                      >
+                        <a
+                          aria-label="Tons Up"
+                          href="/tonsup"
+                        >
+                          <div
+                            class="chakra-stack css-84zodg"
+                          >
+                            <div
+                              class="css-0"
+                            >
+                              <p
+                                class="chakra-text css-sc37ud"
+                              >
+                                Tons Up
+                              </p>
+                              <p
+                                class="chakra-text css-itvw0n"
+                              >
+                                100 double out practice game
+                              </p>
+                            </div>
+                            <div
+                              class="css-2gz105"
+                            >
+                              <svg
+                                class="chakra-icon css-swb7g"
+                                fill="currentColor"
+                                focusable="false"
+                                height="1em"
+                                stroke="currentColor"
+                                stroke-width="0"
+                                viewBox="0 0 8 16"
+                                width="1em"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M7.5 8l-5 5L1 11.5 4.75 8 1 4.5 2.5 3l5 5z"
+                                  fill-rule="evenodd"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div
+                        class="css-1rc82uo"
+                        role="group"
+                      >
+                        <a
+                          aria-label="Route 64"
+                          href="/route64"
+                        >
+                          <div
+                            class="chakra-stack css-84zodg"
+                          >
+                            <div
+                              class="css-0"
+                            >
+                              <p
+                                class="chakra-text css-sc37ud"
+                              >
+                                Route 64
+                              </p>
+                              <p
+                                class="chakra-text css-itvw0n"
+                              >
+                                64 double out practice game
+                              </p>
+                            </div>
+                            <div
+                              class="css-2gz105"
+                            >
+                              <svg
+                                class="chakra-icon css-swb7g"
+                                fill="currentColor"
+                                focusable="false"
+                                height="1em"
+                                stroke="currentColor"
+                                stroke-width="0"
+                                viewBox="0 0 8 16"
+                                width="1em"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M7.5 8l-5 5L1 11.5 4.75 8 1 4.5 2.5 3l5 5z"
+                                  fill-rule="evenodd"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div
+                        class="css-1rc82uo"
+                        role="group"
+                      >
+                        <a
+                          aria-label="Eighty Threw"
+                          href="/eightythrew"
+                        >
+                          <div
+                            class="chakra-stack css-84zodg"
+                          >
+                            <div
+                              class="css-0"
+                            >
+                              <p
+                                class="chakra-text css-sc37ud"
+                              >
+                                Eighty Threw
+                              </p>
+                              <p
+                                class="chakra-text css-itvw0n"
+                              >
+                                82 double out practice game
+                              </p>
+                            </div>
+                            <div
+                              class="css-2gz105"
+                            >
+                              <svg
+                                class="chakra-icon css-swb7g"
+                                fill="currentColor"
+                                focusable="false"
+                                height="1em"
+                                stroke="currentColor"
+                                stroke-width="0"
+                                viewBox="0 0 8 16"
+                                width="1em"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M7.5 8l-5 5L1 11.5 4.75 8 1 4.5 2.5 3l5 5z"
+                                  fill-rule="evenodd"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div
+                        class="css-1rc82uo"
+                        role="group"
+                      >
+                        <a
+                          aria-label="Shanghai Nights"
+                          href="/shanghainights"
+                        >
+                          <div
+                            class="chakra-stack css-84zodg"
+                          >
+                            <div
+                              class="css-0"
+                            >
+                              <p
+                                class="chakra-text css-sc37ud"
+                              >
+                                Shanghai Nights
+                              </p>
+                              <p
+                                class="chakra-text css-itvw0n"
+                              >
+                                120 double out practice game
+                              </p>
+                            </div>
+                            <div
+                              class="css-2gz105"
+                            >
+                              <svg
+                                class="chakra-icon css-swb7g"
+                                fill="currentColor"
+                                focusable="false"
+                                height="1em"
+                                stroke="currentColor"
+                                stroke-width="0"
+                                viewBox="0 0 8 16"
+                                width="1em"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M7.5 8l-5 5L1 11.5 4.75 8 1 4.5 2.5 3l5 5z"
+                                  fill-rule="evenodd"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div
+                        class="css-1rc82uo"
+                        role="group"
+                      >
+                        <a
+                          aria-label="Switch Hitter"
+                          href="/switchhitter"
+                        >
+                          <div
+                            class="chakra-stack css-84zodg"
+                          >
+                            <div
+                              class="css-0"
+                            >
+                              <p
+                                class="chakra-text css-sc37ud"
+                              >
+                                Switch Hitter
+                              </p>
+                              <p
+                                class="chakra-text css-itvw0n"
+                              >
+                                19 practice game
+                              </p>
+                            </div>
+                            <div
+                              class="css-2gz105"
+                            >
+                              <svg
+                                class="chakra-icon css-swb7g"
+                                fill="currentColor"
+                                focusable="false"
+                                height="1em"
+                                stroke="currentColor"
+                                stroke-width="0"
+                                viewBox="0 0 8 16"
+                                width="1em"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M7.5 8l-5 5L1 11.5 4.75 8 1 4.5 2.5 3l5 5z"
+                                  fill-rule="evenodd"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div
+                        class="css-1rc82uo"
+                        role="group"
+                      >
+                        <a
+                          aria-label="Bully Bully"
+                          href="/bullybully"
+                        >
+                          <div
+                            class="chakra-stack css-84zodg"
+                          >
+                            <div
+                              class="css-0"
+                            >
+                              <p
+                                class="chakra-text css-sc37ud"
+                              >
+                                Bully Bully
+                              </p>
+                              <p
+                                class="chakra-text css-itvw0n"
+                              >
+                                BULL practice game
+                              </p>
+                            </div>
+                            <div
+                              class="css-2gz105"
+                            >
+                              <svg
+                                class="chakra-icon css-swb7g"
+                                fill="currentColor"
+                                focusable="false"
+                                height="1em"
+                                stroke="currentColor"
+                                stroke-width="0"
+                                viewBox="0 0 8 16"
+                                width="1em"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M7.5 8l-5 5L1 11.5 4.75 8 1 4.5 2.5 3l5 5z"
+                                  fill-rule="evenodd"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div
+                        class="css-1rc82uo"
+                        role="group"
+                      >
+                        <a
+                          aria-label="Treble For Show"
+                          href="/treblesforshow"
+                        >
+                          <div
+                            class="chakra-stack css-84zodg"
+                          >
+                            <div
+                              class="css-0"
+                            >
+                              <p
+                                class="chakra-text css-sc37ud"
+                              >
+                                Treble For Show
+                              </p>
+                              <p
+                                class="chakra-text css-itvw0n"
+                              >
+                                20 practice game
+                              </p>
+                            </div>
+                            <div
+                              class="css-2gz105"
+                            >
+                              <svg
+                                class="chakra-icon css-swb7g"
+                                fill="currentColor"
+                                focusable="false"
+                                height="1em"
+                                stroke="currentColor"
+                                stroke-width="0"
+                                viewBox="0 0 8 16"
+                                width="1em"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M7.5 8l-5 5L1 11.5 4.75 8 1 4.5 2.5 3l5 5z"
+                                  fill-rule="evenodd"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div
+                        class="css-1rc82uo"
+                        role="group"
+                      >
+                        <a
+                          aria-label="Arrange"
+                          href="/arrange"
+                        >
+                          <div
+                            class="chakra-stack css-84zodg"
+                          >
+                            <div
+                              class="css-0"
+                            >
+                              <p
+                                class="chakra-text css-sc37ud"
+                              >
+                                Arrange
+                              </p>
+                              <p
+                                class="chakra-text css-itvw0n"
+                              >
+                                Arrange practice game
+                              </p>
+                            </div>
+                            <div
+                              class="css-2gz105"
+                            >
+                              <svg
+                                class="chakra-icon css-swb7g"
+                                fill="currentColor"
+                                focusable="false"
+                                height="1em"
+                                stroke="currentColor"
+                                stroke-width="0"
+                                viewBox="0 0 8 16"
+                                width="1em"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M7.5 8l-5 5L1 11.5 4.75 8 1 4.5 2.5 3l5 5z"
+                                  fill-rule="evenodd"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+              <div
+                class="css-0"
+              >
+                <div
+                  aria-controls="popover-content-:r4:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="css-13fflh2"
+                  id="popover-trigger-:r4:"
+                >
+                  <a
+                    href="/respect"
+                  >
+                    Respect
+                  </a>
+                </div>
+              </div>
+              <div
+                class="css-0"
+              >
+                <div
+                  aria-controls="popover-content-:r6:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="css-13fflh2"
+                  id="popover-trigger-:r6:"
+                >
+                  <a
+                    href="/history"
+                  >
+                    History
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="css-17xejub"
+          />
+          <button
+            aria-controls="popover-content-:r8:"
+            aria-expanded="false"
+            aria-haspopup="dialog"
+            aria-label="change language"
+            class="chakra-button css-13zvu4r"
+            id="popover-trigger-:r8:"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              fill="currentColor"
+              focusable="false"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 512 512"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M478.33 433.6l-90-218a22 22 0 00-40.67 0l-90 218a22 22 0 1040.67 16.79L316.66 406h102.67l18.33 44.39A22 22 0 00458 464a22 22 0 0020.32-30.4zM334.83 362L368 281.65 401.17 362zm-66.99-19.08a22 22 0 00-4.89-30.7c-.2-.15-15-11.13-36.49-34.73 39.65-53.68 62.11-114.75 71.27-143.49H330a22 22 0 000-44H214V70a22 22 0 00-44 0v20H54a22 22 0 000 44h197.25c-9.52 26.95-27.05 69.5-53.79 108.36-31.41-41.68-43.08-68.65-43.17-68.87a22 22 0 00-40.58 17c.58 1.38 14.55 34.23 52.86 83.93.92 1.19 1.83 2.35 2.74 3.51-39.24 44.35-77.74 71.86-93.85 80.74a22 22 0 1021.07 38.63c2.16-1.18 48.6-26.89 101.63-85.59 22.52 24.08 38 35.44 38.93 36.1a22 22 0 0030.75-4.9z"
+              />
+            </svg>
+          </button>
+          <div
+            class="chakra-popover__popper css-1qq679y"
+            style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+          >
+            <section
+              class="chakra-popover__content css-sjj62m"
+              id="popover-content-:r8:"
+              role="dialog"
+              style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+              tabindex="-1"
+            >
+              <div
+                class="css-1rc82uo"
+                href="/"
+                role="group"
+              >
+                <p
+                  class="chakra-text css-sc37ud"
+                >
+                  日本語
+                </p>
+              </div>
+              <div
+                class="css-1rc82uo"
+                href="/"
+                role="group"
+              >
+                <p
+                  class="chakra-text css-sc37ud"
+                >
+                  English
+                </p>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+      <div
+        class="chakra-collapse"
+        style="overflow: hidden; display: none; opacity: 0; height: 0px;"
+      >
+        <div
+          class="chakra-stack css-1lgh1g"
+        >
+          <div
+            class="chakra-stack css-egoftb"
+          >
+            <div
+              class="css-lxmzlz"
+              href="/#"
+            >
+              <p
+                class="chakra-text css-9y4vnp"
+              >
+                Games
+              </p>
+              <svg
+                class="chakra-icon css-q9erop"
+                fill="currentColor"
+                focusable="false"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 10 16"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 11L0 6l1.5-1.5L5 8.25 8.5 4.5 10 6l-5 5z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div
+              class="chakra-collapse"
+              style="overflow: hidden; display: none; opacity: 0; height: 0px;"
+            >
+              <div
+                class="chakra-stack css-11sp92w"
+              >
+                <div
+                  class="css-1j1i25b"
+                >
+                  Eagle's Eye
+                </div>
+                <div
+                  class="css-1j1i25b"
+                >
+                  Cricket Mark-Up
+                </div>
+                <div
+                  class="css-1j1i25b"
+                >
+                  Double Trouble
+                </div>
+                <div
+                  class="css-1j1i25b"
+                >
+                  Sweet 16
+                </div>
+                <div
+                  class="css-1j1i25b"
+                >
+                  Tops and Tens
+                </div>
+                <div
+                  class="css-1j1i25b"
+                >
+                  Two-Dart Combinations
+                </div>
+                <div
+                  class="css-1j1i25b"
+                >
+                  Around The Compass
+                </div>
+                <div
+                  class="css-1j1i25b"
+                >
+                  Tons Up
+                </div>
+                <div
+                  class="css-1j1i25b"
+                >
+                  Route 64
+                </div>
+                <div
+                  class="css-1j1i25b"
+                >
+                  Eighty Threw
+                </div>
+                <div
+                  class="css-1j1i25b"
+                >
+                  Shanghai Nights
+                </div>
+                <div
+                  class="css-1j1i25b"
+                >
+                  Switch Hitter
+                </div>
+                <div
+                  class="css-1j1i25b"
+                >
+                  Bully Bully
+                </div>
+                <div
+                  class="css-1j1i25b"
+                >
+                  Treble For Show
+                </div>
+                <div
+                  class="css-1j1i25b"
+                >
+                  Arrange
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="chakra-stack css-egoftb"
+          >
+            <div
+              class="css-lxmzlz"
+              href="/respect"
+            >
+              <p
+                class="chakra-text css-9y4vnp"
+              >
+                Respect
+              </p>
+            </div>
+            <div
+              class="chakra-collapse"
+              style="overflow: hidden; display: none; opacity: 0; height: 0px;"
+            >
+              <div
+                class="chakra-stack css-11sp92w"
+              />
+            </div>
+          </div>
+          <div
+            class="chakra-stack css-egoftb"
+          >
+            <div
+              class="css-lxmzlz"
+              href="/history"
+            >
+              <p
+                class="chakra-text css-9y4vnp"
+              >
+                History
+              </p>
+            </div>
+            <div
+              class="chakra-collapse"
+              style="overflow: hidden; display: none; opacity: 0; height: 0px;"
+            >
+              <div
+                class="chakra-stack css-11sp92w"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div
+      class="css-1t2fh6z"
+    />
+    <div
+      class="css-1lekzkb"
+    >
+      <button
+        aria-label="setting"
+        class="chakra-button css-1x4o3bv"
+        type="button"
+      >
+        <span
+          class="chakra-button__icon css-1wh2kri"
+        >
+          <svg
+            aria-hidden="true"
+            fill="none"
+            focusable="false"
+            height="1em"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="12"
+              cy="12"
+              r="3"
+            />
+            <path
+              d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"
+            />
+          </svg>
+        </span>
+        New Game
+      </button>
+      <div
+        class="css-1vakbk4"
+      >
+        <button
+          aria-label="what is this game?"
+          class="chakra-button css-1x4o3bv"
+          type="button"
+        >
+          <span
+            class="chakra-button__icon css-1wh2kri"
+          >
+            <svg
+              aria-hidden="true"
+              fill="currentColor"
+              focusable="false"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12,22 C17.5228475,22 22,17.5228475 22,12 C22,6.4771525 17.5228475,2 12,2 C6.4771525,2 2,6.4771525 2,12 C2,17.5228475 6.4771525,22 12,22 Z M12,10 L12,18 M12,6 L12,8"
+                fill="none"
+                stroke="#000"
+                stroke-width="2"
+              />
+            </svg>
+          </span>
+          What is this game?
+        </button>
+        <button
+          aria-label="open form check"
+          class="chakra-button css-13zvu4r"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            fill="currentColor"
+            focusable="false"
+            height="32"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 1024 1024"
+            width="32"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M864 248H728l-32.4-90.8a32.07 32.07 0 0 0-30.2-21.2H358.6c-13.5 0-25.6 8.5-30.1 21.2L296 248H160c-44.2 0-80 35.8-80 80v456c0 44.2 35.8 80 80 80h704c44.2 0 80-35.8 80-80V328c0-44.2-35.8-80-80-80zm8 536c0 4.4-3.6 8-8 8H160c-4.4 0-8-3.6-8-8V328c0-4.4 3.6-8 8-8h186.7l17.1-47.8 22.9-64.2h250.5l22.9 64.2 17.1 47.8H864c4.4 0 8 3.6 8 8v456zM512 384c-88.4 0-160 71.6-160 160s71.6 160 160 160 160-71.6 160-160-71.6-160-160-160zm0 256c-53 0-96-43-96-96s43-96 96-96 96 43 96 96-43 96-96 96z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div
+      class="css-1dlhlta"
+    >
+      <div
+        class="css-0"
+      >
+        <div
+          class="css-1bjivtr"
+        >
+          <div
+            aria-label="target board"
+            class="css-0"
+          >
+            <p
+              aria-label="message Round 20 / 20"
+              class="chakra-text css-uzy2cd"
+            >
+              Round 20 / 20
+            </p>
+            <p
+              aria-label="target Round 20 / 20"
+              class="chakra-text css-17ue8gu"
+            >
+              0
+            </p>
+          </div>
+          <div
+            aria-label="target board"
+            class="css-0"
+          >
+            <p
+              aria-label="message Score"
+              class="chakra-text css-czc2fg"
+            >
+              Score
+            </p>
+            <p
+              aria-label="target Score"
+              class="chakra-text css-88k4kx"
+            >
+              400
+            </p>
+          </div>
+        </div>
+        <div
+          class="css-13lni6n"
+        >
+          <p
+            class="chakra-text css-ympam6"
+          >
+            20D
+          </p>
+          <p
+            class="chakra-text css-ympam6"
+          >
+            20D
+          </p>
+          <p
+            class="chakra-text css-ympam6"
+          >
+            20D
+          </p>
+          <div
+            class="css-1ensw45"
+          >
+            <div
+              class="css-0"
+            >
+              <button
+                aria-label="clear scores"
+                class="chakra-button css-b7k6lj"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 16 16"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M10 3h3v1h-1v9l-1 1H4l-1-1V4H2V3h3V2a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v1zM9 2H6v1h3V2zM4 13h7V4H4v9zm2-8H5v7h1V5zm1 0h1v7H7V5zm2 0h1v7H9V5z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
+            <button
+              aria-label="round over"
+              class="chakra-button css-qlnsbv"
+              type="button"
+            >
+              Round Over
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="css-13s4dk6"
+      >
+        <div
+          class="css-3z9ffy"
+        >
+          <div
+            class="css-1sqv3qw"
+          >
+            <div
+              class="css-tkevr6"
+            >
+              <p
+                class="chakra-text css-txmq0u"
+              >
+                Single
+              </p>
+            </div>
+            <div
+              class="css-tkevr6"
+            >
+              <p
+                class="chakra-text css-txmq0u"
+              >
+                Double
+              </p>
+            </div>
+            <div
+              class="css-tkevr6"
+            >
+              <p
+                class="chakra-text css-txmq0u"
+              >
+                Triple
+              </p>
+            </div>
+            <button
+              aria-label="20"
+              class="chakra-button css-zgd93q"
+              type="button"
+            >
+              20
+            </button>
+            <button
+              aria-label="20 double"
+              class="chakra-button css-126aub2"
+              type="button"
+            >
+              20
+            </button>
+            <button
+              aria-label="20 triple"
+              class="chakra-button css-aw82t9"
+              type="button"
+            >
+              20
+            </button>
+            <button
+              aria-label="16"
+              class="chakra-button css-zgd93q"
+              type="button"
+            >
+              16
+            </button>
+            <button
+              aria-label="16 double"
+              class="chakra-button css-126aub2"
+              type="button"
+            >
+              16
+            </button>
+            <button
+              aria-label="16 triple"
+              class="chakra-button css-aw82t9"
+              type="button"
+            >
+              16
+            </button>
+            <button
+              aria-label="8"
+              class="chakra-button css-zgd93q"
+              type="button"
+            >
+              8
+            </button>
+            <button
+              aria-label="8 double"
+              class="chakra-button css-126aub2"
+              type="button"
+            >
+              8
+            </button>
+            <button
+              aria-label="8 triple"
+              class="chakra-button css-aw82t9"
+              type="button"
+            >
+              8
+            </button>
+            <button
+              aria-label="4"
+              class="chakra-button css-zgd93q"
+              type="button"
+            >
+              4
+            </button>
+            <button
+              aria-label="4 double"
+              class="chakra-button css-126aub2"
+              type="button"
+            >
+              4
+            </button>
+            <button
+              aria-label="4 triple"
+              class="chakra-button css-aw82t9"
+              type="button"
+            >
+              4
+            </button>
+            <button
+              aria-label="2"
+              class="chakra-button css-zgd93q"
+              type="button"
+            >
+              2
+            </button>
+            <button
+              aria-label="2 double"
+              class="chakra-button css-126aub2"
+              type="button"
+            >
+              2
+            </button>
+            <button
+              aria-label="2 triple"
+              class="chakra-button css-aw82t9"
+              type="button"
+            >
+              2
+            </button>
+            <button
+              aria-label="1"
+              class="chakra-button css-zgd93q"
+              type="button"
+            >
+              1
+            </button>
+            <button
+              aria-label="1 double"
+              class="chakra-button css-126aub2"
+              type="button"
+            >
+              1
+            </button>
+            <button
+              aria-label="1 triple"
+              class="chakra-button css-aw82t9"
+              type="button"
+            >
+              1
+            </button>
+          </div>
+          <div
+            class="css-1vakbk4"
+          >
+            <button
+              class="chakra-button css-zgd93q"
+              type="button"
+            >
+              Full
+            </button>
+            <button
+              aria-label="out board"
+              class="chakra-button css-1wf9t6a"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                fill="none"
+                focusable="false"
+                height="1em"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <desc />
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                  stroke="none"
+                />
+                <path
+                  d="M11.286 11.3a1 1 0 0 0 1.41 1.419"
+                />
+                <path
+                  d="M8.44 8.49a5 5 0 0 0 7.098 7.044m1.377 -2.611a5 5 0 0 0 -5.846 -5.836"
+                />
+                <path
+                  d="M5.649 5.623a9 9 0 1 0 12.698 12.758m1.683 -2.313a9 9 0 0 0 -12.076 -12.11"
+                />
+                <path
+                  d="M3 3l18 18"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-h94677"
+    >
+      <div
+        class="css-1c5y0hl"
+      >
+        <div
+          class="chakra-table__container css-zipzvv"
+        >
+          <table
+            class="chakra-table css-5605sr"
+          >
+            <tbody
+              class="css-0"
+            >
+              <tr
+                class="css-0"
+              >
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+              </tr>
+              <tr
+                class="css-0"
+              >
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+              </tr>
+              <tr
+                class="css-0"
+              >
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+              </tr>
+              <tr
+                class="css-0"
+              >
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+              </tr>
+              <tr
+                class="css-0"
+              >
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+              </tr>
+              <tr
+                class="css-0"
+              >
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+              </tr>
+              <tr
+                class="css-0"
+              >
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+              </tr>
+              <tr
+                class="css-0"
+              >
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+              </tr>
+              <tr
+                class="css-0"
+              >
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+              </tr>
+              <tr
+                class="css-0"
+              >
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+              </tr>
+              <tr
+                class="css-0"
+              >
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+              </tr>
+              <tr
+                class="css-0"
+              >
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+              </tr>
+              <tr
+                class="css-0"
+              >
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+              </tr>
+              <tr
+                class="css-0"
+              >
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+              </tr>
+              <tr
+                class="css-0"
+              >
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+              </tr>
+              <tr
+                class="css-0"
+              >
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+              </tr>
+              <tr
+                class="css-0"
+              >
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+              </tr>
+              <tr
+                class="css-0"
+              >
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+              </tr>
+              <tr
+                class="css-0"
+              >
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+                <td
+                  class="css-xumdn4"
+                >
+                  20D
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-75sfx8"
+    >
+      <div
+        class="css-gmuwbf"
+      >
+        <div
+          class="chakra-stack css-2lwpci"
+        >
+          <p
+            class="chakra-text css-79wky"
+          >
+            (c) 2022 okadat
+          </p>
+          <div
+            class="chakra-stack css-x0u0or"
+          >
+            <a
+              aria-label="subaru-git github page"
+              class="chakra-link css-spn4bz"
+              href="https://github.com/subaru-git"
+            >
+              <svg
+                color="white"
+                fill="currentColor"
+                height="24"
+                stroke="currentColor"
+                stroke-width="0"
+                style="color: white;"
+                viewBox="0 0 1024 1024"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M511.6 76.3C264.3 76.2 64 276.4 64 523.5 64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9 26.4 39.1 77.9 32.5 104 26 5.7-23.5 17.9-44.5 34.7-60.8-140.6-25.2-199.2-111-199.2-213 0-49.5 16.3-95 48.3-131.7-20.4-60.5 1.9-112.3 4.9-120 58.1-5.2 118.5 41.6 123.2 45.3 33-8.9 70.7-13.6 112.9-13.6 42.4 0 80.2 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.3-43.9 2.9 7.7 24.7 58.3 5.5 118 32.4 36.8 48.9 82.7 48.9 132.3 0 102.2-59 188.1-200 212.9a127.5 127.5 0 0 1 38.1 91v112.5c.8 9 0 17.9 15 17.9 177.1-59.7 304.6-227 304.6-424.1 0-247.2-200.4-447.3-447.5-447.3z"
+                />
+              </svg>
+            </a>
+            <a
+              aria-label="subaru_m_ twitter"
+              class="chakra-link css-spn4bz"
+              href="https://twitter.com/subaru_m_"
+            >
+              <svg
+                color="white"
+                fill="currentColor"
+                height="24"
+                stroke="currentColor"
+                stroke-width="0"
+                style="color: white;"
+                viewBox="0 0 1024 1024"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M928 254.3c-30.6 13.2-63.9 22.7-98.2 26.4a170.1 170.1 0 0 0 75-94 336.64 336.64 0 0 1-108.2 41.2A170.1 170.1 0 0 0 672 174c-94.5 0-170.5 76.6-170.5 170.6 0 13.2 1.6 26.4 4.2 39.1-141.5-7.4-267.7-75-351.6-178.5a169.32 169.32 0 0 0-23.2 86.1c0 59.2 30.1 111.4 76 142.1a172 172 0 0 1-77.1-21.7v2.1c0 82.9 58.6 151.6 136.7 167.4a180.6 180.6 0 0 1-44.9 5.8c-11.1 0-21.6-1.1-32.2-2.6C211 652 273.9 701.1 348.8 702.7c-58.6 45.9-132 72.9-211.7 72.9-14.3 0-27.5-.5-41.2-2.1C171.5 822 261.2 850 357.8 850 671.4 850 843 590.2 843 364.7c0-7.4 0-14.8-.5-22.2 33.2-24.3 62.3-54.4 85.5-88.2z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <span
+    hidden=""
+    id="__chakra_env"
+  />
+</div>
+`;

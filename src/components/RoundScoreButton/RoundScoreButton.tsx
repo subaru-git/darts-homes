@@ -56,7 +56,7 @@ const DesktopRoundScoreButton: FC<RoundScoreButtonProps> = ({
       {!isFinished ? (
         <Button
           colorScheme={'green'}
-          width={'auto'}
+          width={'fit-content'}
           onClick={() => onRoundChange()}
           disabled={disabled}
           aria-label={'round change'}
@@ -67,7 +67,7 @@ const DesktopRoundScoreButton: FC<RoundScoreButtonProps> = ({
         <>
           <Button
             colorScheme={'orange'}
-            w={'auto'}
+            width={'fit-content'}
             onClick={() => onOpen()}
             aria-label={'round over'}
           >

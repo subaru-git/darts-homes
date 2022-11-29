@@ -3,5 +3,7 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "svg.preview.background": "transparent"
+  "svg.preview.background": "transparent",
+  "jest.autoRun": {},
+  "terminal.integrated.scrollback": 10000
 }

@@ -4,7 +4,7 @@ exports[`should rendering 1`] = `
 <div>
   <button
     aria-label="round change"
-    class="chakra-button css-bnxwpm"
+    class="chakra-button css-bb956o"
     type="button"
   >
     Round Change
