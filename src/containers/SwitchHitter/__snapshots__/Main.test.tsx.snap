@@ -1318,21 +1318,21 @@ exports[`should rendering 1`] = `
             </div>
             <button
               aria-label="19"
-              class="chakra-button css-zgd93q"
+              class="chakra-button css-1ccv9dn"
               type="button"
             >
               19
             </button>
             <button
               aria-label="19 double"
-              class="chakra-button css-126aub2"
+              class="chakra-button css-15j4lkt"
               type="button"
             >
               19
             </button>
             <button
               aria-label="19 triple"
-              class="chakra-button css-aw82t9"
+              class="chakra-button css-rqa4n6"
               type="button"
             >
               19
@@ -1342,14 +1342,14 @@ exports[`should rendering 1`] = `
             class="css-1vakbk4"
           >
             <button
-              class="chakra-button css-zgd93q"
+              class="chakra-button css-1ccv9dn"
               type="button"
             >
               Other
             </button>
             <button
               aria-label="out board"
-              class="chakra-button css-1wf9t6a"
+              class="chakra-button css-gai936"
               type="button"
             >
               <svg

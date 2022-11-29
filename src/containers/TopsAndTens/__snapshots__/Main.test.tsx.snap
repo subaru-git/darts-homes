@@ -1318,63 +1318,63 @@ exports[`should rendering 1`] = `
             </div>
             <button
               aria-label="20"
-              class="chakra-button css-zgd93q"
+              class="chakra-button css-1ccv9dn"
               type="button"
             >
               20
             </button>
             <button
               aria-label="20 double"
-              class="chakra-button css-126aub2"
+              class="chakra-button css-15j4lkt"
               type="button"
             >
               20
             </button>
             <button
               aria-label="20 triple"
-              class="chakra-button css-aw82t9"
+              class="chakra-button css-rqa4n6"
               type="button"
             >
               20
             </button>
             <button
               aria-label="10"
-              class="chakra-button css-zgd93q"
+              class="chakra-button css-1ccv9dn"
               type="button"
             >
               10
             </button>
             <button
               aria-label="10 double"
-              class="chakra-button css-126aub2"
+              class="chakra-button css-15j4lkt"
               type="button"
             >
               10
             </button>
             <button
               aria-label="10 triple"
-              class="chakra-button css-aw82t9"
+              class="chakra-button css-rqa4n6"
               type="button"
             >
               10
             </button>
             <button
               aria-label="5"
-              class="chakra-button css-zgd93q"
+              class="chakra-button css-1ccv9dn"
               type="button"
             >
               5
             </button>
             <button
               aria-label="5 double"
-              class="chakra-button css-126aub2"
+              class="chakra-button css-15j4lkt"
               type="button"
             >
               5
             </button>
             <button
               aria-label="5 triple"
-              class="chakra-button css-aw82t9"
+              class="chakra-button css-rqa4n6"
               type="button"
             >
               5
@@ -1384,14 +1384,14 @@ exports[`should rendering 1`] = `
             class="css-1vakbk4"
           >
             <button
-              class="chakra-button css-zgd93q"
+              class="chakra-button css-1ccv9dn"
               type="button"
             >
               Other
             </button>
             <button
               aria-label="out board"
-              class="chakra-button css-1wf9t6a"
+              class="chakra-button css-gai936"
               type="button"
             >
               <svg
