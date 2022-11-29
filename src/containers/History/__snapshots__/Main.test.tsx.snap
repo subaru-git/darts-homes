@@ -1160,7 +1160,7 @@ exports[`should rendering 1`] = `
           />
           <button
             aria-label="import"
-            class="chakra-button css-bsl9zi"
+            class="chakra-button css-kx4v7c"
             type="button"
           >
             <span
@@ -1189,7 +1189,7 @@ exports[`should rendering 1`] = `
           </button>
           <button
             aria-label="export"
-            class="chakra-button css-4z7u5h"
+            class="chakra-button css-iez0o3"
             type="button"
           >
             <span

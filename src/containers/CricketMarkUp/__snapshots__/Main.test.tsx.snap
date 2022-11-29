@@ -1667,7 +1667,7 @@ exports[`should rendering 1`] = `
               </button>
               <button
                 aria-label="out board"
-                class="chakra-button css-18rlst0"
+                class="chakra-button css-s0g190"
                 disabled=""
                 type="button"
               >
@@ -1737,7 +1737,7 @@ exports[`should rendering 1`] = `
               </div>
               <button
                 aria-label="20"
-                class="chakra-button css-zgd93q"
+                class="chakra-button css-1ccv9dn"
                 disabled=""
                 type="button"
               >
@@ -1745,7 +1745,7 @@ exports[`should rendering 1`] = `
               </button>
               <button
                 aria-label="20 double"
-                class="chakra-button css-126aub2"
+                class="chakra-button css-15j4lkt"
                 disabled=""
                 type="button"
               >
@@ -1753,7 +1753,7 @@ exports[`should rendering 1`] = `
               </button>
               <button
                 aria-label="20 triple"
-                class="chakra-button css-aw82t9"
+                class="chakra-button css-rqa4n6"
                 disabled=""
                 type="button"
               >
@@ -1761,7 +1761,7 @@ exports[`should rendering 1`] = `
               </button>
               <button
                 aria-label="19"
-                class="chakra-button css-zgd93q"
+                class="chakra-button css-1ccv9dn"
                 disabled=""
                 type="button"
               >
@@ -1769,7 +1769,7 @@ exports[`should rendering 1`] = `
               </button>
               <button
                 aria-label="19 double"
-                class="chakra-button css-126aub2"
+                class="chakra-button css-15j4lkt"
                 disabled=""
                 type="button"
               >
@@ -1777,7 +1777,7 @@ exports[`should rendering 1`] = `
               </button>
               <button
                 aria-label="19 triple"
-                class="chakra-button css-aw82t9"
+                class="chakra-button css-rqa4n6"
                 disabled=""
                 type="button"
               >
@@ -1785,7 +1785,7 @@ exports[`should rendering 1`] = `
               </button>
               <button
                 aria-label="18"
-                class="chakra-button css-zgd93q"
+                class="chakra-button css-1ccv9dn"
                 disabled=""
                 type="button"
               >
@@ -1793,7 +1793,7 @@ exports[`should rendering 1`] = `
               </button>
               <button
                 aria-label="18 double"
-                class="chakra-button css-126aub2"
+                class="chakra-button css-15j4lkt"
                 disabled=""
                 type="button"
               >
@@ -1801,7 +1801,7 @@ exports[`should rendering 1`] = `
               </button>
               <button
                 aria-label="18 triple"
-                class="chakra-button css-aw82t9"
+                class="chakra-button css-rqa4n6"
                 disabled=""
                 type="button"
               >
@@ -1809,7 +1809,7 @@ exports[`should rendering 1`] = `
               </button>
               <button
                 aria-label="17"
-                class="chakra-button css-zgd93q"
+                class="chakra-button css-1ccv9dn"
                 disabled=""
                 type="button"
               >
@@ -1817,7 +1817,7 @@ exports[`should rendering 1`] = `
               </button>
               <button
                 aria-label="17 double"
-                class="chakra-button css-126aub2"
+                class="chakra-button css-15j4lkt"
                 disabled=""
                 type="button"
               >
@@ -1825,7 +1825,7 @@ exports[`should rendering 1`] = `
               </button>
               <button
                 aria-label="17 triple"
-                class="chakra-button css-aw82t9"
+                class="chakra-button css-rqa4n6"
                 disabled=""
                 type="button"
               >
@@ -1833,7 +1833,7 @@ exports[`should rendering 1`] = `
               </button>
               <button
                 aria-label="16"
-                class="chakra-button css-zgd93q"
+                class="chakra-button css-1ccv9dn"
                 disabled=""
                 type="button"
               >
@@ -1841,7 +1841,7 @@ exports[`should rendering 1`] = `
               </button>
               <button
                 aria-label="16 double"
-                class="chakra-button css-126aub2"
+                class="chakra-button css-15j4lkt"
                 disabled=""
                 type="button"
               >
@@ -1849,7 +1849,7 @@ exports[`should rendering 1`] = `
               </button>
               <button
                 aria-label="16 triple"
-                class="chakra-button css-aw82t9"
+                class="chakra-button css-rqa4n6"
                 disabled=""
                 type="button"
               >
@@ -1857,7 +1857,7 @@ exports[`should rendering 1`] = `
               </button>
               <button
                 aria-label="15"
-                class="chakra-button css-zgd93q"
+                class="chakra-button css-1ccv9dn"
                 disabled=""
                 type="button"
               >
@@ -1865,7 +1865,7 @@ exports[`should rendering 1`] = `
               </button>
               <button
                 aria-label="15 double"
-                class="chakra-button css-126aub2"
+                class="chakra-button css-15j4lkt"
                 disabled=""
                 type="button"
               >
@@ -1873,7 +1873,7 @@ exports[`should rendering 1`] = `
               </button>
               <button
                 aria-label="15 triple"
-                class="chakra-button css-aw82t9"
+                class="chakra-button css-rqa4n6"
                 disabled=""
                 type="button"
               >
@@ -1884,7 +1884,7 @@ exports[`should rendering 1`] = `
               class="css-1vakbk4"
             >
               <button
-                class="chakra-button css-zgd93q"
+                class="chakra-button css-1ccv9dn"
                 disabled=""
                 type="button"
               >

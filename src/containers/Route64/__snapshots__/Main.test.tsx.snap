@@ -1318,126 +1318,126 @@ exports[`should rendering 1`] = `
             </div>
             <button
               aria-label="20"
-              class="chakra-button css-zgd93q"
+              class="chakra-button css-1ccv9dn"
               type="button"
             >
               20
             </button>
             <button
               aria-label="20 double"
-              class="chakra-button css-126aub2"
+              class="chakra-button css-15j4lkt"
               type="button"
             >
               20
             </button>
             <button
               aria-label="20 triple"
-              class="chakra-button css-aw82t9"
+              class="chakra-button css-rqa4n6"
               type="button"
             >
               20
             </button>
             <button
               aria-label="16"
-              class="chakra-button css-zgd93q"
+              class="chakra-button css-1ccv9dn"
               type="button"
             >
               16
             </button>
             <button
               aria-label="16 double"
-              class="chakra-button css-126aub2"
+              class="chakra-button css-15j4lkt"
               type="button"
             >
               16
             </button>
             <button
               aria-label="16 triple"
-              class="chakra-button css-aw82t9"
+              class="chakra-button css-rqa4n6"
               type="button"
             >
               16
             </button>
             <button
               aria-label="8"
-              class="chakra-button css-zgd93q"
+              class="chakra-button css-1ccv9dn"
               type="button"
             >
               8
             </button>
             <button
               aria-label="8 double"
-              class="chakra-button css-126aub2"
+              class="chakra-button css-15j4lkt"
               type="button"
             >
               8
             </button>
             <button
               aria-label="8 triple"
-              class="chakra-button css-aw82t9"
+              class="chakra-button css-rqa4n6"
               type="button"
             >
               8
             </button>
             <button
               aria-label="4"
-              class="chakra-button css-zgd93q"
+              class="chakra-button css-1ccv9dn"
               type="button"
             >
               4
             </button>
             <button
               aria-label="4 double"
-              class="chakra-button css-126aub2"
+              class="chakra-button css-15j4lkt"
               type="button"
             >
               4
             </button>
             <button
               aria-label="4 triple"
-              class="chakra-button css-aw82t9"
+              class="chakra-button css-rqa4n6"
               type="button"
             >
               4
             </button>
             <button
               aria-label="2"
-              class="chakra-button css-zgd93q"
+              class="chakra-button css-1ccv9dn"
               type="button"
             >
               2
             </button>
             <button
               aria-label="2 double"
-              class="chakra-button css-126aub2"
+              class="chakra-button css-15j4lkt"
               type="button"
             >
               2
             </button>
             <button
               aria-label="2 triple"
-              class="chakra-button css-aw82t9"
+              class="chakra-button css-rqa4n6"
               type="button"
             >
               2
             </button>
             <button
               aria-label="1"
-              class="chakra-button css-zgd93q"
+              class="chakra-button css-1ccv9dn"
               type="button"
             >
               1
             </button>
             <button
               aria-label="1 double"
-              class="chakra-button css-126aub2"
+              class="chakra-button css-15j4lkt"
               type="button"
             >
               1
             </button>
             <button
               aria-label="1 triple"
-              class="chakra-button css-aw82t9"
+              class="chakra-button css-rqa4n6"
               type="button"
             >
               1
@@ -1447,14 +1447,14 @@ exports[`should rendering 1`] = `
             class="css-1vakbk4"
           >
             <button
-              class="chakra-button css-zgd93q"
+              class="chakra-button css-1ccv9dn"
               type="button"
             >
               Full
             </button>
             <button
               aria-label="out board"
-              class="chakra-button css-1wf9t6a"
+              class="chakra-button css-gai936"
               type="button"
             >
               <svg
