@@ -9,7 +9,7 @@ import {
   useState,
 } from 'react';
 import { createCheckers } from 'ts-interface-checker';
-import SwitchHitterGame from '@/lib/SwitchHitterGame/SwitchHitterGame';
+import SwitchHitterGame from '@/lib/SwitchHitterGame';
 import types from '@/schemas/Types-ti';
 
 const switchHitterGameContext = createContext<SwitchHitterGame | null>(new SwitchHitterGame(20));
@@ -33,7 +33,7 @@ const SwitchHitterGameContextProvider: FC<{ children: ReactNode | ReactNode[] }>
   }, []);
   useEffect(() => {
     if (!game) return;
-    localStorage.setItem('SwitchHitter', JSON.stringify(game.getProgressJson()));
+    localStorage.setItem('SwitchHitter', JSON.stringify(game.getGameProgress()));
   }, [game]);
   return (
     <switchHitterGameContext.Provider value={game}>

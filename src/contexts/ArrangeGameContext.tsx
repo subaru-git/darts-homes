@@ -9,7 +9,7 @@ import {
   useState,
 } from 'react';
 import { createCheckers } from 'ts-interface-checker';
-import ArrangeGame from '@/lib/ArrangeGame/ArrangeGame';
+import ArrangeGame from '@/lib/ArrangeGame/';
 import types from '@/schemas/Types-ti';
 
 const arrangeGameContext = createContext<ArrangeGame | null>(new ArrangeGame());
@@ -31,7 +31,7 @@ const ArrangeGameContextProvider: FC<{ children: ReactNode | ReactNode[] }> = ({
   }, []);
   useEffect(() => {
     if (!game) return;
-    localStorage.setItem('Arrange', JSON.stringify(game.getProgressJson()));
+    localStorage.setItem('Arrange', JSON.stringify(game.getGameProgress()));
   }, [game]);
   return (
     <arrangeGameContext.Provider value={game}>

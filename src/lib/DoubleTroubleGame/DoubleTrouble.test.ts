@@ -17,7 +17,7 @@ test('in gaming', () => {
     expect(game.getTotalScore()).toEqual(15 * (i + 1));
     game.roundChange();
   });
-  expect(game.isFinish()).toBeTruthy();
+  expect(game.isFinished()).toBeTruthy();
   expect(game.getGameResult()).toEqual({
     result: 300,
     scores: [...Array(20)].map((_, i) => [`${i + 1}D`, `${i + 1}D`, `${i + 1}D`]),

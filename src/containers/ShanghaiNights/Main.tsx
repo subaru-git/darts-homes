@@ -13,9 +13,9 @@ import {
 } from '@/contexts/ShanghaiNightsGameContext';
 import { db } from '@/db/db';
 import useLocale from '@/hooks/locale';
-import { saveToDB } from '@/lib/GameHistoryManager/GameHistory';
+import { saveToDB } from '@/lib/GameHistoryManager';
 import { updateObject } from '@/lib/Helper/updateObjectState';
-import ShanghaiNightsGame from '@/lib/ShanghaiNightsGame/ShanghaiNightsGame';
+import ShanghaiNightsGame from '@/lib/ShanghaiNightsGame';
 import MainTemplate from '@/templates/MainTemplate';
 
 const Main: FC = () => {
@@ -55,7 +55,7 @@ const DesktopMain: FC<MainProps> = ({ game, setGame, description }) => {
       <Flex justifyContent='space-between' alignItems='center'>
         <NewGame
           onNewGame={(targetRound) => setGame(new ShanghaiNightsGame(targetRound))}
-          isFinished={game.isFinish()}
+          isFinished={game.isFinished()}
           currentRound={game.getTargetRound()}
         />
         <Flex gap={2}>
@@ -98,7 +98,7 @@ const MobileMain: FC<MainProps> = ({ game, setGame, description }) => {
       <Flex justifyContent='space-between' width='100%'>
         <NewGame
           onNewGame={(targetRound) => setGame(new ShanghaiNightsGame(targetRound))}
-          isFinished={game.isFinish()}
+          isFinished={game.isFinished()}
           currentRound={game.getTargetRound()}
         />
         <Flex alignItems='center' gap={4}>
@@ -138,7 +138,7 @@ const MyRoundScore: FC<MainProps> = ({ game, setGame }) => (
     scores={game.getRoundScore()}
     onClear={() => updateObject(game, new ShanghaiNightsGame(20), 'removeScore', setGame)}
     onRoundChange={() => updateObject(game, new ShanghaiNightsGame(20), 'roundChange', setGame)}
-    isFinished={game.isFinish()}
+    isFinished={game.isFinished()}
     onRoundOver={() => {
       saveToDB(game.getGameResult(), db.shanghaiNightsResult);
       setGame(new ShanghaiNightsGame(20));

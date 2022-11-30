@@ -1,4 +1,4 @@
-import { saveToDB } from './GameHistory';
+import { saveToDB } from './GameHistoryManager';
 import { db } from '@/db/db';
 
 beforeEach(() => {

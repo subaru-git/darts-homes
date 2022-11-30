@@ -9,7 +9,7 @@ import {
   useState,
 } from 'react';
 import { createCheckers } from 'ts-interface-checker';
-import TreblesForShowGame from '@/lib/TreblesForShowGame/TreblesForShowGame';
+import TreblesForShowGame from '@/lib/TreblesForShowGame';
 import types from '@/schemas/Types-ti';
 
 const treblesForShowGameContext = createContext<TreblesForShowGame | null>(
@@ -35,7 +35,7 @@ const TreblesForShowGameContextProvider: FC<{ children: ReactNode | ReactNode[] 
   }, []);
   useEffect(() => {
     if (!game) return;
-    localStorage.setItem('TreblesForShow', JSON.stringify(game.getProgressJson()));
+    localStorage.setItem('TreblesForShow', JSON.stringify(game.getGameProgress()));
   }, [game]);
   return (
     <treblesForShowGameContext.Provider value={game}>

@@ -10,8 +10,8 @@ import NewGame from '@/containers/DoubleTrouble/NewGame';
 import { useDoubleTroubleGame, useDoubleTroubleGameSet } from '@/contexts/DoubleTroubleGameContext';
 import { db } from '@/db/db';
 import useLocale from '@/hooks/locale';
-import DoubleTroubleGame from '@/lib/DoubleTroubleGame/DoubleTroubleGame';
-import { saveToDB } from '@/lib/GameHistoryManager/GameHistory';
+import DoubleTroubleGame from '@/lib/DoubleTroubleGame';
+import { saveToDB } from '@/lib/GameHistoryManager';
 import { updateObject } from '@/lib/Helper/updateObjectState';
 import MainTemplate from '@/templates/MainTemplate';
 
@@ -50,7 +50,10 @@ const DesktopMain: FC<MainProps> = ({ game, setGame, description }) => {
   return (
     <>
       <Flex justifyContent='space-between' alignItems='center'>
-        <NewGame onNewGame={() => setGame(new DoubleTroubleGame())} isFinished={game.isFinish()} />
+        <NewGame
+          onNewGame={() => setGame(new DoubleTroubleGame())}
+          isFinished={game.isFinished()}
+        />
         <Flex gap={2}>
           <DescriptionModal
             header='Double Trouble'
@@ -86,7 +89,10 @@ const MobileMain: FC<MainProps> = ({ game, setGame, description }) => {
   return (
     <Flex direction='column' gap={4}>
       <Flex justifyContent='space-between' width='100%'>
-        <NewGame onNewGame={() => setGame(new DoubleTroubleGame())} isFinished={game.isFinish()} />
+        <NewGame
+          onNewGame={() => setGame(new DoubleTroubleGame())}
+          isFinished={game.isFinished()}
+        />
         <Flex alignItems='center' gap={4}>
           <TargetBoard message='Target' target={game.getCurrentTarget().toString()} />
           <TargetBoard message='Score' target={game.getTotalScore().toString()} size='sm' />
@@ -121,7 +127,7 @@ const MyRoundScore: FC<MainProps> = ({ game, setGame }) => (
     scores={game.getRoundScore()}
     onClear={() => updateObject(game, new DoubleTroubleGame(), 'removeScore', setGame)}
     onRoundChange={() => updateObject(game, new DoubleTroubleGame(), 'roundChange', setGame)}
-    isFinished={game.isFinish()}
+    isFinished={game.isFinished()}
     onRoundOver={() => {
       saveToDB(game.getGameResult(), db.doubleTroubleResult);
       setGame(new DoubleTroubleGame());

@@ -1,6 +1,6 @@
-const singleOut = [...Array(180).keys()].map((i) => i + 1);
-const doubleOut = [[...Array(157).keys()].map((i) => i + 2), 160, 161, 164, 167, 170].flat();
-const masterOut = [
+export const singleOut = [...Array(180).keys()].map((i) => i + 1);
+export const doubleOut = [[...Array(157).keys()].map((i) => i + 2), 160, 161, 164, 167, 170].flat();
+export const masterOut = [
   [...Array(161).keys()].map((i) => i + 2),
   164,
   165,
@@ -12,5 +12,3 @@ const masterOut = [
   177,
   180,
 ].flat();
-
-export { singleOut, doubleOut, masterOut };

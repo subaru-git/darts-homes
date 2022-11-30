@@ -9,7 +9,7 @@ import {
   useState,
 } from 'react';
 import { createCheckers } from 'ts-interface-checker';
-import TonsUpGame from '@/lib/TonsUpGame/TonsUpGame';
+import TonsUpGame from '@/lib/TonsUpGame';
 import types from '@/schemas/Types-ti';
 
 const tonsUpGameContext = createContext<TonsUpGame | null>(new TonsUpGame(20));
@@ -31,7 +31,7 @@ const TonsUpGameContextProvider: FC<{ children: ReactNode | ReactNode[] }> = ({ 
   }, []);
   useEffect(() => {
     if (!game) return;
-    localStorage.setItem('TonsUp', JSON.stringify(game.getProgressJson()));
+    localStorage.setItem('TonsUp', JSON.stringify(game.getGameProgress()));
   }, [game]);
   return (
     <tonsUpGameContext.Provider value={game}>

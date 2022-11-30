@@ -120,7 +120,7 @@ test('double out', () => {
   game.addScore('D-BULL');
   expect(game.getRoundScore()).toEqual(['D-BULL', '0', '0']);
   expect(game.getLastTargetOutCount()).toBe(0);
-  expect(game.isFinish()).toBeTruthy();
+  expect(game.isFinished()).toBeTruthy();
 });
 
 test('single out', () => {
@@ -209,7 +209,7 @@ test('single out', () => {
   game.addScore('D-BULL');
   expect(game.getRoundScore()).toEqual(['D-BULL', '0', '0']);
   expect(game.getLastTargetOutCount()).toBe(0);
-  expect(game.isFinish()).toBeTruthy();
+  expect(game.isFinished()).toBeTruthy();
 });
 
 test('master out', () => {
@@ -306,5 +306,5 @@ test('master out', () => {
   game.addScore('D-BULL');
   expect(game.getRoundScore()).toEqual(['D-BULL', '0', '0']);
   expect(game.getLastTargetOutCount()).toBe(0);
-  expect(game.isFinish()).toBeTruthy();
+  expect(game.isFinished()).toBeTruthy();
 });

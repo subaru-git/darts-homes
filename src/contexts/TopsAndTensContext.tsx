@@ -9,7 +9,7 @@ import {
   useState,
 } from 'react';
 import { createCheckers } from 'ts-interface-checker';
-import TopsAndTensGame from '@/lib/TopsAndTensGame/TopsAndTensGame';
+import TopsAndTensGame from '@/lib/TopsAndTensGame';
 import types from '@/schemas/Types-ti';
 
 const topsAndTensGameContext = createContext<TopsAndTensGame | null>(new TopsAndTensGame(20));
@@ -33,7 +33,7 @@ const TopsAndTensGameContextProvider: FC<{ children: ReactNode | ReactNode[] }> 
   }, []);
   useEffect(() => {
     if (!game) return;
-    localStorage.setItem('TopsAndTens', JSON.stringify(game.getProgressJson()));
+    localStorage.setItem('TopsAndTens', JSON.stringify(game.getGameProgress()));
   }, [game]);
   return (
     <topsAndTensGameContext.Provider value={game}>

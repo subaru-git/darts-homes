@@ -10,9 +10,9 @@ import TargetBoard from '@/components/TargetBoard';
 import { useSwitchHitterGame, useSwitchHitterGameSet } from '@/contexts/SwitchHitterGameContext';
 import { db } from '@/db/db';
 import useLocale from '@/hooks/locale';
-import { saveToDB } from '@/lib/GameHistoryManager/GameHistory';
+import { saveToDB } from '@/lib/GameHistoryManager';
 import { updateObject } from '@/lib/Helper/updateObjectState';
-import SwitchHitterGame from '@/lib/SwitchHitterGame/SwitchHitterGame';
+import SwitchHitterGame from '@/lib/SwitchHitterGame';
 import MainTemplate from '@/templates/MainTemplate';
 
 const Main: FC = () => {
@@ -52,7 +52,7 @@ const DesktopMain: FC<MainProps> = ({ game, setGame, description }) => {
       <Flex justifyContent='space-between' alignItems='center'>
         <NewGame
           onNewGame={(targetRound) => setGame(new SwitchHitterGame(targetRound))}
-          isFinished={game.isFinish()}
+          isFinished={game.isFinished()}
           currentRound={game.getTargetRound()}
         />
         <Flex gap={2}>
@@ -95,7 +95,7 @@ const MobileMain: FC<MainProps> = ({ game, setGame, description }) => {
       <Flex justifyContent='space-between' width='100%'>
         <NewGame
           onNewGame={(targetRound) => setGame(new SwitchHitterGame(targetRound))}
-          isFinished={game.isFinish()}
+          isFinished={game.isFinished()}
           currentRound={game.getTargetRound()}
         />
         <Flex alignItems='center' gap={4}>
@@ -135,7 +135,7 @@ const MyRoundScore: FC<MainProps> = ({ game, setGame }) => (
     scores={game.getRoundScore()}
     onClear={() => updateObject(game, new SwitchHitterGame(20), 'removeScore', setGame)}
     onRoundChange={() => updateObject(game, new SwitchHitterGame(20), 'roundChange', setGame)}
-    isFinished={game.isFinish()}
+    isFinished={game.isFinished()}
     onRoundOver={() => {
       saveToDB(game.getGameResult(), db.switchHitterResult);
       setGame(new SwitchHitterGame(20));

@@ -6,17 +6,17 @@ exports[`should rendering 1`] = `
     data-cy=""
   >
     <header
-      class="css-1wd2myv"
+      class="css-1wuf7qn"
     >
       <div
-        class="css-8lthux"
+        class="css-1v5zkfs"
       >
         <div
-          class="css-1fsntt9"
+          class="css-1twb9xo"
         >
           <button
             aria-label="toggle navigation"
-            class="chakra-button css-p7mkev"
+            class="chakra-button css-13zvu4r"
             type="button"
           >
             <svg
@@ -37,10 +37,10 @@ exports[`should rendering 1`] = `
           </button>
         </div>
         <div
-          class="css-1k77i8c"
+          class="css-1h98wyk"
         >
           <div
-            class="css-tok6sv"
+            class="css-8fa26g"
           >
             <a
               href="/"
@@ -53,10 +53,10 @@ exports[`should rendering 1`] = `
             </a>
           </div>
           <div
-            class="css-nmdqie"
+            class="css-1ynfsgs"
           >
             <div
-              class="chakra-stack css-1qwdsol"
+              class="chakra-stack css-a9v878"
             >
               <div
                 class="css-0"
@@ -65,7 +65,7 @@ exports[`should rendering 1`] = `
                   aria-controls="popover-content-:r2:"
                   aria-expanded="false"
                   aria-haspopup="dialog"
-                  class="css-1t6f37y"
+                  class="css-13fflh2"
                   id="popover-trigger-:r2:"
                 >
                   <a
@@ -75,11 +75,11 @@ exports[`should rendering 1`] = `
                   </a>
                 </div>
                 <div
-                  class="chakra-popover__popper css-0"
+                  class="chakra-popover__popper css-1qq679y"
                   style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
                 >
                   <section
-                    class="chakra-popover__content css-18o08l2"
+                    class="chakra-popover__content css-1slp7gy"
                     id="popover-content-:r2:"
                     role="tooltip"
                     style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
@@ -89,7 +89,7 @@ exports[`should rendering 1`] = `
                       class="chakra-stack css-i4eu2s"
                     >
                       <div
-                        class="css-1pv49ma"
+                        class="css-1rc82uo"
                         role="group"
                       >
                         <a
@@ -103,12 +103,12 @@ exports[`should rendering 1`] = `
                               class="css-0"
                             >
                               <p
-                                class="chakra-text css-1hb0olr"
+                                class="chakra-text css-sc37ud"
                               >
                                 Eagle's Eye
                               </p>
                               <p
-                                class="chakra-text css-g5hezf"
+                                class="chakra-text css-itvw0n"
                               >
                                 BULL only count up
                               </p>
@@ -117,7 +117,7 @@ exports[`should rendering 1`] = `
                               class="css-2gz105"
                             >
                               <svg
-                                class="chakra-icon css-13pda5l"
+                                class="chakra-icon css-swb7g"
                                 fill="currentColor"
                                 focusable="false"
                                 height="1em"
@@ -137,7 +137,7 @@ exports[`should rendering 1`] = `
                         </a>
                       </div>
                       <div
-                        class="css-1pv49ma"
+                        class="css-1rc82uo"
                         role="group"
                       >
                         <a
@@ -151,12 +151,12 @@ exports[`should rendering 1`] = `
                               class="css-0"
                             >
                               <p
-                                class="chakra-text css-1hb0olr"
+                                class="chakra-text css-sc37ud"
                               >
                                 Cricket Mark-Up
                               </p>
                               <p
-                                class="chakra-text css-g5hezf"
+                                class="chakra-text css-itvw0n"
                               >
                                 Darts training game by "Kikuchi Yamaguchi"
                               </p>
@@ -165,7 +165,7 @@ exports[`should rendering 1`] = `
                               class="css-2gz105"
                             >
                               <svg
-                                class="chakra-icon css-13pda5l"
+                                class="chakra-icon css-swb7g"
                                 fill="currentColor"
                                 focusable="false"
                                 height="1em"
@@ -185,7 +185,7 @@ exports[`should rendering 1`] = `
                         </a>
                       </div>
                       <div
-                        class="css-1pv49ma"
+                        class="css-1rc82uo"
                         role="group"
                       >
                         <a
@@ -199,12 +199,12 @@ exports[`should rendering 1`] = `
                               class="css-0"
                             >
                               <p
-                                class="chakra-text css-1hb0olr"
+                                class="chakra-text css-sc37ud"
                               >
                                 Double Trouble
                               </p>
                               <p
-                                class="chakra-text css-g5hezf"
+                                class="chakra-text css-itvw0n"
                               >
                                 Double practice game
                               </p>
@@ -213,7 +213,7 @@ exports[`should rendering 1`] = `
                               class="css-2gz105"
                             >
                               <svg
-                                class="chakra-icon css-13pda5l"
+                                class="chakra-icon css-swb7g"
                                 fill="currentColor"
                                 focusable="false"
                                 height="1em"
@@ -233,7 +233,7 @@ exports[`should rendering 1`] = `
                         </a>
                       </div>
                       <div
-                        class="css-1pv49ma"
+                        class="css-1rc82uo"
                         role="group"
                       >
                         <a
@@ -247,12 +247,12 @@ exports[`should rendering 1`] = `
                               class="css-0"
                             >
                               <p
-                                class="chakra-text css-1hb0olr"
+                                class="chakra-text css-sc37ud"
                               >
                                 Sweet 16
                               </p>
                               <p
-                                class="chakra-text css-g5hezf"
+                                class="chakra-text css-itvw0n"
                               >
                                 32 double out practice game
                               </p>
@@ -261,7 +261,7 @@ exports[`should rendering 1`] = `
                               class="css-2gz105"
                             >
                               <svg
-                                class="chakra-icon css-13pda5l"
+                                class="chakra-icon css-swb7g"
                                 fill="currentColor"
                                 focusable="false"
                                 height="1em"
@@ -281,7 +281,7 @@ exports[`should rendering 1`] = `
                         </a>
                       </div>
                       <div
-                        class="css-1pv49ma"
+                        class="css-1rc82uo"
                         role="group"
                       >
                         <a
@@ -295,12 +295,12 @@ exports[`should rendering 1`] = `
                               class="css-0"
                             >
                               <p
-                                class="chakra-text css-1hb0olr"
+                                class="chakra-text css-sc37ud"
                               >
                                 Tops and Tens
                               </p>
                               <p
-                                class="chakra-text css-g5hezf"
+                                class="chakra-text css-itvw0n"
                               >
                                 40 double out practice game
                               </p>
@@ -309,7 +309,7 @@ exports[`should rendering 1`] = `
                               class="css-2gz105"
                             >
                               <svg
-                                class="chakra-icon css-13pda5l"
+                                class="chakra-icon css-swb7g"
                                 fill="currentColor"
                                 focusable="false"
                                 height="1em"
@@ -329,7 +329,7 @@ exports[`should rendering 1`] = `
                         </a>
                       </div>
                       <div
-                        class="css-1pv49ma"
+                        class="css-1rc82uo"
                         role="group"
                       >
                         <a
@@ -343,12 +343,12 @@ exports[`should rendering 1`] = `
                               class="css-0"
                             >
                               <p
-                                class="chakra-text css-1hb0olr"
+                                class="chakra-text css-sc37ud"
                               >
                                 Two-Dart Combinations
                               </p>
                               <p
-                                class="chakra-text css-g5hezf"
+                                class="chakra-text css-itvw0n"
                               >
                                 Two darts double out practice game
                               </p>
@@ -357,7 +357,7 @@ exports[`should rendering 1`] = `
                               class="css-2gz105"
                             >
                               <svg
-                                class="chakra-icon css-13pda5l"
+                                class="chakra-icon css-swb7g"
                                 fill="currentColor"
                                 focusable="false"
                                 height="1em"
@@ -377,7 +377,7 @@ exports[`should rendering 1`] = `
                         </a>
                       </div>
                       <div
-                        class="css-1pv49ma"
+                        class="css-1rc82uo"
                         role="group"
                       >
                         <a
@@ -391,12 +391,12 @@ exports[`should rendering 1`] = `
                               class="css-0"
                             >
                               <p
-                                class="chakra-text css-1hb0olr"
+                                class="chakra-text css-sc37ud"
                               >
                                 Around The Compass
                               </p>
                               <p
-                                class="chakra-text css-g5hezf"
+                                class="chakra-text css-itvw0n"
                               >
                                 24 double out practice game
                               </p>
@@ -405,7 +405,7 @@ exports[`should rendering 1`] = `
                               class="css-2gz105"
                             >
                               <svg
-                                class="chakra-icon css-13pda5l"
+                                class="chakra-icon css-swb7g"
                                 fill="currentColor"
                                 focusable="false"
                                 height="1em"
@@ -425,7 +425,7 @@ exports[`should rendering 1`] = `
                         </a>
                       </div>
                       <div
-                        class="css-1pv49ma"
+                        class="css-1rc82uo"
                         role="group"
                       >
                         <a
@@ -439,12 +439,12 @@ exports[`should rendering 1`] = `
                               class="css-0"
                             >
                               <p
-                                class="chakra-text css-1hb0olr"
+                                class="chakra-text css-sc37ud"
                               >
                                 Tons Up
                               </p>
                               <p
-                                class="chakra-text css-g5hezf"
+                                class="chakra-text css-itvw0n"
                               >
                                 100 double out practice game
                               </p>
@@ -453,7 +453,7 @@ exports[`should rendering 1`] = `
                               class="css-2gz105"
                             >
                               <svg
-                                class="chakra-icon css-13pda5l"
+                                class="chakra-icon css-swb7g"
                                 fill="currentColor"
                                 focusable="false"
                                 height="1em"
@@ -473,7 +473,7 @@ exports[`should rendering 1`] = `
                         </a>
                       </div>
                       <div
-                        class="css-1pv49ma"
+                        class="css-1rc82uo"
                         role="group"
                       >
                         <a
@@ -487,12 +487,12 @@ exports[`should rendering 1`] = `
                               class="css-0"
                             >
                               <p
-                                class="chakra-text css-1hb0olr"
+                                class="chakra-text css-sc37ud"
                               >
                                 Route 64
                               </p>
                               <p
-                                class="chakra-text css-g5hezf"
+                                class="chakra-text css-itvw0n"
                               >
                                 64 double out practice game
                               </p>
@@ -501,7 +501,7 @@ exports[`should rendering 1`] = `
                               class="css-2gz105"
                             >
                               <svg
-                                class="chakra-icon css-13pda5l"
+                                class="chakra-icon css-swb7g"
                                 fill="currentColor"
                                 focusable="false"
                                 height="1em"
@@ -521,7 +521,7 @@ exports[`should rendering 1`] = `
                         </a>
                       </div>
                       <div
-                        class="css-1pv49ma"
+                        class="css-1rc82uo"
                         role="group"
                       >
                         <a
@@ -535,12 +535,12 @@ exports[`should rendering 1`] = `
                               class="css-0"
                             >
                               <p
-                                class="chakra-text css-1hb0olr"
+                                class="chakra-text css-sc37ud"
                               >
                                 Eighty Threw
                               </p>
                               <p
-                                class="chakra-text css-g5hezf"
+                                class="chakra-text css-itvw0n"
                               >
                                 82 double out practice game
                               </p>
@@ -549,7 +549,7 @@ exports[`should rendering 1`] = `
                               class="css-2gz105"
                             >
                               <svg
-                                class="chakra-icon css-13pda5l"
+                                class="chakra-icon css-swb7g"
                                 fill="currentColor"
                                 focusable="false"
                                 height="1em"
@@ -569,7 +569,7 @@ exports[`should rendering 1`] = `
                         </a>
                       </div>
                       <div
-                        class="css-1pv49ma"
+                        class="css-1rc82uo"
                         role="group"
                       >
                         <a
@@ -583,12 +583,12 @@ exports[`should rendering 1`] = `
                               class="css-0"
                             >
                               <p
-                                class="chakra-text css-1hb0olr"
+                                class="chakra-text css-sc37ud"
                               >
                                 Shanghai Nights
                               </p>
                               <p
-                                class="chakra-text css-g5hezf"
+                                class="chakra-text css-itvw0n"
                               >
                                 120 double out practice game
                               </p>
@@ -597,7 +597,7 @@ exports[`should rendering 1`] = `
                               class="css-2gz105"
                             >
                               <svg
-                                class="chakra-icon css-13pda5l"
+                                class="chakra-icon css-swb7g"
                                 fill="currentColor"
                                 focusable="false"
                                 height="1em"
@@ -617,7 +617,7 @@ exports[`should rendering 1`] = `
                         </a>
                       </div>
                       <div
-                        class="css-1pv49ma"
+                        class="css-1rc82uo"
                         role="group"
                       >
                         <a
@@ -631,12 +631,12 @@ exports[`should rendering 1`] = `
                               class="css-0"
                             >
                               <p
-                                class="chakra-text css-1hb0olr"
+                                class="chakra-text css-sc37ud"
                               >
                                 Switch Hitter
                               </p>
                               <p
-                                class="chakra-text css-g5hezf"
+                                class="chakra-text css-itvw0n"
                               >
                                 19 practice game
                               </p>
@@ -645,7 +645,7 @@ exports[`should rendering 1`] = `
                               class="css-2gz105"
                             >
                               <svg
-                                class="chakra-icon css-13pda5l"
+                                class="chakra-icon css-swb7g"
                                 fill="currentColor"
                                 focusable="false"
                                 height="1em"
@@ -665,7 +665,7 @@ exports[`should rendering 1`] = `
                         </a>
                       </div>
                       <div
-                        class="css-1pv49ma"
+                        class="css-1rc82uo"
                         role="group"
                       >
                         <a
@@ -679,12 +679,12 @@ exports[`should rendering 1`] = `
                               class="css-0"
                             >
                               <p
-                                class="chakra-text css-1hb0olr"
+                                class="chakra-text css-sc37ud"
                               >
                                 Bully Bully
                               </p>
                               <p
-                                class="chakra-text css-g5hezf"
+                                class="chakra-text css-itvw0n"
                               >
                                 BULL practice game
                               </p>
@@ -693,7 +693,7 @@ exports[`should rendering 1`] = `
                               class="css-2gz105"
                             >
                               <svg
-                                class="chakra-icon css-13pda5l"
+                                class="chakra-icon css-swb7g"
                                 fill="currentColor"
                                 focusable="false"
                                 height="1em"
@@ -713,7 +713,7 @@ exports[`should rendering 1`] = `
                         </a>
                       </div>
                       <div
-                        class="css-1pv49ma"
+                        class="css-1rc82uo"
                         role="group"
                       >
                         <a
@@ -727,12 +727,12 @@ exports[`should rendering 1`] = `
                               class="css-0"
                             >
                               <p
-                                class="chakra-text css-1hb0olr"
+                                class="chakra-text css-sc37ud"
                               >
                                 Treble For Show
                               </p>
                               <p
-                                class="chakra-text css-g5hezf"
+                                class="chakra-text css-itvw0n"
                               >
                                 20 practice game
                               </p>
@@ -741,7 +741,7 @@ exports[`should rendering 1`] = `
                               class="css-2gz105"
                             >
                               <svg
-                                class="chakra-icon css-13pda5l"
+                                class="chakra-icon css-swb7g"
                                 fill="currentColor"
                                 focusable="false"
                                 height="1em"
@@ -761,7 +761,7 @@ exports[`should rendering 1`] = `
                         </a>
                       </div>
                       <div
-                        class="css-1pv49ma"
+                        class="css-1rc82uo"
                         role="group"
                       >
                         <a
@@ -775,12 +775,12 @@ exports[`should rendering 1`] = `
                               class="css-0"
                             >
                               <p
-                                class="chakra-text css-1hb0olr"
+                                class="chakra-text css-sc37ud"
                               >
                                 Arrange
                               </p>
                               <p
-                                class="chakra-text css-g5hezf"
+                                class="chakra-text css-itvw0n"
                               >
                                 Arrange practice game
                               </p>
@@ -789,7 +789,7 @@ exports[`should rendering 1`] = `
                               class="css-2gz105"
                             >
                               <svg
-                                class="chakra-icon css-13pda5l"
+                                class="chakra-icon css-swb7g"
                                 fill="currentColor"
                                 focusable="false"
                                 height="1em"
@@ -819,7 +819,7 @@ exports[`should rendering 1`] = `
                   aria-controls="popover-content-:r4:"
                   aria-expanded="false"
                   aria-haspopup="dialog"
-                  class="css-1t6f37y"
+                  class="css-13fflh2"
                   id="popover-trigger-:r4:"
                 >
                   <a
@@ -836,7 +836,7 @@ exports[`should rendering 1`] = `
                   aria-controls="popover-content-:r6:"
                   aria-expanded="false"
                   aria-haspopup="dialog"
-                  class="css-1t6f37y"
+                  class="css-13fflh2"
                   id="popover-trigger-:r6:"
                 >
                   <a
@@ -856,7 +856,7 @@ exports[`should rendering 1`] = `
             aria-expanded="false"
             aria-haspopup="dialog"
             aria-label="change language"
-            class="chakra-button css-p7mkev"
+            class="chakra-button css-13zvu4r"
             id="popover-trigger-:r8:"
             type="button"
           >
@@ -877,34 +877,34 @@ exports[`should rendering 1`] = `
             </svg>
           </button>
           <div
-            class="chakra-popover__popper css-0"
+            class="chakra-popover__popper css-1qq679y"
             style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
           >
             <section
-              class="chakra-popover__content css-1ab1jlb"
+              class="chakra-popover__content css-sjj62m"
               id="popover-content-:r8:"
               role="dialog"
               style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
               tabindex="-1"
             >
               <div
-                class="css-1pv49ma"
+                class="css-1rc82uo"
                 href="/"
                 role="group"
               >
                 <p
-                  class="chakra-text css-1hb0olr"
+                  class="chakra-text css-sc37ud"
                 >
                   日本語
                 </p>
               </div>
               <div
-                class="css-1pv49ma"
+                class="css-1rc82uo"
                 href="/"
                 role="group"
               >
                 <p
-                  class="chakra-text css-1hb0olr"
+                  class="chakra-text css-sc37ud"
                 >
                   English
                 </p>
@@ -918,22 +918,22 @@ exports[`should rendering 1`] = `
         style="overflow: hidden; display: none; opacity: 0; height: 0px;"
       >
         <div
-          class="chakra-stack css-tm2a1"
+          class="chakra-stack css-1lgh1g"
         >
           <div
-            class="chakra-stack css-17kdbol"
+            class="chakra-stack css-egoftb"
           >
             <div
-              class="css-r6noz9"
+              class="css-lxmzlz"
               href="/#"
             >
               <p
-                class="chakra-text css-y33gq0"
+                class="chakra-text css-9y4vnp"
               >
                 Games
               </p>
               <svg
-                class="chakra-icon css-yzp0e0"
+                class="chakra-icon css-q9erop"
                 fill="currentColor"
                 focusable="false"
                 height="1em"
@@ -954,80 +954,80 @@ exports[`should rendering 1`] = `
               style="overflow: hidden; display: none; opacity: 0; height: 0px;"
             >
               <div
-                class="chakra-stack css-khmogt"
+                class="chakra-stack css-11sp92w"
               >
                 <div
-                  class="css-o5g2qp"
+                  class="css-1j1i25b"
                 >
                   Eagle's Eye
                 </div>
                 <div
-                  class="css-o5g2qp"
+                  class="css-1j1i25b"
                 >
                   Cricket Mark-Up
                 </div>
                 <div
-                  class="css-o5g2qp"
+                  class="css-1j1i25b"
                 >
                   Double Trouble
                 </div>
                 <div
-                  class="css-o5g2qp"
+                  class="css-1j1i25b"
                 >
                   Sweet 16
                 </div>
                 <div
-                  class="css-o5g2qp"
+                  class="css-1j1i25b"
                 >
                   Tops and Tens
                 </div>
                 <div
-                  class="css-o5g2qp"
+                  class="css-1j1i25b"
                 >
                   Two-Dart Combinations
                 </div>
                 <div
-                  class="css-o5g2qp"
+                  class="css-1j1i25b"
                 >
                   Around The Compass
                 </div>
                 <div
-                  class="css-o5g2qp"
+                  class="css-1j1i25b"
                 >
                   Tons Up
                 </div>
                 <div
-                  class="css-o5g2qp"
+                  class="css-1j1i25b"
                 >
                   Route 64
                 </div>
                 <div
-                  class="css-o5g2qp"
+                  class="css-1j1i25b"
                 >
                   Eighty Threw
                 </div>
                 <div
-                  class="css-o5g2qp"
+                  class="css-1j1i25b"
                 >
                   Shanghai Nights
                 </div>
                 <div
-                  class="css-o5g2qp"
+                  class="css-1j1i25b"
                 >
                   Switch Hitter
                 </div>
                 <div
-                  class="css-o5g2qp"
+                  class="css-1j1i25b"
                 >
                   Bully Bully
                 </div>
                 <div
-                  class="css-o5g2qp"
+                  class="css-1j1i25b"
                 >
                   Treble For Show
                 </div>
                 <div
-                  class="css-o5g2qp"
+                  class="css-1j1i25b"
                 >
                   Arrange
                 </div>
@@ -1035,14 +1035,14 @@ exports[`should rendering 1`] = `
             </div>
           </div>
           <div
-            class="chakra-stack css-17kdbol"
+            class="chakra-stack css-egoftb"
           >
             <div
-              class="css-r6noz9"
+              class="css-lxmzlz"
               href="/respect"
             >
               <p
-                class="chakra-text css-y33gq0"
+                class="chakra-text css-9y4vnp"
               >
                 Respect
               </p>
@@ -1052,19 +1052,19 @@ exports[`should rendering 1`] = `
               style="overflow: hidden; display: none; opacity: 0; height: 0px;"
             >
               <div
-                class="chakra-stack css-khmogt"
+                class="chakra-stack css-11sp92w"
               />
             </div>
           </div>
           <div
-            class="chakra-stack css-17kdbol"
+            class="chakra-stack css-egoftb"
           >
             <div
-              class="css-r6noz9"
+              class="css-lxmzlz"
               href="/history"
             >
               <p
-                class="chakra-text css-y33gq0"
+                class="chakra-text css-9y4vnp"
               >
                 History
               </p>
@@ -1074,7 +1074,7 @@ exports[`should rendering 1`] = `
               style="overflow: hidden; display: none; opacity: 0; height: 0px;"
             >
               <div
-                class="chakra-stack css-khmogt"
+                class="chakra-stack css-11sp92w"
               />
             </div>
           </div>
@@ -1082,28 +1082,28 @@ exports[`should rendering 1`] = `
       </div>
     </header>
     <div
-      class="css-e3wnwg"
+      class="css-1t2fh6z"
     />
     <div
-      class="css-1b9smw7"
+      class="css-75sfx8"
     >
       <div
         class="css-gmuwbf"
       >
         <div
-          class="chakra-stack css-10keghz"
+          class="chakra-stack css-2lwpci"
         >
           <p
-            class="chakra-text css-kbn7if"
+            class="chakra-text css-79wky"
           >
             (c) 2022 okadat
           </p>
           <div
-            class="chakra-stack css-1gz5y8w"
+            class="chakra-stack css-x0u0or"
           >
             <a
               aria-label="subaru-git github page"
-              class="chakra-link css-0"
+              class="chakra-link css-spn4bz"
               href="https://github.com/subaru-git"
             >
               <svg
@@ -1124,7 +1124,7 @@ exports[`should rendering 1`] = `
             </a>
             <a
               aria-label="subaru_m_ twitter"
-              class="chakra-link css-0"
+              class="chakra-link css-spn4bz"
               href="https://twitter.com/subaru_m_"
             >
               <svg
@@ -1148,5 +1148,9 @@ exports[`should rendering 1`] = `
       </div>
     </div>
   </div>
+  <span
+    hidden=""
+    id="__chakra_env"
+  />
 </div>
 `;

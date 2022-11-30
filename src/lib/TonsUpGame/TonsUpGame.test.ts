@@ -36,5 +36,5 @@ test('in gaming', () => {
   expect(game.getRoundScore()).toEqual(['20T', '20D', '0']);
   expect(game.getTotalScore()).toEqual(30);
 
-  expect(game.isFinish()).toBeTruthy();
+  expect(game.isFinished()).toBeTruthy();
 });

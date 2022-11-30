@@ -13,9 +13,9 @@ import {
 } from '@/contexts/TreblesForShowGameContext';
 import { db } from '@/db/db';
 import useLocale from '@/hooks/locale';
-import { saveToDB } from '@/lib/GameHistoryManager/GameHistory';
+import { saveToDB } from '@/lib/GameHistoryManager';
 import { updateObject } from '@/lib/Helper/updateObjectState';
-import TreblesForShowGame from '@/lib/TreblesForShowGame/TreblesForShowGame';
+import TreblesForShowGame from '@/lib/TreblesForShowGame';
 import MainTemplate from '@/templates/MainTemplate';
 
 const Main: FC = () => {
@@ -55,7 +55,7 @@ const DesktopMain: FC<MainProps> = ({ game, setGame, description }) => {
       <Flex justifyContent='space-between' alignItems='center'>
         <NewGame
           onNewGame={(targetRound) => setGame(new TreblesForShowGame(targetRound))}
-          isFinished={game.isFinish()}
+          isFinished={game.isFinished()}
           currentRound={game.getTargetRound()}
         />
         <Flex gap={2}>
@@ -98,7 +98,7 @@ const MobileMain: FC<MainProps> = ({ game, setGame, description }) => {
       <Flex justifyContent='space-between' width='100%'>
         <NewGame
           onNewGame={(targetRound) => setGame(new TreblesForShowGame(targetRound))}
-          isFinished={game.isFinish()}
+          isFinished={game.isFinished()}
           currentRound={game.getTargetRound()}
         />
         <Flex alignItems='center' gap={4}>
@@ -138,7 +138,7 @@ const MyRoundScore: FC<MainProps> = ({ game, setGame }) => (
     scores={game.getRoundScore()}
     onClear={() => updateObject(game, new TreblesForShowGame(20), 'removeScore', setGame)}
     onRoundChange={() => updateObject(game, new TreblesForShowGame(20), 'roundChange', setGame)}
-    isFinished={game.isFinish()}
+    isFinished={game.isFinished()}
     onRoundOver={() => {
       saveToDB(game.getGameResult(), db.treblesForShowResult);
       setGame(new TreblesForShowGame(20));

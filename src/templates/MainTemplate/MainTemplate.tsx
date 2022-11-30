@@ -3,18 +3,18 @@ import Footer from '@/components/Footer';
 import Loading from '@/components/Loading';
 import NavigationBar from '@/components/NavigationBar';
 
-const MainTemplate: FC<{
+type MainTemplateProps = {
   label: string;
   isLoading?: boolean;
   children?: ReactNode | ReactNode[];
-}> = ({ label, isLoading = false, children }) => {
+};
+
+const MainTemplate: FC<MainTemplateProps> = ({ label, isLoading = false, children }) => {
   return (
     <div data-cy={label}>
-      <>
-        <NavigationBar />
-        {isLoading ? <Loading /> : children}
-        <Footer />
-      </>
+      <NavigationBar />
+      {isLoading ? <Loading /> : children}
+      <Footer />
     </div>
   );
 };

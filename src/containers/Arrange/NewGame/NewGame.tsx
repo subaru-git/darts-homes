@@ -17,13 +17,13 @@ import SettingHeading from '@/components/SettingHeading';
 import useLocale from '@/hooks/locale';
 
 type NewGameProps = {
-  onNewGame: (settings: ArrangeGameSettings) => void;
-  currentSettings: ArrangeGameSettings;
+  onNewGame: (settings: ArrangeSettings) => void;
+  currentSettings: ArrangeSettings;
   isFinished?: boolean;
 };
 
 const NewGame: FC<NewGameProps> = ({ onNewGame, currentSettings, isFinished = false }) => {
-  const [settings, setSettings] = useState<ArrangeGameSettings>(currentSettings);
+  const [settings, setSettings] = useState<ArrangeSettings>(currentSettings);
   const { t } = useLocale();
   const defaultHelp = { title: '', hint: { header: '', body: '' } };
   const sim = t.games.arrange.help.find((h) => h.title === 'Simulation Mode') || defaultHelp;

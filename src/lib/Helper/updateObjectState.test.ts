@@ -1,5 +1,5 @@
 import { updateObject } from './updateObjectState';
-import Game from '@/lib/CricketMarkUpGame/CricketMarkUpGame';
+import Game from '@/lib/CricketMarkUpGame';
 
 test('updateObject', () => {
   const game = new Game(10);

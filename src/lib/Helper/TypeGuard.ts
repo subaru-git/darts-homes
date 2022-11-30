@@ -1,7 +1,7 @@
 import { createCheckers } from 'ts-interface-checker';
 import types from '@/schemas/Types-ti';
 
-const isGameHistory = (instance: any) => {
+export const isGameHistory = (instance: any) => {
   if (!instance) return false;
   if (typeof instance !== 'object') return false;
   const checker = createCheckers(types);
@@ -82,5 +82,3 @@ const compKeys = (instance: any) => {
   if (!instance.round) instance.round = 0;
   return instance;
 };
-
-export { isGameHistory };

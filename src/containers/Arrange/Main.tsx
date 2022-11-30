@@ -8,7 +8,7 @@ import RoundScore from '@/components/RoundScore';
 import TargetBoard from '@/components/TargetBoard';
 import { useArrangeGame, useArrangeGameSet } from '@/contexts/ArrangeGameContext';
 import useLocale from '@/hooks/locale';
-import ArrangeGame from '@/lib/ArrangeGame/ArrangeGame';
+import ArrangeGame from '@/lib/ArrangeGame/';
 import { updateObject } from '@/lib/Helper/updateObjectState';
 import MainTemplate from '@/templates/MainTemplate';
 
@@ -49,7 +49,7 @@ const DesktopMain: FC<MainProps> = ({ game, setGame, description }) => {
       <Flex justifyContent='space-between' alignItems='center'>
         <NewGame
           onNewGame={(settings) => setGame(new ArrangeGame(settings))}
-          isFinished={game.isFinish()}
+          isFinished={game.isFinished()}
           currentSettings={game.getSettings()}
         />
         <DescriptionModal
@@ -80,14 +80,14 @@ const DesktopMain: FC<MainProps> = ({ game, setGame, description }) => {
           <Targets
             count={game.getTargetOutCount()}
             targets={game.getTargets()}
-            isFinished={game.isFinish()}
+            isFinished={game.isFinished()}
           />
         </Flex>
         <ArrangeBoard
           onCount={(n) => updateObject(game, new ArrangeGame(), 'addScore', setGame, n)}
           range={game.getSettings().range}
           simulation={game.getSettings().simulation}
-          disabled={game.getRoundScore().length >= 3 || game.isFinish()}
+          disabled={game.getRoundScore().length >= 3 || game.isFinished()}
         />
       </Flex>
       <MyRoundScore game={game} setGame={setGame} />
@@ -101,13 +101,13 @@ const MobileMain: FC<MainProps> = ({ game, setGame, description }) => {
       <Flex justifyContent='space-between' alignItems='center'>
         <NewGame
           onNewGame={(settings) => setGame(new ArrangeGame(settings))}
-          isFinished={game.isFinish()}
+          isFinished={game.isFinished()}
           currentSettings={game.getSettings()}
         />
         <Targets
           count={game.getTargetOutCount()}
           targets={game.getTargets()}
-          isFinished={game.isFinish()}
+          isFinished={game.isFinished()}
         />
         <DescriptionModal
           header={'Arrange'}
@@ -151,7 +151,7 @@ const MobileMain: FC<MainProps> = ({ game, setGame, description }) => {
           onCount={(n) => updateObject(game, new ArrangeGame(), 'addScore', setGame, n)}
           range={game.getSettings().range}
           simulation={game.getSettings().simulation}
-          disabled={game.getRoundScore().length >= 3 || game.isFinish()}
+          disabled={game.getRoundScore().length >= 3 || game.isFinished()}
         />
         <MyRoundScore game={game} setGame={setGame} />
       </Flex>
@@ -164,7 +164,7 @@ const MyRoundScore: FC<MainProps> = ({ game, setGame }) => (
     scores={game.getRoundScore()}
     onClear={() => updateObject(game, new ArrangeGame(), 'removeScore', setGame)}
     onRoundChange={() => updateObject(game, new ArrangeGame(), 'roundChange', setGame)}
-    isFinished={game.isFinish()}
+    isFinished={game.isFinished()}
     onRoundOver={() => {
       setGame(new ArrangeGame());
     }}

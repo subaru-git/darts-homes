@@ -14,7 +14,7 @@ import { MdDeleteForever } from 'react-icons/md';
 import HistoryDeleteAlert from '@/containers/History/DeleteAlert';
 import { EaglesEyeResultModel } from '@/db/EaglesEyeResultModel';
 import { db } from '@/db/db';
-import { deleteFromDB } from '@/lib/GameHistoryManager/GameHistory';
+import { deleteFromDB } from '@/lib/GameHistoryManager';
 
 type HistoryTableProps = {
   history: EaglesEyeResultModel[];

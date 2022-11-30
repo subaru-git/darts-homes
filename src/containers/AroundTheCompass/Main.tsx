@@ -13,8 +13,8 @@ import {
 } from '@/contexts/AroundTheCompassGameContext';
 import { db } from '@/db/db';
 import useLocale from '@/hooks/locale';
-import AroundTheCompassGame from '@/lib/AroundTheCompassGame/AroundTheCompassGame';
-import { saveToDB } from '@/lib/GameHistoryManager/GameHistory';
+import AroundTheCompassGame from '@/lib/AroundTheCompassGame';
+import { saveToDB } from '@/lib/GameHistoryManager';
 import { updateObject } from '@/lib/Helper/updateObjectState';
 import MainTemplate from '@/templates/MainTemplate';
 
@@ -55,7 +55,7 @@ const DesktopMain: FC<MainProps> = ({ game, setGame, description }) => {
       <Flex justifyContent='space-between' alignItems='center'>
         <NewGame
           onNewGame={(r) => setGame(new AroundTheCompassGame(r))}
-          isFinished={game.isFinish()}
+          isFinished={game.isFinished()}
           currentRound={game.getTargetRound()}
         />
         <Flex gap={2}>
@@ -100,7 +100,7 @@ const MobileMain: FC<MainProps> = ({ game, setGame, description }) => {
       <Flex justifyContent='space-between' width='100%'>
         <NewGame
           onNewGame={(TargetRound) => setGame(new AroundTheCompassGame(TargetRound))}
-          isFinished={game.isFinish()}
+          isFinished={game.isFinished()}
           currentRound={game.getTargetRound()}
         />
         <Flex alignItems='center' gap={4}>
@@ -140,7 +140,7 @@ const MyRoundScore: FC<MainProps> = ({ game, setGame }) => (
     scores={game.getRoundScore()}
     onClear={() => updateObject(game, new AroundTheCompassGame(20), 'removeScore', setGame)}
     onRoundChange={() => updateObject(game, new AroundTheCompassGame(20), 'roundChange', setGame)}
-    isFinished={game.isFinish()}
+    isFinished={game.isFinished()}
     onRoundOver={() => {
       saveToDB(game.getGameResult(), db.aroundTheCompassResult);
       setGame(new AroundTheCompassGame(game.getTargetRound()));

@@ -9,7 +9,7 @@ import {
   useState,
 } from 'react';
 import { createCheckers } from 'ts-interface-checker';
-import DoubleTroubleGame from '@/lib/DoubleTroubleGame/DoubleTroubleGame';
+import DoubleTroubleGame from '@/lib/DoubleTroubleGame';
 import types from '@/schemas/Types-ti';
 
 const doubleTroubleGameContext = createContext<DoubleTroubleGame | null>(new DoubleTroubleGame());
@@ -33,7 +33,7 @@ const DoubleTroubleGameContextProvider: FC<{ children: ReactNode | ReactNode[] }
   }, []);
   useEffect(() => {
     if (!game) return;
-    localStorage.setItem('DoubleTrouble', JSON.stringify(game.getProgressJson()));
+    localStorage.setItem('DoubleTrouble', JSON.stringify(game.getGameProgress()));
   }, [game]);
   return (
     <doubleTroubleGameContext.Provider value={game}>

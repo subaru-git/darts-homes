@@ -13,9 +13,9 @@ import {
 } from '@/contexts/TwoDartCombinationsGameContext';
 import { db } from '@/db/db';
 import useLocale from '@/hooks/locale';
-import { saveToDB } from '@/lib/GameHistoryManager/GameHistory';
+import { saveToDB } from '@/lib/GameHistoryManager';
 import { updateObject } from '@/lib/Helper/updateObjectState';
-import TwoDartCombinationsGame from '@/lib/TwoDartCombinationsGame/TwoDartCombinationsGame';
+import TwoDartCombinationsGame from '@/lib/TwoDartCombinationsGame';
 import MainTemplate from '@/templates/MainTemplate';
 
 const arrange = [
@@ -78,7 +78,7 @@ const DesktopMain: FC<MainProps> = ({ game, setGame, description }) => {
       <Flex justifyContent='space-between' alignItems='center'>
         <NewGame
           onNewGame={() => setGame(new TwoDartCombinationsGame())}
-          isFinished={game.isFinish()}
+          isFinished={game.isFinished()}
         />
         <Flex gap={2}>
           <DescriptionModal
@@ -122,7 +122,7 @@ const MobileMain: FC<MainProps> = ({ game, setGame, description }) => {
       <Flex justifyContent='space-between' width='100%'>
         <NewGame
           onNewGame={() => setGame(new TwoDartCombinationsGame())}
-          isFinished={game.isFinish()}
+          isFinished={game.isFinished()}
         />
         <Flex alignItems='center' gap={4}>
           <TargetBoard message='Target' target={game.getCurrentTarget().toString()} />
@@ -158,7 +158,7 @@ const MyRoundScore: FC<MainProps> = ({ game, setGame }) => (
     scores={game.getRoundScore()}
     onClear={() => updateObject(game, new TwoDartCombinationsGame(), 'removeScore', setGame)}
     onRoundChange={() => updateObject(game, new TwoDartCombinationsGame(), 'roundChange', setGame)}
-    isFinished={game.isFinish()}
+    isFinished={game.isFinished()}
     onRoundOver={() => {
       saveToDB(game.getGameResult(), db.twoDartCombinationsResult);
       setGame(new TwoDartCombinationsGame());

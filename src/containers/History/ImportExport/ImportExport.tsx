@@ -12,7 +12,7 @@ import {
 } from '@chakra-ui/react';
 import { BiExport, BiImport } from 'react-icons/bi';
 import useLocale from '@/hooks/locale';
-import { exportGameHistory, importGameHistory } from '@/lib/GameHistoryManager/GameHistory';
+import { exportGameHistory, importGameHistory } from '@/lib/GameHistoryManager';
 import { isGameHistory } from '@/lib/Helper/TypeGuard';
 
 type ImportExportProps = {

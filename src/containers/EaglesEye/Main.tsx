@@ -10,8 +10,8 @@ import NewGame from '@/containers/EaglesEye/NewGame';
 import { useEaglesEyeGame, useEaglesEyeGameSet } from '@/contexts/EaglesEyeGameContext';
 import { db } from '@/db/db';
 import useLocale from '@/hooks/locale';
-import EaglesEyeGame from '@/lib/EaglesEyeGame/EaglesEyeGame';
-import { saveToDB } from '@/lib/GameHistoryManager/GameHistory';
+import EaglesEyeGame from '@/lib/EaglesEyeGame';
+import { saveToDB } from '@/lib/GameHistoryManager';
 import { updateObject } from '@/lib/Helper/updateObjectState';
 import MainTemplate from '@/templates/MainTemplate';
 
@@ -50,7 +50,7 @@ const DesktopMain: FC<MainProps> = ({ game, setGame, description }) => {
   return (
     <>
       <Flex justifyContent='space-between' alignItems='center'>
-        <NewGame onNewGame={() => setGame(new EaglesEyeGame())} isFinished={game.isFinish()} />
+        <NewGame onNewGame={() => setGame(new EaglesEyeGame())} isFinished={game.isFinished()} />
         <Flex gap={2}>
           <DescriptionModal
             header={"Eagle's Eye"}
@@ -88,7 +88,7 @@ const MobileMain: FC<MainProps> = ({ game, setGame, description }) => {
     <Grid gap={4} justifyItems='center'>
       <GridItem width='100%'>
         <Flex justifyContent='space-between'>
-          <NewGame onNewGame={() => setGame(new EaglesEyeGame())} isFinished={game.isFinish()} />
+          <NewGame onNewGame={() => setGame(new EaglesEyeGame())} isFinished={game.isFinished()} />
           <Box width='100%' pr='40px'>
             <Center>
               <TargetBoard
@@ -127,7 +127,7 @@ const MyRoundScore: FC<MainProps> = ({ game, setGame }) => (
     scores={game.getRoundScore()}
     onClear={() => updateObject(game, new EaglesEyeGame(), 'removeScore', setGame)}
     onRoundChange={() => updateObject(game, new EaglesEyeGame(), 'roundChange', setGame)}
-    isFinished={game.isFinish()}
+    isFinished={game.isFinished()}
     onRoundOver={() => {
       saveToDB(game.getGameResult(), db.eaglesEyeResult);
       setGame(new EaglesEyeGame());

@@ -34,5 +34,5 @@ test('in gaming', () => {
   game.addScore('4');
   expect(game.getCurrentTarget()).toBe(4);
   expect(game.getTotalScore()).toBe(30);
-  expect(game.isFinish()).toBeTruthy();
+  expect(game.isFinished()).toBeTruthy();
 });

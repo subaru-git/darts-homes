@@ -9,7 +9,7 @@ import {
   useState,
 } from 'react';
 import { createCheckers } from 'ts-interface-checker';
-import BullyBullyGame from '@/lib/BullyBullyGame/BullyBullyGame';
+import BullyBullyGame from '@/lib/BullyBullyGame';
 import types from '@/schemas/Types-ti';
 
 const bullyBullyGameContext = createContext<BullyBullyGame | null>(new BullyBullyGame(20));
@@ -31,7 +31,7 @@ const BullyBullyGameContextProvider: FC<{ children: ReactNode | ReactNode[] }> =
   }, []);
   useEffect(() => {
     if (!game) return;
-    localStorage.setItem('BullyBully', JSON.stringify(game.getProgressJson()));
+    localStorage.setItem('BullyBully', JSON.stringify(game.getGameProgress()));
   }, [game]);
   return (
     <bullyBullyGameContext.Provider value={game}>
