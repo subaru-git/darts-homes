@@ -10,18 +10,20 @@ test('should rendering', async () => {
   const { container } = render(<Main />);
   const buttons = screen.getAllByRole('button');
   await user.click(findByAriaLabel(buttons, 'setting'));
+  await user.click(screen.getByRole('spinbutton', { name: 'round setting' }));
+  await user.keyboard('{Control>}A{/Control}{Delete}3');
   await user.click(screen.getByRole('button', { name: 'new game' }));
-  for (const _ of Array(19)) {
+  for (const _ of Array(2)) {
     await user.click(findByAriaLabel(buttons, '19 triple'));
     await user.click(findByAriaLabel(buttons, '19 triple'));
     await user.click(findByAriaLabel(buttons, '19 triple'));
     await user.click(findByAriaLabel(buttons, 'round change'));
   }
-  expect(screen.getByText('475')).toBeInTheDocument();
+  expect(screen.getByText('50')).toBeInTheDocument();
   await user.click(findByAriaLabel(buttons, '19 triple'));
   await user.click(findByAriaLabel(buttons, '19 triple'));
   await user.click(findByAriaLabel(buttons, '19 triple'));
   await user.click(screen.getByRole('button', { name: 'round over' }));
-  expect(screen.getByText(/Total: 500/i)).toBeInTheDocument();
+  expect(screen.getByText(/Total: 75/i)).toBeInTheDocument();
   expect(container).toMatchSnapshot();
 }, 30000);

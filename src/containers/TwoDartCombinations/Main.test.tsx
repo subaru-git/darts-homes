@@ -47,4 +47,4 @@ test('should rendering', async () => {
   }
   expect(screen.getByText(/Total: 300/i)).toBeInTheDocument();
   expect(container).toMatchSnapshot();
-}, 30000);
+}, 60000);
