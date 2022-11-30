@@ -8,7 +8,7 @@ import {
   useEffect,
   useState,
 } from 'react';
-import CricketMarkUpGame from '@/lib/CricketMarkUpGame/CricketMarkUpGame';
+import CricketMarkUpGame from '@/lib/CricketMarkUpGame';
 
 const cricketMarkUpGameContext = createContext<CricketMarkUpGame | null>(new CricketMarkUpGame(10));
 const setCricketMarkUpGameContext = createContext<
@@ -27,7 +27,7 @@ const CricketMarkUpGameContextProvider: FC<{ children: ReactNode | ReactNode[] }
   }, []);
   useEffect(() => {
     if (!game) return;
-    localStorage.setItem('CricketMarkUp', JSON.stringify(game.getProgressJson()));
+    localStorage.setItem('CricketMarkUp', JSON.stringify(game.getGameProgress()));
   }, [game]);
   return (
     <cricketMarkUpGameContext.Provider value={game}>

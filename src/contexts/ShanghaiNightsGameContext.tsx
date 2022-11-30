@@ -9,7 +9,7 @@ import {
   useState,
 } from 'react';
 import { createCheckers } from 'ts-interface-checker';
-import ShanghaiNightsGame from '@/lib/ShanghaiNightsGame/ShanghaiNightsGame';
+import ShanghaiNightsGame from '@/lib/ShanghaiNightsGame';
 import types from '@/schemas/Types-ti';
 
 const shanghaiNightsGameContext = createContext<ShanghaiNightsGame | null>(
@@ -35,7 +35,7 @@ const ShanghaiNightsGameContextProvider: FC<{ children: ReactNode | ReactNode[] 
   }, []);
   useEffect(() => {
     if (!game) return;
-    localStorage.setItem('ShanghaiNights', JSON.stringify(game.getProgressJson()));
+    localStorage.setItem('ShanghaiNights', JSON.stringify(game.getGameProgress()));
   }, [game]);
   return (
     <shanghaiNightsGameContext.Provider value={game}>

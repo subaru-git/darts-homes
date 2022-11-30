@@ -10,8 +10,8 @@ import TargetBoard from '@/components/TargetBoard';
 import { useBullyBullyGame, useBullyBullyGameSet } from '@/contexts/BullyBullyGameContext';
 import { db } from '@/db/db';
 import useLocale from '@/hooks/locale';
-import BullyBullyGame from '@/lib/BullyBullyGame/BullyBullyGame';
-import { saveToDB } from '@/lib/GameHistoryManager/GameHistory';
+import BullyBullyGame from '@/lib/BullyBullyGame';
+import { saveToDB } from '@/lib/GameHistoryManager';
 import { updateObject } from '@/lib/Helper/updateObjectState';
 import MainTemplate from '@/templates/MainTemplate';
 
@@ -52,7 +52,7 @@ const DesktopMain: FC<MainProps> = ({ game, setGame, description }) => {
       <Flex justifyContent='space-between' alignItems='center'>
         <NewGame
           onNewGame={(r) => setGame(new BullyBullyGame(r))}
-          isFinished={game.isFinish()}
+          isFinished={game.isFinished()}
           currentRound={game.getTargetRound()}
         />
         <Flex gap={2}>
@@ -93,7 +93,7 @@ const MobileMain: FC<MainProps> = ({ game, setGame, description }) => {
       <Flex justifyContent='space-between' width='100%'>
         <NewGame
           onNewGame={(round) => setGame(new BullyBullyGame(round))}
-          isFinished={game.isFinish()}
+          isFinished={game.isFinished()}
           currentRound={game.getTargetRound()}
         />
         <Flex alignItems='center' gap={4}>
@@ -130,7 +130,7 @@ const MyRoundScore: FC<MainProps> = ({ game, setGame }) => (
     scores={game.getRoundScore()}
     onClear={() => updateObject(game, new BullyBullyGame(20), 'removeScore', setGame)}
     onRoundChange={() => updateObject(game, new BullyBullyGame(20), 'roundChange', setGame)}
-    isFinished={game.isFinish()}
+    isFinished={game.isFinished()}
     onRoundOver={() => {
       saveToDB(game.getGameResult(), db.bullyBullyResult);
       setGame(new BullyBullyGame(20));

@@ -5,7 +5,7 @@ import {
 } from '@/lib/Helper/Converter';
 import Player from '@/lib/Player/Player';
 
-export default class CricketMarkUpGame {
+class CricketMarkUpGame implements Game, GameData<CricketMarkUpProgress, CricketMarkUpResult> {
   private static readonly beginTarget = 20;
   private static readonly endTarget = 15;
   private targetCount: number;
@@ -15,32 +15,36 @@ export default class CricketMarkUpGame {
   constructor(targetCount: number) {
     this.targetCount = targetCount;
   }
-  resumeGame(progress: { targetCount: number; round: point[]; score: point[][] }) {
-    this.targetCount = progress.targetCount;
-    for (const round of progress.score) {
-      this.player.roundScore(round);
+  getCurrentTarget() {
+    let count = this.targetCount;
+    let target = 20;
+    const score = [...this.player.getScore(), this.roundScore];
+    for (const round of score) {
+      for (const s of round) {
+        if (parseInt(s) !== target && !(target === 25 && s.includes('BULL'))) continue;
+        const c = convertScoreToCount(s);
+        count -= c;
+        if (count <= 0) {
+          if (target === 25) return '-1';
+          target -= 1;
+          if (target < CricketMarkUpGame.endTarget) target = 25;
+          count = this.targetCount;
+        }
+      }
     }
-    this.roundScore = progress.round;
+    return convertNumberToSinglePoint(target);
   }
-  addScore(score: point) {
-    if (this.roundScore.length >= 3) return;
-    this.roundScore.push(score);
+  getCount() {
+    const score = this.getCountScore();
+    return score.flat().filter((s) => s !== '-1').length;
   }
-  removeScore() {
-    this.roundScore = [];
+  getTargetCount() {
+    return this.targetCount;
   }
-  getRoundScore() {
-    return this.roundScore;
+  getNumberOfCount() {
+    return convertCountScoreToNumberOfCount(this.getCountScore(), 15, 20);
   }
-  getRoundsScore() {
-    return this.player.getScore();
-  }
-  roundChange() {
-    if (this.roundScore.length > 3) return;
-    this.player.roundScore(this.roundScore);
-    this.roundScore = [];
-  }
-  getScore() {
+  getCountScore() {
     let count = this.targetCount;
     let target = CricketMarkUpGame.beginTarget;
     const score = [...this.player.getScore(), this.roundScore];
@@ -63,40 +67,34 @@ export default class CricketMarkUpGame {
       }),
     );
   }
-  getCurrentTarget() {
-    let count = this.targetCount;
-    let target = 20;
-    const score = [...this.player.getScore(), this.roundScore];
-    for (const round of score) {
-      for (const s of round) {
-        if (parseInt(s) !== target && !(target === 25 && s.includes('BULL'))) continue;
-        const c = convertScoreToCount(s);
-        count -= c;
-        if (count <= 0) {
-          if (target === 25) return '-1';
-          target -= 1;
-          if (target < CricketMarkUpGame.endTarget) target = 25;
-          count = this.targetCount;
-        }
-      }
-    }
-    return convertNumberToSinglePoint(target);
+  addScore(score: point) {
+    if (this.roundScore.length >= 3) return;
+    this.roundScore.push(score);
+  }
+  removeScore() {
+    this.roundScore = [];
+  }
+  getRoundScore() {
+    return this.roundScore;
+  }
+  getScore() {
+    return this.player.getScore();
+  }
+  roundChange() {
+    if (this.roundScore.length > 3) return;
+    this.player.roundScore(this.roundScore);
+    this.roundScore = [];
   }
   isFinished() {
     return this.getCurrentTarget() === '-1';
   }
-  getCount() {
-    const score = this.getScore();
-    return score.flat().filter((s) => s !== '-1').length;
+  resumeGame(progress: CricketMarkUpProgress) {
+    for (const round of progress.score) this.player.roundScore(round);
+    this.targetCount = progress.targetCount;
+    this.roundScore = progress.round;
   }
-  getTargetCount() {
-    return this.targetCount;
-  }
-  getProgressJson() {
+  getGameProgress(): CricketMarkUpProgress {
     return { targetCount: this.targetCount, round: this.roundScore, score: this.player.getScore() };
-  }
-  getNumberOfCount() {
-    return convertCountScoreToNumberOfCount(this.getScore(), 15, 20);
   }
   getGameResult(): CricketMarkUpResult {
     return {
@@ -107,3 +105,5 @@ export default class CricketMarkUpGame {
     };
   }
 }
+
+export default CricketMarkUpGame;

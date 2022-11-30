@@ -10,8 +10,8 @@ import TargetBoard from '@/components/TargetBoard';
 import { useEightyThrewGame, useEightyThrewGameSet } from '@/contexts/EightyThrewGameContext';
 import { db } from '@/db/db';
 import useLocale from '@/hooks/locale';
-import EightyThrewGame from '@/lib/EightyThrewGame/EightyThrewGame';
-import { saveToDB } from '@/lib/GameHistoryManager/GameHistory';
+import EightyThrewGame from '@/lib/EightyThrewGame';
+import { saveToDB } from '@/lib/GameHistoryManager';
 import { updateObject } from '@/lib/Helper/updateObjectState';
 import MainTemplate from '@/templates/MainTemplate';
 
@@ -52,7 +52,7 @@ const DesktopMain: FC<MainProps> = ({ game, setGame, description }) => {
       <Flex justifyContent='space-between' alignItems='center'>
         <NewGame
           onNewGame={(targetRound) => setGame(new EightyThrewGame(targetRound))}
-          isFinished={game.isFinish()}
+          isFinished={game.isFinished()}
           currentRound={game.getTargetRound()}
         />
         <Flex gap={2}>
@@ -96,7 +96,7 @@ const MobileMain: FC<MainProps> = ({ game, setGame, description }) => {
       <Flex justifyContent='space-between' width='100%'>
         <NewGame
           onNewGame={(targetRound) => setGame(new EightyThrewGame(targetRound))}
-          isFinished={game.isFinish()}
+          isFinished={game.isFinished()}
           currentRound={game.getTargetRound()}
         />
         <Flex alignItems='center' gap={4}>
@@ -137,7 +137,7 @@ const MyRoundScore: FC<MainProps> = ({ game, setGame }) => (
     scores={game.getRoundScore()}
     onClear={() => updateObject(game, new EightyThrewGame(20), 'removeScore', setGame)}
     onRoundChange={() => updateObject(game, new EightyThrewGame(20), 'roundChange', setGame)}
-    isFinished={game.isFinish()}
+    isFinished={game.isFinished()}
     onRoundOver={() => {
       saveToDB(game.getGameResult(), db.eightyThrewResult);
       setGame(new EightyThrewGame(20));

@@ -54,5 +54,5 @@ test('in gaming', () => {
   game.addScore('D-BULL');
   game.addScore('S-BULL');
   expect(game.getRoundScore()).toEqual(['1', 'D-BULL', 'S-BULL']);
-  expect(game.isFinish()).toBeTruthy();
+  expect(game.isFinished()).toBeTruthy();
 });

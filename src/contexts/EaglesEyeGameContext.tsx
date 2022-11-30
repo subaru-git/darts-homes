@@ -8,7 +8,7 @@ import {
   useEffect,
   useState,
 } from 'react';
-import EaglesEyeGame from '@/lib/EaglesEyeGame/EaglesEyeGame';
+import EaglesEyeGame from '@/lib/EaglesEyeGame';
 
 const eaglesEyeGameContext = createContext<EaglesEyeGame | null>(new EaglesEyeGame());
 const setEaglesEyeGameContext = createContext<Dispatch<SetStateAction<EaglesEyeGame | null>>>(
@@ -25,7 +25,7 @@ const EaglesEyeGameContextProvider: FC<{ children: ReactNode | ReactNode[] }> = 
   }, []);
   useEffect(() => {
     if (!game) return;
-    localStorage.setItem('EaglesEye', JSON.stringify(game.getProgressJson()));
+    localStorage.setItem('EaglesEye', JSON.stringify(game.getGameProgress()));
   }, [game]);
   return (
     <eaglesEyeGameContext.Provider value={game}>

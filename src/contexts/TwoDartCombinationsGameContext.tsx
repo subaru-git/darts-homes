@@ -9,7 +9,7 @@ import {
   useState,
 } from 'react';
 import { createCheckers } from 'ts-interface-checker';
-import TwoDartCombinationsGame from '@/lib/TwoDartCombinationsGame/TwoDartCombinationsGame';
+import TwoDartCombinationsGame from '@/lib/TwoDartCombinationsGame';
 import types from '@/schemas/Types-ti';
 
 const twoDartCombinationsGameContext = createContext<TwoDartCombinationsGame | null>(
@@ -35,7 +35,7 @@ const TwoDartCombinationsGameContextProvider: FC<{ children: ReactNode | ReactNo
   }, []);
   useEffect(() => {
     if (!game) return;
-    localStorage.setItem('TwoDartCombinations', JSON.stringify(game.getProgressJson()));
+    localStorage.setItem('TwoDartCombinations', JSON.stringify(game.getGameProgress()));
   }, [game]);
   return (
     <twoDartCombinationsGameContext.Provider value={game}>

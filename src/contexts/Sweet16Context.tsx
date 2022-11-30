@@ -9,7 +9,7 @@ import {
   useState,
 } from 'react';
 import { createCheckers } from 'ts-interface-checker';
-import Sweet16Game from '@/lib/Sweet16Game/Sweet16Game';
+import Sweet16Game from '@/lib/Sweet16Game';
 import types from '@/schemas/Types-ti';
 
 const sweet16GameContext = createContext<Sweet16Game | null>(new Sweet16Game(20));
@@ -31,7 +31,7 @@ const Sweet16GameContextProvider: FC<{ children: ReactNode | ReactNode[] }> = ({
   }, []);
   useEffect(() => {
     if (!game) return;
-    localStorage.setItem('Sweet16', JSON.stringify(game.getProgressJson()));
+    localStorage.setItem('Sweet16', JSON.stringify(game.getGameProgress()));
   }, [game]);
   return (
     <sweet16GameContext.Provider value={game}>

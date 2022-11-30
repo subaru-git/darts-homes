@@ -1,21 +1,21 @@
 import { convertScoreToNumber } from '../Helper/Converter';
 import Player from '@/lib/Player/Player';
 
-export default class EaglesEyeGame {
+class EaglesEyeGame implements Game, GameData<EaglesEyeProgress, EaglesEyeResult> {
   static round = 8;
   private player: Player = new Player('Player1');
   private roundScore: point[] = [];
 
-  resumeGame(progress: { round: point[]; score: point[][] }) {
-    for (const round of progress.score) {
-      this.player.roundScore(round);
-    }
-    this.roundScore = progress.round;
+  getRound() {
+    return this.player.getScore().length + 1;
   }
-  roundChange() {
-    if (this.roundScore.length > 3) return;
-    this.player.roundScore(this.roundScore);
-    this.roundScore = [];
+  getTotalScore() {
+    const scores = [...this.player.getScore(), this.roundScore];
+    return scores.reduce(
+      (p, c) =>
+        p + c.reduce((p, c) => p + (c.includes('BULL') ? convertScoreToNumber(c, true) : 0), 0),
+      0,
+    );
   }
   addScore(score: point) {
     if (this.roundScore.length >= 3) return;
@@ -24,31 +24,25 @@ export default class EaglesEyeGame {
   removeScore() {
     this.roundScore = [];
   }
-  getRound() {
-    return this.player.getScore().length + 1;
-  }
   getRoundScore() {
     return this.roundScore;
   }
   getScore() {
     return this.player.getScore();
   }
-  getTotalScore() {
-    const scores = [...this.player.getScore(), this.roundScore];
-    return scores.reduce(
-      (pre, crr) =>
-        pre +
-        crr.reduce(
-          (pre, crr) => pre + (crr.includes('BULL') ? convertScoreToNumber(crr, true) : 0),
-          0,
-        ),
-      0,
-    );
+  roundChange() {
+    if (this.roundScore.length > 3) return;
+    this.player.roundScore(this.roundScore);
+    this.roundScore = [];
   }
-  isFinish() {
+  isFinished() {
     return this.getScore().length === 7 && this.roundScore.length === 3;
   }
-  getProgressJson() {
+  resumeGame(progress: EaglesEyeProgress) {
+    for (const round of progress.score) this.player.roundScore(round);
+    this.roundScore = progress.round;
+  }
+  getGameProgress(): EaglesEyeProgress {
     return { round: this.roundScore, score: this.player.getScore() };
   }
   getGameResult(): EaglesEyeResult {
@@ -59,3 +53,5 @@ export default class EaglesEyeGame {
     };
   }
 }
+
+export default EaglesEyeGame;

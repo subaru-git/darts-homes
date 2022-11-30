@@ -1,7 +1,5 @@
-import { render } from '@testing-library/react';
 import MainTemplate from './MainTemplate';
-
-jest.mock('next/router', () => ({ useRouter: jest.fn().mockReturnValue({ locale: 'en' }) }));
+import { render } from '@/lib/TestUtils/RenderMock';
 
 test('should rendering', () => {
   const { container } = render(<MainTemplate label='' />);

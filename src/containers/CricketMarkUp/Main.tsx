@@ -11,8 +11,8 @@ import TargetBoard from '@/components/TargetBoard';
 import { useCricketMarkUpGame, useCricketMarkUpGameSet } from '@/contexts/CricketMarkUpGameContext';
 import { db } from '@/db/db';
 import useLocale from '@/hooks/locale';
-import CricketMarkUpGame from '@/lib/CricketMarkUpGame/CricketMarkUpGame';
-import { saveToDB } from '@/lib/GameHistoryManager/GameHistory';
+import CricketMarkUpGame from '@/lib/CricketMarkUpGame';
+import { saveToDB } from '@/lib/GameHistoryManager';
 import { updateObject } from '@/lib/Helper/updateObjectState';
 import MainTemplate from '@/templates/MainTemplate';
 
@@ -100,7 +100,7 @@ const DesktopMain: FC<MainProps> = ({ game, setGame, description }) => {
               <MyRoundScore game={game} setGame={setGame} />
             </GridItem>
             <GridItem>
-              <RoundBoard score={game.getRoundsScore()} />
+              <RoundBoard score={game.getScore()} />
             </GridItem>
           </Grid>
         </GridItem>
@@ -165,7 +165,7 @@ const MobileMain: FC<MainProps> = ({ game, setGame, description }) => {
           disabled={game.getRoundScore().length >= 3 || game.isFinished()}
           other
         />
-        <RoundBoard score={game.getRoundsScore()} />
+        <RoundBoard score={game.getScore()} />
       </Box>
     </Grid>
   );

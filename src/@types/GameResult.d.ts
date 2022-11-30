@@ -114,3 +114,5 @@ interface TreblesForShowResult {
   round: number;
   playedAt: string;
 }
+
+interface ArrangeResult {}

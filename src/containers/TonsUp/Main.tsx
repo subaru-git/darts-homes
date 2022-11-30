@@ -10,9 +10,9 @@ import TargetBoard from '@/components/TargetBoard';
 import { useTonsUpGame, useTonsUpGameSet } from '@/contexts/TonsUpGameContext';
 import { db } from '@/db/db';
 import useLocale from '@/hooks/locale';
-import { saveToDB } from '@/lib/GameHistoryManager/GameHistory';
+import { saveToDB } from '@/lib/GameHistoryManager';
 import { updateObject } from '@/lib/Helper/updateObjectState';
-import TonsUpGame from '@/lib/TonsUpGame/TonsUpGame';
+import TonsUpGame from '@/lib/TonsUpGame';
 import MainTemplate from '@/templates/MainTemplate';
 
 const Main: FC = () => {
@@ -53,7 +53,7 @@ const DesktopMain: FC<MainProps> = ({ game, setGame, description }) => {
       <Flex justifyContent='space-between' alignItems='center'>
         <NewGame
           onNewGame={(targetRound) => setGame(new TonsUpGame(targetRound))}
-          isFinished={game.isFinish()}
+          isFinished={game.isFinished()}
           currentRound={game.getTargetRound()}
         />
         <Flex gap={2}>
@@ -96,7 +96,7 @@ const MobileMain: FC<MainProps> = ({ game, setGame, description }) => {
       <Flex justifyContent='space-between' width='100%'>
         <NewGame
           onNewGame={(targetRound) => setGame(new TonsUpGame(targetRound))}
-          isFinished={game.isFinish()}
+          isFinished={game.isFinished()}
           currentRound={game.getTargetRound()}
         />
         <Flex alignItems='center' gap={4}>
@@ -136,7 +136,7 @@ const MyRoundScore: FC<MainProps> = ({ game, setGame }) => (
     scores={game.getRoundScore()}
     onClear={() => updateObject(game, new TonsUpGame(20), 'removeScore', setGame)}
     onRoundChange={() => updateObject(game, new TonsUpGame(20), 'roundChange', setGame)}
-    isFinished={game.isFinish()}
+    isFinished={game.isFinished()}
     onRoundOver={() => {
       saveToDB(game.getGameResult(), db.tonsUpResult);
       setGame(new TonsUpGame(20));

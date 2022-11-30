@@ -1,3 +1,14 @@
+interface CricketMarkUpProgress {
+  targetCount: number;
+  round: point[];
+  score: point[][];
+}
+
+interface EaglesEyeProgress {
+  round: point[];
+  score: point[][];
+}
+
 interface DoubleTroubleProgress {
   roundScore: point[];
   score: point[][];
@@ -68,7 +79,7 @@ interface TreblesForShowProgress {
   round: number;
 }
 
-interface ArrangeGameProgress {
+interface ArrangeProgress {
   roundScore: point[];
   score: point[][];
   targetOutCont: number;
@@ -78,7 +89,7 @@ interface ArrangeGameProgress {
 
 type OutOption = 'double' | 'single' | 'master';
 
-interface ArrangeGameSettings {
+interface ArrangeSettings {
   targets?: number[];
   out: OutOption;
   range: number;

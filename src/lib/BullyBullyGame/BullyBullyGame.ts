@@ -1,19 +1,12 @@
 import Player from '../Player/Player';
 
-class BullyBullyGame {
+class BullyBullyGame implements Game, GameData<BullyBullyProgress, BullyBullyResult> {
   private round: number = 20;
   private player: Player = new Player('Player1');
   private roundScore: point[] = [];
 
   constructor(round: number) {
     this.round = round;
-  }
-  resumeGame(progress: BullyBullyProgress) {
-    for (const round of progress.score) {
-      this.player.roundScore(round);
-    }
-    this.roundScore = progress.roundScore;
-    this.round = progress.round;
   }
   getTargetRound() {
     return this.round;
@@ -24,6 +17,10 @@ class BullyBullyGame {
   getCurrentTarget() {
     return 50;
   }
+  getTotalScore() {
+    const scores = [...this.player.getScore(), this.roundScore];
+    return scores.reduce((pre, crr) => pre + this.calcRound(crr), 0);
+  }
   addScore(score: point) {
     if (this.roundScore.length >= 3) return;
     this.roundScore.push(score);
@@ -31,25 +28,26 @@ class BullyBullyGame {
   removeScore() {
     this.roundScore = [];
   }
-  getScore() {
-    return this.player.getScore();
-  }
   getRoundScore() {
     return this.roundScore;
+  }
+  getScore() {
+    return this.player.getScore();
   }
   roundChange() {
     if (this.roundScore.length > 3) return;
     this.player.roundScore(this.roundScore);
     this.roundScore = [];
   }
-  getTotalScore() {
-    const scores = [...this.player.getScore(), this.roundScore];
-    return scores.reduce((pre, crr) => pre + this.calcRound(crr), 0);
-  }
-  isFinish() {
+  isFinished() {
     return this.getScore().length === this.round - 1 && this.roundScore.length === 3;
   }
-  getProgressJson(): BullyBullyProgress {
+  resumeGame(progress: BullyBullyProgress) {
+    for (const round of progress.score) this.player.roundScore(round);
+    this.roundScore = progress.roundScore;
+    this.round = progress.round;
+  }
+  getGameProgress(): BullyBullyProgress {
     return { roundScore: this.roundScore, score: this.player.getScore(), round: this.round };
   }
   getGameResult(): BullyBullyResult {

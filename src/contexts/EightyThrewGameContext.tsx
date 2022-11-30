@@ -9,7 +9,7 @@ import {
   useState,
 } from 'react';
 import { createCheckers } from 'ts-interface-checker';
-import EightyThrewGame from '@/lib/EightyThrewGame/EightyThrewGame';
+import EightyThrewGame from '@/lib/EightyThrewGame';
 import types from '@/schemas/Types-ti';
 
 const eightyThrewGameContext = createContext<EightyThrewGame | null>(new EightyThrewGame(20));
@@ -33,7 +33,7 @@ const EightyThrewGameContextProvider: FC<{ children: ReactNode | ReactNode[] }> 
   }, []);
   useEffect(() => {
     if (!game) return;
-    localStorage.setItem('EightyThrew', JSON.stringify(game.getProgressJson()));
+    localStorage.setItem('EightyThrew', JSON.stringify(game.getGameProgress()));
   }, [game]);
   return (
     <eightyThrewGameContext.Provider value={game}>

@@ -1,4 +1,4 @@
-const updateObject = (
+export const updateObject = (
   current: any,
   newObject: any,
   functionName: string,
@@ -9,5 +9,3 @@ const updateObject = (
   g[functionName](param);
   setter(g);
 };
-
-export { updateObject };

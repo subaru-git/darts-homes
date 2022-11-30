@@ -33,5 +33,5 @@ test('in gaming', () => {
   expect(game.getTotalScore()).toBe(39);
   game.addScore('17T');
   expect(game.getTotalScore()).toBe(39);
-  expect(game.isFinish()).toBeTruthy();
+  expect(game.isFinished()).toBeTruthy();
 });
