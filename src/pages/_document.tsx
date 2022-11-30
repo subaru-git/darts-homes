@@ -15,6 +15,10 @@ export default class Document extends NextDocument {
           <meta name='msapplication-TileColor' content='#da532c' />
           <meta name='msapplication-config' content='/favicons/browserconfig.xml' />
           <meta name='theme-color' content='#ffffff' />
+          <script
+            async
+            src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
+          ></script>
         </Head>
         <body>
           <Main />

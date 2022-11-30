@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should rendering 1`] = `
+<div>
+  <ins
+    class="adsbygoogle "
+    data-ad-client=""
+    data-ad-format="auto"
+    data-ad-layout=""
+    data-ad-layout-key=""
+    data-ad-slot=""
+    data-adtest="on"
+    data-full-width-responsive="false"
+    style="display: inline-block; width: 100%; height: 90px;"
+  />
+  <span
+    hidden=""
+    id="__chakra_env"
+  />
+</div>
+`;
