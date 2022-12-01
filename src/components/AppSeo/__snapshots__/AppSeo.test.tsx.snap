@@ -3,23 +3,27 @@
 exports[`should rendering 1`] = `
 <head>
   <title>
-    Cricket Mark-Up
+    title
   </title>
   <meta
     content="index,follow"
     name="robots"
   />
   <meta
-    content="This is a darts practice game introduced by "Kikuchi Yamaguchi." You will aim for the cricket number."
+    content="description"
     name="description"
   />
   <meta
-    content="Cricket Mark-Up"
+    content="title"
     property="og:title"
   />
   <meta
-    content="This is a darts practice game introduced by "Kikuchi Yamaguchi." You will aim for the cricket number."
+    content="description"
     property="og:description"
+  />
+  <link
+    href="canonical"
+    rel="canonical"
   />
 </head>
 `;

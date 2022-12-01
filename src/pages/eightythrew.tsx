@@ -1,15 +1,30 @@
 import React from 'react';
-import { NextPage } from 'next';
+import { GetStaticProps, NextPage } from 'next';
 import AppSeo from '@/components/AppSeo';
 import Main from '@/containers/EightyThrew/Main';
+import en from '@/lang/en';
+import ja from '@/lang/ja';
 
-const EightyThrew: NextPage = () => {
+type Props = {
+  title: string;
+  description: string;
+  canonical: string;
+};
+
+const EightyThrew: NextPage<Props> = ({ title, description, canonical }) => {
   return (
     <>
-      <AppSeo page='eightythrew' />
+      <AppSeo title={title} description={description} canonical={canonical} />
       <Main />
     </>
   );
+};
+
+export const getStaticProps: GetStaticProps<Props> = async ({ locale }) => {
+  const { seo } = locale === 'ja' ? ja : en;
+  const { title, description } = seo.eightythrew;
+  const canonical = `https://darts.homes${locale === 'en' ? '/en' : ''}/eightythrew`;
+  return { props: { title, description, canonical } };
 };
 
 export default EightyThrew;
