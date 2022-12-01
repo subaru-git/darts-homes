@@ -3,13 +3,13 @@ import { DefaultSeo } from 'next-seo';
 import useLocale from '@/hooks/locale';
 
 const AppDefaultSeo: FC = () => {
-  const { t } = useLocale();
+  const { t, locale } = useLocale();
   const { title, description } = t.seo.default;
   return (
     <DefaultSeo
       defaultTitle={title}
       titleTemplate='%s - Darts Homes'
-      canonical='https://darts.homes'
+      canonical={`https://darts.homes${locale === 'en' ? '/en' : ''}`}
       description={description}
       twitter={{ cardType: 'summary' }}
       openGraph={{
@@ -17,7 +17,7 @@ const AppDefaultSeo: FC = () => {
         title: title,
         description: description,
         site_name: 'Darts Homes',
-        url: 'https://darts.homes',
+        url: `https://darts.homes${locale === 'en' ? '/en' : ''}`,
         images: [
           {
             url: 'https://darts.homes/ogp.png',

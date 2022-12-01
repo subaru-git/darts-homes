@@ -1,15 +1,30 @@
 import React from 'react';
-import { NextPage } from 'next';
+import { GetStaticProps, NextPage } from 'next';
 import AppSeo from '@/components/AppSeo';
 import Main from '@/containers/Sweet16/Main';
+import en from '@/lang/en';
+import ja from '@/lang/ja';
 
-const Sweet16: NextPage = () => {
+type Props = {
+  title: string;
+  description: string;
+  canonical: string;
+};
+
+const Sweet16: NextPage<Props> = ({ title, description, canonical }) => {
   return (
     <>
-      <AppSeo page='sweet16' />
+      <AppSeo title={title} description={description} canonical={canonical} />
       <Main />
     </>
   );
+};
+
+export const getStaticProps: GetStaticProps<Props> = async ({ locale }) => {
+  const { seo } = locale === 'ja' ? ja : en;
+  const { title, description } = seo.sweet16;
+  const canonical = `https://darts.homes${locale === 'en' ? '/en' : ''}/sweet16`;
+  return { props: { title, description, canonical } };
 };
 
 export default Sweet16;

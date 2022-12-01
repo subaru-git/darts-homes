@@ -11,5 +11,7 @@ const Template: ComponentStory<typeof AppSeo> = (args) => <AppSeo {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  page: 'cricketmarkup',
+  title: 'AppSep Stories',
+  description: 'AppSep Stories.',
+  canonical: 'https://darts.homes',
 };
