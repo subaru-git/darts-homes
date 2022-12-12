@@ -8,17 +8,19 @@ import DescriptionModal from '@/components/DescriptionModal';
 import RoundBoard from '@/components/RoundBoard';
 import RoundScore from '@/components/RoundScore';
 import TargetBoard from '@/components/TargetBoard';
+import { useAuth } from '@/contexts/AuthContext';
 import { useCricketMarkUpGame, useCricketMarkUpGameSet } from '@/contexts/CricketMarkUpGameContext';
 import { db } from '@/db/db';
 import useLocale from '@/hooks/locale';
 import CricketMarkUpGame from '@/lib/CricketMarkUpGame';
-import { saveToDB } from '@/lib/GameHistoryManager';
+import { saveHistory } from '@/lib/GameHistoryManager';
 import { updateObject } from '@/lib/Helper/updateObjectState';
 import MainTemplate from '@/templates/MainTemplate';
 
 const Main: FC = () => {
   const game = useCricketMarkUpGame();
   const setGame = useCricketMarkUpGameSet();
+  const user = useAuth();
   const isMd = useBreakpointValue({ base: false, md: true });
   const { t } = useLocale();
   if (!game) return <MainTemplate label={'cricket-mark-up-main'} isLoading />;
@@ -28,12 +30,14 @@ const Main: FC = () => {
         <DesktopMain
           game={game}
           setGame={setGame}
+          user={user}
           description={t.games.cricketmarkup.description.join('\n')}
         />
       ) : (
         <MobileMain
           game={game}
           setGame={setGame}
+          user={user}
           description={t.games.cricketmarkup.description.join('\n')}
         />
       )}
@@ -44,16 +48,17 @@ const Main: FC = () => {
 type MainProps = {
   game: CricketMarkUpGame;
   setGame: (game: CricketMarkUpGame) => void;
+  user: User | null | undefined;
   description?: string;
 };
 
-const DesktopMain: FC<MainProps> = ({ game, setGame, description }) => {
+const DesktopMain: FC<MainProps> = ({ game, setGame, user, description }) => {
   return (
     <div>
       <Flex justifyContent='space-between'>
         <NewGame
           onNewGame={(targetCount) => {
-            if (game.isFinished()) saveToDB(game.getGameResult(), db.cricketMarkUpResult);
+            if (game.isFinished()) saveHistory(game.getGameResult(), db.cricketMarkUpResult, user);
             setGame(new CricketMarkUpGame(targetCount));
           }}
           currentTargetCount={game.getTargetCount()}
@@ -97,7 +102,7 @@ const DesktopMain: FC<MainProps> = ({ game, setGame, description }) => {
               </Grid>
             </GridItem>
             <GridItem>
-              <MyRoundScore game={game} setGame={setGame} />
+              <MyRoundScore game={game} setGame={setGame} user={user} />
             </GridItem>
             <GridItem>
               <RoundBoard score={game.getScore()} />
@@ -118,14 +123,15 @@ const DesktopMain: FC<MainProps> = ({ game, setGame, description }) => {
   );
 };
 
-const MobileMain: FC<MainProps> = ({ game, setGame, description }) => {
+const MobileMain: FC<MainProps> = ({ game, setGame, user, description }) => {
   return (
     <Grid gap={4} justifyItems='center'>
       <GridItem w='100%'>
         <Flex justifyContent='space-between'>
           <NewGame
             onNewGame={(targetCount) => {
-              if (game.isFinished()) saveToDB(game.getGameResult(), db.cricketMarkUpResult);
+              if (game.isFinished())
+                saveHistory(game.getGameResult(), db.cricketMarkUpResult, user);
               setGame(new CricketMarkUpGame(targetCount));
             }}
             currentTargetCount={game.getTargetCount()}
@@ -156,7 +162,7 @@ const MobileMain: FC<MainProps> = ({ game, setGame, description }) => {
       <Box maxH={250} overflow='scroll'>
         <Board scores={game.getNumberOfCount()} />
       </Box>
-      <MyRoundScore game={game} setGame={setGame} />
+      <MyRoundScore game={game} setGame={setGame} user={user} />
       <Box w='100%'>
         <CountButtons
           onCount={(n) => updateObject(game, new CricketMarkUpGame(10), 'addScore', setGame, n)}
@@ -171,14 +177,14 @@ const MobileMain: FC<MainProps> = ({ game, setGame, description }) => {
   );
 };
 
-const MyRoundScore: FC<MainProps> = ({ game, setGame }) => (
+const MyRoundScore: FC<MainProps> = ({ game, setGame, user }) => (
   <RoundScore
     scores={game.getRoundScore()}
     onClear={() => updateObject(game, new CricketMarkUpGame(10), 'removeScore', setGame)}
     onRoundChange={() => updateObject(game, new CricketMarkUpGame(10), 'roundChange', setGame)}
     isFinished={game.isFinished()}
     onRoundOver={() => {
-      saveToDB(game.getGameResult(), db.cricketMarkUpResult);
+      saveHistory(game.getGameResult(), db.cricketMarkUpResult, user);
       setGame(new CricketMarkUpGame(10));
     }}
     result={getResult(game)}

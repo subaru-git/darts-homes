@@ -1,6 +1,7 @@
 /* eslint-disable import/named */
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { v4 as uuidv4 } from 'uuid';
 import Board from './Board';
 
 export default {
@@ -15,6 +16,7 @@ Default.args = {
   history: {
     cricketMarkUp: [
       {
+        uuid: uuidv4(),
         targetCount: 3,
         result: 0,
         scores: [
@@ -57,6 +59,7 @@ Default.args = {
         playedAt: '2022-11-15T02:47:09.017Z',
       },
       {
+        uuid: uuidv4(),
         targetCount: 3,
         result: 3,
         scores: [
@@ -99,6 +102,7 @@ Default.args = {
         playedAt: '2022-11-15T02:47:19.233Z',
       },
       {
+        uuid: uuidv4(),
         targetCount: 3,
         result: 8,
         scores: [
@@ -141,6 +145,7 @@ Default.args = {
         playedAt: '2022-11-15T02:47:38.224Z',
       },
       {
+        uuid: uuidv4(),
         targetCount: 3,
         result: 0,
         scores: [
@@ -183,6 +188,7 @@ Default.args = {
         playedAt: '2022-11-15T02:48:31.119Z',
       },
       {
+        uuid: uuidv4(),
         targetCount: 6,
         result: 2,
         scores: [
@@ -225,6 +231,7 @@ Default.args = {
         playedAt: '2022-11-15T02:48:58.126Z',
       },
       {
+        uuid: uuidv4(),
         targetCount: 3,
         result: 8,
         scores: [
@@ -267,6 +274,7 @@ Default.args = {
         playedAt: '2022-11-15T07:22:32.709Z',
       },
       {
+        uuid: uuidv4(),
         targetCount: 3,
         result: 8,
         scores: [
@@ -311,6 +319,7 @@ Default.args = {
     ],
     eaglesEye: [
       {
+        uuid: uuidv4(),
         result: 1050,
         scores: [
           ['D-BULL', 'S-BULL', '0'],
@@ -327,6 +336,7 @@ Default.args = {
     ],
     doubleTrouble: [
       {
+        uuid: uuidv4(),
         result: 300,
         scores: [
           ['1D', '1D', '1D'],
@@ -355,6 +365,7 @@ Default.args = {
     ],
     sweet16: [
       {
+        uuid: uuidv4(),
         result: 45,
         scores: [
           ['16D', '16D', '16D'],
@@ -365,6 +376,7 @@ Default.args = {
         round: 0,
       },
       {
+        uuid: uuidv4(),
         result: 45,
         scores: [
           ['16D', '16D', '16D'],
@@ -375,6 +387,7 @@ Default.args = {
         playedAt: '2022-11-16T01:47:02.739Z',
       },
       {
+        uuid: uuidv4(),
         result: 45,
         scores: [
           ['16D', '16D', '16D'],
@@ -387,6 +400,7 @@ Default.args = {
     ],
     topsAndTens: [
       {
+        uuid: uuidv4(),
         result: 45,
         scores: [
           ['20D', '20D', '20D'],
@@ -394,41 +408,41 @@ Default.args = {
           ['20D', '20D', '20D'],
         ],
         playedAt: '2022-11-16T01:09:24.712Z',
-        round: 0,
       },
       {
+        uuid: uuidv4(),
         result: 45,
         scores: [
           ['20D', '20D', '20D'],
           ['20D', '20D', '20D'],
           ['20D', '20D', '20D'],
         ],
-        round: 3,
         playedAt: '2022-11-16T01:10:39.989Z',
       },
       {
+        uuid: uuidv4(),
         result: 45,
         scores: [
           ['20D', '20D', '20D'],
           ['20D', '20D', '20D'],
           ['20D', '20D', '20D'],
         ],
-        round: 3,
         playedAt: '2022-11-16T01:45:29.863Z',
       },
       {
+        uuid: uuidv4(),
         result: 45,
         scores: [
           ['20D', '20D', '20D'],
           ['20D', '20D', '20D'],
           ['20D', '20D', '20D'],
         ],
-        round: 3,
         playedAt: '2022-11-16T01:46:26.878Z',
       },
     ],
     twoDartCombinations: [
       {
+        uuid: uuidv4(),
         result: 270,
         scores: [
           ['17D', '17D', '17D'],
@@ -457,6 +471,7 @@ Default.args = {
     ],
     aroundTheCompass: [
       {
+        uuid: uuidv4(),
         result: 45,
         scores: [
           ['12D', '12D', '12D'],
@@ -467,6 +482,7 @@ Default.args = {
         playedAt: '2022-11-16T01:42:27.811Z',
       },
       {
+        uuid: uuidv4(),
         result: 45,
         scores: [
           ['12D', '12D', '12D'],
@@ -477,6 +493,7 @@ Default.args = {
         playedAt: '2022-11-16T01:44:01.238Z',
       },
       {
+        uuid: uuidv4(),
         result: 45,
         scores: [
           ['12D', '12D', '12D'],
@@ -489,6 +506,7 @@ Default.args = {
     ],
     tonsUp: [
       {
+        uuid: uuidv4(),
         result: 60,
         scores: [
           ['20T', '20D', '0'],
@@ -501,6 +519,7 @@ Default.args = {
     ],
     route64: [
       {
+        uuid: uuidv4(),
         result: 0,
         scores: [
           ['20D', '20D', '20D'],
@@ -513,6 +532,7 @@ Default.args = {
     ],
     eightyThrew: [
       {
+        uuid: uuidv4(),
         result: 40,
         scores: [
           ['20T', '11D', '0'],
@@ -525,6 +545,7 @@ Default.args = {
     ],
     shanghaiNights: [
       {
+        uuid: uuidv4(),
         result: 30,
         scores: [
           ['20T', '20D', '20'],
@@ -537,6 +558,7 @@ Default.args = {
     ],
     switchHitter: [
       {
+        uuid: uuidv4(),
         result: 18,
         scores: [
           ['19D', '19D', '19'],
@@ -549,6 +571,7 @@ Default.args = {
     ],
     bullyBully: [
       {
+        uuid: uuidv4(),
         result: 21,
         scores: [
           ['D-BULL', 'S-BULL', '0'],
@@ -561,6 +584,7 @@ Default.args = {
     ],
     treblesForShow: [
       {
+        uuid: uuidv4(),
         result: 18,
         scores: [
           ['20D', '20D', '20D'],

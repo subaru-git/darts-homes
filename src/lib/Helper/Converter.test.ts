@@ -1,8 +1,12 @@
 import {
   convertCountScoreToNumberOfCount,
+  convertFirebaseResultToGameResult,
+  convertGameResultToFirebaseResult,
   convertNumberOfCountToMarkCount,
+  convertPointsToScore,
   convertScoreToCount,
   convertScoreToNumber,
+  convertScoreToPoints,
 } from './Converter';
 
 test('convertScoreToNumber', () => {
@@ -42,4 +46,142 @@ test('convertCountScoreToNumberOfCount', () => {
 test('convertNumberOfCountToMarkCount', () => {
   expect(convertNumberOfCountToMarkCount(10)).toEqual([3, 3, 3, 1]);
   expect(convertNumberOfCountToMarkCount(5)).toEqual([3, 2]);
+});
+
+test('convertPointsToScore', () => {
+  const points: point[][] = [
+    ['20T', '20T', '20T'],
+    ['19T', '19T', '19T'],
+    ['18T', '18T', '18T'],
+  ];
+  expect(convertPointsToScore(points)).toEqual([
+    { round: 0, score: ['20T', '20T', '20T'] },
+    { round: 1, score: ['19T', '19T', '19T'] },
+    { round: 2, score: ['18T', '18T', '18T'] },
+  ]);
+});
+
+test('convertGameResultToFireStore', () => {
+  const r = {
+    result: 0,
+    scores: [
+      ['20T' as point, '20T' as point, '20T' as point],
+      ['19T' as point, '19T' as point, '19T' as point],
+      ['18T' as point, '18T' as point, '18T' as point],
+    ],
+    playedAt: '2020-01-01T00:00:00.000Z',
+    uuid: '1',
+  };
+  const e = {
+    result: 0,
+    scores: [
+      { round: 0, score: ['20T', '20T', '20T'] },
+      { round: 1, score: ['19T', '19T', '19T'] },
+      { round: 2, score: ['18T', '18T', '18T'] },
+    ],
+    playedAt: '2020-01-01T00:00:00.000Z',
+    uuid: '1',
+  };
+
+  const result: GameResultModel = {
+    cricketMarkUp: [],
+    eaglesEye: [r],
+    doubleTrouble: [r],
+    sweet16: [{ ...r, round: 0 }],
+    topsAndTens: [r],
+    twoDartCombinations: [r],
+    aroundTheCompass: [{ ...r, round: 0 }],
+    tonsUp: [{ ...r, round: 0 }],
+    route64: [{ ...r, round: 0 }],
+    eightyThrew: [{ ...r, round: 0 }],
+    shanghaiNights: [{ ...r, round: 0 }],
+    switchHitter: [{ ...r, round: 0 }],
+    bullyBully: [{ ...r, round: 0 }],
+    treblesForShow: [{ ...r, round: 0 }],
+  };
+  expect(convertGameResultToFirebaseResult(result)).toEqual({
+    cricketMarkUp: [],
+    eaglesEye: [e],
+    doubleTrouble: [e],
+    sweet16: [{ ...e, round: 0 }],
+    topsAndTens: [e],
+    twoDartCombinations: [e],
+    aroundTheCompass: [{ ...e, round: 0 }],
+    tonsUp: [{ ...e, round: 0 }],
+    route64: [{ ...e, round: 0 }],
+    eightyThrew: [{ ...e, round: 0 }],
+    shanghaiNights: [{ ...e, round: 0 }],
+    switchHitter: [{ ...e, round: 0 }],
+    bullyBully: [{ ...e, round: 0 }],
+    treblesForShow: [{ ...e, round: 0 }],
+  });
+});
+
+test('convertScoreToPoints', () => {
+  const scores: FirebaseScore[] = [
+    { round: 1, score: ['19T' as point, '19T' as point, '19T' as point] },
+    { round: 0, score: ['20T' as point, '20T' as point, '20T' as point] },
+    { round: 2, score: ['18T' as point, '18T' as point, '18T' as point] },
+  ];
+  expect(convertScoreToPoints(scores)).toEqual([
+    ['20T', '20T', '20T'],
+    ['19T', '19T', '19T'],
+    ['18T', '18T', '18T'],
+  ]);
+});
+
+test('convertGameResultToFireStore', () => {
+  const e = {
+    result: 0,
+    scores: [
+      ['20T' as point, '20T' as point, '20T' as point],
+      ['19T' as point, '19T' as point, '19T' as point],
+      ['18T' as point, '18T' as point, '18T' as point],
+    ],
+    playedAt: '2020-01-01T00:00:00.000Z',
+    uuid: '1',
+  };
+  const r = {
+    result: 0,
+    scores: [
+      { round: 1, score: ['19T' as point, '19T' as point, '19T' as point] },
+      { round: 0, score: ['20T' as point, '20T' as point, '20T' as point] },
+      { round: 2, score: ['18T' as point, '18T' as point, '18T' as point] },
+    ],
+    playedAt: '2020-01-01T00:00:00.000Z',
+    uuid: '1',
+  };
+
+  const result: GameResultModelFirebase = {
+    cricketMarkUp: [],
+    eaglesEye: [r],
+    doubleTrouble: [r],
+    sweet16: [{ ...r, round: 0 }],
+    topsAndTens: [r],
+    twoDartCombinations: [r],
+    aroundTheCompass: [{ ...r, round: 0 }],
+    tonsUp: [{ ...r, round: 0 }],
+    route64: [{ ...r, round: 0 }],
+    eightyThrew: [{ ...r, round: 0 }],
+    shanghaiNights: [{ ...r, round: 0 }],
+    switchHitter: [{ ...r, round: 0 }],
+    bullyBully: [{ ...r, round: 0 }],
+    treblesForShow: [{ ...r, round: 0 }],
+  };
+  expect(convertFirebaseResultToGameResult(result)).toEqual({
+    cricketMarkUp: [],
+    eaglesEye: [e],
+    doubleTrouble: [e],
+    sweet16: [{ ...e, round: 0 }],
+    topsAndTens: [e],
+    twoDartCombinations: [e],
+    aroundTheCompass: [{ ...e, round: 0 }],
+    tonsUp: [{ ...e, round: 0 }],
+    route64: [{ ...e, round: 0 }],
+    eightyThrew: [{ ...e, round: 0 }],
+    shanghaiNights: [{ ...e, round: 0 }],
+    switchHitter: [{ ...e, round: 0 }],
+    bullyBully: [{ ...e, round: 0 }],
+    treblesForShow: [{ ...e, round: 0 }],
+  });
 });

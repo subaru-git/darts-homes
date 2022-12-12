@@ -10,7 +10,9 @@ import {
   Flex,
   useDisclosure,
 } from '@chakra-ui/react';
+import fileDownload from 'js-file-download';
 import { BiExport, BiImport } from 'react-icons/bi';
+import { useAuth } from '@/contexts/AuthContext';
 import useLocale from '@/hooks/locale';
 import { exportGameHistory, importGameHistory } from '@/lib/GameHistoryManager';
 import { isGameHistory } from '@/lib/Helper/TypeGuard';
@@ -20,6 +22,7 @@ type ImportExportProps = {
 };
 
 const ImportExport: FC<ImportExportProps> = ({ onError }) => {
+  const user = useAuth();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [history, setHistory] = useState<GameResult>({
     cricketmarkup: [],
@@ -82,7 +85,10 @@ const ImportExport: FC<ImportExportProps> = ({ onError }) => {
           variant='outline'
           size={{ base: 'sm', md: 'md' }}
           colorScheme='teal'
-          onClick={() => exportGameHistory()}
+          onClick={async () => {
+            const history = await exportGameHistory();
+            fileDownload(JSON.stringify(history), 'darts-homes-history.json');
+          }}
           leftIcon={<BiExport />}
           aria-label='export'
         >
@@ -114,7 +120,7 @@ const ImportExport: FC<ImportExportProps> = ({ onError }) => {
               <Button
                 colorScheme='blue'
                 onClick={() => {
-                  importGameHistory(history, false);
+                  importGameHistory(history, false, user);
                   onClose();
                 }}
                 ml={3}
@@ -125,7 +131,7 @@ const ImportExport: FC<ImportExportProps> = ({ onError }) => {
               <Button
                 colorScheme='red'
                 onClick={() => {
-                  importGameHistory(history, true);
+                  importGameHistory(history, true, user);
                   onClose();
                 }}
                 ml={3}

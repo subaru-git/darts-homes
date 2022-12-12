@@ -7,10 +7,11 @@ import DescriptionModal from '@/components/DescriptionModal';
 import RoundBoard from '@/components/RoundBoard';
 import RoundScore from '@/components/RoundScore';
 import TargetBoard from '@/components/TargetBoard';
+import { useAuth } from '@/contexts/AuthContext';
 import { useRoute64Game, useRoute64GameSet } from '@/contexts/Route64GameContext';
 import { db } from '@/db/db';
 import useLocale from '@/hooks/locale';
-import { saveToDB } from '@/lib/GameHistoryManager';
+import { saveHistory } from '@/lib/GameHistoryManager';
 import { updateObject } from '@/lib/Helper/updateObjectState';
 import Route64Game from '@/lib/Route64Game';
 import MainTemplate from '@/templates/MainTemplate';
@@ -18,6 +19,7 @@ import MainTemplate from '@/templates/MainTemplate';
 const Main: FC = () => {
   const game = useRoute64Game();
   const setGame = useRoute64GameSet();
+  const user = useAuth();
   const isMd = useBreakpointValue({ base: false, md: true });
   const { t } = useLocale();
   if (!game) return <MainTemplate label={'route-64-main'} isLoading />;
@@ -27,12 +29,14 @@ const Main: FC = () => {
         <DesktopMain
           game={game}
           setGame={setGame}
+          user={user}
           description={t.games.route64.description.join('\n')}
         />
       ) : (
         <MobileMain
           game={game}
           setGame={setGame}
+          user={user}
           description={t.games.route64.description.join('\n')}
         />
       )}
@@ -43,10 +47,11 @@ const Main: FC = () => {
 type MainProps = {
   game: Route64Game;
   setGame: (game: Route64Game) => void;
+  user: User | null | undefined;
   description?: string;
 };
 
-const DesktopMain: FC<MainProps> = ({ game, setGame, description }) => {
+const DesktopMain: FC<MainProps> = ({ game, setGame, user, description }) => {
   return (
     <>
       <Flex justifyContent='space-between' alignItems='center'>
@@ -72,7 +77,7 @@ const DesktopMain: FC<MainProps> = ({ game, setGame, description }) => {
             />
             <TargetBoard message='Score' target={game.getTotalScore().toString()} size='sm' />
           </Flex>
-          <MyRoundScore game={game} setGame={setGame} />
+          <MyRoundScore game={game} setGame={setGame} user={user} />
         </Box>
         <Box minWidth={250}>
           <CountButtons
@@ -89,7 +94,7 @@ const DesktopMain: FC<MainProps> = ({ game, setGame, description }) => {
   );
 };
 
-const MobileMain: FC<MainProps> = ({ game, setGame, description }) => {
+const MobileMain: FC<MainProps> = ({ game, setGame, user, description }) => {
   return (
     <Flex direction='column' gap={4}>
       <Flex justifyContent='space-between' width='100%'>
@@ -114,7 +119,7 @@ const MobileMain: FC<MainProps> = ({ game, setGame, description }) => {
         </Flex>
       </Flex>
       <Box px={2}>
-        <MyRoundScore game={game} setGame={setGame} />
+        <MyRoundScore game={game} setGame={setGame} user={user} />
       </Box>
       <Box px={2}>
         <CountButtons
@@ -130,14 +135,14 @@ const MobileMain: FC<MainProps> = ({ game, setGame, description }) => {
   );
 };
 
-const MyRoundScore: FC<MainProps> = ({ game, setGame }) => (
+const MyRoundScore: FC<MainProps> = ({ game, setGame, user }) => (
   <RoundScore
     scores={game.getRoundScore()}
     onClear={() => updateObject(game, new Route64Game(20), 'removeScore', setGame)}
     onRoundChange={() => updateObject(game, new Route64Game(20), 'roundChange', setGame)}
     isFinished={game.isFinished()}
     onRoundOver={() => {
-      saveToDB(game.getGameResult(), db.route64Result);
+      saveHistory(game.getGameResult(), db.route64Result, user);
       setGame(new Route64Game(20));
     }}
     result={getResult(game)}

@@ -1,22 +1,23 @@
 import React, { FC, useState } from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
 import Board from '@/containers/History/Board';
-import { Queries } from '@/db/Queries';
+import { useAuth } from '@/contexts/AuthContext';
 import { db } from '@/db/db';
 import MainTemplate from '@/templates/MainTemplate';
 
 const Main: FC = () => {
   const [loading, setLoading] = useState(true);
+  const user = useAuth();
   const gameHistory = useLiveQuery(async () => querier(setLoading)) || initialQuery;
   if (loading) return <MainTemplate label='history-main' isLoading />;
   return (
     <MainTemplate label='history-main'>
-      <Board history={gameHistory} />
+      <Board history={gameHistory} user={user} />
     </MainTemplate>
   );
 };
 
-const querier = async (setLoading: (isLoading: boolean) => void): Promise<Queries> => {
+const querier = async (setLoading: (isLoading: boolean) => void): Promise<GameResultModel> => {
   const cricketMarkUp = await db.cricketMarkUpResult.toCollection().reverse().sortBy('playedAt');
   const eaglesEye = await db.eaglesEyeResult.toCollection().reverse().sortBy('playedAt');
   const doubleTrouble = await db.doubleTroubleResult.toCollection().reverse().sortBy('playedAt');
@@ -56,7 +57,7 @@ const querier = async (setLoading: (isLoading: boolean) => void): Promise<Querie
   };
 };
 
-const initialQuery: Queries = {
+const initialQuery: GameResultModel = {
   cricketMarkUp: [],
   eaglesEye: [],
   doubleTrouble: [],

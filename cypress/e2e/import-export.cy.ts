@@ -5,20 +5,20 @@ describe('import-export', () => {
     cy.visit('/history');
     cy.get('button[aria-label="export"]').click();
     [
-      'cricketmarkup',
-      'eagleseye',
-      'doubletrouble',
+      'cricketMarkUp',
+      'eaglesEye',
+      'doubleTrouble',
       'sweet16',
-      'topsandtens',
-      'twodartcombinations',
-      'aroundthecompass',
-      'tonsup',
+      'topsAndTens',
+      'twoDartCombinations',
+      'aroundTheCompass',
+      'tonsUp',
       'route64',
-      'eightythrew',
-      'shanghainights',
-      'switchhitter',
-      'bullybully',
-      'treblesforshow',
+      'eightyThrew',
+      'shanghaiNights',
+      'switchHitter',
+      'bullyBully',
+      'treblesForShow',
     ].forEach((key) => {
       cy.readFile('cypress/downloads/darts-homes-history.json', 'utf8').its(key).should('be.empty');
     });
@@ -61,3 +61,4 @@ describe('import-export', () => {
     cy.get('[aria-label="trebles for show history"] tr').should('have.length', 2);
   });
 });
+export {};

@@ -1,18 +1,4 @@
 import Dexie, { Table } from 'dexie';
-import { AroundTheCompassResultModel } from './AroundTheCompassResultModel';
-import { BullyBullyResultModel } from './BullyBullyResultModel';
-import { CricketMarkUpResultModel } from './CricketMarkUpResultModel';
-import { DoubleTroubleResultModel } from './DoubleTroubleResultModel';
-import { EaglesEyeResultModel } from './EaglesEyeResultModel';
-import { EightyThrewResultModel } from './EightyThrewResultModel';
-import { Route64ResultModel } from './Route64ResultModel';
-import { ShanghaiNightsResultModel } from './ShanghaiNightsResultModel';
-import { Sweet16ResultModel } from './Sweet16ResultModel';
-import { SwitchHitterResultModel } from './SwitchHitterResultModel';
-import { TonsUpResultModel } from './TonsUpResultModel';
-import { TopsAndTensResultModel } from './TopsAndTensResultModel';
-import { TreblesForShowResultModel } from './TreblesForShowResultModel';
-import { TwoDartCombinationsResultModel } from './TwoDartCombinationsResultModel';
 
 export class GameResultDexie extends Dexie {
   cricketMarkUpResult!: Table<CricketMarkUpResultModel>;
@@ -32,21 +18,21 @@ export class GameResultDexie extends Dexie {
 
   constructor() {
     super('DartsHomes');
-    this.version(1.3).stores({
-      cricketMarkUpResult: '++id',
-      eaglesEyeResult: '++id',
-      doubleTroubleResult: '++id',
-      sweet16Result: '++id',
-      topsAndTensResult: '++id',
-      twoDartCombinationsResult: '++id',
-      aroundTheCompassResult: '++id',
-      tonsUpResult: '++id',
-      route64Result: '++id',
-      eightyThrewResult: '++id',
-      shanghaiNightsResult: '++id',
-      switchHitterResult: '++id',
-      bullyBullyResult: '++id',
-      treblesForShowResult: '++id',
+    this.version(1.4).stores({
+      cricketMarkUpResult: 'uuid',
+      eaglesEyeResult: 'uuid',
+      doubleTroubleResult: 'uuid',
+      sweet16Result: 'uuid',
+      topsAndTensResult: 'uuid',
+      twoDartCombinationsResult: 'uuid',
+      aroundTheCompassResult: 'uuid',
+      tonsUpResult: 'uuid',
+      route64Result: 'uuid',
+      eightyThrewResult: 'uuid',
+      shanghaiNightsResult: 'uuid',
+      switchHitterResult: 'uuid',
+      bullyBullyResult: 'uuid',
+      treblesForShowResult: 'uuid',
     });
   }
 }

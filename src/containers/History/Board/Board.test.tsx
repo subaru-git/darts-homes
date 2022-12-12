@@ -1,14 +1,13 @@
 import { waitFor } from '@testing-library/react';
 import Board from './Board';
-import { Queries } from '@/db/Queries';
 import { render } from '@/lib/TestUtils/RenderMock';
 
 test('should rendering', async () => {
-  const { container } = render(<Board history={initialQuery} />);
+  const { container } = render(<Board history={initialQuery} user={null} />);
   await waitFor(() => expect(container).toMatchSnapshot());
 });
 
-const initialQuery: Queries = {
+const initialQuery: GameResultModel = {
   cricketMarkUp: [],
   eaglesEye: [],
   doubleTrouble: [],
