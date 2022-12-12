@@ -5,7 +5,7 @@ beforeEach(() => {
   localStorage.clear();
 });
 
-test('manage game history', () => {
+test('manage game history', async () => {
   const history = {
     targetCount: 10,
     result: 10,
@@ -19,8 +19,9 @@ test('manage game history', () => {
       { number: 25, count: 10, total: 11 },
     ],
     playedAt: '2020-01-01T00:00:00.000Z',
+    uuid: '1',
   };
-  saveToDB(history, db.cricketMarkUpResult);
+  await saveToDB(history, db.cricketMarkUpResult);
 });
 
 test('delete history', () => {
