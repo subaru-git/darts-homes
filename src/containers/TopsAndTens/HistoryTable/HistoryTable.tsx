@@ -12,16 +12,16 @@ import {
 } from '@chakra-ui/react';
 import { MdDeleteForever } from 'react-icons/md';
 import HistoryDeleteAlert from '@/containers/History/DeleteAlert';
-import { TopsAndTensResultModel } from '@/db/TopsAndTensResultModel';
 import { db } from '@/db/db';
-import { deleteFromDB } from '@/lib/GameHistoryManager';
+import { deleteResult } from '@/lib/GameHistoryManager';
 import { DateFormat } from '@/lib/Helper/Format';
 
 type HistoryTableProps = {
   history: TopsAndTensResultModel[];
+  user: User | null | undefined;
 };
 
-const HistoryTable: FC<HistoryTableProps> = ({ history }) => {
+const HistoryTable: FC<HistoryTableProps> = ({ history, user }) => {
   const [deleteHistory, setDeleteHistory] = useState<TopsAndTensResultModel | undefined>(undefined);
   const isMd = useBreakpointValue({ base: false, md: true });
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -60,7 +60,7 @@ const HistoryTable: FC<HistoryTableProps> = ({ history }) => {
           isOpen={isOpen}
           onClose={onClose}
           onDelete={() => {
-            deleteFromDB(deleteHistory.id, db.topsAndTensResult);
+            deleteResult(deleteHistory.uuid, db.topsAndTensResult, user);
             onClose();
           }}
         />
@@ -78,9 +78,6 @@ const DesktopHistoryRow: FC<{
       <Tr key={`${history.playedAt}-game`} bg='green.100'>
         <Td colSpan={4} p={1}>
           Tops and Tens
-        </Td>
-        <Td colSpan={1} p={1} textAlign='end'>
-          Round: {history.round}
         </Td>
         <Td colSpan={2} p={1} textAlign='end'>
           <Text>{DateFormat(history.playedAt)}</Text>
@@ -115,9 +112,6 @@ const MobileRow: FC<{
       <Tr bg='green.100'>
         <Td p={0} fontSize='xs'>
           Tops and Tens
-        </Td>
-        <Td p={0} fontSize='xs'>
-          Round: {history.round}
         </Td>
         <Td p={0} fontSize='xs' textAlign='start'>
           <Text>{DateFormat(history.playedAt)}</Text>

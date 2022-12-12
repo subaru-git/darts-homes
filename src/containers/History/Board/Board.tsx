@@ -31,14 +31,14 @@ import TonsUpHistoryTable from '@/containers/TonsUp/HistoryTable';
 import TopsAndTensHistoryTable from '@/containers/TopsAndTens/HistoryTable';
 import TreblesForShowHistoryTable from '@/containers/TreblesForShow/HistoryTable';
 import TwoDartCombinationsHistoryTable from '@/containers/TwoDartCombinations/HistoryTable';
-import { Queries } from '@/db/Queries';
 import useLocale from '@/hooks/locale';
 
 type HistoryBoardProps = {
-  history: Queries;
+  history: GameResultModel;
+  user: User | null | undefined;
 };
 
-const HistoryBoard: FC<HistoryBoardProps> = ({ history }) => {
+const HistoryBoard: FC<HistoryBoardProps> = ({ history, user }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { t } = useLocale();
   return (
@@ -78,46 +78,49 @@ const HistoryBoard: FC<HistoryBoardProps> = ({ history }) => {
         </TabList>
         <TabPanels>
           <TabPanel aria-label='cricket mark up history'>
-            <CricketMarkUpHistoryTable history={history.cricketMarkUp} />
+            <CricketMarkUpHistoryTable history={history.cricketMarkUp ?? []} user={user} />
           </TabPanel>
           <TabPanel aria-label="eagle's eye history">
-            <EaglesEyeHistoryTable history={history.eaglesEye} />
+            <EaglesEyeHistoryTable history={history.eaglesEye ?? []} user={user} />
           </TabPanel>
           <TabPanel aria-label='double trouble history'>
-            <DoubleTroubleHistoryTable history={history.doubleTrouble} />
+            <DoubleTroubleHistoryTable history={history.doubleTrouble ?? []} user={user} />
           </TabPanel>
           <TabPanel aria-label='sweet 16 history'>
-            <Sweet16HistoryTable history={history.sweet16} />
+            <Sweet16HistoryTable history={history.sweet16 ?? []} user={user} />
           </TabPanel>
           <TabPanel aria-label='tops and tens history'>
-            <TopsAndTensHistoryTable history={history.topsAndTens} />
+            <TopsAndTensHistoryTable history={history.topsAndTens ?? []} user={user} />
           </TabPanel>
           <TabPanel aria-label='two dart combinations history'>
-            <TwoDartCombinationsHistoryTable history={history.twoDartCombinations} />
+            <TwoDartCombinationsHistoryTable
+              history={history.twoDartCombinations ?? []}
+              user={user}
+            />
           </TabPanel>
           <TabPanel aria-label='around the compass history'>
-            <AroundTheCompassHistoryTable history={history.aroundTheCompass} />
+            <AroundTheCompassHistoryTable history={history.aroundTheCompass ?? []} user={user} />
           </TabPanel>
           <TabPanel aria-label='tons up history'>
-            <TonsUpHistoryTable history={history.tonsUp} />
+            <TonsUpHistoryTable history={history.tonsUp ?? []} user={user} />
           </TabPanel>
           <TabPanel aria-label='route 64 history'>
-            <Route64HistoryTable history={history.route64} />
+            <Route64HistoryTable history={history.route64 ?? []} user={user} />
           </TabPanel>
           <TabPanel aria-label='eighty threw history'>
-            <EightyThrewHistoryTable history={history.eightyThrew} />
+            <EightyThrewHistoryTable history={history.eightyThrew ?? []} user={user} />
           </TabPanel>
           <TabPanel aria-label='shanghai nights history'>
-            <ShanghaiNightsHistoryTable history={history.shanghaiNights} />
+            <ShanghaiNightsHistoryTable history={history.shanghaiNights ?? []} user={user} />
           </TabPanel>
           <TabPanel aria-label='switch hitter history'>
-            <SwitchHitterHistoryTable history={history.switchHitter} />
+            <SwitchHitterHistoryTable history={history.switchHitter ?? []} user={user} />
           </TabPanel>
           <TabPanel aria-label='bully bully history'>
-            <BullyBullyHistoryTable history={history.bullyBully} />
+            <BullyBullyHistoryTable history={history.bullyBully ?? []} user={user} />
           </TabPanel>
           <TabPanel aria-label='trebles for show history'>
-            <TreblesForShowHistoryTable history={history.treblesForShow} />
+            <TreblesForShowHistoryTable history={history.treblesForShow ?? []} user={user} />
           </TabPanel>
         </TabPanels>
       </Tabs>

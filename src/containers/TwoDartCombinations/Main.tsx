@@ -7,13 +7,14 @@ import DescriptionModal from '@/components/DescriptionModal';
 import RoundBoard from '@/components/RoundBoard';
 import RoundScore from '@/components/RoundScore';
 import TargetBoard from '@/components/TargetBoard';
+import { useAuth } from '@/contexts/AuthContext';
 import {
   useTwoDartCombinationsGame,
   useTwoDartCombinationsGameSet,
 } from '@/contexts/TwoDartCombinationsGameContext';
 import { db } from '@/db/db';
 import useLocale from '@/hooks/locale';
-import { saveToDB } from '@/lib/GameHistoryManager';
+import { saveHistory } from '@/lib/GameHistoryManager';
 import { updateObject } from '@/lib/Helper/updateObjectState';
 import TwoDartCombinationsGame from '@/lib/TwoDartCombinationsGame';
 import MainTemplate from '@/templates/MainTemplate';
@@ -44,6 +45,7 @@ const arrange = [
 const Main: FC = () => {
   const game = useTwoDartCombinationsGame();
   const setGame = useTwoDartCombinationsGameSet();
+  const user = useAuth();
   const isMd = useBreakpointValue({ base: false, md: true });
   const { t } = useLocale();
   if (!game) return <MainTemplate label={'two-dart-combinations-main'} isLoading />;
@@ -53,12 +55,14 @@ const Main: FC = () => {
         <DesktopMain
           game={game}
           setGame={setGame}
+          user={user}
           description={t.games.twodartcombinations.description.join('\n')}
         />
       ) : (
         <MobileMain
           game={game}
           setGame={setGame}
+          user={user}
           description={t.games.twodartcombinations.description.join('\n')}
         />
       )}
@@ -69,10 +73,11 @@ const Main: FC = () => {
 type MainProps = {
   game: TwoDartCombinationsGame;
   setGame: (game: TwoDartCombinationsGame) => void;
+  user: User | null | undefined;
   description?: string;
 };
 
-const DesktopMain: FC<MainProps> = ({ game, setGame, description }) => {
+const DesktopMain: FC<MainProps> = ({ game, setGame, user, description }) => {
   return (
     <>
       <Flex justifyContent='space-between' alignItems='center'>
@@ -97,7 +102,7 @@ const DesktopMain: FC<MainProps> = ({ game, setGame, description }) => {
             />
             <TargetBoard message='Score' target={game.getTotalScore().toString()} size='sm' />
           </Flex>
-          <MyRoundScore game={game} setGame={setGame} />
+          <MyRoundScore game={game} setGame={setGame} user={user} />
         </Box>
         <Box minWidth={250}>
           <CountButtons
@@ -116,7 +121,7 @@ const DesktopMain: FC<MainProps> = ({ game, setGame, description }) => {
   );
 };
 
-const MobileMain: FC<MainProps> = ({ game, setGame, description }) => {
+const MobileMain: FC<MainProps> = ({ game, setGame, user, description }) => {
   return (
     <Flex direction='column' gap={4}>
       <Flex justifyContent='space-between' width='100%'>
@@ -137,7 +142,7 @@ const MobileMain: FC<MainProps> = ({ game, setGame, description }) => {
         </Flex>
       </Flex>
       <Box px={2}>
-        <MyRoundScore game={game} setGame={setGame} />
+        <MyRoundScore game={game} setGame={setGame} user={user} />
       </Box>
       <Box px={2}>
         <CountButtons
@@ -153,14 +158,14 @@ const MobileMain: FC<MainProps> = ({ game, setGame, description }) => {
   );
 };
 
-const MyRoundScore: FC<MainProps> = ({ game, setGame }) => (
+const MyRoundScore: FC<MainProps> = ({ game, setGame, user }) => (
   <RoundScore
     scores={game.getRoundScore()}
     onClear={() => updateObject(game, new TwoDartCombinationsGame(), 'removeScore', setGame)}
     onRoundChange={() => updateObject(game, new TwoDartCombinationsGame(), 'roundChange', setGame)}
     isFinished={game.isFinished()}
     onRoundOver={() => {
-      saveToDB(game.getGameResult(), db.twoDartCombinationsResult);
+      saveHistory(game.getGameResult(), db.twoDartCombinationsResult, user);
       setGame(new TwoDartCombinationsGame());
     }}
     result={getResult(game)}

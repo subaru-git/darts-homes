@@ -12,16 +12,16 @@ import {
 } from '@chakra-ui/react';
 import { MdDeleteForever } from 'react-icons/md';
 import HistoryDeleteAlert from '@/containers/History/DeleteAlert';
-import { Route64ResultModel } from '@/db/Route64ResultModel';
 import { db } from '@/db/db';
-import { deleteFromDB } from '@/lib/GameHistoryManager';
+import { deleteResult } from '@/lib/GameHistoryManager';
 import { DateFormat } from '@/lib/Helper/Format';
 
 type HistoryTableProps = {
   history: Route64ResultModel[];
+  user: User | null | undefined;
 };
 
-const HistoryTable: FC<HistoryTableProps> = ({ history }) => {
+const HistoryTable: FC<HistoryTableProps> = ({ history, user }) => {
   const [deleteHistory, setDeleteHistory] = useState<Route64ResultModel | undefined>(undefined);
   const isMd = useBreakpointValue({ base: false, md: true });
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -60,7 +60,7 @@ const HistoryTable: FC<HistoryTableProps> = ({ history }) => {
           isOpen={isOpen}
           onClose={onClose}
           onDelete={() => {
-            deleteFromDB(deleteHistory.id, db.route64Result);
+            deleteResult(deleteHistory.uuid, db.route64Result, user);
             onClose();
           }}
         />

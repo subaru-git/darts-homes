@@ -14,12 +14,11 @@ const text = {
     },
     history: {
       title: ['A little help for your growth'],
-      description: ['Record your practice results and make your growth transparent.'],
-      disclaimer: [
-        'Records are saved only in this browser.',
-        'They cannot be viewed on other devices or browsers.',
-        'So just a little support.',
+      description: [
+        'Record your practice results and make your growth transparent.',
+        'When logging in from the top right,  save to the server and synchronize across devices.',
       ],
+      disclaimer: [],
     },
     respect: {
       title: ['Thanks for all the darts content'],

@@ -1,18 +1,18 @@
 interface GameResult {
-  cricketmarkup: CricketMarkUpResult[];
-  eagleseye: EaglesEyeResult[];
-  doubletrouble: DoubleTroubleResult[];
-  sweet16: Sweet16Result[];
-  topsandtens: TopsAndTensResult[];
-  twodartcombinations: TwoDartCombinationsResult[];
-  aroundthecompass: AroundTheCompassResult[];
-  tonsup: TonsUpResult[];
-  route64: Route64Result[];
-  eightythrew: EightyThrewResult[];
-  shanghainights: ShanghaiNightsResult[];
-  switchhitter: SwitchHitterResult[];
-  bullybully: BullyBullyResult[];
-  treblesforshow: TreblesForShowResult[];
+  cricketmarkup?: CricketMarkUpResult[];
+  eagleseye?: EaglesEyeResult[];
+  doubletrouble?: DoubleTroubleResult[];
+  sweet16?: Sweet16Result[];
+  topsandtens?: TopsAndTensResult[];
+  twodartcombinations?: TwoDartCombinationsResult[];
+  aroundthecompass?: AroundTheCompassResult[];
+  tonsup?: TonsUpResult[];
+  route64?: Route64Result[];
+  eightythrew?: EightyThrewResult[];
+  shanghainights?: ShanghaiNightsResult[];
+  switchhitter?: SwitchHitterResult[];
+  bullybully?: BullyBullyResult[];
+  treblesforshow?: TreblesForShowResult[];
 }
 
 interface CricketMarkUpResult {

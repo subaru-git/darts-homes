@@ -12,16 +12,16 @@ import {
 } from '@chakra-ui/react';
 import { MdDeleteForever } from 'react-icons/md';
 import HistoryDeleteAlert from '@/containers/History/DeleteAlert';
-import { TreblesForShowResultModel } from '@/db/TreblesForShowResultModel';
 import { db } from '@/db/db';
-import { deleteFromDB } from '@/lib/GameHistoryManager';
+import { deleteResult } from '@/lib/GameHistoryManager';
 import { DateFormat } from '@/lib/Helper/Format';
 
 type HistoryTableProps = {
   history: TreblesForShowResultModel[];
+  user: User | null | undefined;
 };
 
-const HistoryTable: FC<HistoryTableProps> = ({ history }) => {
+const HistoryTable: FC<HistoryTableProps> = ({ history, user }) => {
   const [deleteHistory, setDeleteHistory] = useState<TreblesForShowResultModel | undefined>(
     undefined,
   );
@@ -62,7 +62,7 @@ const HistoryTable: FC<HistoryTableProps> = ({ history }) => {
           isOpen={isOpen}
           onClose={onClose}
           onDelete={() => {
-            deleteFromDB(deleteHistory.id, db.treblesForShowResult);
+            deleteResult(deleteHistory.uuid, db.treblesForShowResult, user);
             onClose();
           }}
         />

@@ -7,15 +7,17 @@ import DescriptionModal from '@/components/DescriptionModal';
 import RoundBoard from '@/components/RoundBoard';
 import RoundScore from '@/components/RoundScore';
 import TargetBoard from '@/components/TargetBoard';
+import { useAuth } from '@/contexts/AuthContext';
 import { useBullyBullyGame, useBullyBullyGameSet } from '@/contexts/BullyBullyGameContext';
 import { db } from '@/db/db';
 import useLocale from '@/hooks/locale';
 import BullyBullyGame from '@/lib/BullyBullyGame';
-import { saveToDB } from '@/lib/GameHistoryManager';
+import { saveHistory } from '@/lib/GameHistoryManager';
 import { updateObject } from '@/lib/Helper/updateObjectState';
 import MainTemplate from '@/templates/MainTemplate';
 
 const Main: FC = () => {
+  const user = useAuth();
   const game = useBullyBullyGame();
   const setGame = useBullyBullyGameSet();
   const isMd = useBreakpointValue({ base: false, md: true });
@@ -28,12 +30,14 @@ const Main: FC = () => {
           game={game}
           setGame={setGame}
           description={t.games.bullybully.description.join('\n')}
+          user={user}
         />
       ) : (
         <MobileMain
           game={game}
           setGame={setGame}
           description={t.games.bullybully.description.join('\n')}
+          user={user}
         />
       )}
     </MainTemplate>
@@ -43,10 +47,11 @@ const Main: FC = () => {
 type MainProps = {
   game: BullyBullyGame;
   setGame: (game: BullyBullyGame) => void;
+  user: User | null | undefined;
   description?: string;
 };
 
-const DesktopMain: FC<MainProps> = ({ game, setGame, description }) => {
+const DesktopMain: FC<MainProps> = ({ game, setGame, user, description }) => {
   return (
     <>
       <Flex justifyContent='space-between' alignItems='center'>
@@ -72,7 +77,7 @@ const DesktopMain: FC<MainProps> = ({ game, setGame, description }) => {
             />
             <TargetBoard message='Score' target={game.getTotalScore().toString()} size='sm' />
           </Flex>
-          <MyRoundScore game={game} setGame={setGame} />
+          <MyRoundScore game={game} setGame={setGame} user={user} />
         </Box>
         <Box minWidth={250}>
           <CountBullButtons
@@ -87,7 +92,7 @@ const DesktopMain: FC<MainProps> = ({ game, setGame, description }) => {
   );
 };
 
-const MobileMain: FC<MainProps> = ({ game, setGame, description }) => {
+const MobileMain: FC<MainProps> = ({ game, setGame, user, description }) => {
   return (
     <Flex direction='column' gap={4}>
       <Flex justifyContent='space-between' width='100%'>
@@ -109,7 +114,7 @@ const MobileMain: FC<MainProps> = ({ game, setGame, description }) => {
         </Flex>
       </Flex>
       <Box px={2}>
-        <MyRoundScore game={game} setGame={setGame} />
+        <MyRoundScore game={game} setGame={setGame} user={user} />
       </Box>
       <Box px={2}>
         <Center>
@@ -125,14 +130,14 @@ const MobileMain: FC<MainProps> = ({ game, setGame, description }) => {
   );
 };
 
-const MyRoundScore: FC<MainProps> = ({ game, setGame }) => (
+const MyRoundScore: FC<MainProps> = ({ game, setGame, user }) => (
   <RoundScore
     scores={game.getRoundScore()}
     onClear={() => updateObject(game, new BullyBullyGame(20), 'removeScore', setGame)}
     onRoundChange={() => updateObject(game, new BullyBullyGame(20), 'roundChange', setGame)}
     isFinished={game.isFinished()}
     onRoundOver={() => {
-      saveToDB(game.getGameResult(), db.bullyBullyResult);
+      saveHistory(game.getGameResult(), db.bullyBullyResult, user);
       setGame(new BullyBullyGame(20));
     }}
     result={getResult(game)}

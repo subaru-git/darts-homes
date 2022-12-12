@@ -1,6 +1,7 @@
 import React, { FC, ReactNode } from 'react';
 import { AroundTheCompassGameContextProvider } from './AroundTheCompassGameContext';
 import { ArrangeGameContextProvider } from './ArrangeGameContext';
+import { AuthProvider } from './AuthContext';
 import { BullyBullyGameContextProvider } from './BullyBullyGameContext';
 import { CricketMarkUpGameContextProvider } from './CricketMarkUpGameContext';
 import { DoubleTroubleGameContextProvider } from './DoubleTroubleGameContext';
@@ -32,7 +33,7 @@ const Providers: FC<{ children: ReactNode | ReactNode[] }> = ({ children }) => {
                             <DoubleTroubleGameContextProvider>
                               <CricketMarkUpGameContextProvider>
                                 <EaglesEyeGameContextProvider>
-                                  {children}
+                                  <AuthProvider>{children}</AuthProvider>
                                 </EaglesEyeGameContextProvider>
                               </CricketMarkUpGameContextProvider>
                             </DoubleTroubleGameContextProvider>

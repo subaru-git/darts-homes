@@ -1,1 +1,8 @@
-export { importGameHistory, exportGameHistory, saveToDB, deleteFromDB } from './GameHistoryManager';
+export {
+  importGameHistory,
+  exportGameHistory,
+  updateLocalHistory,
+  saveHistory,
+  deleteResult,
+  mergeGameHistory,
+} from './GameHistoryManager';

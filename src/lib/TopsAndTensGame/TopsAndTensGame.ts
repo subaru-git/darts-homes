@@ -54,11 +54,10 @@ class TopsAndTensGame implements Game, GameData<TopsAndTensProgress, TopsAndTens
   getGameProgress(): TopsAndTensProgress {
     return { roundScore: this.roundScore, score: this.player.getScore(), round: this.round };
   }
-  getGameResult(): Sweet16Result {
+  getGameResult(): TopsAndTensResult {
     return {
       result: this.getTotalScore(),
       scores: [...this.player.getScore(), this.roundScore],
-      round: this.round,
       playedAt: new Date().toJSON(),
     };
   }

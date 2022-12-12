@@ -1,6 +1,7 @@
 /* eslint-disable import/named */
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { v4 as uuidv4 } from 'uuid';
 import CricketMarkUpHistoryTable from './HistoryTable';
 
 export default {
@@ -16,6 +17,7 @@ export const Default = Template.bind({});
 Default.args = {
   history: [
     {
+      uuid: uuidv4(),
       result: 300,
       scores: [
         ['1D', '1D', '1D'],

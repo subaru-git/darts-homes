@@ -7,17 +7,19 @@ import RoundBoard from '@/components/RoundBoard';
 import RoundScore from '@/components/RoundScore';
 import TargetBoard from '@/components/TargetBoard';
 import NewGame from '@/containers/DoubleTrouble/NewGame';
+import { useAuth } from '@/contexts/AuthContext';
 import { useDoubleTroubleGame, useDoubleTroubleGameSet } from '@/contexts/DoubleTroubleGameContext';
 import { db } from '@/db/db';
 import useLocale from '@/hooks/locale';
 import DoubleTroubleGame from '@/lib/DoubleTroubleGame';
-import { saveToDB } from '@/lib/GameHistoryManager';
+import { saveHistory } from '@/lib/GameHistoryManager';
 import { updateObject } from '@/lib/Helper/updateObjectState';
 import MainTemplate from '@/templates/MainTemplate';
 
 const Main: FC = () => {
   const game = useDoubleTroubleGame();
   const setGame = useDoubleTroubleGameSet();
+  const user = useAuth();
   const isMd = useBreakpointValue({ base: false, md: true });
   const { t } = useLocale();
   if (!game) return <MainTemplate label={'double-trouble-main'} isLoading />;
@@ -27,12 +29,14 @@ const Main: FC = () => {
         <DesktopMain
           game={game}
           setGame={setGame}
+          user={user}
           description={t.games.doubletrouble.description.join('\n')}
         />
       ) : (
         <MobileMain
           game={game}
           setGame={setGame}
+          user={user}
           description={t.games.doubletrouble.description.join('\n')}
         />
       )}
@@ -43,10 +47,11 @@ const Main: FC = () => {
 type MainProps = {
   game: DoubleTroubleGame;
   setGame: (game: DoubleTroubleGame) => void;
+  user: User | null | undefined;
   description?: string;
 };
 
-const DesktopMain: FC<MainProps> = ({ game, setGame, description }) => {
+const DesktopMain: FC<MainProps> = ({ game, setGame, user, description }) => {
   return (
     <>
       <Flex justifyContent='space-between' alignItems='center'>
@@ -68,7 +73,7 @@ const DesktopMain: FC<MainProps> = ({ game, setGame, description }) => {
             <TargetBoard message='Target' target={game.getCurrentTarget().toString()} />
             <TargetBoard message='Score' target={game.getTotalScore().toString()} size='sm' />
           </Flex>
-          <MyRoundScore game={game} setGame={setGame} />
+          <MyRoundScore game={game} setGame={setGame} user={user} />
         </Box>
         <Box minWidth={250}>
           <CountButtons
@@ -85,7 +90,7 @@ const DesktopMain: FC<MainProps> = ({ game, setGame, description }) => {
   );
 };
 
-const MobileMain: FC<MainProps> = ({ game, setGame, description }) => {
+const MobileMain: FC<MainProps> = ({ game, setGame, user, description }) => {
   return (
     <Flex direction='column' gap={4}>
       <Flex justifyContent='space-between' width='100%'>
@@ -106,7 +111,7 @@ const MobileMain: FC<MainProps> = ({ game, setGame, description }) => {
         </Flex>
       </Flex>
       <Box px={2}>
-        <MyRoundScore game={game} setGame={setGame} />
+        <MyRoundScore game={game} setGame={setGame} user={user} />
       </Box>
       <Box px={2}>
         <CountButtons
@@ -122,14 +127,14 @@ const MobileMain: FC<MainProps> = ({ game, setGame, description }) => {
   );
 };
 
-const MyRoundScore: FC<MainProps> = ({ game, setGame }) => (
+const MyRoundScore: FC<MainProps> = ({ game, setGame, user }) => (
   <RoundScore
     scores={game.getRoundScore()}
     onClear={() => updateObject(game, new DoubleTroubleGame(), 'removeScore', setGame)}
     onRoundChange={() => updateObject(game, new DoubleTroubleGame(), 'roundChange', setGame)}
     isFinished={game.isFinished()}
     onRoundOver={() => {
-      saveToDB(game.getGameResult(), db.doubleTroubleResult);
+      saveHistory(game.getGameResult(), db.doubleTroubleResult, user);
       setGame(new DoubleTroubleGame());
     }}
     result={getResult(game)}

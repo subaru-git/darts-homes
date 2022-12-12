@@ -12,16 +12,16 @@ import {
 } from '@chakra-ui/react';
 import { MdDeleteForever } from 'react-icons/md';
 import HistoryDeleteAlert from '@/containers/History/DeleteAlert';
-import { BullyBullyResultModel } from '@/db/BullyBullyResultModel';
 import { db } from '@/db/db';
-import { deleteFromDB } from '@/lib/GameHistoryManager';
+import { deleteResult } from '@/lib/GameHistoryManager';
 import { DateFormat } from '@/lib/Helper/Format';
 
 type HistoryTableProps = {
   history: BullyBullyResultModel[];
+  user: User | null | undefined;
 };
 
-const HistoryTable: FC<HistoryTableProps> = ({ history }) => {
+const HistoryTable: FC<HistoryTableProps> = ({ history, user }) => {
   const [deleteHistory, setDeleteHistory] = useState<BullyBullyResultModel | undefined>(undefined);
   const isMd = useBreakpointValue({ base: false, md: true });
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -60,7 +60,7 @@ const HistoryTable: FC<HistoryTableProps> = ({ history }) => {
           isOpen={isOpen}
           onClose={onClose}
           onDelete={() => {
-            deleteFromDB(deleteHistory.id, db.bullyBullyResult);
+            deleteResult(deleteHistory.uuid, db.bullyBullyResult, user);
             onClose();
           }}
         />

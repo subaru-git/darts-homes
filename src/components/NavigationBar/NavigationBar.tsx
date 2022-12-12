@@ -19,6 +19,7 @@ import Link from 'next/link';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { GoChevronDown, GoChevronRight } from 'react-icons/go';
 import { GrClose } from 'react-icons/gr';
+import UserMenu from '../UserMenu';
 import { GetNavItem, NavItem } from './NavigationItem';
 import LanguageChangeButton from '@/components/LanguageChangeButton';
 
@@ -70,7 +71,10 @@ const NavigationBar: FC = () => {
               <DesktopNav items={items} />
             </Flex>
             <Spacer />
-            <LanguageChangeButton />
+            <Flex gap={2} alignItems={'center'}>
+              <LanguageChangeButton />
+              <UserMenu />
+            </Flex>
           </Flex>
         </Flex>
         <Collapse in={isOpen} animateOpacity>

@@ -7,17 +7,19 @@ import RoundBoard from '@/components/RoundBoard';
 import RoundScore from '@/components/RoundScore';
 import TargetBoard from '@/components/TargetBoard';
 import NewGame from '@/containers/EaglesEye/NewGame';
+import { useAuth } from '@/contexts/AuthContext';
 import { useEaglesEyeGame, useEaglesEyeGameSet } from '@/contexts/EaglesEyeGameContext';
 import { db } from '@/db/db';
 import useLocale from '@/hooks/locale';
 import EaglesEyeGame from '@/lib/EaglesEyeGame';
-import { saveToDB } from '@/lib/GameHistoryManager';
+import { saveHistory } from '@/lib/GameHistoryManager';
 import { updateObject } from '@/lib/Helper/updateObjectState';
 import MainTemplate from '@/templates/MainTemplate';
 
 const EaglesEyeMain: FC = () => {
   const game = useEaglesEyeGame();
   const setGame = useEaglesEyeGameSet();
+  const user = useAuth();
   const isMd = useBreakpointValue({ base: false, md: true });
   const { t } = useLocale();
   if (!game) return <MainTemplate label={'eagles-eye-main'} isLoading />;
@@ -27,12 +29,14 @@ const EaglesEyeMain: FC = () => {
         <DesktopMain
           game={game}
           setGame={setGame}
+          user={user}
           description={t.games.eagleseye.description.join('\n')}
         />
       ) : (
         <MobileMain
           game={game}
           setGame={setGame}
+          user={user}
           description={t.games.eagleseye.description.join('\n')}
         />
       )}
@@ -43,10 +47,11 @@ const EaglesEyeMain: FC = () => {
 type MainProps = {
   game: EaglesEyeGame;
   setGame: (game: EaglesEyeGame) => void;
+  user: User | null | undefined;
   description?: string;
 };
 
-const DesktopMain: FC<MainProps> = ({ game, setGame, description }) => {
+const DesktopMain: FC<MainProps> = ({ game, setGame, user, description }) => {
   return (
     <>
       <Flex justifyContent='space-between' alignItems='center'>
@@ -73,7 +78,7 @@ const DesktopMain: FC<MainProps> = ({ game, setGame, description }) => {
           </Flex>
         </GridItem>
         <GridItem maxW={1280}>
-          <MyRoundScore game={game} setGame={setGame} />
+          <MyRoundScore game={game} setGame={setGame} user={user} />
         </GridItem>
         <GridItem>
           <RoundBoard score={game.getScore()} />
@@ -83,7 +88,7 @@ const DesktopMain: FC<MainProps> = ({ game, setGame, description }) => {
   );
 };
 
-const MobileMain: FC<MainProps> = ({ game, setGame, description }) => {
+const MobileMain: FC<MainProps> = ({ game, setGame, user, description }) => {
   return (
     <Grid gap={4} justifyItems='center'>
       <GridItem width='100%'>
@@ -107,7 +112,7 @@ const MobileMain: FC<MainProps> = ({ game, setGame, description }) => {
         </Flex>
       </GridItem>
       <GridItem>
-        <MyRoundScore game={game} setGame={setGame} />
+        <MyRoundScore game={game} setGame={setGame} user={user} />
       </GridItem>
       <GridItem>
         <CountBullButtons
@@ -122,14 +127,14 @@ const MobileMain: FC<MainProps> = ({ game, setGame, description }) => {
   );
 };
 
-const MyRoundScore: FC<MainProps> = ({ game, setGame }) => (
+const MyRoundScore: FC<MainProps> = ({ game, setGame, user }) => (
   <RoundScore
     scores={game.getRoundScore()}
     onClear={() => updateObject(game, new EaglesEyeGame(), 'removeScore', setGame)}
     onRoundChange={() => updateObject(game, new EaglesEyeGame(), 'roundChange', setGame)}
     isFinished={game.isFinished()}
     onRoundOver={() => {
-      saveToDB(game.getGameResult(), db.eaglesEyeResult);
+      saveHistory(game.getGameResult(), db.eaglesEyeResult, user);
       setGame(new EaglesEyeGame());
     }}
     result={getResult(game)}

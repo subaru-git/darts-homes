@@ -45,3 +45,55 @@ export const convertNumberToSinglePoint = (n: number) => {
   if (n > 20) return '0';
   return `${n}`;
 };
+
+export const convertGameResultToFirebaseResult = (
+  result: GameResultModel,
+): GameResultModelFirebase => {
+  // prettier-ignore
+  return {
+    cricketMarkUp: result.cricketMarkUp ?? [],
+    eaglesEye: result.eaglesEye?.map((e) => ({ ...e, scores: convertPointsToScore(e.scores) })),
+    doubleTrouble: result.doubleTrouble?.map((e) => ({ ...e, scores: convertPointsToScore(e.scores) })),
+    sweet16: result.sweet16?.map((e) => ({ ...e, scores: convertPointsToScore(e.scores) })),
+    topsAndTens: result.topsAndTens?.map((e) => ({ ...e, scores: convertPointsToScore(e.scores) })),
+    twoDartCombinations: result.twoDartCombinations?.map((e) => ({ ...e, scores: convertPointsToScore(e.scores) })),
+    aroundTheCompass: result.aroundTheCompass?.map((e) => ({ ...e, scores: convertPointsToScore(e.scores)})),
+    tonsUp: result.tonsUp?.map((e) => ({ ...e, scores: convertPointsToScore(e.scores) })),
+    route64: result.route64?.map((e) => ({ ...e, scores: convertPointsToScore(e.scores) })),
+    eightyThrew: result.eightyThrew?.map((e) => ({ ...e, scores: convertPointsToScore(e.scores) })),
+    shanghaiNights: result.shanghaiNights?.map((e) => ({ ...e, scores: convertPointsToScore(e.scores) })),
+    switchHitter: result.switchHitter?.map((e) => ({ ...e, scores: convertPointsToScore(e.scores) })),
+    bullyBully: result.bullyBully?.map((e) => ({ ...e, scores: convertPointsToScore(e.scores) })),
+    treblesForShow: result.treblesForShow?.map((e) => ({ ...e, scores: convertPointsToScore(e.scores) })),
+  };
+};
+
+export const convertPointsToScore = (points: point[][]): FirebaseScore[] => {
+  return points.map((p, i) => ({ round: i, score: p }));
+};
+
+export const convertFirebaseResultToGameResult = (
+  result: GameResultModelFirebase,
+): GameResultModel => {
+  // prettier-ignore
+  return {
+    cricketMarkUp: result.cricketMarkUp,
+    eaglesEye: result.eaglesEye?.map((e) => ({ ...e, scores: convertScoreToPoints(e.scores) })),
+    doubleTrouble: result.doubleTrouble?.map((e) => ({ ...e, scores: convertScoreToPoints(e.scores) })),
+    sweet16: result.sweet16?.map((e) => ({ ...e, scores: convertScoreToPoints(e.scores) })),
+    topsAndTens: result.topsAndTens?.map((e) => ({ ...e, scores: convertScoreToPoints(e.scores) })),
+    twoDartCombinations: result.twoDartCombinations?.map((e) => ({ ...e, scores: convertScoreToPoints(e.scores) })),
+    aroundTheCompass: result.aroundTheCompass?.map((e) => ({ ...e, scores: convertScoreToPoints(e.scores)})),
+    tonsUp: result.tonsUp?.map((e) => ({ ...e, scores: convertScoreToPoints(e.scores) })),
+    route64: result.route64?.map((e) => ({ ...e, scores: convertScoreToPoints(e.scores) })),
+    eightyThrew: result.eightyThrew?.map((e) => ({ ...e, scores: convertScoreToPoints(e.scores) })),
+    shanghaiNights: result.shanghaiNights?.map((e) => ({ ...e, scores: convertScoreToPoints(e.scores) })),
+    switchHitter: result.switchHitter?.map((e) => ({ ...e, scores: convertScoreToPoints(e.scores) })),
+    bullyBully: result.bullyBully?.map((e) => ({ ...e, scores: convertScoreToPoints(e.scores) })),
+    treblesForShow: result.treblesForShow?.map((e) => ({ ...e, scores: convertScoreToPoints(e.scores) })),
+  };
+};
+
+export const convertScoreToPoints = (score: FirebaseScore[]): point[][] => {
+  return score.sort((a, b) => a.round - b.round).map((s) => s.score);
+};

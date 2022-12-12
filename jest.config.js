@@ -13,6 +13,10 @@ const customJestConfig = {
   modulePathIgnorePatterns: ['<rootDir>/data/'],
   setupFiles: ['fake-indexeddb/auto'],
   setupFilesAfterEnv: ['<rootDir>/src/lib/TestUtils/jest.setup.ts'],
+  testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/dist/'],
 };
 
-module.exports = createJestConfig(customJestConfig);
+module.exports = async () => ({
+  ...(await createJestConfig(customJestConfig)()),
+  transformIgnorePatterns: ['node_modules/(?!(firebase|@firebase))'],
+});

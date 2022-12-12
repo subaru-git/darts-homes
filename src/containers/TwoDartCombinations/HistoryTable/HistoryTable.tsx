@@ -12,16 +12,16 @@ import {
 } from '@chakra-ui/react';
 import { MdDeleteForever } from 'react-icons/md';
 import HistoryDeleteAlert from '@/containers/History/DeleteAlert';
-import { TwoDartCombinationsResultModel } from '@/db/TwoDartCombinationsResultModel';
 import { db } from '@/db/db';
-import { deleteFromDB } from '@/lib/GameHistoryManager';
+import { deleteResult } from '@/lib/GameHistoryManager/GameHistoryManager';
 import { DateFormat } from '@/lib/Helper/Format';
 
 type HistoryTableProps = {
   history: TwoDartCombinationsResultModel[];
+  user: User | null | undefined;
 };
 
-const HistoryTable: FC<HistoryTableProps> = ({ history }) => {
+const HistoryTable: FC<HistoryTableProps> = ({ history, user }) => {
   const [deleteHistory, setDeleteHistory] = useState<TwoDartCombinationsResultModel | undefined>(
     undefined,
   );
@@ -62,7 +62,7 @@ const HistoryTable: FC<HistoryTableProps> = ({ history }) => {
           isOpen={isOpen}
           onClose={onClose}
           onDelete={() => {
-            deleteFromDB(deleteHistory.id, db.twoDartCombinationsResult);
+            deleteResult(deleteHistory.uuid, db.twoDartCombinationsResult, user);
             onClose();
           }}
         />
