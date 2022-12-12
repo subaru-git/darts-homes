@@ -2,8 +2,7 @@ import { createContext, ReactNode, useContext, useEffect, useState } from 'react
 import { onAuthStateChanged } from '@firebase/auth';
 import { doc, getDoc, setDoc } from '@firebase/firestore';
 import { auth, db } from '../firebase/client';
-import { exportGameHistory } from '@/lib/GameHistoryManager';
-import { mergeGameHistory } from '@/lib/GameHistoryManager/GameHistoryManager';
+import { exportGameHistory, mergeGameHistory, updateLocalHistory } from '@/lib/GameHistoryManager';
 import {
   convertFirebaseResultToGameResult,
   convertGameResultToFirebaseResult,
@@ -26,6 +25,7 @@ const AuthProvider = ({ children }: { children: ReactNode }) => {
           const localHistory = (await exportGameHistory()) ?? {};
           const remoteHistory = convertFirebaseResultToGameResult(docUser.history);
           const history = mergeGameHistory(localHistory, remoteHistory);
+          updateLocalHistory(history);
           const appUser: User = { ...docUser, history };
           setUser(appUser);
           const remoteUser: FirebaseUser = {

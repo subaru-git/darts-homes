@@ -85,6 +85,27 @@ export const exportGameHistory = async (): Promise<GameResultModel | undefined> 
   }
 };
 
+export const updateLocalHistory = (gameHistory: GameResultModel) => {
+  try {
+    updateToDB(gameHistory.cricketMarkUp, db.cricketMarkUpResult);
+    updateToDB(gameHistory.eaglesEye, db.eaglesEyeResult);
+    updateToDB(gameHistory.doubleTrouble, db.doubleTroubleResult);
+    updateToDB(gameHistory.sweet16, db.sweet16Result);
+    updateToDB(gameHistory.topsAndTens, db.topsAndTensResult);
+    updateToDB(gameHistory.twoDartCombinations, db.twoDartCombinationsResult);
+    updateToDB(gameHistory.aroundTheCompass, db.aroundTheCompassResult);
+    updateToDB(gameHistory.tonsUp, db.tonsUpResult);
+    updateToDB(gameHistory.route64, db.route64Result);
+    updateToDB(gameHistory.eightyThrew, db.eightyThrewResult);
+    updateToDB(gameHistory.shanghaiNights, db.shanghaiNightsResult);
+    updateToDB(gameHistory.switchHitter, db.switchHitterResult);
+    updateToDB(gameHistory.bullyBully, db.bullyBullyResult);
+    updateToDB(gameHistory.treblesForShow, db.treblesForShowResult);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 export const deleteResult = async (
   uuid: string,
   table: Table<ResultModel, IndexableType>,
@@ -92,7 +113,7 @@ export const deleteResult = async (
 ) => {
   if (!uuid) return;
   try {
-    db.transaction('rw', table, async () => {
+    await db.transaction('rw', table, () => {
       table.delete(uuid);
     });
     await updateHistory(user);
@@ -152,6 +173,14 @@ export const importToDB = <T>(
   db.transaction('rw', table, () => {
     if (overwrite) table.clear();
     for (const h of history) saveToDB({ ...h, uuid: uuidv4() }, table);
+  });
+};
+
+export const updateToDB = <T>(history: T[] | undefined, table: Table<T, IndexableType>) => {
+  if (!history) return;
+  db.transaction('rw', table, () => {
+    table.clear();
+    for (const h of history) saveToDB(h, table);
   });
 };
 
