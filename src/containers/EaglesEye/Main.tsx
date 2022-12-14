@@ -55,7 +55,13 @@ const DesktopMain: FC<MainProps> = ({ game, setGame, user, description }) => {
   return (
     <>
       <Flex justifyContent='space-between' alignItems='center'>
-        <NewGame onNewGame={() => setGame(new EaglesEyeGame())} isFinished={game.isFinished()} />
+        <NewGame
+          onNewGame={() => {
+            if (game.isFinished()) saveHistory(game.getGameResult(), db.eaglesEyeResult, user);
+            setGame(new EaglesEyeGame());
+          }}
+          isFinished={game.isFinished()}
+        />
         <Flex gap={2}>
           <DescriptionModal
             header={"Eagle's Eye"}
@@ -93,7 +99,13 @@ const MobileMain: FC<MainProps> = ({ game, setGame, user, description }) => {
     <Grid gap={4} justifyItems='center'>
       <GridItem width='100%'>
         <Flex justifyContent='space-between'>
-          <NewGame onNewGame={() => setGame(new EaglesEyeGame())} isFinished={game.isFinished()} />
+          <NewGame
+            onNewGame={() => {
+              if (game.isFinished()) saveHistory(game.getGameResult(), db.eaglesEyeResult, user);
+              setGame(new EaglesEyeGame());
+            }}
+            isFinished={game.isFinished()}
+          />
           <Box width='100%' pr='40px'>
             <Center>
               <TargetBoard

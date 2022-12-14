@@ -7,12 +7,16 @@ import DescriptionModal from '@/components/DescriptionModal';
 import RoundScore from '@/components/RoundScore';
 import TargetBoard from '@/components/TargetBoard';
 import { useArrangeGame, useArrangeGameSet } from '@/contexts/ArrangeGameContext';
+import { useAuth } from '@/contexts/AuthContext';
+import { db } from '@/db/db';
 import useLocale from '@/hooks/locale';
 import ArrangeGame from '@/lib/ArrangeGame/';
+import { saveHistory } from '@/lib/GameHistoryManager';
 import { updateObject } from '@/lib/Helper/updateObjectState';
 import MainTemplate from '@/templates/MainTemplate';
 
 const Main: FC = () => {
+  const user = useAuth();
   const game = useArrangeGame();
   const setGame = useArrangeGameSet();
   const isMd = useBreakpointValue({ base: false, md: true });
@@ -24,12 +28,14 @@ const Main: FC = () => {
         <DesktopMain
           game={game}
           setGame={setGame}
+          user={user}
           description={t.games.arrange.description.join('\n')}
         />
       ) : (
         <MobileMain
           game={game}
           setGame={setGame}
+          user={user}
           description={t.games.arrange.description.join('\n')}
         />
       )}
@@ -40,10 +46,11 @@ const Main: FC = () => {
 type MainProps = {
   game: ArrangeGame;
   setGame: (game: ArrangeGame) => void;
+  user: User | null | undefined;
   description?: string;
 };
 
-const DesktopMain: FC<MainProps> = ({ game, setGame, description }) => {
+const DesktopMain: FC<MainProps> = ({ game, setGame, user, description }) => {
   return (
     <>
       <Flex justifyContent='space-between' alignItems='center'>
@@ -90,12 +97,12 @@ const DesktopMain: FC<MainProps> = ({ game, setGame, description }) => {
           disabled={game.getRoundScore().length >= 3 || game.isFinished()}
         />
       </Flex>
-      <MyRoundScore game={game} setGame={setGame} />
+      <MyRoundScore game={game} setGame={setGame} user={user} />
     </>
   );
 };
 
-const MobileMain: FC<MainProps> = ({ game, setGame, description }) => {
+const MobileMain: FC<MainProps> = ({ game, setGame, user, description }) => {
   return (
     <Flex direction='column' pb={2}>
       <Flex justifyContent='space-between' alignItems='center'>
@@ -153,19 +160,20 @@ const MobileMain: FC<MainProps> = ({ game, setGame, description }) => {
           simulation={game.getSettings().simulation}
           disabled={game.getRoundScore().length >= 3 || game.isFinished()}
         />
-        <MyRoundScore game={game} setGame={setGame} />
+        <MyRoundScore game={game} setGame={setGame} user={user} />
       </Flex>
     </Flex>
   );
 };
 
-const MyRoundScore: FC<MainProps> = ({ game, setGame }) => (
+const MyRoundScore: FC<MainProps> = ({ game, setGame, user }) => (
   <RoundScore
     scores={game.getRoundScore()}
     onClear={() => updateObject(game, new ArrangeGame(), 'removeScore', setGame)}
     onRoundChange={() => updateObject(game, new ArrangeGame(), 'roundChange', setGame)}
     isFinished={game.isFinished()}
     onRoundOver={() => {
+      saveHistory(game.getGameResult(), db.arrangeResult, user);
       setGame(new ArrangeGame());
     }}
     result={getResult(game)}

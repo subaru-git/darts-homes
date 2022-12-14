@@ -17,6 +17,7 @@ interface ShanghaiNightsResultModel extends ResultModel, ShanghaiNightsResult {}
 interface SwitchHitterResultModel extends ResultModel, SwitchHitterResult {}
 interface BullyBullyResultModel extends ResultModel, BullyBullyResult {}
 interface TreblesForShowResultModel extends ResultModel, TreblesForShowResult {}
+interface ArrangeResultModel extends ResultModel, ArrangeResult {}
 
 interface GameResultModel {
   cricketMarkUp?: CricketMarkUpResultModel[];
@@ -33,4 +34,5 @@ interface GameResultModel {
   switchHitter?: SwitchHitterResultModel[];
   bullyBully?: BullyBullyResultModel[];
   treblesForShow?: TreblesForShowResultModel[];
+  arrange?: ArrangeResultModel[];
 }

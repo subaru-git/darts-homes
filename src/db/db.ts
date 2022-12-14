@@ -16,6 +16,7 @@ export class GameResultDexie extends Dexie {
   switchHitterResult!: Table<SwitchHitterResultModel>;
   bullyBullyResult!: Table<BullyBullyResultModel>;
   treblesForShowResult!: Table<TreblesForShowResultModel>;
+  arrangeResult!: Table<ArrangeResultModel>;
 
   constructor() {
     super('DartsHomes');
@@ -125,6 +126,23 @@ export class GameResultDexie extends Dexie {
           copyToOrigin('treblesForShowResult'),
         ]);
       });
+    this.version(3.0).stores({
+      cricketMarkUpResult: 'uuid',
+      eaglesEyeResult: 'uuid',
+      doubleTroubleResult: 'uuid',
+      sweet16Result: 'uuid',
+      topsAndTensResult: 'uuid',
+      twoDartCombinationsResult: 'uuid',
+      aroundTheCompassResult: 'uuid',
+      tonsUpResult: 'uuid',
+      route64Result: 'uuid',
+      eightyThrewResult: 'uuid',
+      shanghaiNightsResult: 'uuid',
+      switchHitterResult: 'uuid',
+      bullyBullyResult: 'uuid',
+      treblesForShowResult: 'uuid',
+      arrangeResult: 'uuid',
+    });
   }
 }
 

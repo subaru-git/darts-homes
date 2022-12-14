@@ -38,6 +38,7 @@ const querier = async (setLoading: (isLoading: boolean) => void): Promise<GameRe
   const switchHitter = await db.switchHitterResult.toCollection().reverse().sortBy('playedAt');
   const bullyBully = await db.bullyBullyResult.toCollection().reverse().sortBy('playedAt');
   const treblesForShow = await db.treblesForShowResult.toCollection().reverse().sortBy('playedAt');
+  const arrange = await db.arrangeResult.toCollection().reverse().sortBy('playedAt');
   setLoading(false);
   return {
     cricketMarkUp,
@@ -54,6 +55,7 @@ const querier = async (setLoading: (isLoading: boolean) => void): Promise<GameRe
     switchHitter,
     bullyBully,
     treblesForShow,
+    arrange,
   };
 };
 
