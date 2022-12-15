@@ -22,8 +22,7 @@ jobs:
       - name: cypress run
         uses: cypress-io/github-action@v4
         with:
-          env: NEXT_PUBLIC_FIREBASE_CONFIG=${{ secrets.FIREBASE_CONFIG }}}
-          build: yarn build
+          build: NEXT_PUBLIC_FIREBASE_CONFIG=${{ secrets.FIREBASE_CONFIG }}} yarn build
           start: yarn start
           browser: chrome
           spec: cypress/e2e/travel-all-pages.cy.ts
