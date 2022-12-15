@@ -121,6 +121,55 @@ test('double out', () => {
   expect(game.getRoundScore()).toEqual(['D-BULL', '0', '0']);
   expect(game.getLastTargetOutCount()).toBe(0);
   expect(game.isFinished()).toBeTruthy();
+  // game result test
+  expect(game.getScore()).toEqual([
+    ['20T', '20', '20D'],
+    ['20T', '20D', '10'],
+    ['20T', '20T', '0'],
+    ['20T', 'D-BULL', '0'],
+    ['20T', '20D', '0'],
+    ['20T', '10', '10'],
+    ['10', '0', '0'],
+    ['5D', '0', '0'],
+    ['20T', '19', '0'],
+    ['20D', '20D', '0'],
+    ['20D', '15D', '0'],
+    ['15D', '15D', '0'],
+    ['D-BULL', '0', '0'],
+  ]);
+  expect(game.getTargets()).toEqual([120, 110, 100, 90, 80, 70, 60, 50]);
+  expect(game.getGameResult()).toEqual({
+    result: [
+      { target: 120, score: [['20T', '20', '20D']] },
+      {
+        target: 110,
+        score: [
+          ['20T', '20D', '10'],
+          ['20T', '20T', '0'],
+          ['20T', 'D-BULL', '0'],
+        ],
+      },
+      { target: 100, score: [['20T', '20D', '0']] },
+      {
+        target: 90,
+        score: [
+          ['20T', '10', '10'],
+          ['10', '0', '0'],
+          ['5D', '0', '0'],
+        ],
+      },
+      {
+        target: 80,
+        score: [
+          ['20T', '19', '0'],
+          ['20D', '20D', '0'],
+        ],
+      },
+      { target: 70, score: [['20D', '15D', '0']] },
+      { target: 60, score: [['15D', '15D', '0']] },
+      { target: 50, score: [['D-BULL', '0', '0']] },
+    ],
+  });
 });
 
 test('single out', () => {

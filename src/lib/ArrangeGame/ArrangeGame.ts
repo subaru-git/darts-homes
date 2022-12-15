@@ -18,20 +18,20 @@ class ArrangeGame implements Game, GameData<ArrangeProgress, ArrangeResult> {
 
   constructor(settings: ArrangeSettings = ArrangeGame.defaultSettings) {
     this.settings = settings;
-    this.targets.push(
-      this.getNextTarget(this.targets.length, this.settings.out, this.settings.targets),
-    );
+    const { out, targets } = settings;
+    this.targets.push(this.getNextTarget(this.targets.length, out, targets));
   }
   getSettings() {
     return this.settings;
   }
   getCurrentTarget() {
-    const scores = [...this.player.getScore(), this.roundScore];
-    return this.calcTargetCount(scores, this.targets, this.settings.out, this.settings.separate).t;
+    const { out, separate } = this.settings;
+    return this.parseScore(this.getScore(), this.targets, out, separate).t;
   }
   getLastTargetOutCount() {
-    const scores = [...this.player.getScore(), this.roundScore, []];
-    return this.calcTargetCount(scores, this.targets, this.settings.out, this.settings.separate).c;
+    const scores = [...this.getScore(), []];
+    const { out, separate } = this.settings;
+    return this.parseScore(scores, this.targets, out, separate).c;
   }
   getTargetOutCount() {
     return this.targetOutCount;
@@ -59,26 +59,25 @@ class ArrangeGame implements Game, GameData<ArrangeProgress, ArrangeResult> {
     return this.roundScore;
   }
   getScore() {
-    return this.player.getScore();
+    return [...this.player.getScore(), this.roundScore];
   }
   roundChange() {
     if (this.roundScore.length > 3) return;
-    if (this.getCurrentTarget() === 0)
-      this.targets.push(
-        this.getNextTarget(this.targets.length, this.settings.out, this.settings.targets),
-      );
+    if (this.getCurrentTarget() === 0) {
+      const { out, targets } = this.settings;
+      this.targets.push(this.getNextTarget(this.targets.length, out, targets));
+    }
     this.player.roundScore(this.roundScore);
     this.roundScore = [];
   }
   isFinished() {
     const scores = [...this.player.getScore(), this.roundScore, []];
-    return (
-      this.calcTargetCount(scores, this.targets, this.settings.out, this.settings.separate).c === 0
-    );
+    const { out, separate } = this.settings;
+    return this.parseScore(scores, this.targets, out, separate).c === 0;
   }
   resumeGame(progress: ArrangeProgress) {
     for (const round of progress.score) this.player.roundScore(round);
-    this.targetOutCount = progress.targetOutCont;
+    this.targetOutCount = progress.targetOutCount;
     this.roundScore = progress.roundScore;
     this.targets = progress.targets;
     this.settings = progress.settings;
@@ -88,29 +87,39 @@ class ArrangeGame implements Game, GameData<ArrangeProgress, ArrangeResult> {
       roundScore: this.roundScore,
       score: this.player.getScore(),
       targets: this.targets,
-      targetOutCont: this.targetOutCount,
+      targetOutCount: this.targetOutCount,
       settings: this.settings,
     };
   }
   getGameResult(): ArrangeResult {
-    return {};
+    const { out, separate } = this.settings;
+    return {
+      result: this.parseScore(this.getScore(), this.targets, out, separate).r as ArrangeOut[],
+    };
   }
-  private calcTargetCount(rounds: point[][], targets: number[], out: OutOption, separate: boolean) {
-    let lastTarget = targets[0];
+  private parseScore(rounds: point[][], targets: number[], out: OutOption, separate: boolean) {
     return rounds.reduce(
       (pre, crr, i) => {
-        if (pre.t < 0) pre.t = lastTarget;
+        if (pre.t < 0) pre.t = pre.l;
         pre.t = this.calcRound(crr, pre.t, out, separate);
-        if (pre.t > 0) lastTarget = pre.t;
+        pre.r[pre.i].score.push(crr);
+        if (pre.t > 0) pre.l = pre.t;
         if (pre.t === 0 && i !== rounds.length - 1) {
           pre.i += 1;
           pre.c -= 1;
           pre.t = targets[pre.i] || 0;
-          lastTarget = pre.t;
+          pre.l = pre.t;
+          pre.r.push({ target: pre.t, score: [] as point[][] });
         }
         return pre;
       },
-      { i: 0, c: this.targetOutCount, t: targets[0] },
+      {
+        i: 0,
+        c: this.targetOutCount,
+        t: targets[0],
+        l: targets[0],
+        r: [{ target: targets[0], score: [] as point[][] }],
+      },
     );
   }
   private calcRound(round: point[], target: number, out: OutOption, separate: boolean) {

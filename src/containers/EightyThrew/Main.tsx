@@ -56,7 +56,10 @@ const DesktopMain: FC<MainProps> = ({ game, setGame, user, description }) => {
     <>
       <Flex justifyContent='space-between' alignItems='center'>
         <NewGame
-          onNewGame={(targetRound) => setGame(new EightyThrewGame(targetRound))}
+          onNewGame={(targetRound) => {
+            if (game.isFinished()) saveHistory(game.getGameResult(), db.eightyThrewResult, user);
+            setGame(new EightyThrewGame(targetRound));
+          }}
           isFinished={game.isFinished()}
           currentRound={game.getTargetRound()}
         />
@@ -100,7 +103,10 @@ const MobileMain: FC<MainProps> = ({ game, setGame, user, description }) => {
     <Flex direction='column' gap={4}>
       <Flex justifyContent='space-between' width='100%'>
         <NewGame
-          onNewGame={(targetRound) => setGame(new EightyThrewGame(targetRound))}
+          onNewGame={(targetRound) => {
+            if (game.isFinished()) saveHistory(game.getGameResult(), db.eightyThrewResult, user);
+            setGame(new EightyThrewGame(targetRound));
+          }}
           isFinished={game.isFinished()}
           currentRound={game.getTargetRound()}
         />

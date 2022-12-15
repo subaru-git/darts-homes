@@ -115,4 +115,11 @@ interface TreblesForShowResult {
   playedAt: string;
 }
 
-interface ArrangeResult {}
+interface ArrangeResult {
+  result: ArrangeOut[];
+}
+
+interface ArrangeOut {
+  target: number;
+  score: point[][];
+}

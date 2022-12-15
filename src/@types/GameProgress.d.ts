@@ -82,7 +82,7 @@ interface TreblesForShowProgress {
 interface ArrangeProgress {
   roundScore: point[];
   score: point[][];
-  targetOutCont: number;
+  targetOutCount: number;
   targets: number[];
   settings: ArrangeGameSettings;
 }

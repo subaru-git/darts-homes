@@ -82,7 +82,11 @@ const DesktopMain: FC<MainProps> = ({ game, setGame, user, description }) => {
     <>
       <Flex justifyContent='space-between' alignItems='center'>
         <NewGame
-          onNewGame={() => setGame(new TwoDartCombinationsGame())}
+          onNewGame={() => {
+            if (game.isFinished())
+              saveHistory(game.getGameResult(), db.twoDartCombinationsResult, user);
+            setGame(new TwoDartCombinationsGame());
+          }}
           isFinished={game.isFinished()}
         />
         <Flex gap={2}>
@@ -126,7 +130,11 @@ const MobileMain: FC<MainProps> = ({ game, setGame, user, description }) => {
     <Flex direction='column' gap={4}>
       <Flex justifyContent='space-between' width='100%'>
         <NewGame
-          onNewGame={() => setGame(new TwoDartCombinationsGame())}
+          onNewGame={() => {
+            if (game.isFinished())
+              saveHistory(game.getGameResult(), db.twoDartCombinationsResult, user);
+            setGame(new TwoDartCombinationsGame());
+          }}
           isFinished={game.isFinished()}
         />
         <Flex alignItems='center' gap={4}>
