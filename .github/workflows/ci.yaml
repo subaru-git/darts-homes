@@ -19,10 +19,13 @@ jobs:
       - run: yarn
       - run: yarn lint
       - run: yarn test:ci
+      - run: yarn build
+        with:
+          env:
+            NEXT_PUBLIC_FIREBASE_CONFIG: ${{ secrets.FIREBASE_CONFIG }}
       - name: cypress run
         uses: cypress-io/github-action@v4
         with:
-          build: NEXT_PUBLIC_FIREBASE_CONFIG=${{ secrets.FIREBASE_CONFIG }}} yarn build
           start: yarn start
           browser: chrome
           spec: cypress/e2e/travel-all-pages.cy.ts
