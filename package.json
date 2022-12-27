@@ -23,7 +23,7 @@
     "hygen": "hygen",
     "respect:update": "node data/update.js",
     "analyze": "ANALYZE=true next build",
-    "schema": "cat src/@types/* > src/schemas/Types.ts && ts-interface-builder src/schemas/Types.ts && rm src/schemas/Types.ts"
+    "schema": "cat src/@types/* > src/schemas/Types.ts && ts-interface-builder -g src/schemas/Types.ts && rm src/schemas/Types.ts"
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.0.11",
@@ -103,6 +103,8 @@
     "storybook-addon-locale": "^0.3.6",
     "storybook-addon-next-router": "^4.0.1",
     "ts-interface-builder": "^0.3.3",
+    "ts-loader": "^9.4.2",
+    "ts-type-checked": "^0.6.5",
     "typescript": "4.8.3"
   }
 }

@@ -1443,7 +1443,7 @@ exports[`should rendering 1`] = `
         >
           <button
             aria-controls="tabs-:rr:--tabpanel-0"
-            aria-label="cricket mark up"
+            aria-label="arrange"
             aria-selected="true"
             class="chakra-tabs__tab css-52dxnr"
             data-index="0"
@@ -1452,11 +1452,11 @@ exports[`should rendering 1`] = `
             tabindex="0"
             type="button"
           >
-            Cricket Mark-Up
+            Arrange
           </button>
           <button
             aria-controls="tabs-:rr:--tabpanel-1"
-            aria-label="eagle's eye"
+            aria-label="cricket mark up"
             aria-selected="false"
             class="chakra-tabs__tab css-52dxnr"
             data-index="1"
@@ -1465,11 +1465,11 @@ exports[`should rendering 1`] = `
             tabindex="-1"
             type="button"
           >
-            Eagle's Eye
+            Cricket Mark-Up
           </button>
           <button
             aria-controls="tabs-:rr:--tabpanel-2"
-            aria-label="double trouble"
+            aria-label="eagle's eye"
             aria-selected="false"
             class="chakra-tabs__tab css-52dxnr"
             data-index="2"
@@ -1478,11 +1478,11 @@ exports[`should rendering 1`] = `
             tabindex="-1"
             type="button"
           >
-            Double Trouble
+            Eagle's Eye
           </button>
           <button
             aria-controls="tabs-:rr:--tabpanel-3"
-            aria-label="sweet 16"
+            aria-label="double trouble"
             aria-selected="false"
             class="chakra-tabs__tab css-52dxnr"
             data-index="3"
@@ -1491,11 +1491,11 @@ exports[`should rendering 1`] = `
             tabindex="-1"
             type="button"
           >
-            Sweet 16
+            Double Trouble
           </button>
           <button
             aria-controls="tabs-:rr:--tabpanel-4"
-            aria-label="tops and tens"
+            aria-label="sweet 16"
             aria-selected="false"
             class="chakra-tabs__tab css-52dxnr"
             data-index="4"
@@ -1504,11 +1504,11 @@ exports[`should rendering 1`] = `
             tabindex="-1"
             type="button"
           >
-            Tops and Tens
+            Sweet 16
           </button>
           <button
             aria-controls="tabs-:rr:--tabpanel-5"
-            aria-label="two dart combinations"
+            aria-label="tops and tens"
             aria-selected="false"
             class="chakra-tabs__tab css-52dxnr"
             data-index="5"
@@ -1517,11 +1517,11 @@ exports[`should rendering 1`] = `
             tabindex="-1"
             type="button"
           >
-            Two-Dart Combinations
+            Tops and Tens
           </button>
           <button
             aria-controls="tabs-:rr:--tabpanel-6"
-            aria-label="around the compass"
+            aria-label="two dart combinations"
             aria-selected="false"
             class="chakra-tabs__tab css-52dxnr"
             data-index="6"
@@ -1530,11 +1530,11 @@ exports[`should rendering 1`] = `
             tabindex="-1"
             type="button"
           >
-            Around The Compass
+            Two-Dart Combinations
           </button>
           <button
             aria-controls="tabs-:rr:--tabpanel-7"
-            aria-label="tons up"
+            aria-label="around the compass"
             aria-selected="false"
             class="chakra-tabs__tab css-52dxnr"
             data-index="7"
@@ -1543,11 +1543,11 @@ exports[`should rendering 1`] = `
             tabindex="-1"
             type="button"
           >
-            Tons Up
+            Around The Compass
           </button>
           <button
             aria-controls="tabs-:rr:--tabpanel-8"
-            aria-label="route 64"
+            aria-label="tons up"
             aria-selected="false"
             class="chakra-tabs__tab css-52dxnr"
             data-index="8"
@@ -1556,11 +1556,11 @@ exports[`should rendering 1`] = `
             tabindex="-1"
             type="button"
           >
-            Route 64
+            Tons Up
           </button>
           <button
             aria-controls="tabs-:rr:--tabpanel-9"
-            aria-label="eighty threw"
+            aria-label="route 64"
             aria-selected="false"
             class="chakra-tabs__tab css-52dxnr"
             data-index="9"
@@ -1569,11 +1569,11 @@ exports[`should rendering 1`] = `
             tabindex="-1"
             type="button"
           >
-            Eighty Threw
+            Route 64
           </button>
           <button
             aria-controls="tabs-:rr:--tabpanel-10"
-            aria-label="shanghai nights"
+            aria-label="eighty threw"
             aria-selected="false"
             class="chakra-tabs__tab css-52dxnr"
             data-index="10"
@@ -1582,11 +1582,11 @@ exports[`should rendering 1`] = `
             tabindex="-1"
             type="button"
           >
-            Shanghai Nights
+            Eighty Threw
           </button>
           <button
             aria-controls="tabs-:rr:--tabpanel-11"
-            aria-label="switch hitter"
+            aria-label="shanghai nights"
             aria-selected="false"
             class="chakra-tabs__tab css-52dxnr"
             data-index="11"
@@ -1595,11 +1595,11 @@ exports[`should rendering 1`] = `
             tabindex="-1"
             type="button"
           >
-            Switch Hitter
+            Shanghai Nights
           </button>
           <button
             aria-controls="tabs-:rr:--tabpanel-12"
-            aria-label="bully bully"
+            aria-label="switch hitter"
             aria-selected="false"
             class="chakra-tabs__tab css-52dxnr"
             data-index="12"
@@ -1608,15 +1608,28 @@ exports[`should rendering 1`] = `
             tabindex="-1"
             type="button"
           >
-            Bully Bully
+            Switch Hitter
           </button>
           <button
             aria-controls="tabs-:rr:--tabpanel-13"
-            aria-label="trebles for show"
+            aria-label="bully bully"
             aria-selected="false"
             class="chakra-tabs__tab css-52dxnr"
             data-index="13"
             id="tabs-:rr:--tab-13"
+            role="tab"
+            tabindex="-1"
+            type="button"
+          >
+            Bully Bully
+          </button>
+          <button
+            aria-controls="tabs-:rr:--tabpanel-14"
+            aria-label="trebles for show"
+            aria-selected="false"
+            class="chakra-tabs__tab css-52dxnr"
+            data-index="14"
+            id="tabs-:rr:--tab-14"
             role="tab"
             tabindex="-1"
             type="button"
@@ -1628,7 +1641,7 @@ exports[`should rendering 1`] = `
           class="chakra-tabs__tab-panels css-8atqhb"
         >
           <div
-            aria-label="cricket mark up history"
+            aria-label="arrange history"
             aria-labelledby="tabs-:rr:--tab-0"
             class="chakra-tabs__tab-panel css-a5mhaz"
             id="tabs-:rr:--tabpanel-0"
@@ -1636,19 +1649,201 @@ exports[`should rendering 1`] = `
             tabindex="0"
           >
             <div
-              class="chakra-table__container css-zipzvv"
+              class="css-18936vg"
             >
-              <table
-                class="chakra-table css-5605sr"
+              <div
+                class="css-1i2407o"
               >
-                <tbody
+                <div
                   class="css-0"
-                />
-              </table>
+                >
+                  <p
+                    class="chakra-text css-1hmbtly"
+                  >
+                    out options
+                  </p>
+                  <div
+                    class="chakra-radio-group css-0"
+                    role="radiogroup"
+                  >
+                    <div
+                      class="css-1azotaz"
+                    >
+                      <label
+                        class="chakra-radio css-1cqh9jq"
+                        data-checked=""
+                      >
+                        <input
+                          checked=""
+                          class="chakra-radio__input"
+                          id="radio-:ru:"
+                          name="radio-:rt:"
+                          style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
+                          type="radio"
+                          value="single"
+                        />
+                        <span
+                          aria-hidden="true"
+                          aria-label="single out"
+                          class="chakra-radio__control css-1qjgi8f"
+                          data-checked=""
+                        />
+                        <span
+                          class="chakra-radio__label css-jybt17"
+                          data-checked=""
+                        >
+                          Single Out
+                        </span>
+                      </label>
+                      <label
+                        class="chakra-radio css-1cqh9jq"
+                      >
+                        <input
+                          class="chakra-radio__input"
+                          id="radio-:rv:"
+                          name="radio-:rt:"
+                          style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
+                          type="radio"
+                          value="double"
+                        />
+                        <span
+                          aria-hidden="true"
+                          aria-label="double out"
+                          class="chakra-radio__control css-1qjgi8f"
+                        />
+                        <span
+                          class="chakra-radio__label css-jybt17"
+                        >
+                          Double Out
+                        </span>
+                      </label>
+                      <label
+                        class="chakra-radio css-1cqh9jq"
+                      >
+                        <input
+                          class="chakra-radio__input"
+                          id="radio-:r10:"
+                          name="radio-:rt:"
+                          style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
+                          type="radio"
+                          value="master"
+                        />
+                        <span
+                          aria-hidden="true"
+                          aria-label="master out"
+                          class="chakra-radio__control css-1qjgi8f"
+                        />
+                        <span
+                          class="chakra-radio__label css-jybt17"
+                        >
+                          Master Out
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="css-0"
+                >
+                  <p
+                    class="chakra-text css-1hmbtly"
+                  >
+                    bull options
+                  </p>
+                  <div
+                    class="css-1k9efnl"
+                  >
+                    <p
+                      class="chakra-text css-xim7xt"
+                    >
+                      Fat Bull
+                    </p>
+                    <label
+                      class="chakra-switch css-1cuslds"
+                    >
+                      <input
+                        class="chakra-switch__input"
+                        style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
+                        type="checkbox"
+                        value=""
+                      />
+                      <span
+                        aria-hidden="true"
+                        class="chakra-switch__track css-p27qcy"
+                      >
+                        <span
+                          class="chakra-switch__thumb css-7roig"
+                        />
+                      </span>
+                    </label>
+                    <p
+                      class="chakra-text css-xim7xt"
+                    >
+                      Separate Bull
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="chakra-select__wrapper css-42b2qy"
+                >
+                  <select
+                    class="chakra-select css-1hax2g2"
+                  />
+                  <div
+                    class="chakra-select__icon-wrapper css-cymxv7"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="chakra-select__icon"
+                      focusable="false"
+                      role="presentation"
+                      style="width: 1em; height: 1em; color: currentColor;"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  class="chakra-table__container css-zipzvv"
+                >
+                  <table
+                    class="chakra-table css-5605sr"
+                  >
+                    <tbody
+                      class="css-0"
+                    />
+                  </table>
+                </div>
+              </div>
+              <div
+                aria-label="game history"
+                class="css-0"
+              >
+                <h3
+                  class="chakra-heading css-1slo9hi"
+                >
+                  Game History
+                </h3>
+                <div
+                  class="chakra-table__container css-zipzvv"
+                >
+                  <table
+                    class="chakra-table css-d0hqo3"
+                  >
+                    <tbody
+                      class="css-0"
+                    />
+                  </table>
+                </div>
+              </div>
             </div>
           </div>
           <div
-            aria-label="eagle's eye history"
+            aria-label="cricket mark up history"
             aria-labelledby="tabs-:rr:--tab-1"
             class="chakra-tabs__tab-panel css-a5mhaz"
             hidden=""
@@ -1669,7 +1864,7 @@ exports[`should rendering 1`] = `
             </div>
           </div>
           <div
-            aria-label="double trouble history"
+            aria-label="eagle's eye history"
             aria-labelledby="tabs-:rr:--tab-2"
             class="chakra-tabs__tab-panel css-a5mhaz"
             hidden=""
@@ -1690,7 +1885,7 @@ exports[`should rendering 1`] = `
             </div>
           </div>
           <div
-            aria-label="sweet 16 history"
+            aria-label="double trouble history"
             aria-labelledby="tabs-:rr:--tab-3"
             class="chakra-tabs__tab-panel css-a5mhaz"
             hidden=""
@@ -1711,7 +1906,7 @@ exports[`should rendering 1`] = `
             </div>
           </div>
           <div
-            aria-label="tops and tens history"
+            aria-label="sweet 16 history"
             aria-labelledby="tabs-:rr:--tab-4"
             class="chakra-tabs__tab-panel css-a5mhaz"
             hidden=""
@@ -1732,7 +1927,7 @@ exports[`should rendering 1`] = `
             </div>
           </div>
           <div
-            aria-label="two dart combinations history"
+            aria-label="tops and tens history"
             aria-labelledby="tabs-:rr:--tab-5"
             class="chakra-tabs__tab-panel css-a5mhaz"
             hidden=""
@@ -1753,7 +1948,7 @@ exports[`should rendering 1`] = `
             </div>
           </div>
           <div
-            aria-label="around the compass history"
+            aria-label="two dart combinations history"
             aria-labelledby="tabs-:rr:--tab-6"
             class="chakra-tabs__tab-panel css-a5mhaz"
             hidden=""
@@ -1774,7 +1969,7 @@ exports[`should rendering 1`] = `
             </div>
           </div>
           <div
-            aria-label="tons up history"
+            aria-label="around the compass history"
             aria-labelledby="tabs-:rr:--tab-7"
             class="chakra-tabs__tab-panel css-a5mhaz"
             hidden=""
@@ -1795,7 +1990,7 @@ exports[`should rendering 1`] = `
             </div>
           </div>
           <div
-            aria-label="route 64 history"
+            aria-label="tons up history"
             aria-labelledby="tabs-:rr:--tab-8"
             class="chakra-tabs__tab-panel css-a5mhaz"
             hidden=""
@@ -1816,7 +2011,7 @@ exports[`should rendering 1`] = `
             </div>
           </div>
           <div
-            aria-label="eighty threw history"
+            aria-label="route 64 history"
             aria-labelledby="tabs-:rr:--tab-9"
             class="chakra-tabs__tab-panel css-a5mhaz"
             hidden=""
@@ -1837,7 +2032,7 @@ exports[`should rendering 1`] = `
             </div>
           </div>
           <div
-            aria-label="shanghai nights history"
+            aria-label="eighty threw history"
             aria-labelledby="tabs-:rr:--tab-10"
             class="chakra-tabs__tab-panel css-a5mhaz"
             hidden=""
@@ -1858,7 +2053,7 @@ exports[`should rendering 1`] = `
             </div>
           </div>
           <div
-            aria-label="switch hitter history"
+            aria-label="shanghai nights history"
             aria-labelledby="tabs-:rr:--tab-11"
             class="chakra-tabs__tab-panel css-a5mhaz"
             hidden=""
@@ -1879,7 +2074,7 @@ exports[`should rendering 1`] = `
             </div>
           </div>
           <div
-            aria-label="bully bully history"
+            aria-label="switch hitter history"
             aria-labelledby="tabs-:rr:--tab-12"
             class="chakra-tabs__tab-panel css-a5mhaz"
             hidden=""
@@ -1900,11 +2095,32 @@ exports[`should rendering 1`] = `
             </div>
           </div>
           <div
-            aria-label="trebles for show history"
+            aria-label="bully bully history"
             aria-labelledby="tabs-:rr:--tab-13"
             class="chakra-tabs__tab-panel css-a5mhaz"
             hidden=""
             id="tabs-:rr:--tabpanel-13"
+            role="tabpanel"
+            tabindex="0"
+          >
+            <div
+              class="chakra-table__container css-zipzvv"
+            >
+              <table
+                class="chakra-table css-5605sr"
+              >
+                <tbody
+                  class="css-0"
+                />
+              </table>
+            </div>
+          </div>
+          <div
+            aria-label="trebles for show history"
+            aria-labelledby="tabs-:rr:--tab-14"
+            class="chakra-tabs__tab-panel css-a5mhaz"
+            hidden=""
+            id="tabs-:rr:--tabpanel-14"
             role="tabpanel"
             tabindex="0"
           >

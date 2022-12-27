@@ -9,12 +9,7 @@ test('should rendering', () => {
   window.matchMedia = createMatchMedia(1000);
   const { container } = render(
     <ChakraProvider>
-      <RoundScoreButton
-        isFinished={false}
-        onRoundChange={onRoundChangeMock}
-        onRoundOver={onRoundOverMock}
-        disabled={false}
-      />
+      <RoundScoreButton isFinished={false} result={''} onRoundChange={onRoundChangeMock} onRoundOver={onRoundOverMock} disabled={false} />
     </ChakraProvider>,
   );
   expect(container).toMatchSnapshot();

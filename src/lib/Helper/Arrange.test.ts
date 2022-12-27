@@ -1,9 +1,9 @@
 import { doubleOut, masterOut, singleOut } from './Arrange';
 
 test('single out', () => {
-  expect(singleOut.length).toBe(180);
+  expect(singleOut.length).toBe(171);
   expect(singleOut[0]).toBe(1);
-  expect(singleOut[179]).toBe(180);
+  expect(singleOut[170]).toBe(180);
 });
 
 test('double out', () => {

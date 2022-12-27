@@ -18,6 +18,7 @@ import {
 } from '@chakra-ui/react';
 import HistoryImportExport from '../ImportExport';
 import AroundTheCompassHistoryTable from '@/containers/AroundTheCompass/HistoryTable';
+import ArrangeHistory from '@/containers/Arrange/History';
 import BullyBullyHistoryTable from '@/containers/BullyBully/HistoryTable';
 import CricketMarkUpHistoryTable from '@/containers/CricketMarkUp/HistoryTable';
 import DoubleTroubleHistoryTable from '@/containers/DoubleTrouble/HistoryTable';
@@ -61,6 +62,7 @@ const HistoryBoard: FC<HistoryBoardProps> = ({ history, user }) => {
       </Flex>
       <Tabs>
         <TabList overflowX='scroll' whiteSpace='nowrap'>
+          <Tab aria-label='arrange'>Arrange</Tab>
           <Tab aria-label='cricket mark up'>Cricket Mark-Up</Tab>
           <Tab aria-label="eagle's eye">{"Eagle's Eye"}</Tab>
           <Tab aria-label='double trouble'>Double Trouble</Tab>
@@ -77,6 +79,9 @@ const HistoryBoard: FC<HistoryBoardProps> = ({ history, user }) => {
           <Tab aria-label='trebles for show'>Trebles For Show</Tab>
         </TabList>
         <TabPanels>
+          <TabPanel aria-label='arrange history'>
+            <ArrangeHistory history={history.arrange ?? []} user={user} />
+          </TabPanel>
           <TabPanel aria-label='cricket mark up history'>
             <CricketMarkUpHistoryTable history={history.cricketMarkUp ?? []} user={user} />
           </TabPanel>

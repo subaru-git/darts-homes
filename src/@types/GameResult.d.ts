@@ -117,6 +117,8 @@ interface TreblesForShowResult {
 
 interface ArrangeResult {
   result: ArrangeOut[];
+  settings: ArrangeSettings;
+  playedAt: string;
 }
 
 interface ArrangeOut {

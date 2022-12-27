@@ -95,6 +95,8 @@ class ArrangeGame implements Game, GameData<ArrangeProgress, ArrangeResult> {
     const { out, separate } = this.settings;
     return {
       result: this.parseScore(this.getScore(), this.targets, out, separate).r as ArrangeOut[],
+      settings: this.settings,
+      playedAt: new Date().toJSON(),
     };
   }
   private parseScore(rounds: point[][], targets: number[], out: OutOption, separate: boolean) {

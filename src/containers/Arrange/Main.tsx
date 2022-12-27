@@ -55,7 +55,10 @@ const DesktopMain: FC<MainProps> = ({ game, setGame, user, description }) => {
     <>
       <Flex justifyContent='space-between' alignItems='center'>
         <NewGame
-          onNewGame={(settings) => setGame(new ArrangeGame(settings))}
+          onNewGame={(settings) => {
+            if (game.isFinished()) saveHistory(game.getGameResult(), db.arrangeResult, user);
+            setGame(new ArrangeGame(settings));
+          }}
           isFinished={game.isFinished()}
           currentSettings={game.getSettings()}
         />
@@ -107,7 +110,10 @@ const MobileMain: FC<MainProps> = ({ game, setGame, user, description }) => {
     <Flex direction='column' pb={2}>
       <Flex justifyContent='space-between' alignItems='center'>
         <NewGame
-          onNewGame={(settings) => setGame(new ArrangeGame(settings))}
+          onNewGame={(settings) => {
+            if (game.isFinished()) saveHistory(game.getGameResult(), db.arrangeResult, user);
+            setGame(new ArrangeGame(settings));
+          }}
           isFinished={game.isFinished()}
           currentSettings={game.getSettings()}
         />

@@ -122,6 +122,8 @@ test('double out', () => {
   expect(game.getLastTargetOutCount()).toBe(0);
   expect(game.isFinished()).toBeTruthy();
   // game result test
+  const mockDate = new Date(2021, 0, 1, 1, 1, 1);
+  jest.spyOn(global, 'Date').mockImplementation(() => mockDate);
   expect(game.getScore()).toEqual([
     ['20T', '20', '20D'],
     ['20T', '20D', '10'],
@@ -169,6 +171,14 @@ test('double out', () => {
       { target: 60, score: [['15D', '15D', '0']] },
       { target: 50, score: [['D-BULL', '0', '0']] },
     ],
+    settings: {
+      targets: [120, 110, 100, 90, 80, 70, 60, 50],
+      range: 60,
+      out: 'double',
+      simulation: true,
+      separate: false,
+    },
+    playedAt: '2020-12-31T16:01:01.000Z',
   });
 });
 

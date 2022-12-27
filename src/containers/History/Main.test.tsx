@@ -7,6 +7,6 @@ test('should rendering', async () => {
   const { container } = render(<Main />);
   await act(async () => await new Promise((r) => setTimeout(r, 500)));
   const tabs = screen.getByRole('tablist').children;
-  expect(tabs).toHaveLength(14);
+  expect(tabs).toHaveLength(15);
   expect(container).toMatchSnapshot();
 }, 30000);
