@@ -24,8 +24,8 @@ const ArrangeGameContextProvider: FC<{ children: ReactNode | ReactNode[] }> = ({
     const memoGame = localStorage.getItem('Arrange');
     if (memoGame) {
       const progress = JSON.parse(memoGame);
-      const { ArrangeGameProgress } = createCheckers(types);
-      if (ArrangeGameProgress.test(progress)) g.resumeGame(progress);
+      const { ArrangeProgress } = createCheckers(types);
+      if (ArrangeProgress.test(progress)) g.resumeGame(progress);
     }
     setGame(g);
   }, []);

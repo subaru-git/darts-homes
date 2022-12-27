@@ -1,9 +1,4149 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should rendering 1`] = `
+exports[`master out fat bull 1`] = `
 <div>
-  <div>
-    History
+  <div
+    class="css-18936vg"
+  >
+    <div
+      class="css-1i2407o"
+    >
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1hmbtly"
+        >
+          out options
+        </p>
+        <div
+          class="chakra-radio-group css-0"
+          role="radiogroup"
+        >
+          <div
+            class="css-1azotaz"
+          >
+            <label
+              class="chakra-radio css-1cqh9jq"
+            >
+              <input
+                checked=""
+                class="chakra-radio__input"
+                id="radio-:r1n:"
+                name="radio-:r1m:"
+                style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
+                type="radio"
+                value="single"
+              />
+              <span
+                aria-hidden="true"
+                aria-label="single out"
+                class="chakra-radio__control css-1qjgi8f"
+              />
+              <span
+                class="chakra-radio__label css-jybt17"
+              >
+                Single Out
+              </span>
+            </label>
+            <label
+              class="chakra-radio css-1cqh9jq"
+            >
+              <input
+                class="chakra-radio__input"
+                id="radio-:r1o:"
+                name="radio-:r1m:"
+                style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
+                type="radio"
+                value="double"
+              />
+              <span
+                aria-hidden="true"
+                aria-label="double out"
+                class="chakra-radio__control css-1qjgi8f"
+              />
+              <span
+                class="chakra-radio__label css-jybt17"
+              >
+                Double Out
+              </span>
+            </label>
+            <label
+              class="chakra-radio css-1cqh9jq"
+              data-checked=""
+            >
+              <input
+                class="chakra-radio__input"
+                id="radio-:r1p:"
+                name="radio-:r1m:"
+                style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
+                type="radio"
+                value="master"
+              />
+              <span
+                aria-hidden="true"
+                aria-label="master out"
+                class="chakra-radio__control css-1qjgi8f"
+                data-checked=""
+                data-focus=""
+              />
+              <span
+                class="chakra-radio__label css-jybt17"
+                data-checked=""
+              >
+                Master Out
+              </span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1hmbtly"
+        >
+          bull options
+        </p>
+        <div
+          class="css-1k9efnl"
+        >
+          <p
+            class="chakra-text css-xim7xt"
+          >
+            Fat Bull
+          </p>
+          <label
+            class="chakra-switch css-1cuslds"
+          >
+            <input
+              class="chakra-switch__input"
+              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
+              type="checkbox"
+              value=""
+            />
+            <span
+              aria-hidden="true"
+              class="chakra-switch__track css-p27qcy"
+            >
+              <span
+                class="chakra-switch__thumb css-7roig"
+              />
+            </span>
+          </label>
+          <p
+            class="chakra-text css-xim7xt"
+          >
+            Separate Bull
+          </p>
+        </div>
+      </div>
+      <div
+        class="chakra-select__wrapper css-42b2qy"
+      >
+        <select
+          class="chakra-select css-1hax2g2"
+        >
+          <option
+            value="154"
+          >
+            154
+          </option>
+          <option
+            value="152"
+          >
+            152
+          </option>
+          <option
+            value="142"
+          >
+            142
+          </option>
+          <option
+            value="123"
+          >
+            123
+          </option>
+          <option
+            value="87"
+          >
+            87
+          </option>
+          <option
+            value="67"
+          >
+            67
+          </option>
+          <option
+            value="25"
+          >
+            25
+          </option>
+          <option
+            value="14"
+          >
+            14
+          </option>
+        </select>
+        <div
+          class="chakra-select__icon-wrapper css-cymxv7"
+        >
+          <svg
+            aria-hidden="true"
+            class="chakra-select__icon"
+            focusable="false"
+            role="presentation"
+            style="width: 1em; height: 1em; color: currentColor;"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+              fill="currentColor"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        class="chakra-table__container css-zipzvv"
+      >
+        <table
+          class="chakra-table css-5605sr"
+        >
+          <tbody
+            class="css-0"
+          >
+            <tr
+              class="css-0"
+            >
+              <td
+                class="css-1539mg0"
+              >
+                <p
+                  class="chakra-text css-xim7xt"
+                >
+                  S-BULL
+                </p>
+              </td>
+              <td
+                class="css-1539mg0"
+              >
+                <p
+                  class="chakra-text css-xim7xt"
+                >
+                  S-BULL
+                </p>
+              </td>
+              <td
+                class="css-1539mg0"
+              >
+                <p
+                  class="chakra-text css-xim7xt"
+                >
+                  18T
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div
+      aria-label="game history"
+      class="css-0"
+    >
+      <h3
+        class="chakra-heading css-1slo9hi"
+      >
+        Game History
+      </h3>
+      <div
+        class="chakra-table__container css-zipzvv"
+      >
+        <table
+          class="chakra-table css-d0hqo3"
+        >
+          <tbody
+            class="css-0"
+          >
+            <tr
+              class="css-1oahe7w"
+            >
+              <td
+                class="css-13x8h2m"
+                colspan="2"
+              >
+                Arrange
+              </td>
+              <td
+                class="css-13x8h2m"
+                colspan="2"
+              >
+                single
+                 / 
+                fat
+              </td>
+              <td
+                class="css-10ia4wo"
+                colspan="3"
+              >
+                <p
+                  class="chakra-text css-0"
+                >
+                  2021/01/01 01:01:01
+                </p>
+              </td>
+              <td
+                class="css-yaext0"
+              >
+                <button
+                  aria-label="delete history"
+                  class="chakra-button css-1jiezgg"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    fill="currentColor"
+                    focusable="false"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0 0h24v24H0z"
+                      fill="none"
+                    />
+                    <path
+                      d="M0 0h24v24H0V0z"
+                      fill="none"
+                    />
+                    <path
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12l1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                    />
+                  </svg>
+                </button>
+              </td>
+            </tr>
+            <tr
+              class="css-0"
+            >
+              <td
+                class="css-j7bde9"
+              >
+                <p
+                  aria-controls="popover-content-:r1r:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="chakra-text css-gyvdtt"
+                  id="popover-trigger-:r1r:"
+                >
+                  167
+                </p>
+                <div
+                  class="chakra-popover__popper css-1qq679y"
+                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+                >
+                  <section
+                    aria-describedby="popover-body-:r1r:"
+                    class="chakra-popover__content css-sjj62m"
+                    id="popover-content-:r1r:"
+                    role="tooltip"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="chakra-popover__arrow-positioner css-0"
+                      data-popper-arrow=""
+                      style="position: absolute;"
+                    >
+                      <div
+                        class="chakra-popover__arrow css-0"
+                        data-popper-arrow-inner=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-popover__body css-1ews2c8"
+                      id="popover-body-:r1r:"
+                    >
+                      <div
+                        class="css-j7qwjs"
+                      >
+                        <div
+                          class="css-17k0wlp"
+                        >
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            20T
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            19T
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            D-BULL
+                          </p>
+                          <p
+                            class="chakra-text css-jtjur4"
+                          >
+                            FINISH
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </td>
+              <td
+                class="css-j7bde9"
+              >
+                <p
+                  aria-controls="popover-content-:r1t:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="chakra-text css-gyvdtt"
+                  id="popover-trigger-:r1t:"
+                >
+                  28
+                </p>
+                <div
+                  class="chakra-popover__popper css-1qq679y"
+                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+                >
+                  <section
+                    aria-describedby="popover-body-:r1t:"
+                    class="chakra-popover__content css-sjj62m"
+                    id="popover-content-:r1t:"
+                    role="tooltip"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="chakra-popover__arrow-positioner css-0"
+                      data-popper-arrow=""
+                      style="position: absolute;"
+                    >
+                      <div
+                        class="chakra-popover__arrow css-0"
+                        data-popper-arrow-inner=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-popover__body css-1ews2c8"
+                      id="popover-body-:r1t:"
+                    >
+                      <div
+                        class="css-j7qwjs"
+                      >
+                        <div
+                          class="css-17k0wlp"
+                        >
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            14D
+                          </p>
+                          <p
+                            class="chakra-text css-jtjur4"
+                          >
+                            FINISH
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </td>
+              <td
+                class="css-j7bde9"
+              >
+                <p
+                  aria-controls="popover-content-:r1v:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="chakra-text css-gyvdtt"
+                  id="popover-trigger-:r1v:"
+                >
+                  161
+                </p>
+                <div
+                  class="chakra-popover__popper css-1qq679y"
+                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+                >
+                  <section
+                    aria-describedby="popover-body-:r1v:"
+                    class="chakra-popover__content css-sjj62m"
+                    id="popover-content-:r1v:"
+                    role="tooltip"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="chakra-popover__arrow-positioner css-0"
+                      data-popper-arrow=""
+                      style="position: absolute;"
+                    >
+                      <div
+                        class="chakra-popover__arrow css-0"
+                        data-popper-arrow-inner=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-popover__body css-1ews2c8"
+                      id="popover-body-:r1v:"
+                    >
+                      <div
+                        class="css-j7qwjs"
+                      >
+                        <div
+                          class="css-17k0wlp"
+                        >
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            20T
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            17T
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            D-BULL
+                          </p>
+                          <p
+                            class="chakra-text css-jtjur4"
+                          >
+                            FINISH
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </td>
+              <td
+                class="css-j7bde9"
+              >
+                <p
+                  aria-controls="popover-content-:r21:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="chakra-text css-gyvdtt"
+                  id="popover-trigger-:r21:"
+                >
+                  86
+                </p>
+                <div
+                  class="chakra-popover__popper css-1qq679y"
+                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+                >
+                  <section
+                    aria-describedby="popover-body-:r21:"
+                    class="chakra-popover__content css-sjj62m"
+                    id="popover-content-:r21:"
+                    role="tooltip"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="chakra-popover__arrow-positioner css-0"
+                      data-popper-arrow=""
+                      style="position: absolute;"
+                    >
+                      <div
+                        class="chakra-popover__arrow css-0"
+                        data-popper-arrow-inner=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-popover__body css-1ews2c8"
+                      id="popover-body-:r21:"
+                    >
+                      <div
+                        class="css-j7qwjs"
+                      >
+                        <div
+                          class="css-17k0wlp"
+                        >
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            D-BULL
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            18D
+                          </p>
+                          <p
+                            class="chakra-text css-jtjur4"
+                          >
+                            FINISH
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </td>
+              <td
+                class="css-j7bde9"
+              >
+                <p
+                  aria-controls="popover-content-:r23:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="chakra-text css-gyvdtt"
+                  id="popover-trigger-:r23:"
+                >
+                  153
+                </p>
+                <div
+                  class="chakra-popover__popper css-1qq679y"
+                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+                >
+                  <section
+                    aria-describedby="popover-body-:r23:"
+                    class="chakra-popover__content css-sjj62m"
+                    id="popover-content-:r23:"
+                    role="tooltip"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="chakra-popover__arrow-positioner css-0"
+                      data-popper-arrow=""
+                      style="position: absolute;"
+                    >
+                      <div
+                        class="chakra-popover__arrow css-0"
+                        data-popper-arrow-inner=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-popover__body css-1ews2c8"
+                      id="popover-body-:r23:"
+                    >
+                      <div
+                        class="css-j7qwjs"
+                      >
+                        <div
+                          class="css-17k0wlp"
+                        >
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            17T
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            17T
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            17T
+                          </p>
+                          <p
+                            class="chakra-text css-jtjur4"
+                          >
+                            FINISH
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </td>
+              <td
+                class="css-j7bde9"
+              >
+                <p
+                  aria-controls="popover-content-:r25:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="chakra-text css-gyvdtt"
+                  id="popover-trigger-:r25:"
+                >
+                  166
+                </p>
+                <div
+                  class="chakra-popover__popper css-1qq679y"
+                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+                >
+                  <section
+                    aria-describedby="popover-body-:r25:"
+                    class="chakra-popover__content css-sjj62m"
+                    id="popover-content-:r25:"
+                    role="tooltip"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="chakra-popover__arrow-positioner css-0"
+                      data-popper-arrow=""
+                      style="position: absolute;"
+                    >
+                      <div
+                        class="chakra-popover__arrow css-0"
+                        data-popper-arrow-inner=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-popover__body css-1ews2c8"
+                      id="popover-body-:r25:"
+                    >
+                      <div
+                        class="css-j7qwjs"
+                      >
+                        <div
+                          class="css-17k0wlp"
+                        >
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            D-BULL
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            D-BULL
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            20T
+                          </p>
+                        </div>
+                        <div
+                          class="css-17k0wlp"
+                        >
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            3D
+                          </p>
+                          <p
+                            class="chakra-text css-jtjur4"
+                          >
+                            FINISH
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </td>
+              <td
+                class="css-j7bde9"
+              >
+                <p
+                  aria-controls="popover-content-:r27:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="chakra-text css-gyvdtt"
+                  id="popover-trigger-:r27:"
+                >
+                  82
+                </p>
+                <div
+                  class="chakra-popover__popper css-1qq679y"
+                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+                >
+                  <section
+                    aria-describedby="popover-body-:r27:"
+                    class="chakra-popover__content css-sjj62m"
+                    id="popover-content-:r27:"
+                    role="tooltip"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="chakra-popover__arrow-positioner css-0"
+                      data-popper-arrow=""
+                      style="position: absolute;"
+                    >
+                      <div
+                        class="chakra-popover__arrow css-0"
+                        data-popper-arrow-inner=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-popover__body css-1ews2c8"
+                      id="popover-body-:r27:"
+                    >
+                      <div
+                        class="css-j7qwjs"
+                      >
+                        <div
+                          class="css-17k0wlp"
+                        >
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            D-BULL
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            16D
+                          </p>
+                          <p
+                            class="chakra-text css-jtjur4"
+                          >
+                            FINISH
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </td>
+              <td
+                class="css-j7bde9"
+              >
+                <p
+                  aria-controls="popover-content-:r29:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="chakra-text css-gyvdtt"
+                  id="popover-trigger-:r29:"
+                >
+                  63
+                </p>
+                <div
+                  class="chakra-popover__popper css-1qq679y"
+                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+                >
+                  <section
+                    aria-describedby="popover-body-:r29:"
+                    class="chakra-popover__content css-sjj62m"
+                    id="popover-content-:r29:"
+                    role="tooltip"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="chakra-popover__arrow-positioner css-0"
+                      data-popper-arrow=""
+                      style="position: absolute;"
+                    >
+                      <div
+                        class="chakra-popover__arrow css-0"
+                        data-popper-arrow-inner=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-popover__body css-1ews2c8"
+                      id="popover-body-:r29:"
+                    >
+                      <div
+                        class="css-j7qwjs"
+                      >
+                        <div
+                          class="css-17k0wlp"
+                        >
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            D-BULL
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            13
+                          </p>
+                          <p
+                            class="chakra-text css-jtjur4"
+                          >
+                            FINISH
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </td>
+            </tr>
+            <tr
+              class="css-1oahe7w"
+            >
+              <td
+                class="css-13x8h2m"
+                colspan="2"
+              >
+                Arrange
+              </td>
+              <td
+                class="css-13x8h2m"
+                colspan="2"
+              >
+                master
+                 / 
+                fat
+              </td>
+              <td
+                class="css-10ia4wo"
+                colspan="3"
+              >
+                <p
+                  class="chakra-text css-0"
+                >
+                  2021/01/01 01:01:01
+                </p>
+              </td>
+              <td
+                class="css-yaext0"
+              >
+                <button
+                  aria-label="delete history"
+                  class="chakra-button css-1jiezgg"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    fill="currentColor"
+                    focusable="false"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0 0h24v24H0z"
+                      fill="none"
+                    />
+                    <path
+                      d="M0 0h24v24H0V0z"
+                      fill="none"
+                    />
+                    <path
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12l1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                    />
+                  </svg>
+                </button>
+              </td>
+            </tr>
+            <tr
+              class="css-0"
+            >
+              <td
+                class="css-j7bde9"
+              >
+                <p
+                  aria-controls="popover-content-:r2b:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="chakra-text css-gyvdtt"
+                  id="popover-trigger-:r2b:"
+                >
+                  152
+                </p>
+                <div
+                  class="chakra-popover__popper css-1qq679y"
+                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+                >
+                  <section
+                    aria-describedby="popover-body-:r2b:"
+                    class="chakra-popover__content css-sjj62m"
+                    id="popover-content-:r2b:"
+                    role="tooltip"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="chakra-popover__arrow-positioner css-0"
+                      data-popper-arrow=""
+                      style="position: absolute;"
+                    >
+                      <div
+                        class="chakra-popover__arrow css-0"
+                        data-popper-arrow-inner=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-popover__body css-1ews2c8"
+                      id="popover-body-:r2b:"
+                    >
+                      <div
+                        class="css-j7qwjs"
+                      >
+                        <div
+                          class="css-17k0wlp"
+                        >
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            20T
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            20T
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            16D
+                          </p>
+                          <p
+                            class="chakra-text css-jtjur4"
+                          >
+                            FINISH
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </td>
+              <td
+                class="css-j7bde9"
+              >
+                <p
+                  aria-controls="popover-content-:r2d:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="chakra-text css-gyvdtt"
+                  id="popover-trigger-:r2d:"
+                >
+                  25
+                </p>
+                <div
+                  class="chakra-popover__popper css-1qq679y"
+                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+                >
+                  <section
+                    aria-describedby="popover-body-:r2d:"
+                    class="chakra-popover__content css-sjj62m"
+                    id="popover-content-:r2d:"
+                    role="tooltip"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="chakra-popover__arrow-positioner css-0"
+                      data-popper-arrow=""
+                      style="position: absolute;"
+                    >
+                      <div
+                        class="chakra-popover__arrow css-0"
+                        data-popper-arrow-inner=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-popover__body css-1ews2c8"
+                      id="popover-body-:r2d:"
+                    >
+                      <div
+                        class="css-j7qwjs"
+                      >
+                        <div
+                          class="css-17k0wlp"
+                        >
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            9
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            8D
+                          </p>
+                          <p
+                            class="chakra-text css-jtjur4"
+                          >
+                            FINISH
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </td>
+              <td
+                class="css-j7bde9"
+              >
+                <p
+                  aria-controls="popover-content-:r2f:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="chakra-text css-gyvdtt"
+                  id="popover-trigger-:r2f:"
+                >
+                  142
+                </p>
+                <div
+                  class="chakra-popover__popper css-1qq679y"
+                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+                >
+                  <section
+                    aria-describedby="popover-body-:r2f:"
+                    class="chakra-popover__content css-sjj62m"
+                    id="popover-content-:r2f:"
+                    role="tooltip"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="chakra-popover__arrow-positioner css-0"
+                      data-popper-arrow=""
+                      style="position: absolute;"
+                    >
+                      <div
+                        class="chakra-popover__arrow css-0"
+                        data-popper-arrow-inner=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-popover__body css-1ews2c8"
+                      id="popover-body-:r2f:"
+                    >
+                      <div
+                        class="css-j7qwjs"
+                      >
+                        <div
+                          class="css-17k0wlp"
+                        >
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            S-BULL
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            S-BULL
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            14T
+                          </p>
+                          <p
+                            class="chakra-text css-jtjur4"
+                          >
+                            FINISH
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </td>
+              <td
+                class="css-j7bde9"
+              >
+                <p
+                  aria-controls="popover-content-:r2h:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="chakra-text css-gyvdtt"
+                  id="popover-trigger-:r2h:"
+                >
+                  87
+                </p>
+                <div
+                  class="chakra-popover__popper css-1qq679y"
+                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+                >
+                  <section
+                    aria-describedby="popover-body-:r2h:"
+                    class="chakra-popover__content css-sjj62m"
+                    id="popover-content-:r2h:"
+                    role="tooltip"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="chakra-popover__arrow-positioner css-0"
+                      data-popper-arrow=""
+                      style="position: absolute;"
+                    >
+                      <div
+                        class="chakra-popover__arrow css-0"
+                        data-popper-arrow-inner=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-popover__body css-1ews2c8"
+                      id="popover-body-:r2h:"
+                    >
+                      <div
+                        class="css-j7qwjs"
+                      >
+                        <div
+                          class="css-17k0wlp"
+                        >
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            19T
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            15D
+                          </p>
+                          <p
+                            class="chakra-text css-jtjur4"
+                          >
+                            FINISH
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </td>
+              <td
+                class="css-j7bde9"
+              >
+                <p
+                  aria-controls="popover-content-:r2j:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="chakra-text css-gyvdtt"
+                  id="popover-trigger-:r2j:"
+                >
+                  154
+                </p>
+                <div
+                  class="chakra-popover__popper css-1qq679y"
+                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+                >
+                  <section
+                    aria-describedby="popover-body-:r2j:"
+                    class="chakra-popover__content css-sjj62m"
+                    id="popover-content-:r2j:"
+                    role="tooltip"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="chakra-popover__arrow-positioner css-0"
+                      data-popper-arrow=""
+                      style="position: absolute;"
+                    >
+                      <div
+                        class="chakra-popover__arrow css-0"
+                        data-popper-arrow-inner=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-popover__body css-1ews2c8"
+                      id="popover-body-:r2j:"
+                    >
+                      <div
+                        class="css-j7qwjs"
+                      >
+                        <div
+                          class="css-17k0wlp"
+                        >
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            S-BULL
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            S-BULL
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            18T
+                          </p>
+                          <p
+                            class="chakra-text css-jtjur4"
+                          >
+                            FINISH
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </td>
+              <td
+                class="css-j7bde9"
+              >
+                <p
+                  aria-controls="popover-content-:r2l:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="chakra-text css-gyvdtt"
+                  id="popover-trigger-:r2l:"
+                >
+                  123
+                </p>
+                <div
+                  class="chakra-popover__popper css-1qq679y"
+                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+                >
+                  <section
+                    aria-describedby="popover-body-:r2l:"
+                    class="chakra-popover__content css-sjj62m"
+                    id="popover-content-:r2l:"
+                    role="tooltip"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="chakra-popover__arrow-positioner css-0"
+                      data-popper-arrow=""
+                      style="position: absolute;"
+                    >
+                      <div
+                        class="chakra-popover__arrow css-0"
+                        data-popper-arrow-inner=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-popover__body css-1ews2c8"
+                      id="popover-body-:r2l:"
+                    >
+                      <div
+                        class="css-j7qwjs"
+                      >
+                        <div
+                          class="css-17k0wlp"
+                        >
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            D-BULL
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            19T
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            8D
+                          </p>
+                          <p
+                            class="chakra-text css-jtjur4"
+                          >
+                            FINISH
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </td>
+              <td
+                class="css-j7bde9"
+              >
+                <p
+                  aria-controls="popover-content-:r2n:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="chakra-text css-gyvdtt"
+                  id="popover-trigger-:r2n:"
+                >
+                  67
+                </p>
+                <div
+                  class="chakra-popover__popper css-1qq679y"
+                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+                >
+                  <section
+                    aria-describedby="popover-body-:r2n:"
+                    class="chakra-popover__content css-sjj62m"
+                    id="popover-content-:r2n:"
+                    role="tooltip"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="chakra-popover__arrow-positioner css-0"
+                      data-popper-arrow=""
+                      style="position: absolute;"
+                    >
+                      <div
+                        class="chakra-popover__arrow css-0"
+                        data-popper-arrow-inner=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-popover__body css-1ews2c8"
+                      id="popover-body-:r2n:"
+                    >
+                      <div
+                        class="css-j7qwjs"
+                      >
+                        <div
+                          class="css-17k0wlp"
+                        >
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            17
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            S-BULL
+                          </p>
+                          <p
+                            class="chakra-text css-jtjur4"
+                          >
+                            FINISH
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </td>
+              <td
+                class="css-j7bde9"
+              >
+                <p
+                  aria-controls="popover-content-:r2p:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="chakra-text css-gyvdtt"
+                  id="popover-trigger-:r2p:"
+                >
+                  14
+                </p>
+                <div
+                  class="chakra-popover__popper css-1qq679y"
+                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+                >
+                  <section
+                    aria-describedby="popover-body-:r2p:"
+                    class="chakra-popover__content css-sjj62m"
+                    id="popover-content-:r2p:"
+                    role="tooltip"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="chakra-popover__arrow-positioner css-0"
+                      data-popper-arrow=""
+                      style="position: absolute;"
+                    >
+                      <div
+                        class="chakra-popover__arrow css-0"
+                        data-popper-arrow-inner=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-popover__body css-1ews2c8"
+                      id="popover-body-:r2p:"
+                    >
+                      <div
+                        class="css-j7qwjs"
+                      >
+                        <div
+                          class="css-17k0wlp"
+                        >
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            7D
+                          </p>
+                          <p
+                            class="chakra-text css-jtjur4"
+                          >
+                            FINISH
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </td>
+            </tr>
+            <tr
+              class="css-1oahe7w"
+            >
+              <td
+                class="css-13x8h2m"
+                colspan="2"
+              >
+                Arrange
+              </td>
+              <td
+                class="css-13x8h2m"
+                colspan="2"
+              >
+                double
+                 / 
+                fat
+              </td>
+              <td
+                class="css-10ia4wo"
+                colspan="3"
+              >
+                <p
+                  class="chakra-text css-0"
+                >
+                  2021/01/01 01:01:01
+                </p>
+              </td>
+              <td
+                class="css-yaext0"
+              >
+                <button
+                  aria-label="delete history"
+                  class="chakra-button css-1jiezgg"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    fill="currentColor"
+                    focusable="false"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0 0h24v24H0z"
+                      fill="none"
+                    />
+                    <path
+                      d="M0 0h24v24H0V0z"
+                      fill="none"
+                    />
+                    <path
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12l1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                    />
+                  </svg>
+                </button>
+              </td>
+            </tr>
+            <tr
+              class="css-0"
+            >
+              <td
+                class="css-j7bde9"
+              >
+                <p
+                  aria-controls="popover-content-:r2r:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="chakra-text css-gyvdtt"
+                  id="popover-trigger-:r2r:"
+                >
+                  150
+                </p>
+                <div
+                  class="chakra-popover__popper css-1qq679y"
+                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+                >
+                  <section
+                    aria-describedby="popover-body-:r2r:"
+                    class="chakra-popover__content css-sjj62m"
+                    id="popover-content-:r2r:"
+                    role="tooltip"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="chakra-popover__arrow-positioner css-0"
+                      data-popper-arrow=""
+                      style="position: absolute;"
+                    >
+                      <div
+                        class="chakra-popover__arrow css-0"
+                        data-popper-arrow-inner=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-popover__body css-1ews2c8"
+                      id="popover-body-:r2r:"
+                    >
+                      <div
+                        class="css-j7qwjs"
+                      >
+                        <div
+                          class="css-17k0wlp"
+                        >
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            20T
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            20T
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            15D
+                          </p>
+                          <p
+                            class="chakra-text css-jtjur4"
+                          >
+                            FINISH
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </td>
+              <td
+                class="css-j7bde9"
+              >
+                <p
+                  aria-controls="popover-content-:r2t:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="chakra-text css-gyvdtt"
+                  id="popover-trigger-:r2t:"
+                >
+                  26
+                </p>
+                <div
+                  class="chakra-popover__popper css-1qq679y"
+                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+                >
+                  <section
+                    aria-describedby="popover-body-:r2t:"
+                    class="chakra-popover__content css-sjj62m"
+                    id="popover-content-:r2t:"
+                    role="tooltip"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="chakra-popover__arrow-positioner css-0"
+                      data-popper-arrow=""
+                      style="position: absolute;"
+                    >
+                      <div
+                        class="chakra-popover__arrow css-0"
+                        data-popper-arrow-inner=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-popover__body css-1ews2c8"
+                      id="popover-body-:r2t:"
+                    >
+                      <div
+                        class="css-j7qwjs"
+                      >
+                        <div
+                          class="css-17k0wlp"
+                        >
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            10
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            8D
+                          </p>
+                          <p
+                            class="chakra-text css-jtjur4"
+                          >
+                            FINISH
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </td>
+              <td
+                class="css-j7bde9"
+              >
+                <p
+                  aria-controls="popover-content-:r2v:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="chakra-text css-gyvdtt"
+                  id="popover-trigger-:r2v:"
+                >
+                  140
+                </p>
+                <div
+                  class="chakra-popover__popper css-1qq679y"
+                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+                >
+                  <section
+                    aria-describedby="popover-body-:r2v:"
+                    class="chakra-popover__content css-sjj62m"
+                    id="popover-content-:r2v:"
+                    role="tooltip"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="chakra-popover__arrow-positioner css-0"
+                      data-popper-arrow=""
+                      style="position: absolute;"
+                    >
+                      <div
+                        class="chakra-popover__arrow css-0"
+                        data-popper-arrow-inner=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-popover__body css-1ews2c8"
+                      id="popover-body-:r2v:"
+                    >
+                      <div
+                        class="css-j7qwjs"
+                      >
+                        <div
+                          class="css-17k0wlp"
+                        >
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            S-BULL
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            S-BULL
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            20D
+                          </p>
+                          <p
+                            class="chakra-text css-jtjur4"
+                          >
+                            FINISH
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </td>
+              <td
+                class="css-j7bde9"
+              >
+                <p
+                  aria-controls="popover-content-:r31:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="chakra-text css-gyvdtt"
+                  id="popover-trigger-:r31:"
+                >
+                  82
+                </p>
+                <div
+                  class="chakra-popover__popper css-1qq679y"
+                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+                >
+                  <section
+                    aria-describedby="popover-body-:r31:"
+                    class="chakra-popover__content css-sjj62m"
+                    id="popover-content-:r31:"
+                    role="tooltip"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="chakra-popover__arrow-positioner css-0"
+                      data-popper-arrow=""
+                      style="position: absolute;"
+                    >
+                      <div
+                        class="chakra-popover__arrow css-0"
+                        data-popper-arrow-inner=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-popover__body css-1ews2c8"
+                      id="popover-body-:r31:"
+                    >
+                      <div
+                        class="css-j7qwjs"
+                      >
+                        <div
+                          class="css-17k0wlp"
+                        >
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            S-BULL
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            16D
+                          </p>
+                          <p
+                            class="chakra-text css-jtjur4"
+                          >
+                            FINISH
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </td>
+              <td
+                class="css-j7bde9"
+              >
+                <p
+                  aria-controls="popover-content-:r33:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="chakra-text css-gyvdtt"
+                  id="popover-trigger-:r33:"
+                >
+                  10
+                </p>
+                <div
+                  class="chakra-popover__popper css-1qq679y"
+                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+                >
+                  <section
+                    aria-describedby="popover-body-:r33:"
+                    class="chakra-popover__content css-sjj62m"
+                    id="popover-content-:r33:"
+                    role="tooltip"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="chakra-popover__arrow-positioner css-0"
+                      data-popper-arrow=""
+                      style="position: absolute;"
+                    >
+                      <div
+                        class="chakra-popover__arrow css-0"
+                        data-popper-arrow-inner=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-popover__body css-1ews2c8"
+                      id="popover-body-:r33:"
+                    >
+                      <div
+                        class="css-j7qwjs"
+                      >
+                        <div
+                          class="css-17k0wlp"
+                        >
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            5D
+                          </p>
+                          <p
+                            class="chakra-text css-jtjur4"
+                          >
+                            FINISH
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </td>
+              <td
+                class="css-j7bde9"
+              >
+                <p
+                  aria-controls="popover-content-:r35:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="chakra-text css-gyvdtt"
+                  id="popover-trigger-:r35:"
+                >
+                  120
+                </p>
+                <div
+                  class="chakra-popover__popper css-1qq679y"
+                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+                >
+                  <section
+                    aria-describedby="popover-body-:r35:"
+                    class="chakra-popover__content css-sjj62m"
+                    id="popover-content-:r35:"
+                    role="tooltip"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="chakra-popover__arrow-positioner css-0"
+                      data-popper-arrow=""
+                      style="position: absolute;"
+                    >
+                      <div
+                        class="chakra-popover__arrow css-0"
+                        data-popper-arrow-inner=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-popover__body css-1ews2c8"
+                      id="popover-body-:r35:"
+                    >
+                      <div
+                        class="css-j7qwjs"
+                      >
+                        <div
+                          class="css-17k0wlp"
+                        >
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            D-BULL
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            S-BULL
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            10D
+                          </p>
+                          <p
+                            class="chakra-text css-jtjur4"
+                          >
+                            FINISH
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </td>
+              <td
+                class="css-j7bde9"
+              >
+                <p
+                  aria-controls="popover-content-:r37:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="chakra-text css-gyvdtt"
+                  id="popover-trigger-:r37:"
+                >
+                  68
+                </p>
+                <div
+                  class="chakra-popover__popper css-1qq679y"
+                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+                >
+                  <section
+                    aria-describedby="popover-body-:r37:"
+                    class="chakra-popover__content css-sjj62m"
+                    id="popover-content-:r37:"
+                    role="tooltip"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="chakra-popover__arrow-positioner css-0"
+                      data-popper-arrow=""
+                      style="position: absolute;"
+                    >
+                      <div
+                        class="chakra-popover__arrow css-0"
+                        data-popper-arrow-inner=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-popover__body css-1ews2c8"
+                      id="popover-body-:r37:"
+                    >
+                      <div
+                        class="css-j7qwjs"
+                      >
+                        <div
+                          class="css-17k0wlp"
+                        >
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            14D
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            20D
+                          </p>
+                          <p
+                            class="chakra-text css-jtjur4"
+                          >
+                            FINISH
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </td>
+              <td
+                class="css-j7bde9"
+              >
+                <p
+                  aria-controls="popover-content-:r39:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="chakra-text css-gyvdtt"
+                  id="popover-trigger-:r39:"
+                >
+                  16
+                </p>
+                <div
+                  class="chakra-popover__popper css-1qq679y"
+                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+                >
+                  <section
+                    aria-describedby="popover-body-:r39:"
+                    class="chakra-popover__content css-sjj62m"
+                    id="popover-content-:r39:"
+                    role="tooltip"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="chakra-popover__arrow-positioner css-0"
+                      data-popper-arrow=""
+                      style="position: absolute;"
+                    >
+                      <div
+                        class="chakra-popover__arrow css-0"
+                        data-popper-arrow-inner=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-popover__body css-1ews2c8"
+                      id="popover-body-:r39:"
+                    >
+                      <div
+                        class="css-j7qwjs"
+                      >
+                        <div
+                          class="css-17k0wlp"
+                        >
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            8D
+                          </p>
+                          <p
+                            class="chakra-text css-jtjur4"
+                          >
+                            FINISH
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <span
+    hidden=""
+    id="__chakra_env"
+  />
+</div>
+`;
+
+exports[`single out fat bull 1`] = `
+<div>
+  <div
+    class="css-18936vg"
+  >
+    <div
+      class="css-1i2407o"
+    >
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1hmbtly"
+        >
+          out options
+        </p>
+        <div
+          class="chakra-radio-group css-0"
+          role="radiogroup"
+        >
+          <div
+            class="css-1azotaz"
+          >
+            <label
+              class="chakra-radio css-1cqh9jq"
+              data-checked=""
+            >
+              <input
+                checked=""
+                class="chakra-radio__input"
+                id="radio-:r2:"
+                name="radio-:r1:"
+                style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
+                type="radio"
+                value="single"
+              />
+              <span
+                aria-hidden="true"
+                aria-label="single out"
+                class="chakra-radio__control css-1qjgi8f"
+                data-checked=""
+                data-focus=""
+              />
+              <span
+                class="chakra-radio__label css-jybt17"
+                data-checked=""
+              >
+                Single Out
+              </span>
+            </label>
+            <label
+              class="chakra-radio css-1cqh9jq"
+            >
+              <input
+                class="chakra-radio__input"
+                id="radio-:r3:"
+                name="radio-:r1:"
+                style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
+                type="radio"
+                value="double"
+              />
+              <span
+                aria-hidden="true"
+                aria-label="double out"
+                class="chakra-radio__control css-1qjgi8f"
+              />
+              <span
+                class="chakra-radio__label css-jybt17"
+              >
+                Double Out
+              </span>
+            </label>
+            <label
+              class="chakra-radio css-1cqh9jq"
+            >
+              <input
+                class="chakra-radio__input"
+                id="radio-:r4:"
+                name="radio-:r1:"
+                style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
+                type="radio"
+                value="master"
+              />
+              <span
+                aria-hidden="true"
+                aria-label="master out"
+                class="chakra-radio__control css-1qjgi8f"
+              />
+              <span
+                class="chakra-radio__label css-jybt17"
+              >
+                Master Out
+              </span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1hmbtly"
+        >
+          bull options
+        </p>
+        <div
+          class="css-1k9efnl"
+        >
+          <p
+            class="chakra-text css-xim7xt"
+          >
+            Fat Bull
+          </p>
+          <label
+            class="chakra-switch css-1cuslds"
+          >
+            <input
+              class="chakra-switch__input"
+              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
+              type="checkbox"
+              value=""
+            />
+            <span
+              aria-hidden="true"
+              class="chakra-switch__track css-p27qcy"
+            >
+              <span
+                class="chakra-switch__thumb css-7roig"
+              />
+            </span>
+          </label>
+          <p
+            class="chakra-text css-xim7xt"
+          >
+            Separate Bull
+          </p>
+        </div>
+      </div>
+      <div
+        class="chakra-select__wrapper css-42b2qy"
+      >
+        <select
+          class="chakra-select css-1hax2g2"
+        >
+          <option
+            value="167"
+          >
+            167
+          </option>
+          <option
+            value="166"
+          >
+            166
+          </option>
+          <option
+            value="161"
+          >
+            161
+          </option>
+          <option
+            value="153"
+          >
+            153
+          </option>
+          <option
+            value="86"
+          >
+            86
+          </option>
+          <option
+            value="82"
+          >
+            82
+          </option>
+          <option
+            value="63"
+          >
+            63
+          </option>
+          <option
+            value="28"
+          >
+            28
+          </option>
+        </select>
+        <div
+          class="chakra-select__icon-wrapper css-cymxv7"
+        >
+          <svg
+            aria-hidden="true"
+            class="chakra-select__icon"
+            focusable="false"
+            role="presentation"
+            style="width: 1em; height: 1em; color: currentColor;"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+              fill="currentColor"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        class="chakra-table__container css-zipzvv"
+      >
+        <table
+          class="chakra-table css-5605sr"
+        >
+          <tbody
+            class="css-0"
+          >
+            <tr
+              class="css-0"
+            >
+              <td
+                class="css-1539mg0"
+              >
+                <p
+                  class="chakra-text css-xim7xt"
+                >
+                  20T
+                </p>
+              </td>
+              <td
+                class="css-1539mg0"
+              >
+                <p
+                  class="chakra-text css-xim7xt"
+                >
+                  19T
+                </p>
+              </td>
+              <td
+                class="css-1539mg0"
+              >
+                <p
+                  class="chakra-text css-xim7xt"
+                >
+                  D-BULL
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div
+      aria-label="game history"
+      class="css-0"
+    >
+      <h3
+        class="chakra-heading css-1slo9hi"
+      >
+        Game History
+      </h3>
+      <div
+        class="chakra-table__container css-zipzvv"
+      >
+        <table
+          class="chakra-table css-d0hqo3"
+        >
+          <tbody
+            class="css-0"
+          >
+            <tr
+              class="css-1oahe7w"
+            >
+              <td
+                class="css-13x8h2m"
+                colspan="2"
+              >
+                Arrange
+              </td>
+              <td
+                class="css-13x8h2m"
+                colspan="2"
+              >
+                single
+                 / 
+                fat
+              </td>
+              <td
+                class="css-10ia4wo"
+                colspan="3"
+              >
+                <p
+                  class="chakra-text css-0"
+                >
+                  2021/01/01 01:01:01
+                </p>
+              </td>
+              <td
+                class="css-yaext0"
+              >
+                <button
+                  aria-label="delete history"
+                  class="chakra-button css-1jiezgg"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    fill="currentColor"
+                    focusable="false"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0 0h24v24H0z"
+                      fill="none"
+                    />
+                    <path
+                      d="M0 0h24v24H0V0z"
+                      fill="none"
+                    />
+                    <path
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12l1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                    />
+                  </svg>
+                </button>
+              </td>
+            </tr>
+            <tr
+              class="css-0"
+            >
+              <td
+                class="css-j7bde9"
+              >
+                <p
+                  aria-controls="popover-content-:r6:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="chakra-text css-gyvdtt"
+                  id="popover-trigger-:r6:"
+                >
+                  167
+                </p>
+                <div
+                  class="chakra-popover__popper css-1qq679y"
+                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+                >
+                  <section
+                    aria-describedby="popover-body-:r6:"
+                    class="chakra-popover__content css-sjj62m"
+                    id="popover-content-:r6:"
+                    role="tooltip"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="chakra-popover__arrow-positioner css-0"
+                      data-popper-arrow=""
+                      style="position: absolute;"
+                    >
+                      <div
+                        class="chakra-popover__arrow css-0"
+                        data-popper-arrow-inner=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-popover__body css-1ews2c8"
+                      id="popover-body-:r6:"
+                    >
+                      <div
+                        class="css-j7qwjs"
+                      >
+                        <div
+                          class="css-17k0wlp"
+                        >
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            20T
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            19T
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            D-BULL
+                          </p>
+                          <p
+                            class="chakra-text css-jtjur4"
+                          >
+                            FINISH
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </td>
+              <td
+                class="css-j7bde9"
+              >
+                <p
+                  aria-controls="popover-content-:r8:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="chakra-text css-gyvdtt"
+                  id="popover-trigger-:r8:"
+                >
+                  28
+                </p>
+                <div
+                  class="chakra-popover__popper css-1qq679y"
+                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+                >
+                  <section
+                    aria-describedby="popover-body-:r8:"
+                    class="chakra-popover__content css-sjj62m"
+                    id="popover-content-:r8:"
+                    role="tooltip"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="chakra-popover__arrow-positioner css-0"
+                      data-popper-arrow=""
+                      style="position: absolute;"
+                    >
+                      <div
+                        class="chakra-popover__arrow css-0"
+                        data-popper-arrow-inner=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-popover__body css-1ews2c8"
+                      id="popover-body-:r8:"
+                    >
+                      <div
+                        class="css-j7qwjs"
+                      >
+                        <div
+                          class="css-17k0wlp"
+                        >
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            14D
+                          </p>
+                          <p
+                            class="chakra-text css-jtjur4"
+                          >
+                            FINISH
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </td>
+              <td
+                class="css-j7bde9"
+              >
+                <p
+                  aria-controls="popover-content-:ra:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="chakra-text css-gyvdtt"
+                  id="popover-trigger-:ra:"
+                >
+                  161
+                </p>
+                <div
+                  class="chakra-popover__popper css-1qq679y"
+                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+                >
+                  <section
+                    aria-describedby="popover-body-:ra:"
+                    class="chakra-popover__content css-sjj62m"
+                    id="popover-content-:ra:"
+                    role="tooltip"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="chakra-popover__arrow-positioner css-0"
+                      data-popper-arrow=""
+                      style="position: absolute;"
+                    >
+                      <div
+                        class="chakra-popover__arrow css-0"
+                        data-popper-arrow-inner=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-popover__body css-1ews2c8"
+                      id="popover-body-:ra:"
+                    >
+                      <div
+                        class="css-j7qwjs"
+                      >
+                        <div
+                          class="css-17k0wlp"
+                        >
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            20T
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            17T
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            D-BULL
+                          </p>
+                          <p
+                            class="chakra-text css-jtjur4"
+                          >
+                            FINISH
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </td>
+              <td
+                class="css-j7bde9"
+              >
+                <p
+                  aria-controls="popover-content-:rc:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="chakra-text css-gyvdtt"
+                  id="popover-trigger-:rc:"
+                >
+                  86
+                </p>
+                <div
+                  class="chakra-popover__popper css-1qq679y"
+                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+                >
+                  <section
+                    aria-describedby="popover-body-:rc:"
+                    class="chakra-popover__content css-sjj62m"
+                    id="popover-content-:rc:"
+                    role="tooltip"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="chakra-popover__arrow-positioner css-0"
+                      data-popper-arrow=""
+                      style="position: absolute;"
+                    >
+                      <div
+                        class="chakra-popover__arrow css-0"
+                        data-popper-arrow-inner=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-popover__body css-1ews2c8"
+                      id="popover-body-:rc:"
+                    >
+                      <div
+                        class="css-j7qwjs"
+                      >
+                        <div
+                          class="css-17k0wlp"
+                        >
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            D-BULL
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            18D
+                          </p>
+                          <p
+                            class="chakra-text css-jtjur4"
+                          >
+                            FINISH
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </td>
+              <td
+                class="css-j7bde9"
+              >
+                <p
+                  aria-controls="popover-content-:re:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="chakra-text css-gyvdtt"
+                  id="popover-trigger-:re:"
+                >
+                  153
+                </p>
+                <div
+                  class="chakra-popover__popper css-1qq679y"
+                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+                >
+                  <section
+                    aria-describedby="popover-body-:re:"
+                    class="chakra-popover__content css-sjj62m"
+                    id="popover-content-:re:"
+                    role="tooltip"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="chakra-popover__arrow-positioner css-0"
+                      data-popper-arrow=""
+                      style="position: absolute;"
+                    >
+                      <div
+                        class="chakra-popover__arrow css-0"
+                        data-popper-arrow-inner=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-popover__body css-1ews2c8"
+                      id="popover-body-:re:"
+                    >
+                      <div
+                        class="css-j7qwjs"
+                      >
+                        <div
+                          class="css-17k0wlp"
+                        >
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            17T
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            17T
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            17T
+                          </p>
+                          <p
+                            class="chakra-text css-jtjur4"
+                          >
+                            FINISH
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </td>
+              <td
+                class="css-j7bde9"
+              >
+                <p
+                  aria-controls="popover-content-:rg:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="chakra-text css-gyvdtt"
+                  id="popover-trigger-:rg:"
+                >
+                  166
+                </p>
+                <div
+                  class="chakra-popover__popper css-1qq679y"
+                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+                >
+                  <section
+                    aria-describedby="popover-body-:rg:"
+                    class="chakra-popover__content css-sjj62m"
+                    id="popover-content-:rg:"
+                    role="tooltip"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="chakra-popover__arrow-positioner css-0"
+                      data-popper-arrow=""
+                      style="position: absolute;"
+                    >
+                      <div
+                        class="chakra-popover__arrow css-0"
+                        data-popper-arrow-inner=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-popover__body css-1ews2c8"
+                      id="popover-body-:rg:"
+                    >
+                      <div
+                        class="css-j7qwjs"
+                      >
+                        <div
+                          class="css-17k0wlp"
+                        >
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            D-BULL
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            D-BULL
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            20T
+                          </p>
+                        </div>
+                        <div
+                          class="css-17k0wlp"
+                        >
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            3D
+                          </p>
+                          <p
+                            class="chakra-text css-jtjur4"
+                          >
+                            FINISH
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </td>
+              <td
+                class="css-j7bde9"
+              >
+                <p
+                  aria-controls="popover-content-:ri:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="chakra-text css-gyvdtt"
+                  id="popover-trigger-:ri:"
+                >
+                  82
+                </p>
+                <div
+                  class="chakra-popover__popper css-1qq679y"
+                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+                >
+                  <section
+                    aria-describedby="popover-body-:ri:"
+                    class="chakra-popover__content css-sjj62m"
+                    id="popover-content-:ri:"
+                    role="tooltip"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="chakra-popover__arrow-positioner css-0"
+                      data-popper-arrow=""
+                      style="position: absolute;"
+                    >
+                      <div
+                        class="chakra-popover__arrow css-0"
+                        data-popper-arrow-inner=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-popover__body css-1ews2c8"
+                      id="popover-body-:ri:"
+                    >
+                      <div
+                        class="css-j7qwjs"
+                      >
+                        <div
+                          class="css-17k0wlp"
+                        >
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            D-BULL
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            16D
+                          </p>
+                          <p
+                            class="chakra-text css-jtjur4"
+                          >
+                            FINISH
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </td>
+              <td
+                class="css-j7bde9"
+              >
+                <p
+                  aria-controls="popover-content-:rk:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="chakra-text css-gyvdtt"
+                  id="popover-trigger-:rk:"
+                >
+                  63
+                </p>
+                <div
+                  class="chakra-popover__popper css-1qq679y"
+                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+                >
+                  <section
+                    aria-describedby="popover-body-:rk:"
+                    class="chakra-popover__content css-sjj62m"
+                    id="popover-content-:rk:"
+                    role="tooltip"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="chakra-popover__arrow-positioner css-0"
+                      data-popper-arrow=""
+                      style="position: absolute;"
+                    >
+                      <div
+                        class="chakra-popover__arrow css-0"
+                        data-popper-arrow-inner=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-popover__body css-1ews2c8"
+                      id="popover-body-:rk:"
+                    >
+                      <div
+                        class="css-j7qwjs"
+                      >
+                        <div
+                          class="css-17k0wlp"
+                        >
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            D-BULL
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            13
+                          </p>
+                          <p
+                            class="chakra-text css-jtjur4"
+                          >
+                            FINISH
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </td>
+            </tr>
+            <tr
+              class="css-1oahe7w"
+            >
+              <td
+                class="css-13x8h2m"
+                colspan="2"
+              >
+                Arrange
+              </td>
+              <td
+                class="css-13x8h2m"
+                colspan="2"
+              >
+                master
+                 / 
+                fat
+              </td>
+              <td
+                class="css-10ia4wo"
+                colspan="3"
+              >
+                <p
+                  class="chakra-text css-0"
+                >
+                  2021/01/01 01:01:01
+                </p>
+              </td>
+              <td
+                class="css-yaext0"
+              >
+                <button
+                  aria-label="delete history"
+                  class="chakra-button css-1jiezgg"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    fill="currentColor"
+                    focusable="false"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0 0h24v24H0z"
+                      fill="none"
+                    />
+                    <path
+                      d="M0 0h24v24H0V0z"
+                      fill="none"
+                    />
+                    <path
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12l1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                    />
+                  </svg>
+                </button>
+              </td>
+            </tr>
+            <tr
+              class="css-0"
+            >
+              <td
+                class="css-j7bde9"
+              >
+                <p
+                  aria-controls="popover-content-:rm:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="chakra-text css-gyvdtt"
+                  id="popover-trigger-:rm:"
+                >
+                  152
+                </p>
+                <div
+                  class="chakra-popover__popper css-1qq679y"
+                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+                >
+                  <section
+                    aria-describedby="popover-body-:rm:"
+                    class="chakra-popover__content css-sjj62m"
+                    id="popover-content-:rm:"
+                    role="tooltip"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="chakra-popover__arrow-positioner css-0"
+                      data-popper-arrow=""
+                      style="position: absolute;"
+                    >
+                      <div
+                        class="chakra-popover__arrow css-0"
+                        data-popper-arrow-inner=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-popover__body css-1ews2c8"
+                      id="popover-body-:rm:"
+                    >
+                      <div
+                        class="css-j7qwjs"
+                      >
+                        <div
+                          class="css-17k0wlp"
+                        >
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            20T
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            20T
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            16D
+                          </p>
+                          <p
+                            class="chakra-text css-jtjur4"
+                          >
+                            FINISH
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </td>
+              <td
+                class="css-j7bde9"
+              >
+                <p
+                  aria-controls="popover-content-:ro:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="chakra-text css-gyvdtt"
+                  id="popover-trigger-:ro:"
+                >
+                  25
+                </p>
+                <div
+                  class="chakra-popover__popper css-1qq679y"
+                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+                >
+                  <section
+                    aria-describedby="popover-body-:ro:"
+                    class="chakra-popover__content css-sjj62m"
+                    id="popover-content-:ro:"
+                    role="tooltip"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="chakra-popover__arrow-positioner css-0"
+                      data-popper-arrow=""
+                      style="position: absolute;"
+                    >
+                      <div
+                        class="chakra-popover__arrow css-0"
+                        data-popper-arrow-inner=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-popover__body css-1ews2c8"
+                      id="popover-body-:ro:"
+                    >
+                      <div
+                        class="css-j7qwjs"
+                      >
+                        <div
+                          class="css-17k0wlp"
+                        >
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            9
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            8D
+                          </p>
+                          <p
+                            class="chakra-text css-jtjur4"
+                          >
+                            FINISH
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </td>
+              <td
+                class="css-j7bde9"
+              >
+                <p
+                  aria-controls="popover-content-:rq:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="chakra-text css-gyvdtt"
+                  id="popover-trigger-:rq:"
+                >
+                  142
+                </p>
+                <div
+                  class="chakra-popover__popper css-1qq679y"
+                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+                >
+                  <section
+                    aria-describedby="popover-body-:rq:"
+                    class="chakra-popover__content css-sjj62m"
+                    id="popover-content-:rq:"
+                    role="tooltip"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="chakra-popover__arrow-positioner css-0"
+                      data-popper-arrow=""
+                      style="position: absolute;"
+                    >
+                      <div
+                        class="chakra-popover__arrow css-0"
+                        data-popper-arrow-inner=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-popover__body css-1ews2c8"
+                      id="popover-body-:rq:"
+                    >
+                      <div
+                        class="css-j7qwjs"
+                      >
+                        <div
+                          class="css-17k0wlp"
+                        >
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            S-BULL
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            S-BULL
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            14T
+                          </p>
+                          <p
+                            class="chakra-text css-jtjur4"
+                          >
+                            FINISH
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </td>
+              <td
+                class="css-j7bde9"
+              >
+                <p
+                  aria-controls="popover-content-:rs:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="chakra-text css-gyvdtt"
+                  id="popover-trigger-:rs:"
+                >
+                  87
+                </p>
+                <div
+                  class="chakra-popover__popper css-1qq679y"
+                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+                >
+                  <section
+                    aria-describedby="popover-body-:rs:"
+                    class="chakra-popover__content css-sjj62m"
+                    id="popover-content-:rs:"
+                    role="tooltip"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="chakra-popover__arrow-positioner css-0"
+                      data-popper-arrow=""
+                      style="position: absolute;"
+                    >
+                      <div
+                        class="chakra-popover__arrow css-0"
+                        data-popper-arrow-inner=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-popover__body css-1ews2c8"
+                      id="popover-body-:rs:"
+                    >
+                      <div
+                        class="css-j7qwjs"
+                      >
+                        <div
+                          class="css-17k0wlp"
+                        >
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            19T
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            15D
+                          </p>
+                          <p
+                            class="chakra-text css-jtjur4"
+                          >
+                            FINISH
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </td>
+              <td
+                class="css-j7bde9"
+              >
+                <p
+                  aria-controls="popover-content-:ru:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="chakra-text css-gyvdtt"
+                  id="popover-trigger-:ru:"
+                >
+                  154
+                </p>
+                <div
+                  class="chakra-popover__popper css-1qq679y"
+                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+                >
+                  <section
+                    aria-describedby="popover-body-:ru:"
+                    class="chakra-popover__content css-sjj62m"
+                    id="popover-content-:ru:"
+                    role="tooltip"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="chakra-popover__arrow-positioner css-0"
+                      data-popper-arrow=""
+                      style="position: absolute;"
+                    >
+                      <div
+                        class="chakra-popover__arrow css-0"
+                        data-popper-arrow-inner=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-popover__body css-1ews2c8"
+                      id="popover-body-:ru:"
+                    >
+                      <div
+                        class="css-j7qwjs"
+                      >
+                        <div
+                          class="css-17k0wlp"
+                        >
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            S-BULL
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            S-BULL
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            18T
+                          </p>
+                          <p
+                            class="chakra-text css-jtjur4"
+                          >
+                            FINISH
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </td>
+              <td
+                class="css-j7bde9"
+              >
+                <p
+                  aria-controls="popover-content-:r10:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="chakra-text css-gyvdtt"
+                  id="popover-trigger-:r10:"
+                >
+                  123
+                </p>
+                <div
+                  class="chakra-popover__popper css-1qq679y"
+                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+                >
+                  <section
+                    aria-describedby="popover-body-:r10:"
+                    class="chakra-popover__content css-sjj62m"
+                    id="popover-content-:r10:"
+                    role="tooltip"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="chakra-popover__arrow-positioner css-0"
+                      data-popper-arrow=""
+                      style="position: absolute;"
+                    >
+                      <div
+                        class="chakra-popover__arrow css-0"
+                        data-popper-arrow-inner=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-popover__body css-1ews2c8"
+                      id="popover-body-:r10:"
+                    >
+                      <div
+                        class="css-j7qwjs"
+                      >
+                        <div
+                          class="css-17k0wlp"
+                        >
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            D-BULL
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            19T
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            8D
+                          </p>
+                          <p
+                            class="chakra-text css-jtjur4"
+                          >
+                            FINISH
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </td>
+              <td
+                class="css-j7bde9"
+              >
+                <p
+                  aria-controls="popover-content-:r12:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="chakra-text css-gyvdtt"
+                  id="popover-trigger-:r12:"
+                >
+                  67
+                </p>
+                <div
+                  class="chakra-popover__popper css-1qq679y"
+                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+                >
+                  <section
+                    aria-describedby="popover-body-:r12:"
+                    class="chakra-popover__content css-sjj62m"
+                    id="popover-content-:r12:"
+                    role="tooltip"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="chakra-popover__arrow-positioner css-0"
+                      data-popper-arrow=""
+                      style="position: absolute;"
+                    >
+                      <div
+                        class="chakra-popover__arrow css-0"
+                        data-popper-arrow-inner=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-popover__body css-1ews2c8"
+                      id="popover-body-:r12:"
+                    >
+                      <div
+                        class="css-j7qwjs"
+                      >
+                        <div
+                          class="css-17k0wlp"
+                        >
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            17
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            S-BULL
+                          </p>
+                          <p
+                            class="chakra-text css-jtjur4"
+                          >
+                            FINISH
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </td>
+              <td
+                class="css-j7bde9"
+              >
+                <p
+                  aria-controls="popover-content-:r14:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="chakra-text css-gyvdtt"
+                  id="popover-trigger-:r14:"
+                >
+                  14
+                </p>
+                <div
+                  class="chakra-popover__popper css-1qq679y"
+                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+                >
+                  <section
+                    aria-describedby="popover-body-:r14:"
+                    class="chakra-popover__content css-sjj62m"
+                    id="popover-content-:r14:"
+                    role="tooltip"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="chakra-popover__arrow-positioner css-0"
+                      data-popper-arrow=""
+                      style="position: absolute;"
+                    >
+                      <div
+                        class="chakra-popover__arrow css-0"
+                        data-popper-arrow-inner=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-popover__body css-1ews2c8"
+                      id="popover-body-:r14:"
+                    >
+                      <div
+                        class="css-j7qwjs"
+                      >
+                        <div
+                          class="css-17k0wlp"
+                        >
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            7D
+                          </p>
+                          <p
+                            class="chakra-text css-jtjur4"
+                          >
+                            FINISH
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </td>
+            </tr>
+            <tr
+              class="css-1oahe7w"
+            >
+              <td
+                class="css-13x8h2m"
+                colspan="2"
+              >
+                Arrange
+              </td>
+              <td
+                class="css-13x8h2m"
+                colspan="2"
+              >
+                double
+                 / 
+                fat
+              </td>
+              <td
+                class="css-10ia4wo"
+                colspan="3"
+              >
+                <p
+                  class="chakra-text css-0"
+                >
+                  2021/01/01 01:01:01
+                </p>
+              </td>
+              <td
+                class="css-yaext0"
+              >
+                <button
+                  aria-label="delete history"
+                  class="chakra-button css-1jiezgg"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    fill="currentColor"
+                    focusable="false"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0 0h24v24H0z"
+                      fill="none"
+                    />
+                    <path
+                      d="M0 0h24v24H0V0z"
+                      fill="none"
+                    />
+                    <path
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12l1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                    />
+                  </svg>
+                </button>
+              </td>
+            </tr>
+            <tr
+              class="css-0"
+            >
+              <td
+                class="css-j7bde9"
+              >
+                <p
+                  aria-controls="popover-content-:r16:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="chakra-text css-gyvdtt"
+                  id="popover-trigger-:r16:"
+                >
+                  150
+                </p>
+                <div
+                  class="chakra-popover__popper css-1qq679y"
+                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+                >
+                  <section
+                    aria-describedby="popover-body-:r16:"
+                    class="chakra-popover__content css-sjj62m"
+                    id="popover-content-:r16:"
+                    role="tooltip"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="chakra-popover__arrow-positioner css-0"
+                      data-popper-arrow=""
+                      style="position: absolute;"
+                    >
+                      <div
+                        class="chakra-popover__arrow css-0"
+                        data-popper-arrow-inner=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-popover__body css-1ews2c8"
+                      id="popover-body-:r16:"
+                    >
+                      <div
+                        class="css-j7qwjs"
+                      >
+                        <div
+                          class="css-17k0wlp"
+                        >
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            20T
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            20T
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            15D
+                          </p>
+                          <p
+                            class="chakra-text css-jtjur4"
+                          >
+                            FINISH
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </td>
+              <td
+                class="css-j7bde9"
+              >
+                <p
+                  aria-controls="popover-content-:r18:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="chakra-text css-gyvdtt"
+                  id="popover-trigger-:r18:"
+                >
+                  26
+                </p>
+                <div
+                  class="chakra-popover__popper css-1qq679y"
+                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+                >
+                  <section
+                    aria-describedby="popover-body-:r18:"
+                    class="chakra-popover__content css-sjj62m"
+                    id="popover-content-:r18:"
+                    role="tooltip"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="chakra-popover__arrow-positioner css-0"
+                      data-popper-arrow=""
+                      style="position: absolute;"
+                    >
+                      <div
+                        class="chakra-popover__arrow css-0"
+                        data-popper-arrow-inner=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-popover__body css-1ews2c8"
+                      id="popover-body-:r18:"
+                    >
+                      <div
+                        class="css-j7qwjs"
+                      >
+                        <div
+                          class="css-17k0wlp"
+                        >
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            10
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            8D
+                          </p>
+                          <p
+                            class="chakra-text css-jtjur4"
+                          >
+                            FINISH
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </td>
+              <td
+                class="css-j7bde9"
+              >
+                <p
+                  aria-controls="popover-content-:r1a:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="chakra-text css-gyvdtt"
+                  id="popover-trigger-:r1a:"
+                >
+                  140
+                </p>
+                <div
+                  class="chakra-popover__popper css-1qq679y"
+                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+                >
+                  <section
+                    aria-describedby="popover-body-:r1a:"
+                    class="chakra-popover__content css-sjj62m"
+                    id="popover-content-:r1a:"
+                    role="tooltip"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="chakra-popover__arrow-positioner css-0"
+                      data-popper-arrow=""
+                      style="position: absolute;"
+                    >
+                      <div
+                        class="chakra-popover__arrow css-0"
+                        data-popper-arrow-inner=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-popover__body css-1ews2c8"
+                      id="popover-body-:r1a:"
+                    >
+                      <div
+                        class="css-j7qwjs"
+                      >
+                        <div
+                          class="css-17k0wlp"
+                        >
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            S-BULL
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            S-BULL
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            20D
+                          </p>
+                          <p
+                            class="chakra-text css-jtjur4"
+                          >
+                            FINISH
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </td>
+              <td
+                class="css-j7bde9"
+              >
+                <p
+                  aria-controls="popover-content-:r1c:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="chakra-text css-gyvdtt"
+                  id="popover-trigger-:r1c:"
+                >
+                  82
+                </p>
+                <div
+                  class="chakra-popover__popper css-1qq679y"
+                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+                >
+                  <section
+                    aria-describedby="popover-body-:r1c:"
+                    class="chakra-popover__content css-sjj62m"
+                    id="popover-content-:r1c:"
+                    role="tooltip"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="chakra-popover__arrow-positioner css-0"
+                      data-popper-arrow=""
+                      style="position: absolute;"
+                    >
+                      <div
+                        class="chakra-popover__arrow css-0"
+                        data-popper-arrow-inner=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-popover__body css-1ews2c8"
+                      id="popover-body-:r1c:"
+                    >
+                      <div
+                        class="css-j7qwjs"
+                      >
+                        <div
+                          class="css-17k0wlp"
+                        >
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            S-BULL
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            16D
+                          </p>
+                          <p
+                            class="chakra-text css-jtjur4"
+                          >
+                            FINISH
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </td>
+              <td
+                class="css-j7bde9"
+              >
+                <p
+                  aria-controls="popover-content-:r1e:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="chakra-text css-gyvdtt"
+                  id="popover-trigger-:r1e:"
+                >
+                  10
+                </p>
+                <div
+                  class="chakra-popover__popper css-1qq679y"
+                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+                >
+                  <section
+                    aria-describedby="popover-body-:r1e:"
+                    class="chakra-popover__content css-sjj62m"
+                    id="popover-content-:r1e:"
+                    role="tooltip"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="chakra-popover__arrow-positioner css-0"
+                      data-popper-arrow=""
+                      style="position: absolute;"
+                    >
+                      <div
+                        class="chakra-popover__arrow css-0"
+                        data-popper-arrow-inner=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-popover__body css-1ews2c8"
+                      id="popover-body-:r1e:"
+                    >
+                      <div
+                        class="css-j7qwjs"
+                      >
+                        <div
+                          class="css-17k0wlp"
+                        >
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            5D
+                          </p>
+                          <p
+                            class="chakra-text css-jtjur4"
+                          >
+                            FINISH
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </td>
+              <td
+                class="css-j7bde9"
+              >
+                <p
+                  aria-controls="popover-content-:r1g:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="chakra-text css-gyvdtt"
+                  id="popover-trigger-:r1g:"
+                >
+                  120
+                </p>
+                <div
+                  class="chakra-popover__popper css-1qq679y"
+                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+                >
+                  <section
+                    aria-describedby="popover-body-:r1g:"
+                    class="chakra-popover__content css-sjj62m"
+                    id="popover-content-:r1g:"
+                    role="tooltip"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="chakra-popover__arrow-positioner css-0"
+                      data-popper-arrow=""
+                      style="position: absolute;"
+                    >
+                      <div
+                        class="chakra-popover__arrow css-0"
+                        data-popper-arrow-inner=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-popover__body css-1ews2c8"
+                      id="popover-body-:r1g:"
+                    >
+                      <div
+                        class="css-j7qwjs"
+                      >
+                        <div
+                          class="css-17k0wlp"
+                        >
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            D-BULL
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            S-BULL
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            10D
+                          </p>
+                          <p
+                            class="chakra-text css-jtjur4"
+                          >
+                            FINISH
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </td>
+              <td
+                class="css-j7bde9"
+              >
+                <p
+                  aria-controls="popover-content-:r1i:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="chakra-text css-gyvdtt"
+                  id="popover-trigger-:r1i:"
+                >
+                  68
+                </p>
+                <div
+                  class="chakra-popover__popper css-1qq679y"
+                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+                >
+                  <section
+                    aria-describedby="popover-body-:r1i:"
+                    class="chakra-popover__content css-sjj62m"
+                    id="popover-content-:r1i:"
+                    role="tooltip"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="chakra-popover__arrow-positioner css-0"
+                      data-popper-arrow=""
+                      style="position: absolute;"
+                    >
+                      <div
+                        class="chakra-popover__arrow css-0"
+                        data-popper-arrow-inner=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-popover__body css-1ews2c8"
+                      id="popover-body-:r1i:"
+                    >
+                      <div
+                        class="css-j7qwjs"
+                      >
+                        <div
+                          class="css-17k0wlp"
+                        >
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            14D
+                          </p>
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            20D
+                          </p>
+                          <p
+                            class="chakra-text css-jtjur4"
+                          >
+                            FINISH
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </td>
+              <td
+                class="css-j7bde9"
+              >
+                <p
+                  aria-controls="popover-content-:r1k:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="chakra-text css-gyvdtt"
+                  id="popover-trigger-:r1k:"
+                >
+                  16
+                </p>
+                <div
+                  class="chakra-popover__popper css-1qq679y"
+                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+                >
+                  <section
+                    aria-describedby="popover-body-:r1k:"
+                    class="chakra-popover__content css-sjj62m"
+                    id="popover-content-:r1k:"
+                    role="tooltip"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="chakra-popover__arrow-positioner css-0"
+                      data-popper-arrow=""
+                      style="position: absolute;"
+                    >
+                      <div
+                        class="chakra-popover__arrow css-0"
+                        data-popper-arrow-inner=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-popover__body css-1ews2c8"
+                      id="popover-body-:r1k:"
+                    >
+                      <div
+                        class="css-j7qwjs"
+                      >
+                        <div
+                          class="css-17k0wlp"
+                        >
+                          <p
+                            class="chakra-text css-0"
+                          >
+                            8D
+                          </p>
+                          <p
+                            class="chakra-text css-jtjur4"
+                          >
+                            FINISH
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
   <span
     hidden=""

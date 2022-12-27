@@ -8,3 +8,11 @@ export const DateFormat = (date: string) => {
     second: '2-digit',
   });
 };
+
+export const ArrangeScore = (score: point[][]) => {
+  return score.map((s, i) => {
+    if (i === score.length - 1) return [...s.filter((v) => v !== '0'), 'FINISH'];
+    if (s.includes('0')) return [...s.filter((v) => v !== '0'), 'BUST'];
+    return s;
+  });
+};

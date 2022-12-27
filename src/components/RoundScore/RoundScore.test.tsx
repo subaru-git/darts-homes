@@ -10,14 +10,7 @@ test('should rendering', () => {
   window.matchMedia = createMatchMedia(1000);
   const { container } = render(
     <ChakraProvider>
-      <RoundScore
-        scores={['20T', '19T', '18T']}
-        isFinished={false}
-        result={'Result'}
-        onClear={clear}
-        onRoundChange={roundChange}
-        onRoundOver={roundOver}
-      />
+      <RoundScore scores={['20T', '19T', '18T']} isFinished={false} result={'Result'} onClear={clear} onRoundChange={roundChange} onRoundOver={roundOver} />
     </ChakraProvider>,
   );
   expect(screen.getAllByText('20T')).toHaveLength(1);

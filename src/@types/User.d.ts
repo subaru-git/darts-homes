@@ -23,7 +23,7 @@ interface FirebaseScore {
 
 // prettier-ignore
 interface GameResultModelFirebase {
-  cricketMarkUp?: CricketMarkupResult[];
+  cricketMarkUp?: CricketMarkUpResultModel[];
   eaglesEye?: (Omit<EaglesEyeResultModel, 'scores'> & { scores: FirebaseScore[] })[];
   doubleTrouble?: (Omit<DoubleTroubleResultModel, 'scores'> & { scores: FirebaseScore[] })[];
   sweet16?: (Omit<Sweet16ResultModel, 'scores'> & { scores: FirebaseScore[] })[];

@@ -12,10 +12,7 @@ jest.mock('next/head', () => {
 });
 
 test('should rendering', () => {
-  const { container } = render(
-    <AppSeo title='title' description='description' canonical='canonical' />,
-    { container: document.head },
-  );
+  const { container } = render(<AppSeo title='title' description='description' canonical='canonical' />, { container: document.head });
   expect(document.title).toBe('title');
   expect(container).toMatchSnapshot();
 });

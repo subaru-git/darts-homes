@@ -1,4 +1,4 @@
-describe('gameing Arrange', () => {
+describe('gaming Arrange', () => {
   it('fun gaming', async () => {
     cy.clearLocalStorage();
     indexedDB.deleteDatabase('DartsHomes');
@@ -15,11 +15,44 @@ describe('gameing Arrange', () => {
         }
         if (i < 7) {
           cy.get('button[aria-label="round change"]').first().click();
+        }
+      });
+    });
+    cy.get('button[aria-label="setting"]').first().click({ force: true });
+    cy.get('button[aria-label="new game"]').click();
+    [...Array(8)].forEach((_, i) => {
+      cy.get('[aria-label="target board"] > [aria-label*="target"]').then((targets) => {
+        const a = arrange.find((a) => a.n === parseInt(targets.text())) ?? { n: 0, t: [] };
+        for (const t of a.t) {
+          cy.get(`button[aria-label="${t}"]`).click({ force: true });
+        }
+        if (i < 7) {
+          cy.get('button[aria-label="round change"]').first().click();
         } else {
           cy.get('button[aria-label="round over"]').first().click();
         }
       });
     });
+    cy.get('button[aria-label="new game"]').first().click();
+    cy.visit('/history');
+    cy.get('button[aria-label="arrange"]').click();
+    cy.get('select').should('be.empty');
+    cy.get('[aria-label="master out"]').click();
+    cy.get('select').should('not.be.empty');
+    cy.get('[aria-label="game history"] tr').should('have.length', 4);
+    cy.get('[aria-label="game history"] tr').first().children('td').should('have.length', 4);
+    cy.get('[aria-label="game history"] tr')
+      .first()
+      .children('td')
+      .eq(0)
+      .should('have.text', 'Arrange');
+    cy.get('[aria-label="game history"] tr').last().children('td').should('have.length', 8);
+    cy.get('button[aria-label="delete history"]').eq(1).click();
+    cy.get('button[aria-label="delete"]').click();
+    cy.get('button[aria-label="delete history"]').eq(0).click();
+    cy.get('button[aria-label="delete"]').click();
+    cy.get('tr').should('have.length', 0);
+    cy.get('select').should('be.empty');
   });
 });
 export {};

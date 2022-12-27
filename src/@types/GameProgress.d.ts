@@ -84,7 +84,7 @@ interface ArrangeProgress {
   score: point[][];
   targetOutCount: number;
   targets: number[];
-  settings: ArrangeGameSettings;
+  settings: ArrangeSettings;
 }
 
 type OutOption = 'double' | 'single' | 'master';
