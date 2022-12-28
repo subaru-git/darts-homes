@@ -3,6 +3,7 @@ import { useLiveQuery } from 'dexie-react-hooks';
 import Board from '@/containers/History/Board';
 import { useAuth } from '@/contexts/AuthContext';
 import { db } from '@/db/db';
+import { readResult } from '@/lib/GameHistoryManager';
 import MainTemplate from '@/templates/MainTemplate';
 
 const Main: FC = () => {
@@ -18,45 +19,44 @@ const Main: FC = () => {
 };
 
 const querier = async (setLoading: (isLoading: boolean) => void): Promise<GameResultModel> => {
-  const cricketMarkUp = await db.cricketMarkUpResult.toCollection().reverse().sortBy('playedAt');
-  const eaglesEye = await db.eaglesEyeResult.toCollection().reverse().sortBy('playedAt');
-  const doubleTrouble = await db.doubleTroubleResult.toCollection().reverse().sortBy('playedAt');
-  const sweet16 = await db.sweet16Result.toCollection().reverse().sortBy('playedAt');
-  const topsAndTens = await db.topsAndTensResult.toCollection().reverse().sortBy('playedAt');
-  const twoDartCombinations = await db.twoDartCombinationsResult
-    .toCollection()
-    .reverse()
-    .sortBy('playedAt');
-  const aroundTheCompass = await db.aroundTheCompassResult
-    .toCollection()
-    .reverse()
-    .sortBy('playedAt');
-  const tonsUp = await db.tonsUpResult.toCollection().reverse().sortBy('playedAt');
-  const route64 = await db.route64Result.toCollection().reverse().sortBy('playedAt');
-  const eightyThrew = await db.eightyThrewResult.toCollection().reverse().sortBy('playedAt');
-  const shanghaiNights = await db.shanghaiNightsResult.toCollection().reverse().sortBy('playedAt');
-  const switchHitter = await db.switchHitterResult.toCollection().reverse().sortBy('playedAt');
-  const bullyBully = await db.bullyBullyResult.toCollection().reverse().sortBy('playedAt');
-  const treblesForShow = await db.treblesForShowResult.toCollection().reverse().sortBy('playedAt');
-  const arrange = await db.arrangeResult.toCollection().reverse().sortBy('playedAt');
-  setLoading(false);
-  return {
-    cricketMarkUp,
-    eaglesEye,
-    doubleTrouble,
-    sweet16,
-    topsAndTens,
-    twoDartCombinations,
-    aroundTheCompass,
-    tonsUp,
-    route64,
-    eightyThrew,
-    shanghaiNights,
-    switchHitter,
-    bullyBully,
-    treblesForShow,
-    arrange,
-  };
+  try {
+    const cricketMarkUp = await readResult(db.cricketMarkUpResult);
+    const eaglesEye = await readResult(db.eaglesEyeResult);
+    const doubleTrouble = await readResult(db.doubleTroubleResult);
+    const sweet16 = await readResult(db.sweet16Result);
+    const topsAndTens = await readResult(db.topsAndTensResult);
+    const twoDartCombinations = await readResult(db.twoDartCombinationsResult);
+    const aroundTheCompass = await readResult(db.aroundTheCompassResult);
+    const tonsUp = await readResult(db.tonsUpResult);
+    const route64 = await readResult(db.route64Result);
+    const eightyThrew = await readResult(db.eightyThrewResult);
+    const shanghaiNights = await readResult(db.shanghaiNightsResult);
+    const switchHitter = await readResult(db.switchHitterResult);
+    const bullyBully = await readResult(db.bullyBullyResult);
+    const treblesForShow = await readResult(db.treblesForShowResult);
+    const arrange = await readResult(db.arrangeResult);
+    setLoading(false);
+    return {
+      cricketMarkUp,
+      eaglesEye,
+      doubleTrouble,
+      sweet16,
+      topsAndTens,
+      twoDartCombinations,
+      aroundTheCompass,
+      tonsUp,
+      route64,
+      eightyThrew,
+      shanghaiNights,
+      switchHitter,
+      bullyBully,
+      treblesForShow,
+      arrange,
+    };
+  } catch (e) {
+    console.log('querier exception!!', e);
+    return initialQuery;
+  }
 };
 
 const initialQuery: GameResultModel = {

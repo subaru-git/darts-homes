@@ -20,6 +20,38 @@ export class GameResultDexie extends Dexie {
 
   constructor() {
     super('DartsHomes');
+    this.version(1.2).stores({
+      cricketMarkUpResult: '++id',
+      eaglesEyeResult: '++id',
+      doubleTroubleResult: '++id',
+      sweet16Result: '++id',
+      topsAndTensResult: '++id',
+      twoDartCombinationsResult: '++id',
+      aroundTheCompassResult: '++id',
+      tonsUpResult: '++id',
+      route64Result: '++id',
+      eightyThrewResult: '++id',
+      shanghaiNightsResult: '++id',
+      switchHitterResult: '++id',
+      bullyBullyResult: '++id',
+      treblesForShowResult: '++id',
+    });
+    this.version(1.3).stores({
+      cricketMarkUpResult: '++id',
+      eaglesEyeResult: '++id',
+      doubleTroubleResult: '++id',
+      sweet16Result: '++id',
+      topsAndTensResult: '++id',
+      twoDartCombinationsResult: '++id',
+      aroundTheCompassResult: '++id',
+      tonsUpResult: '++id',
+      route64Result: '++id',
+      eightyThrewResult: '++id',
+      shanghaiNightsResult: '++id',
+      switchHitterResult: '++id',
+      bullyBullyResult: '++id',
+      treblesForShowResult: '++id',
+    });
     this.version(1.4)
       .stores({
         cricketMarkUpResult: null,

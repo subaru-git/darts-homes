@@ -160,7 +160,15 @@ export const saveHistory = async <T>(
     await db.add({ ...history, uuid: uuidv4() });
     await updateHistory(user);
   } catch (error) {
-    console.error(error);
+    console.error('save history exception', error);
+  }
+};
+
+export const readResult = async <T>(db: Table<T, IndexableType>) => {
+  try {
+    return await db.toCollection().reverse().sortBy('playedAt');
+  } catch (error) {
+    return [];
   }
 };
 
