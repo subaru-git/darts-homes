@@ -160,13 +160,13 @@ const MobileMain: FC<MainProps> = ({ game, setGame, user, description }) => {
             </Flex>
           </GridItem>
         </Grid>
+        <MyRoundScore game={game} setGame={setGame} user={user} />
         <ArrangeBoard
           onCount={(n) => updateObject(game, new ArrangeGame(), 'addScore', setGame, n)}
           range={game.getSettings().range}
           simulation={game.getSettings().simulation}
           disabled={game.getRoundScore().length >= 3 || game.isFinished()}
         />
-        <MyRoundScore game={game} setGame={setGame} user={user} />
       </Flex>
     </Flex>
   );
@@ -180,7 +180,7 @@ const MyRoundScore: FC<MainProps> = ({ game, setGame, user }) => (
     isFinished={game.isFinished()}
     onRoundOver={() => {
       saveHistory(game.getGameResult(), db.arrangeResult, user);
-      setGame(new ArrangeGame());
+      setGame(new ArrangeGame(game.getSettings()));
     }}
     result={getResult(game)}
   />
