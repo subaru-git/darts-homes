@@ -15,11 +15,12 @@ describe('gaming Arrange', () => {
         }
         if (i < 7) {
           cy.get('button[aria-label="round change"]').first().click();
+        } else {
+          cy.get('button[aria-label="round over"]').first().click();
         }
       });
     });
-    cy.get('button[aria-label="setting"]').first().click({ force: true });
-    cy.get('button[aria-label="new game"]').click();
+    cy.get('button[aria-label="new game"]').first().click();
     [...Array(8)].forEach((_, i) => {
       cy.get('[aria-label="target board"] > [aria-label*="target"]').then((targets) => {
         const a = arrange.find((a) => a.n === parseInt(targets.text())) ?? { n: 0, t: [] };
@@ -28,12 +29,11 @@ describe('gaming Arrange', () => {
         }
         if (i < 7) {
           cy.get('button[aria-label="round change"]').first().click();
-        } else {
-          cy.get('button[aria-label="round over"]').first().click();
         }
       });
     });
-    cy.get('button[aria-label="new game"]').first().click();
+    cy.get('button[aria-label="setting"]').first().click({ force: true });
+    cy.get('button[aria-label="new game"]').click();
     cy.visit('/history');
     cy.get('button[aria-label="arrange"]').click();
     cy.get('select').should('be.empty');
@@ -180,7 +180,7 @@ const arrange = [
   { n: 52, t: ['2 outer single', 'double bull'] },
   { n: 51, t: ['17 triple'] },
   { n: 50, t: ['double bull'] },
-  { n: 49, t: ['17 outer single', '32 double'] },
+  { n: 49, t: ['17 outer single', '16 double'] },
   { n: 48, t: ['16 triple'] },
   { n: 47, t: ['7 outer single', '20 double'] },
   { n: 46, t: ['6 outer single', '20 double'] },
