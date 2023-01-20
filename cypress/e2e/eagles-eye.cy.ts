@@ -15,8 +15,8 @@ describe("gaming Eagle's Eye", () => {
     cy.get('button[aria-label="inner bull"]').first().click();
     cy.get('button[aria-label="outer bull"]').first().click({ force: true });
     cy.get('button[aria-label="non bull"]').first().click({ force: true });
-    cy.get('button[aria-label="setting"]').first().click({ force: true });
-    cy.get('button[aria-label="new game"]').click();
+    cy.get('button[aria-label="round over"]').first().click();
+    cy.get('button[aria-label="new game"]').first().click();
     [...Array(7)].forEach(() => {
       cy.get('button[aria-label="inner bull"]').first().click();
       cy.get('button[aria-label="outer bull"]').first().click({ force: true });
@@ -26,9 +26,8 @@ describe("gaming Eagle's Eye", () => {
     cy.get('button[aria-label="inner bull"]').first().click();
     cy.get('button[aria-label="outer bull"]').first().click({ force: true });
     cy.get('button[aria-label="non bull"]').first().click({ force: true });
-    cy.get('button[aria-label="round over"]').first().click();
-    cy.wait(1000);
-    cy.get('button[aria-label="new game"]').first().click();
+    cy.get('button[aria-label="setting"]').first().click({ force: true });
+    cy.get('button[aria-label="new game"]').click();
     cy.visit('/history');
     cy.get('button[aria-label="eagle\'s eye"]').click();
     cy.get('tr').should('have.length', 4);

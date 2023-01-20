@@ -16,8 +16,8 @@ describe('gaming Switch Hitter', () => {
     cy.get(`button[aria-label="19 triple"]`).first().click();
     cy.get(`button[aria-label="19 triple"]`).first().click();
     cy.get(`button[aria-label="19 triple"]`).first().click();
-    cy.get('button[aria-label="setting"]').first().click({ force: true });
-    cy.get('button[aria-label="new game"]').click();
+    cy.get('button[aria-label="round over"]').first().click();
+    cy.get('button[aria-label="new game"]').first().click();
     [...Array(2)].forEach(() => {
       cy.get(`button[aria-label="19 triple"]`).first().click();
       cy.get(`button[aria-label="19 triple"]`).first().click();
@@ -27,9 +27,8 @@ describe('gaming Switch Hitter', () => {
     cy.get(`button[aria-label="19 triple"]`).first().click();
     cy.get(`button[aria-label="19 triple"]`).first().click();
     cy.get(`button[aria-label="19 triple"]`).first().click();
-    cy.get('button[aria-label="round over"]').first().click();
-    cy.wait(1000);
-    cy.get('button[aria-label="new game"]').first().click();
+    cy.get('button[aria-label="setting"]').first().click({ force: true });
+    cy.get('button[aria-label="new game"]').click();
     cy.visit('/history');
     cy.get('button[aria-label="switch hitter"]').click();
     cy.get('tr').should('have.length', 4);

@@ -150,7 +150,7 @@ const MyRoundScore: FC<MainProps> = ({ game, setGame, user }) => (
     isFinished={game.isFinished()}
     onRoundOver={() => {
       saveHistory(game.getGameResult(), db.tonsUpResult, user);
-      setGame(new TonsUpGame(20));
+      setGame(new TonsUpGame(game.getTargetRound()));
     }}
     result={getResult(game)}
   />

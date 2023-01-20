@@ -144,7 +144,7 @@ const MyRoundScore: FC<MainProps> = ({ game, setGame, user }) => (
     isFinished={game.isFinished()}
     onRoundOver={() => {
       saveHistory(game.getGameResult(), db.bullyBullyResult, user);
-      setGame(new BullyBullyGame(20));
+      setGame(new BullyBullyGame(game.getTargetRound()));
     }}
     result={getResult(game)}
   />
