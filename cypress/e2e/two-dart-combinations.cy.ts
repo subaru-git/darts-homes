@@ -33,8 +33,8 @@ describe('gaming Two-Dart Combinations', () => {
       cy.get(`button[aria-label="${target[0]}"]`).first().click();
       cy.get(`button[aria-label="${target[1]}"]`).first().click();
       if (i === arrange.length - 1) {
-        cy.get('button[aria-label="setting"]').first().click({ force: true });
-        cy.get('button[aria-label="new game"]').click();
+        cy.get('button[aria-label="round over"]').first().click();
+        cy.get('button[aria-label="new game"]').first().click();
         return;
       }
       cy.get('button[aria-label="round change"]').first().click();
@@ -43,13 +43,12 @@ describe('gaming Two-Dart Combinations', () => {
       cy.get(`button[aria-label="${target[0]}"]`).first().click();
       cy.get(`button[aria-label="${target[1]}"]`).first().click();
       if (i === arrange.length - 1) {
-        cy.get('button[aria-label="round over"]').first().click();
+        cy.get('button[aria-label="setting"]').first().click({ force: true });
+        cy.get('button[aria-label="new game"]').click();
         return;
       }
       cy.get('button[aria-label="round change"]').first().click();
     });
-    cy.wait(1000);
-    cy.get('button[aria-label="new game"]').first().click();
     cy.visit('/history');
     cy.get('button[aria-label="two dart combinations"]').click();
     cy.get('tr').should('have.length', 4);

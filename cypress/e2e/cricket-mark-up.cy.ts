@@ -17,8 +17,8 @@ describe('gaming Cricket Mark-Up', () => {
     cy.get('button[aria-label="round change"]').first().click();
     cy.get('button[aria-label="outer bull"]').first().click();
     cy.get('button[aria-label="inner bull"]').first().click();
-    cy.get('button[aria-label="setting"]').first().click({ force: true });
-    cy.get('button[aria-label="new game"]').click();
+    cy.get('button[aria-label="round over"]').first().click();
+    cy.get('button[aria-label="new game"]').first().click();
     cy.get('button[aria-label="20 triple"]').first().click();
     cy.get('button[aria-label="19 triple"]').first().click();
     cy.get('button[aria-label="18 triple"]').first().click();
@@ -29,12 +29,11 @@ describe('gaming Cricket Mark-Up', () => {
     cy.get('button[aria-label="round change"]').first().click();
     cy.get('button[aria-label="outer bull"]').first().click();
     cy.get('button[aria-label="inner bull"]').first().click();
-    cy.get('button[aria-label="round over"]').first().click();
-    cy.wait(1000);
-    cy.get('button[aria-label="new game"]').first().click();
+    cy.get('button[aria-label="setting"]').first().click({ force: true });
+    cy.get('button[aria-label="new game"]').click();
     cy.visit('/history');
-    cy.get('tr').should('have.length', 4);
     cy.get('button[aria-label="cricket mark up"]').click();
+    cy.get('tr').should('have.length', 4);
     cy.get('tr').first().children('td').should('have.length', 4);
     cy.get('tr').first().children('td').eq(0).should('have.text', 'Cricket Mark-Up');
     cy.get('tr').first().children('td').eq(1).should('have.text', 'Target: 3');
