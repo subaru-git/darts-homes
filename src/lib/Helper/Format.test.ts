@@ -7,20 +7,20 @@ test('DateFormat', () => {
 test('arrange score', () => {
   expect(
     ArrangeScore([
-      ['S-BULL', '19T', '9T'],
-      ['20T', '0', '0'],
-      ['5', '5T', '0'],
-      ['5T', '0', '0'],
+      ['S-BULL', 'T19', 'T9'],
+      ['T20', '0', '0'],
+      ['5', 'T5', '0'],
+      ['T5', '0', '0'],
     ]),
   ).toEqual([
-    ['S-BULL', '19T', '9T'],
-    ['20T', 'BUST'],
-    ['5', '5T', 'BUST'],
-    ['5T', 'FINISH'],
+    ['S-BULL', 'T19', 'T9'],
+    ['T20', 'BUST'],
+    ['5', 'T5', 'BUST'],
+    ['T5', 'FINISH'],
   ]);
-  expect(ArrangeScore([['S-BULL', '19T', '0']])).toEqual([['S-BULL', '19T', 'FINISH']]);
-  expect(ArrangeScore([['S-BULL', '19T', '19D']])).toEqual([['S-BULL', '19T', '19D', 'FINISH']]);
-  expect(ArrangeScore([['D-BULL', 'D-BULL', '17T']])).toEqual([
-    ['D-BULL', 'D-BULL', '17T', 'FINISH'],
+  expect(ArrangeScore([['S-BULL', 'T19', '0']])).toEqual([['S-BULL', 'T19', 'FINISH']]);
+  expect(ArrangeScore([['S-BULL', 'T19', 'D19']])).toEqual([['S-BULL', 'T19', 'D19', 'FINISH']]);
+  expect(ArrangeScore([['D-BULL', 'D-BULL', 'T17']])).toEqual([
+    ['D-BULL', 'D-BULL', 'T17', 'FINISH'],
   ]);
 });

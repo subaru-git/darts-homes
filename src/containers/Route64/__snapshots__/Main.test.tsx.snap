@@ -1443,12 +1443,12 @@ exports[`should rendering 1`] = `
           <p
             class="chakra-text css-ympam6"
           >
-            20T
+            T20
           </p>
           <p
             class="chakra-text css-ympam6"
           >
-            2D
+            D2
           </p>
           <p
             class="chakra-text css-ympam6"
@@ -1730,12 +1730,12 @@ exports[`should rendering 1`] = `
                 <td
                   class="css-xumdn4"
                 >
-                  20T
+                  T20
                 </td>
                 <td
                   class="css-xumdn4"
                 >
-                  2D
+                  D2
                 </td>
                 <td
                   class="css-xumdn4"
@@ -1749,12 +1749,12 @@ exports[`should rendering 1`] = `
                 <td
                   class="css-xumdn4"
                 >
-                  20T
+                  T20
                 </td>
                 <td
                   class="css-xumdn4"
                 >
-                  2D
+                  D2
                 </td>
                 <td
                   class="css-xumdn4"

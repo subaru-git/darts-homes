@@ -20,17 +20,17 @@ exports[`should rendering 1`] = `
             <td
               class="css-0"
             >
-              20T
+              T20
             </td>
             <td
               class="css-0"
             >
-              19T
+              T19
             </td>
             <td
               class="css-0"
             >
-              18T
+              T18
             </td>
           </tr>
         </tbody>

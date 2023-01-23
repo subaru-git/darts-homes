@@ -1443,17 +1443,17 @@ exports[`should rendering 1`] = `
           <p
             class="chakra-text css-ympam6"
           >
-            20D
+            D20
           </p>
           <p
             class="chakra-text css-ympam6"
           >
-            20D
+            D20
           </p>
           <p
             class="chakra-text css-ympam6"
           >
-            20D
+            D20
           </p>
           <div
             class="css-1ensw45"
@@ -1625,36 +1625,17 @@ exports[`should rendering 1`] = `
                 <td
                   class="css-xumdn4"
                 >
-                  1D
+                  D1
                 </td>
                 <td
                   class="css-xumdn4"
                 >
-                  1D
+                  D1
                 </td>
                 <td
                   class="css-xumdn4"
                 >
-                  1D
-                </td>
-              </tr>
-              <tr
-                class="css-0"
-              >
-                <td
-                  class="css-xumdn4"
-                >
-                  2D
-                </td>
-                <td
-                  class="css-xumdn4"
-                >
-                  2D
-                </td>
-                <td
-                  class="css-xumdn4"
-                >
-                  2D
+                  D1
                 </td>
               </tr>
               <tr
@@ -1663,36 +1644,17 @@ exports[`should rendering 1`] = `
                 <td
                   class="css-xumdn4"
                 >
-                  3D
+                  D2
                 </td>
                 <td
                   class="css-xumdn4"
                 >
-                  3D
+                  D2
                 </td>
                 <td
                   class="css-xumdn4"
                 >
-                  3D
-                </td>
-              </tr>
-              <tr
-                class="css-0"
-              >
-                <td
-                  class="css-xumdn4"
-                >
-                  4D
-                </td>
-                <td
-                  class="css-xumdn4"
-                >
-                  4D
-                </td>
-                <td
-                  class="css-xumdn4"
-                >
-                  4D
+                  D2
                 </td>
               </tr>
               <tr
@@ -1701,36 +1663,17 @@ exports[`should rendering 1`] = `
                 <td
                   class="css-xumdn4"
                 >
-                  5D
+                  D3
                 </td>
                 <td
                   class="css-xumdn4"
                 >
-                  5D
+                  D3
                 </td>
                 <td
                   class="css-xumdn4"
                 >
-                  5D
-                </td>
-              </tr>
-              <tr
-                class="css-0"
-              >
-                <td
-                  class="css-xumdn4"
-                >
-                  6D
-                </td>
-                <td
-                  class="css-xumdn4"
-                >
-                  6D
-                </td>
-                <td
-                  class="css-xumdn4"
-                >
-                  6D
+                  D3
                 </td>
               </tr>
               <tr
@@ -1739,36 +1682,17 @@ exports[`should rendering 1`] = `
                 <td
                   class="css-xumdn4"
                 >
-                  7D
+                  D4
                 </td>
                 <td
                   class="css-xumdn4"
                 >
-                  7D
+                  D4
                 </td>
                 <td
                   class="css-xumdn4"
                 >
-                  7D
-                </td>
-              </tr>
-              <tr
-                class="css-0"
-              >
-                <td
-                  class="css-xumdn4"
-                >
-                  8D
-                </td>
-                <td
-                  class="css-xumdn4"
-                >
-                  8D
-                </td>
-                <td
-                  class="css-xumdn4"
-                >
-                  8D
+                  D4
                 </td>
               </tr>
               <tr
@@ -1777,36 +1701,17 @@ exports[`should rendering 1`] = `
                 <td
                   class="css-xumdn4"
                 >
-                  9D
+                  D5
                 </td>
                 <td
                   class="css-xumdn4"
                 >
-                  9D
+                  D5
                 </td>
                 <td
                   class="css-xumdn4"
                 >
-                  9D
-                </td>
-              </tr>
-              <tr
-                class="css-0"
-              >
-                <td
-                  class="css-xumdn4"
-                >
-                  10D
-                </td>
-                <td
-                  class="css-xumdn4"
-                >
-                  10D
-                </td>
-                <td
-                  class="css-xumdn4"
-                >
-                  10D
+                  D5
                 </td>
               </tr>
               <tr
@@ -1815,36 +1720,17 @@ exports[`should rendering 1`] = `
                 <td
                   class="css-xumdn4"
                 >
-                  11D
+                  D6
                 </td>
                 <td
                   class="css-xumdn4"
                 >
-                  11D
+                  D6
                 </td>
                 <td
                   class="css-xumdn4"
                 >
-                  11D
-                </td>
-              </tr>
-              <tr
-                class="css-0"
-              >
-                <td
-                  class="css-xumdn4"
-                >
-                  12D
-                </td>
-                <td
-                  class="css-xumdn4"
-                >
-                  12D
-                </td>
-                <td
-                  class="css-xumdn4"
-                >
-                  12D
+                  D6
                 </td>
               </tr>
               <tr
@@ -1853,36 +1739,17 @@ exports[`should rendering 1`] = `
                 <td
                   class="css-xumdn4"
                 >
-                  13D
+                  D7
                 </td>
                 <td
                   class="css-xumdn4"
                 >
-                  13D
+                  D7
                 </td>
                 <td
                   class="css-xumdn4"
                 >
-                  13D
-                </td>
-              </tr>
-              <tr
-                class="css-0"
-              >
-                <td
-                  class="css-xumdn4"
-                >
-                  14D
-                </td>
-                <td
-                  class="css-xumdn4"
-                >
-                  14D
-                </td>
-                <td
-                  class="css-xumdn4"
-                >
-                  14D
+                  D7
                 </td>
               </tr>
               <tr
@@ -1891,36 +1758,17 @@ exports[`should rendering 1`] = `
                 <td
                   class="css-xumdn4"
                 >
-                  15D
+                  D8
                 </td>
                 <td
                   class="css-xumdn4"
                 >
-                  15D
+                  D8
                 </td>
                 <td
                   class="css-xumdn4"
                 >
-                  15D
-                </td>
-              </tr>
-              <tr
-                class="css-0"
-              >
-                <td
-                  class="css-xumdn4"
-                >
-                  16D
-                </td>
-                <td
-                  class="css-xumdn4"
-                >
-                  16D
-                </td>
-                <td
-                  class="css-xumdn4"
-                >
-                  16D
+                  D8
                 </td>
               </tr>
               <tr
@@ -1929,36 +1777,17 @@ exports[`should rendering 1`] = `
                 <td
                   class="css-xumdn4"
                 >
-                  17D
+                  D9
                 </td>
                 <td
                   class="css-xumdn4"
                 >
-                  17D
+                  D9
                 </td>
                 <td
                   class="css-xumdn4"
                 >
-                  17D
-                </td>
-              </tr>
-              <tr
-                class="css-0"
-              >
-                <td
-                  class="css-xumdn4"
-                >
-                  18D
-                </td>
-                <td
-                  class="css-xumdn4"
-                >
-                  18D
-                </td>
-                <td
-                  class="css-xumdn4"
-                >
-                  18D
+                  D9
                 </td>
               </tr>
               <tr
@@ -1967,17 +1796,188 @@ exports[`should rendering 1`] = `
                 <td
                   class="css-xumdn4"
                 >
-                  19D
+                  D10
                 </td>
                 <td
                   class="css-xumdn4"
                 >
-                  19D
+                  D10
                 </td>
                 <td
                   class="css-xumdn4"
                 >
-                  19D
+                  D10
+                </td>
+              </tr>
+              <tr
+                class="css-0"
+              >
+                <td
+                  class="css-xumdn4"
+                >
+                  D11
+                </td>
+                <td
+                  class="css-xumdn4"
+                >
+                  D11
+                </td>
+                <td
+                  class="css-xumdn4"
+                >
+                  D11
+                </td>
+              </tr>
+              <tr
+                class="css-0"
+              >
+                <td
+                  class="css-xumdn4"
+                >
+                  D12
+                </td>
+                <td
+                  class="css-xumdn4"
+                >
+                  D12
+                </td>
+                <td
+                  class="css-xumdn4"
+                >
+                  D12
+                </td>
+              </tr>
+              <tr
+                class="css-0"
+              >
+                <td
+                  class="css-xumdn4"
+                >
+                  D13
+                </td>
+                <td
+                  class="css-xumdn4"
+                >
+                  D13
+                </td>
+                <td
+                  class="css-xumdn4"
+                >
+                  D13
+                </td>
+              </tr>
+              <tr
+                class="css-0"
+              >
+                <td
+                  class="css-xumdn4"
+                >
+                  D14
+                </td>
+                <td
+                  class="css-xumdn4"
+                >
+                  D14
+                </td>
+                <td
+                  class="css-xumdn4"
+                >
+                  D14
+                </td>
+              </tr>
+              <tr
+                class="css-0"
+              >
+                <td
+                  class="css-xumdn4"
+                >
+                  D15
+                </td>
+                <td
+                  class="css-xumdn4"
+                >
+                  D15
+                </td>
+                <td
+                  class="css-xumdn4"
+                >
+                  D15
+                </td>
+              </tr>
+              <tr
+                class="css-0"
+              >
+                <td
+                  class="css-xumdn4"
+                >
+                  D16
+                </td>
+                <td
+                  class="css-xumdn4"
+                >
+                  D16
+                </td>
+                <td
+                  class="css-xumdn4"
+                >
+                  D16
+                </td>
+              </tr>
+              <tr
+                class="css-0"
+              >
+                <td
+                  class="css-xumdn4"
+                >
+                  D17
+                </td>
+                <td
+                  class="css-xumdn4"
+                >
+                  D17
+                </td>
+                <td
+                  class="css-xumdn4"
+                >
+                  D17
+                </td>
+              </tr>
+              <tr
+                class="css-0"
+              >
+                <td
+                  class="css-xumdn4"
+                >
+                  D18
+                </td>
+                <td
+                  class="css-xumdn4"
+                >
+                  D18
+                </td>
+                <td
+                  class="css-xumdn4"
+                >
+                  D18
+                </td>
+              </tr>
+              <tr
+                class="css-0"
+              >
+                <td
+                  class="css-xumdn4"
+                >
+                  D19
+                </td>
+                <td
+                  class="css-xumdn4"
+                >
+                  D19
+                </td>
+                <td
+                  class="css-xumdn4"
+                >
+                  D19
                 </td>
               </tr>
             </tbody>

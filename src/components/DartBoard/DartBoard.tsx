@@ -32,12 +32,12 @@ const DartBoard: FC<DartBoardProps> = ({ onCount }) => {
             aria-label={`${n} outer single`}
           />
           <button
-            onClick={() => onCount(`${n}D` as point)}
+            onClick={() => onCount(`D${n}` as point)}
             css={[buttonStyle, doubleStyle, isEven(i) ? redStyle : blueStyle]}
             aria-label={`${n} double`}
           />
           <button
-            onClick={() => onCount(`${n}T` as point)}
+            onClick={() => onCount(`T${n}` as point)}
             css={[buttonStyle, tripleStyle, isEven(i) ? redStyle : blueStyle]}
             aria-label={`${n} triple`}
           />

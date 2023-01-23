@@ -60,11 +60,11 @@ class SwitchHitterGame implements Game, GameData<SwitchHitterProgress, SwitchHit
     };
   }
   private calcRound(round: point[]) {
-    if (equal(round, ['19T', '19T', '19T'])) return 25;
+    if (equal(round, ['T19', 'T19', 'T19'])) return 25;
     return round.reduce((pre, crr) => {
       if (crr === '19') return pre + 2;
-      if (crr === '19D') return pre + 2;
-      if (crr === '19T') return pre + 5;
+      if (crr === 'D19') return pre + 2;
+      if (crr === 'T19') return pre + 5;
       return pre;
     }, 0);
   }

@@ -1453,7 +1453,7 @@ exports[`should rendering 1`] = `
           <p
             class="chakra-text css-ympam6"
           >
-            5D
+            D5
           </p>
           <div
             class="css-1ensw45"
@@ -1667,17 +1667,17 @@ exports[`should rendering 1`] = `
                 <td
                   class="css-xumdn4"
                 >
-                  20D
+                  D20
                 </td>
                 <td
                   class="css-xumdn4"
                 >
-                  20D
+                  D20
                 </td>
                 <td
                   class="css-xumdn4"
                 >
-                  20D
+                  D20
                 </td>
               </tr>
               <tr
@@ -1686,17 +1686,17 @@ exports[`should rendering 1`] = `
                 <td
                   class="css-xumdn4"
                 >
-                  20D
+                  D20
                 </td>
                 <td
                   class="css-xumdn4"
                 >
-                  20D
+                  D20
                 </td>
                 <td
                   class="css-xumdn4"
                 >
-                  20D
+                  D20
                 </td>
               </tr>
             </tbody>
