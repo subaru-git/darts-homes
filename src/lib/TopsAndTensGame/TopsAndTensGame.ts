@@ -71,7 +71,7 @@ class TopsAndTensGame implements Game, GameData<TopsAndTensProgress, TopsAndTens
     );
   }
   private calcTarget(t: number, s: point) {
-    const availablePoint = ['20D', '20', '10D', '10', '5D'];
+    const availablePoint = ['D20', '20', 'D10', '10', 'D5'];
     const score = availablePoint.includes(s) ? s : '0';
     if (isDoubleOut(t, score, true)) return { target: 40, point: 5 };
     let target = t - convertScoreToNumber(score, true);

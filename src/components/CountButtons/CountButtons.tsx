@@ -87,7 +87,7 @@ const Buttons: FC<CountButtonsProps> = ({ onCount, buttons, bull = true, disable
               colorScheme={'teal'}
               variant={'outline'}
               width={'100%'}
-              onClick={() => onCount(`${i}D` as point)}
+              onClick={() => onCount(`D${i}` as point)}
               disabled={disabled}
               aria-label={`${i} double`}
             >
@@ -97,7 +97,7 @@ const Buttons: FC<CountButtonsProps> = ({ onCount, buttons, bull = true, disable
               colorScheme={'pink'}
               variant={'outline'}
               width={'100%'}
-              onClick={() => onCount(`${i}T` as point)}
+              onClick={() => onCount(`T${i}` as point)}
               disabled={disabled}
               aria-label={`${i} triple`}
             >

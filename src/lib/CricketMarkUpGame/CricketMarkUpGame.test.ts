@@ -7,17 +7,17 @@ test('create instance', () => {
 
 test('in gaming', () => {
   const game = new Game(10);
-  game.addScore('20T');
-  game.addScore('20T');
-  game.addScore('20D');
-  expect(game.getRoundScore()).toEqual(['20T', '20T', '20D']);
+  game.addScore('T20');
+  game.addScore('T20');
+  game.addScore('D20');
+  expect(game.getRoundScore()).toEqual(['T20', 'T20', 'D20']);
   expect(game.getCountScore()).toEqual([['20-3', '20-3', '20-2']]);
   expect(game.getCurrentTarget()).toEqual('20');
   game.roundChange();
   game.addScore('20');
-  game.addScore('20D');
+  game.addScore('D20');
   game.addScore('12');
-  expect(game.getRoundScore()).toEqual(['20', '20D', '12']);
+  expect(game.getRoundScore()).toEqual(['20', 'D20', '12']);
   expect(game.getCountScore()).toEqual([
     ['20-3', '20-3', '20-2'],
     ['20-1', '20-1', '19-0'],
@@ -25,9 +25,9 @@ test('in gaming', () => {
   expect(game.getCurrentTarget()).toEqual('19');
   game.roundChange();
   game.addScore('19');
-  game.addScore('19D');
+  game.addScore('D19');
   game.addScore('20');
-  expect(game.getRoundScore()).toEqual(['19', '19D', '20']);
+  expect(game.getRoundScore()).toEqual(['19', 'D19', '20']);
   expect(game.getCountScore()).toEqual([
     ['20-3', '20-3', '20-2'],
     ['20-1', '20-1', '19-0'],
@@ -35,10 +35,10 @@ test('in gaming', () => {
   ]);
   expect(game.getCurrentTarget()).toEqual('19');
   game.roundChange();
-  game.addScore('19T');
-  game.addScore('19T');
-  game.addScore('19D');
-  expect(game.getRoundScore()).toEqual(['19T', '19T', '19D']);
+  game.addScore('T19');
+  game.addScore('T19');
+  game.addScore('D19');
+  expect(game.getRoundScore()).toEqual(['T19', 'T19', 'D19']);
   expect(game.getCountScore()).toEqual([
     ['20-3', '20-3', '20-2'],
     ['20-1', '20-1', '19-0'],
@@ -47,10 +47,10 @@ test('in gaming', () => {
   ]);
   expect(game.getCurrentTarget()).toEqual('18');
   game.roundChange();
-  game.addScore('18T');
-  game.addScore('18T');
-  game.addScore('18T');
-  expect(game.getRoundScore()).toEqual(['18T', '18T', '18T']);
+  game.addScore('T18');
+  game.addScore('T18');
+  game.addScore('T18');
+  expect(game.getRoundScore()).toEqual(['T18', 'T18', 'T18']);
   expect(game.getCountScore()).toEqual([
     ['20-3', '20-3', '20-2'],
     ['20-1', '20-1', '19-0'],
@@ -60,10 +60,10 @@ test('in gaming', () => {
   ]);
   expect(game.getCurrentTarget()).toEqual('18');
   game.roundChange();
-  game.addScore('18T');
-  game.addScore('17T');
-  game.addScore('17T');
-  expect(game.getRoundScore()).toEqual(['18T', '17T', '17T']);
+  game.addScore('T18');
+  game.addScore('T17');
+  game.addScore('T17');
+  expect(game.getRoundScore()).toEqual(['T18', 'T17', 'T17']);
   expect(game.getCountScore()).toEqual([
     ['20-3', '20-3', '20-2'],
     ['20-1', '20-1', '19-0'],
@@ -74,10 +74,10 @@ test('in gaming', () => {
   ]);
   expect(game.getCurrentTarget()).toEqual('17');
   game.roundChange();
-  game.addScore('17T');
-  game.addScore('17T');
-  game.addScore('16T');
-  expect(game.getRoundScore()).toEqual(['17T', '17T', '16T']);
+  game.addScore('T17');
+  game.addScore('T17');
+  game.addScore('T16');
+  expect(game.getRoundScore()).toEqual(['T17', 'T17', 'T16']);
   expect(game.getCountScore()).toEqual([
     ['20-3', '20-3', '20-2'],
     ['20-1', '20-1', '19-0'],
@@ -89,10 +89,10 @@ test('in gaming', () => {
   ]);
   expect(game.getCurrentTarget()).toEqual('16');
   game.roundChange();
-  game.addScore('16T');
-  game.addScore('16T');
-  game.addScore('16T');
-  expect(game.getRoundScore()).toEqual(['16T', '16T', '16T']);
+  game.addScore('T16');
+  game.addScore('T16');
+  game.addScore('T16');
+  expect(game.getRoundScore()).toEqual(['T16', 'T16', 'T16']);
   expect(game.getCountScore()).toEqual([
     ['20-3', '20-3', '20-2'],
     ['20-1', '20-1', '19-0'],
@@ -105,10 +105,10 @@ test('in gaming', () => {
   ]);
   expect(game.getCurrentTarget()).toEqual('15');
   game.roundChange();
-  game.addScore('15T');
-  game.addScore('15T');
-  game.addScore('15T');
-  expect(game.getRoundScore()).toEqual(['15T', '15T', '15T']);
+  game.addScore('T15');
+  game.addScore('T15');
+  game.addScore('T15');
+  expect(game.getRoundScore()).toEqual(['T15', 'T15', 'T15']);
   expect(game.getCountScore()).toEqual([
     ['20-3', '20-3', '20-2'],
     ['20-1', '20-1', '19-0'],
@@ -122,10 +122,10 @@ test('in gaming', () => {
   ]);
   expect(game.getCurrentTarget()).toEqual('15');
   game.roundChange();
-  game.addScore('15T');
-  game.addScore('15T');
+  game.addScore('T15');
+  game.addScore('T15');
   game.addScore('D-BULL');
-  expect(game.getRoundScore()).toEqual(['15T', '15T', 'D-BULL']);
+  expect(game.getRoundScore()).toEqual(['T15', 'T15', 'D-BULL']);
   expect(game.getCountScore()).toEqual([
     ['20-3', '20-3', '20-2'],
     ['20-1', '20-1', '19-0'],
@@ -189,34 +189,34 @@ test('in gaming', () => {
 });
 test('should output progress and resume game', () => {
   const game = new Game(10);
-  game.addScore('20T');
+  game.addScore('T20');
   game.addScore('OUT');
   game.addScore('0');
   game.roundChange();
   expect(game.getGameProgress()).toEqual({
     targetCount: 10,
     round: [],
-    score: [['20T', 'OUT', '0']],
+    score: [['T20', 'OUT', '0']],
   });
-  game.addScore('19T');
-  game.addScore('18T');
-  game.addScore('17T');
+  game.addScore('T19');
+  game.addScore('T18');
+  game.addScore('T17');
   expect(game.getGameProgress()).toEqual({
     targetCount: 10,
-    round: ['19T', '18T', '17T'],
-    score: [['20T', 'OUT', '0']],
+    round: ['T19', 'T18', 'T17'],
+    score: [['T20', 'OUT', '0']],
   });
   game.roundChange();
   expect(game.getGameProgress()).toEqual({
     targetCount: 10,
     round: [],
     score: [
-      ['20T', 'OUT', '0'],
-      ['19T', '18T', '17T'],
+      ['T20', 'OUT', '0'],
+      ['T19', 'T18', 'T17'],
     ],
   });
   const newGame = new Game(0);
-  newGame.resumeGame({ targetCount: 10, round: [], score: [['20T', 'OUT', '0']] });
-  expect(newGame.getScore()).toEqual([['20T', 'OUT', '0']]);
+  newGame.resumeGame({ targetCount: 10, round: [], score: [['T20', 'OUT', '0']] });
+  expect(newGame.getScore()).toEqual([['T20', 'OUT', '0']]);
   expect(newGame['targetCount']).toEqual(10);
 });

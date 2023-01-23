@@ -13,7 +13,7 @@ class DoubleTroubleGame implements Game, GameData<DoubleTroubleProgress, DoubleT
   getTotalScore() {
     const scores = [...this.player.getScore(), this.roundScore];
     return scores.reduce((pre, crr, i) => {
-      const target = `${i + 1}D` as point;
+      const target = `D${i + 1}` as point;
       const roundScore = crr.reduce((pre, crr) => pre + (crr === target ? 5 : 0), 0);
       return pre + roundScore;
     }, 0);

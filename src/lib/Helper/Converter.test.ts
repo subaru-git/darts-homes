@@ -11,22 +11,22 @@ import {
 
 test('convertScoreToNumber', () => {
   expect(convertScoreToNumber('20')).toBe(20);
-  expect(convertScoreToNumber('20D')).toBe(40);
-  expect(convertScoreToNumber('20T')).toBe(60);
+  expect(convertScoreToNumber('D20')).toBe(40);
+  expect(convertScoreToNumber('T20')).toBe(60);
   expect(convertScoreToNumber('2')).toBe(2);
-  expect(convertScoreToNumber('2D')).toBe(4);
-  expect(convertScoreToNumber('2T')).toBe(6);
+  expect(convertScoreToNumber('D2')).toBe(4);
+  expect(convertScoreToNumber('T2')).toBe(6);
   expect(convertScoreToNumber('4')).toBe(4);
-  expect(convertScoreToNumber('4D')).toBe(8);
-  expect(convertScoreToNumber('4T')).toBe(12);
+  expect(convertScoreToNumber('D4')).toBe(8);
+  expect(convertScoreToNumber('T4')).toBe(12);
   expect(convertScoreToNumber('D-BULL')).toBe(50);
   expect(convertScoreToNumber('S-BULL')).toBe(50);
 });
 
 test('convertScoreToCount', () => {
   expect(convertScoreToCount('20')).toBe(1);
-  expect(convertScoreToCount('20D')).toBe(2);
-  expect(convertScoreToCount('20T')).toBe(3);
+  expect(convertScoreToCount('D20')).toBe(2);
+  expect(convertScoreToCount('T20')).toBe(3);
   expect(convertScoreToCount('D-BULL')).toBe(2);
   expect(convertScoreToCount('S-BULL')).toBe(1);
 });
@@ -48,16 +48,26 @@ test('convertNumberOfCountToMarkCount', () => {
   expect(convertNumberOfCountToMarkCount(5)).toEqual([3, 2]);
 });
 
+test('convertPointToTarget', () => {
+  expect(convertScoreToNumber('20')).toBe(20);
+  expect(convertScoreToNumber('D20')).toBe(40);
+  expect(convertScoreToNumber('T20')).toBe(60);
+  expect(convertScoreToNumber('D-BULL')).toBe(50);
+  expect(convertScoreToNumber('S-BULL')).toBe(50);
+  expect(convertScoreToNumber('OUT')).toBe(0);
+  expect(convertScoreToNumber('0')).toBe(0);
+});
+
 test('convertPointsToScore', () => {
   const points: point[][] = [
-    ['20T', '20T', '20T'],
-    ['19T', '19T', '19T'],
-    ['18T', '18T', '18T'],
+    ['T20', 'T20', 'T20'],
+    ['T19', 'T19', 'T19'],
+    ['T18', 'T18', 'T18'],
   ];
   expect(convertPointsToScore(points)).toEqual([
-    { round: 0, score: ['20T', '20T', '20T'] },
-    { round: 1, score: ['19T', '19T', '19T'] },
-    { round: 2, score: ['18T', '18T', '18T'] },
+    { round: 0, score: ['T20', 'T20', 'T20'] },
+    { round: 1, score: ['T19', 'T19', 'T19'] },
+    { round: 2, score: ['T18', 'T18', 'T18'] },
   ]);
 });
 
@@ -65,9 +75,9 @@ test('convertGameResultToFireStore', () => {
   const r = {
     result: 0,
     scores: [
-      ['20T' as point, '20T' as point, '20T' as point],
-      ['19T' as point, '19T' as point, '19T' as point],
-      ['18T' as point, '18T' as point, '18T' as point],
+      ['T20' as point, 'T20' as point, 'T20' as point],
+      ['T19' as point, 'T19' as point, 'T19' as point],
+      ['T18' as point, 'T18' as point, 'T18' as point],
     ],
     playedAt: '2020-01-01T00:00:00.000Z',
     uuid: '1',
@@ -75,9 +85,9 @@ test('convertGameResultToFireStore', () => {
   const e = {
     result: 0,
     scores: [
-      { round: 0, score: ['20T', '20T', '20T'] },
-      { round: 1, score: ['19T', '19T', '19T'] },
-      { round: 2, score: ['18T', '18T', '18T'] },
+      { round: 0, score: ['T20', 'T20', 'T20'] },
+      { round: 1, score: ['T19', 'T19', 'T19'] },
+      { round: 2, score: ['T18', 'T18', 'T18'] },
     ],
     playedAt: '2020-01-01T00:00:00.000Z',
     uuid: '1',
@@ -119,14 +129,14 @@ test('convertGameResultToFireStore', () => {
 
 test('convertScoreToPoints', () => {
   const scores: FirebaseScore[] = [
-    { round: 1, score: ['19T' as point, '19T' as point, '19T' as point] },
-    { round: 0, score: ['20T' as point, '20T' as point, '20T' as point] },
-    { round: 2, score: ['18T' as point, '18T' as point, '18T' as point] },
+    { round: 1, score: ['T19' as point, 'T19' as point, 'T19' as point] },
+    { round: 0, score: ['T20' as point, 'T20' as point, 'T20' as point] },
+    { round: 2, score: ['T18' as point, 'T18' as point, 'T18' as point] },
   ];
   expect(convertScoreToPoints(scores)).toEqual([
-    ['20T', '20T', '20T'],
-    ['19T', '19T', '19T'],
-    ['18T', '18T', '18T'],
+    ['T20', 'T20', 'T20'],
+    ['T19', 'T19', 'T19'],
+    ['T18', 'T18', 'T18'],
   ]);
 });
 
@@ -134,9 +144,9 @@ test('convertGameResultToFireStore', () => {
   const e = {
     result: 0,
     scores: [
-      ['20T' as point, '20T' as point, '20T' as point],
-      ['19T' as point, '19T' as point, '19T' as point],
-      ['18T' as point, '18T' as point, '18T' as point],
+      ['T20' as point, 'T20' as point, 'T20' as point],
+      ['T19' as point, 'T19' as point, 'T19' as point],
+      ['T18' as point, 'T18' as point, 'T18' as point],
     ],
     playedAt: '2020-01-01T00:00:00.000Z',
     uuid: '1',
@@ -144,9 +154,9 @@ test('convertGameResultToFireStore', () => {
   const r = {
     result: 0,
     scores: [
-      { round: 1, score: ['19T' as point, '19T' as point, '19T' as point] },
-      { round: 0, score: ['20T' as point, '20T' as point, '20T' as point] },
-      { round: 2, score: ['18T' as point, '18T' as point, '18T' as point] },
+      { round: 1, score: ['T19' as point, 'T19' as point, 'T19' as point] },
+      { round: 0, score: ['T20' as point, 'T20' as point, 'T20' as point] },
+      { round: 2, score: ['T18' as point, 'T18' as point, 'T18' as point] },
     ],
     playedAt: '2020-01-01T00:00:00.000Z',
     uuid: '1',

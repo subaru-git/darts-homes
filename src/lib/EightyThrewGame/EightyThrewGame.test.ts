@@ -11,9 +11,9 @@ test('in gaming', () => {
   expect(game.getCurrentTarget()).toBe(82);
   game.addScore('20');
   expect(game.getCurrentTarget()).toBe(62);
-  game.addScore('10T');
+  game.addScore('T10');
   expect(game.getCurrentTarget()).toBe(32);
-  game.addScore('16D');
+  game.addScore('D16');
   expect(game.getCurrentTarget()).toBe(0);
   expect(game.getTotalScore()).toBe(10);
   game.roundChange();
@@ -21,13 +21,13 @@ test('in gaming', () => {
   expect(game.getCurrentTarget()).toBe(82);
   game.addScore('D-BULL');
   expect(game.getCurrentTarget()).toBe(32);
-  game.addScore('16D');
+  game.addScore('D16');
   expect(game.getCurrentTarget()).toBe(0);
   expect(game.getTotalScore()).toBe(30);
   game.roundChange();
   expect(game.getRound()).toBe(3);
   expect(game.getCurrentTarget()).toBe(82);
-  game.addScore('20T');
+  game.addScore('T20');
   expect(game.getCurrentTarget()).toBe(22);
   game.addScore('11');
   expect(game.getCurrentTarget()).toBe(11);
@@ -37,7 +37,7 @@ test('in gaming', () => {
   game.roundChange();
   expect(game.getRound()).toBe(4);
   expect(game.getCurrentTarget()).toBe(82);
-  game.addScore('20T');
+  game.addScore('T20');
   expect(game.getCurrentTarget()).toBe(22);
   game.addScore('14');
   expect(game.getCurrentTarget()).toBe(8);

@@ -60,11 +60,11 @@ class TreblesForShowGame implements Game, GameData<TreblesForShowProgress, Trebl
     };
   }
   private calcRound(round: point[]) {
-    if (equal(round, ['20T', '20T', '20T'])) return 30;
+    if (equal(round, ['T20', 'T20', 'T20'])) return 30;
     return round.reduce((pre, crr) => {
       if (crr === '20') return pre + 2;
-      if (crr === '20D') return pre + 2;
-      if (crr === '20T') return pre + 5;
+      if (crr === 'D20') return pre + 2;
+      if (crr === 'T20') return pre + 5;
       return pre;
     }, 0);
   }

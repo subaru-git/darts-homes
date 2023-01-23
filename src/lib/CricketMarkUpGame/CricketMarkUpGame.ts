@@ -1,6 +1,7 @@
 import {
   convertCountScoreToNumberOfCount,
   convertNumberToSinglePoint,
+  convertPointToTarget,
   convertScoreToCount,
 } from '@/lib/Helper/Converter';
 import Player from '@/lib/Player/Player';
@@ -21,7 +22,7 @@ class CricketMarkUpGame implements Game, GameData<CricketMarkUpProgress, Cricket
     const score = [...this.player.getScore(), this.roundScore];
     for (const round of score) {
       for (const s of round) {
-        if (parseInt(s) !== target && !(target === 25 && s.includes('BULL'))) continue;
+        if (convertPointToTarget(s) !== target && !(target === 25 && s.includes('BULL'))) continue;
         const c = convertScoreToCount(s);
         count -= c;
         if (count <= 0) {
@@ -51,7 +52,8 @@ class CricketMarkUpGame implements Game, GameData<CricketMarkUpProgress, Cricket
     return score.map((round) =>
       round.map((s) => {
         if (target === -1) return '-1';
-        if (parseInt(s) !== target && !(target === 25 && s.includes('BULL'))) return `${target}-0`;
+        if (convertPointToTarget(s) !== target && !(target === 25 && s.includes('BULL')))
+          return `${target}-0`;
         const c = convertScoreToCount(s);
         count -= c;
         if (count <= 0) {

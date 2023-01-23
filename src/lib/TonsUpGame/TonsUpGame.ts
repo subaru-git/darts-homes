@@ -63,7 +63,7 @@ class TonsUpGame implements Game, GameData<TonsUpProgress, TonsUpResult> {
     };
   }
   private calcRound(round: point[]) {
-    if (equal(round.slice(0, 2), ['20T', '20D'])) return { target: 0, point: 20 };
+    if (equal(round.slice(0, 2), ['T20', 'D20'])) return { target: 0, point: 20 };
     return round.reduce(
       (pre, crr) => {
         const { target, point } = this.calcTarget(pre.target, crr);

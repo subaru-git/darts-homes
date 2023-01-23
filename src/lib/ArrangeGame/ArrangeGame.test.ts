@@ -15,67 +15,67 @@ test('double out', () => {
   });
   expect(game.getCurrentTarget()).toBe(120);
   expect(game.getLastTargetOutCount()).toBe(8);
-  game.addScore('20T');
-  expect(game.getRoundScore()).toEqual(['20T']);
+  game.addScore('T20');
+  expect(game.getRoundScore()).toEqual(['T20']);
   expect(game.getCurrentTarget()).toBe(60);
   game.addScore('20');
-  expect(game.getRoundScore()).toEqual(['20T', '20']);
+  expect(game.getRoundScore()).toEqual(['T20', '20']);
   expect(game.getCurrentTarget()).toBe(40);
-  game.addScore('20D');
-  expect(game.getRoundScore()).toEqual(['20T', '20', '20D']);
+  game.addScore('D20');
+  expect(game.getRoundScore()).toEqual(['T20', '20', 'D20']);
   expect(game.getCurrentTarget()).toBe(0);
   expect(game.getLastTargetOutCount()).toBe(7);
   game.roundChange();
   expect(game.getCurrentTarget()).toBe(110);
   expect(game.getLastTargetOutCount()).toBe(7);
-  game.addScore('20T');
-  expect(game.getRoundScore()).toEqual(['20T']);
+  game.addScore('T20');
+  expect(game.getRoundScore()).toEqual(['T20']);
   expect(game.getCurrentTarget()).toBe(50);
-  game.addScore('20D');
-  expect(game.getRoundScore()).toEqual(['20T', '20D']);
+  game.addScore('D20');
+  expect(game.getRoundScore()).toEqual(['T20', 'D20']);
   expect(game.getCurrentTarget()).toBe(10);
   game.addScore('10');
-  expect(game.getRoundScore()).toEqual(['20T', '20D', '10']);
+  expect(game.getRoundScore()).toEqual(['T20', 'D20', '10']);
   expect(game.getCurrentTarget()).toBe(-1);
   expect(game.getLastTargetOutCount()).toBe(7);
   game.roundChange();
   expect(game.getCurrentTarget()).toBe(110);
   expect(game.getLastTargetOutCount()).toBe(7);
-  game.addScore('20T');
-  expect(game.getRoundScore()).toEqual(['20T']);
+  game.addScore('T20');
+  expect(game.getRoundScore()).toEqual(['T20']);
   expect(game.getCurrentTarget()).toBe(50);
-  game.addScore('20T');
-  expect(game.getRoundScore()).toEqual(['20T', '20T', '0']);
+  game.addScore('T20');
+  expect(game.getRoundScore()).toEqual(['T20', 'T20', '0']);
   expect(game.getCurrentTarget()).toBe(-1);
   game.roundChange();
   expect(game.getCurrentTarget()).toBe(110);
   expect(game.getLastTargetOutCount()).toBe(7);
-  game.addScore('20T');
-  expect(game.getRoundScore()).toEqual(['20T']);
+  game.addScore('T20');
+  expect(game.getRoundScore()).toEqual(['T20']);
   expect(game.getCurrentTarget()).toBe(50);
   game.addScore('D-BULL');
-  expect(game.getRoundScore()).toEqual(['20T', 'D-BULL', '0']);
+  expect(game.getRoundScore()).toEqual(['T20', 'D-BULL', '0']);
   expect(game.getCurrentTarget()).toBe(0);
   game.roundChange();
   expect(game.getCurrentTarget()).toBe(100);
   expect(game.getLastTargetOutCount()).toBe(6);
-  game.addScore('20T');
-  expect(game.getRoundScore()).toEqual(['20T']);
+  game.addScore('T20');
+  expect(game.getRoundScore()).toEqual(['T20']);
   expect(game.getCurrentTarget()).toBe(40);
-  game.addScore('20D');
-  expect(game.getRoundScore()).toEqual(['20T', '20D', '0']);
+  game.addScore('D20');
+  expect(game.getRoundScore()).toEqual(['T20', 'D20', '0']);
   expect(game.getCurrentTarget()).toBe(0);
   game.roundChange();
   expect(game.getCurrentTarget()).toBe(90);
   expect(game.getLastTargetOutCount()).toBe(5);
-  game.addScore('20T');
-  expect(game.getRoundScore()).toEqual(['20T']);
+  game.addScore('T20');
+  expect(game.getRoundScore()).toEqual(['T20']);
   expect(game.getCurrentTarget()).toBe(30);
   game.addScore('10');
-  expect(game.getRoundScore()).toEqual(['20T', '10']);
+  expect(game.getRoundScore()).toEqual(['T20', '10']);
   expect(game.getCurrentTarget()).toBe(20);
   game.addScore('10');
-  expect(game.getRoundScore()).toEqual(['20T', '10', '10']);
+  expect(game.getRoundScore()).toEqual(['T20', '10', '10']);
   expect(game.getCurrentTarget()).toBe(10);
   game.roundChange();
   expect(game.getCurrentTarget()).toBe(10);
@@ -83,37 +83,37 @@ test('double out', () => {
   expect(game.getRoundScore()).toEqual(['10', '0', '0']);
   game.roundChange();
   expect(game.getCurrentTarget()).toBe(10);
-  game.addScore('5D');
-  expect(game.getRoundScore()).toEqual(['5D', '0', '0']);
+  game.addScore('D5');
+  expect(game.getRoundScore()).toEqual(['D5', '0', '0']);
   game.roundChange();
   expect(game.getCurrentTarget()).toBe(80);
   expect(game.getLastTargetOutCount()).toBe(4);
-  game.addScore('20T');
-  expect(game.getRoundScore()).toEqual(['20T']);
+  game.addScore('T20');
+  expect(game.getRoundScore()).toEqual(['T20']);
   game.addScore('19');
-  expect(game.getRoundScore()).toEqual(['20T', '19', '0']);
+  expect(game.getRoundScore()).toEqual(['T20', '19', '0']);
   game.roundChange();
   expect(game.getCurrentTarget()).toBe(80);
   expect(game.getLastTargetOutCount()).toBe(4);
-  game.addScore('20D');
-  expect(game.getRoundScore()).toEqual(['20D']);
-  game.addScore('20D');
-  expect(game.getRoundScore()).toEqual(['20D', '20D', '0']);
+  game.addScore('D20');
+  expect(game.getRoundScore()).toEqual(['D20']);
+  game.addScore('D20');
+  expect(game.getRoundScore()).toEqual(['D20', 'D20', '0']);
   game.roundChange();
   expect(game.getCurrentTarget()).toBe(70);
   expect(game.getLastTargetOutCount()).toBe(3);
-  game.addScore('20D');
-  expect(game.getRoundScore()).toEqual(['20D']);
+  game.addScore('D20');
+  expect(game.getRoundScore()).toEqual(['D20']);
   expect(game.getCurrentTarget()).toBe(30);
-  game.addScore('15D');
-  expect(game.getRoundScore()).toEqual(['20D', '15D', '0']);
+  game.addScore('D15');
+  expect(game.getRoundScore()).toEqual(['D20', 'D15', '0']);
   game.roundChange();
   expect(game.getCurrentTarget()).toBe(60);
   expect(game.getLastTargetOutCount()).toBe(2);
-  game.addScore('15D');
-  expect(game.getRoundScore()).toEqual(['15D']);
-  game.addScore('15D');
-  expect(game.getRoundScore()).toEqual(['15D', '15D', '0']);
+  game.addScore('D15');
+  expect(game.getRoundScore()).toEqual(['D15']);
+  game.addScore('D15');
+  expect(game.getRoundScore()).toEqual(['D15', 'D15', '0']);
   game.roundChange();
   expect(game.getCurrentTarget()).toBe(50);
   expect(game.getLastTargetOutCount()).toBe(1);
@@ -125,50 +125,50 @@ test('double out', () => {
   const mockDate = new Date(2021, 0, 1, 1, 1, 1);
   jest.spyOn(global, 'Date').mockImplementation(() => mockDate);
   expect(game.getScore()).toEqual([
-    ['20T', '20', '20D'],
-    ['20T', '20D', '10'],
-    ['20T', '20T', '0'],
-    ['20T', 'D-BULL', '0'],
-    ['20T', '20D', '0'],
-    ['20T', '10', '10'],
+    ['T20', '20', 'D20'],
+    ['T20', 'D20', '10'],
+    ['T20', 'T20', '0'],
+    ['T20', 'D-BULL', '0'],
+    ['T20', 'D20', '0'],
+    ['T20', '10', '10'],
     ['10', '0', '0'],
-    ['5D', '0', '0'],
-    ['20T', '19', '0'],
-    ['20D', '20D', '0'],
-    ['20D', '15D', '0'],
-    ['15D', '15D', '0'],
+    ['D5', '0', '0'],
+    ['T20', '19', '0'],
+    ['D20', 'D20', '0'],
+    ['D20', 'D15', '0'],
+    ['D15', 'D15', '0'],
     ['D-BULL', '0', '0'],
   ]);
   expect(game.getTargets()).toEqual([120, 110, 100, 90, 80, 70, 60, 50]);
   expect(game.getGameResult()).toEqual({
     result: [
-      { target: 120, score: [['20T', '20', '20D']] },
+      { target: 120, score: [['T20', '20', 'D20']] },
       {
         target: 110,
         score: [
-          ['20T', '20D', '10'],
-          ['20T', '20T', '0'],
-          ['20T', 'D-BULL', '0'],
+          ['T20', 'D20', '10'],
+          ['T20', 'T20', '0'],
+          ['T20', 'D-BULL', '0'],
         ],
       },
-      { target: 100, score: [['20T', '20D', '0']] },
+      { target: 100, score: [['T20', 'D20', '0']] },
       {
         target: 90,
         score: [
-          ['20T', '10', '10'],
+          ['T20', '10', '10'],
           ['10', '0', '0'],
-          ['5D', '0', '0'],
+          ['D5', '0', '0'],
         ],
       },
       {
         target: 80,
         score: [
-          ['20T', '19', '0'],
-          ['20D', '20D', '0'],
+          ['T20', '19', '0'],
+          ['D20', 'D20', '0'],
         ],
       },
-      { target: 70, score: [['20D', '15D', '0']] },
-      { target: 60, score: [['15D', '15D', '0']] },
+      { target: 70, score: [['D20', 'D15', '0']] },
+      { target: 60, score: [['D15', 'D15', '0']] },
       { target: 50, score: [['D-BULL', '0', '0']] },
     ],
     settings: {
@@ -192,49 +192,49 @@ test('single out', () => {
   });
   expect(game.getCurrentTarget()).toBe(120);
   expect(game.getLastTargetOutCount()).toBe(8);
-  game.addScore('20T');
-  expect(game.getRoundScore()).toEqual(['20T']);
+  game.addScore('T20');
+  expect(game.getRoundScore()).toEqual(['T20']);
   expect(game.getCurrentTarget()).toBe(60);
   game.addScore('20');
-  expect(game.getRoundScore()).toEqual(['20T', '20']);
+  expect(game.getRoundScore()).toEqual(['T20', '20']);
   expect(game.getCurrentTarget()).toBe(40);
-  game.addScore('20D');
-  expect(game.getRoundScore()).toEqual(['20T', '20', '20D']);
+  game.addScore('D20');
+  expect(game.getRoundScore()).toEqual(['T20', '20', 'D20']);
   expect(game.getCurrentTarget()).toBe(0);
   expect(game.getLastTargetOutCount()).toBe(7);
   game.roundChange();
   expect(game.getCurrentTarget()).toBe(110);
   expect(game.getLastTargetOutCount()).toBe(7);
-  game.addScore('20T');
-  expect(game.getRoundScore()).toEqual(['20T']);
+  game.addScore('T20');
+  expect(game.getRoundScore()).toEqual(['T20']);
   expect(game.getCurrentTarget()).toBe(50);
-  game.addScore('20D');
-  expect(game.getRoundScore()).toEqual(['20T', '20D']);
+  game.addScore('D20');
+  expect(game.getRoundScore()).toEqual(['T20', 'D20']);
   expect(game.getCurrentTarget()).toBe(10);
   game.addScore('10');
-  expect(game.getRoundScore()).toEqual(['20T', '20D', '10']);
+  expect(game.getRoundScore()).toEqual(['T20', 'D20', '10']);
   expect(game.getCurrentTarget()).toBe(0);
   expect(game.getLastTargetOutCount()).toBe(6);
   game.roundChange();
   expect(game.getCurrentTarget()).toBe(100);
   expect(game.getLastTargetOutCount()).toBe(6);
-  game.addScore('20T');
-  expect(game.getRoundScore()).toEqual(['20T']);
+  game.addScore('T20');
+  expect(game.getRoundScore()).toEqual(['T20']);
   expect(game.getCurrentTarget()).toBe(40);
-  game.addScore('20D');
-  expect(game.getRoundScore()).toEqual(['20T', '20D', '0']);
+  game.addScore('D20');
+  expect(game.getRoundScore()).toEqual(['T20', 'D20', '0']);
   expect(game.getCurrentTarget()).toBe(0);
   game.roundChange();
   expect(game.getCurrentTarget()).toBe(90);
   expect(game.getLastTargetOutCount()).toBe(5);
-  game.addScore('20T');
-  expect(game.getRoundScore()).toEqual(['20T']);
+  game.addScore('T20');
+  expect(game.getRoundScore()).toEqual(['T20']);
   expect(game.getCurrentTarget()).toBe(30);
   game.addScore('10');
-  expect(game.getRoundScore()).toEqual(['20T', '10']);
+  expect(game.getRoundScore()).toEqual(['T20', '10']);
   expect(game.getCurrentTarget()).toBe(20);
   game.addScore('10');
-  expect(game.getRoundScore()).toEqual(['20T', '10', '10']);
+  expect(game.getRoundScore()).toEqual(['T20', '10', '10']);
   expect(game.getCurrentTarget()).toBe(10);
   game.roundChange();
   expect(game.getCurrentTarget()).toBe(10);
@@ -243,25 +243,25 @@ test('single out', () => {
   game.roundChange();
   expect(game.getCurrentTarget()).toBe(80);
   expect(game.getLastTargetOutCount()).toBe(4);
-  game.addScore('20D');
-  expect(game.getRoundScore()).toEqual(['20D']);
-  game.addScore('20D');
-  expect(game.getRoundScore()).toEqual(['20D', '20D', '0']);
+  game.addScore('D20');
+  expect(game.getRoundScore()).toEqual(['D20']);
+  game.addScore('D20');
+  expect(game.getRoundScore()).toEqual(['D20', 'D20', '0']);
   game.roundChange();
   expect(game.getCurrentTarget()).toBe(70);
   expect(game.getLastTargetOutCount()).toBe(3);
-  game.addScore('20D');
-  expect(game.getRoundScore()).toEqual(['20D']);
+  game.addScore('D20');
+  expect(game.getRoundScore()).toEqual(['D20']);
   expect(game.getCurrentTarget()).toBe(30);
-  game.addScore('15D');
-  expect(game.getRoundScore()).toEqual(['20D', '15D', '0']);
+  game.addScore('D15');
+  expect(game.getRoundScore()).toEqual(['D20', 'D15', '0']);
   game.roundChange();
   expect(game.getCurrentTarget()).toBe(60);
   expect(game.getLastTargetOutCount()).toBe(2);
-  game.addScore('15D');
-  expect(game.getRoundScore()).toEqual(['15D']);
-  game.addScore('15D');
-  expect(game.getRoundScore()).toEqual(['15D', '15D', '0']);
+  game.addScore('D15');
+  expect(game.getRoundScore()).toEqual(['D15']);
+  game.addScore('D15');
+  expect(game.getRoundScore()).toEqual(['D15', 'D15', '0']);
   game.roundChange();
   expect(game.getCurrentTarget()).toBe(50);
   expect(game.getLastTargetOutCount()).toBe(1);
@@ -281,49 +281,49 @@ test('master out', () => {
   });
   expect(game.getCurrentTarget()).toBe(120);
   expect(game.getLastTargetOutCount()).toBe(8);
-  game.addScore('20T');
-  expect(game.getRoundScore()).toEqual(['20T']);
+  game.addScore('T20');
+  expect(game.getRoundScore()).toEqual(['T20']);
   expect(game.getCurrentTarget()).toBe(60);
   game.addScore('20');
-  expect(game.getRoundScore()).toEqual(['20T', '20']);
+  expect(game.getRoundScore()).toEqual(['T20', '20']);
   expect(game.getCurrentTarget()).toBe(40);
-  game.addScore('20D');
-  expect(game.getRoundScore()).toEqual(['20T', '20', '20D']);
+  game.addScore('D20');
+  expect(game.getRoundScore()).toEqual(['T20', '20', 'D20']);
   expect(game.getCurrentTarget()).toBe(0);
   expect(game.getLastTargetOutCount()).toBe(7);
   game.roundChange();
   expect(game.getCurrentTarget()).toBe(110);
   expect(game.getLastTargetOutCount()).toBe(7);
-  game.addScore('20T');
-  expect(game.getRoundScore()).toEqual(['20T']);
+  game.addScore('T20');
+  expect(game.getRoundScore()).toEqual(['T20']);
   expect(game.getCurrentTarget()).toBe(50);
-  game.addScore('20D');
-  expect(game.getRoundScore()).toEqual(['20T', '20D']);
+  game.addScore('D20');
+  expect(game.getRoundScore()).toEqual(['T20', 'D20']);
   expect(game.getCurrentTarget()).toBe(10);
-  game.addScore('5D');
-  expect(game.getRoundScore()).toEqual(['20T', '20D', '5D']);
+  game.addScore('D5');
+  expect(game.getRoundScore()).toEqual(['T20', 'D20', 'D5']);
   expect(game.getCurrentTarget()).toBe(0);
   expect(game.getLastTargetOutCount()).toBe(6);
   game.roundChange();
   expect(game.getCurrentTarget()).toBe(100);
   expect(game.getLastTargetOutCount()).toBe(6);
-  game.addScore('20T');
-  expect(game.getRoundScore()).toEqual(['20T']);
+  game.addScore('T20');
+  expect(game.getRoundScore()).toEqual(['T20']);
   expect(game.getCurrentTarget()).toBe(40);
-  game.addScore('20D');
-  expect(game.getRoundScore()).toEqual(['20T', '20D', '0']);
+  game.addScore('D20');
+  expect(game.getRoundScore()).toEqual(['T20', 'D20', '0']);
   expect(game.getCurrentTarget()).toBe(0);
   game.roundChange();
   expect(game.getCurrentTarget()).toBe(90);
   expect(game.getLastTargetOutCount()).toBe(5);
-  game.addScore('20T');
-  expect(game.getRoundScore()).toEqual(['20T']);
+  game.addScore('T20');
+  expect(game.getRoundScore()).toEqual(['T20']);
   expect(game.getCurrentTarget()).toBe(30);
   game.addScore('10');
-  expect(game.getRoundScore()).toEqual(['20T', '10']);
+  expect(game.getRoundScore()).toEqual(['T20', '10']);
   expect(game.getCurrentTarget()).toBe(20);
   game.addScore('10');
-  expect(game.getRoundScore()).toEqual(['20T', '10', '10']);
+  expect(game.getRoundScore()).toEqual(['T20', '10', '10']);
   expect(game.getCurrentTarget()).toBe(10);
   game.roundChange();
   expect(game.getCurrentTarget()).toBe(10);
@@ -334,31 +334,31 @@ test('master out', () => {
   game.addScore('1');
   expect(game.getRoundScore()).toEqual(['1']);
   expect(game.getCurrentTarget()).toBe(9);
-  game.addScore('3T');
-  expect(game.getRoundScore()).toEqual(['1', '3T', '0']);
+  game.addScore('T3');
+  expect(game.getRoundScore()).toEqual(['1', 'T3', '0']);
   expect(game.getCurrentTarget()).toBe(0);
   game.roundChange();
   expect(game.getCurrentTarget()).toBe(80);
   expect(game.getLastTargetOutCount()).toBe(4);
-  game.addScore('20D');
-  expect(game.getRoundScore()).toEqual(['20D']);
-  game.addScore('20D');
-  expect(game.getRoundScore()).toEqual(['20D', '20D', '0']);
+  game.addScore('D20');
+  expect(game.getRoundScore()).toEqual(['D20']);
+  game.addScore('D20');
+  expect(game.getRoundScore()).toEqual(['D20', 'D20', '0']);
   game.roundChange();
   expect(game.getCurrentTarget()).toBe(70);
   expect(game.getLastTargetOutCount()).toBe(3);
-  game.addScore('20D');
-  expect(game.getRoundScore()).toEqual(['20D']);
+  game.addScore('D20');
+  expect(game.getRoundScore()).toEqual(['D20']);
   expect(game.getCurrentTarget()).toBe(30);
-  game.addScore('15D');
-  expect(game.getRoundScore()).toEqual(['20D', '15D', '0']);
+  game.addScore('D15');
+  expect(game.getRoundScore()).toEqual(['D20', 'D15', '0']);
   game.roundChange();
   expect(game.getCurrentTarget()).toBe(60);
   expect(game.getLastTargetOutCount()).toBe(2);
-  game.addScore('15D');
-  expect(game.getRoundScore()).toEqual(['15D']);
-  game.addScore('15D');
-  expect(game.getRoundScore()).toEqual(['15D', '15D', '0']);
+  game.addScore('D15');
+  expect(game.getRoundScore()).toEqual(['D15']);
+  game.addScore('D15');
+  expect(game.getRoundScore()).toEqual(['D15', 'D15', '0']);
   game.roundChange();
   expect(game.getCurrentTarget()).toBe(50);
   expect(game.getLastTargetOutCount()).toBe(1);

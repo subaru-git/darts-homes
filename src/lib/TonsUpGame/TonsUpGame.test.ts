@@ -11,7 +11,7 @@ test('in gaming', () => {
   expect(game.getCurrentTarget()).toBe(100);
   game.addScore('20');
   expect(game.getCurrentTarget()).toBe(80);
-  game.addScore('20T');
+  game.addScore('T20');
   expect(game.getCurrentTarget()).toBe(20);
   game.addScore('20');
   expect(game.getCurrentTarget()).toBe(20);
@@ -21,20 +21,19 @@ test('in gaming', () => {
   expect(game.getCurrentTarget()).toBe(100);
   game.addScore('20');
   expect(game.getCurrentTarget()).toBe(80);
-  game.addScore('20D');
+  game.addScore('D20');
   expect(game.getCurrentTarget()).toBe(40);
-  game.addScore('20D');
+  game.addScore('D20');
   expect(game.getCurrentTarget()).toBe(0);
   expect(game.getTotalScore()).toEqual(10);
   game.roundChange();
   expect(game.getRound()).toBe(3);
   expect(game.getCurrentTarget()).toBe(100);
-  game.addScore('20T');
+  game.addScore('T20');
   expect(game.getCurrentTarget()).toBe(40);
-  game.addScore('20D');
+  game.addScore('D20');
   expect(game.getCurrentTarget()).toBe(0);
-  expect(game.getRoundScore()).toEqual(['20T', '20D', '0']);
+  expect(game.getRoundScore()).toEqual(['T20', 'D20', '0']);
   expect(game.getTotalScore()).toEqual(30);
-
   expect(game.isFinished()).toBeTruthy();
 });

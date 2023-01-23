@@ -2,8 +2,8 @@ export const convertScoreToNumber = (score: point, separate: boolean = false) =>
   if (score === 'S-BULL') return separate ? 25 : 50;
   if (score === 'D-BULL') return 50;
   if (score === 'OUT') return 0;
-  if (score.includes('T')) return Number(score.split('T')[0]) * 3;
-  if (score.includes('D')) return Number(score.split('D')[0]) * 2;
+  if (score.includes('T')) return Number(score.split('T')[1]) * 3;
+  if (score.includes('D')) return Number(score.split('D')[1]) * 2;
   return Number(score);
 };
 
@@ -44,6 +44,13 @@ export const convertNumberToSinglePoint = (n: number) => {
   if (n === 25) return 'S-BULL';
   if (n > 20) return '0';
   return `${n}`;
+};
+
+export const convertPointToTarget = (point: point) => {
+  if (point === 'S-BULL' || point === 'D-BULL') return 25;
+  if (point === 'OUT') return 0;
+  const t = point.includes('T') || point.includes('D') ? point.slice(1) : point;
+  return parseInt(t);
 };
 
 export const convertGameResultToFirebaseResult = (

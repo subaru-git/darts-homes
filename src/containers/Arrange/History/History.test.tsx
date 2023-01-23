@@ -37,13 +37,13 @@ const history: ArrangeResultModel[] = [
   {
     // prettier-ignore
     result: [
-      { target: 167, score: [['20T', '19T', 'D-BULL']] },
-      { target: 28, score: [['14D', '0', '0']] },
-      { target: 161, score: [['20T', '17T', 'D-BULL']] },
-      { target: 86, score: [['D-BULL', '18D', '0']] },
-      { target: 153, score: [['17T', '17T', '17T']] },
-      { target: 166, score: [['D-BULL', 'D-BULL', '20T'], ['3D', '0', '0']]},
-      { target: 82, score: [['D-BULL', '16D', '0']] },
+      { target: 167, score: [['T20', 'T19', 'D-BULL']] },
+      { target: 28, score: [['D14', '0', '0']] },
+      { target: 161, score: [['T20', 'T17', 'D-BULL']] },
+      { target: 86, score: [['D-BULL', 'D18', '0']] },
+      { target: 153, score: [['T17', 'T17', 'T17']] },
+      { target: 166, score: [['D-BULL', 'D-BULL', 'T20'], ['D3', '0', '0']]},
+      { target: 82, score: [['D-BULL', 'D16', '0']] },
       { target: 63, score: [['D-BULL', '13', '0']] },
     ],
     uuid: uuidv4(),
@@ -58,14 +58,14 @@ const history: ArrangeResultModel[] = [
   {
     // prettier-ignore
     result: [
-      { target: 152, score: [['20T', '20T', '16D']] },
-      { target: 25, score: [['9', '8D', '0']] },
-      { target: 142, score: [['S-BULL', 'S-BULL', '14T']] },
-      { target: 87, score: [['19T', '15D', '0']] },
-      { target: 154, score: [['S-BULL', 'S-BULL', '18T']] },
-      { target: 123, score: [['D-BULL', '19T', '8D']]},
+      { target: 152, score: [['T20', 'T20', 'D16']] },
+      { target: 25, score: [['9', 'D8', '0']] },
+      { target: 142, score: [['S-BULL', 'S-BULL', 'T14']] },
+      { target: 87, score: [['T19', 'D15', '0']] },
+      { target: 154, score: [['S-BULL', 'S-BULL', 'T18']] },
+      { target: 123, score: [['D-BULL', 'T19', 'D8']]},
       { target: 67, score: [['17', 'S-BULL', '0']] },
-      { target: 14, score: [['7D', '0', '0']] },
+      { target: 14, score: [['D7', '0', '0']] },
     ],
     uuid: uuidv4(),
     settings: {
@@ -79,14 +79,14 @@ const history: ArrangeResultModel[] = [
   {
     // prettier-ignore
     result: [
-      { target: 150, score: [['20T', '20T', '15D']] },
-      { target: 26, score: [['10', '8D', '0']] },
-      { target: 140, score: [['S-BULL', 'S-BULL', '20D']] },
-      { target: 82, score: [['S-BULL', '16D', '0']] },
-      { target: 10, score: [['5D', '0', '0']] },
-      { target: 120, score: [['D-BULL', 'S-BULL', '10D']]},
-      { target: 68, score: [['14D', '20D', '0']] },
-      { target: 16, score: [['8D', '0', '0']] },
+      { target: 150, score: [['T20', 'T20', 'D15']] },
+      { target: 26, score: [['10', 'D8', '0']] },
+      { target: 140, score: [['S-BULL', 'S-BULL', 'D20']] },
+      { target: 82, score: [['S-BULL', 'D16', '0']] },
+      { target: 10, score: [['D5', '0', '0']] },
+      { target: 120, score: [['D-BULL', 'S-BULL', 'D10']]},
+      { target: 68, score: [['D14', 'D20', '0']] },
+      { target: 16, score: [['D8', '0', '0']] },
     ],
     uuid: uuidv4(),
     settings: {

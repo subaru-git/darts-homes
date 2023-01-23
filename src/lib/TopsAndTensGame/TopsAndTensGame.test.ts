@@ -18,11 +18,11 @@ test('in gaming', () => {
   game.roundChange();
   expect(game.getRound()).toBe(2);
   expect(game.getCurrentTarget()).toBe(40);
-  game.addScore('20D');
+  game.addScore('D20');
   expect(game.getCurrentTarget()).toBe(40);
   game.addScore('20');
   expect(game.getCurrentTarget()).toBe(20);
-  game.addScore('20D');
+  game.addScore('D20');
   expect(game.getTotalScore()).toEqual(5);
   game.roundChange();
   expect(game.getRound()).toBe(3);
@@ -31,7 +31,7 @@ test('in gaming', () => {
   expect(game.getCurrentTarget()).toBe(20);
   game.addScore('10');
   expect(game.getCurrentTarget()).toBe(10);
-  game.addScore('5D');
+  game.addScore('D5');
   expect(game.getTotalScore()).toEqual(10);
   expect(game.isFinished()).toBeTruthy();
 });

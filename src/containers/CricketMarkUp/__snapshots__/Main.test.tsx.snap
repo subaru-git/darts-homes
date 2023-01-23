@@ -1816,17 +1816,17 @@ exports[`should rendering 1`] = `
                         <td
                           class="css-xumdn4"
                         >
-                          20T
+                          T20
                         </td>
                         <td
                           class="css-xumdn4"
                         >
-                          19T
+                          T19
                         </td>
                         <td
                           class="css-xumdn4"
                         >
-                          18T
+                          T18
                         </td>
                       </tr>
                       <tr
@@ -1835,17 +1835,17 @@ exports[`should rendering 1`] = `
                         <td
                           class="css-xumdn4"
                         >
-                          17T
+                          T17
                         </td>
                         <td
                           class="css-xumdn4"
                         >
-                          16T
+                          T16
                         </td>
                         <td
                           class="css-xumdn4"
                         >
-                          15T
+                          T15
                         </td>
                       </tr>
                     </tbody>

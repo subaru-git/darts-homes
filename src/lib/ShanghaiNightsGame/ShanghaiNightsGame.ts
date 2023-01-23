@@ -63,7 +63,7 @@ class ShanghaiNightsGame implements Game, GameData<ShanghaiNightsProgress, Shang
     };
   }
   private calcRound(round: point[]) {
-    if (equal(round, ['20D', '20D', '20D'])) return { target: 0, point: 20 };
+    if (equal(round, ['D20', 'D20', 'D20'])) return { target: 0, point: 20 };
     return round.reduce(
       (pre, crr) => {
         const { target, point } = this.calcTarget(pre.target, crr);
