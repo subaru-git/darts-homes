@@ -4,6 +4,7 @@ import Script from 'next/script';
 import type { AppProps } from 'next/app';
 import AppDefaultSeo from '@/components/AppDefaultSeo';
 import Providers from '@/contexts/Providers';
+import '../styles/globals.css';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (

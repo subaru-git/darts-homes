@@ -1,24 +1,33 @@
 import React, { FC } from 'react';
-import { Box, Center, HStack, Link, Text } from '@chakra-ui/react';
 import { AiFillGithub, AiOutlineTwitter } from 'react-icons/ai';
 
 const Footer: FC = () => {
   return (
-    <Box bg={'gray.700'} height={'24px'} w={'100%'} bottom={0} position={'absolute'} mb={'-24px'}>
-      <Center>
-        <HStack gap={8}>
-          <Text color={'white'}>{`(c) 2022 okadat`}</Text>
-          <HStack gap={2}>
-            <Link href={'https://github.com/subaru-git'} aria-label={'subaru-git github page'}>
+    <div className='absolute bottom-0 -mb-6 h-6 w-full bg-gray-700'>
+      <div className='flex justify-center'>
+        <div className='flex gap-8'>
+          <div className='text-white'>{`(c) 2023 darts homes`}</div>
+          <div className='flex gap-3'>
+            <a
+              href={'https://github.com/subaru-git'}
+              target='_blank'
+              rel='noopener noreferrer'
+              aria-label={'subaru-git github page'}
+            >
               <AiFillGithub size={24} color={'white'} />
-            </Link>
-            <Link href={'https://twitter.com/subaru_m_'} aria-label={'subaru_m_ twitter'}>
+            </a>
+            <a
+              href={'https://twitter.com/darts_homes'}
+              target='_blank'
+              rel='noopener noreferrer'
+              aria-label={'darts_homes twitter'}
+            >
               <AiOutlineTwitter size={24} color={'white'} />
-            </Link>
-          </HStack>
-        </HStack>
-      </Center>
-    </Box>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 

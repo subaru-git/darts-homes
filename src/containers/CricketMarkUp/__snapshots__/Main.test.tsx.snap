@@ -2111,26 +2111,27 @@ exports[`should rendering 1`] = `
       </div>
     </div>
     <div
-      class="css-75sfx8"
+      class="absolute bottom-0 -mb-6 h-6 w-full bg-gray-700"
     >
       <div
-        class="css-gmuwbf"
+        class="flex justify-center"
       >
         <div
-          class="chakra-stack css-2lwpci"
+          class="flex gap-8"
         >
-          <p
-            class="chakra-text css-79wky"
-          >
-            (c) 2022 okadat
-          </p>
           <div
-            class="chakra-stack css-x0u0or"
+            class="text-white"
+          >
+            (c) 2023 darts homes
+          </div>
+          <div
+            class="flex gap-3"
           >
             <a
               aria-label="subaru-git github page"
-              class="chakra-link css-spn4bz"
               href="https://github.com/subaru-git"
+              rel="noopener noreferrer"
+              target="_blank"
             >
               <svg
                 color="white"
@@ -2149,9 +2150,10 @@ exports[`should rendering 1`] = `
               </svg>
             </a>
             <a
-              aria-label="subaru_m_ twitter"
-              class="chakra-link css-spn4bz"
-              href="https://twitter.com/subaru_m_"
+              aria-label="darts_homes twitter"
+              href="https://twitter.com/darts_homes"
+              rel="noopener noreferrer"
+              target="_blank"
             >
               <svg
                 color="white"
