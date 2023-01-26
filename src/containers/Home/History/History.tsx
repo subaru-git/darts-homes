@@ -1,51 +1,48 @@
 import React, { FC } from 'react';
-import { Center, Flex, Grid, Heading, Img, Text, useBreakpointValue } from '@chakra-ui/react';
+import Image from 'next/image';
 import useLocale from '@/hooks/locale';
+import { useBreakpoint } from '@/hooks/tailwind';
 
 const History: FC = () => {
-  const isMd = useBreakpointValue({ base: false, md: true });
+  const isMd = useBreakpoint('md');
   return <>{isMd ? <DesktopHistory /> : <MobileHistory />}</>;
 };
 
 const DesktopHistory: FC = () => {
   const { t } = useLocale();
   return (
-    <Grid templateColumns='repeat(2, 1fr)' justifyContent='center' gap={8}>
-      <Img src='/history.webp' alt='history image' objectFit='cover' width='640px' height='360px' />
-      <Flex direction='column' gap={4} justifyContent='center'>
-        <Heading as={'h2'} size={'lg'}>
-          {t.home.history.title}
-        </Heading>
-        <Text fontSize={'md'} whiteSpace='pre-wrap'>
-          {t.home.history.description.join('\n')}
-        </Text>
-        <Text fontSize={'md'} whiteSpace='pre-wrap'>
-          {t.home.history.disclaimer.join('\n')}
-        </Text>
-      </Flex>
-    </Grid>
+    <div className='flex justify-center gap-8'>
+      <Image
+        src='/history.webp'
+        alt='history image'
+        objectFit='cover'
+        width='640px'
+        height='360px'
+      />
+      <div className='flex max-w-lg flex-col justify-center gap-4'>
+        <h2 className='text-2xl font-bold'>{t.home.history.title}</h2>
+        <p className='whitespace-pre-wrap text-base'>{t.home.history.description.join('\n')}</p>
+        <p className='whitespace-pre-wrap text-base'>{t.home.history.disclaimer.join('\n')}</p>
+      </div>
+    </div>
   );
 };
 
 const MobileHistory: FC = () => {
   const { t } = useLocale();
   return (
-    <Flex direction='column' gap={4}>
-      <Center>
-        <Img src='/history.webp' alt='history image' objectFit='cover' height='180px' />
-      </Center>
-      <Flex direction='column' gap={4}>
-        <Heading as={'h2'} size={'md'} textAlign='center'>
-          {t.home.history.title}
-        </Heading>
-        <Text fontSize={'sm'} whiteSpace='pre-wrap'>
-          {t.home.history.description.join('\n')}
-        </Text>
-        <Text fontSize={'xs'} whiteSpace='pre-wrap'>
-          {t.home.history.disclaimer.join('\n')}
-        </Text>
-      </Flex>
-    </Flex>
+    <div className='flex flex-col justify-center gap-4'>
+      <Image
+        src='/history.webp'
+        alt='history image'
+        objectFit='cover'
+        width='360px'
+        height='180px'
+      />
+      <h2 className='text-center text-lg font-bold'>{t.home.history.title}</h2>
+      <p className='whitespace-pre-wrap text-sm'>{t.home.history.description.join('\n')}</p>
+      <p className='whitespace-pre-wrap text-sm'>{t.home.history.disclaimer.join('\n')}</p>
+    </div>
   );
 };
 

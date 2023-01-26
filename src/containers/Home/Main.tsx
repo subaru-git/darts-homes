@@ -1,5 +1,4 @@
 import React, { FC } from 'react';
-import { Grid } from '@chakra-ui/react';
 import Description from './Description';
 import History from './History';
 import Respect from './Respect';
@@ -10,17 +9,11 @@ const Main: FC = () => {
   return (
     <MainTemplate label='home-main'>
       <Title />
-      <Grid
-        templateRows='repeat(3, auto)'
-        gap={{ base: 16, md: 32 }}
-        p={2}
-        px={{ base: 2, md: 4 }}
-        mt={{ base: 16, md: 32 }}
-      >
+      <div className='flex flex-col gap-4 p-2 md:items-center md:gap-8 md:px-4'>
         <Description />
         <History />
         <Respect />
-      </Grid>
+      </div>
     </MainTemplate>
   );
 };

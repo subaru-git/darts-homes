@@ -1,57 +1,48 @@
 import React, { FC } from 'react';
-import { Center, Flex, Grid, Heading, Img, Text, useBreakpointValue } from '@chakra-ui/react';
+import Image from 'next/image';
 import useLocale from '@/hooks/locale';
+import { useBreakpoint } from '@/hooks/tailwind';
 
 const Description: FC = () => {
-  const isMd = useBreakpointValue({ base: false, md: true });
+  const isMd = useBreakpoint('md');
   return <>{isMd ? <DesktopDescription /> : <MobileDescription />}</>;
 };
 
 const DesktopDescription: FC = () => {
   const { t } = useLocale();
   return (
-    <Grid templateColumns='repeat(2, 1fr)' justifyContent='center' gap={8}>
-      <Img
+    <div className='flex justify-center gap-8'>
+      <Image
         src='/darts.webp'
         alt='description image'
         objectFit='contain'
         width='640px'
         height='360px'
       />
-      <Flex direction='column' gap={4} justifyContent='center'>
-        <Heading as={'h2'} size={'lg'}>
-          {t.home.description.title}
-        </Heading>
-        <Text fontSize={'md'} whiteSpace='pre-wrap'>
-          {t.home.description.description.join('\n')}
-        </Text>
-      </Flex>
-    </Grid>
+      <div className='flex max-w-lg flex-col justify-center gap-4'>
+        <h2 className='text-2xl font-bold'>{t.home.description.title}</h2>
+        <p className='whitespace-pre-wrap text-base'>{t.home.description.description.join('\n')}</p>
+      </div>
+    </div>
   );
 };
 
 const MobileDescription: FC = () => {
   const { t } = useLocale();
   return (
-    <Flex direction='column' gap={4}>
-      <Center>
-        <Img
-          src='/darts.webp'
-          alt='darts homes'
-          objectFit='contain'
-          loading='lazy'
-          height='180px'
-        />
-      </Center>
-      <Flex direction='column' gap={4}>
-        <Heading as={'h2'} size={'md'} textAlign='center'>
-          {t.home.description.title}
-        </Heading>
-        <Text fontSize={'sm'} whiteSpace='pre-wrap'>
-          {t.home.description.description.join('\n')}
-        </Text>
-      </Flex>
-    </Flex>
+    <div className='flex flex-col justify-center gap-4'>
+      <Image
+        src='/darts.webp'
+        alt='description image'
+        objectFit='contain'
+        width='360px'
+        height='180px'
+      />
+      <div className='flex flex-col gap-4'>
+        <h2 className='text-center text-lg font-bold'>{t.home.description.title}</h2>
+        <p className='whitespace-pre-wrap text-sm'>{t.home.description.description.join('\n')}</p>
+      </div>
+    </div>
   );
 };
 export default Description;

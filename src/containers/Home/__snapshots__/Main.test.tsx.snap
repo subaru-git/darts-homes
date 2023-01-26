@@ -1300,51 +1300,67 @@ exports[`should rendering 1`] = `
       class="css-1t2fh6z"
     />
     <div
-      class="css-az2kbc"
+      class="flex h-52 flex-col justify-center gap-4 bg-gradient-to-b from-gray-100 via-gray-200 to-gray-100 md:h-80 md:gap-8"
     >
       <h1
-        class="chakra-heading css-rapkbq"
+        class="whitespace-pre-wrap text-center text-2xl font-bold leading-8 md:text-5xl"
       >
         It's dull throwing darts monotonously,
 right?
       </h1>
-      <p
-        class="chakra-text css-1t2w1fb"
+      <text
+        class="text-center text-sm md:text-lg"
       >
         It supports home darts, which tend to be monotonous.
-      </p>
+      </text>
       <div
-        class="css-gmuwbf"
+        class="flex justify-center"
       >
         <button
-          class="chakra-button css-jhuf9a"
-          type="button"
+          class="text-emerald-600 border-emerald-600 bg-white hover:bg-emerald-50 rounded-lg border py-2 px-3 text-base font-bold subpixel-antialiased md:text-base"
         >
           Let's see the practice games.
         </button>
       </div>
     </div>
     <div
-      class="css-o3s74n"
+      class="flex flex-col gap-4 p-2 md:items-center md:gap-8 md:px-4"
     >
       <div
-        class="css-9p431j"
+        class="flex justify-center gap-8"
       >
-        <img
-          alt="description image"
-          class="chakra-image css-o4xn9l"
-          src="/darts.webp"
-        />
+        <span
+          style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+        >
+          <span
+            style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+          >
+            <img
+              alt=""
+              aria-hidden="true"
+              src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27640%27%20height=%27360%27/%3e"
+              style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+            />
+          </span>
+          <img
+            alt="description image"
+            data-nimg="intrinsic"
+            decoding="async"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
+          />
+          <noscript />
+        </span>
         <div
-          class="css-1ligtzy"
+          class="flex max-w-lg flex-col justify-center gap-4"
         >
           <h2
-            class="chakra-heading css-1jb3vzl"
+            class="text-2xl font-bold"
           >
             Suggest practicing home darts
           </h2>
           <p
-            class="chakra-text css-1lfynoq"
+            class="whitespace-pre-wrap text-base"
           >
             We propose practice methods for home darts, which tend to be monotonous.
 The practice is supported as an application with references to YouTube, Blogs, etc.
@@ -1352,37 +1368,54 @@ The practice is supported as an application with references to YouTube, Blogs, e
         </div>
       </div>
       <div
-        class="css-9p431j"
+        class="flex justify-center gap-8"
       >
-        <img
-          alt="history image"
-          class="chakra-image css-kudyzt"
-          src="/history.webp"
-        />
+        <span
+          style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+        >
+          <span
+            style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+          >
+            <img
+              alt=""
+              aria-hidden="true"
+              src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27640%27%20height=%27360%27/%3e"
+              style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+            />
+          </span>
+          <img
+            alt="history image"
+            data-nimg="intrinsic"
+            decoding="async"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"
+          />
+          <noscript />
+        </span>
         <div
-          class="css-1ligtzy"
+          class="flex max-w-lg flex-col justify-center gap-4"
         >
           <h2
-            class="chakra-heading css-1jb3vzl"
+            class="text-2xl font-bold"
           >
             A little help for your growth
           </h2>
           <p
-            class="chakra-text css-1lfynoq"
+            class="whitespace-pre-wrap text-base"
           >
             Record your practice results and make your growth transparent.
 When logging in from the top right,  save to the server and synchronize across devices.
           </p>
           <p
-            class="chakra-text css-1lfynoq"
+            class="whitespace-pre-wrap text-base"
           />
         </div>
       </div>
       <div
-        class="css-9p431j"
+        class="flex justify-center gap-8"
       >
         <div
-          class="css-dw5mbt"
+          class="h-[360px] w-[640px]"
         >
           <link
             as="image"
@@ -1402,15 +1435,15 @@ When logging in from the top right,  save to the server and synchronize across d
           </article>
         </div>
         <div
-          class="css-1ligtzy"
+          class="flex max-w-lg flex-col justify-center gap-4"
         >
           <h2
-            class="chakra-heading css-1jb3vzl"
+            class="text-2xl font-bold"
           >
             Thanks for all the darts content
           </h2>
           <p
-            class="chakra-text css-1lfynoq"
+            class="whitespace-pre-wrap text-base"
           >
             This site appreciates and respects all content, including each darts manufacturer, players, YouTube, blogs, etc.
           </p>
