@@ -2,6 +2,7 @@ import React, { FC, useState } from 'react';
 import {
   Box,
   Flex,
+  Input,
   Radio,
   RadioGroup,
   Slider,
@@ -30,6 +31,7 @@ const NewGame: FC<NewGameProps> = ({ onNewGame, currentSettings, isFinished = fa
   const range = t.games.arrange.help.find((h) => h.title === 'Range') || defaultHelp;
   const out = t.games.arrange.help.find((h) => h.title === 'Out Option') || defaultHelp;
   const bull = t.games.arrange.help.find((h) => h.title === 'Bull Option') || defaultHelp;
+  const fixed = t.games.arrange.help.find((h) => h.title === 'Fixed Score') || defaultHelp;
   return (
     <NewGameModal
       onNewGame={() => onNewGame(settings)}
@@ -127,6 +129,25 @@ const NewGame: FC<NewGameProps> = ({ onNewGame, currentSettings, isFinished = fa
               />
               <Text>Separate Bull</Text>
             </Flex>
+          </Box>
+          <Box>
+            <SettingHeading
+              title={fixed?.title}
+              hintHeader={fixed?.hint.header}
+              hintBody={fixed?.hint.body}
+            />
+            <Input
+              type='number'
+              defaultValue={settings.targets?.[0] || ''}
+              onChange={(e) => {
+                if (e.target.value)
+                  setSettings({
+                    ...settings,
+                    targets: [...Array(8)].fill(parseInt(e.target.value)),
+                  });
+                else setSettings({ ...settings, targets: [] });
+              }}
+            ></Input>
           </Box>
         </Flex>
       }

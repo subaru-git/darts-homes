@@ -283,6 +283,13 @@ const text = {
             body: 'Set the bull settings. In the case of a double out, it will be a separate bull.',
           },
         },
+        {
+          title: 'Fixed Score',
+          hint: {
+            header: 'Fixed Score?',
+            body: 'When a score is input, the inputted score becomes the target for all rounds.',
+          },
+        },
       ],
     },
   },
