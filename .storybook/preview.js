@@ -1,5 +1,6 @@
 import { RouterContext } from 'next/dist/shared/lib/router-context';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
+import '../src/styles/globals.css';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },

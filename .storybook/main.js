@@ -11,6 +11,14 @@ module.exports = {
     '@storybook/addon-viewport',
     '@ecubelabs/storybook-addon-intl',
     'storybook-addon-next-router',
+    {
+      name: '@storybook/addon-postcss',
+      options: {
+        postcssLoaderOptions: {
+          implementation: require('postcss'),
+        },
+      },
+    },
   ],
   framework: '@storybook/react',
   core: {

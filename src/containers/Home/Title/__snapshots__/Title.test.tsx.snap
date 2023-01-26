@@ -3,25 +3,24 @@
 exports[`should rendering 1`] = `
 <div>
   <div
-    class="css-az2kbc"
+    class="flex h-52 flex-col justify-center gap-4 bg-gradient-to-b from-gray-100 via-gray-200 to-gray-100 md:h-80 md:gap-8"
   >
     <h1
-      class="chakra-heading css-rapkbq"
+      class="whitespace-pre-wrap text-center text-2xl font-bold leading-8 md:text-5xl"
     >
       It's dull throwing darts monotonously,
 right?
     </h1>
-    <p
-      class="chakra-text css-1t2w1fb"
+    <text
+      class="text-center text-sm md:text-lg"
     >
       It supports home darts, which tend to be monotonous.
-    </p>
+    </text>
     <div
-      class="css-gmuwbf"
+      class="flex justify-center"
     >
       <button
-        class="chakra-button css-jhuf9a"
-        type="button"
+        class="text-emerald-600 border-emerald-600 bg-white hover:bg-emerald-50 rounded-lg border py-2 px-3 text-base font-bold subpixel-antialiased md:text-base"
       >
         Let's see the practice games.
       </button>

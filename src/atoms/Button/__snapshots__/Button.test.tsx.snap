@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should rendering 1`] = `
+<div>
+  <button
+    class="text-emerald-600 border-emerald-600 bg-white hover:bg-emerald-50 rounded-lg border py-2 px-3 text-base font-bold subpixel-antialiased md:text-base"
+  />
+  <span
+    hidden=""
+    id="__chakra_env"
+  />
+</div>
+`;
