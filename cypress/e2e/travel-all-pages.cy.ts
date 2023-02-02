@@ -40,6 +40,10 @@ describe('Travel all pages', () => {
     cy.get('div[data-cy="respect-main"]').should('be.visible');
     cy.visit('/history');
     cy.get('div[data-cy="history-main"]').should('be.visible');
+    cy.visit('/termsofservice');
+    cy.get('div[data-cy="termsofservice-main"]').should('be.visible');
+    cy.visit('/privacypolicy');
+    cy.get('div[data-cy="privacypolicy-main"]').should('be.visible');
     cy.visit('/ja');
     cy.get('div[data-cy="home-main"]').should('be.visible');
     cy.visit('/ja/n01');
@@ -78,6 +82,10 @@ describe('Travel all pages', () => {
     cy.get('div[data-cy="respect-main"]').should('be.visible');
     cy.visit('/ja/history');
     cy.get('div[data-cy="history-main"]').should('be.visible');
+    cy.visit('/ja/termsofservice');
+    cy.get('div[data-cy="termsofservice-main"]').should('be.visible');
+    cy.visit('/ja/privacypolicy');
+    cy.get('div[data-cy="privacypolicy-main"]').should('be.visible');
     cy.visit('/en');
     cy.get('div[data-cy="home-main"]').should('be.visible');
     cy.visit('/en/n01');
@@ -116,6 +124,10 @@ describe('Travel all pages', () => {
     cy.get('div[data-cy="respect-main"]').should('be.visible');
     cy.visit('/en/history');
     cy.get('div[data-cy="history-main"]').should('be.visible');
+    cy.visit('/en/termsofservice');
+    cy.get('div[data-cy="termsofservice-main"]').should('be.visible');
+    cy.visit('/en/privacypolicy');
+    cy.get('div[data-cy="privacypolicy-main"]').should('be.visible');
   });
 });
 export {};

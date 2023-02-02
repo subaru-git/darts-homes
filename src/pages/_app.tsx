@@ -5,8 +5,11 @@ import type { AppProps } from 'next/app';
 import AppDefaultSeo from '@/components/AppDefaultSeo';
 import Providers from '@/contexts/Providers';
 import '../styles/globals.css';
+import { useBreakpoint } from '@/hooks/tailwind';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
+  const isMd = useBreakpoint('md');
+  const minHeight = isMd ? 'calc(100vh - 208px)' : 'calc(100vh - 320px)';
   return (
     <>
       <AppDefaultSeo />
@@ -24,7 +27,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       </Script>
       <ChakraProvider>
         <Providers>
-          <Global styles={{ body: { minHeight: 'calc(100vh - 24px)' } }} />
+          <Global styles={{ body: { minHeight } }} />
           <Component {...pageProps} />
         </Providers>
       </ChakraProvider>
