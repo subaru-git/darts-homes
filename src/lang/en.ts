@@ -27,6 +27,11 @@ const text = {
       ],
     },
   },
+  footer: {
+    description: ['It supports home darts, which tend to be monotonous.'],
+    terms: 'Terms of service (Japanese Only)',
+    privacy: 'Privacy Policy (Japanese Only)',
+  },
   seo: {
     default: {
       title: "Darts Homes - It's dull throwing darts monotonously, right?",
@@ -111,6 +116,14 @@ const text = {
     history: {
       title: 'History',
       description: 'You can check your growth. Synchronization between browsers is not supported.',
+    },
+    termsofservice: {
+      title: 'Terms of Service',
+      description: 'Terms of Service (Japanese only)',
+    },
+    privacypolicy: {
+      title: 'Privacy Policy',
+      description: 'Privacy Policy (Japanese only)',
     },
   },
   navigation: {

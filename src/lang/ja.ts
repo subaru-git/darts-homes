@@ -28,6 +28,11 @@ const text = {
       ],
     },
   },
+  footer: {
+    description: ['ついつい単調になりがちな家ダーツに練習方法を提案します。'],
+    terms: '利用規約',
+    privacy: 'プライバシーポリシー',
+  },
   seo: {
     default: {
       title: 'Darts Homes - ただ投げるだけの家ダーツじゃつまらなくない？',
@@ -107,6 +112,14 @@ const text = {
     history: {
       title: 'History',
       description: 'あなたの成長を確認できます。ブラウザ間の同期はできません。',
+    },
+    termsofservice: {
+      title: 'Terms of Service',
+      description: 'Darts Homes の利用規約です。',
+    },
+    privacypolicy: {
+      title: 'Privacy Policy',
+      description: 'Darts Homes のプライバシーポリシーです。',
     },
   },
   navigation: {

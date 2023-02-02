@@ -171,7 +171,9 @@ const MobileMain: FC<MainProps> = ({ game, setGame, user, description }) => {
           disabled={game.getRoundScore().length >= 3 || game.isFinished()}
           other
         />
-        <RoundBoard score={game.getScore()} />
+        <Box p={4}>
+          <RoundBoard score={game.getScore()} />
+        </Box>
       </Box>
     </Grid>
   );

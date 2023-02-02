@@ -3,7 +3,7 @@
 exports[`should rendering 1`] = `
 <div>
   <div
-    data-cy="games-main"
+    data-cy="privacypolicy-main"
   >
     <header
       class="css-1wuf7qn"
@@ -1300,635 +1300,134 @@ exports[`should rendering 1`] = `
       class="css-1t2fh6z"
     />
     <div
-      class="css-h94677"
+      class="w-full"
     >
-      <h2
-        class="chakra-heading css-yl7i8f"
-      >
-        Games
-      </h2>
       <div
-        class="css-1h2orqn"
+        class="m-auto flex max-w-xl flex-col items-center gap-2 p-4"
       >
-        <div>
-          <div
-            class="css-18xfez7"
-          >
-            <div
-              class="css-1811skr"
+        <h1
+          class="text-lg font-bold md:text-xl"
+        >
+          プライバシーポリシー
+        </h1>
+        <h2
+          class="font-bold md:text-lg"
+        >
+          1. アクセス解析ツールについて
+        </h2>
+        <div
+          class="text-xs md:text-base"
+        >
+          <p>
+            当サイトでは、Google によるアクセス解析ツール「Google アナリティクス」を利用しています。
+          </p>
+          <p>
+            この Google アナリティクスはアクセス情報の収集のために Cookie を使用しています。このアクセス情報は匿名で収集されており、個人を特定するものではありません。
+          </p>
+          <p>
+            Google アナリティクスの Cookie は、26 ヶ月間保持されます。この機能は Cookie を無効にすることで収集を拒否することが出来ますので、お使いのブラウザの設定をご確認ください。
+          </p>
+          <p>
+            Google アナリティクスの利用規約は
+            <a
+              class="font-medium text-blue-600 underline hover:no-underline dark:text-blue-500"
+              href="https://www.google.com/analytics/terms/"
+              rel="noopener noreferrer"
+              target="_blank"
             >
-              <a
-                href="/eagleseye"
-              >
-                <h3
-                  class="chakra-heading css-17drl7a"
-                >
-                  Eagle's Eye
-                </h3>
-              </a>
-              <div
-                class="chakra-stack css-84zodg"
-              >
-                <span
-                  class="css-fc73fl"
-                >
-                  BULL
-                </span>
-                <span
-                  class="css-1xuzaeu"
-                >
-                  count up
-                </span>
-              </div>
-              <p
-                class="chakra-text css-12mgru9"
-              >
-                It is a count-up where only BULLs are added.
-BULL is separate.
-              </p>
-            </div>
-          </div>
+              こちら
+            </a>
+            から確認できます。また、「ユーザーが Google パートナーのサイトやアプリを使用する際の Google によるデータ使用」に関して確認したい場合は、
+            <a
+              class="font-medium text-blue-600 underline hover:no-underline dark:text-blue-500"
+              href="https://policies.google.com/technologies/partner-sites?hl=ja"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              こちら
+            </a>
+            をご覧ください。
+          </p>
         </div>
-        <div>
-          <div
-            class="css-18xfez7"
-          >
-            <div
-              class="css-1811skr"
+        <h2
+          class="font-bold md:text-lg"
+        >
+          2. 第三者配信の広告サービスについて
+        </h2>
+        <div
+          class="text-xs md:text-base"
+        >
+          <p>
+            当サイトは、第三者配信の広告サービス「Google Adsense（グーグルアドセンス）」を利用しています。
+          </p>
+          <p>
+            Google などの第三者広告配信事業者は、訪問者の興味に応じた広告を表示するために、Cookie（当サイトの訪問者が当サイトや他のサイトにアクセスした際の情報など）を使用することがあります。
+          </p>
+          <p>
+            訪問者は、広告設定で訪問者に合わせた広告（以下、「パーソナライズド広告」とします。）を
+            <a
+              class="font-medium text-blue-600 underline hover:no-underline dark:text-blue-500"
+              href="https://www.google.com/settings/ads"
+              rel="noopener noreferrer"
+              target="_blank"
             >
-              <a
-                href="/cricketmarkup"
-              >
-                <h3
-                  class="chakra-heading css-17drl7a"
-                >
-                  Cricket Mark-Up
-                </h3>
-              </a>
-              <div
-                class="chakra-stack css-84zodg"
-              >
-                <span
-                  class="css-njsj3h"
-                >
-                  cricket
-                </span>
-                <span
-                  class="css-1xuzaeu"
-                >
-                  count up
-                </span>
-              </div>
-              <p
-                class="chakra-text css-12mgru9"
-              >
-                This game was introduced by "Kikuchi Yamaguchi."
-First, Setting target count (recommended 10 times)
-Shoot for each cricket numbers from 20 to 15 and Bull until the target count of times, like Cricket.
-For more information, please watch this video.
-              </p>
-            </div>
-          </div>
+              こちら
+            </a>
+            で無効にすることが出来ます。また、
+            <a
+              class="font-medium text-blue-600 underline hover:no-underline dark:text-blue-500"
+              href="http://www.aboutads.info/choices/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              www.aboutads.info
+            </a>
+            にアクセスすれば、パーソナライズド広告に使われる第三者配信事業者の Cookie を無効にできます。
+          </p>
+          <p>
+            第三者配信による広告掲載を無効にしていない場合は、第三者配信事業者や広告ネットワークの配信する広告がサイトに掲載されることがあります。
+          </p>
+          <p>
+            Google によって広告の第三者配信が認められている広告配信事業者の詳細は、
+            <a
+              class="font-medium text-blue-600 underline hover:no-underline dark:text-blue-500"
+              href="https://support.google.com/admanager/answer/94149"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              こちら
+            </a>
+            で確認できます。
+          </p>
         </div>
-        <div>
-          <div
-            class="css-18xfez7"
-          >
-            <div
-              class="css-1811skr"
+        <h2
+          class="font-bold md:text-lg"
+        >
+          3. 認証情報
+        </h2>
+        <div
+          class="text-xs md:text-base"
+        >
+          <p>
+            当サイトは Google Cloud Platform の提供する Firebase Authentication がサポートする認証方式を用いて、ユーザーの要求に基づき、各種外部サービスを連携させることがあります。このとき、当社は認証時に各サービスプロバイダーが提示する認証情報を取得します。この場合、ユーザーは、本ポリシーに加え、Google が定めるプライバシーポリシーにも同意いただく必要があります。 Google のプライバシーポリシーについては、
+            <a
+              class="font-medium text-blue-600 underline hover:no-underline dark:text-blue-500"
+              href="https://policies.google.com/privacy?hl=ja"
+              rel="noopener noreferrer"
+              target="_blank"
             >
-              <a
-                href="/doubletrouble"
-              >
-                <h3
-                  class="chakra-heading css-17drl7a"
-                >
-                  Double Trouble
-                </h3>
-              </a>
-              <div
-                class="chakra-stack css-84zodg"
-              >
-                <span
-                  class="css-1a3nkjg"
-                >
-                  double
-                </span>
-                <span
-                  class="css-1xuzaeu"
-                >
-                  count up
-                </span>
-              </div>
-              <p
-                class="chakra-text css-12mgru9"
-              >
-                You throw three darts at each double in turn, i.e. three darts at double one, three at double two etc through to double top.
-Receive five points for every double you hit. 15 points available every 3darts; 300 overall.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div
-            class="css-18xfez7"
+              こちら
+            </a>
+            をご確認ください。
+          </p>
+          <p
+            class="mt-8 text-center"
           >
-            <div
-              class="css-1811skr"
-            >
-              <a
-                href="/sweet16"
-              >
-                <h3
-                  class="chakra-heading css-17drl7a"
-                >
-                  Sweet 16
-                </h3>
-              </a>
-              <div
-                class="chakra-stack css-84zodg"
-              >
-                <span
-                  class="css-1a3nkjg"
-                >
-                  double
-                </span>
-                <span
-                  class="css-1npzaxy"
-                >
-                  finish
-                </span>
-              </div>
-              <p
-                class="chakra-text css-12mgru9"
-              >
-                You have 20 visits to the oche needing 32, which you have to finish in three darts with any combination finishing on a double.
-Receive five points every time you finish 32, 15poits available every 3 darts; 300 overall.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div
-            class="css-18xfez7"
-          >
-            <div
-              class="css-1811skr"
-            >
-              <a
-                href="/topsandtens"
-              >
-                <h3
-                  class="chakra-heading css-17drl7a"
-                >
-                  Tops and Tens
-                </h3>
-              </a>
-              <div
-                class="chakra-stack css-84zodg"
-              >
-                <span
-                  class="css-1a3nkjg"
-                >
-                  double
-                </span>
-                <span
-                  class="css-1npzaxy"
-                >
-                  finish
-                </span>
-              </div>
-              <p
-                class="chakra-text css-12mgru9"
-              >
-                You have 20 visits to the oche needing 40, which you have to finish in three darts or less only on double top, double ten or double five.
-Receive five points every time you finish 40. 15 points available every 3darts, 300 overall.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div
-            class="css-18xfez7"
-          >
-            <div
-              class="css-1811skr"
-            >
-              <a
-                href="/twodartcombinations"
-              >
-                <h3
-                  class="chakra-heading css-17drl7a"
-                >
-                  Two-Dart Combinations
-                </h3>
-              </a>
-              <div
-                class="chakra-stack css-84zodg"
-              >
-                <span
-                  class="css-1a3nkjg"
-                >
-                  double
-                </span>
-                <span
-                  class="css-1npzaxy"
-                >
-                  finish
-                </span>
-              </div>
-              <p
-                class="chakra-text css-12mgru9"
-              >
-                You have just three darts at each finish from 41-60, which you must finish on a double with any combination you wish.
-Receive 15 points for every finish you complete. 15 points available every 3 darts; 300 overall.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div
-            class="css-18xfez7"
-          >
-            <div
-              class="css-1811skr"
-            >
-              <a
-                href="/aroundthecompass"
-              >
-                <h3
-                  class="chakra-heading css-17drl7a"
-                >
-                  Around The Compass
-                </h3>
-              </a>
-              <div
-                class="chakra-stack css-84zodg"
-              >
-                <span
-                  class="css-1a3nkjg"
-                >
-                  double
-                </span>
-                <span
-                  class="css-1npzaxy"
-                >
-                  finish
-                </span>
-              </div>
-              <p
-                class="chakra-text css-12mgru9"
-              >
-                You have 20 visits to finish 24 using any combination but always finishing on a double, Recieve five points every time you complete the finish.
-10point bonus for three double 12's (i.e. you get the double 12 first dart then follow it up with two more). 15 points available every 3 darts; 300 overall.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div
-            class="css-18xfez7"
-          >
-            <div
-              class="css-1811skr"
-            >
-              <a
-                href="/tonsup"
-              >
-                <h3
-                  class="chakra-heading css-17drl7a"
-                >
-                  Tons Up
-                </h3>
-              </a>
-              <div
-                class="chakra-stack css-84zodg"
-              >
-                <span
-                  class="css-1a3nkjg"
-                >
-                  double
-                </span>
-                <span
-                  class="css-1npzaxy"
-                >
-                  finish
-                </span>
-              </div>
-              <p
-                class="chakra-text css-12mgru9"
-              >
-                You have 20 visits and your task is to finish 100 on a double using any combination as many times as possible.
-Receive ten points every time you complete the finish and a ten-point bonus if you complete the finish in just two darts (i.e. treble 20 and double top) so 20 points available every 3 darts; 400 overall.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div
-            class="css-18xfez7"
-          >
-            <div
-              class="css-1811skr"
-            >
-              <a
-                href="/route64"
-              >
-                <h3
-                  class="chakra-heading css-17drl7a"
-                >
-                  Route 64
-                </h3>
-              </a>
-              <div
-                class="chakra-stack css-84zodg"
-              >
-                <span
-                  class="css-1a3nkjg"
-                >
-                  double
-                </span>
-                <span
-                  class="css-1npzaxy"
-                >
-                  finish
-                </span>
-              </div>
-              <p
-                class="chakra-text css-12mgru9"
-              >
-                You have 20 visits to the oche needing 64, which you have to finish in three darts using any combination you wish.
-Receive ten points for every finish you complete and a ten point bonus for first two dart finishes.
-20 points available every 3 darts; 400 overall.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div
-            class="css-18xfez7"
-          >
-            <div
-              class="css-1811skr"
-            >
-              <a
-                href="/eightythrew"
-              >
-                <h3
-                  class="chakra-heading css-17drl7a"
-                >
-                  Eighty Threw
-                </h3>
-              </a>
-              <div
-                class="chakra-stack css-84zodg"
-              >
-                <span
-                  class="css-1a3nkjg"
-                >
-                  double
-                </span>
-                <span
-                  class="css-1npzaxy"
-                >
-                  finish
-                </span>
-              </div>
-              <p
-                class="chakra-text css-12mgru9"
-              >
-                You have 20 visits to the oche needing 82, which is one of the most popular combinations and you have to finish in two or three darts using any method you wish. 
-Receive ten points for every finish you complete and ten point bonuses for two darters.
-20 points available every 3 darts; 400 overall.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div
-            class="css-18xfez7"
-          >
-            <div
-              class="css-1811skr"
-            >
-              <a
-                href="/shanghainights"
-              >
-                <h3
-                  class="chakra-heading css-17drl7a"
-                >
-                  Shanghai Nights
-                </h3>
-              </a>
-              <div
-                class="chakra-stack css-84zodg"
-              >
-                <span
-                  class="css-1a3nkjg"
-                >
-                  double
-                </span>
-                <span
-                  class="css-1npzaxy"
-                >
-                  finish
-                </span>
-              </div>
-              <p
-                class="chakra-text css-12mgru9"
-              >
-                You have 20 visits and your task is to finish 120 as any times as possible.
-Receive ten points every time you take out the combination. Ten points bonuses for three double-tops.
-20 points available every 3 darts; 400 overall.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div
-            class="css-18xfez7"
-          >
-            <div
-              class="css-1811skr"
-            >
-              <a
-                href="/switchhitter"
-              >
-                <h3
-                  class="chakra-heading css-17drl7a"
-                >
-                  Switch Hitter
-                </h3>
-              </a>
-              <div
-                class="chakra-stack css-84zodg"
-              >
-                <span
-                  class="css-17jv3ny"
-                >
-                  19
-                </span>
-                <span
-                  class="css-1xuzaeu"
-                >
-                  count up
-                </span>
-              </div>
-              <p
-                class="chakra-text css-12mgru9"
-              >
-                You have 60 darts at treble 19 - receive five points per treble 19, two points for a single 19 and a ten point bonus for a 171.
-You receive no points for a dart which lands outside of the treble or single 19 beds.
-25 points available every 3 darts; 500 overall.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div
-            class="css-18xfez7"
-          >
-            <div
-              class="css-1811skr"
-            >
-              <a
-                href="/bullybully"
-              >
-                <h3
-                  class="chakra-heading css-17drl7a"
-                >
-                  Bully Bully
-                </h3>
-              </a>
-              <div
-                class="chakra-stack css-84zodg"
-              >
-                <span
-                  class="css-fc73fl"
-                >
-                  BULL
-                </span>
-                <span
-                  class="css-1xuzaeu"
-                >
-                  count up
-                </span>
-              </div>
-              <p
-                class="chakra-text css-12mgru9"
-              >
-                Throw 60 darts at the bullseye - earn five points for every bull hit and two for every outer bull.
-10 point bonus for 3 bulls. 25 points available every 3 darts; 500 overall.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div
-            class="css-18xfez7"
-          >
-            <div
-              class="css-1811skr"
-            >
-              <a
-                href="/treblesforshow"
-              >
-                <h3
-                  class="chakra-heading css-17drl7a"
-                >
-                  Trebles For Show
-                </h3>
-              </a>
-              <div
-                class="chakra-stack css-84zodg"
-              >
-                <span
-                  class="css-17jv3ny"
-                >
-                  20
-                </span>
-                <span
-                  class="css-1xuzaeu"
-                >
-                  count up
-                </span>
-              </div>
-              <p
-                class="chakra-text css-12mgru9"
-              >
-                Throw 60 darts at treble 20 - receive five points per treble 20. two points for a single 20 and a fifteen point bonus for a 180.
-You receive no points for a dart which lands outside of the treble or single 20 beds. 30 points available every 3 darts; 600 overall.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div
-            class="css-18xfez7"
-          >
-            <div
-              class="css-1811skr"
-            >
-              <a
-                href="/arrange"
-              >
-                <h3
-                  class="chakra-heading css-17drl7a"
-                >
-                  Arrange
-                </h3>
-              </a>
-              <div
-                class="chakra-stack css-84zodg"
-              >
-                <span
-                  class="css-1a3nkjg"
-                >
-                  double
-                </span>
-                <span
-                  class="css-fkp1lw"
-                >
-                  single
-                </span>
-                <span
-                  class="css-p7n5d0"
-                >
-                  master
-                </span>
-                <span
-                  class="css-1npzaxy"
-                >
-                  finish
-                </span>
-                <span
-                  class="css-ttmz6"
-                >
-                  simulation
-                </span>
-              </div>
-              <p
-                class="chakra-text css-12mgru9"
-              >
-                Out for random scores with set options.
-The simulation mode must include the specified range of deviations.
-              </p>
-            </div>
-          </div>
+            以上
+          </p>
         </div>
       </div>
     </div>
-    <ins
-      class="adsbygoogle "
-      data-ad-client=""
-      data-ad-format="auto"
-      data-ad-layout=""
-      data-ad-layout-key=""
-      data-ad-slot=""
-      data-adtest="on"
-      data-full-width-responsive="false"
-      style="display: inline-block; width: 100%; height: 90px;"
-    />
     <div
       class="absolute bottom-0 -mb-80 h-80 w-full bg-gray-700 md:-mb-52 md:h-52"
     >
