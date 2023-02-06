@@ -28,6 +28,7 @@ const NewGame: FC<NewGameProps> = ({ onNewGame, currentSettings, isFinished = fa
   const { t } = useLocale();
   const defaultHelp = { title: '', hint: { header: '', body: '' } };
   const sim = t.games.arrange.help.find((h) => h.title === 'Simulation Mode') || defaultHelp;
+  const board = t.games.arrange.help.find((h) => h.title === 'Board Type') || defaultHelp;
   const range = t.games.arrange.help.find((h) => h.title === 'Range') || defaultHelp;
   const out = t.games.arrange.help.find((h) => h.title === 'Out Option') || defaultHelp;
   const bull = t.games.arrange.help.find((h) => h.title === 'Bull Option') || defaultHelp;
@@ -37,18 +38,36 @@ const NewGame: FC<NewGameProps> = ({ onNewGame, currentSettings, isFinished = fa
       onNewGame={() => onNewGame(settings)}
       settings={
         <Flex direction='column' gap={10}>
-          <Box>
-            <SettingHeading
-              title={sim?.title}
-              hintHeader={sim?.hint.header}
-              hintBody={sim?.hint.body}
-            />
-            <Switch
-              defaultChecked={settings.simulation}
-              isChecked={settings.simulation}
-              onChange={(e) => setSettings({ ...settings, simulation: e.target.checked })}
-            />
-          </Box>
+          <Flex gap={10}>
+            <Box>
+              <SettingHeading
+                title={sim?.title}
+                hintHeader={sim?.hint.header}
+                hintBody={sim?.hint.body}
+              />
+              <Switch
+                defaultChecked={settings.simulation}
+                isChecked={settings.simulation}
+                onChange={(e) => setSettings({ ...settings, simulation: e.target.checked })}
+              />
+            </Box>
+            <Box>
+              <SettingHeading
+                title={board?.title}
+                hintHeader={board?.hint.header}
+                hintBody={board?.hint.body}
+              />
+              <Flex gap={6}>
+                <Text>Soft</Text>
+                <Switch
+                  defaultChecked={settings.hard}
+                  isChecked={settings.hard}
+                  onChange={(e) => setSettings({ ...settings, hard: e.target.checked })}
+                />
+                <Text>Hard</Text>
+              </Flex>
+            </Box>
+          </Flex>
           <Box>
             <SettingHeading
               title={range?.title}

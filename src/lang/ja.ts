@@ -271,6 +271,13 @@ const text = {
           },
         },
         {
+          title: 'Board Type',
+          hint: {
+            header: 'Board Type?',
+            body: 'ソフトボードかハードボードを選択します。',
+          },
+        },
+        {
           title: 'Range',
           hint: {
             header: 'Range?',

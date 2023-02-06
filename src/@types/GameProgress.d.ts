@@ -95,4 +95,5 @@ interface ArrangeSettings {
   range: number;
   simulation: boolean;
   separate: boolean;
+  hard: boolean;
 }
