@@ -10,6 +10,7 @@ type ArrangeBoardProps = {
   onCount: (count: point) => void;
   range: number;
   simulation?: boolean;
+  hard?: boolean;
   disabled?: boolean;
 };
 
@@ -24,6 +25,7 @@ const ArrangeBoard: FC<ArrangeBoardProps> = ({
   onCount,
   range,
   simulation = false,
+  hard = false,
   disabled = false,
 }) => {
   const base = useRef<HTMLDivElement>(null);
@@ -42,7 +44,7 @@ const ArrangeBoard: FC<ArrangeBoardProps> = ({
       <Center>
         <Box w={'100vw'} style={{ aspectRatio: 1 }} maxW={540} maxH={540} position={'relative'}>
           <Box position={'absolute'} w={'100%'} h={'100%'}>
-            <DartBoard onCount={onCount} />
+            <DartBoard onCount={onCount} hard={hard} />
           </Box>
           <Box position={'relative'} w={'100%'} h={'100%'} pointerEvents={'none'}>
             <Box

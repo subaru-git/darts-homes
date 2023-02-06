@@ -13,6 +13,7 @@ class ArrangeGame implements Game, GameData<ArrangeProgress, ArrangeResult> {
     range: 0,
     out: 'single',
     simulation: true,
+    hard: false,
     separate: false,
   };
 

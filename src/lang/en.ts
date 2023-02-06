@@ -276,6 +276,13 @@ const text = {
           },
         },
         {
+          title: 'Board Type',
+          hint: {
+            header: 'Board Type?',
+            body: 'Select Board Type Soft (Electronic) or Hard.',
+          },
+        },
+        {
           title: 'Range',
           hint: {
             header: 'Range?',

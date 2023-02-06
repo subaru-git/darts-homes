@@ -4,9 +4,13 @@ import isEven from 'is-even';
 
 type DartBoardProps = {
   onCount: (count: point) => void;
+  hard?: boolean;
 };
 
-const DartBoard: FC<DartBoardProps> = ({ onCount }) => {
+const DartBoard: FC<DartBoardProps> = ({ onCount, hard = false }) => {
+  return hard ? <HardBoard onCount={onCount} /> : <SoftDartBoard onCount={onCount} />;
+};
+const SoftDartBoard: FC<DartBoardProps> = ({ onCount }) => {
   const numbers = [20, 1, 18, 4, 13, 6, 10, 15, 2, 17, 3, 19, 7, 16, 8, 11, 14, 9, 12, 5];
   return (
     <div css={{ aspectRatio: '1', position: 'relative', overflow: 'hidden' }}>
@@ -96,6 +100,96 @@ const DartBoard: FC<DartBoardProps> = ({ onCount }) => {
   );
 };
 
+const HardBoard: FC<DartBoardProps> = ({ onCount }) => {
+  const numbers = [20, 1, 18, 4, 13, 6, 10, 15, 2, 17, 3, 19, 7, 16, 8, 11, 14, 9, 12, 5];
+  return (
+    <div css={{ aspectRatio: '1', position: 'relative', overflow: 'hidden' }}>
+      <button onClick={() => onCount('OUT')} css={outStyle} aria-label={`out board`}>
+        <div css={numberCircleStyle}>
+          {numbers.map((n, i) => (
+            <div key={n} css={[numberStyle, { rotate: `${i * 18}deg` }]}>
+              {n}
+            </div>
+          ))}
+        </div>
+      </button>
+      {numbers.map((n, i) => (
+        <div key={n} css={[boardStyle, { rotate: `${i * 18}deg`, pointerEvents: 'none' }]}>
+          <button
+            onClick={() => onCount(`${n}` as point)}
+            css={[buttonStyle, innerSingleStyle, isEven(i) ? blackStyle : whiteStyle]}
+            aria-label={`${n} inner single`}
+          />
+          <button
+            onClick={() => onCount(`${n}` as point)}
+            css={[buttonStyle, outerSingleStyle, isEven(i) ? blackStyle : whiteStyle]}
+            aria-label={`${n} outer single`}
+          />
+          <button
+            onClick={() => onCount(`D${n}` as point)}
+            css={[buttonStyle, doubleStyle, isEven(i) ? redStyle : greenStyle]}
+            aria-label={`${n} double`}
+          />
+          <button
+            onClick={() => onCount(`T${n}` as point)}
+            css={[buttonStyle, tripleStyle, isEven(i) ? redStyle : greenStyle]}
+            aria-label={`${n} triple`}
+          />
+        </div>
+      ))}
+      <button
+        onClick={() => onCount('S-BULL')}
+        css={[boardStyle, hardOuterBullStyle]}
+        aria-label={`single bull`}
+      />
+      <button
+        onClick={() => onCount('D-BULL')}
+        css={[boardStyle, hardInnerBullStyle]}
+        aria-label={`double bull`}
+      />
+      <div css={dressStyle} />
+      <svg height='0' viewBox='0 0 3410 3410' width='0'>
+        <clipPath id='triple' clipPathUnits='objectBoundingBox'>
+          <path
+            transform='scale(0.00029326,0.00029326)'
+            d='M1705 640C1648.28 640 1592.61 644.49 1538.28 653.031L1553.94 751.812C1603.16 744.074 1653.6 740.001 1705 740C1756.39 740 1806.84 744.074 1856.06 751.812L1871.72 653.031C1817.39 644.49 1761.72 640 1705 640Z'
+          />
+        </clipPath>
+        <clipPath id='double' clipPathUnits='objectBoundingBox'>
+          <path
+            transform='scale(0.00029326,0.00029326)'
+            d='M1705 0C1614.18 0 1525.04 7.16693 1438.06 20.8438L1453.72 119.625C1535.59 106.751 1619.51 100 1705 100C1790.49 100 1874.41 106.751 1956.28 119.625L1971.94 20.8438C1884.96 7.16694 1795.82 0 1705 0Z'
+          />
+        </clipPath>
+        <clipPath id='innerSingle' clipPathUnits='objectBoundingBox'>
+          <path
+            transform='scale(0.00029326,0.00029326)'
+            d='M1705 740C1653.61 740 1603.16 744.073 1553.94 751.812L1679.25 1542.19C1687.66 1540.87 1696.22 1540 1705 1540C1713.78 1540 1722.34 1540.87 1730.75 1542.19L1856.06 751.812C1806.84 744.074 1756.4 740 1705 740Z'
+          />
+        </clipPath>
+        <clipPath id='outerSingle' clipPathUnits='objectBoundingBox'>
+          <path
+            transform='scale(0.00029326,0.00029326)'
+            d='M1705 100C1619.51 100 1535.59 106.751 1453.72 119.625L1538.28 653.031C1592.61 644.49 1648.28 640 1705 640C1761.72 640 1817.4 644.49 1871.72 653.031L1956.28 119.625C1874.41 106.751 1790.49 100 1705 100Z'
+          />
+        </clipPath>
+        <clipPath id='outerBull' clipPathUnits='objectBoundingBox'>
+          <path
+            transform='scale(0.00029326,0.00029326)'
+            d='M1705 1540C1613.87 1540 1540 1613.87 1540 1705C1540 1796.13 1613.87 1870 1705 1870C1796.13 1870 1870 1796.13 1870 1705C1870 1613.87 1796.13 1540 1705 1540ZM1705 1635C1743.66 1635 1775 1666.34 1775 1705C1775 1743.66 1743.66 1775 1705 1775C1666.34 1775 1635 1743.66 1635 1705C1635 1666.34 1666.34 1635 1705 1635Z'
+          />
+        </clipPath>
+        <clipPath id='innerBull' clipPathUnits='objectBoundingBox'>
+          <path
+            transform='scale(0.00029326,0.00029326)'
+            d='M1635 1705C1635 1666.34 1666.34 1635 1705 1635C1743.66 1635 1775 1666.34 1775 1705C1775 1743.66 1743.66 1775 1705 1775C1666.34 1775 1635 1743.66 1635 1705Z'
+          />
+        </clipPath>
+      </svg>
+    </div>
+  );
+};
+
 const buttonStyle = css({
   width: '100%',
   height: '100%',
@@ -115,6 +209,13 @@ const blueStyle = css({
   background: 'radial-gradient(circle, #000099 20% 40%, #0000aa 60% 90%);',
   '&:hover': {
     background: 'radial-gradient(circle, #4444ff 20% 40%, #6666ff 60% 90%);',
+  },
+});
+
+const greenStyle = css({
+  background: 'radial-gradient(circle, #009900 20% 40%, #00aa00 60% 90%);',
+  '&:hover': {
+    background: 'radial-gradient(circle, #44ff44 20% 40%, #66ff66 60% 90%);',
   },
 });
 
@@ -191,13 +292,33 @@ const outerBullStyle = css({
   WebkitTapHighlightColor: 'transparent',
 });
 
+const hardOuterBullStyle = css({
+  aspectRatio: '1',
+  background: 'radial-gradient(circle, #009900 20% 40%, #00aa00 60% 90%);',
+  '&:hover': {
+    background: 'radial-gradient(circle, #44ff44 20% 40%, #66ff66 60% 90%);',
+  },
+  clipPath: 'url(#outerBull)',
+  WebkitTapHighlightColor: 'transparent',
+});
+
 const innerBullStyle = css({
   aspectRatio: '1',
   background: 'radial-gradient(circle, #111111 0% 1%, #333333 2% 3%, #111111 4.5% 5%);',
-  clipPath: 'url(#innerBull)',
   '&:hover': {
     background: 'radial-gradient(circle, #333333 0% 1%, #777777 2% 3%, #333333 4.5% 5%);',
   },
+  clipPath: 'url(#innerBull)',
+  WebkitTapHighlightColor: 'transparent',
+});
+
+const hardInnerBullStyle = css({
+  aspectRatio: '1',
+  background: 'radial-gradient(circle, #aa0000 20% 40%, #cc0000 60% 90%);',
+  '&:hover': {
+    background: 'radial-gradient(circle, #ff4444 20% 40%, #ff5555 60% 90%);',
+  },
+  clipPath: 'url(#innerBull)',
   WebkitTapHighlightColor: 'transparent',
 });
 
