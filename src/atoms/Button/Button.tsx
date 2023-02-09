@@ -6,11 +6,12 @@ type ButtonProps = {
   color?: string;
 };
 
-const Button: FC<ButtonProps> = ({ onClick, children, color = 'green' }) => {
+const Button: FC<ButtonProps> = ({ onClick, children, color = 'green', ...props }) => {
   return (
     <button
       className={`${style[color]} rounded-lg border py-2 px-3 text-base font-bold subpixel-antialiased md:text-base`}
       onClick={(e) => onClick && onClick(e)}
+      {...props}
     >
       {children}
     </button>

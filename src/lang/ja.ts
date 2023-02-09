@@ -101,6 +101,10 @@ const text = {
       description:
         'アレンジの練習です。シミュレーションモードではねらいに対してズレを考慮する必要があります。',
     },
+    countup: {
+      title: 'Count Up',
+      description: 'スティールダーツ用のカウントアップゲームです。スティールダーツの練習にどうぞ。',
+    },
     games: {
       title: 'Games',
       description: 'ダーツの練習ゲームを紹介します。あなたに合ったものがあると嬉しいです。',
@@ -139,6 +143,7 @@ const text = {
     bullybully: 'BULL練習ゲーム',
     treblesforshow: '20練習ゲーム',
     arrange: 'アレンジ練習ゲーム',
+    countup: 'スティールダーツ用カウントアップ',
   },
   games: {
     eagleseye: {
@@ -306,6 +311,14 @@ const text = {
           },
         },
       ],
+    },
+    countup: {
+      title: 'Count Up',
+      description: [
+        '8ラウンドの合計点数を競います。',
+        'スティールダーツ用になっているため、各ラウンドの合計値のみを記録します。',
+      ],
+      tags: ['count up'],
     },
   },
   import: {

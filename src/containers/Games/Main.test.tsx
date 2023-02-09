@@ -6,6 +6,6 @@ import '@testing-library/jest-dom';
 test('should rendering', async () => {
   const { container } = render(<Main />);
   const titles = screen.getAllByRole('heading', { level: 3 });
-  expect(titles).toHaveLength(15);
+  expect(titles).toHaveLength(16);
   expect(container).toMatchSnapshot();
 }, 30000);

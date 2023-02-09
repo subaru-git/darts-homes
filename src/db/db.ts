@@ -17,6 +17,7 @@ export class GameResultDexie extends Dexie {
   bullyBullyResult!: Table<BullyBullyResultModel>;
   treblesForShowResult!: Table<TreblesForShowResultModel>;
   arrangeResult!: Table<ArrangeResultModel>;
+  countUpResult!: Table<CountUpResultModel>;
 
   constructor() {
     super('DartsHomes');
@@ -174,6 +175,24 @@ export class GameResultDexie extends Dexie {
       bullyBullyResult: 'uuid',
       treblesForShowResult: 'uuid',
       arrangeResult: 'uuid',
+    });
+    this.version(4.0).stores({
+      cricketMarkUpResult: 'uuid',
+      eaglesEyeResult: 'uuid',
+      doubleTroubleResult: 'uuid',
+      sweet16Result: 'uuid',
+      topsAndTensResult: 'uuid',
+      twoDartCombinationsResult: 'uuid',
+      aroundTheCompassResult: 'uuid',
+      tonsUpResult: 'uuid',
+      route64Result: 'uuid',
+      eightyThrewResult: 'uuid',
+      shanghaiNightsResult: 'uuid',
+      switchHitterResult: 'uuid',
+      bullyBullyResult: 'uuid',
+      treblesForShowResult: 'uuid',
+      arrangeResult: 'uuid',
+      countUpResult: 'uuid',
     });
   }
 }

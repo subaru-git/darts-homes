@@ -811,6 +811,54 @@ exports[`should rendering 1`] = `
                           </div>
                         </a>
                       </div>
+                      <div
+                        class="css-1rc82uo"
+                        role="group"
+                      >
+                        <a
+                          aria-label="Count Up"
+                          href="/countup"
+                        >
+                          <div
+                            class="chakra-stack css-84zodg"
+                          >
+                            <div
+                              class="css-0"
+                            >
+                              <p
+                                class="chakra-text css-sc37ud"
+                              >
+                                Count Up
+                              </p>
+                              <p
+                                class="chakra-text css-itvw0n"
+                              >
+                                count up game for steel darts
+                              </p>
+                            </div>
+                            <div
+                              class="css-2gz105"
+                            >
+                              <svg
+                                class="chakra-icon css-swb7g"
+                                fill="currentColor"
+                                focusable="false"
+                                height="1em"
+                                stroke="currentColor"
+                                stroke-width="0"
+                                viewBox="0 0 8 16"
+                                width="1em"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M7.5 8l-5 5L1 11.5 4.75 8 1 4.5 2.5 3l5 5z"
+                                  fill-rule="evenodd"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
                     </div>
                   </section>
                 </div>
@@ -1248,6 +1296,11 @@ exports[`should rendering 1`] = `
                   class="css-1j1i25b"
                 >
                   Arrange
+                </div>
+                <div
+                  class="css-1j1i25b"
+                >
+                  Count Up
                 </div>
               </div>
             </div>

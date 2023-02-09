@@ -105,6 +105,10 @@ const text = {
       description:
         'This is a Arrange practice game. In simulation mode, it is necessary to take into account deviation from the aim.',
     },
+    countup: {
+      title: 'Count Up',
+      description: 'This is a count-up game for steel darts. You can practice the steel darts.',
+    },
     games: {
       title: 'Games',
       description: 'Here are some darts practice games. We hope you find one that you like.',
@@ -143,6 +147,7 @@ const text = {
     bullybully: 'BULL practice game',
     treblesforshow: '20 practice game',
     arrange: 'Arrange practice game',
+    countup: 'count up game for steel darts',
   },
   games: {
     eagleseye: {
@@ -311,6 +316,14 @@ const text = {
           },
         },
       ],
+    },
+    countup: {
+      title: 'Count Up',
+      description: [
+        'We will compete for the total score in 8 rounds.',
+        'In this game, since it is designed specifically for steel darts, I will only record the total value of each round.',
+      ],
+      tags: ['count up'],
     },
   },
   import: {

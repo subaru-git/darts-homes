@@ -35,6 +35,7 @@ const querier = async (setLoading: (isLoading: boolean) => void): Promise<GameRe
     const bullyBully = await readResult(db.bullyBullyResult);
     const treblesForShow = await readResult(db.treblesForShowResult);
     const arrange = await readResult(db.arrangeResult);
+    const countUp = await readResult(db.countUpResult);
     setLoading(false);
     return {
       cricketMarkUp,
@@ -52,6 +53,7 @@ const querier = async (setLoading: (isLoading: boolean) => void): Promise<GameRe
       bullyBully,
       treblesForShow,
       arrange,
+      countUp,
     };
   } catch (e) {
     console.log('querier exception!!', e);
@@ -74,6 +76,8 @@ const initialQuery: GameResultModel = {
   switchHitter: [],
   bullyBully: [],
   treblesForShow: [],
+  arrange: [],
+  countUp: [],
 };
 
 export default Main;

@@ -20,6 +20,7 @@ import HistoryImportExport from '../ImportExport';
 import AroundTheCompassHistoryTable from '@/containers/AroundTheCompass/HistoryTable';
 import ArrangeHistory from '@/containers/Arrange/History';
 import BullyBullyHistoryTable from '@/containers/BullyBully/HistoryTable';
+import CountUpHistoryTable from '@/containers/CountUp/HistoryTable';
 import CricketMarkUpHistoryTable from '@/containers/CricketMarkUp/HistoryTable';
 import DoubleTroubleHistoryTable from '@/containers/DoubleTrouble/HistoryTable';
 import EaglesEyeHistoryTable from '@/containers/EaglesEye/HistoryTable';
@@ -77,6 +78,7 @@ const HistoryBoard: FC<HistoryBoardProps> = ({ history, user }) => {
           <Tab aria-label='switch hitter'>Switch Hitter</Tab>
           <Tab aria-label='bully bully'>Bully Bully</Tab>
           <Tab aria-label='trebles for show'>Trebles For Show</Tab>
+          <Tab aria-label='count up'>Count Up</Tab>
         </TabList>
         <TabPanels>
           <TabPanel aria-label='arrange history'>
@@ -126,6 +128,9 @@ const HistoryBoard: FC<HistoryBoardProps> = ({ history, user }) => {
           </TabPanel>
           <TabPanel aria-label='trebles for show history'>
             <TreblesForShowHistoryTable history={history.treblesForShow ?? []} user={user} />
+          </TabPanel>
+          <TabPanel aria-label='count up history'>
+            <CountUpHistoryTable history={history.countUp ?? []} user={user} />
           </TabPanel>
         </TabPanels>
       </Tabs>
