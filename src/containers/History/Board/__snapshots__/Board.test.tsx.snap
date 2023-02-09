@@ -339,6 +339,19 @@ exports[`should rendering 1`] = `
         >
           Trebles For Show
         </button>
+        <button
+          aria-controls="tabs-:r5:--tabpanel-15"
+          aria-label="count up"
+          aria-selected="false"
+          class="chakra-tabs__tab css-52dxnr"
+          data-index="15"
+          id="tabs-:r5:--tab-15"
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          Count Up
+        </button>
       </div>
       <div
         class="chakra-tabs__tab-panels css-8atqhb"
@@ -824,6 +837,27 @@ exports[`should rendering 1`] = `
           class="chakra-tabs__tab-panel css-a5mhaz"
           hidden=""
           id="tabs-:r5:--tabpanel-14"
+          role="tabpanel"
+          tabindex="0"
+        >
+          <div
+            class="chakra-table__container css-zipzvv"
+          >
+            <table
+              class="chakra-table css-5605sr"
+            >
+              <tbody
+                class="css-0"
+              />
+            </table>
+          </div>
+        </div>
+        <div
+          aria-label="count up history"
+          aria-labelledby="tabs-:r5:--tab-15"
+          class="chakra-tabs__tab-panel css-a5mhaz"
+          hidden=""
+          id="tabs-:r5:--tabpanel-15"
           role="tabpanel"
           tabindex="0"
         >

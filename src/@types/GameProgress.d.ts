@@ -97,3 +97,8 @@ interface ArrangeSettings {
   separate: boolean;
   hard: boolean;
 }
+
+interface CountUpProgress {
+  round: number | null;
+  score: number[];
+}

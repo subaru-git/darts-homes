@@ -28,7 +28,7 @@ const <%= name %>GameContextProvider: FC<{ children: ReactNode | ReactNode[] }> 
   }, []);
   useEffect(() => {
     if (!game) return;
-    localStorage.setItem('<%= name %>', JSON.stringify(game.getProgressJson()));
+    localStorage.setItem('<%= name %>', JSON.stringify(game.getGameProgress()));
   }, [game]);
   return (
     <<%= h.changeCase.camel(name) %>GameContext.Provider value={game}>

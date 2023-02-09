@@ -13,6 +13,7 @@ interface GameResult {
   switchhitter?: SwitchHitterResult[];
   bullybully?: BullyBullyResult[];
   treblesforshow?: TreblesForShowResult[];
+  countup?: CountUpResult[];
 }
 
 interface CricketMarkUpResult {
@@ -124,4 +125,10 @@ interface ArrangeResult {
 interface ArrangeOut {
   target: number;
   score: point[][];
+}
+
+interface CountUpResult {
+  result: number;
+  scores: number[];
+  playedAt: string;
 }

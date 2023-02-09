@@ -89,6 +89,11 @@ export const GetNavItem = () => {
           subLabel: t.navigation.arrange,
           href: '/arrange',
         },
+        {
+          label: 'Count Up',
+          subLabel: t.navigation.countup,
+          href: '/countup',
+        },
       ],
     },
     {

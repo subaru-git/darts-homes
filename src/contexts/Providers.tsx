@@ -3,6 +3,7 @@ import { AroundTheCompassGameContextProvider } from './AroundTheCompassGameConte
 import { ArrangeGameContextProvider } from './ArrangeGameContext';
 import { AuthProvider } from './AuthContext';
 import { BullyBullyGameContextProvider } from './BullyBullyGameContext';
+import { CountUpGameContextProvider } from './CountUpGameContext';
 import { CricketMarkUpGameContextProvider } from './CricketMarkUpGameContext';
 import { DoubleTroubleGameContextProvider } from './DoubleTroubleGameContext';
 import { EaglesEyeGameContextProvider } from './EaglesEyeGameContext';
@@ -33,7 +34,9 @@ const Providers: FC<{ children: ReactNode | ReactNode[] }> = ({ children }) => {
                             <DoubleTroubleGameContextProvider>
                               <CricketMarkUpGameContextProvider>
                                 <EaglesEyeGameContextProvider>
-                                  <AuthProvider>{children}</AuthProvider>
+                                  <CountUpGameContextProvider>
+                                    <AuthProvider>{children}</AuthProvider>
+                                  </CountUpGameContextProvider>
                                 </EaglesEyeGameContextProvider>
                               </CricketMarkUpGameContextProvider>
                             </DoubleTroubleGameContextProvider>

@@ -5,7 +5,7 @@ export const updateObject = (
   setter: (o: any) => void,
   param?: any,
 ) => {
+  current[functionName](param);
   const g = Object.assign(newObject, current);
-  g[functionName](param);
   setter(g);
 };

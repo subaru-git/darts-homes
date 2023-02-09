@@ -10,5 +10,5 @@ test('create instance', () => {
 
 test('in gaming', () => {
   const game = new Game();
-  expect(game.isFinish()).toBeTruthy();
+  expect(game.isFinished()).toBeTruthy();
 });

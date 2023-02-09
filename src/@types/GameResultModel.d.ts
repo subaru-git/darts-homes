@@ -18,6 +18,7 @@ interface SwitchHitterResultModel extends ResultModel, SwitchHitterResult {}
 interface BullyBullyResultModel extends ResultModel, BullyBullyResult {}
 interface TreblesForShowResultModel extends ResultModel, TreblesForShowResult {}
 interface ArrangeResultModel extends ResultModel, ArrangeResult {}
+interface CountUpResultModel extends ResultModel, CountUpResult {}
 
 interface GameResultModel {
   cricketMarkUp?: CricketMarkUpResultModel[];
@@ -35,4 +36,5 @@ interface GameResultModel {
   bullyBully?: BullyBullyResultModel[];
   treblesForShow?: TreblesForShowResultModel[];
   arrange?: ArrangeResultModel[];
+  countUp?: CountUpResultModel[];
 }

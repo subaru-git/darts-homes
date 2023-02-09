@@ -808,6 +808,54 @@ exports[`should rendering 1`] = `
                           </div>
                         </a>
                       </div>
+                      <div
+                        class="css-1rc82uo"
+                        role="group"
+                      >
+                        <a
+                          aria-label="Count Up"
+                          href="/countup"
+                        >
+                          <div
+                            class="chakra-stack css-84zodg"
+                          >
+                            <div
+                              class="css-0"
+                            >
+                              <p
+                                class="chakra-text css-sc37ud"
+                              >
+                                Count Up
+                              </p>
+                              <p
+                                class="chakra-text css-itvw0n"
+                              >
+                                count up game for steel darts
+                              </p>
+                            </div>
+                            <div
+                              class="css-2gz105"
+                            >
+                              <svg
+                                class="chakra-icon css-swb7g"
+                                fill="currentColor"
+                                focusable="false"
+                                height="1em"
+                                stroke="currentColor"
+                                stroke-width="0"
+                                viewBox="0 0 8 16"
+                                width="1em"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M7.5 8l-5 5L1 11.5 4.75 8 1 4.5 2.5 3l5 5z"
+                                  fill-rule="evenodd"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
                     </div>
                   </section>
                 </div>
@@ -1245,6 +1293,11 @@ exports[`should rendering 1`] = `
                   class="css-1j1i25b"
                 >
                   Arrange
+                </div>
+                <div
+                  class="css-1j1i25b"
+                >
+                  Count Up
                 </div>
               </div>
             </div>
@@ -1912,6 +1965,40 @@ You receive no points for a dart which lands outside of the treble or single 20 
               >
                 Out for random scores with set options.
 The simulation mode must include the specified range of deviations.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div
+            class="css-18xfez7"
+          >
+            <div
+              class="css-1811skr"
+            >
+              <a
+                href="/countup"
+              >
+                <h3
+                  class="chakra-heading css-17drl7a"
+                >
+                  Count Up
+                </h3>
+              </a>
+              <div
+                class="chakra-stack css-84zodg"
+              >
+                <span
+                  class="css-1xuzaeu"
+                >
+                  count up
+                </span>
+              </div>
+              <p
+                class="chakra-text css-12mgru9"
+              >
+                We will compete for the total score in 8 rounds.
+In this game, since it is designed specifically for steel darts, I will only record the total value of each round.
               </p>
             </div>
           </div>
