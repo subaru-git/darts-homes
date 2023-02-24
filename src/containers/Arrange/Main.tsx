@@ -166,6 +166,7 @@ const MobileMain: FC<MainProps> = ({ game, setGame, user, description }) => {
           onCount={(n) => updateObject(game, new ArrangeGame(), 'addScore', setGame, n)}
           range={game.getSettings().range}
           simulation={game.getSettings().simulation}
+          hard={game.getSettings().hard}
           disabled={game.getRoundScore().length >= 3 || game.isFinished()}
         />
       </Flex>
