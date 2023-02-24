@@ -74,7 +74,6 @@ class AroundTheCompassGame
     );
   }
   private calcTarget(t: number, s: point) {
-    console.log('calcTarget', t, s);
     if (isDoubleOut(t, s, true)) return { target: 24, point: 5 };
     let target = t - convertScoreToNumber(s, true);
     if (target <= 0) target = t;

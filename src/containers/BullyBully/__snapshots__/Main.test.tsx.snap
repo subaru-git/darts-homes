@@ -1669,7 +1669,7 @@ exports[`should rendering 1`] = `
             >
               <a
                 aria-label="subaru-git github page"
-                href="https://github.com/subaru-git"
+                href="https://github.com/subaru-git/darts-homes"
                 rel="noopener noreferrer"
                 target="_blank"
               >
