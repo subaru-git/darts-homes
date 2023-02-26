@@ -17,7 +17,7 @@ const Footer: FC = () => {
             <h2 className='text-xl font-bold text-white'>{`Feedback`}</h2>
             <div className='flex gap-3'>
               <a
-                href={'https://github.com/subaru-git'}
+                href={'https://github.com/subaru-git/darts-homes'}
                 target='_blank'
                 rel='noopener noreferrer'
                 aria-label={'subaru-git github page'}
