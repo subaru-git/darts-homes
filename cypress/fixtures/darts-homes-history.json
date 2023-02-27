@@ -1,5 +1,5 @@
 {
-  "cricketmarkup": [
+  "cricketMarkUp": [
     {
       "targetCount": 3,
       "result": 0,
@@ -85,7 +85,7 @@
       "playedAt": "2022-11-T1507:22:32.709Z"
     }
   ],
-  "eagleseye": [
+  "eaglesEye": [
     {
       "result": 1050,
       "scores": [
@@ -101,7 +101,7 @@
       "playedAt": "2022-11-T1605:53:48.708Z"
     }
   ],
-  "doubletrouble": [
+  "doubleTrouble": [
     {
       "result": 300,
       "scores": [
@@ -160,7 +160,7 @@
       "playedAt": "2022-11-T1601:47:47.878Z"
     }
   ],
-  "topsandtens": [
+  "topsAndTens": [
     {
       "result": 45,
       "scores": [
@@ -201,7 +201,7 @@
       "playedAt": "2022-11-T1601:46:26.878Z"
     }
   ],
-  "twodartcombinations": [
+  "twoDartCombinations": [
     {
       "result": 270,
       "scores": [
@@ -229,7 +229,7 @@
       "playedAt": "2022-11-T1601:25:36.150Z"
     }
   ],
-  "aroundthecompass": [
+  "aroundTheCompass": [
     {
       "result": 45,
       "scores": [
@@ -270,7 +270,7 @@
       "playedAt": "2022-11-T1601:45:00.538Z"
     }
   ],
-  "tonsup": [
+  "tonsUp": [
     {
       "result": 60,
       "scores": [
@@ -294,7 +294,7 @@
       "playedAt": "2022-11-T1602:22:00.150Z"
     }
   ],
-  "eightythrew": [
+  "eightyThrew": [
     {
       "result": 40,
       "scores": [
@@ -306,7 +306,7 @@
       "playedAt": "2022-11-T1602:36:42.051Z"
     }
   ],
-  "shanghainights": [
+  "shanghaiNights": [
     {
       "result": 30,
       "scores": [
@@ -318,7 +318,7 @@
       "playedAt": "2022-11-T1602:51:53.119Z"
     }
   ],
-  "switchhitter": [
+  "switchHitter": [
     {
       "result": 18,
       "scores": [
@@ -330,7 +330,7 @@
       "playedAt": "2022-11-T1605:17:32.351Z"
     }
   ],
-  "bullybully": [
+  "bullyBully": [
     {
       "result": 500,
       "scores": [
@@ -436,7 +436,7 @@
       "playedAt": "2022-11-T1523:58:50.287Z"
     }
   ],
-  "treblesforshow": [
+  "treblesForShow": [
     {
       "result": 18,
       "scores": [
@@ -446,6 +446,14 @@
       ],
       "round": 3,
       "playedAt": "2022-11-T1605:32:19.825Z"
+    }
+  ],
+  "countUp": [
+    {
+      "uuid": "551647d7-49be-4f3e-97ea-3811b7ce2617",
+      "playedAt": "2023-02-07T09:20:43.976Z",
+      "scores": [60, 40, 60, 60, 60, 60, 60, 60],
+      "result": 460
     }
   ]
 }

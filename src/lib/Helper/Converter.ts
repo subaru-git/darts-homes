@@ -72,6 +72,7 @@ export const convertGameResultToFirebaseResult = (
     switchHitter: result.switchHitter?.map((e) => ({ ...e, scores: convertPointsToScore(e.scores) })),
     bullyBully: result.bullyBully?.map((e) => ({ ...e, scores: convertPointsToScore(e.scores) })),
     treblesForShow: result.treblesForShow?.map((e) => ({ ...e, scores: convertPointsToScore(e.scores) })),
+    countUp: result.countUp ?? [],
   };
 };
 
@@ -98,6 +99,7 @@ export const convertFirebaseResultToGameResult = (
     switchHitter: result.switchHitter?.map((e) => ({ ...e, scores: convertScoreToPoints(e.scores) })),
     bullyBully: result.bullyBully?.map((e) => ({ ...e, scores: convertScoreToPoints(e.scores) })),
     treblesForShow: result.treblesForShow?.map((e) => ({ ...e, scores: convertScoreToPoints(e.scores) })),
+    countUp: result.countUp,
   };
 };
 

@@ -108,6 +108,7 @@ test('convertGameResultToFireStore', () => {
     switchHitter: [{ ...r, round: 0 }],
     bullyBully: [{ ...r, round: 0 }],
     treblesForShow: [{ ...r, round: 0 }],
+    countUp: [],
   };
   expect(convertGameResultToFirebaseResult(result)).toEqual({
     cricketMarkUp: [],
@@ -124,6 +125,7 @@ test('convertGameResultToFireStore', () => {
     switchHitter: [{ ...e, round: 0 }],
     bullyBully: [{ ...e, round: 0 }],
     treblesForShow: [{ ...e, round: 0 }],
+    countUp: [],
   });
 });
 

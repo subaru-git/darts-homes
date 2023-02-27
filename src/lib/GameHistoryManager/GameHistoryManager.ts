@@ -12,20 +12,21 @@ export const importGameHistory = (
 ) => {
   console.log('importGameHistory', gameHistory, overwrite, user);
   try {
-    importToDB(gameHistory.cricketmarkup, db.cricketMarkUpResult, overwrite);
-    importToDB(gameHistory.eagleseye, db.eaglesEyeResult, overwrite);
-    importToDB(gameHistory.doubletrouble, db.doubleTroubleResult, overwrite);
+    importToDB(gameHistory.cricketMarkUp, db.cricketMarkUpResult, overwrite);
+    importToDB(gameHistory.eaglesEye, db.eaglesEyeResult, overwrite);
+    importToDB(gameHistory.doubleTrouble, db.doubleTroubleResult, overwrite);
     importToDB(gameHistory.sweet16, db.sweet16Result, overwrite);
-    importToDB(gameHistory.topsandtens, db.topsAndTensResult, overwrite);
-    importToDB(gameHistory.twodartcombinations, db.twoDartCombinationsResult, overwrite);
-    importToDB(gameHistory.aroundthecompass, db.aroundTheCompassResult, overwrite);
-    importToDB(gameHistory.tonsup, db.tonsUpResult, overwrite);
+    importToDB(gameHistory.topsAndTens, db.topsAndTensResult, overwrite);
+    importToDB(gameHistory.twoDartCombinations, db.twoDartCombinationsResult, overwrite);
+    importToDB(gameHistory.aroundTheCompass, db.aroundTheCompassResult, overwrite);
+    importToDB(gameHistory.tonsUp, db.tonsUpResult, overwrite);
     importToDB(gameHistory.route64, db.route64Result, overwrite);
-    importToDB(gameHistory.eightythrew, db.eightyThrewResult, overwrite);
-    importToDB(gameHistory.shanghainights, db.shanghaiNightsResult, overwrite);
-    importToDB(gameHistory.switchhitter, db.switchHitterResult, overwrite);
-    importToDB(gameHistory.bullybully, db.bullyBullyResult, overwrite);
-    importToDB(gameHistory.treblesforshow, db.treblesForShowResult, overwrite);
+    importToDB(gameHistory.eightyThrew, db.eightyThrewResult, overwrite);
+    importToDB(gameHistory.shanghaiNights, db.shanghaiNightsResult, overwrite);
+    importToDB(gameHistory.switchHitter, db.switchHitterResult, overwrite);
+    importToDB(gameHistory.bullyBully, db.bullyBullyResult, overwrite);
+    importToDB(gameHistory.treblesForShow, db.treblesForShowResult, overwrite);
+    importToDB(gameHistory.countUp, db.countUpResult, overwrite);
     updateHistory(user);
   } catch (error) {
     console.log(error);
@@ -49,6 +50,7 @@ export const exportGameHistory = async (): Promise<GameResultModel | undefined> 
       switchHitter,
       bullyBully,
       treblesForShow,
+      countUp,
     ] = await Promise.all([
       exportFromDB<CricketMarkUpResultModel>(db.cricketMarkUpResult),
       exportFromDB<EaglesEyeResultModel>(db.eaglesEyeResult),
@@ -64,6 +66,7 @@ export const exportGameHistory = async (): Promise<GameResultModel | undefined> 
       exportFromDB<SwitchHitterResultModel>(db.switchHitterResult),
       exportFromDB<BullyBullyResultModel>(db.bullyBullyResult),
       exportFromDB<TreblesForShowResultModel>(db.treblesForShowResult),
+      exportFromDB<CountUpResultModel>(db.countUpResult),
     ]);
     return {
       cricketMarkUp,
@@ -80,6 +83,7 @@ export const exportGameHistory = async (): Promise<GameResultModel | undefined> 
       switchHitter,
       bullyBully,
       treblesForShow,
+      countUp,
     };
   } catch (error) {
     console.error(error);
@@ -102,6 +106,7 @@ export const updateLocalHistory = (gameHistory: GameResultModel) => {
     updateToDB(gameHistory.switchHitter, db.switchHitterResult);
     updateToDB(gameHistory.bullyBully, db.bullyBullyResult);
     updateToDB(gameHistory.treblesForShow, db.treblesForShowResult);
+    updateToDB(gameHistory.countUp, db.countUpResult);
   } catch (error) {
     console.log(error);
   }

@@ -37,4 +37,5 @@ interface GameResultModelFirebase {
   switchHitter?: (Omit<SwitchHitterResultModel, 'scores'> & { scores: FirebaseScore[] })[];
   bullyBully?: (Omit<BullyBullyResultModel, 'scores'> & { scores: FirebaseScore[] })[];
   treblesForShow?: (Omit<TreblesForShowResultModel, 'scores'> & { scores: FirebaseScore[] })[];
+  countUp?: CountUpResultModel[];
 }
