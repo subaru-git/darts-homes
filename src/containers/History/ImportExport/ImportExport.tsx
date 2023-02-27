@@ -25,20 +25,20 @@ const ImportExport: FC<ImportExportProps> = ({ onError }) => {
   const user = useAuth();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [history, setHistory] = useState<GameResult>({
-    cricketmarkup: [],
-    eagleseye: [],
-    doubletrouble: [],
+    cricketMarkUp: [],
+    eaglesEye: [],
+    doubleTrouble: [],
     sweet16: [],
-    topsandtens: [],
-    twodartcombinations: [],
-    aroundthecompass: [],
-    tonsup: [],
+    topsAndTens: [],
+    twoDartCombinations: [],
+    aroundTheCompass: [],
+    tonsUp: [],
     route64: [],
-    eightythrew: [],
-    shanghainights: [],
-    switchhitter: [],
-    bullybully: [],
-    treblesforshow: [],
+    eightyThrew: [],
+    shanghaiNights: [],
+    switchHitter: [],
+    bullyBully: [],
+    treblesForShow: [],
   });
   const inputRef = useRef<HTMLInputElement>(null);
   const cancelRef = useRef<HTMLButtonElement>(null);

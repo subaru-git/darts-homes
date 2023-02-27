@@ -19,6 +19,7 @@ describe('import-export', () => {
       'switchHitter',
       'bullyBully',
       'treblesForShow',
+      'countUp',
     ].forEach((key) => {
       cy.readFile('cypress/downloads/darts-homes-history.json', 'utf8').its(key).should('be.empty');
     });
@@ -59,6 +60,8 @@ describe('import-export', () => {
     cy.get('[aria-label="bully bully history"] tr').should('have.length', 12);
     cy.get('button[aria-label="trebles for show"]').click();
     cy.get('[aria-label="trebles for show history"] tr').should('have.length', 2);
+    cy.get('button[aria-label="count up"]').click();
+    cy.get('[aria-label="count up history"] tr').should('have.length', 2);
   });
 });
 export {};
