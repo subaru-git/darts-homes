@@ -1552,7 +1552,7 @@ exports[`should rendering 1`] = `
             class="grid grid-cols-3 grid-rows-5 gap-1"
           >
             <input
-              class="col-span-3 rounded-md border p-2.5 text-right text-sm tracking-widest text-gray-900"
+              class="col-span-3 rounded-md border p-2.5 text-right text-sm tracking-widest text-gray-900 focus:outline-none focus:ring-0"
               type="text"
               value=""
             />

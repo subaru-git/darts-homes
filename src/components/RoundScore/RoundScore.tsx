@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useEffect } from 'react';
 import { Grid, GridItem, Text, IconButton } from '@chakra-ui/react';
 import { VscTrash } from 'react-icons/vsc';
 import RoundScoreButton from '@/components/RoundScoreButton';
@@ -7,6 +7,7 @@ type RoundScoreProps = {
   scores: string[];
   isFinished: boolean;
   result: string;
+  keyboard?: boolean;
   onClear: () => void;
   onRoundChange: () => void;
   onRoundOver: () => void;
@@ -16,10 +17,20 @@ const RoundScore: FC<RoundScoreProps> = ({
   scores,
   isFinished,
   result,
+  keyboard = false,
   onClear,
   onRoundChange,
   onRoundOver,
 }) => {
+  useEffect(() => {
+    if (!keyboard) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Backspace' || e.key === 'Delete' || e.key === 'Escape') onClear();
+      if (e.key === 'Enter' && !isFinished) onRoundChange();
+    };
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [keyboard, onClear, onRoundChange, isFinished]);
   return (
     <Grid
       templateColumns={'repeat(4, 1fr)'}
