@@ -83,6 +83,7 @@ const DesktopMain: FC<MainProps> = ({ game, setGame, user, description }) => {
             user={user}
             score={score}
             setScore={setScore}
+            keyboard={score !== '-'}
           />
         </Box>
         <Box minWidth={250}>
@@ -91,6 +92,7 @@ const DesktopMain: FC<MainProps> = ({ game, setGame, user, description }) => {
               setScore(() => parseInt(n));
               updateObject(game, new CountUpGame(), 'addRoundScoreNumber', setGame, parseInt(n));
             }}
+            keyboard={score === '-'}
           />
         </Box>
       </Flex>
@@ -127,7 +129,14 @@ const MobileMain: FC<MainProps> = ({ game, setGame, user, description }) => {
         </Flex>
       </Flex>
       <Box px={2}>
-        <MyRoundScore game={game} setGame={setGame} user={user} score={score} setScore={setScore} />
+        <MyRoundScore
+          game={game}
+          setGame={setGame}
+          user={user}
+          score={score}
+          setScore={setScore}
+          keyboard={false}
+        />
       </Box>
       <Box px={2}>
         <TenKey
@@ -135,6 +144,7 @@ const MobileMain: FC<MainProps> = ({ game, setGame, user, description }) => {
             setScore(() => parseInt(n));
             updateObject(game, new CountUpGame(), 'addRoundScoreNumber', setGame, parseInt(n));
           }}
+          keyboard={false}
         />
       </Box>
       <Box px={2}>
@@ -144,9 +154,13 @@ const MobileMain: FC<MainProps> = ({ game, setGame, user, description }) => {
   );
 };
 
-type RoundScoreProps = MainProps & { score: number | '-'; setScore: (score: number | '-') => void };
+type RoundScoreProps = MainProps & {
+  score: number | '-';
+  setScore: (score: number | '-') => void;
+  keyboard: boolean;
+};
 
-const MyRoundScore: FC<RoundScoreProps> = ({ game, setGame, user, score, setScore }) => (
+const MyRoundScore: FC<RoundScoreProps> = ({ game, setGame, user, score, setScore, keyboard }) => (
   <RoundScore
     scores={score === '-' ? [] : ['', score.toString(), '']}
     onClear={() => {
@@ -164,6 +178,7 @@ const MyRoundScore: FC<RoundScoreProps> = ({ game, setGame, user, score, setScor
       setScore('-');
     }}
     result={getResult(game)}
+    keyboard={keyboard}
   />
 );
 
