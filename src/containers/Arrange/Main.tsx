@@ -4,6 +4,7 @@ import ArrangeBoard from './ArrangeBoard';
 import NewGame from './NewGame';
 import Targets from './Targets';
 import DescriptionModal from '@/components/DescriptionModal';
+import RoundDisplay from '@/components/RoundDisplay';
 import RoundScore from '@/components/RoundScore';
 import TargetBoard from '@/components/TargetBoard';
 import { useArrangeGame, useArrangeGameSet } from '@/contexts/ArrangeGameContext';
@@ -12,6 +13,8 @@ import { db } from '@/db/db';
 import useLocale from '@/hooks/locale';
 import ArrangeGame from '@/lib/ArrangeGame/';
 import { saveHistory } from '@/lib/GameHistoryManager';
+import { convertScoreToNumber } from '@/lib/Helper/Converter';
+import { ArrangeScore } from '@/lib/Helper/Format';
 import { updateObject } from '@/lib/Helper/updateObjectState';
 import MainTemplate from '@/templates/MainTemplate';
 
@@ -79,14 +82,10 @@ const DesktopMain: FC<MainProps> = ({ game, setGame, user, description }) => {
                 : game.getCurrentTarget()
             }`}
           />
-          <Flex gap={4} justifyContent='space-around'>
-            <Text fontSize='32px' color='green.500' fontWeight='bold'>
-              Round
-            </Text>
-            <Text fontSize='32px' fontWeight='bold' color='gray.500'>
-              {game.getRoundCount()}
-            </Text>
-          </Flex>
+          <RoundDisplay
+            count={game.getSettings().hard ? game.getDartsCount() : game.getRoundCount()}
+            round={game.getSettings().hard ? false : true}
+          />
           <Targets
             count={game.getTargetOutCount()}
             targets={game.getTargets()}
@@ -150,15 +149,12 @@ const MobileMain: FC<MainProps> = ({ game, setGame, user, description }) => {
               />
             </Center>
           </GridItem>
-          <GridItem colStart={5}>
-            <Flex direction='column'>
-              <Text fontSize='18px' color='green.500' fontWeight='bold'>
-                Round
-              </Text>
-              <Text fontSize='18px' fontWeight='bold' textAlign='center'>
-                {game.getRoundCount()}
-              </Text>
-            </Flex>
+          <GridItem colStart={5} mx={1}>
+            <RoundDisplay
+              count={game.getSettings().hard ? game.getDartsCount() : game.getRoundCount()}
+              round={game.getSettings().hard ? false : true}
+              size='sm'
+            />
           </GridItem>
         </Grid>
         <MyRoundScore game={game} setGame={setGame} user={user} />
@@ -188,7 +184,24 @@ const MyRoundScore: FC<MainProps> = ({ game, setGame, user }) => (
   />
 );
 
-const getResult = (game: ArrangeGame) =>
-  `[${game.getTargets().join(', ')}]\n${game.getRoundCount()} Round`;
+const getResult = (game: ArrangeGame) => {
+  if (game.getSettings().game) {
+    const target = `${game.getArrangeScore()[0]?.target}`;
+    const res = `${target} :\n${ArrangeScore(game.getArrangeScore()[0]?.score)
+      .map(
+        (s) =>
+          `${
+            s.includes('BUST')
+              ? '0'
+              : s
+                  .reduce((p, c) => p + (c !== 'FINISH' ? convertScoreToNumber(c as point) : 0), 0)
+                  .toString()
+          } : (${s.join(' ')})`,
+      )
+      .join('\n')}`;
+    return res;
+  }
+  return `[${game.getTargets().join(', ')}]\n${game.getRoundCount()} Round`;
+};
 
 export default Main;

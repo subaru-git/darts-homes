@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should rendering 1`] = `
+<div>
+  <select
+    class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-1 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500"
+  >
+    <option
+      value="aaa"
+    >
+      aaa
+    </option>
+    <option
+      value="bbb"
+    >
+      bbb
+    </option>
+    <option
+      value="ccc"
+    >
+      ccc
+    </option>
+  </select>
+  <span
+    hidden=""
+    id="__chakra_env"
+  />
+</div>
+`;
