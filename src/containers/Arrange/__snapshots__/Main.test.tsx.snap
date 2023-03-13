@@ -1445,18 +1445,18 @@ exports[`should rendering 1`] = `
           </p>
         </div>
         <div
-          class="css-z9pd6m"
+          class="flex gap-2"
         >
-          <p
-            class="chakra-text css-qtfoy1"
+          <span
+            class="text-2xl font-bold text-green-600"
           >
             Round
-          </p>
-          <p
-            class="chakra-text css-ow50y0"
+          </span>
+          <span
+            class="text-2xl font-bold text-gray-500"
           >
             8
-          </p>
+          </span>
         </div>
         <div
           class="css-1o31bit"

@@ -12,6 +12,8 @@ test('double out', () => {
     out: 'double',
     simulation: true,
     separate: false,
+    hard: false,
+    game: false,
   });
   expect(game.getCurrentTarget()).toBe(120);
   expect(game.getLastTargetOutCount()).toBe(8);
@@ -177,6 +179,8 @@ test('double out', () => {
       out: 'double',
       simulation: true,
       separate: false,
+      hard: false,
+      game: false,
     },
     playedAt: '2020-12-31T16:01:01.000Z',
   });
@@ -189,6 +193,8 @@ test('single out', () => {
     out: 'single',
     simulation: true,
     separate: false,
+    hard: false,
+    game: false,
   });
   expect(game.getCurrentTarget()).toBe(120);
   expect(game.getLastTargetOutCount()).toBe(8);
@@ -278,6 +284,8 @@ test('master out', () => {
     out: 'master',
     simulation: true,
     separate: false,
+    hard: false,
+    game: false,
   });
   expect(game.getCurrentTarget()).toBe(120);
   expect(game.getLastTargetOutCount()).toBe(8);
@@ -366,4 +374,70 @@ test('master out', () => {
   expect(game.getRoundScore()).toEqual(['D-BULL', '0', '0']);
   expect(game.getLastTargetOutCount()).toBe(0);
   expect(game.isFinished()).toBeTruthy();
+});
+
+test('hard game mode', () => {
+  const game = new Game({
+    targets: [501],
+    range: 60,
+    out: 'double',
+    simulation: true,
+    separate: true,
+    hard: true,
+    game: true,
+  });
+  expect(game.getCurrentTarget()).toBe(501);
+  game.addScore('T20');
+  expect(game.getCurrentTarget()).toBe(441);
+  game.addScore('T20');
+  game.addScore('T20');
+  game.roundChange();
+  game.addScore('T20');
+  game.addScore('T20');
+  game.addScore('T20');
+  game.roundChange();
+  expect(game.getCurrentTarget()).toBe(141);
+  game.addScore('T20');
+  game.addScore('T19');
+  game.addScore('D12');
+  expect(game.getCurrentTarget()).toBe(0);
+  expect(game.getDartsCount()).toBe(9);
+  expect(game.isFinished()).toBeTruthy();
+  expect(game.getArrangeScore()).toEqual([
+    {
+      target: 501,
+      score: [
+        ['T20', 'T20', 'T20'],
+        ['T20', 'T20', 'T20'],
+        ['T20', 'T19', 'D12'],
+      ],
+    },
+  ]);
+});
+
+test('get darts count', () => {
+  const game = new Game({
+    targets: [120, 110, 100, 90, 80, 70, 60, 50],
+    range: 60,
+    out: 'single',
+    simulation: true,
+    separate: false,
+    hard: false,
+    game: false,
+  });
+  expect(game.getDartsCount()).toBe(0);
+  game.addScore('20');
+  expect(game.getDartsCount()).toBe(1);
+  game.addScore('20');
+  game.addScore('20');
+  expect(game.getDartsCount()).toBe(3);
+  game.roundChange();
+  expect(game.getDartsCount()).toBe(3);
+  game.addScore('20');
+  expect(game.getDartsCount()).toBe(4);
+  game.addScore('20');
+  game.addScore('20');
+  game.roundChange();
+  expect(game.getDartsCount()).toBe(6);
+  expect(game.getCurrentTarget()).toBe(110);
 });

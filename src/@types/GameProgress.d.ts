@@ -96,6 +96,7 @@ interface ArrangeSettings {
   simulation: boolean;
   separate: boolean;
   hard: boolean;
+  game: boolean;
 }
 
 interface CountUpProgress {

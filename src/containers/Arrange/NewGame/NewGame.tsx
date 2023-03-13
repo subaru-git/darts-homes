@@ -13,6 +13,7 @@ import {
   Switch,
   Text,
 } from '@chakra-ui/react';
+import Select from '@/atoms/Select';
 import NewGameModal from '@/components/NewGameModal';
 import SettingHeading from '@/components/SettingHeading';
 import useLocale from '@/hooks/locale';
@@ -28,6 +29,7 @@ const NewGame: FC<NewGameProps> = ({ onNewGame, currentSettings, isFinished = fa
   const { t } = useLocale();
   const defaultHelp = { title: '', hint: { header: '', body: '' } };
   const sim = t.games.arrange.help.find((h) => h.title === 'Simulation Mode') || defaultHelp;
+  const mode = t.games.arrange.help.find((h) => h.title === 'Game Mode') || defaultHelp;
   const board = t.games.arrange.help.find((h) => h.title === 'Board Type') || defaultHelp;
   const range = t.games.arrange.help.find((h) => h.title === 'Range') || defaultHelp;
   const out = t.games.arrange.help.find((h) => h.title === 'Out Option') || defaultHelp;
@@ -50,6 +52,26 @@ const NewGame: FC<NewGameProps> = ({ onNewGame, currentSettings, isFinished = fa
                 isChecked={settings.simulation}
                 onChange={(e) => setSettings({ ...settings, simulation: e.target.checked })}
               />
+            </Box>
+            <Box>
+              <SettingHeading
+                title={mode?.title}
+                hintHeader={mode?.hint.header}
+                hintBody={mode?.hint.body}
+              />
+              <Flex gap={6}>
+                <Select
+                  options={['3 darts', '1 Leg']}
+                  defaultValue={settings.game ? '1 Leg' : '3 darts'}
+                  onSelect={(value) => {
+                    if (value === '3 darts') {
+                      setSettings({ ...settings, game: false });
+                      return;
+                    }
+                    setSettings({ ...settings, game: true });
+                  }}
+                />
+              </Flex>
             </Box>
             <Box>
               <SettingHeading

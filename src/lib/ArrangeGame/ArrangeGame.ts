@@ -15,11 +15,17 @@ class ArrangeGame implements Game, GameData<ArrangeProgress, ArrangeResult> {
     simulation: true,
     hard: false,
     separate: false,
+    game: false,
   };
 
   constructor(settings: ArrangeSettings = ArrangeGame.defaultSettings) {
     this.settings = settings;
-    const { out, targets } = settings;
+    const { out, targets, game } = settings;
+    if (game) {
+      this.targetOutCount = 1;
+      if (this.targets.length === 0) this.targets.push(501);
+      return;
+    }
     this.targets.push(this.getNextTarget(this.targets.length, out, targets));
   }
   getSettings() {
@@ -40,6 +46,9 @@ class ArrangeGame implements Game, GameData<ArrangeProgress, ArrangeResult> {
   getRoundCount() {
     return this.player.getScore().length + 1;
   }
+  getDartsCount(): number {
+    return this.getScore().flat().length;
+  }
   getTarget(): number {
     return this.targets.at(-1) || 0;
   }
@@ -58,6 +67,10 @@ class ArrangeGame implements Game, GameData<ArrangeProgress, ArrangeResult> {
   }
   getRoundScore() {
     return this.roundScore;
+  }
+  getArrangeScore() {
+    const { out, separate } = this.settings;
+    return this.parseScore(this.getScore(), this.targets, out, separate).r as ArrangeOut[];
   }
   getScore() {
     return [...this.player.getScore(), this.roundScore];
@@ -93,9 +106,8 @@ class ArrangeGame implements Game, GameData<ArrangeProgress, ArrangeResult> {
     };
   }
   getGameResult(): ArrangeResult {
-    const { out, separate } = this.settings;
     return {
-      result: this.parseScore(this.getScore(), this.targets, out, separate).r as ArrangeOut[],
+      result: this.getArrangeScore(),
       settings: this.settings,
       playedAt: new Date().toJSON(),
     };

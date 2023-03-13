@@ -276,6 +276,13 @@ const text = {
           },
         },
         {
+          title: 'Game Mode',
+          hint: {
+            header: 'Game Mode?',
+            body: '3 darts か 1 leg のモードを選択します。3 darts はランダムで提示される3本で上がれるスコアをクリアしていきます。1 Leg は501をクリアするモードです。',
+          },
+        },
+        {
           title: 'Board Type',
           hint: {
             header: 'Board Type?',
