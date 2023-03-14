@@ -1,4 +1,5 @@
 import {
+  convertArrangeOutToGameScore,
   convertCountScoreToNumberOfCount,
   convertFirebaseResultToGameResult,
   convertGameResultToFirebaseResult,
@@ -196,4 +197,56 @@ test('convertGameResultToFireStore', () => {
     bullyBully: [{ ...e, round: 0 }],
     treblesForShow: [{ ...e, round: 0 }],
   });
+});
+
+test('convertArrangeOutToGameScore', () => {
+  expect(
+    convertArrangeOutToGameScore({
+      target: 501,
+      score: [
+        ['T20', 'T20', 'T20'],
+        ['T20', 'T20', 'T20'],
+        ['T20', 'T19', '12'],
+        ['D12', '0', '0'],
+        ['OUT', 'OUT', 'OUT'],
+        ['OUT', 'D6', '0'],
+      ],
+    }),
+  ).toEqual([
+    {
+      Scored: '',
+      ToGo: '501',
+      Hits: null,
+    },
+    {
+      Scored: '180',
+      ToGo: '321',
+      Hits: ['T20', 'T20', 'T20'],
+    },
+    {
+      Scored: '180',
+      ToGo: '141',
+      Hits: ['T20', 'T20', 'T20'],
+    },
+    {
+      Scored: '129',
+      ToGo: '12',
+      Hits: ['T20', 'T19', '12'],
+    },
+    {
+      Scored: 'B',
+      ToGo: '12',
+      Hits: ['D12', '-', '-'],
+    },
+    {
+      Scored: '-',
+      ToGo: '12',
+      Hits: ['OUT', 'OUT', 'OUT'],
+    },
+    {
+      Scored: '',
+      ToGo: '②',
+      Hits: ['OUT', 'D6', '-'],
+    },
+  ]);
 });

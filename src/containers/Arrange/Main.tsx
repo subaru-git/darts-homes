@@ -6,6 +6,7 @@ import Targets from './Targets';
 import DescriptionModal from '@/components/DescriptionModal';
 import RoundDisplay from '@/components/RoundDisplay';
 import RoundScore from '@/components/RoundScore';
+import ScoreBoard from '@/components/ScoreBoard';
 import TargetBoard from '@/components/TargetBoard';
 import { useArrangeGame, useArrangeGameSet } from '@/contexts/ArrangeGameContext';
 import { useAuth } from '@/contexts/AuthContext';
@@ -13,7 +14,7 @@ import { db } from '@/db/db';
 import useLocale from '@/hooks/locale';
 import ArrangeGame from '@/lib/ArrangeGame/';
 import { saveHistory } from '@/lib/GameHistoryManager';
-import { convertScoreToNumber } from '@/lib/Helper/Converter';
+import { convertArrangeOutToGameScore, convertScoreToNumber } from '@/lib/Helper/Converter';
 import { ArrangeScore } from '@/lib/Helper/Format';
 import { updateObject } from '@/lib/Helper/updateObjectState';
 import MainTemplate from '@/templates/MainTemplate';
@@ -72,25 +73,42 @@ const DesktopMain: FC<MainProps> = ({ game, setGame, user, description }) => {
       </Flex>
       <Flex gap={4} justifyContent='space-around'>
         <Flex direction='column' alignItems='center' gap={4} justifyContent='center'>
-          <TargetBoard
-            message='Target'
-            target={`${
-              game.getCurrentTarget() === -1
-                ? 'BUST'
-                : game.getCurrentTarget() === 0
-                ? 'NICE'
-                : game.getCurrentTarget()
-            }`}
-          />
-          <RoundDisplay
-            count={game.getSettings().hard ? game.getDartsCount() : game.getRoundCount()}
-            round={game.getSettings().hard ? false : true}
-          />
-          <Targets
-            count={game.getTargetOutCount()}
-            targets={game.getTargets()}
-            isFinished={game.isFinished()}
-          />
+          {game.getSettings().game && game.getSettings().hard ? (
+            <ScoreBoard
+              data={convertArrangeOutToGameScore({
+                ...game.getArrangeScore()[0],
+                score: game
+                  .getArrangeScore()[0]
+                  .score.slice(0, game.getArrangeScore()[0].score.length - 1),
+              })}
+            />
+          ) : (
+            <>
+              <TargetBoard
+                message='Target'
+                target={`${
+                  game.getCurrentTarget() === -1
+                    ? 'BUST'
+                    : game.getCurrentTarget() === 0
+                    ? 'NICE'
+                    : game.getCurrentTarget()
+                }`}
+              />
+              <RoundDisplay
+                count={game.getSettings().hard ? game.getDartsCount() : game.getRoundCount()}
+                round={game.getSettings().hard ? false : true}
+              />
+              <Targets
+                count={game.getTargetOutCount()}
+                targets={
+                  game.getSettings().game
+                    ? [...game.getTargets(), [] as unknown as number]
+                    : game.getTargets()
+                }
+                isFinished={game.getSettings().game ? false : game.isFinished()}
+              />
+            </>
+          )}
         </Flex>
         <ArrangeBoard
           onCount={(n) => updateObject(game, new ArrangeGame(), 'addScore', setGame, n)}

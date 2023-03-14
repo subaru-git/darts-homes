@@ -106,3 +106,25 @@ export const convertFirebaseResultToGameResult = (
 export const convertScoreToPoints = (score: FirebaseScore[]): point[][] => {
   return score.sort((a, b) => a.round - b.round).map((s) => s.score);
 };
+
+export const convertArrangeOutToGameScore = (data: ArrangeOut): GameScore[] => {
+  let current = data.target;
+  const scores = data.score.map((s) => {
+    const count = s.reduce((p: number, c: point) => p + convertScoreToNumber(c, true), 0);
+    const hits = s.map((d) => (d === '0' ? '-' : d));
+    let scored = count.toString();
+    if (current - count < 0) scored = 'B';
+    if (s.every((p) => p === 'OUT')) scored = '-';
+    if (current - count === 0) {
+      scored = '';
+    }
+    if (current - count >= 0) current -= count;
+    let togo = current.toString();
+    if (current === 0) {
+      const count = s.filter((p) => p !== '0').length;
+      togo = count === 1 ? '①' : count === 2 ? '②' : '③';
+    }
+    return { Scored: scored, ToGo: togo.toString(), Hits: hits };
+  });
+  return [{ Scored: '', ToGo: data.target.toString(), Hits: null }, ...scores];
+};

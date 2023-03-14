@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should rendering 1`] = `
+<div>
+  <table
+    class="table-fixed border-collapse"
+  >
+    <thead>
+      <tr>
+        <th
+          class="border-collapse border border-gray-400 px-6 py-3"
+        >
+          Scored
+        </th>
+        <th
+          class="border-collapse border border-gray-400 px-6 py-3"
+        >
+          To Go
+        </th>
+        <th
+          class="border-collapse border border-gray-400 px-6 py-3"
+        >
+          Darts
+        </th>
+        <th
+          class="border-collapse border border-gray-400 px-6 py-3"
+        >
+          Hits
+        </th>
+      </tr>
+    </thead>
+    <tbody />
+  </table>
+  <span
+    hidden=""
+    id="__chakra_env"
+  />
+</div>
+`;
