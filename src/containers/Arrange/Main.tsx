@@ -121,8 +121,19 @@ const DesktopMain: FC<MainProps> = ({ game, setGame, user, description }) => {
     </>
   );
 };
-
 const MobileMain: FC<MainProps> = ({ game, setGame, user, description }) => {
+  return (
+    <>
+      {game.getSettings().game && game.getSettings().hard ? (
+        <MobileGameDisplay game={game} setGame={setGame} user={user} description={description} />
+      ) : (
+        <MobileMainDisplay game={game} setGame={setGame} user={user} description={description} />
+      )}
+    </>
+  );
+};
+
+const MobileMainDisplay: FC<MainProps> = ({ game, setGame, user, description }) => {
   return (
     <Flex direction='column' pb={2}>
       <Flex justifyContent='space-between' alignItems='center'>
@@ -174,6 +185,47 @@ const MobileMain: FC<MainProps> = ({ game, setGame, user, description }) => {
             />
           </GridItem>
         </Grid>
+        <MyRoundScore game={game} setGame={setGame} user={user} />
+        <ArrangeBoard
+          onCount={(n) => updateObject(game, new ArrangeGame(), 'addScore', setGame, n)}
+          range={game.getSettings().range}
+          simulation={game.getSettings().simulation}
+          hard={game.getSettings().hard}
+          disabled={game.getRoundScore().length >= 3 || game.isFinished()}
+        />
+      </Flex>
+    </Flex>
+  );
+};
+
+const MobileGameDisplay: FC<MainProps> = ({ game, setGame, user, description }) => {
+  return (
+    <Flex direction='column' pb={2}>
+      <Flex justifyContent='space-between' alignItems='top'>
+        <NewGame
+          onNewGame={(settings) => {
+            if (game.isFinished()) saveHistory(game.getGameResult(), db.arrangeResult, user);
+            setGame(new ArrangeGame(settings));
+          }}
+          isFinished={game.isFinished()}
+          currentSettings={game.getSettings()}
+        />
+        <div className='mb-1 mt-3 max-h-[50vw] w-full overflow-x-clip overflow-y-scroll'>
+          <ScoreBoard
+            data={convertArrangeOutToGameScore({
+              ...game.getArrangeScore()[0],
+              score: game
+                .getArrangeScore()[0]
+                .score.slice(0, game.getArrangeScore()[0].score.length - 1),
+            })}
+          />
+        </div>
+        <DescriptionModal
+          header={'Arrange'}
+          description={<Text whiteSpace='pre-wrap'>{description}</Text>}
+        />
+      </Flex>
+      <Flex direction='column' alignItems='center' gap={2} justifyContent='center'>
         <MyRoundScore game={game} setGame={setGame} user={user} />
         <ArrangeBoard
           onCount={(n) => updateObject(game, new ArrangeGame(), 'addScore', setGame, n)}
