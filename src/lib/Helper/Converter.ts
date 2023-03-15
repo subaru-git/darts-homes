@@ -128,3 +128,13 @@ export const convertArrangeOutToGameScore = (data: ArrangeOut): GameScore[] => {
   });
   return [{ Scored: '', ToGo: data.target.toString(), Hits: null }, ...scores];
 };
+
+export const convertToFullWidth = (str: string) => {
+  return str.replace(/[\u0020-\u007E]/g, (s: string) => {
+    if (s === ' ') {
+      return String.fromCharCode(0x3000);
+    } else {
+      return String.fromCharCode(s.charCodeAt(0) + 0xfee0);
+    }
+  });
+};

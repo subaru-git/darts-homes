@@ -8,6 +8,7 @@ import {
   convertScoreToCount,
   convertScoreToNumber,
   convertScoreToPoints,
+  convertToFullWidth,
 } from './Converter';
 
 test('convertScoreToNumber', () => {
@@ -249,4 +250,9 @@ test('convertArrangeOutToGameScore', () => {
       Hits: ['OUT', 'D6', '-'],
     },
   ]);
+});
+
+test('convertToFullWidth', () => {
+  expect(convertToFullWidth('1234567890')).toBe('１２３４５６７８９０');
+  expect(convertToFullWidth(':-B ')).toBe('：－Ｂ　');
 });

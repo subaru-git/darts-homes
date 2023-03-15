@@ -37,10 +37,10 @@ const RoundOverDialog: FC<RoundOverDialogProps> = ({ isOpen, result, onClose, on
             <Flex direction={'column'} gap={3}>
               <Text whiteSpace={'pre-wrap'}>{result}</Text>
               <Flex justify={'center'} gap={2}>
-                <TwitterShareButton title={result} url={'http://darts.homes'}>
+                <TwitterShareButton title={`${result}\n`} url={'http://darts.homes'}>
                   <TwitterIcon size={32} round />
                 </TwitterShareButton>
-                <LineShareButton title={result} url={'http://darts.homes'}>
+                <LineShareButton title={`${result}\n`} url={'http://darts.homes'}>
                   <LineIcon size={32} round />
                 </LineShareButton>
               </Flex>

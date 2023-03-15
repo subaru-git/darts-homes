@@ -14,8 +14,7 @@ import { db } from '@/db/db';
 import useLocale from '@/hooks/locale';
 import ArrangeGame from '@/lib/ArrangeGame/';
 import { saveHistory } from '@/lib/GameHistoryManager';
-import { convertArrangeOutToGameScore, convertScoreToNumber } from '@/lib/Helper/Converter';
-import { ArrangeScore } from '@/lib/Helper/Format';
+import { convertArrangeOutToGameScore, convertToFullWidth } from '@/lib/Helper/Converter';
 import { updateObject } from '@/lib/Helper/updateObjectState';
 import MainTemplate from '@/templates/MainTemplate';
 
@@ -204,18 +203,13 @@ const MyRoundScore: FC<MainProps> = ({ game, setGame, user }) => (
 
 const getResult = (game: ArrangeGame) => {
   if (game.getSettings().game) {
-    const target = `${game.getArrangeScore()[0]?.target}`;
-    const res = `${target} :\n${ArrangeScore(game.getArrangeScore()[0]?.score)
-      .map(
-        (s) =>
-          `${
-            s.includes('BUST')
-              ? '0'
-              : s
-                  .reduce((p, c) => p + (c !== 'FINISH' ? convertScoreToNumber(c as point) : 0), 0)
-                  .toString()
-          } : (${s.join(' ')})`,
-      )
+    const res = `${convertArrangeOutToGameScore(game.getArrangeScore()[0])
+      .map((s, i) => {
+        if (i === 0) return convertToFullWidth(`.  :${s.ToGo}`);
+        return convertToFullWidth(
+          `${s.Scored.padStart(3, ' ')}:${s.ToGo.padStart(3, ' ')}:(${s.Hits?.join(',')})`,
+        );
+      })
       .join('\n')}`;
     return res;
   }
