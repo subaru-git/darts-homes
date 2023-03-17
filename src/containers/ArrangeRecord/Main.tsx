@@ -80,8 +80,8 @@ const Main: FC = () => {
 
   return (
     <MainTemplate label={'arrange-record-main'}>
-      <div className='m-4 flex gap-4'>
-        <div className={`relative aspect-square w-[60vh]`}>
+      <div className='m-4 gap-4 md:flex'>
+        <div className={`relative aspect-square md:w-[60vh]`}>
           <div ref={containerRef} className='absolute top-0 left-0 h-fit w-full'>
             <div className='h-full w-full'>
               <DartBoard onCount={() => {}} hard />
@@ -89,7 +89,7 @@ const Main: FC = () => {
           </div>
           <canvas ref={canvasRef} className='absolute top-0 left-0'></canvas>
         </div>
-        <div className='flex flex-col gap-4'>
+        <div className='flex flex-col gap-4 pb-4'>
           <label className='text-sm'>Target</label>
           <input
             type='number'
