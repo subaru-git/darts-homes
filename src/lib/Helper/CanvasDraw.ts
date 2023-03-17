@@ -83,6 +83,8 @@ export const getSegmentCenter = (rect: Rect, number: string): { x: number; y: nu
   const centerX = rect.x + rect.width / 2;
   const centerY = rect.y + rect.height / 2;
   const radius = rect.width / 2;
+  if (number === 'DB') return { x: centerX, y: centerY };
+  if (number === 'SB') return { x: centerX, y: centerY - radius * 0.055 };
 
   const isTriple = number.startsWith('T');
   const isDouble = number.startsWith('D');
