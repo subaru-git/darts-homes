@@ -868,10 +868,75 @@ exports[`should rendering 1`] = `
                 id="popover-trigger-:r4:"
               >
                 <a
-                  href="/respect"
+                  href="/#"
                 >
-                  Respect
+                  Tools
                 </a>
+              </div>
+              <div
+                class="chakra-popover__popper css-1qq679y"
+                style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+              >
+                <section
+                  class="chakra-popover__content css-1slp7gy"
+                  id="popover-content-:r4:"
+                  role="tooltip"
+                  style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                  tabindex="-1"
+                >
+                  <div
+                    class="chakra-stack css-i4eu2s"
+                  >
+                    <div
+                      class="css-1rc82uo"
+                      role="group"
+                    >
+                      <a
+                        aria-label="Arrange Record"
+                        href="/arrangerecord"
+                      >
+                        <div
+                          class="chakra-stack css-84zodg"
+                        >
+                          <div
+                            class="css-0"
+                          >
+                            <p
+                              class="chakra-text css-sc37ud"
+                            >
+                              Arrange Record
+                            </p>
+                            <p
+                              class="chakra-text css-itvw0n"
+                            >
+                              Arrange record display
+                            </p>
+                          </div>
+                          <div
+                            class="css-2gz105"
+                          >
+                            <svg
+                              class="chakra-icon css-swb7g"
+                              fill="currentColor"
+                              focusable="false"
+                              height="1em"
+                              stroke="currentColor"
+                              stroke-width="0"
+                              viewBox="0 0 8 16"
+                              width="1em"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M7.5 8l-5 5L1 11.5 4.75 8 1 4.5 2.5 3l5 5z"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </section>
               </div>
             </div>
             <div
@@ -883,6 +948,23 @@ exports[`should rendering 1`] = `
                 aria-haspopup="dialog"
                 class="css-13fflh2"
                 id="popover-trigger-:r6:"
+              >
+                <a
+                  href="/respect"
+                >
+                  Respect
+                </a>
+              </div>
+            </div>
+            <div
+              class="css-0"
+            >
+              <div
+                aria-controls="popover-content-:r8:"
+                aria-expanded="false"
+                aria-haspopup="dialog"
+                class="css-13fflh2"
+                id="popover-trigger-:r8:"
               >
                 <a
                   href="/history"
@@ -900,12 +982,12 @@ exports[`should rendering 1`] = `
           class="css-1k9efnl"
         >
           <button
-            aria-controls="popover-content-:r8:"
+            aria-controls="popover-content-:ra:"
             aria-expanded="false"
             aria-haspopup="dialog"
             aria-label="change language"
             class="chakra-button css-13zvu4r"
-            id="popover-trigger-:r8:"
+            id="popover-trigger-:ra:"
             type="button"
           >
             <svg
@@ -930,7 +1012,7 @@ exports[`should rendering 1`] = `
           >
             <section
               class="chakra-popover__content css-sjj62m"
-              id="popover-content-:r8:"
+              id="popover-content-:ra:"
               role="dialog"
               style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
               tabindex="-1"
@@ -960,11 +1042,11 @@ exports[`should rendering 1`] = `
             </section>
           </div>
           <button
-            aria-controls="popover-content-:ra:"
+            aria-controls="popover-content-:rc:"
             aria-expanded="false"
             aria-haspopup="dialog"
             class="chakra-button css-1pnao28"
-            id="popover-trigger-:ra:"
+            id="popover-trigger-:rc:"
             type="button"
           >
             Login
@@ -974,17 +1056,17 @@ exports[`should rendering 1`] = `
             style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
           >
             <section
-              aria-describedby="popover-body-:ra:"
-              aria-labelledby="popover-header-:ra:"
+              aria-describedby="popover-body-:rc:"
+              aria-labelledby="popover-header-:rc:"
               class="chakra-popover__content css-sjj62m"
-              id="popover-content-:ra:"
+              id="popover-content-:rc:"
               role="dialog"
               style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
               tabindex="-1"
             >
               <header
                 class="chakra-popover__header css-gdvycv"
-                id="popover-header-:ra:"
+                id="popover-header-:rc:"
               >
                 Login
               </header>
@@ -1017,7 +1099,7 @@ exports[`should rendering 1`] = `
               </button>
               <div
                 class="chakra-popover__body css-1ews2c8"
-                id="popover-body-:ra:"
+                id="popover-body-:rc:"
               >
                 <div
                   class="css-1l4w6pd"
@@ -1295,6 +1377,50 @@ exports[`should rendering 1`] = `
                 class="css-1j1i25b"
               >
                 Count Up
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="chakra-stack css-egoftb"
+        >
+          <div
+            class="css-lxmzlz"
+            href="/#"
+          >
+            <p
+              class="chakra-text css-9y4vnp"
+            >
+              Tools
+            </p>
+            <svg
+              class="chakra-icon css-q9erop"
+              fill="currentColor"
+              focusable="false"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 10 16"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5 11L0 6l1.5-1.5L5 8.25 8.5 4.5 10 6l-5 5z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </div>
+          <div
+            class="chakra-collapse"
+            style="overflow: hidden; display: none; opacity: 0; height: 0px;"
+          >
+            <div
+              class="chakra-stack css-11sp92w"
+            >
+              <div
+                class="css-1j1i25b"
+              >
+                Arrange Record
               </div>
             </div>
           </div>
