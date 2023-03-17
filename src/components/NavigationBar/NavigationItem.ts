@@ -97,6 +97,16 @@ export const GetNavItem = () => {
       ],
     },
     {
+      label: 'Tools',
+      children: [
+        {
+          label: 'Arrange Record',
+          subLabel: t.navigation.arrangerecord,
+          href: '/arrangerecord',
+        },
+      ],
+    },
+    {
       label: 'Respect',
       href: '/respect',
     },

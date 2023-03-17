@@ -109,6 +109,10 @@ const text = {
       title: 'Games',
       description: 'ダーツの練習ゲームを紹介します。あなたに合ったものがあると嬉しいです。',
     },
+    arrangerecord: {
+      title: 'Arrange Record',
+      description: 'アレンジの軌跡を見ながら考えるツール。',
+    },
     respect: {
       title: 'Respect',
       description: 'リスペクトするダーツコンテンツを紹介します。一緒に応援していきましょう。',
@@ -144,6 +148,7 @@ const text = {
     treblesforshow: '20練習ゲーム',
     arrange: 'アレンジ練習ゲーム',
     countup: 'スティールダーツ用カウントアップ',
+    arrangerecord: 'アレンジの軌跡を見るツール',
   },
   games: {
     eagleseye: {

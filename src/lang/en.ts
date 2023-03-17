@@ -113,6 +113,10 @@ const text = {
       title: 'Games',
       description: 'Here are some darts practice games. We hope you find one that you like.',
     },
+    arrangerecord: {
+      title: 'Arrange Record',
+      description: 'A tool for arrange. You can check the arrange route.',
+    },
     respect: {
       title: 'Respect',
       description: "Here are some darts contents that we respect. Let's support them together.",
@@ -148,6 +152,7 @@ const text = {
     treblesforshow: '20 practice game',
     arrange: 'Arrange practice game',
     countup: 'count up game for steel darts',
+    arrangerecord: 'Arrange record display',
   },
   games: {
     eagleseye: {
