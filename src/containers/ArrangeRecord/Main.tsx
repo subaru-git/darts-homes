@@ -38,6 +38,11 @@ const Main: FC = () => {
     return url.toString();
   };
 
+  const getFileName = () => {
+    const l = lines.filter((l) => l !== '').join('_');
+    return `arrange-record-${target}-${l}.png`;
+  };
+
   useEffect(() => {
     setTarget(t ?? 0);
     const arranges = (a ? (Array.isArray(a) ? a : a.split(',')) : ['', '', '']) as string[];
@@ -154,7 +159,7 @@ const Main: FC = () => {
                     style: { transform: 'scale(0.9)', transformOrigin: 'top left' },
                   });
                   if (!blob) return;
-                  fileDownload(blob, 'arrange.png');
+                  fileDownload(blob, getFileName());
                 }}
               >
                 <RiDownload2Fill />
