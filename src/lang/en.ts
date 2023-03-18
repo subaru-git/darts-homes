@@ -5,6 +5,11 @@ const text = {
       description: ['It supports home darts, which tend to be monotonous.'],
       button: "Let's see the practice games.",
     },
+    disclaimer: {
+      description: [
+        'This app is being developed as a hobby project and as a portfolio. Please do not have high expectations.',
+      ],
+    },
     description: {
       title: ['Suggest practicing home darts'],
       description: [
