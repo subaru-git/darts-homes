@@ -333,6 +333,32 @@ const text = {
       tags: ['count up'],
     },
   },
+  tools: {
+    arrangerecord: {
+      title: 'Arrange Record',
+      description: [
+        'ダーツのアレンジを可視化します。',
+        'T14-D12のように入力すると、矢印が表示されどのようなルートで視線を動かすことになるかわかります。',
+        'Shareで結果を共有できます。',
+      ],
+      help: [
+        {
+          title: 'Target',
+          hint: {
+            header: 'Target?',
+            body: 'アレンジのターゲットを入力します。',
+          },
+        },
+        {
+          title: 'Arranges',
+          hint: {
+            header: 'Arranges?',
+            body: 'アレンジのルートを入力します。たとえば、「T14-D12」のように入力します。',
+          },
+        },
+      ],
+    },
+  },
   import: {
     errortitle: '無効なファイルです。',
     errordescription: 'ファイル形式が無効です。ファイルを確認してください。',

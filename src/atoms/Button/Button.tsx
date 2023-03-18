@@ -20,6 +20,7 @@ const Button: FC<ButtonProps> = ({ onClick, children, color = 'green', ...props 
 
 const style: { [key: string]: string } = {
   green: 'text-emerald-600 border-emerald-600 bg-white hover:bg-emerald-50',
+  blue: 'text-blue-400 border-blue-400 bg-white hover:bg-blue-50',
 } as const;
 
 export default Button;
