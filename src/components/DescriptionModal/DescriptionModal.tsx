@@ -16,9 +16,10 @@ import { GrCircleInformation } from 'react-icons/gr';
 type DescriptionModalProps = {
   header: string;
   description: ReactNode | ReactNode[];
+  game?: boolean;
 };
 
-const DescriptionModal: FC<DescriptionModalProps> = ({ header, description }) => {
+const DescriptionModal: FC<DescriptionModalProps> = ({ header, description, game = true }) => {
   const { isOpen, onToggle } = useDisclosure();
   const isMd = useBreakpointValue({ base: false, md: true });
   return (
@@ -30,7 +31,7 @@ const DescriptionModal: FC<DescriptionModalProps> = ({ header, description }) =>
           variant='ghost'
           onClick={onToggle}
         >
-          What is this game?
+          {`What is this${game ? ' game' : ''}?`}
         </Button>
       ) : (
         <IconButton

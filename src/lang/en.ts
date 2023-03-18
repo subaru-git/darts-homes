@@ -338,6 +338,32 @@ const text = {
       tags: ['count up'],
     },
   },
+  tools: {
+    arrangerecord: {
+      title: 'Arrange Record',
+      description: [
+        'We visualize dart arrangements.',
+        'Input T14-D12 to see how the line of sight moves along the path. ',
+        'You can share the result via Share button.',
+      ],
+      help: [
+        {
+          title: 'Target',
+          hint: {
+            header: 'Target?',
+            body: 'Input the target number.',
+          },
+        },
+        {
+          title: 'Arranges',
+          hint: {
+            header: 'Arranges?',
+            body: 'Input the way of arrangement. (e.g. T14-D12)',
+          },
+        },
+      ],
+    },
+  },
   import: {
     errortitle: 'Invalid Import File.',
     errordescription: 'Your import file is invalid. Please check the import file.',
