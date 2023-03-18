@@ -5,6 +5,11 @@ const text = {
       description: ['単調になりがちな家ダーツをサポートします。'],
       button: '練習ゲームを見てみる',
     },
+    disclaimer: {
+      description: [
+        'このアプリは個人が趣味でポートフォリオ的に作成しているものです。過度な期待はしないでください。',
+      ],
+    },
     description: {
       title: ['家ダーツの練習を提案'],
       description: [
