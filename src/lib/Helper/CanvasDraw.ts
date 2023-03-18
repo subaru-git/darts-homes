@@ -73,15 +73,13 @@ export const drawArrow = (
   }
 };
 
-export interface Rect {
-  x: number;
-  y: number;
+export interface RectSize {
   width: number;
   height: number;
 }
-export const getSegmentCenter = (rect: Rect, number: string): { x: number; y: number } => {
-  const centerX = rect.x + rect.width / 2;
-  const centerY = rect.y + rect.height / 2;
+export const getSegmentCenter = (rect: RectSize, number: string): { x: number; y: number } => {
+  const centerX = rect.width / 2;
+  const centerY = rect.height / 2;
   const radius = rect.width / 2;
   if (number === 'DB') return { x: centerX, y: centerY };
   if (number === 'SB') return { x: centerX, y: centerY - radius * 0.055 };

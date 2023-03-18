@@ -31,12 +31,12 @@ const updateLines = (
       const from = getSegmentCenter(rect, fn);
       const to = getSegmentCenter(rect, tn);
       const f = {
-        x: from.x - canvas.offsetLeft - 16,
-        y: from.y - canvas.offsetTop - 76,
+        x: from.x - canvas.offsetLeft,
+        y: from.y - canvas.offsetTop,
       };
       const t = {
-        x: to.x - canvas.offsetLeft - 16,
-        y: to.y - canvas.offsetTop - 76,
+        x: to.x - canvas.offsetLeft,
+        y: to.y - canvas.offsetTop,
       };
       drawArrow(ctx, f, t, colors[index], i < line.length - 2, i === line.length - 2);
     }
@@ -59,10 +59,13 @@ const Main: FC = () => {
   }, [a, t]);
   useEffect(() => {
     const handleResize = () => {
+      console.log('resize: container - ', containerRef.current?.getBoundingClientRect());
+      console.log('resize: canvas - ', canvasRef.current?.getBoundingClientRect());
       if (canvasRef.current && containerRef.current) {
         const { width, height } = containerRef.current.getBoundingClientRect();
         canvasRef.current.width = width;
         canvasRef.current.height = height;
+        console.log('resized canvas - ', canvasRef.current?.getBoundingClientRect());
         updateLines(containerRef, canvasRef, lines);
       }
     };
@@ -80,9 +83,11 @@ const Main: FC = () => {
 
   return (
     <MainTemplate label={'arrange-record-main'}>
-      <div className='m-4 gap-4 md:flex'>
-        <div className={`relative aspect-square md:w-[60vh]`}>
-          <div ref={containerRef} className='absolute top-0 left-0 h-fit w-full'>
+      <div className='m-4 flex flex-col gap-4 md:flex-row md:content-center md:justify-center'>
+        <div
+          className={`relative mx-auto aspect-square w-[50vh] max-w-[360px] md:mx-2 md:w-[60vh] md:max-w-[540px]`}
+        >
+          <div ref={containerRef} className='absolute top-0 left-0 w-full md:h-fit'>
             <div className='h-full w-full'>
               <DartBoard onCount={() => {}} hard />
             </div>
