@@ -188,6 +188,7 @@ const NewGame: FC<NewGameProps> = ({ onNewGame, currentSettings, isFinished = fa
                   });
                 else setSettings({ ...settings, targets: [] });
               }}
+              disabled={settings.game}
             ></Input>
           </Box>
         </Flex>
