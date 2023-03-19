@@ -88,11 +88,15 @@ interface ArrangeProgress {
 }
 
 type OutOption = 'double' | 'single' | 'master';
+interface RangeAxis {
+  x: number;
+  y: number;
+}
 
 interface ArrangeSettings {
   targets?: number[];
   out: OutOption;
-  range: number;
+  range: RangeAxis;
   simulation: boolean;
   separate: boolean;
   hard: boolean;

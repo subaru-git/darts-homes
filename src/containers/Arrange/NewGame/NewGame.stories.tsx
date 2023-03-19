@@ -13,7 +13,7 @@ const Template: ComponentStory<typeof NewGame> = (args) => <NewGame {...args} />
 export const Default = Template.bind({});
 Default.args = {
   currentSettings: {
-    range: 0,
+    range: { x: 0, y: 0 },
     out: 'double',
     simulation: true,
     hard: false,

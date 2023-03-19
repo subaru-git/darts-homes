@@ -10,7 +10,7 @@ class ArrangeGame implements Game, GameData<ArrangeProgress, ArrangeResult> {
   private roundScore: point[] = [];
   private targets: number[] = [];
   private static readonly defaultSettings: ArrangeSettings = {
-    range: 0,
+    range: { x: 0, y: 0 },
     out: 'single',
     simulation: true,
     hard: false,
