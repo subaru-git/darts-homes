@@ -46,7 +46,13 @@ const ArrangeBoard: FC<ArrangeBoardProps> = ({
           <Box position={'absolute'} w={'100%'} h={'100%'}>
             <DartBoard onCount={onCount} hard={hard} />
           </Box>
-          <Box position={'relative'} w={'100%'} h={'100%'} pointerEvents={'none'}>
+          <Box
+            position={'relative'}
+            w={'100%'}
+            h={'100%'}
+            pointerEvents={'none'}
+            overflow={'hidden'}
+          >
             <Box
               ref={base}
               position={'absolute'}
