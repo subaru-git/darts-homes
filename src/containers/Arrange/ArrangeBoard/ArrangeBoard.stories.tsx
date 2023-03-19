@@ -12,6 +12,6 @@ const Template: ComponentStory<typeof ArrangeBoard> = (args) => <ArrangeBoard {.
 
 export const Default = Template.bind({});
 Default.args = {
-  range: 44,
+  range: { x: 44, y: 44 },
   simulation: true,
 };

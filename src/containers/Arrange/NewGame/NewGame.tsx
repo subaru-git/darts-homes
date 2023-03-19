@@ -13,6 +13,8 @@ import {
   Switch,
   Text,
 } from '@chakra-ui/react';
+import { BiMoveVertical } from 'react-icons/bi';
+import { GiHorizontalFlip } from 'react-icons/gi';
 import Select from '@/atoms/Select';
 import NewGameModal from '@/components/NewGameModal';
 import SettingHeading from '@/components/SettingHeading';
@@ -97,9 +99,12 @@ const NewGame: FC<NewGameProps> = ({ onNewGame, currentSettings, isFinished = fa
               hintBody={range?.hint.body}
             />
             <Box px={4} pt={10}>
+              <GiHorizontalFlip />
               <Slider
-                onChange={(range) => setSettings({ ...settings, range })}
-                value={settings.range}
+                onChange={(range) =>
+                  setSettings({ ...settings, range: { ...settings.range, x: range } })
+                }
+                value={settings.range.x}
                 max={210}
                 isDisabled={!settings.simulation}
                 aria-label='range'
@@ -108,7 +113,7 @@ const NewGame: FC<NewGameProps> = ({ onNewGame, currentSettings, isFinished = fa
                 <SliderMark value={44}>44</SliderMark>
                 <SliderMark value={210}>210</SliderMark>
                 <SliderMark
-                  value={settings.range}
+                  value={settings.range.x}
                   textAlign='center'
                   bg='blue.500'
                   color='white'
@@ -116,7 +121,38 @@ const NewGame: FC<NewGameProps> = ({ onNewGame, currentSettings, isFinished = fa
                   ml='-5'
                   w='16'
                 >
-                  {settings.range}mm
+                  {settings.range.x}mm
+                </SliderMark>
+                <SliderTrack>
+                  <SliderFilledTrack />
+                </SliderTrack>
+                <SliderThumb />
+              </Slider>
+            </Box>
+            <Box px={4} pt={10}>
+              <BiMoveVertical />
+              <Slider
+                onChange={(range) =>
+                  setSettings({ ...settings, range: { ...settings.range, y: range } })
+                }
+                value={settings.range.y}
+                max={210}
+                isDisabled={!settings.simulation}
+                aria-label='range'
+              >
+                <SliderMark value={0}>0</SliderMark>
+                <SliderMark value={44}>44</SliderMark>
+                <SliderMark value={210}>210</SliderMark>
+                <SliderMark
+                  value={settings.range.y}
+                  textAlign='center'
+                  bg='blue.500'
+                  color='white'
+                  mt='-10'
+                  ml='-5'
+                  w='16'
+                >
+                  {settings.range.y}mm
                 </SliderMark>
                 <SliderTrack>
                   <SliderFilledTrack />

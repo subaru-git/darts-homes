@@ -8,7 +8,7 @@ import { getLandingPosition } from '@/lib/Helper/Landing';
 
 type ArrangeBoardProps = {
   onCount: (count: point) => void;
-  range: number;
+  range: RangeAxis;
   simulation?: boolean;
   hard?: boolean;
   disabled?: boolean;
