@@ -112,13 +112,19 @@ export const ArrangeProgress = t.iface([], {
 
 export const OutOption = t.union(t.lit('double'), t.lit('single'), t.lit('master'));
 
+export const RangeAxis = t.iface([], {
+  "x": "number",
+  "y": "number",
+});
+
 export const ArrangeSettings = t.iface([], {
   "targets": t.opt(t.array("number")),
   "out": "OutOption",
-  "range": "number",
+  "range": "RangeAxis",
   "simulation": "boolean",
   "separate": "boolean",
   "hard": "boolean",
+  "game": "boolean",
 });
 
 export const CountUpProgress = t.iface([], {
@@ -127,21 +133,21 @@ export const CountUpProgress = t.iface([], {
 });
 
 export const GameResult = t.iface([], {
-  "cricketmarkup": t.opt(t.array("CricketMarkUpResult")),
-  "eagleseye": t.opt(t.array("EaglesEyeResult")),
-  "doubletrouble": t.opt(t.array("DoubleTroubleResult")),
+  "cricketMarkUp": t.opt(t.array("CricketMarkUpResult")),
+  "eaglesEye": t.opt(t.array("EaglesEyeResult")),
+  "doubleTrouble": t.opt(t.array("DoubleTroubleResult")),
   "sweet16": t.opt(t.array("Sweet16Result")),
-  "topsandtens": t.opt(t.array("TopsAndTensResult")),
-  "twodartcombinations": t.opt(t.array("TwoDartCombinationsResult")),
-  "aroundthecompass": t.opt(t.array("AroundTheCompassResult")),
-  "tonsup": t.opt(t.array("TonsUpResult")),
+  "topsAndTens": t.opt(t.array("TopsAndTensResult")),
+  "twoDartCombinations": t.opt(t.array("TwoDartCombinationsResult")),
+  "aroundTheCompass": t.opt(t.array("AroundTheCompassResult")),
+  "tonsUp": t.opt(t.array("TonsUpResult")),
   "route64": t.opt(t.array("Route64Result")),
-  "eightythrew": t.opt(t.array("EightyThrewResult")),
-  "shanghainights": t.opt(t.array("ShanghaiNightsResult")),
-  "switchhitter": t.opt(t.array("SwitchHitterResult")),
-  "bullybully": t.opt(t.array("BullyBullyResult")),
-  "treblesforshow": t.opt(t.array("TreblesForShowResult")),
-  "countup": t.opt(t.array("CountUpResult")),
+  "eightyThrew": t.opt(t.array("EightyThrewResult")),
+  "shanghaiNights": t.opt(t.array("ShanghaiNightsResult")),
+  "switchHitter": t.opt(t.array("SwitchHitterResult")),
+  "bullyBully": t.opt(t.array("BullyBullyResult")),
+  "treblesForShow": t.opt(t.array("TreblesForShowResult")),
+  "countUp": t.opt(t.array("CountUpResult")),
 });
 
 export const CricketMarkUpResult = t.iface([], {
@@ -347,6 +353,12 @@ export const WebsiteResult = t.iface([], {
   "type": t.union("string", "null"),
 });
 
+export const GameScore = t.iface([], {
+  "Scored": "string",
+  "ToGo": "string",
+  "Hits": t.union(t.array(t.union("point", t.lit('-'))), "null"),
+});
+
 export const FirebaseUser = t.iface([], {
   "id": "string",
   "name": "string",
@@ -411,6 +423,7 @@ export const GameResultModelFirebase = t.iface([], {
   "treblesForShow": t.opt(t.array(t.intersection("any", t.iface([], {
     "scores": t.array("FirebaseScore"),
   })))),
+  "countUp": t.opt(t.array("CountUpResultModel")),
 });
 
 export const Window = t.iface([], {
@@ -439,6 +452,7 @@ const exportedTypeSuite: t.ITypeSuite = {
   TreblesForShowProgress,
   ArrangeProgress,
   OutOption,
+  RangeAxis,
   ArrangeSettings,
   CountUpProgress,
   GameResult,
@@ -480,6 +494,7 @@ const exportedTypeSuite: t.ITypeSuite = {
   GameResultModel,
   RespectResult,
   WebsiteResult,
+  GameScore,
   FirebaseUser,
   User,
   FirebaseScore,
