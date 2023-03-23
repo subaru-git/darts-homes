@@ -4,7 +4,11 @@ import { Box, Center } from '@chakra-ui/react';
 import { css, SerializedStyles } from '@emotion/react';
 import { TfiTarget } from 'react-icons/tfi';
 import DartBoard from '@/components/DartBoard';
-import { getLandingPosition } from '@/lib/Helper/Landing';
+import {
+  actualizedCoordinate,
+  getLandingPosition,
+  normalizedCoordinate,
+} from '@/lib/Helper/Landing';
 
 type ArrangeBoardProps = {
   onCount: (count: point) => void;
@@ -12,6 +16,8 @@ type ArrangeBoardProps = {
   simulation?: boolean;
   hard?: boolean;
   disabled?: boolean;
+  roundVectors?: Vector2D[];
+  onLanding?: (landing: Vector2D) => void;
 };
 
 type Target = {
@@ -19,7 +25,7 @@ type Target = {
   y: number;
   visible: 'visible' | 'hidden';
 };
-const initialTarget: Target = { x: 0, y: 0, visible: 'hidden' };
+const initialTarget: Target = { x: 0.0, y: 0.0, visible: 'hidden' };
 
 const ArrangeBoard: FC<ArrangeBoardProps> = ({
   onCount,
@@ -27,18 +33,30 @@ const ArrangeBoard: FC<ArrangeBoardProps> = ({
   simulation = false,
   hard = false,
   disabled = false,
+  roundVectors = [],
+  onLanding = () => {},
 }) => {
   const base = useRef<HTMLDivElement>(null);
   const [aim, setAim] = useState<Target>(initialTarget);
   const [landing, setLanding] = useState<Target>(initialTarget);
   const [styles, setStyles] = useState<SerializedStyles[]>([]);
   const [animation, setAnimation] = useState(false);
+  const [animationKey, setAnimationKey] = useState(0);
+  const [darts, setDarts] = useState<Target[]>([initialTarget, initialTarget, initialTarget]);
   useEffect(() => {
-    if (animation) {
-      setAnimation(false);
-      setStyles([landingAnimationStyle]);
-    }
-  }, [animation]);
+    const d = [initialTarget, initialTarget, initialTarget].map((v, i): Target => {
+      if (!roundVectors[i]) return v;
+      const visible = animation
+        ? i < roundVectors.length - 1
+          ? 'visible'
+          : 'hidden'
+        : i <= roundVectors.length - 1
+        ? 'visible'
+        : 'hidden';
+      return { ...v, x: roundVectors[i].x, y: roundVectors[i].y, visible };
+    });
+    setDarts(d);
+  }, [roundVectors, animation]);
   return (
     <>
       <Center>
@@ -62,19 +80,28 @@ const ArrangeBoard: FC<ArrangeBoardProps> = ({
               data-cy={'arrange-board-base'}
               onClick={(e) => {
                 if (disabled) return;
+                const undefinedRect = { x: 0, y: 0, width: 0, height: 0 };
+                const baseRect = base.current?.getBoundingClientRect() ?? undefinedRect;
                 let pos = { x: e.clientX, y: e.clientY };
-                setAim({ x: pos.x, y: pos.y, visible: 'visible' });
+                let relativePos = { x: e.clientX - baseRect.x, y: e.clientY - baseRect.y };
+                const aimVec = normalizedCoordinate(relativePos, baseRect);
+                setAim({ x: aimVec.x, y: aimVec.y, visible: 'visible' });
                 if (simulation) {
-                  const undefinedRect = { x: 0, y: 0, width: 0, height: 0 };
-                  const baseRect = base.current?.getBoundingClientRect() ?? undefinedRect;
                   pos = getLandingPosition({ x: e.clientX, y: e.clientY }, baseRect, range);
-                  setLanding({ x: pos.x, y: pos.y, visible: 'visible' });
+                  relativePos = { x: pos.x - baseRect.x, y: pos.y - baseRect.y };
+                  const landingVec = normalizedCoordinate(relativePos, baseRect);
+                  setLanding({ x: landingVec.x, y: landingVec.y, visible: 'visible' });
                 }
+                onLanding(normalizedCoordinate(relativePos, baseRect));
                 base.current?.style.setProperty('pointer-events', `none`);
                 const elm = document.elementFromPoint(pos.x, pos.y) as HTMLElement;
                 base.current?.style.setProperty('pointer-events', `auto`);
                 elm?.click();
                 setStyles([]);
+                setAnimationKey((prevKey) => prevKey + 1);
+                setTimeout(() => {
+                  setStyles([landingAnimationStyle]);
+                }, 0);
                 setAnimation(true);
               }}
             >
@@ -85,21 +112,37 @@ const ArrangeBoard: FC<ArrangeBoardProps> = ({
                 visibility={disabled ? 'visible' : 'hidden'}
               />
               <TfiTarget
-                visibility={aim.visible}
-                color={'white'}
+                className='text-white text-opacity-50'
                 size={32}
-                css={targetStyle(base, aim, 32)}
+                css={targetStyle(base, aim, 32, true)}
               />
               <TfiTarget
-                visibility={!simulation ? 'hidden' : landing.visible}
-                color={'green'}
-                size={32}
-                css={[targetStyle(base, landing, 32), styles]}
+                key={animationKey}
+                className='text-yellow-500'
+                size={24}
+                css={[targetStyle(base, landing, 24, simulation), dartStyle, styles]}
                 onAnimationEnd={() => {
                   setAim(initialTarget);
                   setLanding(initialTarget);
+                  setDarts(darts.map((d: Target) => ({ ...d, visible: 'visible' })));
+                  setAnimation(false);
                   setStyles([]);
                 }}
+              />
+              <TfiTarget
+                className='text-yellow-500'
+                css={[targetStyle(base, darts[0], 24, simulation), dartStyle]}
+                size={24}
+              />
+              <TfiTarget
+                className='text-yellow-500'
+                css={[targetStyle(base, darts[1], 24, simulation), dartStyle]}
+                size={24}
+              />
+              <TfiTarget
+                className='text-yellow-500'
+                css={[targetStyle(base, darts[2], 24, simulation), dartStyle]}
+                size={24}
               />
             </Box>
           </Box>
@@ -109,12 +152,24 @@ const ArrangeBoard: FC<ArrangeBoardProps> = ({
   );
 };
 
-const targetStyle = (base: RefObject<HTMLDivElement>, landing: Target, size: number) =>
-  css({
+const targetStyle = (
+  base: RefObject<HTMLDivElement>,
+  landing: Target,
+  size: number,
+  simulation: boolean,
+) => {
+  const rect = base?.current?.getBoundingClientRect() ?? { x: 0, y: 0, width: 0, height: 0 };
+  const vec = actualizedCoordinate(landing, rect);
+  return css({
     position: 'absolute',
-    left: `${landing.x - (base?.current?.getBoundingClientRect().x ?? 0) - size / 2}px`,
-    top: `${landing.y - (base?.current?.getBoundingClientRect().y ?? 0) - size / 2}px`,
+    left: `${vec.x - size / 2}px`,
+    top: `${vec.y - size / 2}px`,
+    visibility: simulation ? landing.visible : 'hidden',
   });
+};
+const dartStyle = css({
+  filter: 'drop-shadow(0 0 3px rgba(0, 0, 0, 1))',
+});
 
 const landingAnimationStyle = css({
   animation: 'landing 1.4s ease-out',

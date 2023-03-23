@@ -73,10 +73,6 @@ export const drawArrow = (
   }
 };
 
-export interface RectSize {
-  width: number;
-  height: number;
-}
 export const getSegmentCenter = (rect: RectSize, number: string): { x: number; y: number } => {
   const centerX = rect.width / 2;
   const centerY = rect.height / 2;
