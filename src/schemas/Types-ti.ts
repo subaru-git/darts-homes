@@ -4,6 +4,16 @@
 import * as t from "ts-interface-checker";
 // tslint:disable:object-literal-key-quotes
 
+export const RectSize = t.iface([], {
+  "width": "number",
+  "height": "number",
+});
+
+export const Vector2D = t.iface([], {
+  "x": "number",
+  "y": "number",
+});
+
 export const point = t.union(t.lit('0'), t.lit('1'), t.lit('D1'), t.lit('T1'), t.lit('2'), t.lit('D2'), t.lit('T2'), t.lit('3'), t.lit('D3'), t.lit('T3'), t.lit('4'), t.lit('D4'), t.lit('T4'), t.lit('5'), t.lit('D5'), t.lit('T5'), t.lit('6'), t.lit('D6'), t.lit('T6'), t.lit('7'), t.lit('D7'), t.lit('T7'), t.lit('8'), t.lit('D8'), t.lit('T8'), t.lit('9'), t.lit('D9'), t.lit('T9'), t.lit('10'), t.lit('D10'), t.lit('T10'), t.lit('11'), t.lit('D11'), t.lit('T11'), t.lit('12'), t.lit('D12'), t.lit('T12'), t.lit('13'), t.lit('D13'), t.lit('T13'), t.lit('14'), t.lit('D14'), t.lit('T14'), t.lit('15'), t.lit('D15'), t.lit('T15'), t.lit('16'), t.lit('D16'), t.lit('T16'), t.lit('17'), t.lit('D17'), t.lit('T17'), t.lit('18'), t.lit('D18'), t.lit('T18'), t.lit('19'), t.lit('D19'), t.lit('T19'), t.lit('20'), t.lit('D20'), t.lit('T20'), t.lit('S-BULL'), t.lit('D-BULL'), t.lit('OUT'));
 
 export const Game = t.iface([], {
@@ -105,6 +115,7 @@ export const TreblesForShowProgress = t.iface([], {
 export const ArrangeProgress = t.iface([], {
   "roundScore": t.array("point"),
   "score": t.array(t.array("point")),
+  "vector": t.array("Vector2D"),
   "targetOutCount": "number",
   "targets": t.array("number"),
   "settings": "ArrangeSettings",
@@ -433,6 +444,8 @@ export const Window = t.iface([], {
 });
 
 const exportedTypeSuite: t.ITypeSuite = {
+  RectSize,
+  Vector2D,
   point,
   Game,
   GameData,

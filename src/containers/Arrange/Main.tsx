@@ -115,6 +115,8 @@ const DesktopMain: FC<MainProps> = ({ game, setGame, user, description }) => {
           simulation={game.getSettings().simulation}
           hard={game.getSettings().hard}
           disabled={game.getRoundScore().length >= 3 || game.isFinished()}
+          roundVectors={[...game.getVectors()]}
+          onLanding={(n) => updateObject(game, new ArrangeGame(), 'addVector', setGame, n)}
         />
       </Flex>
       <MyRoundScore game={game} setGame={setGame} user={user} />
@@ -192,6 +194,8 @@ const MobileMainDisplay: FC<MainProps> = ({ game, setGame, user, description }) 
           simulation={game.getSettings().simulation}
           hard={game.getSettings().hard}
           disabled={game.getRoundScore().length >= 3 || game.isFinished()}
+          roundVectors={[...game.getVectors()]}
+          onLanding={(n) => updateObject(game, new ArrangeGame(), 'addVector', setGame, n)}
         />
       </Flex>
     </Flex>
@@ -242,7 +246,10 @@ const MobileGameDisplay: FC<MainProps> = ({ game, setGame, user, description }) 
 const MyRoundScore: FC<MainProps> = ({ game, setGame, user }) => (
   <RoundScore
     scores={game.getRoundScore()}
-    onClear={() => updateObject(game, new ArrangeGame(), 'removeScore', setGame)}
+    onClear={() => {
+      updateObject(game, new ArrangeGame(), 'removeScore', setGame);
+      updateObject(game, new ArrangeGame(), 'removeVectors', setGame);
+    }}
     onRoundChange={() => updateObject(game, new ArrangeGame(), 'roundChange', setGame)}
     isFinished={game.isFinished()}
     onRoundOver={() => {

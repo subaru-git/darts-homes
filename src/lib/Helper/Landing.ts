@@ -11,17 +11,6 @@ export const getLandingPosition = (
   rect: { x: number; y: number; width: number; height: number },
   range: RangeAxis,
 ) => {
-  // if (range.x === 0 && range.y === 0) return aim;
-  // const rx = (range.x * rect.width) / 390;
-  // const ry = (range.y * rect.height) / 390;
-  // const ax = ((aim.x - rect.x) * rect.width) / 390;
-  // const ay = ((aim.y - rect.y) * rect.height) / 390;
-  // const gx = gaussian(ax / 10, rx / 20).ppf(Math.random()) * 10;
-  // const gy = gaussian(ay / 10, ry / 20).ppf(Math.random()) * 10;
-  // const cx = (gx * 390) / rect.width + rect.x;
-  // const cy = (gy * 390) / rect.height + rect.y;
-  // const x = cx < rect.x ? rect.x : cx > rect.x + rect.width ? rect.x + rect.width - 1 : cx;
-  // const y = cy < rect.y ? rect.y : cy > rect.y + rect.height ? rect.y + rect.height - 1 : cy;
   const x = getLandingAxis(aim.x, rect.x, rect.width, range.x);
   const y = getLandingAxis(aim.y, rect.y, rect.height, range.y);
   return { x, y };
@@ -35,3 +24,19 @@ const getLandingAxis = (aim: number, pos: number, size: number, range: number) =
   const c = (g * 390) / size + pos;
   return c < pos ? pos : c > pos + size ? pos + size - 1 : c;
 };
+
+export const normalizedCoordinate = (pos: Vector2D, rect: RectSize) => {
+  const x = normalized(pos.x, rect.width);
+  const y = normalized(pos.y, rect.height);
+  return { x, y };
+};
+
+const normalized = (pos: number, size: number) => pos / size;
+
+export const actualizedCoordinate = (pos: Vector2D, rect: RectSize) => {
+  const x = actualized(pos.x, rect.width);
+  const y = actualized(pos.y, rect.height);
+  return { x, y };
+};
+
+const actualized = (pos: number, size: number) => pos * size;

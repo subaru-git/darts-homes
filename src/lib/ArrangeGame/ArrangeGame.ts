@@ -8,6 +8,7 @@ class ArrangeGame implements Game, GameData<ArrangeProgress, ArrangeResult> {
   private targetOutCount: number = 8;
   private player: Player = new Player('Player1');
   private roundScore: point[] = [];
+  private roundVector: Vector2D[] = [];
   private targets: number[] = [];
   private static readonly defaultSettings: ArrangeSettings = {
     range: { x: 0, y: 0 },
@@ -65,6 +66,19 @@ class ArrangeGame implements Game, GameData<ArrangeProgress, ArrangeResult> {
   removeScore() {
     this.roundScore = [];
   }
+  addVector(vector: Vector2D) {
+    if (this.roundVector.length >= 3) return;
+    this.roundVector.push(vector);
+    console.log('addVector', this.roundVector);
+  }
+  removeVectors() {
+    this.roundVector = [];
+    console.log('removeVectors', this.roundVector);
+  }
+  getVectors() {
+    console.log('getVectors', this.roundVector);
+    return this.roundVector;
+  }
   getRoundScore() {
     return this.roundScore;
   }
@@ -93,6 +107,7 @@ class ArrangeGame implements Game, GameData<ArrangeProgress, ArrangeResult> {
     for (const round of progress.score) this.player.roundScore(round);
     this.targetOutCount = progress.targetOutCount;
     this.roundScore = progress.roundScore;
+    this.roundVector = progress.vector;
     this.targets = progress.targets;
     this.settings = progress.settings;
   }
@@ -100,6 +115,7 @@ class ArrangeGame implements Game, GameData<ArrangeProgress, ArrangeResult> {
     return {
       roundScore: this.roundScore,
       score: this.player.getScore(),
+      vector: this.roundVector,
       targets: this.targets,
       targetOutCount: this.targetOutCount,
       settings: this.settings,
