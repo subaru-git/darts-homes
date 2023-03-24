@@ -97,6 +97,7 @@ class ArrangeGame implements Game, GameData<ArrangeProgress, ArrangeResult> {
     }
     this.player.roundScore(this.roundScore);
     this.roundScore = [];
+    this.roundVector = [];
   }
   isFinished() {
     const scores = [...this.player.getScore(), this.roundScore, []];
