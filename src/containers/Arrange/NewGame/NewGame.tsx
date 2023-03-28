@@ -33,6 +33,7 @@ const NewGame: FC<NewGameProps> = ({ onNewGame, currentSettings, isFinished = fa
   const sim = t.games.arrange.help.find((h) => h.title === 'Simulation Mode') || defaultHelp;
   const mode = t.games.arrange.help.find((h) => h.title === 'Game Mode') || defaultHelp;
   const board = t.games.arrange.help.find((h) => h.title === 'Board Type') || defaultHelp;
+  const pro = t.games.arrange.help.find((h) => h.title === 'Pro Mode') || defaultHelp;
   const range = t.games.arrange.help.find((h) => h.title === 'Range') || defaultHelp;
   const out = t.games.arrange.help.find((h) => h.title === 'Out Option') || defaultHelp;
   const bull = t.games.arrange.help.find((h) => h.title === 'Bull Option') || defaultHelp;
@@ -41,8 +42,8 @@ const NewGame: FC<NewGameProps> = ({ onNewGame, currentSettings, isFinished = fa
     <NewGameModal
       onNewGame={() => onNewGame(settings)}
       settings={
-        <Flex direction='column' gap={10}>
-          <Flex gap={10}>
+        <Flex direction='column' gap={5}>
+          <Flex gap={5} wrap='wrap'>
             <Box>
               <SettingHeading
                 title={sim?.title}
@@ -89,6 +90,20 @@ const NewGame: FC<NewGameProps> = ({ onNewGame, currentSettings, isFinished = fa
                   onChange={(e) => setSettings({ ...settings, hard: e.target.checked })}
                 />
                 <Text>Hard</Text>
+              </Flex>
+            </Box>
+            <Box ml={4}>
+              <SettingHeading
+                title={pro?.title}
+                hintHeader={pro?.hint.header}
+                hintBody={pro?.hint.body}
+              />
+              <Flex gap={6}>
+                <Switch
+                  defaultChecked={settings.pro}
+                  isChecked={settings.pro}
+                  onChange={(e) => setSettings({ ...settings, pro: e.target.checked })}
+                />
               </Flex>
             </Box>
           </Flex>

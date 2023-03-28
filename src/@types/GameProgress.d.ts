@@ -102,6 +102,7 @@ interface ArrangeSettings {
   separate: boolean;
   hard: boolean;
   game: boolean;
+  pro: boolean;
 }
 
 interface CountUpProgress {

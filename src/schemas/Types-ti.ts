@@ -136,6 +136,7 @@ export const ArrangeSettings = t.iface([], {
   "separate": "boolean",
   "hard": "boolean",
   "game": "boolean",
+  "pro": "boolean",
 });
 
 export const CountUpProgress = t.iface([], {

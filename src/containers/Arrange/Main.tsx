@@ -1,13 +1,13 @@
 import React, { FC } from 'react';
-import { Center, Flex, Grid, GridItem, Text, useBreakpointValue } from '@chakra-ui/react';
+import { Flex, Grid, GridItem, Text, useBreakpointValue } from '@chakra-ui/react';
 import ArrangeBoard from './ArrangeBoard';
+import ArrangeScore from './ArrangeScore';
 import NewGame from './NewGame';
 import Targets from './Targets';
 import DescriptionModal from '@/components/DescriptionModal';
 import RoundDisplay from '@/components/RoundDisplay';
 import RoundScore from '@/components/RoundScore';
 import ScoreBoard from '@/components/ScoreBoard';
-import TargetBoard from '@/components/TargetBoard';
 import { useArrangeGame, useArrangeGameSet } from '@/contexts/ArrangeGameContext';
 import { useAuth } from '@/contexts/AuthContext';
 import { db } from '@/db/db';
@@ -83,15 +83,22 @@ const DesktopMain: FC<MainProps> = ({ game, setGame, user, description }) => {
             />
           ) : (
             <>
-              <TargetBoard
-                message='Target'
-                target={`${
+              <ArrangeScore
+                score={`${
                   game.getCurrentTarget() === -1
                     ? 'BUST'
                     : game.getCurrentTarget() === 0
                     ? 'NICE'
                     : game.getCurrentTarget()
                 }`}
+                round={`${
+                  game.getCurrentTarget() === -1
+                    ? 'BUST'
+                    : game.getCurrentTarget() === 0
+                    ? 'NICE'
+                    : game.getCurrentRoundTarget()
+                }`}
+                pro={game.getSettings().pro}
               />
               <RoundDisplay
                 count={game.getSettings().hard ? game.getDartsCount() : game.getRoundCount()}
@@ -108,6 +115,7 @@ const DesktopMain: FC<MainProps> = ({ game, setGame, user, description }) => {
               />
             </>
           )}
+          <MyRoundScore game={game} setGame={setGame} user={user} />
         </Flex>
         <ArrangeBoard
           onCount={(n) => updateObject(game, new ArrangeGame(), 'addScore', setGame, n)}
@@ -119,7 +127,6 @@ const DesktopMain: FC<MainProps> = ({ game, setGame, user, description }) => {
           onLanding={(n) => updateObject(game, new ArrangeGame(), 'addVector', setGame, n)}
         />
       </Flex>
-      <MyRoundScore game={game} setGame={setGame} user={user} />
     </>
   );
 };
@@ -165,19 +172,26 @@ const MobileMainDisplay: FC<MainProps> = ({ game, setGame, user, description }) 
           gap={4}
           w='100%'
         >
-          <GridItem colSpan={3} colStart={2}>
-            <Center>
-              <TargetBoard
-                message='Target'
-                target={`${
+          <GridItem colSpan={4} colStart={1}>
+            <div className='flex h-24 items-center justify-center'>
+              <ArrangeScore
+                score={`${
                   game.getCurrentTarget() === -1
                     ? 'BUST'
                     : game.getCurrentTarget() === 0
                     ? 'NICE'
                     : game.getCurrentTarget()
                 }`}
+                round={`${
+                  game.getCurrentTarget() === -1
+                    ? 'BUST'
+                    : game.getCurrentTarget() === 0
+                    ? 'NICE'
+                    : game.getCurrentRoundTarget()
+                }`}
+                pro={game.getSettings().pro}
               />
-            </Center>
+            </div>
           </GridItem>
           <GridItem colStart={5} mx={1}>
             <RoundDisplay
@@ -257,6 +271,7 @@ const MyRoundScore: FC<MainProps> = ({ game, setGame, user }) => (
       setGame(new ArrangeGame(game.getSettings()));
     }}
     result={getResult(game)}
+    pro={game.getSettings().pro}
   />
 );
 

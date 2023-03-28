@@ -18,7 +18,7 @@ test('should rendering', () => {
   expect(screen.getAllByText('18T')).toHaveLength(1);
   fireEvent.click(screen.getByLabelText('clear scores'));
   expect(clear).toBeCalledTimes(1);
-  fireEvent.click(screen.getByText('Round Change'));
+  fireEvent.click(screen.getByText('Change'));
   expect(roundChange).toBeCalledTimes(1);
   expect(container).toMatchSnapshot();
 });

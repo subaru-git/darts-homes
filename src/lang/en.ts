@@ -305,6 +305,13 @@ const text = {
           },
         },
         {
+          title: 'Pro Mode',
+          hint: {
+            header: 'Pro Mode?',
+            body: 'Select Pro Mode On or Off. When Pro Mode is on, the score display will resemble that of a steel dart game.',
+          },
+        },
+        {
           title: 'Range',
           hint: {
             header: 'Range?',
