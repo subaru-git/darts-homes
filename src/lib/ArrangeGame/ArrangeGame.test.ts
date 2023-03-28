@@ -8,58 +8,73 @@ test('create instance', () => {
 test('double out', () => {
   const game = new Game({
     targets: [120, 110, 100, 90, 80, 70, 60, 50],
-    range: 60,
+    range: { x: 60, y: 60 },
     out: 'double',
     simulation: true,
     separate: false,
     hard: false,
     game: false,
+    pro: false,
   });
   expect(game.getCurrentTarget()).toBe(120);
+  expect(game.getCurrentRoundTarget()).toBe(120);
   expect(game.getLastTargetOutCount()).toBe(8);
   game.addScore('T20');
   expect(game.getRoundScore()).toEqual(['T20']);
   expect(game.getCurrentTarget()).toBe(60);
+  expect(game.getCurrentRoundTarget()).toBe(120);
   game.addScore('20');
   expect(game.getRoundScore()).toEqual(['T20', '20']);
   expect(game.getCurrentTarget()).toBe(40);
+  expect(game.getCurrentRoundTarget()).toBe(120);
   game.addScore('D20');
   expect(game.getRoundScore()).toEqual(['T20', '20', 'D20']);
   expect(game.getCurrentTarget()).toBe(0);
+  expect(game.getCurrentRoundTarget()).toBe(120);
   expect(game.getLastTargetOutCount()).toBe(7);
   game.roundChange();
   expect(game.getCurrentTarget()).toBe(110);
+  expect(game.getCurrentRoundTarget()).toBe(110);
   expect(game.getLastTargetOutCount()).toBe(7);
   game.addScore('T20');
   expect(game.getRoundScore()).toEqual(['T20']);
   expect(game.getCurrentTarget()).toBe(50);
+  expect(game.getCurrentRoundTarget()).toBe(110);
   game.addScore('D20');
   expect(game.getRoundScore()).toEqual(['T20', 'D20']);
   expect(game.getCurrentTarget()).toBe(10);
+  expect(game.getCurrentRoundTarget()).toBe(110);
   game.addScore('10');
   expect(game.getRoundScore()).toEqual(['T20', 'D20', '10']);
   expect(game.getCurrentTarget()).toBe(-1);
+  expect(game.getCurrentRoundTarget()).toBe(110);
   expect(game.getLastTargetOutCount()).toBe(7);
   game.roundChange();
   expect(game.getCurrentTarget()).toBe(110);
+  expect(game.getCurrentRoundTarget()).toBe(110);
   expect(game.getLastTargetOutCount()).toBe(7);
   game.addScore('T20');
   expect(game.getRoundScore()).toEqual(['T20']);
   expect(game.getCurrentTarget()).toBe(50);
+  expect(game.getCurrentRoundTarget()).toBe(110);
   game.addScore('T20');
   expect(game.getRoundScore()).toEqual(['T20', 'T20', '0']);
   expect(game.getCurrentTarget()).toBe(-1);
   game.roundChange();
   expect(game.getCurrentTarget()).toBe(110);
+  expect(game.getCurrentRoundTarget()).toBe(110);
   expect(game.getLastTargetOutCount()).toBe(7);
   game.addScore('T20');
   expect(game.getRoundScore()).toEqual(['T20']);
   expect(game.getCurrentTarget()).toBe(50);
+  expect(game.getCurrentRoundTarget()).toBe(110);
   game.addScore('D-BULL');
   expect(game.getRoundScore()).toEqual(['T20', 'D-BULL', '0']);
   expect(game.getCurrentTarget()).toBe(0);
+  expect(game.getCurrentRoundTarget()).toBe(110);
   game.roundChange();
   expect(game.getCurrentTarget()).toBe(100);
+  expect(game.getCurrentRoundTarget()).toBe(100);
   expect(game.getLastTargetOutCount()).toBe(6);
   game.addScore('T20');
   expect(game.getRoundScore()).toEqual(['T20']);
@@ -175,12 +190,13 @@ test('double out', () => {
     ],
     settings: {
       targets: [120, 110, 100, 90, 80, 70, 60, 50],
-      range: 60,
+      range: { x: 60, y: 60 },
       out: 'double',
       simulation: true,
       separate: false,
       hard: false,
       game: false,
+      pro: false,
     },
     playedAt: '2020-12-31T16:01:01.000Z',
   });
@@ -189,12 +205,13 @@ test('double out', () => {
 test('single out', () => {
   const game = new Game({
     targets: [120, 110, 100, 90, 80, 70, 60, 50],
-    range: 60,
+    range: { x: 60, y: 60 },
     out: 'single',
     simulation: true,
     separate: false,
     hard: false,
     game: false,
+    pro: false,
   });
   expect(game.getCurrentTarget()).toBe(120);
   expect(game.getLastTargetOutCount()).toBe(8);
@@ -280,12 +297,13 @@ test('single out', () => {
 test('master out', () => {
   const game = new Game({
     targets: [120, 110, 100, 90, 80, 70, 60, 50],
-    range: 60,
+    range: { x: 60, y: 60 },
     out: 'master',
     simulation: true,
     separate: false,
     hard: false,
     game: false,
+    pro: false,
   });
   expect(game.getCurrentTarget()).toBe(120);
   expect(game.getLastTargetOutCount()).toBe(8);
@@ -379,12 +397,13 @@ test('master out', () => {
 test('hard game mode', () => {
   const game = new Game({
     targets: [501],
-    range: 60,
+    range: { x: 60, y: 60 },
     out: 'double',
     simulation: true,
     separate: true,
     hard: true,
     game: true,
+    pro: false,
   });
   expect(game.getCurrentTarget()).toBe(501);
   game.addScore('T20');
@@ -418,12 +437,13 @@ test('hard game mode', () => {
 test('get darts count', () => {
   const game = new Game({
     targets: [120, 110, 100, 90, 80, 70, 60, 50],
-    range: 60,
+    range: { x: 60, y: 60 },
     out: 'single',
     simulation: true,
     separate: false,
     hard: false,
     game: false,
+    pro: false,
   });
   expect(game.getDartsCount()).toBe(0);
   game.addScore('20');
