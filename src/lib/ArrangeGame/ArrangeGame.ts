@@ -17,6 +17,7 @@ class ArrangeGame implements Game, GameData<ArrangeProgress, ArrangeResult> {
     hard: false,
     separate: false,
     game: false,
+    pro: false,
   };
 
   constructor(settings: ArrangeSettings = ArrangeGame.defaultSettings) {
@@ -35,6 +36,10 @@ class ArrangeGame implements Game, GameData<ArrangeProgress, ArrangeResult> {
   getCurrentTarget() {
     const { out, separate } = this.settings;
     return this.parseScore(this.getScore(), this.targets, out, separate).t;
+  }
+  getCurrentRoundTarget() {
+    const { out, separate } = this.settings;
+    return this.parseScore(this.player.getScore(), this.targets, out, separate).t;
   }
   getLastTargetOutCount() {
     const scores = [...this.getScore(), []];

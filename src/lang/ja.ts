@@ -300,6 +300,13 @@ const text = {
           },
         },
         {
+          title: 'Pro Mode',
+          hint: {
+            header: 'Pro Mode?',
+            body: 'プロモードでは、スコアの表示がスティールゲームのようになります。',
+          },
+        },
+        {
           title: 'Range',
           hint: {
             header: 'Range?',

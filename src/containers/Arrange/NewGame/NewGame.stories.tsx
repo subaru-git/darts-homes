@@ -19,6 +19,7 @@ Default.args = {
     hard: false,
     separate: false,
     game: false,
+    pro: false,
   },
   isFinished: false,
 };

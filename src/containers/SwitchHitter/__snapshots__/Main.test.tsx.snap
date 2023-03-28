@@ -1617,38 +1617,37 @@ exports[`should rendering 1`] = `
           </div>
         </div>
         <div
-          class="css-13lni6n"
+          class="grid grid-cols-4 gap-2"
         >
-          <p
-            class="chakra-text css-ympam6"
-          >
-            T19
-          </p>
-          <p
-            class="chakra-text css-ympam6"
-          >
-            T19
-          </p>
-          <p
-            class="chakra-text css-ympam6"
-          >
-            T19
-          </p>
           <div
-            class="css-1ensw45"
+            class="relative col-span-3 grid grid-cols-3"
           >
-            <div
-              class="css-0"
+            <span
+              class="text-center text-xl font-bold italic text-gray-500 md:text-4xl opacity-100 transition-opacity duration-150"
             >
+              T19
+            </span>
+            <span
+              class="text-center text-xl font-bold italic text-gray-500 md:text-4xl opacity-100 transition-opacity duration-150"
+            >
+              T19
+            </span>
+            <span
+              class="text-center text-xl font-bold italic text-gray-500 md:text-4xl opacity-100 transition-opacity duration-150"
+            >
+              T19
+            </span>
+          </div>
+          <div
+            class="grid auto-cols-auto grid-flow-col items-center gap-2"
+          >
+            <div>
               <button
                 aria-label="clear scores"
-                class="chakra-button css-b7k6lj"
-                type="button"
+                class="text-white bg-blue-500 hover:bg-blue-400 disabled:bg-blue-300 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base"
               >
                 <svg
-                  aria-hidden="true"
                   fill="currentColor"
-                  focusable="false"
                   height="1em"
                   stroke="currentColor"
                   stroke-width="0"
@@ -1666,10 +1665,9 @@ exports[`should rendering 1`] = `
             </div>
             <button
               aria-label="round over"
-              class="chakra-button css-qlnsbv"
-              type="button"
+              class="text-white bg-orange-500 hover:bg-orange-400  disabled:bg-orange-200 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base"
             >
-              Round Over
+              Over
             </button>
           </div>
         </div>

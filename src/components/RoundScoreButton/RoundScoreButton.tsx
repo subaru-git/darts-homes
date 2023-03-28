@@ -1,8 +1,9 @@
 import React, { FC } from 'react';
-import { Button, IconButton, useBreakpointValue, useDisclosure } from '@chakra-ui/react';
+import { IconButton, useBreakpointValue, useDisclosure } from '@chakra-ui/react';
 import { GiPartyPopper } from 'react-icons/gi';
 import { MdOutlineChangeCircle } from 'react-icons/md';
 import RoundOverDialog from '../RoundOverDialog';
+import Button from '@/atoms/Button';
 
 type RoundScoreButtonProps = {
   isFinished: boolean;
@@ -55,23 +56,17 @@ const DesktopRoundScoreButton: FC<RoundScoreButtonProps> = ({
     <>
       {!isFinished ? (
         <Button
-          colorScheme={'green'}
-          width={'fit-content'}
+          color={'green-fill'}
           onClick={() => onRoundChange()}
           disabled={disabled}
           aria-label={'round change'}
         >
-          Round Change
+          Change
         </Button>
       ) : (
         <>
-          <Button
-            colorScheme={'orange'}
-            width={'fit-content'}
-            onClick={() => onOpen()}
-            aria-label={'round over'}
-          >
-            Round Over
+          <Button color={'orange-fill'} onClick={() => onOpen()} aria-label={'round over'}>
+            Over
           </Button>
           <RoundOverDialog
             isOpen={isOpen}
@@ -99,15 +94,14 @@ const MobileRoundScoreButton: FC<RoundScoreButtonProps> = ({
   return (
     <>
       {!isFinished ? (
-        <IconButton
-          icon={<MdOutlineChangeCircle />}
-          colorScheme={'green'}
-          size={'sm'}
-          width={'auto'}
+        <Button
+          color={'green-fill'}
           onClick={() => onRoundChange()}
           disabled={disabled}
           aria-label={'round change'}
-        />
+        >
+          <MdOutlineChangeCircle />
+        </Button>
       ) : (
         <>
           <IconButton

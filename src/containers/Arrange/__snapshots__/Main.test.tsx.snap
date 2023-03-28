@@ -1554,21 +1554,33 @@ exports[`should rendering 1`] = `
         class="css-8ighfe"
       >
         <div
-          aria-label="target board"
-          class="css-0"
+          class="flex h-full w-full"
         >
-          <p
-            aria-label="message Target"
-            class="chakra-text css-uzy2cd"
+          <div
+            class="relative h-full w-full"
           >
-            Target
-          </p>
-          <p
-            aria-label="target Target"
-            class="chakra-text css-17ue8gu"
-          >
-            NICE
-          </p>
+            <div
+              class="absolute inset-0 flex h-full w-full items-center justify-center opacity-100 transition-opacity duration-150"
+            >
+              <div
+                aria-label="target board"
+                class="css-0"
+              >
+                <p
+                  aria-label="message Target"
+                  class="chakra-text css-uzy2cd"
+                >
+                  Target
+                </p>
+                <p
+                  aria-label="target Target"
+                  class="chakra-text css-17ue8gu"
+                >
+                  NICE
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
         <div
           class="flex gap-2"
@@ -1637,6 +1649,61 @@ exports[`should rendering 1`] = `
           >
             ]
           </p>
+        </div>
+        <div
+          class="grid grid-cols-4 gap-2"
+        >
+          <div
+            class="relative col-span-3 grid grid-cols-3"
+          >
+            <span
+              class="text-center text-xl font-bold italic text-gray-500 md:text-4xl opacity-100 transition-opacity duration-150"
+            >
+              T17
+            </span>
+            <span
+              class="text-center text-xl font-bold italic text-gray-500 md:text-4xl opacity-100 transition-opacity duration-150"
+            >
+              D18
+            </span>
+            <span
+              class="text-center text-xl font-bold italic text-gray-500 md:text-4xl opacity-100 transition-opacity duration-150"
+            >
+              -
+            </span>
+          </div>
+          <div
+            class="grid auto-cols-auto grid-flow-col items-center gap-2"
+          >
+            <div>
+              <button
+                aria-label="clear scores"
+                class="text-white bg-blue-500 hover:bg-blue-400 disabled:bg-blue-300 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base"
+              >
+                <svg
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 16 16"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M10 3h3v1h-1v9l-1 1H4l-1-1V4H2V3h3V2a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v1zM9 2H6v1h3V2zM4 13h7V4H4v9zm2-8H5v7h1V5zm1 0h1v7H7V5zm2 0h1v7H9V5z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
+            <button
+              aria-label="round over"
+              class="text-white bg-orange-500 hover:bg-orange-400  disabled:bg-orange-200 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base"
+            >
+              Over
+            </button>
+          </div>
         </div>
       </div>
       <div
@@ -2331,63 +2398,6 @@ exports[`should rendering 1`] = `
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div
-      class="css-13lni6n"
-    >
-      <p
-        class="chakra-text css-ympam6"
-      >
-        T17
-      </p>
-      <p
-        class="chakra-text css-ympam6"
-      >
-        D18
-      </p>
-      <p
-        class="chakra-text css-ympam6"
-      >
-        -
-      </p>
-      <div
-        class="css-1ensw45"
-      >
-        <div
-          class="css-0"
-        >
-          <button
-            aria-label="clear scores"
-            class="chakra-button css-b7k6lj"
-            type="button"
-          >
-            <svg
-              aria-hidden="true"
-              fill="currentColor"
-              focusable="false"
-              height="1em"
-              stroke="currentColor"
-              stroke-width="0"
-              viewBox="0 0 16 16"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M10 3h3v1h-1v9l-1 1H4l-1-1V4H2V3h3V2a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v1zM9 2H6v1h3V2zM4 13h7V4H4v9zm2-8H5v7h1V5zm1 0h1v7H7V5zm2 0h1v7H9V5z"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </button>
-        </div>
-        <button
-          aria-label="round over"
-          class="chakra-button css-qlnsbv"
-          type="button"
-        >
-          Round Over
-        </button>
       </div>
     </div>
     <div

@@ -12,61 +12,61 @@ exports[`should rendering 1`] = `
     />
     <button
       aria-label="one"
-      class="text-emerald-600 border-emerald-600 bg-white hover:bg-emerald-50 rounded-lg border py-2 px-3 text-base font-bold subpixel-antialiased md:text-base"
+      class="text-emerald-600 border-emerald-600 bg-white hover:bg-emerald-50 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base"
     >
       1
     </button>
     <button
       aria-label="two"
-      class="text-emerald-600 border-emerald-600 bg-white hover:bg-emerald-50 rounded-lg border py-2 px-3 text-base font-bold subpixel-antialiased md:text-base"
+      class="text-emerald-600 border-emerald-600 bg-white hover:bg-emerald-50 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base"
     >
       2
     </button>
     <button
       aria-label="three"
-      class="text-emerald-600 border-emerald-600 bg-white hover:bg-emerald-50 rounded-lg border py-2 px-3 text-base font-bold subpixel-antialiased md:text-base"
+      class="text-emerald-600 border-emerald-600 bg-white hover:bg-emerald-50 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base"
     >
       3
     </button>
     <button
       aria-label="four"
-      class="text-emerald-600 border-emerald-600 bg-white hover:bg-emerald-50 rounded-lg border py-2 px-3 text-base font-bold subpixel-antialiased md:text-base"
+      class="text-emerald-600 border-emerald-600 bg-white hover:bg-emerald-50 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base"
     >
       4
     </button>
     <button
       aria-label="five"
-      class="text-emerald-600 border-emerald-600 bg-white hover:bg-emerald-50 rounded-lg border py-2 px-3 text-base font-bold subpixel-antialiased md:text-base"
+      class="text-emerald-600 border-emerald-600 bg-white hover:bg-emerald-50 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base"
     >
       5
     </button>
     <button
       aria-label="six"
-      class="text-emerald-600 border-emerald-600 bg-white hover:bg-emerald-50 rounded-lg border py-2 px-3 text-base font-bold subpixel-antialiased md:text-base"
+      class="text-emerald-600 border-emerald-600 bg-white hover:bg-emerald-50 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base"
     >
       6
     </button>
     <button
       aria-label="seven"
-      class="text-emerald-600 border-emerald-600 bg-white hover:bg-emerald-50 rounded-lg border py-2 px-3 text-base font-bold subpixel-antialiased md:text-base"
+      class="text-emerald-600 border-emerald-600 bg-white hover:bg-emerald-50 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base"
     >
       7
     </button>
     <button
       aria-label="eight"
-      class="text-emerald-600 border-emerald-600 bg-white hover:bg-emerald-50 rounded-lg border py-2 px-3 text-base font-bold subpixel-antialiased md:text-base"
+      class="text-emerald-600 border-emerald-600 bg-white hover:bg-emerald-50 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base"
     >
       8
     </button>
     <button
       aria-label="nine"
-      class="text-emerald-600 border-emerald-600 bg-white hover:bg-emerald-50 rounded-lg border py-2 px-3 text-base font-bold subpixel-antialiased md:text-base"
+      class="text-emerald-600 border-emerald-600 bg-white hover:bg-emerald-50 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base"
     >
       9
     </button>
     <button
       aria-label="delete"
-      class="text-emerald-600 border-emerald-600 bg-white hover:bg-emerald-50 rounded-lg border py-2 px-3 text-base font-bold subpixel-antialiased md:text-base"
+      class="text-emerald-600 border-emerald-600 bg-white hover:bg-emerald-50 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base"
     >
       <svg
         class="m-auto"
@@ -91,13 +91,13 @@ exports[`should rendering 1`] = `
     </button>
     <button
       aria-label="zero"
-      class="text-emerald-600 border-emerald-600 bg-white hover:bg-emerald-50 rounded-lg border py-2 px-3 text-base font-bold subpixel-antialiased md:text-base"
+      class="text-emerald-600 border-emerald-600 bg-white hover:bg-emerald-50 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base"
     >
       0
     </button>
     <button
       aria-label="enter"
-      class="text-emerald-600 border-emerald-600 bg-white hover:bg-emerald-50 rounded-lg border py-2 px-3 text-base font-bold subpixel-antialiased md:text-base"
+      class="text-emerald-600 border-emerald-600 bg-white hover:bg-emerald-50 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base"
     >
       <svg
         class="m-auto"
