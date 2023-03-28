@@ -19,7 +19,7 @@ const ArrangeScore: FC<ArrangeScoreProps> = ({ score, round, pro = false }) => {
             !pro || isRest ? 'opacity-100' : 'opacity-0'
           } transition-opacity duration-150`}
         >
-          <TargetBoard message={!pro ? 'Target' : 'Rest'} target={score} />
+          <TargetBoard message={!pro ? 'Target' : 'Left'} target={score} />
         </div>
         {pro && (
           <div
