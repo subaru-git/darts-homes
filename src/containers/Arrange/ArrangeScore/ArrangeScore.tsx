@@ -45,7 +45,7 @@ const ArrangeScore: FC<ArrangeScoreProps> = ({ score, round, pro = false }) => {
           >
             <div className='flex items-center gap-2'>
               <FiRss className='rotate-45 -scale-100' />
-              <span className='hidden md:inline'>Rest</span>
+              <span className='hidden md:inline'>Left</span>
             </div>
           </Button>
         </div>

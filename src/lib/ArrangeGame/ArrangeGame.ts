@@ -39,7 +39,7 @@ class ArrangeGame implements Game, GameData<ArrangeProgress, ArrangeResult> {
   }
   getCurrentRoundTarget() {
     const { out, separate } = this.settings;
-    return this.parseScore(this.player.getScore(), this.targets, out, separate).t;
+    return this.parseScore([...this.player.getScore(), []], this.targets, out, separate).t;
   }
   getLastTargetOutCount() {
     const scores = [...this.getScore(), []];
