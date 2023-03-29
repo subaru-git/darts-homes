@@ -61,12 +61,18 @@ const DesktopRoundScoreButton: FC<RoundScoreButtonProps> = ({
           disabled={disabled}
           aria-label={'round change'}
         >
-          Change
+          <div className='flex items-center gap-1'>
+            <MdOutlineChangeCircle />
+            <span>Change</span>
+          </div>
         </Button>
       ) : (
         <>
           <Button color={'orange-fill'} onClick={() => onOpen()} aria-label={'round over'}>
-            Over
+            <div className='flex items-center gap-1'>
+              <GiPartyPopper />
+              <span>Over</span>
+            </div>
           </Button>
           <RoundOverDialog
             isOpen={isOpen}

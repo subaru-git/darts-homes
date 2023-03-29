@@ -70,7 +70,7 @@ const DesktopMain: FC<MainProps> = ({ game, setGame, user, description }) => {
           description={<Text whiteSpace='pre-wrap'>{description}</Text>}
         />
       </Flex>
-      <Flex gap={4} justifyContent='space-around'>
+      <Flex gap={20} justifyContent='center'>
         <Flex direction='column' alignItems='center' gap={4} justifyContent='center'>
           {game.getSettings().game && game.getSettings().hard ? (
             <ScoreBoard
