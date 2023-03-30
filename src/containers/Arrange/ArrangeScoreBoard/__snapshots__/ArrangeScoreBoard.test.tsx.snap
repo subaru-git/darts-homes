@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should rendering 1`] = `
+<div>
+  <div>
+    <table
+      class="w-full text-center"
+    >
+      <thead
+        class="bg-gray-50 uppercase"
+      >
+        <tr>
+          <th
+            class="px-3 py-1 md:px-6 md:py-3"
+            scope="col"
+          >
+            Target
+          </th>
+          <th
+            class="px-3 py-1 md:px-6 md:py-3"
+            colspan="4"
+            scope="col"
+          >
+            Hits
+          </th>
+        </tr>
+      </thead>
+      <tbody />
+    </table>
+  </div>
+  <span
+    hidden=""
+    id="__chakra_env"
+  />
+</div>
+`;
