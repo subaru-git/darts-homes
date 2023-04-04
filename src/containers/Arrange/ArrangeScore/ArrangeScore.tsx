@@ -10,13 +10,13 @@ type ArrangeScoreProps = {
 };
 
 const ArrangeScore: FC<ArrangeScoreProps> = ({ score, round, pro = false }) => {
-  const [isRest, setIsRest] = useState(false);
+  const [isLeft, setIsLeft] = useState(false);
   return (
     <div className='flex h-full w-full'>
       <div className='relative h-full w-full'>
         <div
           className={`absolute inset-0 flex h-full w-full items-center justify-center ${
-            !pro || isRest ? 'opacity-100' : 'opacity-0'
+            !pro || isLeft ? 'opacity-100' : 'opacity-0'
           } transition-opacity duration-150`}
         >
           <TargetBoard message={!pro ? 'Target' : 'Left'} target={score} />
@@ -24,7 +24,7 @@ const ArrangeScore: FC<ArrangeScoreProps> = ({ score, round, pro = false }) => {
         {pro && (
           <div
             className={`absolute inset-0 z-10 flex h-full w-full items-center justify-center ${
-              isRest ? 'opacity-0' : 'opacity-100'
+              isLeft ? 'opacity-0' : 'opacity-100'
             } transition-opacity duration-150`}
           >
             <TargetBoard message='Target' target={round} />
@@ -36,12 +36,12 @@ const ArrangeScore: FC<ArrangeScoreProps> = ({ score, round, pro = false }) => {
           <Button
             type='button'
             color='blue'
-            onMouseDown={() => setIsRest(true)}
-            onMouseUp={() => setIsRest(false)}
-            onMouseLeave={() => setIsRest(false)}
-            onTouchStart={() => setIsRest(true)}
-            onTouchEnd={() => setIsRest(false)}
-            onTouchCancel={() => setIsRest(false)}
+            onMouseDown={() => setIsLeft(true)}
+            onMouseUp={() => setIsLeft(false)}
+            onMouseLeave={() => setIsLeft(false)}
+            onTouchStart={() => setIsLeft(true)}
+            onTouchEnd={() => setIsLeft(false)}
+            onTouchCancel={() => setIsLeft(false)}
           >
             <div className='flex items-center gap-2'>
               <FiRss className='rotate-45 -scale-100' />
