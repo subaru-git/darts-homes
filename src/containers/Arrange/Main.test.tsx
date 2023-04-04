@@ -12,7 +12,7 @@ test('should rendering', async () => {
   const { container } = render(<Main />);
   const buttons = screen.getAllByRole('button');
   await user.click(findByAriaLabel(buttons, 'setting'));
-  await user.click(screen.getByRole('radio', { name: 'Master Out' }));
+  await user.click(screen.getByRole('radio', { name: 'master out' }));
   await user.click(screen.getByRole('button', { name: 'new game' }));
   for (const [i] of Array(8).entries()) {
     const target = screen.getByLabelText('target Target').textContent;
