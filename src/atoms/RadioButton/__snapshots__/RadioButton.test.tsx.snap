@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should rendering 1`] = `
+<div>
+  <div
+    class="flex"
+  >
+    <div>
+      <input
+        aria-label="single out"
+        class="peer hidden"
+        id="radio-single"
+        name="option-single-double-master"
+        type="radio"
+      />
+      <label
+        class="cursor-pointer select-none bg-gray-100 px-4 py-1 text-sm no-tap-highlighting peer-checked:bg-blue-500 peer-checked:text-white peer-disabled:opacity-60 md:text-base rounded-l-md"
+        for="radio-single"
+      >
+        Single Out
+      </label>
+    </div>
+    <div>
+      <input
+        class="peer hidden"
+        id="radio-double"
+        name="option-single-double-master"
+        type="radio"
+      />
+      <label
+        class="cursor-pointer select-none bg-gray-100 px-4 py-1 text-sm no-tap-highlighting peer-checked:bg-blue-500 peer-checked:text-white peer-disabled:opacity-60 md:text-base "
+        for="radio-double"
+      >
+        Double Out
+      </label>
+    </div>
+    <div>
+      <input
+        checked=""
+        class="peer hidden"
+        id="radio-master"
+        name="option-single-double-master"
+        type="radio"
+      />
+      <label
+        class="cursor-pointer select-none bg-gray-100 px-4 py-1 text-sm no-tap-highlighting peer-checked:bg-blue-500 peer-checked:text-white peer-disabled:opacity-60 md:text-base rounded-r-md"
+        for="radio-master"
+      >
+        Master Out
+      </label>
+    </div>
+  </div>
+  <span
+    hidden=""
+    id="__chakra_env"
+  />
+</div>
+`;

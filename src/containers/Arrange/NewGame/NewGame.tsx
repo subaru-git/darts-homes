@@ -3,19 +3,15 @@ import {
   Box,
   Flex,
   Input,
-  Radio,
-  RadioGroup,
   Slider,
   SliderFilledTrack,
   SliderMark,
   SliderThumb,
   SliderTrack,
-  Switch,
-  Text,
 } from '@chakra-ui/react';
 import { BiMoveVertical } from 'react-icons/bi';
 import { GiHorizontalFlip } from 'react-icons/gi';
-import Select from '@/atoms/Select';
+import RadioButton from '@/atoms/RadioButton/RadioButton';
 import NewGameModal from '@/components/NewGameModal';
 import SettingHeading from '@/components/SettingHeading';
 import useLocale from '@/hooks/locale';
@@ -50,10 +46,15 @@ const NewGame: FC<NewGameProps> = ({ onNewGame, currentSettings, isFinished = fa
                 hintHeader={sim?.hint.header}
                 hintBody={sim?.hint.body}
               />
-              <Switch
-                defaultChecked={settings.simulation}
-                isChecked={settings.simulation}
-                onChange={(e) => setSettings({ ...settings, simulation: e.target.checked })}
+              <RadioButton
+                values={[
+                  { value: 'sim-off', label: 'Off', ariaLabel: 'simulation off' },
+                  { value: 'sim-on', label: 'On', ariaLabel: 'simulation on' },
+                ]}
+                defaultValue={settings.simulation ? 'sim-on' : 'sim-off'}
+                onChange={(sim) =>
+                  setSettings({ ...settings, simulation: sim === 'sim-on' ? true : false })
+                }
               />
             </Box>
             <Box>
@@ -62,19 +63,19 @@ const NewGame: FC<NewGameProps> = ({ onNewGame, currentSettings, isFinished = fa
                 hintHeader={mode?.hint.header}
                 hintBody={mode?.hint.body}
               />
-              <Flex gap={6}>
-                <Select
-                  options={['3 darts', '1 Leg']}
-                  defaultValue={settings.game ? '1 Leg' : '3 darts'}
-                  onSelect={(value) => {
-                    if (value === '3 darts') {
-                      setSettings({ ...settings, game: false });
-                      return;
-                    }
-                    setSettings({ ...settings, game: true });
-                  }}
-                />
-              </Flex>
+              <RadioButton
+                values={[
+                  { value: '3-darts', label: '3 darts', ariaLabel: '3 darts' },
+                  { value: '1-leg', label: '1 Leg', ariaLabel: '1 leg' },
+                ]}
+                onChange={(game) =>
+                  setSettings({
+                    ...settings,
+                    game: game === '1-leg' ? true : false,
+                  })
+                }
+                defaultValue={settings.game ? '1-leg' : '3-darts'}
+              />
             </Box>
             <Box>
               <SettingHeading
@@ -82,15 +83,19 @@ const NewGame: FC<NewGameProps> = ({ onNewGame, currentSettings, isFinished = fa
                 hintHeader={board?.hint.header}
                 hintBody={board?.hint.body}
               />
-              <Flex gap={6}>
-                <Text>Soft</Text>
-                <Switch
-                  defaultChecked={settings.hard}
-                  isChecked={settings.hard}
-                  onChange={(e) => setSettings({ ...settings, hard: e.target.checked })}
-                />
-                <Text>Hard</Text>
-              </Flex>
+              <RadioButton
+                values={[
+                  { value: 'soft', label: 'Soft', ariaLabel: 'soft' },
+                  { value: 'hard', label: 'Hard', ariaLabel: 'hard' },
+                ]}
+                onChange={(board) =>
+                  setSettings({
+                    ...settings,
+                    hard: board === 'hard' ? true : false,
+                  })
+                }
+                defaultValue={settings.hard ? 'hard' : 'soft'}
+              />
             </Box>
             <Box ml={4}>
               <SettingHeading
@@ -98,13 +103,16 @@ const NewGame: FC<NewGameProps> = ({ onNewGame, currentSettings, isFinished = fa
                 hintHeader={pro?.hint.header}
                 hintBody={pro?.hint.body}
               />
-              <Flex gap={6}>
-                <Switch
-                  defaultChecked={settings.pro}
-                  isChecked={settings.pro}
-                  onChange={(e) => setSettings({ ...settings, pro: e.target.checked })}
-                />
-              </Flex>
+              <RadioButton
+                values={[
+                  { value: 'pro-off', label: 'Off', ariaLabel: 'pro off' },
+                  { value: 'pro-on', label: 'On', ariaLabel: 'pro on' },
+                ]}
+                defaultValue={settings.pro ? 'pro-on' : 'pro-off'}
+                onChange={(pro) =>
+                  setSettings({ ...settings, pro: pro === 'pro-on' ? true : false })
+                }
+              />
             </Box>
           </Flex>
           <Box>
@@ -182,7 +190,12 @@ const NewGame: FC<NewGameProps> = ({ onNewGame, currentSettings, isFinished = fa
               hintHeader={out?.hint.header}
               hintBody={out?.hint.body}
             />
-            <RadioGroup
+            <RadioButton
+              values={[
+                { value: 'single', label: 'Single Out', ariaLabel: 'single out' },
+                { value: 'double', label: 'Double Out', ariaLabel: 'double out' },
+                { value: 'master', label: 'Master Out', ariaLabel: 'master out' },
+              ]}
               onChange={(out) =>
                 setSettings({
                   ...settings,
@@ -190,20 +203,8 @@ const NewGame: FC<NewGameProps> = ({ onNewGame, currentSettings, isFinished = fa
                   separate: out === 'double' ? true : settings.separate,
                 })
               }
-              value={settings.out}
-            >
-              <Flex gap={4}>
-                <Radio value='single' aria-label='single out'>
-                  Single Out
-                </Radio>
-                <Radio value='double' aria-label='double out'>
-                  Double Out
-                </Radio>
-                <Radio value='master' aria-label='master out'>
-                  Master Out
-                </Radio>
-              </Flex>
-            </RadioGroup>
+              defaultValue={settings.out}
+            />
           </Box>
           <Box>
             <SettingHeading
@@ -211,16 +212,22 @@ const NewGame: FC<NewGameProps> = ({ onNewGame, currentSettings, isFinished = fa
               hintHeader={bull?.hint.header}
               hintBody={bull?.hint.body}
             />
-            <Flex gap={10}>
-              <Text>Fat Bull</Text>
-              <Switch
-                onChange={(e) => setSettings({ ...settings, separate: e.target.checked })}
-                defaultChecked={settings.out === 'double' || settings.separate}
-                isChecked={settings.out === 'double' || settings.separate}
-                isDisabled={settings.out === 'double'}
+            <div>
+              <RadioButton
+                values={[
+                  { value: 'fat', label: 'Fat Bull', ariaLabel: 'fat' },
+                  { value: 'separate', label: 'Separate Bull', ariaLabel: 'separate' },
+                ]}
+                onChange={(bull) =>
+                  setSettings({
+                    ...settings,
+                    separate: bull === 'separate' ? true : false,
+                  })
+                }
+                defaultValue={settings.out === 'double' || settings.separate ? 'separate' : 'fat'}
+                disabled={settings.out === 'double'}
               />
-              <Text>Separate Bull</Text>
-            </Flex>
+            </div>
           </Box>
           <Box>
             <SettingHeading
