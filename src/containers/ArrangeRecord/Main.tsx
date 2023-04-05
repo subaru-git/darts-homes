@@ -50,13 +50,10 @@ const Main: FC = () => {
   }, [a, t]);
   useEffect(() => {
     const handleResize = () => {
-      console.log('resize: container - ', containerRef.current?.getBoundingClientRect());
-      console.log('resize: canvas - ', canvasRef.current?.getBoundingClientRect());
       if (canvasRef.current && containerRef.current) {
         const { width, height } = containerRef.current.getBoundingClientRect();
         canvasRef.current.width = width;
         canvasRef.current.height = height;
-        console.log('resized canvas - ', canvasRef.current?.getBoundingClientRect());
         updateLines(containerRef, canvasRef, lines);
       }
     };

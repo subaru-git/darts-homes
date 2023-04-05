@@ -74,14 +74,11 @@ class ArrangeGame implements Game, GameData<ArrangeProgress, ArrangeResult> {
   addVector(vector: Vector2D) {
     if (this.roundVector.length >= 3) return;
     this.roundVector.push(vector);
-    console.log('addVector', this.roundVector);
   }
   removeVectors() {
     this.roundVector = [];
-    console.log('removeVectors', this.roundVector);
   }
   getVectors() {
-    console.log('getVectors', this.roundVector);
     return this.roundVector;
   }
   getRoundScore() {

@@ -1,4 +1,5 @@
 import mocksdk from 'firebase-mock';
+import failOnConsole from 'jest-fail-on-console';
 import { createMatchMedia } from '@/lib/TestUtils/MatchMediaMock';
 import { MediaRecorderMock } from '@/lib/TestUtils/MediaRecorderMock';
 
@@ -17,3 +18,5 @@ beforeAll(() => {
   window.MediaRecorder = (jest.fn() as any).mockImplementation(() => MediaRecorderMock);
   global.ResizeObserver = require('resize-observer-polyfill');
 });
+
+failOnConsole();

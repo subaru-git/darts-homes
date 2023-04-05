@@ -10,7 +10,6 @@ export const importGameHistory = (
   overwrite: boolean,
   user: User | null | undefined,
 ) => {
-  console.log('importGameHistory', gameHistory, overwrite, user);
   try {
     importToDB(gameHistory.cricketMarkUp, db.cricketMarkUpResult, overwrite);
     importToDB(gameHistory.eaglesEye, db.eaglesEyeResult, overwrite);
@@ -183,7 +182,6 @@ export const importToDB = <T>(
   table: Table<T, IndexableType>,
   overwrite: boolean,
 ) => {
-  console.log('importToDB', history, table, overwrite);
   if (!history) return;
   db.transaction('rw', table, () => {
     if (overwrite) table.clear();

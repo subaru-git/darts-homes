@@ -10,7 +10,7 @@ const Title: FC = () => {
       <h1 className='whitespace-pre-wrap text-center text-2xl font-bold leading-8 md:text-5xl'>
         {t.home.title.title.join('\n')}
       </h1>
-      <text className='text-center text-sm md:text-lg'>{t.home.title.description.join('\n')}</text>
+      <span className='text-center text-sm md:text-lg'>{t.home.title.description.join('\n')}</span>
       <div className='flex justify-center'>
         <Button onClick={() => Router.push('/games')}>{t.home.title.button}</Button>
       </div>
