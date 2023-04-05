@@ -3,244 +3,190 @@
 exports[`master out fat bull 1`] = `
 <div>
   <div
-    class="css-18936vg"
+    class="flex flex-col gap-8"
   >
     <div
-      class="css-1i2407o"
+      class="flex flex-col gap-2"
     >
-      <div
-        class="css-0"
-      >
-        <p
-          class="chakra-text css-1hmbtly"
+      <div>
+        <span
+          class="text-sm font-bold text-gray-500"
         >
           out options
-        </p>
+        </span>
         <div
-          class="chakra-radio-group css-0"
-          role="radiogroup"
+          class="flex"
         >
-          <div
-            class="css-1azotaz"
-          >
+          <div>
+            <input
+              aria-label="single out"
+              checked=""
+              class="peer hidden"
+              id="radio-single"
+              name="option-single-double-master"
+              type="radio"
+            />
             <label
-              class="chakra-radio css-1cqh9jq"
+              class="cursor-pointer select-none bg-gray-100 px-4 py-1 text-sm no-tap-highlighting peer-checked:bg-blue-500 peer-checked:text-white peer-disabled:opacity-60 md:text-base rounded-l-md"
+              for="radio-single"
             >
-              <input
-                checked=""
-                class="chakra-radio__input"
-                id="radio-:r1n:"
-                name="radio-:r1m:"
-                style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
-                type="radio"
-                value="single"
-              />
-              <span
-                aria-hidden="true"
-                aria-label="single out"
-                class="chakra-radio__control css-1qjgi8f"
-              />
-              <span
-                class="chakra-radio__label css-jybt17"
-              >
-                Single Out
-              </span>
+              Single Out
             </label>
+          </div>
+          <div>
+            <input
+              aria-label="double out"
+              class="peer hidden"
+              id="radio-double"
+              name="option-single-double-master"
+              type="radio"
+            />
             <label
-              class="chakra-radio css-1cqh9jq"
+              class="cursor-pointer select-none bg-gray-100 px-4 py-1 text-sm no-tap-highlighting peer-checked:bg-blue-500 peer-checked:text-white peer-disabled:opacity-60 md:text-base "
+              for="radio-double"
             >
-              <input
-                class="chakra-radio__input"
-                id="radio-:r1o:"
-                name="radio-:r1m:"
-                style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
-                type="radio"
-                value="double"
-              />
-              <span
-                aria-hidden="true"
-                aria-label="double out"
-                class="chakra-radio__control css-1qjgi8f"
-              />
-              <span
-                class="chakra-radio__label css-jybt17"
-              >
-                Double Out
-              </span>
+              Double Out
             </label>
+          </div>
+          <div>
+            <input
+              aria-label="master out"
+              class="peer hidden"
+              id="radio-master"
+              name="option-single-double-master"
+              type="radio"
+            />
             <label
-              class="chakra-radio css-1cqh9jq"
-              data-checked=""
+              class="cursor-pointer select-none bg-gray-100 px-4 py-1 text-sm no-tap-highlighting peer-checked:bg-blue-500 peer-checked:text-white peer-disabled:opacity-60 md:text-base rounded-r-md"
+              for="radio-master"
             >
-              <input
-                class="chakra-radio__input"
-                id="radio-:r1p:"
-                name="radio-:r1m:"
-                style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
-                type="radio"
-                value="master"
-              />
-              <span
-                aria-hidden="true"
-                aria-label="master out"
-                class="chakra-radio__control css-1qjgi8f"
-                data-checked=""
-                data-focus=""
-              />
-              <span
-                class="chakra-radio__label css-jybt17"
-                data-checked=""
-              >
-                Master Out
-              </span>
+              Master Out
             </label>
           </div>
         </div>
       </div>
-      <div
-        class="css-0"
-      >
-        <p
-          class="chakra-text css-1hmbtly"
+      <div>
+        <span
+          class="text-sm font-bold text-gray-500"
         >
           bull options
-        </p>
+        </span>
         <div
-          class="css-1k9efnl"
+          class="flex"
         >
-          <p
-            class="chakra-text css-xim7xt"
-          >
-            Fat Bull
-          </p>
-          <label
-            class="chakra-switch css-1cuslds"
-          >
+          <div>
             <input
-              class="chakra-switch__input"
-              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
-              type="checkbox"
-              value=""
+              aria-label="fat bull"
+              checked=""
+              class="peer hidden"
+              id="radio-fat"
+              name="option-fat-separate"
+              type="radio"
             />
-            <span
-              aria-hidden="true"
-              class="chakra-switch__track css-p27qcy"
+            <label
+              class="cursor-pointer select-none bg-gray-100 px-4 py-1 text-sm no-tap-highlighting peer-checked:bg-blue-500 peer-checked:text-white peer-disabled:opacity-60 md:text-base rounded-l-md"
+              for="radio-fat"
             >
-              <span
-                class="chakra-switch__thumb css-7roig"
-              />
-            </span>
-          </label>
-          <p
-            class="chakra-text css-xim7xt"
-          >
-            Separate Bull
-          </p>
-        </div>
-      </div>
-      <div
-        class="chakra-select__wrapper css-42b2qy"
-      >
-        <select
-          class="chakra-select css-1hax2g2"
-        >
-          <option
-            value="154"
-          >
-            154
-          </option>
-          <option
-            value="152"
-          >
-            152
-          </option>
-          <option
-            value="142"
-          >
-            142
-          </option>
-          <option
-            value="123"
-          >
-            123
-          </option>
-          <option
-            value="87"
-          >
-            87
-          </option>
-          <option
-            value="67"
-          >
-            67
-          </option>
-          <option
-            value="25"
-          >
-            25
-          </option>
-          <option
-            value="14"
-          >
-            14
-          </option>
-        </select>
-        <div
-          class="chakra-select__icon-wrapper css-cymxv7"
-        >
-          <svg
-            aria-hidden="true"
-            class="chakra-select__icon"
-            focusable="false"
-            role="presentation"
-            style="width: 1em; height: 1em; color: currentColor;"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
-              fill="currentColor"
+              Fat Bull
+            </label>
+          </div>
+          <div>
+            <input
+              aria-label="separate bull"
+              class="peer hidden"
+              id="radio-separate"
+              name="option-fat-separate"
+              type="radio"
             />
-          </svg>
+            <label
+              class="cursor-pointer select-none bg-gray-100 px-4 py-1 text-sm no-tap-highlighting peer-checked:bg-blue-500 peer-checked:text-white peer-disabled:opacity-60 md:text-base rounded-r-md"
+              for="radio-separate"
+            >
+              Separate Bull
+            </label>
+          </div>
         </div>
       </div>
+      <select
+        class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-1 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500"
+      >
+        <option
+          value="154"
+        >
+          154
+        </option>
+        <option
+          value="152"
+        >
+          152
+        </option>
+        <option
+          value="142"
+        >
+          142
+        </option>
+        <option
+          value="123"
+        >
+          123
+        </option>
+        <option
+          value="87"
+        >
+          87
+        </option>
+        <option
+          value="67"
+        >
+          67
+        </option>
+        <option
+          value="25"
+        >
+          25
+        </option>
+        <option
+          value="14"
+        >
+          14
+        </option>
+      </select>
       <div
-        class="chakra-table__container css-zipzvv"
+        class="flex justify-center overflow-x-scroll"
       >
         <table
-          class="chakra-table css-5605sr"
+          class="w-full"
         >
-          <tbody
-            class="css-0"
-          >
+          <tbody>
             <tr
-              class="css-0"
+              class="border-b"
             >
               <td
-                class="css-1539mg0"
+                class="p-1 md:p-2"
               >
-                <p
-                  class="chakra-text css-xim7xt"
+                <span
+                  class="text-sm md:text-base"
                 >
                   S-BULL
-                </p>
+                </span>
               </td>
               <td
-                class="css-1539mg0"
+                class="p-1 md:p-2"
               >
-                <p
-                  class="chakra-text css-xim7xt"
+                <span
+                  class="text-sm md:text-base"
                 >
                   S-BULL
-                </p>
+                </span>
               </td>
               <td
-                class="css-1539mg0"
+                class="p-1 md:p-2"
               >
-                <p
-                  class="chakra-text css-xim7xt"
+                <span
+                  class="text-sm md:text-base"
                 >
                   T18
-                </p>
+                </span>
               </td>
             </tr>
           </tbody>
@@ -249,33 +195,30 @@ exports[`master out fat bull 1`] = `
     </div>
     <div
       aria-label="game history"
-      class="css-0"
     >
       <h3
-        class="chakra-heading css-1slo9hi"
+        class="mb-2 text-sm font-bold md:text-base"
       >
         Game History
       </h3>
       <div
-        class="chakra-table__container css-zipzvv"
+        class="flex justify-center overflow-x-scroll"
       >
         <table
-          class="chakra-table css-d0hqo3"
+          class="w-full table-fixed"
         >
-          <tbody
-            class="css-0"
-          >
+          <tbody>
             <tr
-              class="css-1oahe7w"
+              class="bg-green-100 text-xs md:text-base"
             >
               <td
-                class="css-13x8h2m"
+                class="p-0 md:p-1"
                 colspan="2"
               >
                 Arrange
               </td>
               <td
-                class="css-13x8h2m"
+                class="whitespace-nowrap p-0 md:p-1"
                 colspan="2"
               >
                 single
@@ -283,27 +226,23 @@ exports[`master out fat bull 1`] = `
                 fat
               </td>
               <td
-                class="css-10ia4wo"
+                class="p-0 text-end md:p-1"
                 colspan="3"
               >
-                <p
-                  class="chakra-text css-0"
-                >
+                <span>
                   2021/01/01 01:01:01
-                </p>
+                </span>
               </td>
               <td
-                class="css-yaext0"
+                class="flex items-center p-0 text-center md:p-1"
               >
                 <button
                   aria-label="delete history"
-                  class="chakra-button css-1jiezgg"
+                  class="text-gray-600 bg-transparent hover:text-gray-400 p-0 focus:ring-0 m-auto inline-flex items-center rounded-full p-2.5 text-center text-sm font-medium focus:outline-none focus:ring-4 disabled:cursor-not-allowed"
                   type="button"
                 >
                   <svg
-                    aria-hidden="true"
                     fill="currentColor"
-                    focusable="false"
                     height="24"
                     stroke="currentColor"
                     stroke-width="0"
@@ -326,21 +265,284 @@ exports[`master out fat bull 1`] = `
                 </button>
               </td>
             </tr>
-            <tr
-              class="css-0"
-            >
+            <tr>
               <td
-                class="css-j7bde9"
+                class="p-1 text-sm md:text-base"
               >
-                <p
+                <span
+                  aria-controls="popover-content-:r1j:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="text-center underline"
+                  id="popover-trigger-:r1j:"
+                >
+                  167
+                </span>
+                <div
+                  class="chakra-popover__popper css-1qq679y"
+                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+                >
+                  <section
+                    aria-describedby="popover-body-:r1j:"
+                    class="chakra-popover__content css-sjj62m"
+                    id="popover-content-:r1j:"
+                    role="tooltip"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="chakra-popover__arrow-positioner css-0"
+                      data-popper-arrow=""
+                      style="position: absolute;"
+                    >
+                      <div
+                        class="chakra-popover__arrow css-0"
+                        data-popper-arrow-inner=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-popover__body css-1ews2c8"
+                      id="popover-body-:r1j:"
+                    >
+                      <div
+                        class="flex flex-col"
+                      >
+                        <div
+                          class="grid grid-cols-4 gap-1"
+                        >
+                          <span
+                            class=" "
+                          >
+                            T20
+                          </span>
+                          <span
+                            class=" "
+                          >
+                            T19
+                          </span>
+                          <span
+                            class=" "
+                          >
+                            D-BULL
+                          </span>
+                          <span
+                            class="text-red-500 col-start-4"
+                          >
+                            FINISH
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </td>
+              <td
+                class="p-1 text-sm md:text-base"
+              >
+                <span
+                  aria-controls="popover-content-:r1l:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="text-center underline"
+                  id="popover-trigger-:r1l:"
+                >
+                  28
+                </span>
+                <div
+                  class="chakra-popover__popper css-1qq679y"
+                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+                >
+                  <section
+                    aria-describedby="popover-body-:r1l:"
+                    class="chakra-popover__content css-sjj62m"
+                    id="popover-content-:r1l:"
+                    role="tooltip"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="chakra-popover__arrow-positioner css-0"
+                      data-popper-arrow=""
+                      style="position: absolute;"
+                    >
+                      <div
+                        class="chakra-popover__arrow css-0"
+                        data-popper-arrow-inner=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-popover__body css-1ews2c8"
+                      id="popover-body-:r1l:"
+                    >
+                      <div
+                        class="flex flex-col"
+                      >
+                        <div
+                          class="grid grid-cols-4 gap-1"
+                        >
+                          <span
+                            class=" "
+                          >
+                            D14
+                          </span>
+                          <span
+                            class="text-red-500 col-start-4"
+                          >
+                            FINISH
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </td>
+              <td
+                class="p-1 text-sm md:text-base"
+              >
+                <span
+                  aria-controls="popover-content-:r1n:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="text-center underline"
+                  id="popover-trigger-:r1n:"
+                >
+                  161
+                </span>
+                <div
+                  class="chakra-popover__popper css-1qq679y"
+                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+                >
+                  <section
+                    aria-describedby="popover-body-:r1n:"
+                    class="chakra-popover__content css-sjj62m"
+                    id="popover-content-:r1n:"
+                    role="tooltip"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="chakra-popover__arrow-positioner css-0"
+                      data-popper-arrow=""
+                      style="position: absolute;"
+                    >
+                      <div
+                        class="chakra-popover__arrow css-0"
+                        data-popper-arrow-inner=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-popover__body css-1ews2c8"
+                      id="popover-body-:r1n:"
+                    >
+                      <div
+                        class="flex flex-col"
+                      >
+                        <div
+                          class="grid grid-cols-4 gap-1"
+                        >
+                          <span
+                            class=" "
+                          >
+                            T20
+                          </span>
+                          <span
+                            class=" "
+                          >
+                            T17
+                          </span>
+                          <span
+                            class=" "
+                          >
+                            D-BULL
+                          </span>
+                          <span
+                            class="text-red-500 col-start-4"
+                          >
+                            FINISH
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </td>
+              <td
+                class="p-1 text-sm md:text-base"
+              >
+                <span
+                  aria-controls="popover-content-:r1p:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="text-center underline"
+                  id="popover-trigger-:r1p:"
+                >
+                  86
+                </span>
+                <div
+                  class="chakra-popover__popper css-1qq679y"
+                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+                >
+                  <section
+                    aria-describedby="popover-body-:r1p:"
+                    class="chakra-popover__content css-sjj62m"
+                    id="popover-content-:r1p:"
+                    role="tooltip"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="chakra-popover__arrow-positioner css-0"
+                      data-popper-arrow=""
+                      style="position: absolute;"
+                    >
+                      <div
+                        class="chakra-popover__arrow css-0"
+                        data-popper-arrow-inner=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-popover__body css-1ews2c8"
+                      id="popover-body-:r1p:"
+                    >
+                      <div
+                        class="flex flex-col"
+                      >
+                        <div
+                          class="grid grid-cols-4 gap-1"
+                        >
+                          <span
+                            class=" "
+                          >
+                            D-BULL
+                          </span>
+                          <span
+                            class=" "
+                          >
+                            D18
+                          </span>
+                          <span
+                            class="text-red-500 col-start-4"
+                          >
+                            FINISH
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </td>
+              <td
+                class="p-1 text-sm md:text-base"
+              >
+                <span
                   aria-controls="popover-content-:r1r:"
                   aria-expanded="false"
                   aria-haspopup="dialog"
-                  class="chakra-text css-gyvdtt"
+                  class="text-center underline"
                   id="popover-trigger-:r1r:"
                 >
-                  167
-                </p>
+                  153
+                </span>
                 <div
                   class="chakra-popover__popper css-1qq679y"
                   style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
@@ -368,31 +570,31 @@ exports[`master out fat bull 1`] = `
                       id="popover-body-:r1r:"
                     >
                       <div
-                        class="css-j7qwjs"
+                        class="flex flex-col"
                       >
                         <div
-                          class="css-17k0wlp"
+                          class="grid grid-cols-4 gap-1"
                         >
-                          <p
-                            class="chakra-text css-0"
+                          <span
+                            class=" "
                           >
-                            T20
-                          </p>
-                          <p
-                            class="chakra-text css-0"
+                            T17
+                          </span>
+                          <span
+                            class=" "
                           >
-                            T19
-                          </p>
-                          <p
-                            class="chakra-text css-0"
+                            T17
+                          </span>
+                          <span
+                            class=" "
                           >
-                            D-BULL
-                          </p>
-                          <p
-                            class="chakra-text css-jtjur4"
+                            T17
+                          </span>
+                          <span
+                            class="text-red-500 col-start-4"
                           >
                             FINISH
-                          </p>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -400,17 +602,17 @@ exports[`master out fat bull 1`] = `
                 </div>
               </td>
               <td
-                class="css-j7bde9"
+                class="p-1 text-sm md:text-base"
               >
-                <p
+                <span
                   aria-controls="popover-content-:r1t:"
                   aria-expanded="false"
                   aria-haspopup="dialog"
-                  class="chakra-text css-gyvdtt"
+                  class="text-center underline"
                   id="popover-trigger-:r1t:"
                 >
-                  28
-                </p>
+                  166
+                </span>
                 <div
                   class="chakra-popover__popper css-1qq679y"
                   style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
@@ -438,21 +640,40 @@ exports[`master out fat bull 1`] = `
                       id="popover-body-:r1t:"
                     >
                       <div
-                        class="css-j7qwjs"
+                        class="flex flex-col"
                       >
                         <div
-                          class="css-17k0wlp"
+                          class="grid grid-cols-4 gap-1"
                         >
-                          <p
-                            class="chakra-text css-0"
+                          <span
+                            class=" "
                           >
-                            D14
-                          </p>
-                          <p
-                            class="chakra-text css-jtjur4"
+                            D-BULL
+                          </span>
+                          <span
+                            class=" "
+                          >
+                            D-BULL
+                          </span>
+                          <span
+                            class=" "
+                          >
+                            T20
+                          </span>
+                        </div>
+                        <div
+                          class="grid grid-cols-4 gap-1"
+                        >
+                          <span
+                            class=" "
+                          >
+                            D3
+                          </span>
+                          <span
+                            class="text-red-500 col-start-4"
                           >
                             FINISH
-                          </p>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -460,17 +681,17 @@ exports[`master out fat bull 1`] = `
                 </div>
               </td>
               <td
-                class="css-j7bde9"
+                class="p-1 text-sm md:text-base"
               >
-                <p
+                <span
                   aria-controls="popover-content-:r1v:"
                   aria-expanded="false"
                   aria-haspopup="dialog"
-                  class="chakra-text css-gyvdtt"
+                  class="text-center underline"
                   id="popover-trigger-:r1v:"
                 >
-                  161
-                </p>
+                  82
+                </span>
                 <div
                   class="chakra-popover__popper css-1qq679y"
                   style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
@@ -498,31 +719,26 @@ exports[`master out fat bull 1`] = `
                       id="popover-body-:r1v:"
                     >
                       <div
-                        class="css-j7qwjs"
+                        class="flex flex-col"
                       >
                         <div
-                          class="css-17k0wlp"
+                          class="grid grid-cols-4 gap-1"
                         >
-                          <p
-                            class="chakra-text css-0"
-                          >
-                            T20
-                          </p>
-                          <p
-                            class="chakra-text css-0"
-                          >
-                            T17
-                          </p>
-                          <p
-                            class="chakra-text css-0"
+                          <span
+                            class=" "
                           >
                             D-BULL
-                          </p>
-                          <p
-                            class="chakra-text css-jtjur4"
+                          </span>
+                          <span
+                            class=" "
+                          >
+                            D16
+                          </span>
+                          <span
+                            class="text-red-500 col-start-4"
                           >
                             FINISH
-                          </p>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -530,17 +746,17 @@ exports[`master out fat bull 1`] = `
                 </div>
               </td>
               <td
-                class="css-j7bde9"
+                class="p-1 text-sm md:text-base"
               >
-                <p
+                <span
                   aria-controls="popover-content-:r21:"
                   aria-expanded="false"
                   aria-haspopup="dialog"
-                  class="chakra-text css-gyvdtt"
+                  class="text-center underline"
                   id="popover-trigger-:r21:"
                 >
-                  86
-                </p>
+                  63
+                </span>
                 <div
                   class="chakra-popover__popper css-1qq679y"
                   style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
@@ -568,44 +784,103 @@ exports[`master out fat bull 1`] = `
                       id="popover-body-:r21:"
                     >
                       <div
-                        class="css-j7qwjs"
+                        class="flex flex-col"
                       >
                         <div
-                          class="css-17k0wlp"
+                          class="grid grid-cols-4 gap-1"
                         >
-                          <p
-                            class="chakra-text css-0"
+                          <span
+                            class=" "
                           >
                             D-BULL
-                          </p>
-                          <p
-                            class="chakra-text css-0"
+                          </span>
+                          <span
+                            class=" "
                           >
-                            D18
-                          </p>
-                          <p
-                            class="chakra-text css-jtjur4"
+                            13
+                          </span>
+                          <span
+                            class="text-red-500 col-start-4"
                           >
                             FINISH
-                          </p>
+                          </span>
                         </div>
                       </div>
                     </div>
                   </section>
                 </div>
               </td>
+            </tr>
+            <tr
+              class="bg-green-100 text-xs md:text-base"
+            >
               <td
-                class="css-j7bde9"
+                class="p-0 md:p-1"
+                colspan="2"
               >
-                <p
+                Arrange
+              </td>
+              <td
+                class="whitespace-nowrap p-0 md:p-1"
+                colspan="2"
+              >
+                master
+                 / 
+                fat
+              </td>
+              <td
+                class="p-0 text-end md:p-1"
+                colspan="3"
+              >
+                <span>
+                  2021/01/01 01:01:01
+                </span>
+              </td>
+              <td
+                class="flex items-center p-0 text-center md:p-1"
+              >
+                <button
+                  aria-label="delete history"
+                  class="text-gray-600 bg-transparent hover:text-gray-400 p-0 focus:ring-0 m-auto inline-flex items-center rounded-full p-2.5 text-center text-sm font-medium focus:outline-none focus:ring-4 disabled:cursor-not-allowed"
+                  type="button"
+                >
+                  <svg
+                    fill="currentColor"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0 0h24v24H0z"
+                      fill="none"
+                    />
+                    <path
+                      d="M0 0h24v24H0V0z"
+                      fill="none"
+                    />
+                    <path
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12l1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                    />
+                  </svg>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td
+                class="p-1 text-sm md:text-base"
+              >
+                <span
                   aria-controls="popover-content-:r23:"
                   aria-expanded="false"
                   aria-haspopup="dialog"
-                  class="chakra-text css-gyvdtt"
+                  class="text-center underline"
                   id="popover-trigger-:r23:"
                 >
-                  153
-                </p>
+                  152
+                </span>
                 <div
                   class="chakra-popover__popper css-1qq679y"
                   style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
@@ -633,31 +908,31 @@ exports[`master out fat bull 1`] = `
                       id="popover-body-:r23:"
                     >
                       <div
-                        class="css-j7qwjs"
+                        class="flex flex-col"
                       >
                         <div
-                          class="css-17k0wlp"
+                          class="grid grid-cols-4 gap-1"
                         >
-                          <p
-                            class="chakra-text css-0"
+                          <span
+                            class=" "
                           >
-                            T17
-                          </p>
-                          <p
-                            class="chakra-text css-0"
+                            T20
+                          </span>
+                          <span
+                            class=" "
                           >
-                            T17
-                          </p>
-                          <p
-                            class="chakra-text css-0"
+                            T20
+                          </span>
+                          <span
+                            class=" "
                           >
-                            T17
-                          </p>
-                          <p
-                            class="chakra-text css-jtjur4"
+                            D16
+                          </span>
+                          <span
+                            class="text-red-500 col-start-4"
                           >
                             FINISH
-                          </p>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -665,17 +940,17 @@ exports[`master out fat bull 1`] = `
                 </div>
               </td>
               <td
-                class="css-j7bde9"
+                class="p-1 text-sm md:text-base"
               >
-                <p
+                <span
                   aria-controls="popover-content-:r25:"
                   aria-expanded="false"
                   aria-haspopup="dialog"
-                  class="chakra-text css-gyvdtt"
+                  class="text-center underline"
                   id="popover-trigger-:r25:"
                 >
-                  166
-                </p>
+                  25
+                </span>
                 <div
                   class="chakra-popover__popper css-1qq679y"
                   style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
@@ -703,40 +978,26 @@ exports[`master out fat bull 1`] = `
                       id="popover-body-:r25:"
                     >
                       <div
-                        class="css-j7qwjs"
+                        class="flex flex-col"
                       >
                         <div
-                          class="css-17k0wlp"
+                          class="grid grid-cols-4 gap-1"
                         >
-                          <p
-                            class="chakra-text css-0"
+                          <span
+                            class=" "
                           >
-                            D-BULL
-                          </p>
-                          <p
-                            class="chakra-text css-0"
+                            9
+                          </span>
+                          <span
+                            class=" "
                           >
-                            D-BULL
-                          </p>
-                          <p
-                            class="chakra-text css-0"
-                          >
-                            T20
-                          </p>
-                        </div>
-                        <div
-                          class="css-17k0wlp"
-                        >
-                          <p
-                            class="chakra-text css-0"
-                          >
-                            D3
-                          </p>
-                          <p
-                            class="chakra-text css-jtjur4"
+                            D8
+                          </span>
+                          <span
+                            class="text-red-500 col-start-4"
                           >
                             FINISH
-                          </p>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -744,17 +1005,17 @@ exports[`master out fat bull 1`] = `
                 </div>
               </td>
               <td
-                class="css-j7bde9"
+                class="p-1 text-sm md:text-base"
               >
-                <p
+                <span
                   aria-controls="popover-content-:r27:"
                   aria-expanded="false"
                   aria-haspopup="dialog"
-                  class="chakra-text css-gyvdtt"
+                  class="text-center underline"
                   id="popover-trigger-:r27:"
                 >
-                  82
-                </p>
+                  142
+                </span>
                 <div
                   class="chakra-popover__popper css-1qq679y"
                   style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
@@ -782,26 +1043,31 @@ exports[`master out fat bull 1`] = `
                       id="popover-body-:r27:"
                     >
                       <div
-                        class="css-j7qwjs"
+                        class="flex flex-col"
                       >
                         <div
-                          class="css-17k0wlp"
+                          class="grid grid-cols-4 gap-1"
                         >
-                          <p
-                            class="chakra-text css-0"
+                          <span
+                            class=" "
                           >
-                            D-BULL
-                          </p>
-                          <p
-                            class="chakra-text css-0"
+                            S-BULL
+                          </span>
+                          <span
+                            class=" "
                           >
-                            D16
-                          </p>
-                          <p
-                            class="chakra-text css-jtjur4"
+                            S-BULL
+                          </span>
+                          <span
+                            class=" "
+                          >
+                            T14
+                          </span>
+                          <span
+                            class="text-red-500 col-start-4"
                           >
                             FINISH
-                          </p>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -809,17 +1075,17 @@ exports[`master out fat bull 1`] = `
                 </div>
               </td>
               <td
-                class="css-j7bde9"
+                class="p-1 text-sm md:text-base"
               >
-                <p
+                <span
                   aria-controls="popover-content-:r29:"
                   aria-expanded="false"
                   aria-haspopup="dialog"
-                  class="chakra-text css-gyvdtt"
+                  class="text-center underline"
                   id="popover-trigger-:r29:"
                 >
-                  63
-                </p>
+                  87
+                </span>
                 <div
                   class="chakra-popover__popper css-1qq679y"
                   style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
@@ -847,109 +1113,44 @@ exports[`master out fat bull 1`] = `
                       id="popover-body-:r29:"
                     >
                       <div
-                        class="css-j7qwjs"
+                        class="flex flex-col"
                       >
                         <div
-                          class="css-17k0wlp"
+                          class="grid grid-cols-4 gap-1"
                         >
-                          <p
-                            class="chakra-text css-0"
+                          <span
+                            class=" "
                           >
-                            D-BULL
-                          </p>
-                          <p
-                            class="chakra-text css-0"
+                            T19
+                          </span>
+                          <span
+                            class=" "
                           >
-                            13
-                          </p>
-                          <p
-                            class="chakra-text css-jtjur4"
+                            D15
+                          </span>
+                          <span
+                            class="text-red-500 col-start-4"
                           >
                             FINISH
-                          </p>
+                          </span>
                         </div>
                       </div>
                     </div>
                   </section>
                 </div>
               </td>
-            </tr>
-            <tr
-              class="css-1oahe7w"
-            >
               <td
-                class="css-13x8h2m"
-                colspan="2"
+                class="p-1 text-sm md:text-base"
               >
-                Arrange
-              </td>
-              <td
-                class="css-13x8h2m"
-                colspan="2"
-              >
-                master
-                 / 
-                fat
-              </td>
-              <td
-                class="css-10ia4wo"
-                colspan="3"
-              >
-                <p
-                  class="chakra-text css-0"
-                >
-                  2021/01/01 01:01:01
-                </p>
-              </td>
-              <td
-                class="css-yaext0"
-              >
-                <button
-                  aria-label="delete history"
-                  class="chakra-button css-1jiezgg"
-                  type="button"
-                >
-                  <svg
-                    aria-hidden="true"
-                    fill="currentColor"
-                    focusable="false"
-                    height="24"
-                    stroke="currentColor"
-                    stroke-width="0"
-                    viewBox="0 0 24 24"
-                    width="24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M0 0h24v24H0z"
-                      fill="none"
-                    />
-                    <path
-                      d="M0 0h24v24H0V0z"
-                      fill="none"
-                    />
-                    <path
-                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12l1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
-                    />
-                  </svg>
-                </button>
-              </td>
-            </tr>
-            <tr
-              class="css-0"
-            >
-              <td
-                class="css-j7bde9"
-              >
-                <p
+                <span
                   aria-controls="popover-content-:r2b:"
                   aria-expanded="false"
                   aria-haspopup="dialog"
-                  class="chakra-text css-gyvdtt"
+                  class="text-center underline"
                   id="popover-trigger-:r2b:"
                 >
-                  152
-                </p>
+                  154
+                </span>
                 <div
                   class="chakra-popover__popper css-1qq679y"
                   style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
@@ -977,31 +1178,31 @@ exports[`master out fat bull 1`] = `
                       id="popover-body-:r2b:"
                     >
                       <div
-                        class="css-j7qwjs"
+                        class="flex flex-col"
                       >
                         <div
-                          class="css-17k0wlp"
+                          class="grid grid-cols-4 gap-1"
                         >
-                          <p
-                            class="chakra-text css-0"
+                          <span
+                            class=" "
                           >
-                            T20
-                          </p>
-                          <p
-                            class="chakra-text css-0"
+                            S-BULL
+                          </span>
+                          <span
+                            class=" "
                           >
-                            T20
-                          </p>
-                          <p
-                            class="chakra-text css-0"
+                            S-BULL
+                          </span>
+                          <span
+                            class=" "
                           >
-                            D16
-                          </p>
-                          <p
-                            class="chakra-text css-jtjur4"
+                            T18
+                          </span>
+                          <span
+                            class="text-red-500 col-start-4"
                           >
                             FINISH
-                          </p>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -1009,17 +1210,17 @@ exports[`master out fat bull 1`] = `
                 </div>
               </td>
               <td
-                class="css-j7bde9"
+                class="p-1 text-sm md:text-base"
               >
-                <p
+                <span
                   aria-controls="popover-content-:r2d:"
                   aria-expanded="false"
                   aria-haspopup="dialog"
-                  class="chakra-text css-gyvdtt"
+                  class="text-center underline"
                   id="popover-trigger-:r2d:"
                 >
-                  25
-                </p>
+                  123
+                </span>
                 <div
                   class="chakra-popover__popper css-1qq679y"
                   style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
@@ -1047,26 +1248,31 @@ exports[`master out fat bull 1`] = `
                       id="popover-body-:r2d:"
                     >
                       <div
-                        class="css-j7qwjs"
+                        class="flex flex-col"
                       >
                         <div
-                          class="css-17k0wlp"
+                          class="grid grid-cols-4 gap-1"
                         >
-                          <p
-                            class="chakra-text css-0"
+                          <span
+                            class=" "
                           >
-                            9
-                          </p>
-                          <p
-                            class="chakra-text css-0"
+                            D-BULL
+                          </span>
+                          <span
+                            class=" "
+                          >
+                            T19
+                          </span>
+                          <span
+                            class=" "
                           >
                             D8
-                          </p>
-                          <p
-                            class="chakra-text css-jtjur4"
+                          </span>
+                          <span
+                            class="text-red-500 col-start-4"
                           >
                             FINISH
-                          </p>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -1074,17 +1280,17 @@ exports[`master out fat bull 1`] = `
                 </div>
               </td>
               <td
-                class="css-j7bde9"
+                class="p-1 text-sm md:text-base"
               >
-                <p
+                <span
                   aria-controls="popover-content-:r2f:"
                   aria-expanded="false"
                   aria-haspopup="dialog"
-                  class="chakra-text css-gyvdtt"
+                  class="text-center underline"
                   id="popover-trigger-:r2f:"
                 >
-                  142
-                </p>
+                  67
+                </span>
                 <div
                   class="chakra-popover__popper css-1qq679y"
                   style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
@@ -1112,31 +1318,26 @@ exports[`master out fat bull 1`] = `
                       id="popover-body-:r2f:"
                     >
                       <div
-                        class="css-j7qwjs"
+                        class="flex flex-col"
                       >
                         <div
-                          class="css-17k0wlp"
+                          class="grid grid-cols-4 gap-1"
                         >
-                          <p
-                            class="chakra-text css-0"
+                          <span
+                            class=" "
+                          >
+                            17
+                          </span>
+                          <span
+                            class=" "
                           >
                             S-BULL
-                          </p>
-                          <p
-                            class="chakra-text css-0"
-                          >
-                            S-BULL
-                          </p>
-                          <p
-                            class="chakra-text css-0"
-                          >
-                            T14
-                          </p>
-                          <p
-                            class="chakra-text css-jtjur4"
+                          </span>
+                          <span
+                            class="text-red-500 col-start-4"
                           >
                             FINISH
-                          </p>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -1144,17 +1345,17 @@ exports[`master out fat bull 1`] = `
                 </div>
               </td>
               <td
-                class="css-j7bde9"
+                class="p-1 text-sm md:text-base"
               >
-                <p
+                <span
                   aria-controls="popover-content-:r2h:"
                   aria-expanded="false"
                   aria-haspopup="dialog"
-                  class="chakra-text css-gyvdtt"
+                  class="text-center underline"
                   id="popover-trigger-:r2h:"
                 >
-                  87
-                </p>
+                  14
+                </span>
                 <div
                   class="chakra-popover__popper css-1qq679y"
                   style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
@@ -1182,44 +1383,98 @@ exports[`master out fat bull 1`] = `
                       id="popover-body-:r2h:"
                     >
                       <div
-                        class="css-j7qwjs"
+                        class="flex flex-col"
                       >
                         <div
-                          class="css-17k0wlp"
+                          class="grid grid-cols-4 gap-1"
                         >
-                          <p
-                            class="chakra-text css-0"
+                          <span
+                            class=" "
                           >
-                            T19
-                          </p>
-                          <p
-                            class="chakra-text css-0"
-                          >
-                            D15
-                          </p>
-                          <p
-                            class="chakra-text css-jtjur4"
+                            D7
+                          </span>
+                          <span
+                            class="text-red-500 col-start-4"
                           >
                             FINISH
-                          </p>
+                          </span>
                         </div>
                       </div>
                     </div>
                   </section>
                 </div>
               </td>
+            </tr>
+            <tr
+              class="bg-green-100 text-xs md:text-base"
+            >
               <td
-                class="css-j7bde9"
+                class="p-0 md:p-1"
+                colspan="2"
               >
-                <p
+                Arrange
+              </td>
+              <td
+                class="whitespace-nowrap p-0 md:p-1"
+                colspan="2"
+              >
+                double
+                 / 
+                fat
+              </td>
+              <td
+                class="p-0 text-end md:p-1"
+                colspan="3"
+              >
+                <span>
+                  2021/01/01 01:01:01
+                </span>
+              </td>
+              <td
+                class="flex items-center p-0 text-center md:p-1"
+              >
+                <button
+                  aria-label="delete history"
+                  class="text-gray-600 bg-transparent hover:text-gray-400 p-0 focus:ring-0 m-auto inline-flex items-center rounded-full p-2.5 text-center text-sm font-medium focus:outline-none focus:ring-4 disabled:cursor-not-allowed"
+                  type="button"
+                >
+                  <svg
+                    fill="currentColor"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0 0h24v24H0z"
+                      fill="none"
+                    />
+                    <path
+                      d="M0 0h24v24H0V0z"
+                      fill="none"
+                    />
+                    <path
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12l1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                    />
+                  </svg>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td
+                class="p-1 text-sm md:text-base"
+              >
+                <span
                   aria-controls="popover-content-:r2j:"
                   aria-expanded="false"
                   aria-haspopup="dialog"
-                  class="chakra-text css-gyvdtt"
+                  class="text-center underline"
                   id="popover-trigger-:r2j:"
                 >
-                  154
-                </p>
+                  150
+                </span>
                 <div
                   class="chakra-popover__popper css-1qq679y"
                   style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
@@ -1247,31 +1502,31 @@ exports[`master out fat bull 1`] = `
                       id="popover-body-:r2j:"
                     >
                       <div
-                        class="css-j7qwjs"
+                        class="flex flex-col"
                       >
                         <div
-                          class="css-17k0wlp"
+                          class="grid grid-cols-4 gap-1"
                         >
-                          <p
-                            class="chakra-text css-0"
+                          <span
+                            class=" "
                           >
-                            S-BULL
-                          </p>
-                          <p
-                            class="chakra-text css-0"
+                            T20
+                          </span>
+                          <span
+                            class=" "
                           >
-                            S-BULL
-                          </p>
-                          <p
-                            class="chakra-text css-0"
+                            T20
+                          </span>
+                          <span
+                            class=" "
                           >
-                            T18
-                          </p>
-                          <p
-                            class="chakra-text css-jtjur4"
+                            D15
+                          </span>
+                          <span
+                            class="text-red-500 col-start-4"
                           >
                             FINISH
-                          </p>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -1279,17 +1534,17 @@ exports[`master out fat bull 1`] = `
                 </div>
               </td>
               <td
-                class="css-j7bde9"
+                class="p-1 text-sm md:text-base"
               >
-                <p
+                <span
                   aria-controls="popover-content-:r2l:"
                   aria-expanded="false"
                   aria-haspopup="dialog"
-                  class="chakra-text css-gyvdtt"
+                  class="text-center underline"
                   id="popover-trigger-:r2l:"
                 >
-                  123
-                </p>
+                  26
+                </span>
                 <div
                   class="chakra-popover__popper css-1qq679y"
                   style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
@@ -1317,31 +1572,26 @@ exports[`master out fat bull 1`] = `
                       id="popover-body-:r2l:"
                     >
                       <div
-                        class="css-j7qwjs"
+                        class="flex flex-col"
                       >
                         <div
-                          class="css-17k0wlp"
+                          class="grid grid-cols-4 gap-1"
                         >
-                          <p
-                            class="chakra-text css-0"
+                          <span
+                            class=" "
                           >
-                            D-BULL
-                          </p>
-                          <p
-                            class="chakra-text css-0"
-                          >
-                            T19
-                          </p>
-                          <p
-                            class="chakra-text css-0"
+                            10
+                          </span>
+                          <span
+                            class=" "
                           >
                             D8
-                          </p>
-                          <p
-                            class="chakra-text css-jtjur4"
+                          </span>
+                          <span
+                            class="text-red-500 col-start-4"
                           >
                             FINISH
-                          </p>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -1349,17 +1599,17 @@ exports[`master out fat bull 1`] = `
                 </div>
               </td>
               <td
-                class="css-j7bde9"
+                class="p-1 text-sm md:text-base"
               >
-                <p
+                <span
                   aria-controls="popover-content-:r2n:"
                   aria-expanded="false"
                   aria-haspopup="dialog"
-                  class="chakra-text css-gyvdtt"
+                  class="text-center underline"
                   id="popover-trigger-:r2n:"
                 >
-                  67
-                </p>
+                  140
+                </span>
                 <div
                   class="chakra-popover__popper css-1qq679y"
                   style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
@@ -1387,26 +1637,31 @@ exports[`master out fat bull 1`] = `
                       id="popover-body-:r2n:"
                     >
                       <div
-                        class="css-j7qwjs"
+                        class="flex flex-col"
                       >
                         <div
-                          class="css-17k0wlp"
+                          class="grid grid-cols-4 gap-1"
                         >
-                          <p
-                            class="chakra-text css-0"
-                          >
-                            17
-                          </p>
-                          <p
-                            class="chakra-text css-0"
+                          <span
+                            class=" "
                           >
                             S-BULL
-                          </p>
-                          <p
-                            class="chakra-text css-jtjur4"
+                          </span>
+                          <span
+                            class=" "
+                          >
+                            S-BULL
+                          </span>
+                          <span
+                            class=" "
+                          >
+                            D20
+                          </span>
+                          <span
+                            class="text-red-500 col-start-4"
                           >
                             FINISH
-                          </p>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -1414,17 +1669,17 @@ exports[`master out fat bull 1`] = `
                 </div>
               </td>
               <td
-                class="css-j7bde9"
+                class="p-1 text-sm md:text-base"
               >
-                <p
+                <span
                   aria-controls="popover-content-:r2p:"
                   aria-expanded="false"
                   aria-haspopup="dialog"
-                  class="chakra-text css-gyvdtt"
+                  class="text-center underline"
                   id="popover-trigger-:r2p:"
                 >
-                  14
-                </p>
+                  82
+                </span>
                 <div
                   class="chakra-popover__popper css-1qq679y"
                   style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
@@ -1452,104 +1707,44 @@ exports[`master out fat bull 1`] = `
                       id="popover-body-:r2p:"
                     >
                       <div
-                        class="css-j7qwjs"
+                        class="flex flex-col"
                       >
                         <div
-                          class="css-17k0wlp"
+                          class="grid grid-cols-4 gap-1"
                         >
-                          <p
-                            class="chakra-text css-0"
+                          <span
+                            class=" "
                           >
-                            D7
-                          </p>
-                          <p
-                            class="chakra-text css-jtjur4"
+                            S-BULL
+                          </span>
+                          <span
+                            class=" "
+                          >
+                            D16
+                          </span>
+                          <span
+                            class="text-red-500 col-start-4"
                           >
                             FINISH
-                          </p>
+                          </span>
                         </div>
                       </div>
                     </div>
                   </section>
                 </div>
               </td>
-            </tr>
-            <tr
-              class="css-1oahe7w"
-            >
               <td
-                class="css-13x8h2m"
-                colspan="2"
+                class="p-1 text-sm md:text-base"
               >
-                Arrange
-              </td>
-              <td
-                class="css-13x8h2m"
-                colspan="2"
-              >
-                double
-                 / 
-                fat
-              </td>
-              <td
-                class="css-10ia4wo"
-                colspan="3"
-              >
-                <p
-                  class="chakra-text css-0"
-                >
-                  2021/01/01 01:01:01
-                </p>
-              </td>
-              <td
-                class="css-yaext0"
-              >
-                <button
-                  aria-label="delete history"
-                  class="chakra-button css-1jiezgg"
-                  type="button"
-                >
-                  <svg
-                    aria-hidden="true"
-                    fill="currentColor"
-                    focusable="false"
-                    height="24"
-                    stroke="currentColor"
-                    stroke-width="0"
-                    viewBox="0 0 24 24"
-                    width="24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M0 0h24v24H0z"
-                      fill="none"
-                    />
-                    <path
-                      d="M0 0h24v24H0V0z"
-                      fill="none"
-                    />
-                    <path
-                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12l1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
-                    />
-                  </svg>
-                </button>
-              </td>
-            </tr>
-            <tr
-              class="css-0"
-            >
-              <td
-                class="css-j7bde9"
-              >
-                <p
+                <span
                   aria-controls="popover-content-:r2r:"
                   aria-expanded="false"
                   aria-haspopup="dialog"
-                  class="chakra-text css-gyvdtt"
+                  class="text-center underline"
                   id="popover-trigger-:r2r:"
                 >
-                  150
-                </p>
+                  10
+                </span>
                 <div
                   class="chakra-popover__popper css-1qq679y"
                   style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
@@ -1577,31 +1772,21 @@ exports[`master out fat bull 1`] = `
                       id="popover-body-:r2r:"
                     >
                       <div
-                        class="css-j7qwjs"
+                        class="flex flex-col"
                       >
                         <div
-                          class="css-17k0wlp"
+                          class="grid grid-cols-4 gap-1"
                         >
-                          <p
-                            class="chakra-text css-0"
+                          <span
+                            class=" "
                           >
-                            T20
-                          </p>
-                          <p
-                            class="chakra-text css-0"
-                          >
-                            T20
-                          </p>
-                          <p
-                            class="chakra-text css-0"
-                          >
-                            D15
-                          </p>
-                          <p
-                            class="chakra-text css-jtjur4"
+                            D5
+                          </span>
+                          <span
+                            class="text-red-500 col-start-4"
                           >
                             FINISH
-                          </p>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -1609,17 +1794,17 @@ exports[`master out fat bull 1`] = `
                 </div>
               </td>
               <td
-                class="css-j7bde9"
+                class="p-1 text-sm md:text-base"
               >
-                <p
+                <span
                   aria-controls="popover-content-:r2t:"
                   aria-expanded="false"
                   aria-haspopup="dialog"
-                  class="chakra-text css-gyvdtt"
+                  class="text-center underline"
                   id="popover-trigger-:r2t:"
                 >
-                  26
-                </p>
+                  120
+                </span>
                 <div
                   class="chakra-popover__popper css-1qq679y"
                   style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
@@ -1647,26 +1832,31 @@ exports[`master out fat bull 1`] = `
                       id="popover-body-:r2t:"
                     >
                       <div
-                        class="css-j7qwjs"
+                        class="flex flex-col"
                       >
                         <div
-                          class="css-17k0wlp"
+                          class="grid grid-cols-4 gap-1"
                         >
-                          <p
-                            class="chakra-text css-0"
+                          <span
+                            class=" "
                           >
-                            10
-                          </p>
-                          <p
-                            class="chakra-text css-0"
+                            D-BULL
+                          </span>
+                          <span
+                            class=" "
                           >
-                            D8
-                          </p>
-                          <p
-                            class="chakra-text css-jtjur4"
+                            S-BULL
+                          </span>
+                          <span
+                            class=" "
+                          >
+                            D10
+                          </span>
+                          <span
+                            class="text-red-500 col-start-4"
                           >
                             FINISH
-                          </p>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -1674,17 +1864,17 @@ exports[`master out fat bull 1`] = `
                 </div>
               </td>
               <td
-                class="css-j7bde9"
+                class="p-1 text-sm md:text-base"
               >
-                <p
+                <span
                   aria-controls="popover-content-:r2v:"
                   aria-expanded="false"
                   aria-haspopup="dialog"
-                  class="chakra-text css-gyvdtt"
+                  class="text-center underline"
                   id="popover-trigger-:r2v:"
                 >
-                  140
-                </p>
+                  68
+                </span>
                 <div
                   class="chakra-popover__popper css-1qq679y"
                   style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
@@ -1712,31 +1902,26 @@ exports[`master out fat bull 1`] = `
                       id="popover-body-:r2v:"
                     >
                       <div
-                        class="css-j7qwjs"
+                        class="flex flex-col"
                       >
                         <div
-                          class="css-17k0wlp"
+                          class="grid grid-cols-4 gap-1"
                         >
-                          <p
-                            class="chakra-text css-0"
+                          <span
+                            class=" "
                           >
-                            S-BULL
-                          </p>
-                          <p
-                            class="chakra-text css-0"
-                          >
-                            S-BULL
-                          </p>
-                          <p
-                            class="chakra-text css-0"
+                            D14
+                          </span>
+                          <span
+                            class=" "
                           >
                             D20
-                          </p>
-                          <p
-                            class="chakra-text css-jtjur4"
+                          </span>
+                          <span
+                            class="text-red-500 col-start-4"
                           >
                             FINISH
-                          </p>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -1744,17 +1929,17 @@ exports[`master out fat bull 1`] = `
                 </div>
               </td>
               <td
-                class="css-j7bde9"
+                class="p-1 text-sm md:text-base"
               >
-                <p
+                <span
                   aria-controls="popover-content-:r31:"
                   aria-expanded="false"
                   aria-haspopup="dialog"
-                  class="chakra-text css-gyvdtt"
+                  class="text-center underline"
                   id="popover-trigger-:r31:"
                 >
-                  82
-                </p>
+                  16
+                </span>
                 <div
                   class="chakra-popover__popper css-1qq679y"
                   style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
@@ -1782,281 +1967,21 @@ exports[`master out fat bull 1`] = `
                       id="popover-body-:r31:"
                     >
                       <div
-                        class="css-j7qwjs"
+                        class="flex flex-col"
                       >
                         <div
-                          class="css-17k0wlp"
+                          class="grid grid-cols-4 gap-1"
                         >
-                          <p
-                            class="chakra-text css-0"
-                          >
-                            S-BULL
-                          </p>
-                          <p
-                            class="chakra-text css-0"
-                          >
-                            D16
-                          </p>
-                          <p
-                            class="chakra-text css-jtjur4"
-                          >
-                            FINISH
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </section>
-                </div>
-              </td>
-              <td
-                class="css-j7bde9"
-              >
-                <p
-                  aria-controls="popover-content-:r33:"
-                  aria-expanded="false"
-                  aria-haspopup="dialog"
-                  class="chakra-text css-gyvdtt"
-                  id="popover-trigger-:r33:"
-                >
-                  10
-                </p>
-                <div
-                  class="chakra-popover__popper css-1qq679y"
-                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
-                >
-                  <section
-                    aria-describedby="popover-body-:r33:"
-                    class="chakra-popover__content css-sjj62m"
-                    id="popover-content-:r33:"
-                    role="tooltip"
-                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
-                    tabindex="-1"
-                  >
-                    <div
-                      class="chakra-popover__arrow-positioner css-0"
-                      data-popper-arrow=""
-                      style="position: absolute;"
-                    >
-                      <div
-                        class="chakra-popover__arrow css-0"
-                        data-popper-arrow-inner=""
-                      />
-                    </div>
-                    <div
-                      class="chakra-popover__body css-1ews2c8"
-                      id="popover-body-:r33:"
-                    >
-                      <div
-                        class="css-j7qwjs"
-                      >
-                        <div
-                          class="css-17k0wlp"
-                        >
-                          <p
-                            class="chakra-text css-0"
-                          >
-                            D5
-                          </p>
-                          <p
-                            class="chakra-text css-jtjur4"
-                          >
-                            FINISH
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </section>
-                </div>
-              </td>
-              <td
-                class="css-j7bde9"
-              >
-                <p
-                  aria-controls="popover-content-:r35:"
-                  aria-expanded="false"
-                  aria-haspopup="dialog"
-                  class="chakra-text css-gyvdtt"
-                  id="popover-trigger-:r35:"
-                >
-                  120
-                </p>
-                <div
-                  class="chakra-popover__popper css-1qq679y"
-                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
-                >
-                  <section
-                    aria-describedby="popover-body-:r35:"
-                    class="chakra-popover__content css-sjj62m"
-                    id="popover-content-:r35:"
-                    role="tooltip"
-                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
-                    tabindex="-1"
-                  >
-                    <div
-                      class="chakra-popover__arrow-positioner css-0"
-                      data-popper-arrow=""
-                      style="position: absolute;"
-                    >
-                      <div
-                        class="chakra-popover__arrow css-0"
-                        data-popper-arrow-inner=""
-                      />
-                    </div>
-                    <div
-                      class="chakra-popover__body css-1ews2c8"
-                      id="popover-body-:r35:"
-                    >
-                      <div
-                        class="css-j7qwjs"
-                      >
-                        <div
-                          class="css-17k0wlp"
-                        >
-                          <p
-                            class="chakra-text css-0"
-                          >
-                            D-BULL
-                          </p>
-                          <p
-                            class="chakra-text css-0"
-                          >
-                            S-BULL
-                          </p>
-                          <p
-                            class="chakra-text css-0"
-                          >
-                            D10
-                          </p>
-                          <p
-                            class="chakra-text css-jtjur4"
-                          >
-                            FINISH
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </section>
-                </div>
-              </td>
-              <td
-                class="css-j7bde9"
-              >
-                <p
-                  aria-controls="popover-content-:r37:"
-                  aria-expanded="false"
-                  aria-haspopup="dialog"
-                  class="chakra-text css-gyvdtt"
-                  id="popover-trigger-:r37:"
-                >
-                  68
-                </p>
-                <div
-                  class="chakra-popover__popper css-1qq679y"
-                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
-                >
-                  <section
-                    aria-describedby="popover-body-:r37:"
-                    class="chakra-popover__content css-sjj62m"
-                    id="popover-content-:r37:"
-                    role="tooltip"
-                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
-                    tabindex="-1"
-                  >
-                    <div
-                      class="chakra-popover__arrow-positioner css-0"
-                      data-popper-arrow=""
-                      style="position: absolute;"
-                    >
-                      <div
-                        class="chakra-popover__arrow css-0"
-                        data-popper-arrow-inner=""
-                      />
-                    </div>
-                    <div
-                      class="chakra-popover__body css-1ews2c8"
-                      id="popover-body-:r37:"
-                    >
-                      <div
-                        class="css-j7qwjs"
-                      >
-                        <div
-                          class="css-17k0wlp"
-                        >
-                          <p
-                            class="chakra-text css-0"
-                          >
-                            D14
-                          </p>
-                          <p
-                            class="chakra-text css-0"
-                          >
-                            D20
-                          </p>
-                          <p
-                            class="chakra-text css-jtjur4"
-                          >
-                            FINISH
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </section>
-                </div>
-              </td>
-              <td
-                class="css-j7bde9"
-              >
-                <p
-                  aria-controls="popover-content-:r39:"
-                  aria-expanded="false"
-                  aria-haspopup="dialog"
-                  class="chakra-text css-gyvdtt"
-                  id="popover-trigger-:r39:"
-                >
-                  16
-                </p>
-                <div
-                  class="chakra-popover__popper css-1qq679y"
-                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
-                >
-                  <section
-                    aria-describedby="popover-body-:r39:"
-                    class="chakra-popover__content css-sjj62m"
-                    id="popover-content-:r39:"
-                    role="tooltip"
-                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
-                    tabindex="-1"
-                  >
-                    <div
-                      class="chakra-popover__arrow-positioner css-0"
-                      data-popper-arrow=""
-                      style="position: absolute;"
-                    >
-                      <div
-                        class="chakra-popover__arrow css-0"
-                        data-popper-arrow-inner=""
-                      />
-                    </div>
-                    <div
-                      class="chakra-popover__body css-1ews2c8"
-                      id="popover-body-:r39:"
-                    >
-                      <div
-                        class="css-j7qwjs"
-                      >
-                        <div
-                          class="css-17k0wlp"
-                        >
-                          <p
-                            class="chakra-text css-0"
+                          <span
+                            class=" "
                           >
                             D8
-                          </p>
-                          <p
-                            class="chakra-text css-jtjur4"
+                          </span>
+                          <span
+                            class="text-red-500 col-start-4"
                           >
                             FINISH
-                          </p>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -2079,244 +2004,190 @@ exports[`master out fat bull 1`] = `
 exports[`single out fat bull 1`] = `
 <div>
   <div
-    class="css-18936vg"
+    class="flex flex-col gap-8"
   >
     <div
-      class="css-1i2407o"
+      class="flex flex-col gap-2"
     >
-      <div
-        class="css-0"
-      >
-        <p
-          class="chakra-text css-1hmbtly"
+      <div>
+        <span
+          class="text-sm font-bold text-gray-500"
         >
           out options
-        </p>
+        </span>
         <div
-          class="chakra-radio-group css-0"
-          role="radiogroup"
+          class="flex"
         >
-          <div
-            class="css-1azotaz"
-          >
+          <div>
+            <input
+              aria-label="single out"
+              checked=""
+              class="peer hidden"
+              id="radio-single"
+              name="option-single-double-master"
+              type="radio"
+            />
             <label
-              class="chakra-radio css-1cqh9jq"
-              data-checked=""
+              class="cursor-pointer select-none bg-gray-100 px-4 py-1 text-sm no-tap-highlighting peer-checked:bg-blue-500 peer-checked:text-white peer-disabled:opacity-60 md:text-base rounded-l-md"
+              for="radio-single"
             >
-              <input
-                checked=""
-                class="chakra-radio__input"
-                id="radio-:r2:"
-                name="radio-:r1:"
-                style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
-                type="radio"
-                value="single"
-              />
-              <span
-                aria-hidden="true"
-                aria-label="single out"
-                class="chakra-radio__control css-1qjgi8f"
-                data-checked=""
-                data-focus=""
-              />
-              <span
-                class="chakra-radio__label css-jybt17"
-                data-checked=""
-              >
-                Single Out
-              </span>
+              Single Out
             </label>
+          </div>
+          <div>
+            <input
+              aria-label="double out"
+              class="peer hidden"
+              id="radio-double"
+              name="option-single-double-master"
+              type="radio"
+            />
             <label
-              class="chakra-radio css-1cqh9jq"
+              class="cursor-pointer select-none bg-gray-100 px-4 py-1 text-sm no-tap-highlighting peer-checked:bg-blue-500 peer-checked:text-white peer-disabled:opacity-60 md:text-base "
+              for="radio-double"
             >
-              <input
-                class="chakra-radio__input"
-                id="radio-:r3:"
-                name="radio-:r1:"
-                style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
-                type="radio"
-                value="double"
-              />
-              <span
-                aria-hidden="true"
-                aria-label="double out"
-                class="chakra-radio__control css-1qjgi8f"
-              />
-              <span
-                class="chakra-radio__label css-jybt17"
-              >
-                Double Out
-              </span>
+              Double Out
             </label>
+          </div>
+          <div>
+            <input
+              aria-label="master out"
+              class="peer hidden"
+              id="radio-master"
+              name="option-single-double-master"
+              type="radio"
+            />
             <label
-              class="chakra-radio css-1cqh9jq"
+              class="cursor-pointer select-none bg-gray-100 px-4 py-1 text-sm no-tap-highlighting peer-checked:bg-blue-500 peer-checked:text-white peer-disabled:opacity-60 md:text-base rounded-r-md"
+              for="radio-master"
             >
-              <input
-                class="chakra-radio__input"
-                id="radio-:r4:"
-                name="radio-:r1:"
-                style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
-                type="radio"
-                value="master"
-              />
-              <span
-                aria-hidden="true"
-                aria-label="master out"
-                class="chakra-radio__control css-1qjgi8f"
-              />
-              <span
-                class="chakra-radio__label css-jybt17"
-              >
-                Master Out
-              </span>
+              Master Out
             </label>
           </div>
         </div>
       </div>
-      <div
-        class="css-0"
-      >
-        <p
-          class="chakra-text css-1hmbtly"
+      <div>
+        <span
+          class="text-sm font-bold text-gray-500"
         >
           bull options
-        </p>
+        </span>
         <div
-          class="css-1k9efnl"
+          class="flex"
         >
-          <p
-            class="chakra-text css-xim7xt"
-          >
-            Fat Bull
-          </p>
-          <label
-            class="chakra-switch css-1cuslds"
-          >
+          <div>
             <input
-              class="chakra-switch__input"
-              style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
-              type="checkbox"
-              value=""
+              aria-label="fat bull"
+              checked=""
+              class="peer hidden"
+              id="radio-fat"
+              name="option-fat-separate"
+              type="radio"
             />
-            <span
-              aria-hidden="true"
-              class="chakra-switch__track css-p27qcy"
+            <label
+              class="cursor-pointer select-none bg-gray-100 px-4 py-1 text-sm no-tap-highlighting peer-checked:bg-blue-500 peer-checked:text-white peer-disabled:opacity-60 md:text-base rounded-l-md"
+              for="radio-fat"
             >
-              <span
-                class="chakra-switch__thumb css-7roig"
-              />
-            </span>
-          </label>
-          <p
-            class="chakra-text css-xim7xt"
-          >
-            Separate Bull
-          </p>
-        </div>
-      </div>
-      <div
-        class="chakra-select__wrapper css-42b2qy"
-      >
-        <select
-          class="chakra-select css-1hax2g2"
-        >
-          <option
-            value="167"
-          >
-            167
-          </option>
-          <option
-            value="166"
-          >
-            166
-          </option>
-          <option
-            value="161"
-          >
-            161
-          </option>
-          <option
-            value="153"
-          >
-            153
-          </option>
-          <option
-            value="86"
-          >
-            86
-          </option>
-          <option
-            value="82"
-          >
-            82
-          </option>
-          <option
-            value="63"
-          >
-            63
-          </option>
-          <option
-            value="28"
-          >
-            28
-          </option>
-        </select>
-        <div
-          class="chakra-select__icon-wrapper css-cymxv7"
-        >
-          <svg
-            aria-hidden="true"
-            class="chakra-select__icon"
-            focusable="false"
-            role="presentation"
-            style="width: 1em; height: 1em; color: currentColor;"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
-              fill="currentColor"
+              Fat Bull
+            </label>
+          </div>
+          <div>
+            <input
+              aria-label="separate bull"
+              class="peer hidden"
+              id="radio-separate"
+              name="option-fat-separate"
+              type="radio"
             />
-          </svg>
+            <label
+              class="cursor-pointer select-none bg-gray-100 px-4 py-1 text-sm no-tap-highlighting peer-checked:bg-blue-500 peer-checked:text-white peer-disabled:opacity-60 md:text-base rounded-r-md"
+              for="radio-separate"
+            >
+              Separate Bull
+            </label>
+          </div>
         </div>
       </div>
+      <select
+        class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-1 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500"
+      >
+        <option
+          value="167"
+        >
+          167
+        </option>
+        <option
+          value="166"
+        >
+          166
+        </option>
+        <option
+          value="161"
+        >
+          161
+        </option>
+        <option
+          value="153"
+        >
+          153
+        </option>
+        <option
+          value="86"
+        >
+          86
+        </option>
+        <option
+          value="82"
+        >
+          82
+        </option>
+        <option
+          value="63"
+        >
+          63
+        </option>
+        <option
+          value="28"
+        >
+          28
+        </option>
+      </select>
       <div
-        class="chakra-table__container css-zipzvv"
+        class="flex justify-center overflow-x-scroll"
       >
         <table
-          class="chakra-table css-5605sr"
+          class="w-full"
         >
-          <tbody
-            class="css-0"
-          >
+          <tbody>
             <tr
-              class="css-0"
+              class="border-b"
             >
               <td
-                class="css-1539mg0"
+                class="p-1 md:p-2"
               >
-                <p
-                  class="chakra-text css-xim7xt"
+                <span
+                  class="text-sm md:text-base"
                 >
                   T20
-                </p>
+                </span>
               </td>
               <td
-                class="css-1539mg0"
+                class="p-1 md:p-2"
               >
-                <p
-                  class="chakra-text css-xim7xt"
+                <span
+                  class="text-sm md:text-base"
                 >
                   T19
-                </p>
+                </span>
               </td>
               <td
-                class="css-1539mg0"
+                class="p-1 md:p-2"
               >
-                <p
-                  class="chakra-text css-xim7xt"
+                <span
+                  class="text-sm md:text-base"
                 >
                   D-BULL
-                </p>
+                </span>
               </td>
             </tr>
           </tbody>
@@ -2325,33 +2196,30 @@ exports[`single out fat bull 1`] = `
     </div>
     <div
       aria-label="game history"
-      class="css-0"
     >
       <h3
-        class="chakra-heading css-1slo9hi"
+        class="mb-2 text-sm font-bold md:text-base"
       >
         Game History
       </h3>
       <div
-        class="chakra-table__container css-zipzvv"
+        class="flex justify-center overflow-x-scroll"
       >
         <table
-          class="chakra-table css-d0hqo3"
+          class="w-full table-fixed"
         >
-          <tbody
-            class="css-0"
-          >
+          <tbody>
             <tr
-              class="css-1oahe7w"
+              class="bg-green-100 text-xs md:text-base"
             >
               <td
-                class="css-13x8h2m"
+                class="p-0 md:p-1"
                 colspan="2"
               >
                 Arrange
               </td>
               <td
-                class="css-13x8h2m"
+                class="whitespace-nowrap p-0 md:p-1"
                 colspan="2"
               >
                 single
@@ -2359,27 +2227,23 @@ exports[`single out fat bull 1`] = `
                 fat
               </td>
               <td
-                class="css-10ia4wo"
+                class="p-0 text-end md:p-1"
                 colspan="3"
               >
-                <p
-                  class="chakra-text css-0"
-                >
+                <span>
                   2021/01/01 01:01:01
-                </p>
+                </span>
               </td>
               <td
-                class="css-yaext0"
+                class="flex items-center p-0 text-center md:p-1"
               >
                 <button
                   aria-label="delete history"
-                  class="chakra-button css-1jiezgg"
+                  class="text-gray-600 bg-transparent hover:text-gray-400 p-0 focus:ring-0 m-auto inline-flex items-center rounded-full p-2.5 text-center text-sm font-medium focus:outline-none focus:ring-4 disabled:cursor-not-allowed"
                   type="button"
                 >
                   <svg
-                    aria-hidden="true"
                     fill="currentColor"
-                    focusable="false"
                     height="24"
                     stroke="currentColor"
                     stroke-width="0"
@@ -2402,21 +2266,149 @@ exports[`single out fat bull 1`] = `
                 </button>
               </td>
             </tr>
-            <tr
-              class="css-0"
-            >
+            <tr>
               <td
-                class="css-j7bde9"
+                class="p-1 text-sm md:text-base"
               >
-                <p
+                <span
+                  aria-controls="popover-content-:r2:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="text-center underline"
+                  id="popover-trigger-:r2:"
+                >
+                  167
+                </span>
+                <div
+                  class="chakra-popover__popper css-1qq679y"
+                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+                >
+                  <section
+                    aria-describedby="popover-body-:r2:"
+                    class="chakra-popover__content css-sjj62m"
+                    id="popover-content-:r2:"
+                    role="tooltip"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="chakra-popover__arrow-positioner css-0"
+                      data-popper-arrow=""
+                      style="position: absolute;"
+                    >
+                      <div
+                        class="chakra-popover__arrow css-0"
+                        data-popper-arrow-inner=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-popover__body css-1ews2c8"
+                      id="popover-body-:r2:"
+                    >
+                      <div
+                        class="flex flex-col"
+                      >
+                        <div
+                          class="grid grid-cols-4 gap-1"
+                        >
+                          <span
+                            class=" "
+                          >
+                            T20
+                          </span>
+                          <span
+                            class=" "
+                          >
+                            T19
+                          </span>
+                          <span
+                            class=" "
+                          >
+                            D-BULL
+                          </span>
+                          <span
+                            class="text-red-500 col-start-4"
+                          >
+                            FINISH
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </td>
+              <td
+                class="p-1 text-sm md:text-base"
+              >
+                <span
+                  aria-controls="popover-content-:r4:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="text-center underline"
+                  id="popover-trigger-:r4:"
+                >
+                  28
+                </span>
+                <div
+                  class="chakra-popover__popper css-1qq679y"
+                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+                >
+                  <section
+                    aria-describedby="popover-body-:r4:"
+                    class="chakra-popover__content css-sjj62m"
+                    id="popover-content-:r4:"
+                    role="tooltip"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="chakra-popover__arrow-positioner css-0"
+                      data-popper-arrow=""
+                      style="position: absolute;"
+                    >
+                      <div
+                        class="chakra-popover__arrow css-0"
+                        data-popper-arrow-inner=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-popover__body css-1ews2c8"
+                      id="popover-body-:r4:"
+                    >
+                      <div
+                        class="flex flex-col"
+                      >
+                        <div
+                          class="grid grid-cols-4 gap-1"
+                        >
+                          <span
+                            class=" "
+                          >
+                            D14
+                          </span>
+                          <span
+                            class="text-red-500 col-start-4"
+                          >
+                            FINISH
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </td>
+              <td
+                class="p-1 text-sm md:text-base"
+              >
+                <span
                   aria-controls="popover-content-:r6:"
                   aria-expanded="false"
                   aria-haspopup="dialog"
-                  class="chakra-text css-gyvdtt"
+                  class="text-center underline"
                   id="popover-trigger-:r6:"
                 >
-                  167
-                </p>
+                  161
+                </span>
                 <div
                   class="chakra-popover__popper css-1qq679y"
                   style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
@@ -2444,31 +2436,31 @@ exports[`single out fat bull 1`] = `
                       id="popover-body-:r6:"
                     >
                       <div
-                        class="css-j7qwjs"
+                        class="flex flex-col"
                       >
                         <div
-                          class="css-17k0wlp"
+                          class="grid grid-cols-4 gap-1"
                         >
-                          <p
-                            class="chakra-text css-0"
+                          <span
+                            class=" "
                           >
                             T20
-                          </p>
-                          <p
-                            class="chakra-text css-0"
+                          </span>
+                          <span
+                            class=" "
                           >
-                            T19
-                          </p>
-                          <p
-                            class="chakra-text css-0"
+                            T17
+                          </span>
+                          <span
+                            class=" "
                           >
                             D-BULL
-                          </p>
-                          <p
-                            class="chakra-text css-jtjur4"
+                          </span>
+                          <span
+                            class="text-red-500 col-start-4"
                           >
                             FINISH
-                          </p>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -2476,17 +2468,17 @@ exports[`single out fat bull 1`] = `
                 </div>
               </td>
               <td
-                class="css-j7bde9"
+                class="p-1 text-sm md:text-base"
               >
-                <p
+                <span
                   aria-controls="popover-content-:r8:"
                   aria-expanded="false"
                   aria-haspopup="dialog"
-                  class="chakra-text css-gyvdtt"
+                  class="text-center underline"
                   id="popover-trigger-:r8:"
                 >
-                  28
-                </p>
+                  86
+                </span>
                 <div
                   class="chakra-popover__popper css-1qq679y"
                   style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
@@ -2514,21 +2506,26 @@ exports[`single out fat bull 1`] = `
                       id="popover-body-:r8:"
                     >
                       <div
-                        class="css-j7qwjs"
+                        class="flex flex-col"
                       >
                         <div
-                          class="css-17k0wlp"
+                          class="grid grid-cols-4 gap-1"
                         >
-                          <p
-                            class="chakra-text css-0"
+                          <span
+                            class=" "
                           >
-                            D14
-                          </p>
-                          <p
-                            class="chakra-text css-jtjur4"
+                            D-BULL
+                          </span>
+                          <span
+                            class=" "
+                          >
+                            D18
+                          </span>
+                          <span
+                            class="text-red-500 col-start-4"
                           >
                             FINISH
-                          </p>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -2536,17 +2533,17 @@ exports[`single out fat bull 1`] = `
                 </div>
               </td>
               <td
-                class="css-j7bde9"
+                class="p-1 text-sm md:text-base"
               >
-                <p
+                <span
                   aria-controls="popover-content-:ra:"
                   aria-expanded="false"
                   aria-haspopup="dialog"
-                  class="chakra-text css-gyvdtt"
+                  class="text-center underline"
                   id="popover-trigger-:ra:"
                 >
-                  161
-                </p>
+                  153
+                </span>
                 <div
                   class="chakra-popover__popper css-1qq679y"
                   style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
@@ -2574,31 +2571,31 @@ exports[`single out fat bull 1`] = `
                       id="popover-body-:ra:"
                     >
                       <div
-                        class="css-j7qwjs"
+                        class="flex flex-col"
                       >
                         <div
-                          class="css-17k0wlp"
+                          class="grid grid-cols-4 gap-1"
                         >
-                          <p
-                            class="chakra-text css-0"
-                          >
-                            T20
-                          </p>
-                          <p
-                            class="chakra-text css-0"
+                          <span
+                            class=" "
                           >
                             T17
-                          </p>
-                          <p
-                            class="chakra-text css-0"
+                          </span>
+                          <span
+                            class=" "
                           >
-                            D-BULL
-                          </p>
-                          <p
-                            class="chakra-text css-jtjur4"
+                            T17
+                          </span>
+                          <span
+                            class=" "
+                          >
+                            T17
+                          </span>
+                          <span
+                            class="text-red-500 col-start-4"
                           >
                             FINISH
-                          </p>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -2606,17 +2603,17 @@ exports[`single out fat bull 1`] = `
                 </div>
               </td>
               <td
-                class="css-j7bde9"
+                class="p-1 text-sm md:text-base"
               >
-                <p
+                <span
                   aria-controls="popover-content-:rc:"
                   aria-expanded="false"
                   aria-haspopup="dialog"
-                  class="chakra-text css-gyvdtt"
+                  class="text-center underline"
                   id="popover-trigger-:rc:"
                 >
-                  86
-                </p>
+                  166
+                </span>
                 <div
                   class="chakra-popover__popper css-1qq679y"
                   style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
@@ -2644,26 +2641,40 @@ exports[`single out fat bull 1`] = `
                       id="popover-body-:rc:"
                     >
                       <div
-                        class="css-j7qwjs"
+                        class="flex flex-col"
                       >
                         <div
-                          class="css-17k0wlp"
+                          class="grid grid-cols-4 gap-1"
                         >
-                          <p
-                            class="chakra-text css-0"
+                          <span
+                            class=" "
                           >
                             D-BULL
-                          </p>
-                          <p
-                            class="chakra-text css-0"
+                          </span>
+                          <span
+                            class=" "
                           >
-                            D18
-                          </p>
-                          <p
-                            class="chakra-text css-jtjur4"
+                            D-BULL
+                          </span>
+                          <span
+                            class=" "
+                          >
+                            T20
+                          </span>
+                        </div>
+                        <div
+                          class="grid grid-cols-4 gap-1"
+                        >
+                          <span
+                            class=" "
+                          >
+                            D3
+                          </span>
+                          <span
+                            class="text-red-500 col-start-4"
                           >
                             FINISH
-                          </p>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -2671,17 +2682,17 @@ exports[`single out fat bull 1`] = `
                 </div>
               </td>
               <td
-                class="css-j7bde9"
+                class="p-1 text-sm md:text-base"
               >
-                <p
+                <span
                   aria-controls="popover-content-:re:"
                   aria-expanded="false"
                   aria-haspopup="dialog"
-                  class="chakra-text css-gyvdtt"
+                  class="text-center underline"
                   id="popover-trigger-:re:"
                 >
-                  153
-                </p>
+                  82
+                </span>
                 <div
                   class="chakra-popover__popper css-1qq679y"
                   style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
@@ -2709,31 +2720,26 @@ exports[`single out fat bull 1`] = `
                       id="popover-body-:re:"
                     >
                       <div
-                        class="css-j7qwjs"
+                        class="flex flex-col"
                       >
                         <div
-                          class="css-17k0wlp"
+                          class="grid grid-cols-4 gap-1"
                         >
-                          <p
-                            class="chakra-text css-0"
+                          <span
+                            class=" "
                           >
-                            T17
-                          </p>
-                          <p
-                            class="chakra-text css-0"
+                            D-BULL
+                          </span>
+                          <span
+                            class=" "
                           >
-                            T17
-                          </p>
-                          <p
-                            class="chakra-text css-0"
-                          >
-                            T17
-                          </p>
-                          <p
-                            class="chakra-text css-jtjur4"
+                            D16
+                          </span>
+                          <span
+                            class="text-red-500 col-start-4"
                           >
                             FINISH
-                          </p>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -2741,17 +2747,17 @@ exports[`single out fat bull 1`] = `
                 </div>
               </td>
               <td
-                class="css-j7bde9"
+                class="p-1 text-sm md:text-base"
               >
-                <p
+                <span
                   aria-controls="popover-content-:rg:"
                   aria-expanded="false"
                   aria-haspopup="dialog"
-                  class="chakra-text css-gyvdtt"
+                  class="text-center underline"
                   id="popover-trigger-:rg:"
                 >
-                  166
-                </p>
+                  63
+                </span>
                 <div
                   class="chakra-popover__popper css-1qq679y"
                   style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
@@ -2779,58 +2785,103 @@ exports[`single out fat bull 1`] = `
                       id="popover-body-:rg:"
                     >
                       <div
-                        class="css-j7qwjs"
+                        class="flex flex-col"
                       >
                         <div
-                          class="css-17k0wlp"
+                          class="grid grid-cols-4 gap-1"
                         >
-                          <p
-                            class="chakra-text css-0"
+                          <span
+                            class=" "
                           >
                             D-BULL
-                          </p>
-                          <p
-                            class="chakra-text css-0"
+                          </span>
+                          <span
+                            class=" "
                           >
-                            D-BULL
-                          </p>
-                          <p
-                            class="chakra-text css-0"
-                          >
-                            T20
-                          </p>
-                        </div>
-                        <div
-                          class="css-17k0wlp"
-                        >
-                          <p
-                            class="chakra-text css-0"
-                          >
-                            D3
-                          </p>
-                          <p
-                            class="chakra-text css-jtjur4"
+                            13
+                          </span>
+                          <span
+                            class="text-red-500 col-start-4"
                           >
                             FINISH
-                          </p>
+                          </span>
                         </div>
                       </div>
                     </div>
                   </section>
                 </div>
               </td>
+            </tr>
+            <tr
+              class="bg-green-100 text-xs md:text-base"
+            >
               <td
-                class="css-j7bde9"
+                class="p-0 md:p-1"
+                colspan="2"
               >
-                <p
+                Arrange
+              </td>
+              <td
+                class="whitespace-nowrap p-0 md:p-1"
+                colspan="2"
+              >
+                master
+                 / 
+                fat
+              </td>
+              <td
+                class="p-0 text-end md:p-1"
+                colspan="3"
+              >
+                <span>
+                  2021/01/01 01:01:01
+                </span>
+              </td>
+              <td
+                class="flex items-center p-0 text-center md:p-1"
+              >
+                <button
+                  aria-label="delete history"
+                  class="text-gray-600 bg-transparent hover:text-gray-400 p-0 focus:ring-0 m-auto inline-flex items-center rounded-full p-2.5 text-center text-sm font-medium focus:outline-none focus:ring-4 disabled:cursor-not-allowed"
+                  type="button"
+                >
+                  <svg
+                    fill="currentColor"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0 0h24v24H0z"
+                      fill="none"
+                    />
+                    <path
+                      d="M0 0h24v24H0V0z"
+                      fill="none"
+                    />
+                    <path
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12l1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                    />
+                  </svg>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td
+                class="p-1 text-sm md:text-base"
+              >
+                <span
                   aria-controls="popover-content-:ri:"
                   aria-expanded="false"
                   aria-haspopup="dialog"
-                  class="chakra-text css-gyvdtt"
+                  class="text-center underline"
                   id="popover-trigger-:ri:"
                 >
-                  82
-                </p>
+                  152
+                </span>
                 <div
                   class="chakra-popover__popper css-1qq679y"
                   style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
@@ -2858,26 +2909,31 @@ exports[`single out fat bull 1`] = `
                       id="popover-body-:ri:"
                     >
                       <div
-                        class="css-j7qwjs"
+                        class="flex flex-col"
                       >
                         <div
-                          class="css-17k0wlp"
+                          class="grid grid-cols-4 gap-1"
                         >
-                          <p
-                            class="chakra-text css-0"
+                          <span
+                            class=" "
                           >
-                            D-BULL
-                          </p>
-                          <p
-                            class="chakra-text css-0"
+                            T20
+                          </span>
+                          <span
+                            class=" "
+                          >
+                            T20
+                          </span>
+                          <span
+                            class=" "
                           >
                             D16
-                          </p>
-                          <p
-                            class="chakra-text css-jtjur4"
+                          </span>
+                          <span
+                            class="text-red-500 col-start-4"
                           >
                             FINISH
-                          </p>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -2885,17 +2941,17 @@ exports[`single out fat bull 1`] = `
                 </div>
               </td>
               <td
-                class="css-j7bde9"
+                class="p-1 text-sm md:text-base"
               >
-                <p
+                <span
                   aria-controls="popover-content-:rk:"
                   aria-expanded="false"
                   aria-haspopup="dialog"
-                  class="chakra-text css-gyvdtt"
+                  class="text-center underline"
                   id="popover-trigger-:rk:"
                 >
-                  63
-                </p>
+                  25
+                </span>
                 <div
                   class="chakra-popover__popper css-1qq679y"
                   style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
@@ -2923,109 +2979,44 @@ exports[`single out fat bull 1`] = `
                       id="popover-body-:rk:"
                     >
                       <div
-                        class="css-j7qwjs"
+                        class="flex flex-col"
                       >
                         <div
-                          class="css-17k0wlp"
+                          class="grid grid-cols-4 gap-1"
                         >
-                          <p
-                            class="chakra-text css-0"
+                          <span
+                            class=" "
                           >
-                            D-BULL
-                          </p>
-                          <p
-                            class="chakra-text css-0"
+                            9
+                          </span>
+                          <span
+                            class=" "
                           >
-                            13
-                          </p>
-                          <p
-                            class="chakra-text css-jtjur4"
+                            D8
+                          </span>
+                          <span
+                            class="text-red-500 col-start-4"
                           >
                             FINISH
-                          </p>
+                          </span>
                         </div>
                       </div>
                     </div>
                   </section>
                 </div>
               </td>
-            </tr>
-            <tr
-              class="css-1oahe7w"
-            >
               <td
-                class="css-13x8h2m"
-                colspan="2"
+                class="p-1 text-sm md:text-base"
               >
-                Arrange
-              </td>
-              <td
-                class="css-13x8h2m"
-                colspan="2"
-              >
-                master
-                 / 
-                fat
-              </td>
-              <td
-                class="css-10ia4wo"
-                colspan="3"
-              >
-                <p
-                  class="chakra-text css-0"
-                >
-                  2021/01/01 01:01:01
-                </p>
-              </td>
-              <td
-                class="css-yaext0"
-              >
-                <button
-                  aria-label="delete history"
-                  class="chakra-button css-1jiezgg"
-                  type="button"
-                >
-                  <svg
-                    aria-hidden="true"
-                    fill="currentColor"
-                    focusable="false"
-                    height="24"
-                    stroke="currentColor"
-                    stroke-width="0"
-                    viewBox="0 0 24 24"
-                    width="24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M0 0h24v24H0z"
-                      fill="none"
-                    />
-                    <path
-                      d="M0 0h24v24H0V0z"
-                      fill="none"
-                    />
-                    <path
-                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12l1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
-                    />
-                  </svg>
-                </button>
-              </td>
-            </tr>
-            <tr
-              class="css-0"
-            >
-              <td
-                class="css-j7bde9"
-              >
-                <p
+                <span
                   aria-controls="popover-content-:rm:"
                   aria-expanded="false"
                   aria-haspopup="dialog"
-                  class="chakra-text css-gyvdtt"
+                  class="text-center underline"
                   id="popover-trigger-:rm:"
                 >
-                  152
-                </p>
+                  142
+                </span>
                 <div
                   class="chakra-popover__popper css-1qq679y"
                   style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
@@ -3053,31 +3044,31 @@ exports[`single out fat bull 1`] = `
                       id="popover-body-:rm:"
                     >
                       <div
-                        class="css-j7qwjs"
+                        class="flex flex-col"
                       >
                         <div
-                          class="css-17k0wlp"
+                          class="grid grid-cols-4 gap-1"
                         >
-                          <p
-                            class="chakra-text css-0"
+                          <span
+                            class=" "
                           >
-                            T20
-                          </p>
-                          <p
-                            class="chakra-text css-0"
+                            S-BULL
+                          </span>
+                          <span
+                            class=" "
                           >
-                            T20
-                          </p>
-                          <p
-                            class="chakra-text css-0"
+                            S-BULL
+                          </span>
+                          <span
+                            class=" "
                           >
-                            D16
-                          </p>
-                          <p
-                            class="chakra-text css-jtjur4"
+                            T14
+                          </span>
+                          <span
+                            class="text-red-500 col-start-4"
                           >
                             FINISH
-                          </p>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -3085,17 +3076,17 @@ exports[`single out fat bull 1`] = `
                 </div>
               </td>
               <td
-                class="css-j7bde9"
+                class="p-1 text-sm md:text-base"
               >
-                <p
+                <span
                   aria-controls="popover-content-:ro:"
                   aria-expanded="false"
                   aria-haspopup="dialog"
-                  class="chakra-text css-gyvdtt"
+                  class="text-center underline"
                   id="popover-trigger-:ro:"
                 >
-                  25
-                </p>
+                  87
+                </span>
                 <div
                   class="chakra-popover__popper css-1qq679y"
                   style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
@@ -3123,26 +3114,26 @@ exports[`single out fat bull 1`] = `
                       id="popover-body-:ro:"
                     >
                       <div
-                        class="css-j7qwjs"
+                        class="flex flex-col"
                       >
                         <div
-                          class="css-17k0wlp"
+                          class="grid grid-cols-4 gap-1"
                         >
-                          <p
-                            class="chakra-text css-0"
+                          <span
+                            class=" "
                           >
-                            9
-                          </p>
-                          <p
-                            class="chakra-text css-0"
+                            T19
+                          </span>
+                          <span
+                            class=" "
                           >
-                            D8
-                          </p>
-                          <p
-                            class="chakra-text css-jtjur4"
+                            D15
+                          </span>
+                          <span
+                            class="text-red-500 col-start-4"
                           >
                             FINISH
-                          </p>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -3150,17 +3141,17 @@ exports[`single out fat bull 1`] = `
                 </div>
               </td>
               <td
-                class="css-j7bde9"
+                class="p-1 text-sm md:text-base"
               >
-                <p
+                <span
                   aria-controls="popover-content-:rq:"
                   aria-expanded="false"
                   aria-haspopup="dialog"
-                  class="chakra-text css-gyvdtt"
+                  class="text-center underline"
                   id="popover-trigger-:rq:"
                 >
-                  142
-                </p>
+                  154
+                </span>
                 <div
                   class="chakra-popover__popper css-1qq679y"
                   style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
@@ -3188,31 +3179,31 @@ exports[`single out fat bull 1`] = `
                       id="popover-body-:rq:"
                     >
                       <div
-                        class="css-j7qwjs"
+                        class="flex flex-col"
                       >
                         <div
-                          class="css-17k0wlp"
+                          class="grid grid-cols-4 gap-1"
                         >
-                          <p
-                            class="chakra-text css-0"
+                          <span
+                            class=" "
                           >
                             S-BULL
-                          </p>
-                          <p
-                            class="chakra-text css-0"
+                          </span>
+                          <span
+                            class=" "
                           >
                             S-BULL
-                          </p>
-                          <p
-                            class="chakra-text css-0"
+                          </span>
+                          <span
+                            class=" "
                           >
-                            T14
-                          </p>
-                          <p
-                            class="chakra-text css-jtjur4"
+                            T18
+                          </span>
+                          <span
+                            class="text-red-500 col-start-4"
                           >
                             FINISH
-                          </p>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -3220,17 +3211,17 @@ exports[`single out fat bull 1`] = `
                 </div>
               </td>
               <td
-                class="css-j7bde9"
+                class="p-1 text-sm md:text-base"
               >
-                <p
+                <span
                   aria-controls="popover-content-:rs:"
                   aria-expanded="false"
                   aria-haspopup="dialog"
-                  class="chakra-text css-gyvdtt"
+                  class="text-center underline"
                   id="popover-trigger-:rs:"
                 >
-                  87
-                </p>
+                  123
+                </span>
                 <div
                   class="chakra-popover__popper css-1qq679y"
                   style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
@@ -3258,26 +3249,31 @@ exports[`single out fat bull 1`] = `
                       id="popover-body-:rs:"
                     >
                       <div
-                        class="css-j7qwjs"
+                        class="flex flex-col"
                       >
                         <div
-                          class="css-17k0wlp"
+                          class="grid grid-cols-4 gap-1"
                         >
-                          <p
-                            class="chakra-text css-0"
+                          <span
+                            class=" "
+                          >
+                            D-BULL
+                          </span>
+                          <span
+                            class=" "
                           >
                             T19
-                          </p>
-                          <p
-                            class="chakra-text css-0"
+                          </span>
+                          <span
+                            class=" "
                           >
-                            D15
-                          </p>
-                          <p
-                            class="chakra-text css-jtjur4"
+                            D8
+                          </span>
+                          <span
+                            class="text-red-500 col-start-4"
                           >
                             FINISH
-                          </p>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -3285,17 +3281,17 @@ exports[`single out fat bull 1`] = `
                 </div>
               </td>
               <td
-                class="css-j7bde9"
+                class="p-1 text-sm md:text-base"
               >
-                <p
+                <span
                   aria-controls="popover-content-:ru:"
                   aria-expanded="false"
                   aria-haspopup="dialog"
-                  class="chakra-text css-gyvdtt"
+                  class="text-center underline"
                   id="popover-trigger-:ru:"
                 >
-                  154
-                </p>
+                  67
+                </span>
                 <div
                   class="chakra-popover__popper css-1qq679y"
                   style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
@@ -3323,31 +3319,26 @@ exports[`single out fat bull 1`] = `
                       id="popover-body-:ru:"
                     >
                       <div
-                        class="css-j7qwjs"
+                        class="flex flex-col"
                       >
                         <div
-                          class="css-17k0wlp"
+                          class="grid grid-cols-4 gap-1"
                         >
-                          <p
-                            class="chakra-text css-0"
+                          <span
+                            class=" "
+                          >
+                            17
+                          </span>
+                          <span
+                            class=" "
                           >
                             S-BULL
-                          </p>
-                          <p
-                            class="chakra-text css-0"
-                          >
-                            S-BULL
-                          </p>
-                          <p
-                            class="chakra-text css-0"
-                          >
-                            T18
-                          </p>
-                          <p
-                            class="chakra-text css-jtjur4"
+                          </span>
+                          <span
+                            class="text-red-500 col-start-4"
                           >
                             FINISH
-                          </p>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -3355,17 +3346,17 @@ exports[`single out fat bull 1`] = `
                 </div>
               </td>
               <td
-                class="css-j7bde9"
+                class="p-1 text-sm md:text-base"
               >
-                <p
+                <span
                   aria-controls="popover-content-:r10:"
                   aria-expanded="false"
                   aria-haspopup="dialog"
-                  class="chakra-text css-gyvdtt"
+                  class="text-center underline"
                   id="popover-trigger-:r10:"
                 >
-                  123
-                </p>
+                  14
+                </span>
                 <div
                   class="chakra-popover__popper css-1qq679y"
                   style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
@@ -3393,49 +3384,98 @@ exports[`single out fat bull 1`] = `
                       id="popover-body-:r10:"
                     >
                       <div
-                        class="css-j7qwjs"
+                        class="flex flex-col"
                       >
                         <div
-                          class="css-17k0wlp"
+                          class="grid grid-cols-4 gap-1"
                         >
-                          <p
-                            class="chakra-text css-0"
+                          <span
+                            class=" "
                           >
-                            D-BULL
-                          </p>
-                          <p
-                            class="chakra-text css-0"
-                          >
-                            T19
-                          </p>
-                          <p
-                            class="chakra-text css-0"
-                          >
-                            D8
-                          </p>
-                          <p
-                            class="chakra-text css-jtjur4"
+                            D7
+                          </span>
+                          <span
+                            class="text-red-500 col-start-4"
                           >
                             FINISH
-                          </p>
+                          </span>
                         </div>
                       </div>
                     </div>
                   </section>
                 </div>
               </td>
+            </tr>
+            <tr
+              class="bg-green-100 text-xs md:text-base"
+            >
               <td
-                class="css-j7bde9"
+                class="p-0 md:p-1"
+                colspan="2"
               >
-                <p
+                Arrange
+              </td>
+              <td
+                class="whitespace-nowrap p-0 md:p-1"
+                colspan="2"
+              >
+                double
+                 / 
+                fat
+              </td>
+              <td
+                class="p-0 text-end md:p-1"
+                colspan="3"
+              >
+                <span>
+                  2021/01/01 01:01:01
+                </span>
+              </td>
+              <td
+                class="flex items-center p-0 text-center md:p-1"
+              >
+                <button
+                  aria-label="delete history"
+                  class="text-gray-600 bg-transparent hover:text-gray-400 p-0 focus:ring-0 m-auto inline-flex items-center rounded-full p-2.5 text-center text-sm font-medium focus:outline-none focus:ring-4 disabled:cursor-not-allowed"
+                  type="button"
+                >
+                  <svg
+                    fill="currentColor"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0 0h24v24H0z"
+                      fill="none"
+                    />
+                    <path
+                      d="M0 0h24v24H0V0z"
+                      fill="none"
+                    />
+                    <path
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12l1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                    />
+                  </svg>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td
+                class="p-1 text-sm md:text-base"
+              >
+                <span
                   aria-controls="popover-content-:r12:"
                   aria-expanded="false"
                   aria-haspopup="dialog"
-                  class="chakra-text css-gyvdtt"
+                  class="text-center underline"
                   id="popover-trigger-:r12:"
                 >
-                  67
-                </p>
+                  150
+                </span>
                 <div
                   class="chakra-popover__popper css-1qq679y"
                   style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
@@ -3463,26 +3503,31 @@ exports[`single out fat bull 1`] = `
                       id="popover-body-:r12:"
                     >
                       <div
-                        class="css-j7qwjs"
+                        class="flex flex-col"
                       >
                         <div
-                          class="css-17k0wlp"
+                          class="grid grid-cols-4 gap-1"
                         >
-                          <p
-                            class="chakra-text css-0"
+                          <span
+                            class=" "
                           >
-                            17
-                          </p>
-                          <p
-                            class="chakra-text css-0"
+                            T20
+                          </span>
+                          <span
+                            class=" "
                           >
-                            S-BULL
-                          </p>
-                          <p
-                            class="chakra-text css-jtjur4"
+                            T20
+                          </span>
+                          <span
+                            class=" "
+                          >
+                            D15
+                          </span>
+                          <span
+                            class="text-red-500 col-start-4"
                           >
                             FINISH
-                          </p>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -3490,17 +3535,17 @@ exports[`single out fat bull 1`] = `
                 </div>
               </td>
               <td
-                class="css-j7bde9"
+                class="p-1 text-sm md:text-base"
               >
-                <p
+                <span
                   aria-controls="popover-content-:r14:"
                   aria-expanded="false"
                   aria-haspopup="dialog"
-                  class="chakra-text css-gyvdtt"
+                  class="text-center underline"
                   id="popover-trigger-:r14:"
                 >
-                  14
-                </p>
+                  26
+                </span>
                 <div
                   class="chakra-popover__popper css-1qq679y"
                   style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
@@ -3528,104 +3573,44 @@ exports[`single out fat bull 1`] = `
                       id="popover-body-:r14:"
                     >
                       <div
-                        class="css-j7qwjs"
+                        class="flex flex-col"
                       >
                         <div
-                          class="css-17k0wlp"
+                          class="grid grid-cols-4 gap-1"
                         >
-                          <p
-                            class="chakra-text css-0"
+                          <span
+                            class=" "
                           >
-                            D7
-                          </p>
-                          <p
-                            class="chakra-text css-jtjur4"
+                            10
+                          </span>
+                          <span
+                            class=" "
+                          >
+                            D8
+                          </span>
+                          <span
+                            class="text-red-500 col-start-4"
                           >
                             FINISH
-                          </p>
+                          </span>
                         </div>
                       </div>
                     </div>
                   </section>
                 </div>
               </td>
-            </tr>
-            <tr
-              class="css-1oahe7w"
-            >
               <td
-                class="css-13x8h2m"
-                colspan="2"
+                class="p-1 text-sm md:text-base"
               >
-                Arrange
-              </td>
-              <td
-                class="css-13x8h2m"
-                colspan="2"
-              >
-                double
-                 / 
-                fat
-              </td>
-              <td
-                class="css-10ia4wo"
-                colspan="3"
-              >
-                <p
-                  class="chakra-text css-0"
-                >
-                  2021/01/01 01:01:01
-                </p>
-              </td>
-              <td
-                class="css-yaext0"
-              >
-                <button
-                  aria-label="delete history"
-                  class="chakra-button css-1jiezgg"
-                  type="button"
-                >
-                  <svg
-                    aria-hidden="true"
-                    fill="currentColor"
-                    focusable="false"
-                    height="24"
-                    stroke="currentColor"
-                    stroke-width="0"
-                    viewBox="0 0 24 24"
-                    width="24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M0 0h24v24H0z"
-                      fill="none"
-                    />
-                    <path
-                      d="M0 0h24v24H0V0z"
-                      fill="none"
-                    />
-                    <path
-                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12l1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
-                    />
-                  </svg>
-                </button>
-              </td>
-            </tr>
-            <tr
-              class="css-0"
-            >
-              <td
-                class="css-j7bde9"
-              >
-                <p
+                <span
                   aria-controls="popover-content-:r16:"
                   aria-expanded="false"
                   aria-haspopup="dialog"
-                  class="chakra-text css-gyvdtt"
+                  class="text-center underline"
                   id="popover-trigger-:r16:"
                 >
-                  150
-                </p>
+                  140
+                </span>
                 <div
                   class="chakra-popover__popper css-1qq679y"
                   style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
@@ -3653,31 +3638,31 @@ exports[`single out fat bull 1`] = `
                       id="popover-body-:r16:"
                     >
                       <div
-                        class="css-j7qwjs"
+                        class="flex flex-col"
                       >
                         <div
-                          class="css-17k0wlp"
+                          class="grid grid-cols-4 gap-1"
                         >
-                          <p
-                            class="chakra-text css-0"
+                          <span
+                            class=" "
                           >
-                            T20
-                          </p>
-                          <p
-                            class="chakra-text css-0"
+                            S-BULL
+                          </span>
+                          <span
+                            class=" "
                           >
-                            T20
-                          </p>
-                          <p
-                            class="chakra-text css-0"
+                            S-BULL
+                          </span>
+                          <span
+                            class=" "
                           >
-                            D15
-                          </p>
-                          <p
-                            class="chakra-text css-jtjur4"
+                            D20
+                          </span>
+                          <span
+                            class="text-red-500 col-start-4"
                           >
                             FINISH
-                          </p>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -3685,17 +3670,17 @@ exports[`single out fat bull 1`] = `
                 </div>
               </td>
               <td
-                class="css-j7bde9"
+                class="p-1 text-sm md:text-base"
               >
-                <p
+                <span
                   aria-controls="popover-content-:r18:"
                   aria-expanded="false"
                   aria-haspopup="dialog"
-                  class="chakra-text css-gyvdtt"
+                  class="text-center underline"
                   id="popover-trigger-:r18:"
                 >
-                  26
-                </p>
+                  82
+                </span>
                 <div
                   class="chakra-popover__popper css-1qq679y"
                   style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
@@ -3723,26 +3708,26 @@ exports[`single out fat bull 1`] = `
                       id="popover-body-:r18:"
                     >
                       <div
-                        class="css-j7qwjs"
+                        class="flex flex-col"
                       >
                         <div
-                          class="css-17k0wlp"
+                          class="grid grid-cols-4 gap-1"
                         >
-                          <p
-                            class="chakra-text css-0"
+                          <span
+                            class=" "
                           >
-                            10
-                          </p>
-                          <p
-                            class="chakra-text css-0"
+                            S-BULL
+                          </span>
+                          <span
+                            class=" "
                           >
-                            D8
-                          </p>
-                          <p
-                            class="chakra-text css-jtjur4"
+                            D16
+                          </span>
+                          <span
+                            class="text-red-500 col-start-4"
                           >
                             FINISH
-                          </p>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -3750,17 +3735,17 @@ exports[`single out fat bull 1`] = `
                 </div>
               </td>
               <td
-                class="css-j7bde9"
+                class="p-1 text-sm md:text-base"
               >
-                <p
+                <span
                   aria-controls="popover-content-:r1a:"
                   aria-expanded="false"
                   aria-haspopup="dialog"
-                  class="chakra-text css-gyvdtt"
+                  class="text-center underline"
                   id="popover-trigger-:r1a:"
                 >
-                  140
-                </p>
+                  10
+                </span>
                 <div
                   class="chakra-popover__popper css-1qq679y"
                   style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
@@ -3788,31 +3773,21 @@ exports[`single out fat bull 1`] = `
                       id="popover-body-:r1a:"
                     >
                       <div
-                        class="css-j7qwjs"
+                        class="flex flex-col"
                       >
                         <div
-                          class="css-17k0wlp"
+                          class="grid grid-cols-4 gap-1"
                         >
-                          <p
-                            class="chakra-text css-0"
+                          <span
+                            class=" "
                           >
-                            S-BULL
-                          </p>
-                          <p
-                            class="chakra-text css-0"
-                          >
-                            S-BULL
-                          </p>
-                          <p
-                            class="chakra-text css-0"
-                          >
-                            D20
-                          </p>
-                          <p
-                            class="chakra-text css-jtjur4"
+                            D5
+                          </span>
+                          <span
+                            class="text-red-500 col-start-4"
                           >
                             FINISH
-                          </p>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -3820,17 +3795,17 @@ exports[`single out fat bull 1`] = `
                 </div>
               </td>
               <td
-                class="css-j7bde9"
+                class="p-1 text-sm md:text-base"
               >
-                <p
+                <span
                   aria-controls="popover-content-:r1c:"
                   aria-expanded="false"
                   aria-haspopup="dialog"
-                  class="chakra-text css-gyvdtt"
+                  class="text-center underline"
                   id="popover-trigger-:r1c:"
                 >
-                  82
-                </p>
+                  120
+                </span>
                 <div
                   class="chakra-popover__popper css-1qq679y"
                   style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
@@ -3858,26 +3833,31 @@ exports[`single out fat bull 1`] = `
                       id="popover-body-:r1c:"
                     >
                       <div
-                        class="css-j7qwjs"
+                        class="flex flex-col"
                       >
                         <div
-                          class="css-17k0wlp"
+                          class="grid grid-cols-4 gap-1"
                         >
-                          <p
-                            class="chakra-text css-0"
+                          <span
+                            class=" "
+                          >
+                            D-BULL
+                          </span>
+                          <span
+                            class=" "
                           >
                             S-BULL
-                          </p>
-                          <p
-                            class="chakra-text css-0"
+                          </span>
+                          <span
+                            class=" "
                           >
-                            D16
-                          </p>
-                          <p
-                            class="chakra-text css-jtjur4"
+                            D10
+                          </span>
+                          <span
+                            class="text-red-500 col-start-4"
                           >
                             FINISH
-                          </p>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -3885,17 +3865,17 @@ exports[`single out fat bull 1`] = `
                 </div>
               </td>
               <td
-                class="css-j7bde9"
+                class="p-1 text-sm md:text-base"
               >
-                <p
+                <span
                   aria-controls="popover-content-:r1e:"
                   aria-expanded="false"
                   aria-haspopup="dialog"
-                  class="chakra-text css-gyvdtt"
+                  class="text-center underline"
                   id="popover-trigger-:r1e:"
                 >
-                  10
-                </p>
+                  68
+                </span>
                 <div
                   class="chakra-popover__popper css-1qq679y"
                   style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
@@ -3923,21 +3903,26 @@ exports[`single out fat bull 1`] = `
                       id="popover-body-:r1e:"
                     >
                       <div
-                        class="css-j7qwjs"
+                        class="flex flex-col"
                       >
                         <div
-                          class="css-17k0wlp"
+                          class="grid grid-cols-4 gap-1"
                         >
-                          <p
-                            class="chakra-text css-0"
+                          <span
+                            class=" "
                           >
-                            D5
-                          </p>
-                          <p
-                            class="chakra-text css-jtjur4"
+                            D14
+                          </span>
+                          <span
+                            class=" "
+                          >
+                            D20
+                          </span>
+                          <span
+                            class="text-red-500 col-start-4"
                           >
                             FINISH
-                          </p>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -3945,17 +3930,17 @@ exports[`single out fat bull 1`] = `
                 </div>
               </td>
               <td
-                class="css-j7bde9"
+                class="p-1 text-sm md:text-base"
               >
-                <p
+                <span
                   aria-controls="popover-content-:r1g:"
                   aria-expanded="false"
                   aria-haspopup="dialog"
-                  class="chakra-text css-gyvdtt"
+                  class="text-center underline"
                   id="popover-trigger-:r1g:"
                 >
-                  120
-                </p>
+                  16
+                </span>
                 <div
                   class="chakra-popover__popper css-1qq679y"
                   style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
@@ -3983,156 +3968,21 @@ exports[`single out fat bull 1`] = `
                       id="popover-body-:r1g:"
                     >
                       <div
-                        class="css-j7qwjs"
+                        class="flex flex-col"
                       >
                         <div
-                          class="css-17k0wlp"
+                          class="grid grid-cols-4 gap-1"
                         >
-                          <p
-                            class="chakra-text css-0"
-                          >
-                            D-BULL
-                          </p>
-                          <p
-                            class="chakra-text css-0"
-                          >
-                            S-BULL
-                          </p>
-                          <p
-                            class="chakra-text css-0"
-                          >
-                            D10
-                          </p>
-                          <p
-                            class="chakra-text css-jtjur4"
-                          >
-                            FINISH
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </section>
-                </div>
-              </td>
-              <td
-                class="css-j7bde9"
-              >
-                <p
-                  aria-controls="popover-content-:r1i:"
-                  aria-expanded="false"
-                  aria-haspopup="dialog"
-                  class="chakra-text css-gyvdtt"
-                  id="popover-trigger-:r1i:"
-                >
-                  68
-                </p>
-                <div
-                  class="chakra-popover__popper css-1qq679y"
-                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
-                >
-                  <section
-                    aria-describedby="popover-body-:r1i:"
-                    class="chakra-popover__content css-sjj62m"
-                    id="popover-content-:r1i:"
-                    role="tooltip"
-                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
-                    tabindex="-1"
-                  >
-                    <div
-                      class="chakra-popover__arrow-positioner css-0"
-                      data-popper-arrow=""
-                      style="position: absolute;"
-                    >
-                      <div
-                        class="chakra-popover__arrow css-0"
-                        data-popper-arrow-inner=""
-                      />
-                    </div>
-                    <div
-                      class="chakra-popover__body css-1ews2c8"
-                      id="popover-body-:r1i:"
-                    >
-                      <div
-                        class="css-j7qwjs"
-                      >
-                        <div
-                          class="css-17k0wlp"
-                        >
-                          <p
-                            class="chakra-text css-0"
-                          >
-                            D14
-                          </p>
-                          <p
-                            class="chakra-text css-0"
-                          >
-                            D20
-                          </p>
-                          <p
-                            class="chakra-text css-jtjur4"
-                          >
-                            FINISH
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </section>
-                </div>
-              </td>
-              <td
-                class="css-j7bde9"
-              >
-                <p
-                  aria-controls="popover-content-:r1k:"
-                  aria-expanded="false"
-                  aria-haspopup="dialog"
-                  class="chakra-text css-gyvdtt"
-                  id="popover-trigger-:r1k:"
-                >
-                  16
-                </p>
-                <div
-                  class="chakra-popover__popper css-1qq679y"
-                  style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
-                >
-                  <section
-                    aria-describedby="popover-body-:r1k:"
-                    class="chakra-popover__content css-sjj62m"
-                    id="popover-content-:r1k:"
-                    role="tooltip"
-                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
-                    tabindex="-1"
-                  >
-                    <div
-                      class="chakra-popover__arrow-positioner css-0"
-                      data-popper-arrow=""
-                      style="position: absolute;"
-                    >
-                      <div
-                        class="chakra-popover__arrow css-0"
-                        data-popper-arrow-inner=""
-                      />
-                    </div>
-                    <div
-                      class="chakra-popover__body css-1ews2c8"
-                      id="popover-body-:r1k:"
-                    >
-                      <div
-                        class="css-j7qwjs"
-                      >
-                        <div
-                          class="css-17k0wlp"
-                        >
-                          <p
-                            class="chakra-text css-0"
+                          <span
+                            class=" "
                           >
                             D8
-                          </p>
-                          <p
-                            class="chakra-text css-jtjur4"
+                          </span>
+                          <span
+                            class="text-red-500 col-start-4"
                           >
                             FINISH
-                          </p>
+                          </span>
                         </div>
                       </div>
                     </div>

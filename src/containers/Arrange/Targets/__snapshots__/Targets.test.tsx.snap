@@ -3,58 +3,58 @@
 exports[`should rendering 1`] = `
 <div>
   <div
-    class="css-1o31bit"
+    class="grid gap-1 text-center grid-cols-[15px_repeat(8,_27px)_15px] md:grid-cols-[20px_repeat(8,_38px)_20px]"
   >
-    <p
-      class="chakra-text css-guw1tt"
+    <span
+      class="text-sm font-bold text-gray-500 md:text-lg"
     >
       [
-    </p>
-    <p
-      class="chakra-text css-guw1tt"
+    </span>
+    <span
+      class="text-sm font-bold text-gray-500 md:text-lg"
     >
       -
-    </p>
-    <p
-      class="chakra-text css-guw1tt"
+    </span>
+    <span
+      class="text-sm font-bold text-gray-500 md:text-lg"
     >
       -
-    </p>
-    <p
-      class="chakra-text css-guw1tt"
+    </span>
+    <span
+      class="text-sm font-bold text-gray-500 md:text-lg"
     >
       -
-    </p>
-    <p
-      class="chakra-text css-guw1tt"
+    </span>
+    <span
+      class="text-sm font-bold text-gray-500 md:text-lg"
     >
       -
-    </p>
-    <p
-      class="chakra-text css-guw1tt"
+    </span>
+    <span
+      class="text-sm font-bold text-gray-500 md:text-lg"
     >
       -
-    </p>
-    <p
-      class="chakra-text css-guw1tt"
+    </span>
+    <span
+      class="text-sm font-bold text-gray-500 md:text-lg"
     >
       -
-    </p>
-    <p
-      class="chakra-text css-guw1tt"
+    </span>
+    <span
+      class="text-sm font-bold text-gray-500 md:text-lg"
     >
       -
-    </p>
-    <p
-      class="chakra-text css-guw1tt"
+    </span>
+    <span
+      class="text-sm font-bold text-gray-500 md:text-lg"
     >
       -
-    </p>
-    <p
-      class="chakra-text css-guw1tt"
+    </span>
+    <span
+      class="text-sm font-bold text-gray-500 md:text-lg"
     >
       ]
-    </p>
+    </span>
   </div>
   <span
     hidden=""

@@ -1,6 +1,4 @@
 import React, { FC, useRef, useState, useEffect, RefObject } from 'react';
-import { Box, Center } from '@chakra-ui/react';
-// eslint-disable-next-line import/named
 import { css, SerializedStyles } from '@emotion/react';
 import { TfiTarget } from 'react-icons/tfi';
 import DartBoard from '@/components/DartBoard';
@@ -59,24 +57,15 @@ const ArrangeBoard: FC<ArrangeBoardProps> = ({
   }, [roundVectors, animation]);
   return (
     <>
-      <Center>
-        <Box w={'100vw'} style={{ aspectRatio: 1 }} maxW={540} maxH={540} position={'relative'}>
-          <Box position={'absolute'} w={'100%'} h={'100%'}>
+      <div>
+        <div className='relative aspect-square max-h-[540px] w-[100vw] max-w-[540px]'>
+          <div className='absolute h-full w-full'>
             <DartBoard onCount={onCount} hard={hard} />
-          </Box>
-          <Box
-            position={'relative'}
-            w={'100%'}
-            h={'100%'}
-            pointerEvents={'none'}
-            overflow={'hidden'}
-          >
-            <Box
+          </div>
+          <div className='pointer-events-none relative h-full w-full overflow-hidden'>
+            <div
+              className='pointer-events-auto absolute h-full w-full'
               ref={base}
-              position={'absolute'}
-              pointerEvents={'auto'}
-              width={'100%'}
-              height={'100%'}
               data-cy={'arrange-board-base'}
               onClick={(e) => {
                 if (disabled) return;
@@ -105,12 +94,7 @@ const ArrangeBoard: FC<ArrangeBoardProps> = ({
                 setAnimation(true);
               }}
             >
-              <Box
-                background={'blackAlpha.300'}
-                width={'100%'}
-                height={'100%'}
-                visibility={disabled ? 'visible' : 'hidden'}
-              />
+              <div className='h-full w-full bg-black opacity-20' hidden={!disabled} />
               <TfiTarget
                 className='text-white text-opacity-50'
                 size={32}
@@ -144,10 +128,10 @@ const ArrangeBoard: FC<ArrangeBoardProps> = ({
                 css={[targetStyle(base, darts[2], 24, simulation), dartStyle]}
                 size={24}
               />
-            </Box>
-          </Box>
-        </Box>
-      </Center>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 };

@@ -1,29 +1,17 @@
 import React, { FC, Fragment, useEffect, useState } from 'react';
 import {
-  Box,
-  Flex,
-  Radio,
-  RadioGroup,
-  Select,
-  Switch,
-  Text,
-  Table,
-  TableContainer,
-  Tbody,
-  Td,
-  Tr,
-  IconButton,
   useDisclosure,
   Popover,
   PopoverTrigger,
   PopoverContent,
   PopoverArrow,
   PopoverBody,
-  Heading,
-  Grid,
   useBreakpointValue,
 } from '@chakra-ui/react';
 import { MdDeleteForever } from 'react-icons/md';
+import IconButton from '@/atoms/IconButton';
+import RadioButton from '@/atoms/RadioButton/RadioButton';
+import Select from '@/atoms/Select';
 import HistoryDeleteAlert from '@/containers/History/DeleteAlert';
 import { db } from '@/db/db';
 import { deleteResult } from '@/lib/GameHistoryManager';
@@ -56,147 +44,128 @@ const History: FC<HistoryProps> = ({ history, user }) => {
   }, [history, out, separate]);
   return (
     <>
-      <Flex direction={'column'} gap={8}>
-        <Flex direction={'column'} gap={1}>
-          <Box>
-            <Text fontSize={'sm'} fontWeight={'bold'} color={'gray.500'} mb={1}>
-              out options
-            </Text>
-            <RadioGroup onChange={(out) => setOut(out)} value={out}>
-              <Flex gap={4}>
-                <Radio value='single' aria-label='single out' size={{ base: 'sm', md: 'md' }}>
-                  Single Out
-                </Radio>
-                <Radio value='double' aria-label='double out' size={{ base: 'sm', md: 'md' }}>
-                  Double Out
-                </Radio>
-                <Radio value='master' aria-label='master out' size={{ base: 'sm', md: 'md' }}>
-                  Master Out
-                </Radio>
-              </Flex>
-            </RadioGroup>
-          </Box>
-          <Box>
-            <Text fontSize={'sm'} fontWeight={'bold'} color={'gray.500'} mb={1}>
-              bull options
-            </Text>
-            <Flex gap={2} alignItems={'center'}>
-              <Text fontSize={{ base: 'sm', md: 'md' }}>Fat Bull</Text>
-              <Switch
-                onChange={(e) => setSeparate(e.target.checked)}
-                size={{ base: 'sm', md: 'md' }}
-              />
-              <Text fontSize={{ base: 'sm', md: 'md' }}>Separate Bull</Text>
-            </Flex>
-          </Box>
+      <div className='flex flex-col gap-8'>
+        <div className='flex flex-col gap-2'>
+          <div>
+            <span className='text-sm font-bold text-gray-500'>out options</span>
+            <RadioButton
+              values={[
+                { value: 'single', label: 'Single Out', ariaLabel: 'single out' },
+                { value: 'double', label: 'Double Out', ariaLabel: 'double out' },
+                { value: 'master', label: 'Master Out', ariaLabel: 'master out' },
+              ]}
+              onChange={(out) => setOut(out)}
+              defaultValue={out}
+            />
+          </div>
+          <div>
+            <span className='text-sm font-bold text-gray-500'>bull options</span>
+            <RadioButton
+              values={[
+                { value: 'fat', label: 'Fat Bull', ariaLabel: 'fat bull' },
+                { value: 'separate', label: 'Separate Bull', ariaLabel: 'separate bull' },
+              ]}
+              onChange={(bull) => setSeparate(bull === 'separate')}
+              defaultValue={separate ? 'separate' : 'fat'}
+            />
+          </div>
           <Select
-            onChange={(e) => setTarget(parseInt(e.target.value))}
-            size={{ base: 'sm', md: 'md' }}
-          >
-            {targets.map((item) => (
-              <option key={item} value={item}>
-                {item}
-              </option>
-            ))}
-          </Select>
-          <TableContainer>
-            <Table>
-              <Tbody>
+            options={targets.map((i) => i.toString())}
+            onSelect={(option) => setTarget(parseInt(option))}
+          />
+          <div className='flex justify-center overflow-x-scroll'>
+            <table className='w-full'>
+              <tbody>
                 {scores
                   .filter((s) => s.target === target)
                   .map((item, i) => (
-                    <Tr key={i}>
+                    <tr key={i} className='border-b'>
                       {item.score.flat().map((s, i) => (
-                        <Td key={i} p={{ base: 1, md: 2 }}>
-                          <Text fontSize={{ base: 'sm', md: 'md' }}>{s}</Text>
-                        </Td>
+                        <td key={i} className='p-1 md:p-2'>
+                          <span className='text-sm md:text-base'>{s}</span>
+                        </td>
                       ))}
-                    </Tr>
+                    </tr>
                   ))}
-              </Tbody>
-            </Table>
-          </TableContainer>
-        </Flex>
-        <Box aria-label={'game history'}>
-          <Heading as={'h3'} size={{ base: 'xs', md: 'sm' }} mb={2}>
-            Game History
-          </Heading>
-          <TableContainer>
-            <Table css={{ tableLayout: 'fixed' }}>
-              <Tbody>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div aria-label={'game history'}>
+          <h3 className='mb-2 text-sm font-bold md:text-base'>Game History</h3>
+          <div className='flex justify-center overflow-x-scroll'>
+            <table className='w-full table-fixed'>
+              <tbody>
                 {history.map((h) => (
                   <Fragment key={h.uuid}>
-                    <Tr bg='green.100' fontSize={{ base: 'xs', md: 'md' }}>
-                      <Td colSpan={2} p={{ base: 0, md: 1 }}>
+                    <tr className='bg-green-100 text-xs md:text-base'>
+                      <td className='p-0 md:p-1' colSpan={2}>
                         Arrange
-                      </Td>
-                      <Td p={{ base: 0, md: 1 }} colSpan={2}>
+                      </td>
+                      <td className='whitespace-nowrap p-0 md:p-1' colSpan={2}>
                         {h.settings.out} / {h.settings.separate ? 'separate' : 'fat'}
-                      </Td>
-                      <Td colSpan={3} p={{ base: 0, md: 1 }} textAlign='end'>
-                        <Text>{DateFormat(h.playedAt)}</Text>
-                      </Td>
-                      <Td p={{ base: 0, md: 1 }} textAlign='center'>
+                      </td>
+                      <td className='p-0 text-end md:p-1' colSpan={3}>
+                        <span>{DateFormat(h.playedAt)}</span>
+                      </td>
+                      <td className='flex items-center p-0 text-center md:p-1'>
                         <IconButton
                           aria-label='delete history'
-                          icon={<MdDeleteForever size={isMd ? 24 : 19} />}
-                          variant='ghost'
-                          size={{ base: '2xs', md: 'xs' }}
                           onClick={() => {
                             setDeleteHistory(h);
                             onOpen();
                           }}
-                        />
-                      </Td>
-                    </Tr>
-                    <Tr>
+                          color='ghost'
+                        >
+                          <MdDeleteForever size={isMd ? 24 : 19} />
+                        </IconButton>
+                      </td>
+                    </tr>
+                    <tr>
                       {h.result.map((r, i) => (
                         <Fragment key={i}>
-                          <Td p={1} fontSize={{ base: 'sm', md: 'md' }}>
+                          <td className='p-1 text-sm md:text-base'>
                             <Popover trigger={'hover'}>
                               <PopoverTrigger>
-                                <Text textAlign={'center'} textDecoration={'underline'}>
-                                  {r.target}
-                                </Text>
+                                <span className='text-center underline'>{r.target}</span>
                               </PopoverTrigger>
                               <PopoverContent>
                                 <PopoverArrow />
                                 <PopoverBody>
-                                  <Flex direction={'column'}>
+                                  <div className='flex flex-col'>
                                     {ArrangeScore(r.score).map((s, i) => (
-                                      <Grid key={i} templateColumns={'repeat(4, 1fr)'} gap={1}>
+                                      <div key={i} className='grid grid-cols-4 gap-1'>
                                         {s.map((n, i) => (
-                                          <Text
+                                          <span
                                             key={`${n}-${i}`}
-                                            color={
+                                            className={`${
                                               n === 'FINISH'
-                                                ? 'red.500'
+                                                ? 'text-red-500'
                                                 : n === 'BUST'
-                                                ? 'blue.500'
-                                                : undefined
-                                            }
-                                            gridColumn={
-                                              n === 'FINISH' || n === 'BUST' ? 4 : undefined
-                                            }
+                                                ? 'text-blue-500'
+                                                : ''
+                                            } ${
+                                              n === 'FINISH' || n === 'BUST' ? 'col-start-4' : ''
+                                            }`}
                                           >
                                             {n}
-                                          </Text>
+                                          </span>
                                         ))}
-                                      </Grid>
+                                      </div>
                                     ))}
-                                  </Flex>
+                                  </div>
                                 </PopoverBody>
                               </PopoverContent>
                             </Popover>
-                          </Td>
+                          </td>
                         </Fragment>
                       ))}
-                    </Tr>
+                    </tr>
                   </Fragment>
                 ))}
-              </Tbody>
-            </Table>
-          </TableContainer>
+              </tbody>
+            </table>
+          </div>
           {deleteHistory && (
             <HistoryDeleteAlert
               message={`Arrange: ${DateFormat(deleteHistory.playedAt)}`}
@@ -208,8 +177,8 @@ const History: FC<HistoryProps> = ({ history, user }) => {
               }}
             />
           )}
-        </Box>
-      </Flex>
+        </div>
+      </div>
     </>
   );
 };

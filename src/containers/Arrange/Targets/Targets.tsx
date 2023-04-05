@@ -1,5 +1,4 @@
 import React, { FC } from 'react';
-import { Grid, Text } from '@chakra-ui/react';
 
 type TargetsProps = {
   count: number;
@@ -8,31 +7,21 @@ type TargetsProps = {
 };
 
 const Targets: FC<TargetsProps> = ({ count, targets, isFinished = false }) => {
-  const rest = () => {
+  const scores = () => {
     const t = isFinished ? targets : targets.slice(0, -1);
     return new Array(count).fill(' - ').map((_, i) => t[i] ?? '-');
   };
+  const templateColumns = `grid-cols-[15px_repeat(${count},_27px)_15px] md:grid-cols-[20px_repeat(${count},_38px)_20px]`;
   return (
-    <Grid
-      templateColumns={{
-        base: `15px repeat(${count}, 27px) 15px`,
-        md: `20px repeat(${count}, 38px) 20px`,
-      }}
-      gap={1}
-      textAlign='center'
-    >
-      <Text fontWeight='bold' fontSize={{ base: 'sm', md: 'lg' }} color='gray.500'>
-        {'['}
-      </Text>
-      {rest().map((t, i) => (
-        <Text key={i} fontWeight='bold' fontSize={{ base: 'sm', md: 'lg' }} color='gray.500'>
+    <div className={`grid gap-1 text-center ${templateColumns}`}>
+      <span className='text-sm font-bold text-gray-500 md:text-lg'>{'['}</span>
+      {scores().map((t, i) => (
+        <span key={i} className='text-sm font-bold text-gray-500 md:text-lg'>
           {t}
-        </Text>
+        </span>
       ))}
-      <Text fontWeight='bold' fontSize={{ base: 'sm', md: 'lg' }} color='gray.500'>
-        {']'}
-      </Text>
-    </Grid>
+      <span className='text-sm font-bold text-gray-500 md:text-lg'>{']'}</span>
+    </div>
   );
 };
 

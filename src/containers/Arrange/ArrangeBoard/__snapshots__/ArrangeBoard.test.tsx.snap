@@ -2,14 +2,12 @@
 
 exports[`should rendering 1`] = `
 <div>
-  <div
-    class="css-gmuwbf"
-  >
+  <div>
     <div
-      class="css-1djr09g"
+      class="relative aspect-square max-h-[540px] w-[100vw] max-w-[540px]"
     >
       <div
-        class="css-b4kcmh"
+        class="absolute h-full w-full"
       >
         <div
           css="[object Object]"
@@ -597,14 +595,15 @@ exports[`should rendering 1`] = `
         </div>
       </div>
       <div
-        class="css-13s503s"
+        class="pointer-events-none relative h-full w-full overflow-hidden"
       >
         <div
-          class="css-91mzxk"
+          class="pointer-events-auto absolute h-full w-full"
           data-cy="arrange-board-base"
         >
           <div
-            class="css-1cpmxxh"
+            class="h-full w-full bg-black opacity-20"
+            hidden=""
           />
           <svg
             class="text-white text-opacity-50"
