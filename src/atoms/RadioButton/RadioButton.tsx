@@ -32,7 +32,7 @@ const RadioButton: FC<SwitchProps> = ({
             type='radio'
             className='peer hidden'
             name={`option-${values.map((v) => v.value).join('-')}`}
-            onClick={() => {
+            onChange={() => {
               setValue(v.value);
               onChange(v.value);
             }}

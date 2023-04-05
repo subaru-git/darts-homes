@@ -23,7 +23,6 @@ class AroundTheCompassGame
   }
   getTotalScore() {
     const scores = [...this.player.getScore(), this.roundScore];
-    console.log('score', scores);
     return scores.reduce((pre, crr) => pre + this.calcRound(crr).point, 0);
   }
   addScore(score: point) {

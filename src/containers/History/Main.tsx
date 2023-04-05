@@ -56,7 +56,6 @@ const querier = async (setLoading: (isLoading: boolean) => void): Promise<GameRe
       countUp,
     };
   } catch (e) {
-    console.log('querier exception!!', e);
     return initialQuery;
   }
 };

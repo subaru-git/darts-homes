@@ -1,7 +1,5 @@
 import React, { FC, useState } from 'react';
 import {
-  Box,
-  Flex,
   Input,
   Slider,
   SliderFilledTrack,
@@ -38,9 +36,9 @@ const NewGame: FC<NewGameProps> = ({ onNewGame, currentSettings, isFinished = fa
     <NewGameModal
       onNewGame={() => onNewGame(settings)}
       settings={
-        <Flex direction='column' gap={5}>
-          <Flex gap={5} wrap='wrap'>
-            <Box>
+        <div className='flex flex-col gap-3'>
+          <div className='flex flex-wrap gap-5'>
+            <div>
               <SettingHeading
                 title={sim?.title}
                 hintHeader={sim?.hint.header}
@@ -56,8 +54,8 @@ const NewGame: FC<NewGameProps> = ({ onNewGame, currentSettings, isFinished = fa
                   setSettings({ ...settings, simulation: sim === 'sim-on' ? true : false })
                 }
               />
-            </Box>
-            <Box>
+            </div>
+            <div>
               <SettingHeading
                 title={mode?.title}
                 hintHeader={mode?.hint.header}
@@ -76,8 +74,8 @@ const NewGame: FC<NewGameProps> = ({ onNewGame, currentSettings, isFinished = fa
                 }
                 defaultValue={settings.game ? '1-leg' : '3-darts'}
               />
-            </Box>
-            <Box>
+            </div>
+            <div>
               <SettingHeading
                 title={board?.title}
                 hintHeader={board?.hint.header}
@@ -96,8 +94,8 @@ const NewGame: FC<NewGameProps> = ({ onNewGame, currentSettings, isFinished = fa
                 }
                 defaultValue={settings.hard ? 'hard' : 'soft'}
               />
-            </Box>
-            <Box ml={4}>
+            </div>
+            <div>
               <SettingHeading
                 title={pro?.title}
                 hintHeader={pro?.hint.header}
@@ -113,15 +111,15 @@ const NewGame: FC<NewGameProps> = ({ onNewGame, currentSettings, isFinished = fa
                   setSettings({ ...settings, pro: pro === 'pro-on' ? true : false })
                 }
               />
-            </Box>
-          </Flex>
-          <Box>
+            </div>
+          </div>
+          <div>
             <SettingHeading
               title={range?.title}
               hintHeader={range?.hint.header}
               hintBody={range?.hint.body}
             />
-            <Box px={4} pt={10}>
+            <div className='px-4 pt-4'>
               <GiHorizontalFlip />
               <Slider
                 onChange={(range) =>
@@ -134,7 +132,9 @@ const NewGame: FC<NewGameProps> = ({ onNewGame, currentSettings, isFinished = fa
               >
                 <SliderMark value={0}>0</SliderMark>
                 <SliderMark value={44}>44</SliderMark>
-                <SliderMark value={210}>210</SliderMark>
+                <SliderMark value={210} ml={-5}>
+                  210
+                </SliderMark>
                 <SliderMark
                   value={settings.range.x}
                   textAlign='center'
@@ -151,8 +151,8 @@ const NewGame: FC<NewGameProps> = ({ onNewGame, currentSettings, isFinished = fa
                 </SliderTrack>
                 <SliderThumb />
               </Slider>
-            </Box>
-            <Box px={4} pt={10}>
+            </div>
+            <div className='px-4 pt-10'>
               <BiMoveVertical />
               <Slider
                 onChange={(range) =>
@@ -165,7 +165,9 @@ const NewGame: FC<NewGameProps> = ({ onNewGame, currentSettings, isFinished = fa
               >
                 <SliderMark value={0}>0</SliderMark>
                 <SliderMark value={44}>44</SliderMark>
-                <SliderMark value={210}>210</SliderMark>
+                <SliderMark value={210} ml={-5}>
+                  210
+                </SliderMark>
                 <SliderMark
                   value={settings.range.y}
                   textAlign='center'
@@ -182,9 +184,9 @@ const NewGame: FC<NewGameProps> = ({ onNewGame, currentSettings, isFinished = fa
                 </SliderTrack>
                 <SliderThumb />
               </Slider>
-            </Box>
-          </Box>
-          <Box>
+            </div>
+          </div>
+          <div>
             <SettingHeading
               title={out?.title}
               hintHeader={out?.hint.header}
@@ -205,31 +207,29 @@ const NewGame: FC<NewGameProps> = ({ onNewGame, currentSettings, isFinished = fa
               }
               defaultValue={settings.out}
             />
-          </Box>
-          <Box>
+          </div>
+          <div>
             <SettingHeading
               title={bull?.title}
               hintHeader={bull?.hint.header}
               hintBody={bull?.hint.body}
             />
-            <div>
-              <RadioButton
-                values={[
-                  { value: 'fat', label: 'Fat Bull', ariaLabel: 'fat' },
-                  { value: 'separate', label: 'Separate Bull', ariaLabel: 'separate' },
-                ]}
-                onChange={(bull) =>
-                  setSettings({
-                    ...settings,
-                    separate: bull === 'separate' ? true : false,
-                  })
-                }
-                defaultValue={settings.out === 'double' || settings.separate ? 'separate' : 'fat'}
-                disabled={settings.out === 'double'}
-              />
-            </div>
-          </Box>
-          <Box>
+            <RadioButton
+              values={[
+                { value: 'fat', label: 'Fat Bull', ariaLabel: 'fat' },
+                { value: 'separate', label: 'Separate Bull', ariaLabel: 'separate' },
+              ]}
+              onChange={(bull) =>
+                setSettings({
+                  ...settings,
+                  separate: bull === 'separate' ? true : false,
+                })
+              }
+              defaultValue={settings.out === 'double' || settings.separate ? 'separate' : 'fat'}
+              disabled={settings.out === 'double'}
+            />
+          </div>
+          <div>
             <SettingHeading
               title={fixed?.title}
               hintHeader={fixed?.hint.header}
@@ -248,8 +248,8 @@ const NewGame: FC<NewGameProps> = ({ onNewGame, currentSettings, isFinished = fa
               }}
               disabled={settings.game}
             ></Input>
-          </Box>
-        </Flex>
+          </div>
+        </div>
       }
       isFinished={isFinished}
     />

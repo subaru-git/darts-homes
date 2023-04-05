@@ -11,11 +11,11 @@ exports[`should rendering 1`] = `
       It's dull throwing darts monotonously,
 right?
     </h1>
-    <text
+    <span
       class="text-center text-sm md:text-lg"
     >
       It supports home darts, which tend to be monotonous.
-    </text>
+    </span>
     <div
       class="flex justify-center"
     >

@@ -11,7 +11,7 @@ const customJestConfig = {
   },
   testEnvironment: 'jest-environment-jsdom',
   modulePathIgnorePatterns: ['<rootDir>/data/'],
-  setupFiles: ['fake-indexeddb/auto'],
+  setupFiles: ['fake-indexeddb/auto', 'jest-canvas-mock'],
   setupFilesAfterEnv: ['<rootDir>/src/lib/TestUtils/jest.setup.ts'],
   testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/dist/'],
 };

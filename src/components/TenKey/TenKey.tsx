@@ -40,6 +40,7 @@ const TenKey: FC<TenKeyProps> = ({ onCount, keyboard = false }) => {
           type='text'
           className='col-span-3 rounded-md border p-2.5 text-right text-sm tracking-widest text-gray-900 focus:outline-none focus:ring-0'
           value={value}
+          onChange={() => {}}
         />
         <Button onClick={() => addNumber('1')} aria-label='one'>
           1
