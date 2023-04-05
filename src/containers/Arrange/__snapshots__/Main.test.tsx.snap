@@ -1600,58 +1600,58 @@ exports[`should rendering 1`] = `
             </span>
           </div>
           <div
-            class="css-1o31bit"
+            class="grid gap-1 text-center grid-cols-[15px_repeat(8,_27px)_15px] md:grid-cols-[20px_repeat(8,_38px)_20px]"
           >
-            <p
-              class="chakra-text css-guw1tt"
+            <span
+              class="text-sm font-bold text-gray-500 md:text-lg"
             >
               [
-            </p>
-            <p
-              class="chakra-text css-guw1tt"
+            </span>
+            <span
+              class="text-sm font-bold text-gray-500 md:text-lg"
             >
               87
-            </p>
-            <p
-              class="chakra-text css-guw1tt"
+            </span>
+            <span
+              class="text-sm font-bold text-gray-500 md:text-lg"
             >
               87
-            </p>
-            <p
-              class="chakra-text css-guw1tt"
+            </span>
+            <span
+              class="text-sm font-bold text-gray-500 md:text-lg"
             >
               87
-            </p>
-            <p
-              class="chakra-text css-guw1tt"
+            </span>
+            <span
+              class="text-sm font-bold text-gray-500 md:text-lg"
             >
               87
-            </p>
-            <p
-              class="chakra-text css-guw1tt"
+            </span>
+            <span
+              class="text-sm font-bold text-gray-500 md:text-lg"
             >
               87
-            </p>
-            <p
-              class="chakra-text css-guw1tt"
+            </span>
+            <span
+              class="text-sm font-bold text-gray-500 md:text-lg"
             >
               87
-            </p>
-            <p
-              class="chakra-text css-guw1tt"
+            </span>
+            <span
+              class="text-sm font-bold text-gray-500 md:text-lg"
             >
               87
-            </p>
-            <p
-              class="chakra-text css-guw1tt"
+            </span>
+            <span
+              class="text-sm font-bold text-gray-500 md:text-lg"
             >
               87
-            </p>
-            <p
-              class="chakra-text css-guw1tt"
+            </span>
+            <span
+              class="text-sm font-bold text-gray-500 md:text-lg"
             >
               ]
-            </p>
+            </span>
           </div>
           <div
             class="grid grid-cols-4 gap-2"
@@ -1728,14 +1728,12 @@ exports[`should rendering 1`] = `
             </div>
           </div>
         </div>
-        <div
-          class="css-gmuwbf"
-        >
+        <div>
           <div
-            class="css-1djr09g"
+            class="relative aspect-square max-h-[540px] w-[100vw] max-w-[540px]"
           >
             <div
-              class="css-b4kcmh"
+              class="absolute h-full w-full"
             >
               <div
                 css="[object Object]"
@@ -2323,14 +2321,14 @@ exports[`should rendering 1`] = `
               </div>
             </div>
             <div
-              class="css-13s503s"
+              class="pointer-events-none relative h-full w-full overflow-hidden"
             >
               <div
-                class="css-91mzxk"
+                class="pointer-events-auto absolute h-full w-full"
                 data-cy="arrange-board-base"
               >
                 <div
-                  class="css-1515goq"
+                  class="h-full w-full bg-black opacity-20"
                 />
                 <svg
                   class="text-white text-opacity-50"

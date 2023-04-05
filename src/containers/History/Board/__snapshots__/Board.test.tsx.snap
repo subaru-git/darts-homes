@@ -365,194 +365,138 @@ exports[`should rendering 1`] = `
           tabindex="0"
         >
           <div
-            class="css-18936vg"
+            class="flex flex-col gap-8"
           >
             <div
-              class="css-1i2407o"
+              class="flex flex-col gap-2"
             >
-              <div
-                class="css-0"
-              >
-                <p
-                  class="chakra-text css-1hmbtly"
+              <div>
+                <span
+                  class="text-sm font-bold text-gray-500"
                 >
                   out options
-                </p>
+                </span>
                 <div
-                  class="chakra-radio-group css-0"
-                  role="radiogroup"
+                  class="flex"
                 >
-                  <div
-                    class="css-1azotaz"
-                  >
+                  <div>
+                    <input
+                      aria-label="single out"
+                      checked=""
+                      class="peer hidden"
+                      id="radio-single"
+                      name="option-single-double-master"
+                      type="radio"
+                    />
                     <label
-                      class="chakra-radio css-1cqh9jq"
-                      data-checked=""
+                      class="cursor-pointer select-none bg-gray-100 px-4 py-1 text-sm no-tap-highlighting peer-checked:bg-blue-500 peer-checked:text-white peer-disabled:opacity-60 md:text-base rounded-l-md"
+                      for="radio-single"
                     >
-                      <input
-                        checked=""
-                        class="chakra-radio__input"
-                        id="radio-:r8:"
-                        name="radio-:r7:"
-                        style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
-                        type="radio"
-                        value="single"
-                      />
-                      <span
-                        aria-hidden="true"
-                        aria-label="single out"
-                        class="chakra-radio__control css-1qjgi8f"
-                        data-checked=""
-                      />
-                      <span
-                        class="chakra-radio__label css-jybt17"
-                        data-checked=""
-                      >
-                        Single Out
-                      </span>
+                      Single Out
                     </label>
+                  </div>
+                  <div>
+                    <input
+                      aria-label="double out"
+                      class="peer hidden"
+                      id="radio-double"
+                      name="option-single-double-master"
+                      type="radio"
+                    />
                     <label
-                      class="chakra-radio css-1cqh9jq"
+                      class="cursor-pointer select-none bg-gray-100 px-4 py-1 text-sm no-tap-highlighting peer-checked:bg-blue-500 peer-checked:text-white peer-disabled:opacity-60 md:text-base "
+                      for="radio-double"
                     >
-                      <input
-                        class="chakra-radio__input"
-                        id="radio-:r9:"
-                        name="radio-:r7:"
-                        style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
-                        type="radio"
-                        value="double"
-                      />
-                      <span
-                        aria-hidden="true"
-                        aria-label="double out"
-                        class="chakra-radio__control css-1qjgi8f"
-                      />
-                      <span
-                        class="chakra-radio__label css-jybt17"
-                      >
-                        Double Out
-                      </span>
+                      Double Out
                     </label>
+                  </div>
+                  <div>
+                    <input
+                      aria-label="master out"
+                      class="peer hidden"
+                      id="radio-master"
+                      name="option-single-double-master"
+                      type="radio"
+                    />
                     <label
-                      class="chakra-radio css-1cqh9jq"
+                      class="cursor-pointer select-none bg-gray-100 px-4 py-1 text-sm no-tap-highlighting peer-checked:bg-blue-500 peer-checked:text-white peer-disabled:opacity-60 md:text-base rounded-r-md"
+                      for="radio-master"
                     >
-                      <input
-                        class="chakra-radio__input"
-                        id="radio-:ra:"
-                        name="radio-:r7:"
-                        style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
-                        type="radio"
-                        value="master"
-                      />
-                      <span
-                        aria-hidden="true"
-                        aria-label="master out"
-                        class="chakra-radio__control css-1qjgi8f"
-                      />
-                      <span
-                        class="chakra-radio__label css-jybt17"
-                      >
-                        Master Out
-                      </span>
+                      Master Out
                     </label>
                   </div>
                 </div>
               </div>
-              <div
-                class="css-0"
-              >
-                <p
-                  class="chakra-text css-1hmbtly"
+              <div>
+                <span
+                  class="text-sm font-bold text-gray-500"
                 >
                   bull options
-                </p>
+                </span>
                 <div
-                  class="css-1k9efnl"
+                  class="flex"
                 >
-                  <p
-                    class="chakra-text css-xim7xt"
-                  >
-                    Fat Bull
-                  </p>
-                  <label
-                    class="chakra-switch css-1cuslds"
-                  >
+                  <div>
                     <input
-                      class="chakra-switch__input"
-                      style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
-                      type="checkbox"
-                      value=""
+                      aria-label="fat bull"
+                      checked=""
+                      class="peer hidden"
+                      id="radio-fat"
+                      name="option-fat-separate"
+                      type="radio"
                     />
-                    <span
-                      aria-hidden="true"
-                      class="chakra-switch__track css-p27qcy"
+                    <label
+                      class="cursor-pointer select-none bg-gray-100 px-4 py-1 text-sm no-tap-highlighting peer-checked:bg-blue-500 peer-checked:text-white peer-disabled:opacity-60 md:text-base rounded-l-md"
+                      for="radio-fat"
                     >
-                      <span
-                        class="chakra-switch__thumb css-7roig"
-                      />
-                    </span>
-                  </label>
-                  <p
-                    class="chakra-text css-xim7xt"
-                  >
-                    Separate Bull
-                  </p>
-                </div>
-              </div>
-              <div
-                class="chakra-select__wrapper css-42b2qy"
-              >
-                <select
-                  class="chakra-select css-1hax2g2"
-                />
-                <div
-                  class="chakra-select__icon-wrapper css-cymxv7"
-                >
-                  <svg
-                    aria-hidden="true"
-                    class="chakra-select__icon"
-                    focusable="false"
-                    role="presentation"
-                    style="width: 1em; height: 1em; color: currentColor;"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
-                      fill="currentColor"
+                      Fat Bull
+                    </label>
+                  </div>
+                  <div>
+                    <input
+                      aria-label="separate bull"
+                      class="peer hidden"
+                      id="radio-separate"
+                      name="option-fat-separate"
+                      type="radio"
                     />
-                  </svg>
+                    <label
+                      class="cursor-pointer select-none bg-gray-100 px-4 py-1 text-sm no-tap-highlighting peer-checked:bg-blue-500 peer-checked:text-white peer-disabled:opacity-60 md:text-base rounded-r-md"
+                      for="radio-separate"
+                    >
+                      Separate Bull
+                    </label>
+                  </div>
                 </div>
               </div>
+              <select
+                class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-1 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500"
+              />
               <div
-                class="chakra-table__container css-zipzvv"
+                class="flex justify-center overflow-x-scroll"
               >
                 <table
-                  class="chakra-table css-5605sr"
+                  class="w-full"
                 >
-                  <tbody
-                    class="css-0"
-                  />
+                  <tbody />
                 </table>
               </div>
             </div>
             <div
               aria-label="game history"
-              class="css-0"
             >
               <h3
-                class="chakra-heading css-1slo9hi"
+                class="mb-2 text-sm font-bold md:text-base"
               >
                 Game History
               </h3>
               <div
-                class="chakra-table__container css-zipzvv"
+                class="flex justify-center overflow-x-scroll"
               >
                 <table
-                  class="chakra-table css-d0hqo3"
+                  class="w-full table-fixed"
                 >
-                  <tbody
-                    class="css-0"
-                  />
+                  <tbody />
                 </table>
               </div>
             </div>

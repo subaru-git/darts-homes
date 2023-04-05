@@ -9,7 +9,7 @@ test('single out fat bull', async () => {
   jest.spyOn(global, 'Date').mockImplementation(() => mockDate);
   const { container } = render(<History history={history} user={null} />);
   const user = userEvent.setup();
-  const out = screen.getByRole('radio', { name: 'Single Out' });
+  const out = screen.queryAllByLabelText('single out')[0];
   await user.click(out);
   const select = screen.getByRole('combobox');
   const options = screen.getAllByRole('option');
@@ -23,7 +23,7 @@ test('master out fat bull', async () => {
   jest.spyOn(global, 'Date').mockImplementation(() => mockDate);
   const { container } = render(<History history={history} user={null} />);
   const user = userEvent.setup();
-  const out = screen.getByRole('radio', { name: 'Master Out' });
+  const out = screen.queryAllByLabelText('master out')[0];
   jest.useRealTimers();
   await user.click(out);
   const select = screen.getByRole('combobox');
@@ -48,10 +48,13 @@ const history: ArrangeResultModel[] = [
     ],
     uuid: uuidv4(),
     settings: {
-      range: 0,
+      range: { x: 0, y: 0 },
       out: 'single',
       simulation: true,
       separate: false,
+      hard: false,
+      game: false,
+      pro: false,
     },
     playedAt: new Date().toJSON(),
   },
@@ -69,10 +72,13 @@ const history: ArrangeResultModel[] = [
     ],
     uuid: uuidv4(),
     settings: {
-      range: 0,
+      range: { x: 0, y: 0 },
       out: 'master',
       simulation: true,
       separate: false,
+      hard: false,
+      game: false,
+      pro: false,
     },
     playedAt: new Date().toJSON(),
   },
@@ -90,10 +96,13 @@ const history: ArrangeResultModel[] = [
     ],
     uuid: uuidv4(),
     settings: {
-      range: 0,
+      range: { x: 0, y: 0 },
       out: 'double',
       simulation: true,
       separate: false,
+      hard: false,
+      game: false,
+      pro: false,
     },
     playedAt: new Date().toJSON(),
   },
