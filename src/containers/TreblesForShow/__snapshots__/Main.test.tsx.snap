@@ -1551,7 +1551,7 @@ exports[`should rendering 1`] = `
         </button>
         <button
           aria-label="open form check"
-          class="text-gray-600 bg-transparent hover:text-gray-400 p-0 focus:ring-0 m-auto inline-flex items-center rounded-full p-2.5 text-center text-sm font-medium focus:outline-none focus:ring-4 disabled:cursor-not-allowed"
+          class="text-gray-600 bg-transparent hover:text-gray-400 p-0 focus:ring-0 disabled:opacity-50 m-auto inline-flex items-center rounded-full p-2.5 text-center text-sm font-medium focus:outline-none focus:ring-4 disabled:cursor-not-allowed"
           type="button"
         >
           <svg
@@ -1642,7 +1642,7 @@ exports[`should rendering 1`] = `
             <div>
               <button
                 aria-label="clear scores"
-                class="text-white bg-blue-500 hover:bg-blue-400 disabled:bg-blue-300 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base"
+                class="text-white bg-blue-500 hover:bg-blue-400 disabled:bg-blue-300 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base undefined"
               >
                 <svg
                   fill="currentColor"
@@ -1663,7 +1663,7 @@ exports[`should rendering 1`] = `
             </div>
             <button
               aria-label="round over"
-              class="text-white bg-orange-500 hover:bg-orange-400  disabled:bg-orange-200 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base"
+              class="text-white bg-orange-500 hover:bg-orange-400  disabled:bg-orange-200 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base undefined"
             >
               <div
                 class="flex items-center gap-1"
@@ -1693,78 +1693,72 @@ exports[`should rendering 1`] = `
         class="css-13s4dk6"
       >
         <div
-          class="css-3z9ffy"
+          class="m-auto flex max-w-[320px] flex-col gap-1"
         >
           <div
-            class="css-1ujb77r"
+            class="grid grid-cols-3 gap-x-2 gap-y-1"
           >
             <div
-              class="css-tkevr6"
+              class="h-full text-center"
             >
-              <p
-                class="chakra-text css-txmq0u"
+              <span
+                class="text-sm font-bold text-gray-700 disabled:opacity-50 "
               >
                 Single
-              </p>
+              </span>
             </div>
             <div
-              class="css-tkevr6"
+              class="h-full text-center"
             >
-              <p
-                class="chakra-text css-txmq0u"
+              <span
+                class="text-sm font-bold text-gray-700 disabled:opacity-50 "
               >
                 Double
-              </p>
+              </span>
             </div>
             <div
-              class="css-tkevr6"
+              class="h-full text-center"
             >
-              <p
-                class="chakra-text css-txmq0u"
+              <span
+                class="text-sm font-bold text-gray-700 disabled:opacity-50 "
               >
                 Triple
-              </p>
+              </span>
             </div>
             <button
               aria-label="20"
-              class="chakra-button css-1ccv9dn"
-              type="button"
+              class="text-gray-600 border-gray-300 bg-white hover:bg-gray-50 disabled:opacity-50 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base w-full"
             >
               20
             </button>
             <button
               aria-label="20 double"
-              class="chakra-button css-15j4lkt"
-              type="button"
+              class="text-emerald-600 border-emerald-600 bg-white hover:bg-emerald-50 disabled:opacity-50 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base w-full"
             >
               20
             </button>
             <button
               aria-label="20 triple"
-              class="chakra-button css-rqa4n6"
-              type="button"
+              class="text-pink-600 border-pink-500 bg-white hover:bg-pink-50 disabled:opacity-50 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base w-full"
             >
               20
             </button>
           </div>
           <div
-            class="css-1vakbk4"
+            class="flex gap-2"
           >
             <button
-              class="chakra-button css-1ccv9dn"
-              type="button"
+              class="text-gray-600 border-gray-300 bg-white hover:bg-gray-50 disabled:opacity-50 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base w-full"
             >
               Other
             </button>
             <button
               aria-label="out board"
-              class="chakra-button css-gai936"
+              class="flex w-fit justify-center rounded-md border border-gray-300 p-3 disabled:opacity-50 "
               type="button"
             >
               <svg
-                aria-hidden="true"
                 fill="none"
-                focusable="false"
                 height="1em"
                 stroke="currentColor"
                 stroke-linecap="round"

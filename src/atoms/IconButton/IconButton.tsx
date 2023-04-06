@@ -35,7 +35,7 @@ const style: { [key: string]: string } = {
   'blue-fill': 'text-white bg-blue-500 hover:bg-blue-400 disabled:bg-blue-300',
   orange: 'text-orange-400 border-orange-400 bg-white hover:bg-orange-50',
   'orange-fill': 'text-white bg-orange-500 hover:bg-orange-400  disabled:bg-orange-200',
-  ghost: 'text-gray-600 bg-transparent hover:text-gray-400 p-0 focus:ring-0',
+  ghost: 'text-gray-600 bg-transparent hover:text-gray-400 p-0 focus:ring-0 disabled:opacity-50',
 } as const;
 
 export default IconButton;

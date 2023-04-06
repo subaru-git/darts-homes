@@ -3,34 +3,30 @@
 exports[`should rendering and clickable input 1`] = `
 <div>
   <div
-    class="css-gnoliz"
+    class="m-auto flex max-w-[320px] flex-col gap-1"
   >
     <div
-      class="css-y1q9xa"
+      class="grid grid-cols-[repeat(3,_auto)] gap-3"
     >
       <button
         aria-label="outer bull"
-        class="chakra-button css-uxt1e8"
-        type="button"
+        class="text-white bg-red-500 hover:bg-red-400 disabled:bg-red-300 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base w-full"
       >
         Outer Bull
       </button>
       <button
         aria-label="inner bull"
-        class="chakra-button css-uxt1e8"
-        type="button"
+        class="text-white bg-indigo-700 hover:bg-indigo-500 disabled:bg-indigo-300 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base w-full"
       >
         Inner Bull
       </button>
       <button
         aria-label="out board"
-        class="chakra-button css-wgiz8h"
+        class="flex w-fit justify-center rounded-md border border-gray-300 p-3 disabled:opacity-50 w-full"
         type="button"
       >
         <svg
-          aria-hidden="true"
           fill="none"
-          focusable="false"
           height="1em"
           stroke="currentColor"
           stroke-linecap="round"
@@ -62,95 +58,86 @@ exports[`should rendering and clickable input 1`] = `
       </button>
     </div>
     <div
-      class="css-1k4xfrm"
+      class="grid grid-cols-3 gap-x-2 gap-y-1"
     >
       <div
-        class="css-tkevr6"
+        class="h-full text-center"
       >
-        <p
-          class="chakra-text css-1qgr8dx"
+        <span
+          class="text-sm font-bold text-gray-700 disabled:opacity-50 "
         >
           Single
-        </p>
+        </span>
       </div>
       <div
-        class="css-tkevr6"
+        class="h-full text-center"
       >
-        <p
-          class="chakra-text css-1qgr8dx"
+        <span
+          class="text-sm font-bold text-gray-700 disabled:opacity-50 "
         >
           Double
-        </p>
+        </span>
       </div>
       <div
-        class="css-tkevr6"
+        class="h-full text-center"
       >
-        <p
-          class="chakra-text css-1qgr8dx"
+        <span
+          class="text-sm font-bold text-gray-700 disabled:opacity-50 "
         >
           Triple
-        </p>
+        </span>
       </div>
       <button
         aria-label="1"
-        class="chakra-button css-uxt1e8"
-        type="button"
+        class="text-gray-600 border-gray-300 bg-white hover:bg-gray-50 disabled:opacity-50 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base w-full"
       >
         1
       </button>
       <button
         aria-label="1 double"
-        class="chakra-button css-uxt1e8"
-        type="button"
+        class="text-emerald-600 border-emerald-600 bg-white hover:bg-emerald-50 disabled:opacity-50 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base w-full"
       >
         1
       </button>
       <button
         aria-label="1 triple"
-        class="chakra-button css-uxt1e8"
-        type="button"
+        class="text-pink-600 border-pink-500 bg-white hover:bg-pink-50 disabled:opacity-50 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base w-full"
       >
         1
       </button>
       <button
         aria-label="2"
-        class="chakra-button css-uxt1e8"
-        type="button"
+        class="text-gray-600 border-gray-300 bg-white hover:bg-gray-50 disabled:opacity-50 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base w-full"
       >
         2
       </button>
       <button
         aria-label="2 double"
-        class="chakra-button css-uxt1e8"
-        type="button"
+        class="text-emerald-600 border-emerald-600 bg-white hover:bg-emerald-50 disabled:opacity-50 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base w-full"
       >
         2
       </button>
       <button
         aria-label="2 triple"
-        class="chakra-button css-uxt1e8"
-        type="button"
+        class="text-pink-600 border-pink-500 bg-white hover:bg-pink-50 disabled:opacity-50 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base w-full"
       >
         2
       </button>
       <button
         aria-label="3"
-        class="chakra-button css-uxt1e8"
-        type="button"
+        class="text-gray-600 border-gray-300 bg-white hover:bg-gray-50 disabled:opacity-50 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base w-full"
       >
         3
       </button>
       <button
         aria-label="3 double"
-        class="chakra-button css-uxt1e8"
-        type="button"
+        class="text-emerald-600 border-emerald-600 bg-white hover:bg-emerald-50 disabled:opacity-50 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base w-full"
       >
         3
       </button>
       <button
         aria-label="3 triple"
-        class="chakra-button css-uxt1e8"
-        type="button"
+        class="text-pink-600 border-pink-500 bg-white hover:bg-pink-50 disabled:opacity-50 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base w-full"
       >
         3
       </button>
@@ -162,37 +149,33 @@ exports[`should rendering and clickable input 1`] = `
 exports[`should rendering and disable input 1`] = `
 <div>
   <div
-    class="css-gnoliz"
+    class="m-auto flex max-w-[320px] flex-col gap-1"
   >
     <div
-      class="css-y1q9xa"
+      class="grid grid-cols-[repeat(3,_auto)] gap-3"
     >
       <button
         aria-label="outer bull"
-        class="chakra-button css-uxt1e8"
+        class="text-white bg-red-500 hover:bg-red-400 disabled:bg-red-300 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base w-full"
         disabled=""
-        type="button"
       >
         Outer Bull
       </button>
       <button
         aria-label="inner bull"
-        class="chakra-button css-uxt1e8"
+        class="text-white bg-indigo-700 hover:bg-indigo-500 disabled:bg-indigo-300 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base w-full"
         disabled=""
-        type="button"
       >
         Inner Bull
       </button>
       <button
         aria-label="out board"
-        class="chakra-button css-wgiz8h"
+        class="flex w-fit justify-center rounded-md border border-gray-300 p-3 disabled:opacity-50 w-full"
         disabled=""
         type="button"
       >
         <svg
-          aria-hidden="true"
           fill="none"
-          focusable="false"
           height="1em"
           stroke="currentColor"
           stroke-linecap="round"
@@ -224,104 +207,95 @@ exports[`should rendering and disable input 1`] = `
       </button>
     </div>
     <div
-      class="css-1k4xfrm"
+      class="grid grid-cols-3 gap-x-2 gap-y-1"
     >
       <div
-        class="css-tkevr6"
+        class="h-full text-center"
       >
-        <p
-          class="chakra-text css-80eqy4"
+        <span
+          class="text-sm font-bold text-gray-700 disabled:opacity-50 opacity-40"
         >
           Single
-        </p>
+        </span>
       </div>
       <div
-        class="css-tkevr6"
+        class="h-full text-center"
       >
-        <p
-          class="chakra-text css-80eqy4"
+        <span
+          class="text-sm font-bold text-gray-700 disabled:opacity-50 opacity-40"
         >
           Double
-        </p>
+        </span>
       </div>
       <div
-        class="css-tkevr6"
+        class="h-full text-center"
       >
-        <p
-          class="chakra-text css-80eqy4"
+        <span
+          class="text-sm font-bold text-gray-700 disabled:opacity-50 opacity-40"
         >
           Triple
-        </p>
+        </span>
       </div>
       <button
         aria-label="20"
-        class="chakra-button css-uxt1e8"
+        class="text-gray-600 border-gray-300 bg-white hover:bg-gray-50 disabled:opacity-50 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base w-full"
         disabled=""
-        type="button"
       >
         20
       </button>
       <button
         aria-label="20 double"
-        class="chakra-button css-uxt1e8"
+        class="text-emerald-600 border-emerald-600 bg-white hover:bg-emerald-50 disabled:opacity-50 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base w-full"
         disabled=""
-        type="button"
       >
         20
       </button>
       <button
         aria-label="20 triple"
-        class="chakra-button css-uxt1e8"
+        class="text-pink-600 border-pink-500 bg-white hover:bg-pink-50 disabled:opacity-50 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base w-full"
         disabled=""
-        type="button"
       >
         20
       </button>
       <button
         aria-label="19"
-        class="chakra-button css-uxt1e8"
+        class="text-gray-600 border-gray-300 bg-white hover:bg-gray-50 disabled:opacity-50 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base w-full"
         disabled=""
-        type="button"
       >
         19
       </button>
       <button
         aria-label="19 double"
-        class="chakra-button css-uxt1e8"
+        class="text-emerald-600 border-emerald-600 bg-white hover:bg-emerald-50 disabled:opacity-50 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base w-full"
         disabled=""
-        type="button"
       >
         19
       </button>
       <button
         aria-label="19 triple"
-        class="chakra-button css-uxt1e8"
+        class="text-pink-600 border-pink-500 bg-white hover:bg-pink-50 disabled:opacity-50 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base w-full"
         disabled=""
-        type="button"
       >
         19
       </button>
       <button
         aria-label="18"
-        class="chakra-button css-uxt1e8"
+        class="text-gray-600 border-gray-300 bg-white hover:bg-gray-50 disabled:opacity-50 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base w-full"
         disabled=""
-        type="button"
       >
         18
       </button>
       <button
         aria-label="18 double"
-        class="chakra-button css-uxt1e8"
+        class="text-emerald-600 border-emerald-600 bg-white hover:bg-emerald-50 disabled:opacity-50 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base w-full"
         disabled=""
-        type="button"
       >
         18
       </button>
       <button
         aria-label="18 triple"
-        class="chakra-button css-uxt1e8"
+        class="text-pink-600 border-pink-500 bg-white hover:bg-pink-50 disabled:opacity-50 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base w-full"
         disabled=""
-        type="button"
       >
         18
       </button>
@@ -333,37 +307,33 @@ exports[`should rendering and disable input 1`] = `
 exports[`should rendering only cricket numbers 1`] = `
 <div>
   <div
-    class="css-gnoliz"
+    class="m-auto flex max-w-[320px] flex-col gap-1"
   >
     <div
-      class="css-y1q9xa"
+      class="grid grid-cols-[repeat(3,_auto)] gap-3"
     >
       <button
         aria-label="outer bull"
-        class="chakra-button css-uxt1e8"
+        class="text-white bg-red-500 hover:bg-red-400 disabled:bg-red-300 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base w-full"
         disabled=""
-        type="button"
       >
         Outer Bull
       </button>
       <button
         aria-label="inner bull"
-        class="chakra-button css-uxt1e8"
+        class="text-white bg-indigo-700 hover:bg-indigo-500 disabled:bg-indigo-300 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base w-full"
         disabled=""
-        type="button"
       >
         Inner Bull
       </button>
       <button
         aria-label="out board"
-        class="chakra-button css-wgiz8h"
+        class="flex w-fit justify-center rounded-md border border-gray-300 p-3 disabled:opacity-50 w-full"
         disabled=""
         type="button"
       >
         <svg
-          aria-hidden="true"
           fill="none"
-          focusable="false"
           height="1em"
           stroke="currentColor"
           stroke-linecap="round"
@@ -395,176 +365,158 @@ exports[`should rendering only cricket numbers 1`] = `
       </button>
     </div>
     <div
-      class="css-96zv3r"
+      class="grid grid-cols-3 gap-x-2 gap-y-1"
     >
       <div
-        class="css-tkevr6"
+        class="h-full text-center"
       >
-        <p
-          class="chakra-text css-80eqy4"
+        <span
+          class="text-sm font-bold text-gray-700 disabled:opacity-50 opacity-40"
         >
           Single
-        </p>
+        </span>
       </div>
       <div
-        class="css-tkevr6"
+        class="h-full text-center"
       >
-        <p
-          class="chakra-text css-80eqy4"
+        <span
+          class="text-sm font-bold text-gray-700 disabled:opacity-50 opacity-40"
         >
           Double
-        </p>
+        </span>
       </div>
       <div
-        class="css-tkevr6"
+        class="h-full text-center"
       >
-        <p
-          class="chakra-text css-80eqy4"
+        <span
+          class="text-sm font-bold text-gray-700 disabled:opacity-50 opacity-40"
         >
           Triple
-        </p>
+        </span>
       </div>
       <button
         aria-label="20"
-        class="chakra-button css-uxt1e8"
+        class="text-gray-600 border-gray-300 bg-white hover:bg-gray-50 disabled:opacity-50 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base w-full"
         disabled=""
-        type="button"
       >
         20
       </button>
       <button
         aria-label="20 double"
-        class="chakra-button css-uxt1e8"
+        class="text-emerald-600 border-emerald-600 bg-white hover:bg-emerald-50 disabled:opacity-50 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base w-full"
         disabled=""
-        type="button"
       >
         20
       </button>
       <button
         aria-label="20 triple"
-        class="chakra-button css-uxt1e8"
+        class="text-pink-600 border-pink-500 bg-white hover:bg-pink-50 disabled:opacity-50 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base w-full"
         disabled=""
-        type="button"
       >
         20
       </button>
       <button
         aria-label="19"
-        class="chakra-button css-uxt1e8"
+        class="text-gray-600 border-gray-300 bg-white hover:bg-gray-50 disabled:opacity-50 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base w-full"
         disabled=""
-        type="button"
       >
         19
       </button>
       <button
         aria-label="19 double"
-        class="chakra-button css-uxt1e8"
+        class="text-emerald-600 border-emerald-600 bg-white hover:bg-emerald-50 disabled:opacity-50 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base w-full"
         disabled=""
-        type="button"
       >
         19
       </button>
       <button
         aria-label="19 triple"
-        class="chakra-button css-uxt1e8"
+        class="text-pink-600 border-pink-500 bg-white hover:bg-pink-50 disabled:opacity-50 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base w-full"
         disabled=""
-        type="button"
       >
         19
       </button>
       <button
         aria-label="18"
-        class="chakra-button css-uxt1e8"
+        class="text-gray-600 border-gray-300 bg-white hover:bg-gray-50 disabled:opacity-50 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base w-full"
         disabled=""
-        type="button"
       >
         18
       </button>
       <button
         aria-label="18 double"
-        class="chakra-button css-uxt1e8"
+        class="text-emerald-600 border-emerald-600 bg-white hover:bg-emerald-50 disabled:opacity-50 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base w-full"
         disabled=""
-        type="button"
       >
         18
       </button>
       <button
         aria-label="18 triple"
-        class="chakra-button css-uxt1e8"
+        class="text-pink-600 border-pink-500 bg-white hover:bg-pink-50 disabled:opacity-50 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base w-full"
         disabled=""
-        type="button"
       >
         18
       </button>
       <button
         aria-label="17"
-        class="chakra-button css-uxt1e8"
+        class="text-gray-600 border-gray-300 bg-white hover:bg-gray-50 disabled:opacity-50 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base w-full"
         disabled=""
-        type="button"
       >
         17
       </button>
       <button
         aria-label="17 double"
-        class="chakra-button css-uxt1e8"
+        class="text-emerald-600 border-emerald-600 bg-white hover:bg-emerald-50 disabled:opacity-50 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base w-full"
         disabled=""
-        type="button"
       >
         17
       </button>
       <button
         aria-label="17 triple"
-        class="chakra-button css-uxt1e8"
+        class="text-pink-600 border-pink-500 bg-white hover:bg-pink-50 disabled:opacity-50 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base w-full"
         disabled=""
-        type="button"
       >
         17
       </button>
       <button
         aria-label="16"
-        class="chakra-button css-uxt1e8"
+        class="text-gray-600 border-gray-300 bg-white hover:bg-gray-50 disabled:opacity-50 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base w-full"
         disabled=""
-        type="button"
       >
         16
       </button>
       <button
         aria-label="16 double"
-        class="chakra-button css-uxt1e8"
+        class="text-emerald-600 border-emerald-600 bg-white hover:bg-emerald-50 disabled:opacity-50 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base w-full"
         disabled=""
-        type="button"
       >
         16
       </button>
       <button
         aria-label="16 triple"
-        class="chakra-button css-uxt1e8"
+        class="text-pink-600 border-pink-500 bg-white hover:bg-pink-50 disabled:opacity-50 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base w-full"
         disabled=""
-        type="button"
       >
         16
       </button>
       <button
         aria-label="15"
-        class="chakra-button css-uxt1e8"
+        class="text-gray-600 border-gray-300 bg-white hover:bg-gray-50 disabled:opacity-50 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base w-full"
         disabled=""
-        type="button"
       >
         15
       </button>
       <button
         aria-label="15 double"
-        class="chakra-button css-uxt1e8"
+        class="text-emerald-600 border-emerald-600 bg-white hover:bg-emerald-50 disabled:opacity-50 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base w-full"
         disabled=""
-        type="button"
       >
         15
       </button>
       <button
         aria-label="15 triple"
-        class="chakra-button css-uxt1e8"
+        class="text-pink-600 border-pink-500 bg-white hover:bg-pink-50 disabled:opacity-50 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base w-full"
         disabled=""
-        type="button"
       >
         15
       </button>
