@@ -1,5 +1,4 @@
 import React, { FC, ReactNode } from 'react';
-import { Box } from '@chakra-ui/react';
 
 type CardProps = {
   children?: ReactNode;
@@ -7,17 +6,9 @@ type CardProps = {
 
 const Card: FC<CardProps> = ({ children }) => {
   return (
-    <Box
-      borderRadius={'xl'}
-      p={5}
-      shadow={'md'}
-      borderWidth={'1px'}
-      maxWidth={'md'}
-      height={'100%'}
-      backgroundColor={'gray.50'}
-    >
+    <div className='h-full max-w-md rounded-xl border border-gray-200 bg-gray-50 p-5 shadow-md'>
       {children}
-    </Box>
+    </div>
   );
 };
 

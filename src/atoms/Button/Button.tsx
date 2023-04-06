@@ -31,6 +31,8 @@ const style: { [key: string]: string } = {
   'blue-fill': 'text-white bg-blue-500 hover:bg-blue-400 disabled:bg-blue-300',
   orange: 'text-orange-400 border-orange-400 bg-white hover:bg-orange-50',
   'orange-fill': 'text-white bg-orange-500 hover:bg-orange-400  disabled:bg-orange-200',
+  cyan: 'text-cyan-400 border-cyan-400 bg-white hover:bg-cyan-50',
+  'cyan-fill': 'text-white bg-cyan-500 hover:bg-cyan-400  disabled:bg-cyan-200',
 } as const;
 
 export default Button;

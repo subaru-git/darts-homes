@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { ButtonHTMLAttributes, FC } from 'react';
 
 type IconButtonProps = {
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
@@ -7,7 +7,7 @@ type IconButtonProps = {
   children?: React.ReactNode;
 };
 
-const IconButton: FC<IconButtonProps> = ({
+const IconButton: FC<IconButtonProps & ButtonHTMLAttributes<HTMLButtonElement>> = ({
   onClick,
   children,
   disabled,

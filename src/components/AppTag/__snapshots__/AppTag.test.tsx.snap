@@ -3,7 +3,7 @@
 exports[`should rendering 1`] = `
 <div>
   <span
-    class="css-1dl6jat"
+    class="text-gray-100 bg-teal-400 whitespace-nowrap rounded-full px-2.5 py-0.5 text-sm font-medium"
   >
     cricket
   </span>

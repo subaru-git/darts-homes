@@ -4,13 +4,11 @@ exports[`should rendering 1`] = `
 <div>
   <button
     aria-label="open form check"
-    class="chakra-button css-p7mkev"
+    class="text-gray-600 bg-transparent hover:text-gray-400 p-0 focus:ring-0 m-auto inline-flex items-center rounded-full p-2.5 text-center text-sm font-medium focus:outline-none focus:ring-4 disabled:cursor-not-allowed"
     type="button"
   >
     <svg
-      aria-hidden="true"
       fill="currentColor"
-      focusable="false"
       height="32"
       stroke="currentColor"
       stroke-width="0"

@@ -1,15 +1,10 @@
 import React, { FC, useEffect, useRef, useState } from 'react';
 import {
-  Box,
-  Button,
   Drawer,
   DrawerBody,
   DrawerCloseButton,
   DrawerContent,
   DrawerHeader,
-  Flex,
-  IconButton,
-  Select,
   useDisclosure,
 } from '@chakra-ui/react';
 import { Camera, CameraType } from 'react-camera-pro';
@@ -17,6 +12,9 @@ import { AiOutlineCamera } from 'react-icons/ai';
 import { IoCameraReverseOutline } from 'react-icons/io5';
 import { useReactMediaRecorder } from 'react-media-recorder';
 import RecordingMark from '../RecordingMark';
+import Button from '@/atoms/Button';
+import IconButton from '@/atoms/IconButton';
+import Select from '@/atoms/Select';
 
 const CameraView: FC = () => {
   const camera = useRef<CameraType>(null);
@@ -41,12 +39,9 @@ const CameraView: FC = () => {
   });
   return (
     <>
-      <IconButton
-        onClick={async () => onOpen()}
-        icon={<AiOutlineCamera size={32} />}
-        variant={'ghost'}
-        aria-label={'open form check'}
-      />
+      <IconButton onClick={async () => onOpen()} color='ghost' aria-label={'open form check'}>
+        <AiOutlineCamera size={32} />
+      </IconButton>
       <Drawer
         isOpen={isOpen}
         onClose={() => onClose()}
@@ -58,11 +53,11 @@ const CameraView: FC = () => {
           <DrawerCloseButton />
           <DrawerHeader>Form Check [beta]</DrawerHeader>
           <DrawerBody>
-            <Flex gap={4} justifyContent={'space-between'}>
-              <Flex gap={4} alignItems={'center'}>
-                <Box width={6} height={6} fontSize={'xl'}>
+            <div className='flex justify-between gap-4'>
+              <div className='flex items-center gap-4'>
+                <div className='h-6 w-6 text-xl'>
                   <RecordingMark recording={recording} />
-                </Box>
+                </div>
                 <Button
                   onClick={() => {
                     startRecording();
@@ -70,8 +65,7 @@ const CameraView: FC = () => {
                     setRecording(true);
                   }}
                   hidden={preview || recording}
-                  variant={'outline'}
-                  colorScheme={'teal'}
+                  color='green'
                 >
                   Start Recording
                 </Button>
@@ -82,8 +76,7 @@ const CameraView: FC = () => {
                     setRecording(false);
                   }}
                   hidden={!recording}
-                  variant={'outline'}
-                  colorScheme={'cyan'}
+                  color='cyan'
                 >
                   Stop Recording
                 </Button>
@@ -92,37 +85,30 @@ const CameraView: FC = () => {
                     setPreview(false);
                   }}
                   hidden={!preview}
-                  variant={'outline'}
-                  colorScheme={'orange'}
+                  color='orange'
                 >
                   Stop Preview
                 </Button>
-              </Flex>
-              <Flex gap={4}>
-                <Box>
-                  <Select
-                    onChange={(event) => setActiveDeviceId(event.target.value)}
-                    variant={'flushed'}
-                    size={'sm'}
-                  >
-                    {devices.map((d) => (
-                      <option key={d.deviceId} value={d.deviceId}>
-                        {d.label}
-                      </option>
-                    ))}
-                  </Select>
-                </Box>
+              </div>
+              <div className='flex gap-4'>
+                <Select
+                  options={devices.map((d) => d.label)}
+                  onSelect={(option) =>
+                    setActiveDeviceId(devices.find((d) => d.label === option)?.deviceId)
+                  }
+                />
                 <IconButton
-                  icon={<IoCameraReverseOutline size={32} />}
                   onClick={() => camera.current?.switchCamera()}
                   hidden={numberOfCameras < 2}
-                  variant={'ghost'}
+                  color='ghost'
                   aria-label={'switch camera'}
-                />
-              </Flex>
-            </Flex>
-            <Box mt={2}>
-              <Box height={'80vh'} position={'relative'} hidden={preview}>
+                >
+                  <IoCameraReverseOutline size={32} />
+                </IconButton>
+              </div>
+            </div>
+            <div className='mt-2'>
+              <div className='relative h-[80vh]' hidden={preview}>
                 <Camera
                   ref={camera}
                   facingMode={'environment'}
@@ -130,17 +116,17 @@ const CameraView: FC = () => {
                   errorMessages={errorMessages}
                   numberOfCamerasCallback={setNumberOfCameras}
                 />
-              </Box>
-              <Box hidden={!preview}>
+              </div>
+              <div hidden={!preview}>
                 <video
+                  className='h-[80vh] object-cover'
                   src={mediaBlobUrl!}
                   controls
                   autoPlay
                   loop
-                  style={{ height: '80vh', objectFit: 'cover' }}
                 />
-              </Box>
-            </Box>
+              </div>
+            </div>
           </DrawerBody>
         </DrawerContent>
       </Drawer>
