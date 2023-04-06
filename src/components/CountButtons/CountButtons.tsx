@@ -51,7 +51,7 @@ const Buttons: FC<CountButtonsProps> = ({ onCount, buttons, bull = true, disable
   return (
     <>
       {!bull ? null : <Bull onCount={onCount} disabled={disabled} />}
-      <div className='grid grid-cols-3 gap-x-2 gap-y-1'>
+      <div className={`grid grid-cols-3 grid-rows-1 gap-x-2 gap-y-1`}>
         {buttons.length === 0
           ? null
           : ['Single', 'Double', 'Triple'].map((label) => (
