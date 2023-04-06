@@ -1551,7 +1551,7 @@ exports[`should rendering 1`] = `
         </button>
         <button
           aria-label="open form check"
-          class="text-gray-600 bg-transparent hover:text-gray-400 p-0 focus:ring-0 m-auto inline-flex items-center rounded-full p-2.5 text-center text-sm font-medium focus:outline-none focus:ring-4 disabled:cursor-not-allowed"
+          class="text-gray-600 bg-transparent hover:text-gray-400 p-0 focus:ring-0 disabled:opacity-50 m-auto inline-flex items-center rounded-full p-2.5 text-center text-sm font-medium focus:outline-none focus:ring-4 disabled:cursor-not-allowed"
           type="button"
         >
           <svg
@@ -1642,7 +1642,7 @@ exports[`should rendering 1`] = `
             <div>
               <button
                 aria-label="clear scores"
-                class="text-white bg-blue-500 hover:bg-blue-400 disabled:bg-blue-300 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base"
+                class="text-white bg-blue-500 hover:bg-blue-400 disabled:bg-blue-300 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base undefined"
               >
                 <svg
                   fill="currentColor"
@@ -1663,7 +1663,7 @@ exports[`should rendering 1`] = `
             </div>
             <button
               aria-label="round over"
-              class="text-white bg-orange-500 hover:bg-orange-400  disabled:bg-orange-200 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base"
+              class="text-white bg-orange-500 hover:bg-orange-400  disabled:bg-orange-200 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base undefined"
             >
               <div
                 class="flex items-center gap-1"

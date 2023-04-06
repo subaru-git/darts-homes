@@ -1,27 +1,22 @@
 import React, { FC, Fragment, useState } from 'react';
 import {
-  Box,
-  Button,
-  Center,
   Drawer,
   DrawerBody,
   DrawerCloseButton,
   DrawerContent,
   DrawerHeader,
   DrawerOverlay,
-  Flex,
-  Grid,
-  IconButton,
   Tab,
   TabList,
   TabPanel,
   TabPanels,
   Tabs,
-  Text,
   useDisclosure,
 } from '@chakra-ui/react';
 import { TbTargetOff } from 'react-icons/tb';
 import DartBoard from '../DartBoard';
+import Button from '@/atoms/Button';
+import IconButton from '@/atoms/IconButton';
 
 type CountButtonsProps = {
   onCount: (count: point) => void;
@@ -41,14 +36,14 @@ const CountButtons: FC<CountButtonsProps> = ({
   full = false,
 }) => {
   return (
-    <Flex maxW={320} direction={'column'} gap={1} m={'auto'}>
+    <div className='m-auto flex max-w-[320px] flex-col gap-1'>
       <Buttons onCount={onCount} buttons={buttons} bull={bull} disabled={disabled} other={other} />
       {other ? (
         <Other onCount={onCount} disabled={disabled} bull={bull} />
       ) : full ? (
         <Full onCount={onCount} disabled={disabled} bull={bull} />
       ) : null}
-    </Flex>
+    </div>
   );
 };
 
@@ -56,27 +51,25 @@ const Buttons: FC<CountButtonsProps> = ({ onCount, buttons, bull = true, disable
   return (
     <>
       {!bull ? null : <Bull onCount={onCount} disabled={disabled} />}
-      <Grid
-        templateColumns='repeat(3, 1fr)'
-        templateRows={`repeat(${buttons.length}, 1fr)`}
-        columnGap={3}
-        rowGap={1}
-      >
+      <div className='grid grid-cols-3 gap-x-2 gap-y-1'>
         {buttons.length === 0
           ? null
           : ['Single', 'Double', 'Triple'].map((label) => (
-              <Center key={label} h='100%'>
-                <Text size='sm' color={disabled ? 'blackAlpha.500' : 'black'} fontWeight='bold'>
+              <div key={label} className='h-full text-center'>
+                <span
+                  className={`text-sm font-bold text-gray-700 disabled:opacity-50 ${
+                    disabled ? 'opacity-40' : ''
+                  }`}
+                >
                   {label}
-                </Text>
-              </Center>
+                </span>
+              </div>
             ))}
         {buttons.map((i) => (
           <Fragment key={`${i}-count`}>
             <Button
-              colorScheme={'gray'}
-              variant={'outline'}
-              width={'100%'}
+              className='w-full'
+              color={'gray'}
               onClick={() => onCount(`${i}` as point)}
               disabled={disabled}
               aria-label={`${i}`}
@@ -84,9 +77,8 @@ const Buttons: FC<CountButtonsProps> = ({ onCount, buttons, bull = true, disable
               {i}
             </Button>
             <Button
-              colorScheme={'teal'}
-              variant={'outline'}
-              width={'100%'}
+              className='w-full'
+              color='green'
               onClick={() => onCount(`D${i}` as point)}
               disabled={disabled}
               aria-label={`${i} double`}
@@ -94,9 +86,8 @@ const Buttons: FC<CountButtonsProps> = ({ onCount, buttons, bull = true, disable
               {i}
             </Button>
             <Button
-              colorScheme={'pink'}
-              variant={'outline'}
-              width={'100%'}
+              className='w-full'
+              color='pink'
               onClick={() => onCount(`T${i}` as point)}
               disabled={disabled}
               aria-label={`${i} triple`}
@@ -105,7 +96,7 @@ const Buttons: FC<CountButtonsProps> = ({ onCount, buttons, bull = true, disable
             </Button>
           </Fragment>
         ))}
-      </Grid>
+      </div>
     </>
   );
 };
@@ -115,10 +106,10 @@ const Bull: FC<{ onCount: (count: point) => void; disabled: boolean }> = ({
   disabled,
 }) => {
   return (
-    <Grid templateColumns='repeat(3, auto)' gap={3}>
+    <div className='grid grid-cols-[repeat(3,_auto)] gap-3'>
       <Button
-        colorScheme={'red'}
-        width={'100%'}
+        className='w-full'
+        color='red-fill'
         onClick={() => onCount('S-BULL')}
         disabled={disabled}
         aria-label={'outer bull'}
@@ -126,8 +117,8 @@ const Bull: FC<{ onCount: (count: point) => void; disabled: boolean }> = ({
         Outer Bull
       </Button>
       <Button
-        colorScheme={'facebook'}
-        width={'100%'}
+        className='w-full'
+        color='indigo-fill'
         onClick={() => onCount('D-BULL')}
         disabled={disabled}
         aria-label={'inner bull'}
@@ -135,7 +126,7 @@ const Bull: FC<{ onCount: (count: point) => void; disabled: boolean }> = ({
         Inner Bull
       </Button>
       <OutBoard onCount={onCount} disabled={disabled} width={'100%'} />
-    </Grid>
+    </div>
   );
 };
 
@@ -145,12 +136,12 @@ const Other: FC<{ disabled?: boolean; bull?: boolean; onCount: (n: point) => voi
   onCount,
 }) => {
   return (
-    <Flex gap={2}>
-      <Button w={'100%'} variant={'outline'} onClick={() => onCount('0')} disabled={disabled}>
+    <div className='flex gap-2'>
+      <Button className='w-full' color='gray' onClick={() => onCount('0')} disabled={disabled}>
         Other
       </Button>
       {bull ? null : <OutBoard onCount={onCount} disabled={disabled} />}
-    </Flex>
+    </div>
   );
 };
 
@@ -163,12 +154,12 @@ const Full: FC<{ disabled?: boolean; bull?: boolean; onCount: (n: point) => void
   const [index, setIndex] = useState(0);
   return (
     <>
-      <Flex gap={2}>
-        <Button width={'100%'} variant={'outline'} onClick={onOpen} disabled={disabled}>
+      <div className='flex gap-2'>
+        <Button className='w-full' color='gray' onClick={onOpen} disabled={disabled}>
           Full
         </Button>
         {bull ? null : <OutBoard onCount={onCount} disabled={disabled} />}
-      </Flex>
+      </div>
       <Drawer isOpen={isOpen} onClose={onClose} size={'lg'} placement={'right'}>
         <DrawerOverlay />
         <DrawerContent>
@@ -194,16 +185,14 @@ const Full: FC<{ disabled?: boolean; bull?: boolean; onCount: (n: point) => void
                   />
                 </TabPanel>
                 <TabPanel>
-                  <Center>
-                    <Box w={'100%'} h={'100%'}>
-                      <DartBoard
-                        onCount={(n) => {
-                          onCount(n);
-                          onClose();
-                        }}
-                      />
-                    </Box>
-                  </Center>
+                  <div className='h-full w-full'>
+                    <DartBoard
+                      onCount={(n) => {
+                        onCount(n);
+                        onClose();
+                      }}
+                    />
+                  </div>
                 </TabPanel>
               </TabPanels>
             </Tabs>
@@ -220,14 +209,16 @@ const OutBoard: FC<{ disabled?: boolean; onCount: (n: point) => void; width?: st
   width = 'inherit',
 }) => (
   <IconButton
-    aria-label={'out board'}
-    variant={'outline'}
-    width={width}
-    icon={<TbTargetOff />}
-    colorScheme={'gray'}
+    className={`flex w-fit justify-center rounded-md border border-gray-300 p-3 disabled:opacity-50 ${
+      width === '100%' ? 'w-full' : ''
+    }`}
+    color='ghost'
     onClick={() => onCount('OUT')}
     disabled={disabled}
-  />
+    aria-label={'out board'}
+  >
+    <TbTargetOff />
+  </IconButton>
 );
 
 export default CountButtons;

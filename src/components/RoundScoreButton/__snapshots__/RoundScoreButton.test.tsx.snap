@@ -4,7 +4,7 @@ exports[`should rendering 1`] = `
 <div>
   <button
     aria-label="round change"
-    class="text-white bg-emerald-600 border-emerald-200 hover:bg-emerald-500 disabled:bg-emerald-200 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base"
+    class="text-white bg-emerald-600 border-emerald-200 hover:bg-emerald-500 disabled:bg-emerald-200 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base undefined"
   >
     <div
       class="flex items-center gap-1"

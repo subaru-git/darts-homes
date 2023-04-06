@@ -1496,7 +1496,7 @@ right?
         class="flex justify-center"
       >
         <button
-          class="text-emerald-600 border-emerald-600 bg-white hover:bg-emerald-50 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base"
+          class="text-emerald-600 border-emerald-600 bg-white hover:bg-emerald-50 disabled:opacity-50 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base undefined"
         >
           Let's see the practice games.
         </button>

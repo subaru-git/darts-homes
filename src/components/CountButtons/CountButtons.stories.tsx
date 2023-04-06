@@ -20,6 +20,8 @@ export const Disabled = Template.bind({});
 Disabled.args = {
   buttons: [20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
   disabled: true,
+  bull: true,
+  other: true,
 };
 
 export const Cricket = Template.bind({});
@@ -39,4 +41,17 @@ MobileCricketMarkUpBull.args = {
   buttons: [],
   bull: true,
   other: true,
+};
+
+export const Full = Template.bind({});
+Full.args = {
+  buttons: [],
+  bull: true,
+  full: true,
+};
+
+export const FullWithoutBull = Template.bind({});
+FullWithoutBull.args = {
+  buttons: [20],
+  full: true,
 };
