@@ -1491,7 +1491,7 @@ exports[`should rendering 1`] = `
       >
         <div>
           <div
-            class="css-18xfez7"
+            class="h-full max-w-md rounded-xl border border-gray-200 bg-gray-50 p-5 shadow-md"
           >
             <div
               class="css-1811skr"
@@ -1509,12 +1509,12 @@ exports[`should rendering 1`] = `
                 class="chakra-stack css-84zodg"
               >
                 <span
-                  class="css-fc73fl"
+                  class="text-gray-100 bg-blue-400 whitespace-nowrap rounded-full px-2.5 py-0.5 text-sm font-medium"
                 >
                   BULL
                 </span>
                 <span
-                  class="css-1xuzaeu"
+                  class="text-gray-100 bg-pink-400 whitespace-nowrap rounded-full px-2.5 py-0.5 text-sm font-medium"
                 >
                   count up
                 </span>
@@ -1530,7 +1530,7 @@ BULL is separate.
         </div>
         <div>
           <div
-            class="css-18xfez7"
+            class="h-full max-w-md rounded-xl border border-gray-200 bg-gray-50 p-5 shadow-md"
           >
             <div
               class="css-1811skr"
@@ -1548,12 +1548,12 @@ BULL is separate.
                 class="chakra-stack css-84zodg"
               >
                 <span
-                  class="css-njsj3h"
+                  class="text-gray-100 bg-teal-400 whitespace-nowrap rounded-full px-2.5 py-0.5 text-sm font-medium"
                 >
                   cricket
                 </span>
                 <span
-                  class="css-1xuzaeu"
+                  class="text-gray-100 bg-pink-400 whitespace-nowrap rounded-full px-2.5 py-0.5 text-sm font-medium"
                 >
                   count up
                 </span>
@@ -1571,7 +1571,7 @@ For more information, please watch this video.
         </div>
         <div>
           <div
-            class="css-18xfez7"
+            class="h-full max-w-md rounded-xl border border-gray-200 bg-gray-50 p-5 shadow-md"
           >
             <div
               class="css-1811skr"
@@ -1589,12 +1589,12 @@ For more information, please watch this video.
                 class="chakra-stack css-84zodg"
               >
                 <span
-                  class="css-1a3nkjg"
+                  class="text-gray-100 bg-cyan-400 whitespace-nowrap rounded-full px-2.5 py-0.5 text-sm font-medium"
                 >
                   double
                 </span>
                 <span
-                  class="css-1xuzaeu"
+                  class="text-gray-100 bg-pink-400 whitespace-nowrap rounded-full px-2.5 py-0.5 text-sm font-medium"
                 >
                   count up
                 </span>
@@ -1610,7 +1610,7 @@ Receive five points for every double you hit. 15 points available every 3darts; 
         </div>
         <div>
           <div
-            class="css-18xfez7"
+            class="h-full max-w-md rounded-xl border border-gray-200 bg-gray-50 p-5 shadow-md"
           >
             <div
               class="css-1811skr"
@@ -1628,12 +1628,12 @@ Receive five points for every double you hit. 15 points available every 3darts; 
                 class="chakra-stack css-84zodg"
               >
                 <span
-                  class="css-1a3nkjg"
+                  class="text-gray-100 bg-cyan-400 whitespace-nowrap rounded-full px-2.5 py-0.5 text-sm font-medium"
                 >
                   double
                 </span>
                 <span
-                  class="css-1npzaxy"
+                  class="text-gray-100 bg-orange-400 whitespace-nowrap rounded-full px-2.5 py-0.5 text-sm font-medium"
                 >
                   finish
                 </span>
@@ -1649,7 +1649,7 @@ Receive five points every time you finish 32, 15poits available every 3 darts; 3
         </div>
         <div>
           <div
-            class="css-18xfez7"
+            class="h-full max-w-md rounded-xl border border-gray-200 bg-gray-50 p-5 shadow-md"
           >
             <div
               class="css-1811skr"
@@ -1667,12 +1667,12 @@ Receive five points every time you finish 32, 15poits available every 3 darts; 3
                 class="chakra-stack css-84zodg"
               >
                 <span
-                  class="css-1a3nkjg"
+                  class="text-gray-100 bg-cyan-400 whitespace-nowrap rounded-full px-2.5 py-0.5 text-sm font-medium"
                 >
                   double
                 </span>
                 <span
-                  class="css-1npzaxy"
+                  class="text-gray-100 bg-orange-400 whitespace-nowrap rounded-full px-2.5 py-0.5 text-sm font-medium"
                 >
                   finish
                 </span>
@@ -1688,7 +1688,7 @@ Receive five points every time you finish 40. 15 points available every 3darts, 
         </div>
         <div>
           <div
-            class="css-18xfez7"
+            class="h-full max-w-md rounded-xl border border-gray-200 bg-gray-50 p-5 shadow-md"
           >
             <div
               class="css-1811skr"
@@ -1706,12 +1706,12 @@ Receive five points every time you finish 40. 15 points available every 3darts, 
                 class="chakra-stack css-84zodg"
               >
                 <span
-                  class="css-1a3nkjg"
+                  class="text-gray-100 bg-cyan-400 whitespace-nowrap rounded-full px-2.5 py-0.5 text-sm font-medium"
                 >
                   double
                 </span>
                 <span
-                  class="css-1npzaxy"
+                  class="text-gray-100 bg-orange-400 whitespace-nowrap rounded-full px-2.5 py-0.5 text-sm font-medium"
                 >
                   finish
                 </span>
@@ -1727,7 +1727,7 @@ Receive 15 points for every finish you complete. 15 points available every 3 dar
         </div>
         <div>
           <div
-            class="css-18xfez7"
+            class="h-full max-w-md rounded-xl border border-gray-200 bg-gray-50 p-5 shadow-md"
           >
             <div
               class="css-1811skr"
@@ -1745,12 +1745,12 @@ Receive 15 points for every finish you complete. 15 points available every 3 dar
                 class="chakra-stack css-84zodg"
               >
                 <span
-                  class="css-1a3nkjg"
+                  class="text-gray-100 bg-cyan-400 whitespace-nowrap rounded-full px-2.5 py-0.5 text-sm font-medium"
                 >
                   double
                 </span>
                 <span
-                  class="css-1npzaxy"
+                  class="text-gray-100 bg-orange-400 whitespace-nowrap rounded-full px-2.5 py-0.5 text-sm font-medium"
                 >
                   finish
                 </span>
@@ -1766,7 +1766,7 @@ Receive 15 points for every finish you complete. 15 points available every 3 dar
         </div>
         <div>
           <div
-            class="css-18xfez7"
+            class="h-full max-w-md rounded-xl border border-gray-200 bg-gray-50 p-5 shadow-md"
           >
             <div
               class="css-1811skr"
@@ -1784,12 +1784,12 @@ Receive 15 points for every finish you complete. 15 points available every 3 dar
                 class="chakra-stack css-84zodg"
               >
                 <span
-                  class="css-1a3nkjg"
+                  class="text-gray-100 bg-cyan-400 whitespace-nowrap rounded-full px-2.5 py-0.5 text-sm font-medium"
                 >
                   double
                 </span>
                 <span
-                  class="css-1npzaxy"
+                  class="text-gray-100 bg-orange-400 whitespace-nowrap rounded-full px-2.5 py-0.5 text-sm font-medium"
                 >
                   finish
                 </span>
@@ -1805,7 +1805,7 @@ Receive ten points every time you complete the finish and a ten-point bonus if y
         </div>
         <div>
           <div
-            class="css-18xfez7"
+            class="h-full max-w-md rounded-xl border border-gray-200 bg-gray-50 p-5 shadow-md"
           >
             <div
               class="css-1811skr"
@@ -1823,12 +1823,12 @@ Receive ten points every time you complete the finish and a ten-point bonus if y
                 class="chakra-stack css-84zodg"
               >
                 <span
-                  class="css-1a3nkjg"
+                  class="text-gray-100 bg-cyan-400 whitespace-nowrap rounded-full px-2.5 py-0.5 text-sm font-medium"
                 >
                   double
                 </span>
                 <span
-                  class="css-1npzaxy"
+                  class="text-gray-100 bg-orange-400 whitespace-nowrap rounded-full px-2.5 py-0.5 text-sm font-medium"
                 >
                   finish
                 </span>
@@ -1845,7 +1845,7 @@ Receive ten points for every finish you complete and a ten point bonus for first
         </div>
         <div>
           <div
-            class="css-18xfez7"
+            class="h-full max-w-md rounded-xl border border-gray-200 bg-gray-50 p-5 shadow-md"
           >
             <div
               class="css-1811skr"
@@ -1863,12 +1863,12 @@ Receive ten points for every finish you complete and a ten point bonus for first
                 class="chakra-stack css-84zodg"
               >
                 <span
-                  class="css-1a3nkjg"
+                  class="text-gray-100 bg-cyan-400 whitespace-nowrap rounded-full px-2.5 py-0.5 text-sm font-medium"
                 >
                   double
                 </span>
                 <span
-                  class="css-1npzaxy"
+                  class="text-gray-100 bg-orange-400 whitespace-nowrap rounded-full px-2.5 py-0.5 text-sm font-medium"
                 >
                   finish
                 </span>
@@ -1885,7 +1885,7 @@ Receive ten points for every finish you complete and ten point bonuses for two d
         </div>
         <div>
           <div
-            class="css-18xfez7"
+            class="h-full max-w-md rounded-xl border border-gray-200 bg-gray-50 p-5 shadow-md"
           >
             <div
               class="css-1811skr"
@@ -1903,12 +1903,12 @@ Receive ten points for every finish you complete and ten point bonuses for two d
                 class="chakra-stack css-84zodg"
               >
                 <span
-                  class="css-1a3nkjg"
+                  class="text-gray-100 bg-cyan-400 whitespace-nowrap rounded-full px-2.5 py-0.5 text-sm font-medium"
                 >
                   double
                 </span>
                 <span
-                  class="css-1npzaxy"
+                  class="text-gray-100 bg-orange-400 whitespace-nowrap rounded-full px-2.5 py-0.5 text-sm font-medium"
                 >
                   finish
                 </span>
@@ -1925,7 +1925,7 @@ Receive ten points every time you take out the combination. Ten points bonuses f
         </div>
         <div>
           <div
-            class="css-18xfez7"
+            class="h-full max-w-md rounded-xl border border-gray-200 bg-gray-50 p-5 shadow-md"
           >
             <div
               class="css-1811skr"
@@ -1943,12 +1943,12 @@ Receive ten points every time you take out the combination. Ten points bonuses f
                 class="chakra-stack css-84zodg"
               >
                 <span
-                  class="css-17jv3ny"
+                  class="text-gray-100 bg-green-400 whitespace-nowrap rounded-full px-2.5 py-0.5 text-sm font-medium"
                 >
                   19
                 </span>
                 <span
-                  class="css-1xuzaeu"
+                  class="text-gray-100 bg-pink-400 whitespace-nowrap rounded-full px-2.5 py-0.5 text-sm font-medium"
                 >
                   count up
                 </span>
@@ -1965,7 +1965,7 @@ You receive no points for a dart which lands outside of the treble or single 19 
         </div>
         <div>
           <div
-            class="css-18xfez7"
+            class="h-full max-w-md rounded-xl border border-gray-200 bg-gray-50 p-5 shadow-md"
           >
             <div
               class="css-1811skr"
@@ -1983,12 +1983,12 @@ You receive no points for a dart which lands outside of the treble or single 19 
                 class="chakra-stack css-84zodg"
               >
                 <span
-                  class="css-fc73fl"
+                  class="text-gray-100 bg-blue-400 whitespace-nowrap rounded-full px-2.5 py-0.5 text-sm font-medium"
                 >
                   BULL
                 </span>
                 <span
-                  class="css-1xuzaeu"
+                  class="text-gray-100 bg-pink-400 whitespace-nowrap rounded-full px-2.5 py-0.5 text-sm font-medium"
                 >
                   count up
                 </span>
@@ -2004,7 +2004,7 @@ You receive no points for a dart which lands outside of the treble or single 19 
         </div>
         <div>
           <div
-            class="css-18xfez7"
+            class="h-full max-w-md rounded-xl border border-gray-200 bg-gray-50 p-5 shadow-md"
           >
             <div
               class="css-1811skr"
@@ -2022,12 +2022,12 @@ You receive no points for a dart which lands outside of the treble or single 19 
                 class="chakra-stack css-84zodg"
               >
                 <span
-                  class="css-17jv3ny"
+                  class="text-gray-100 bg-green-400 whitespace-nowrap rounded-full px-2.5 py-0.5 text-sm font-medium"
                 >
                   20
                 </span>
                 <span
-                  class="css-1xuzaeu"
+                  class="text-gray-100 bg-pink-400 whitespace-nowrap rounded-full px-2.5 py-0.5 text-sm font-medium"
                 >
                   count up
                 </span>
@@ -2043,7 +2043,7 @@ You receive no points for a dart which lands outside of the treble or single 20 
         </div>
         <div>
           <div
-            class="css-18xfez7"
+            class="h-full max-w-md rounded-xl border border-gray-200 bg-gray-50 p-5 shadow-md"
           >
             <div
               class="css-1811skr"
@@ -2061,27 +2061,27 @@ You receive no points for a dart which lands outside of the treble or single 20 
                 class="chakra-stack css-84zodg"
               >
                 <span
-                  class="css-1a3nkjg"
+                  class="text-gray-100 bg-cyan-400 whitespace-nowrap rounded-full px-2.5 py-0.5 text-sm font-medium"
                 >
                   double
                 </span>
                 <span
-                  class="css-fkp1lw"
+                  class="text-gray-100 bg-cyan-600 whitespace-nowrap rounded-full px-2.5 py-0.5 text-sm font-medium"
                 >
                   single
                 </span>
                 <span
-                  class="css-p7n5d0"
+                  class="text-gray-100 bg-cyan-800 whitespace-nowrap rounded-full px-2.5 py-0.5 text-sm font-medium"
                 >
                   master
                 </span>
                 <span
-                  class="css-1npzaxy"
+                  class="text-gray-100 bg-orange-400 whitespace-nowrap rounded-full px-2.5 py-0.5 text-sm font-medium"
                 >
                   finish
                 </span>
                 <span
-                  class="css-ttmz6"
+                  class="text-gray-100 bg-purple-400 whitespace-nowrap rounded-full px-2.5 py-0.5 text-sm font-medium"
                 >
                   simulation
                 </span>
@@ -2097,7 +2097,7 @@ The simulation mode must include the specified range of deviations.
         </div>
         <div>
           <div
-            class="css-18xfez7"
+            class="h-full max-w-md rounded-xl border border-gray-200 bg-gray-50 p-5 shadow-md"
           >
             <div
               class="css-1811skr"
@@ -2115,7 +2115,7 @@ The simulation mode must include the specified range of deviations.
                 class="chakra-stack css-84zodg"
               >
                 <span
-                  class="css-1xuzaeu"
+                  class="text-gray-100 bg-pink-400 whitespace-nowrap rounded-full px-2.5 py-0.5 text-sm font-medium"
                 >
                   count up
                 </span>
