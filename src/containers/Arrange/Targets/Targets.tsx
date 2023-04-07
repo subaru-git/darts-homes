@@ -11,7 +11,7 @@ const Targets: FC<TargetsProps> = ({ count, targets, isFinished = false }) => {
     const t = isFinished ? targets : targets.slice(0, -1);
     return new Array(count).fill(' - ').map((_, i) => t[i] ?? '-');
   };
-  const templateColumns = `grid-cols-[15px_repeat(${count},_27px)_15px] md:grid-cols-[20px_repeat(${count},_38px)_20px]`;
+  const templateColumns = `grid-cols-[15px_repeat(8,_27px)_15px] md:grid-cols-[20px_repeat(8,_38px)_20px]`;
   return (
     <div className={`grid gap-1 text-center ${templateColumns}`}>
       <span className='text-sm font-bold text-gray-500 md:text-lg'>{'['}</span>
