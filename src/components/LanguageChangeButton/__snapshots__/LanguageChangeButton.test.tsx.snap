@@ -42,24 +42,22 @@ exports[`should rendering 1`] = `
       tabindex="-1"
     >
       <div
-        class="css-1pv49ma"
-        role="group"
+        class="group block rounded-md p-2 hover:bg-pink-50"
       >
-        <p
-          class="chakra-text css-1hb0olr"
+        <span
+          class="group-hover:text-pink-400 group-hover:transition-all group-hover:duration-150 group-hover:ease-linear"
         >
           日本語
-        </p>
+        </span>
       </div>
       <div
-        class="css-1pv49ma"
-        role="group"
+        class="group block rounded-md p-2 hover:bg-pink-50"
       >
-        <p
-          class="chakra-text css-1hb0olr"
+        <span
+          class="group-hover:text-pink-400 group-hover:transition-all group-hover:duration-150 group-hover:ease-linear"
         >
           English
-        </p>
+        </span>
       </div>
     </section>
   </div>

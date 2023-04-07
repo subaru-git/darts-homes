@@ -3,39 +3,33 @@
 exports[`should rendering 1`] = `
 <div>
   <div
-    class="css-1c5y0hl"
+    class="max-h-[300px] overflow-y-auto"
   >
-    <div
-      class="chakra-table__container css-zipzvv"
+    <table
+      class="w-full table-fixed"
     >
-      <table
-        class="chakra-table css-0"
-      >
-        <tbody
-          class="css-0"
+      <tbody>
+        <tr
+          class="border-b py-2"
         >
-          <tr
-            class="css-0"
+          <td
+            class="py-2 text-center font-semibold italic text-gray-500"
           >
-            <td
-              class="css-0"
-            >
-              T20
-            </td>
-            <td
-              class="css-0"
-            >
-              T19
-            </td>
-            <td
-              class="css-0"
-            >
-              T18
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+            T20
+          </td>
+          <td
+            class="py-2 text-center font-semibold italic text-gray-500"
+          >
+            T19
+          </td>
+          <td
+            class="py-2 text-center font-semibold italic text-gray-500"
+          >
+            T18
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
 `;

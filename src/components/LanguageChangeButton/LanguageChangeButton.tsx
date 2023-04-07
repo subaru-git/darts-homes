@@ -1,13 +1,5 @@
 import React, { FC } from 'react';
-import {
-  IconButton,
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-  Text,
-  useColorModeValue,
-  Box,
-} from '@chakra-ui/react';
+import { IconButton, Popover, PopoverContent, PopoverTrigger } from '@chakra-ui/react';
 import Link from 'next/link';
 import { IoLanguage } from 'react-icons/io5';
 
@@ -19,30 +11,18 @@ const LanguageChangeButton: FC = () => {
       </PopoverTrigger>
       <PopoverContent>
         <Link href={'/'} locale={'ja'} passHref>
-          <Box
-            role={'group'}
-            display={'block'}
-            p={2}
-            rounded={'md'}
-            _hover={{ bg: useColorModeValue('pink.50', 'gray.900') }}
-          >
-            <Text transition={'all .3s ease'} _groupHover={{ color: 'pink.400' }} fontWeight={500}>
+          <div className='group block rounded-md p-2 hover:bg-pink-50'>
+            <span className='group-hover:text-pink-400 group-hover:transition-all group-hover:duration-150 group-hover:ease-linear'>
               日本語
-            </Text>
-          </Box>
+            </span>
+          </div>
         </Link>
         <Link href={'/'} locale={'en'} passHref>
-          <Box
-            role={'group'}
-            display={'block'}
-            p={2}
-            rounded={'md'}
-            _hover={{ bg: useColorModeValue('pink.50', 'gray.900') }}
-          >
-            <Text transition={'all .3s ease'} _groupHover={{ color: 'pink.400' }} fontWeight={500}>
+          <div className='group block rounded-md p-2 hover:bg-pink-50'>
+            <span className='group-hover:text-pink-400 group-hover:transition-all group-hover:duration-150 group-hover:ease-linear'>
               English
-            </Text>
-          </Box>
+            </span>
+          </div>
         </Link>
       </PopoverContent>
     </Popover>

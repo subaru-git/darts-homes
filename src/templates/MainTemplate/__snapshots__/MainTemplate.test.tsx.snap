@@ -6,28 +6,26 @@ exports[`should rendering 1`] = `
     data-cy=""
   >
     <header
-      class="css-1wuf7qn"
+      class="z-[200] w-full md:fixed"
     >
       <div
-        class="css-1v5zkfs"
+        class="flex min-h-[60px] items-center border-b-[1px] border-solid border-gray-200 bg-white py-2 px-4 text-gray-600"
       >
         <div
-          class="css-1twb9xo"
+          class="-ml-2 flex flex-1 md:hidden md:flex-auto"
         >
           <button
             aria-label="toggle navigation"
-            class="chakra-button css-13zvu4r"
+            class="text-gray-600 bg-transparent hover:text-gray-400 p-0 focus:ring-0 disabled:opacity-50 m-auto inline-flex items-center rounded-full p-2.5 text-center text-sm font-medium focus:outline-none focus:ring-4 disabled:cursor-not-allowed"
             type="button"
           >
             <svg
-              aria-hidden="true"
               fill="currentColor"
-              focusable="false"
-              height="1em"
+              height="18"
               stroke="currentColor"
               stroke-width="0"
               viewBox="0 0 512 512"
-              width="1em"
+              width="18"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -37,35 +35,47 @@ exports[`should rendering 1`] = `
           </button>
         </div>
         <div
-          class="css-1h98wyk"
+          class="flex flex-auto justify-center md:justify-start"
         >
-          <div
-            class="css-8fa26g"
+          <a
+            class="flex items-center"
+            href="/"
           >
-            <a
-              href="/"
+            <span
+              style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
             >
+              <span
+                style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+              >
+                <img
+                  alt=""
+                  aria-hidden="true"
+                  src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27200%27%20height=%2740%27/%3e"
+                  style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                />
+              </span>
               <img
                 alt="darts homes logo"
-                class="chakra-image css-1kil0uo"
-                src="/logo.svg"
+                data-nimg="intrinsic"
+                decoding="async"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
               />
-            </a>
-          </div>
+              <noscript />
+            </span>
+          </a>
           <div
-            class="css-1ynfsgs"
+            class="ml-10 hidden md:flex"
           >
             <div
-              class="chakra-stack css-a9v878"
+              class="flex flex-row items-center gap-4"
             >
-              <div
-                class="css-0"
-              >
+              <div>
                 <div
                   aria-controls="popover-content-:r2:"
                   aria-expanded="false"
                   aria-haspopup="dialog"
-                  class="css-13fflh2"
+                  class="p-2 text-sm font-medium text-gray-500 hover:text-gray-800"
                   id="popover-trigger-:r2:"
                 >
                   <a
@@ -86,45 +96,41 @@ exports[`should rendering 1`] = `
                     tabindex="-1"
                   >
                     <div
-                      class="chakra-stack css-i4eu2s"
+                      class="max-h-[80vh] overflow-y-scroll"
                     >
                       <div
-                        class="css-1rc82uo"
-                        role="group"
+                        class="group rounded-md p-2 hover:bg-pink-50"
                       >
                         <a
                           aria-label="Eagle's Eye"
                           href="/eagleseye"
                         >
                           <div
-                            class="chakra-stack css-84zodg"
+                            class="flex flex-row items-center"
                           >
-                            <div
-                              class="css-0"
-                            >
+                            <div>
                               <p
-                                class="chakra-text css-sc37ud"
+                                class="font-medium text-gray-600 transition-all duration-300 group-hover:text-pink-400"
                               >
                                 Eagle's Eye
                               </p>
                               <p
-                                class="chakra-text css-itvw0n"
+                                class="text-sm"
                               >
                                 BULL only count up
                               </p>
                             </div>
                             <div
-                              class="css-2gz105"
+                              class="flex flex-1 -translate-x-3 justify-end opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100"
                             >
                               <svg
-                                class="chakra-icon css-swb7g"
+                                class="text-pink-400"
                                 fill="currentColor"
-                                focusable="false"
-                                height="1em"
+                                height="20"
                                 stroke="currentColor"
                                 stroke-width="0"
                                 viewBox="0 0 8 16"
-                                width="1em"
+                                width="20"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
@@ -137,42 +143,38 @@ exports[`should rendering 1`] = `
                         </a>
                       </div>
                       <div
-                        class="css-1rc82uo"
-                        role="group"
+                        class="group rounded-md p-2 hover:bg-pink-50"
                       >
                         <a
                           aria-label="Cricket Mark-Up"
                           href="/cricketmarkup"
                         >
                           <div
-                            class="chakra-stack css-84zodg"
+                            class="flex flex-row items-center"
                           >
-                            <div
-                              class="css-0"
-                            >
+                            <div>
                               <p
-                                class="chakra-text css-sc37ud"
+                                class="font-medium text-gray-600 transition-all duration-300 group-hover:text-pink-400"
                               >
                                 Cricket Mark-Up
                               </p>
                               <p
-                                class="chakra-text css-itvw0n"
+                                class="text-sm"
                               >
                                 Darts training game by "Kikuchi Yamaguchi"
                               </p>
                             </div>
                             <div
-                              class="css-2gz105"
+                              class="flex flex-1 -translate-x-3 justify-end opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100"
                             >
                               <svg
-                                class="chakra-icon css-swb7g"
+                                class="text-pink-400"
                                 fill="currentColor"
-                                focusable="false"
-                                height="1em"
+                                height="20"
                                 stroke="currentColor"
                                 stroke-width="0"
                                 viewBox="0 0 8 16"
-                                width="1em"
+                                width="20"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
@@ -185,42 +187,38 @@ exports[`should rendering 1`] = `
                         </a>
                       </div>
                       <div
-                        class="css-1rc82uo"
-                        role="group"
+                        class="group rounded-md p-2 hover:bg-pink-50"
                       >
                         <a
                           aria-label="Double Trouble"
                           href="/doubletrouble"
                         >
                           <div
-                            class="chakra-stack css-84zodg"
+                            class="flex flex-row items-center"
                           >
-                            <div
-                              class="css-0"
-                            >
+                            <div>
                               <p
-                                class="chakra-text css-sc37ud"
+                                class="font-medium text-gray-600 transition-all duration-300 group-hover:text-pink-400"
                               >
                                 Double Trouble
                               </p>
                               <p
-                                class="chakra-text css-itvw0n"
+                                class="text-sm"
                               >
                                 Double practice game
                               </p>
                             </div>
                             <div
-                              class="css-2gz105"
+                              class="flex flex-1 -translate-x-3 justify-end opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100"
                             >
                               <svg
-                                class="chakra-icon css-swb7g"
+                                class="text-pink-400"
                                 fill="currentColor"
-                                focusable="false"
-                                height="1em"
+                                height="20"
                                 stroke="currentColor"
                                 stroke-width="0"
                                 viewBox="0 0 8 16"
-                                width="1em"
+                                width="20"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
@@ -233,42 +231,38 @@ exports[`should rendering 1`] = `
                         </a>
                       </div>
                       <div
-                        class="css-1rc82uo"
-                        role="group"
+                        class="group rounded-md p-2 hover:bg-pink-50"
                       >
                         <a
                           aria-label="Sweet 16"
                           href="/sweet16"
                         >
                           <div
-                            class="chakra-stack css-84zodg"
+                            class="flex flex-row items-center"
                           >
-                            <div
-                              class="css-0"
-                            >
+                            <div>
                               <p
-                                class="chakra-text css-sc37ud"
+                                class="font-medium text-gray-600 transition-all duration-300 group-hover:text-pink-400"
                               >
                                 Sweet 16
                               </p>
                               <p
-                                class="chakra-text css-itvw0n"
+                                class="text-sm"
                               >
                                 32 double out practice game
                               </p>
                             </div>
                             <div
-                              class="css-2gz105"
+                              class="flex flex-1 -translate-x-3 justify-end opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100"
                             >
                               <svg
-                                class="chakra-icon css-swb7g"
+                                class="text-pink-400"
                                 fill="currentColor"
-                                focusable="false"
-                                height="1em"
+                                height="20"
                                 stroke="currentColor"
                                 stroke-width="0"
                                 viewBox="0 0 8 16"
-                                width="1em"
+                                width="20"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
@@ -281,42 +275,38 @@ exports[`should rendering 1`] = `
                         </a>
                       </div>
                       <div
-                        class="css-1rc82uo"
-                        role="group"
+                        class="group rounded-md p-2 hover:bg-pink-50"
                       >
                         <a
                           aria-label="Tops and Tens"
                           href="/topsandtens"
                         >
                           <div
-                            class="chakra-stack css-84zodg"
+                            class="flex flex-row items-center"
                           >
-                            <div
-                              class="css-0"
-                            >
+                            <div>
                               <p
-                                class="chakra-text css-sc37ud"
+                                class="font-medium text-gray-600 transition-all duration-300 group-hover:text-pink-400"
                               >
                                 Tops and Tens
                               </p>
                               <p
-                                class="chakra-text css-itvw0n"
+                                class="text-sm"
                               >
                                 40 double out practice game
                               </p>
                             </div>
                             <div
-                              class="css-2gz105"
+                              class="flex flex-1 -translate-x-3 justify-end opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100"
                             >
                               <svg
-                                class="chakra-icon css-swb7g"
+                                class="text-pink-400"
                                 fill="currentColor"
-                                focusable="false"
-                                height="1em"
+                                height="20"
                                 stroke="currentColor"
                                 stroke-width="0"
                                 viewBox="0 0 8 16"
-                                width="1em"
+                                width="20"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
@@ -329,42 +319,38 @@ exports[`should rendering 1`] = `
                         </a>
                       </div>
                       <div
-                        class="css-1rc82uo"
-                        role="group"
+                        class="group rounded-md p-2 hover:bg-pink-50"
                       >
                         <a
                           aria-label="Two-Dart Combinations"
                           href="/twodartcombinations"
                         >
                           <div
-                            class="chakra-stack css-84zodg"
+                            class="flex flex-row items-center"
                           >
-                            <div
-                              class="css-0"
-                            >
+                            <div>
                               <p
-                                class="chakra-text css-sc37ud"
+                                class="font-medium text-gray-600 transition-all duration-300 group-hover:text-pink-400"
                               >
                                 Two-Dart Combinations
                               </p>
                               <p
-                                class="chakra-text css-itvw0n"
+                                class="text-sm"
                               >
                                 Two darts double out practice game
                               </p>
                             </div>
                             <div
-                              class="css-2gz105"
+                              class="flex flex-1 -translate-x-3 justify-end opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100"
                             >
                               <svg
-                                class="chakra-icon css-swb7g"
+                                class="text-pink-400"
                                 fill="currentColor"
-                                focusable="false"
-                                height="1em"
+                                height="20"
                                 stroke="currentColor"
                                 stroke-width="0"
                                 viewBox="0 0 8 16"
-                                width="1em"
+                                width="20"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
@@ -377,42 +363,38 @@ exports[`should rendering 1`] = `
                         </a>
                       </div>
                       <div
-                        class="css-1rc82uo"
-                        role="group"
+                        class="group rounded-md p-2 hover:bg-pink-50"
                       >
                         <a
                           aria-label="Around The Compass"
                           href="/aroundthecompass"
                         >
                           <div
-                            class="chakra-stack css-84zodg"
+                            class="flex flex-row items-center"
                           >
-                            <div
-                              class="css-0"
-                            >
+                            <div>
                               <p
-                                class="chakra-text css-sc37ud"
+                                class="font-medium text-gray-600 transition-all duration-300 group-hover:text-pink-400"
                               >
                                 Around The Compass
                               </p>
                               <p
-                                class="chakra-text css-itvw0n"
+                                class="text-sm"
                               >
                                 24 double out practice game
                               </p>
                             </div>
                             <div
-                              class="css-2gz105"
+                              class="flex flex-1 -translate-x-3 justify-end opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100"
                             >
                               <svg
-                                class="chakra-icon css-swb7g"
+                                class="text-pink-400"
                                 fill="currentColor"
-                                focusable="false"
-                                height="1em"
+                                height="20"
                                 stroke="currentColor"
                                 stroke-width="0"
                                 viewBox="0 0 8 16"
-                                width="1em"
+                                width="20"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
@@ -425,42 +407,38 @@ exports[`should rendering 1`] = `
                         </a>
                       </div>
                       <div
-                        class="css-1rc82uo"
-                        role="group"
+                        class="group rounded-md p-2 hover:bg-pink-50"
                       >
                         <a
                           aria-label="Tons Up"
                           href="/tonsup"
                         >
                           <div
-                            class="chakra-stack css-84zodg"
+                            class="flex flex-row items-center"
                           >
-                            <div
-                              class="css-0"
-                            >
+                            <div>
                               <p
-                                class="chakra-text css-sc37ud"
+                                class="font-medium text-gray-600 transition-all duration-300 group-hover:text-pink-400"
                               >
                                 Tons Up
                               </p>
                               <p
-                                class="chakra-text css-itvw0n"
+                                class="text-sm"
                               >
                                 100 double out practice game
                               </p>
                             </div>
                             <div
-                              class="css-2gz105"
+                              class="flex flex-1 -translate-x-3 justify-end opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100"
                             >
                               <svg
-                                class="chakra-icon css-swb7g"
+                                class="text-pink-400"
                                 fill="currentColor"
-                                focusable="false"
-                                height="1em"
+                                height="20"
                                 stroke="currentColor"
                                 stroke-width="0"
                                 viewBox="0 0 8 16"
-                                width="1em"
+                                width="20"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
@@ -473,42 +451,38 @@ exports[`should rendering 1`] = `
                         </a>
                       </div>
                       <div
-                        class="css-1rc82uo"
-                        role="group"
+                        class="group rounded-md p-2 hover:bg-pink-50"
                       >
                         <a
                           aria-label="Route 64"
                           href="/route64"
                         >
                           <div
-                            class="chakra-stack css-84zodg"
+                            class="flex flex-row items-center"
                           >
-                            <div
-                              class="css-0"
-                            >
+                            <div>
                               <p
-                                class="chakra-text css-sc37ud"
+                                class="font-medium text-gray-600 transition-all duration-300 group-hover:text-pink-400"
                               >
                                 Route 64
                               </p>
                               <p
-                                class="chakra-text css-itvw0n"
+                                class="text-sm"
                               >
                                 64 double out practice game
                               </p>
                             </div>
                             <div
-                              class="css-2gz105"
+                              class="flex flex-1 -translate-x-3 justify-end opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100"
                             >
                               <svg
-                                class="chakra-icon css-swb7g"
+                                class="text-pink-400"
                                 fill="currentColor"
-                                focusable="false"
-                                height="1em"
+                                height="20"
                                 stroke="currentColor"
                                 stroke-width="0"
                                 viewBox="0 0 8 16"
-                                width="1em"
+                                width="20"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
@@ -521,42 +495,38 @@ exports[`should rendering 1`] = `
                         </a>
                       </div>
                       <div
-                        class="css-1rc82uo"
-                        role="group"
+                        class="group rounded-md p-2 hover:bg-pink-50"
                       >
                         <a
                           aria-label="Eighty Threw"
                           href="/eightythrew"
                         >
                           <div
-                            class="chakra-stack css-84zodg"
+                            class="flex flex-row items-center"
                           >
-                            <div
-                              class="css-0"
-                            >
+                            <div>
                               <p
-                                class="chakra-text css-sc37ud"
+                                class="font-medium text-gray-600 transition-all duration-300 group-hover:text-pink-400"
                               >
                                 Eighty Threw
                               </p>
                               <p
-                                class="chakra-text css-itvw0n"
+                                class="text-sm"
                               >
                                 82 double out practice game
                               </p>
                             </div>
                             <div
-                              class="css-2gz105"
+                              class="flex flex-1 -translate-x-3 justify-end opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100"
                             >
                               <svg
-                                class="chakra-icon css-swb7g"
+                                class="text-pink-400"
                                 fill="currentColor"
-                                focusable="false"
-                                height="1em"
+                                height="20"
                                 stroke="currentColor"
                                 stroke-width="0"
                                 viewBox="0 0 8 16"
-                                width="1em"
+                                width="20"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
@@ -569,42 +539,38 @@ exports[`should rendering 1`] = `
                         </a>
                       </div>
                       <div
-                        class="css-1rc82uo"
-                        role="group"
+                        class="group rounded-md p-2 hover:bg-pink-50"
                       >
                         <a
                           aria-label="Shanghai Nights"
                           href="/shanghainights"
                         >
                           <div
-                            class="chakra-stack css-84zodg"
+                            class="flex flex-row items-center"
                           >
-                            <div
-                              class="css-0"
-                            >
+                            <div>
                               <p
-                                class="chakra-text css-sc37ud"
+                                class="font-medium text-gray-600 transition-all duration-300 group-hover:text-pink-400"
                               >
                                 Shanghai Nights
                               </p>
                               <p
-                                class="chakra-text css-itvw0n"
+                                class="text-sm"
                               >
                                 120 double out practice game
                               </p>
                             </div>
                             <div
-                              class="css-2gz105"
+                              class="flex flex-1 -translate-x-3 justify-end opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100"
                             >
                               <svg
-                                class="chakra-icon css-swb7g"
+                                class="text-pink-400"
                                 fill="currentColor"
-                                focusable="false"
-                                height="1em"
+                                height="20"
                                 stroke="currentColor"
                                 stroke-width="0"
                                 viewBox="0 0 8 16"
-                                width="1em"
+                                width="20"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
@@ -617,42 +583,38 @@ exports[`should rendering 1`] = `
                         </a>
                       </div>
                       <div
-                        class="css-1rc82uo"
-                        role="group"
+                        class="group rounded-md p-2 hover:bg-pink-50"
                       >
                         <a
                           aria-label="Switch Hitter"
                           href="/switchhitter"
                         >
                           <div
-                            class="chakra-stack css-84zodg"
+                            class="flex flex-row items-center"
                           >
-                            <div
-                              class="css-0"
-                            >
+                            <div>
                               <p
-                                class="chakra-text css-sc37ud"
+                                class="font-medium text-gray-600 transition-all duration-300 group-hover:text-pink-400"
                               >
                                 Switch Hitter
                               </p>
                               <p
-                                class="chakra-text css-itvw0n"
+                                class="text-sm"
                               >
                                 19 practice game
                               </p>
                             </div>
                             <div
-                              class="css-2gz105"
+                              class="flex flex-1 -translate-x-3 justify-end opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100"
                             >
                               <svg
-                                class="chakra-icon css-swb7g"
+                                class="text-pink-400"
                                 fill="currentColor"
-                                focusable="false"
-                                height="1em"
+                                height="20"
                                 stroke="currentColor"
                                 stroke-width="0"
                                 viewBox="0 0 8 16"
-                                width="1em"
+                                width="20"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
@@ -665,42 +627,38 @@ exports[`should rendering 1`] = `
                         </a>
                       </div>
                       <div
-                        class="css-1rc82uo"
-                        role="group"
+                        class="group rounded-md p-2 hover:bg-pink-50"
                       >
                         <a
                           aria-label="Bully Bully"
                           href="/bullybully"
                         >
                           <div
-                            class="chakra-stack css-84zodg"
+                            class="flex flex-row items-center"
                           >
-                            <div
-                              class="css-0"
-                            >
+                            <div>
                               <p
-                                class="chakra-text css-sc37ud"
+                                class="font-medium text-gray-600 transition-all duration-300 group-hover:text-pink-400"
                               >
                                 Bully Bully
                               </p>
                               <p
-                                class="chakra-text css-itvw0n"
+                                class="text-sm"
                               >
                                 BULL practice game
                               </p>
                             </div>
                             <div
-                              class="css-2gz105"
+                              class="flex flex-1 -translate-x-3 justify-end opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100"
                             >
                               <svg
-                                class="chakra-icon css-swb7g"
+                                class="text-pink-400"
                                 fill="currentColor"
-                                focusable="false"
-                                height="1em"
+                                height="20"
                                 stroke="currentColor"
                                 stroke-width="0"
                                 viewBox="0 0 8 16"
-                                width="1em"
+                                width="20"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
@@ -713,42 +671,38 @@ exports[`should rendering 1`] = `
                         </a>
                       </div>
                       <div
-                        class="css-1rc82uo"
-                        role="group"
+                        class="group rounded-md p-2 hover:bg-pink-50"
                       >
                         <a
                           aria-label="Treble For Show"
                           href="/treblesforshow"
                         >
                           <div
-                            class="chakra-stack css-84zodg"
+                            class="flex flex-row items-center"
                           >
-                            <div
-                              class="css-0"
-                            >
+                            <div>
                               <p
-                                class="chakra-text css-sc37ud"
+                                class="font-medium text-gray-600 transition-all duration-300 group-hover:text-pink-400"
                               >
                                 Treble For Show
                               </p>
                               <p
-                                class="chakra-text css-itvw0n"
+                                class="text-sm"
                               >
                                 20 practice game
                               </p>
                             </div>
                             <div
-                              class="css-2gz105"
+                              class="flex flex-1 -translate-x-3 justify-end opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100"
                             >
                               <svg
-                                class="chakra-icon css-swb7g"
+                                class="text-pink-400"
                                 fill="currentColor"
-                                focusable="false"
-                                height="1em"
+                                height="20"
                                 stroke="currentColor"
                                 stroke-width="0"
                                 viewBox="0 0 8 16"
-                                width="1em"
+                                width="20"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
@@ -761,42 +715,38 @@ exports[`should rendering 1`] = `
                         </a>
                       </div>
                       <div
-                        class="css-1rc82uo"
-                        role="group"
+                        class="group rounded-md p-2 hover:bg-pink-50"
                       >
                         <a
                           aria-label="Arrange"
                           href="/arrange"
                         >
                           <div
-                            class="chakra-stack css-84zodg"
+                            class="flex flex-row items-center"
                           >
-                            <div
-                              class="css-0"
-                            >
+                            <div>
                               <p
-                                class="chakra-text css-sc37ud"
+                                class="font-medium text-gray-600 transition-all duration-300 group-hover:text-pink-400"
                               >
                                 Arrange
                               </p>
                               <p
-                                class="chakra-text css-itvw0n"
+                                class="text-sm"
                               >
                                 Arrange practice game
                               </p>
                             </div>
                             <div
-                              class="css-2gz105"
+                              class="flex flex-1 -translate-x-3 justify-end opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100"
                             >
                               <svg
-                                class="chakra-icon css-swb7g"
+                                class="text-pink-400"
                                 fill="currentColor"
-                                focusable="false"
-                                height="1em"
+                                height="20"
                                 stroke="currentColor"
                                 stroke-width="0"
                                 viewBox="0 0 8 16"
-                                width="1em"
+                                width="20"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
@@ -809,42 +759,38 @@ exports[`should rendering 1`] = `
                         </a>
                       </div>
                       <div
-                        class="css-1rc82uo"
-                        role="group"
+                        class="group rounded-md p-2 hover:bg-pink-50"
                       >
                         <a
                           aria-label="Count Up"
                           href="/countup"
                         >
                           <div
-                            class="chakra-stack css-84zodg"
+                            class="flex flex-row items-center"
                           >
-                            <div
-                              class="css-0"
-                            >
+                            <div>
                               <p
-                                class="chakra-text css-sc37ud"
+                                class="font-medium text-gray-600 transition-all duration-300 group-hover:text-pink-400"
                               >
                                 Count Up
                               </p>
                               <p
-                                class="chakra-text css-itvw0n"
+                                class="text-sm"
                               >
                                 count up game for steel darts
                               </p>
                             </div>
                             <div
-                              class="css-2gz105"
+                              class="flex flex-1 -translate-x-3 justify-end opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100"
                             >
                               <svg
-                                class="chakra-icon css-swb7g"
+                                class="text-pink-400"
                                 fill="currentColor"
-                                focusable="false"
-                                height="1em"
+                                height="20"
                                 stroke="currentColor"
                                 stroke-width="0"
                                 viewBox="0 0 8 16"
-                                width="1em"
+                                width="20"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
@@ -860,14 +806,12 @@ exports[`should rendering 1`] = `
                   </section>
                 </div>
               </div>
-              <div
-                class="css-0"
-              >
+              <div>
                 <div
                   aria-controls="popover-content-:r4:"
                   aria-expanded="false"
                   aria-haspopup="dialog"
-                  class="css-13fflh2"
+                  class="p-2 text-sm font-medium text-gray-500 hover:text-gray-800"
                   id="popover-trigger-:r4:"
                 >
                   <a
@@ -888,45 +832,41 @@ exports[`should rendering 1`] = `
                     tabindex="-1"
                   >
                     <div
-                      class="chakra-stack css-i4eu2s"
+                      class="max-h-[80vh] overflow-y-scroll"
                     >
                       <div
-                        class="css-1rc82uo"
-                        role="group"
+                        class="group rounded-md p-2 hover:bg-pink-50"
                       >
                         <a
                           aria-label="Arrange Record"
                           href="/arrangerecord"
                         >
                           <div
-                            class="chakra-stack css-84zodg"
+                            class="flex flex-row items-center"
                           >
-                            <div
-                              class="css-0"
-                            >
+                            <div>
                               <p
-                                class="chakra-text css-sc37ud"
+                                class="font-medium text-gray-600 transition-all duration-300 group-hover:text-pink-400"
                               >
                                 Arrange Record
                               </p>
                               <p
-                                class="chakra-text css-itvw0n"
+                                class="text-sm"
                               >
                                 Arrange record display
                               </p>
                             </div>
                             <div
-                              class="css-2gz105"
+                              class="flex flex-1 -translate-x-3 justify-end opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100"
                             >
                               <svg
-                                class="chakra-icon css-swb7g"
+                                class="text-pink-400"
                                 fill="currentColor"
-                                focusable="false"
-                                height="1em"
+                                height="20"
                                 stroke="currentColor"
                                 stroke-width="0"
                                 viewBox="0 0 8 16"
-                                width="1em"
+                                width="20"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
@@ -942,14 +882,12 @@ exports[`should rendering 1`] = `
                   </section>
                 </div>
               </div>
-              <div
-                class="css-0"
-              >
+              <div>
                 <div
                   aria-controls="popover-content-:r6:"
                   aria-expanded="false"
                   aria-haspopup="dialog"
-                  class="css-13fflh2"
+                  class="p-2 text-sm font-medium text-gray-500 hover:text-gray-800"
                   id="popover-trigger-:r6:"
                 >
                   <a
@@ -959,14 +897,12 @@ exports[`should rendering 1`] = `
                   </a>
                 </div>
               </div>
-              <div
-                class="css-0"
-              >
+              <div>
                 <div
                   aria-controls="popover-content-:r8:"
                   aria-expanded="false"
                   aria-haspopup="dialog"
-                  class="css-13fflh2"
+                  class="p-2 text-sm font-medium text-gray-500 hover:text-gray-800"
                   id="popover-trigger-:r8:"
                 >
                   <a
@@ -979,10 +915,10 @@ exports[`should rendering 1`] = `
             </div>
           </div>
           <div
-            class="css-17xejub"
+            class="flex-1"
           />
           <div
-            class="css-1k9efnl"
+            class="flex items-center gap-2"
           >
             <button
               aria-controls="popover-content-:ra:"
@@ -1021,26 +957,24 @@ exports[`should rendering 1`] = `
                 tabindex="-1"
               >
                 <div
-                  class="css-1rc82uo"
+                  class="group block rounded-md p-2 hover:bg-pink-50"
                   href="/"
-                  role="group"
                 >
-                  <p
-                    class="chakra-text css-sc37ud"
+                  <span
+                    class="group-hover:text-pink-400 group-hover:transition-all group-hover:duration-150 group-hover:ease-linear"
                   >
                     日本語
-                  </p>
+                  </span>
                 </div>
                 <div
-                  class="css-1rc82uo"
+                  class="group block rounded-md p-2 hover:bg-pink-50"
                   href="/"
-                  role="group"
                 >
-                  <p
-                    class="chakra-text css-sc37ud"
+                  <span
+                    class="group-hover:text-pink-400 group-hover:transition-all group-hover:duration-150 group-hover:ease-linear"
                   >
                     English
-                  </p>
+                  </span>
                 </div>
               </section>
             </div>
@@ -1263,29 +1197,26 @@ exports[`should rendering 1`] = `
         style="overflow: hidden; display: none; opacity: 0; height: 0px;"
       >
         <div
-          class="chakra-stack css-1lgh1g"
+          class="bg-white p-4"
         >
-          <div
-            class="chakra-stack css-egoftb"
-          >
+          <div>
             <div
-              class="css-lxmzlz"
+              class="flex flex-row items-center justify-between p-2"
               href="/#"
             >
-              <p
-                class="chakra-text css-9y4vnp"
+              <span
+                class="font-medium text-gray-600"
               >
                 Games
-              </p>
+              </span>
               <svg
-                class="chakra-icon css-q9erop"
+                class=" transition-all duration-200 ease-in-out"
                 fill="currentColor"
-                focusable="false"
-                height="1em"
+                height="20"
                 stroke="currentColor"
                 stroke-width="0"
                 viewBox="0 0 10 16"
-                width="1em"
+                width="20"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
@@ -1299,112 +1230,109 @@ exports[`should rendering 1`] = `
               style="overflow: hidden; display: none; opacity: 0; height: 0px;"
             >
               <div
-                class="chakra-stack css-11sp92w"
+                class="mt-2 border-l-2 border-gray-200 pl-4 text-start"
               >
                 <div
-                  class="css-1j1i25b"
+                  class="py-3"
                 >
                   Eagle's Eye
                 </div>
                 <div
-                  class="css-1j1i25b"
+                  class="py-3"
                 >
                   Cricket Mark-Up
                 </div>
                 <div
-                  class="css-1j1i25b"
+                  class="py-3"
                 >
                   Double Trouble
                 </div>
                 <div
-                  class="css-1j1i25b"
+                  class="py-3"
                 >
                   Sweet 16
                 </div>
                 <div
-                  class="css-1j1i25b"
+                  class="py-3"
                 >
                   Tops and Tens
                 </div>
                 <div
-                  class="css-1j1i25b"
+                  class="py-3"
                 >
                   Two-Dart Combinations
                 </div>
                 <div
-                  class="css-1j1i25b"
+                  class="py-3"
                 >
                   Around The Compass
                 </div>
                 <div
-                  class="css-1j1i25b"
+                  class="py-3"
                 >
                   Tons Up
                 </div>
                 <div
-                  class="css-1j1i25b"
+                  class="py-3"
                 >
                   Route 64
                 </div>
                 <div
-                  class="css-1j1i25b"
+                  class="py-3"
                 >
                   Eighty Threw
                 </div>
                 <div
-                  class="css-1j1i25b"
+                  class="py-3"
                 >
                   Shanghai Nights
                 </div>
                 <div
-                  class="css-1j1i25b"
+                  class="py-3"
                 >
                   Switch Hitter
                 </div>
                 <div
-                  class="css-1j1i25b"
+                  class="py-3"
                 >
                   Bully Bully
                 </div>
                 <div
-                  class="css-1j1i25b"
+                  class="py-3"
                 >
                   Treble For Show
                 </div>
                 <div
-                  class="css-1j1i25b"
+                  class="py-3"
                 >
                   Arrange
                 </div>
                 <div
-                  class="css-1j1i25b"
+                  class="py-3"
                 >
                   Count Up
                 </div>
               </div>
             </div>
           </div>
-          <div
-            class="chakra-stack css-egoftb"
-          >
+          <div>
             <div
-              class="css-lxmzlz"
+              class="flex flex-row items-center justify-between p-2"
               href="/#"
             >
-              <p
-                class="chakra-text css-9y4vnp"
+              <span
+                class="font-medium text-gray-600"
               >
                 Tools
-              </p>
+              </span>
               <svg
-                class="chakra-icon css-q9erop"
+                class=" transition-all duration-200 ease-in-out"
                 fill="currentColor"
-                focusable="false"
-                height="1em"
+                height="20"
                 stroke="currentColor"
                 stroke-width="0"
                 viewBox="0 0 10 16"
-                width="1em"
+                width="20"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
@@ -1418,57 +1346,53 @@ exports[`should rendering 1`] = `
               style="overflow: hidden; display: none; opacity: 0; height: 0px;"
             >
               <div
-                class="chakra-stack css-11sp92w"
+                class="mt-2 border-l-2 border-gray-200 pl-4 text-start"
               >
                 <div
-                  class="css-1j1i25b"
+                  class="py-3"
                 >
                   Arrange Record
                 </div>
               </div>
             </div>
           </div>
-          <div
-            class="chakra-stack css-egoftb"
-          >
+          <div>
             <div
-              class="css-lxmzlz"
+              class="flex flex-row items-center justify-between p-2"
               href="/respect"
             >
-              <p
-                class="chakra-text css-9y4vnp"
+              <span
+                class="font-medium text-gray-600"
               >
                 Respect
-              </p>
+              </span>
             </div>
             <div
               class="chakra-collapse"
               style="overflow: hidden; display: none; opacity: 0; height: 0px;"
             >
               <div
-                class="chakra-stack css-11sp92w"
+                class="mt-2 border-l-2 border-gray-200 pl-4 text-start"
               />
             </div>
           </div>
-          <div
-            class="chakra-stack css-egoftb"
-          >
+          <div>
             <div
-              class="css-lxmzlz"
+              class="flex flex-row items-center justify-between p-2"
               href="/history"
             >
-              <p
-                class="chakra-text css-9y4vnp"
+              <span
+                class="font-medium text-gray-600"
               >
                 History
-              </p>
+              </span>
             </div>
             <div
               class="chakra-collapse"
               style="overflow: hidden; display: none; opacity: 0; height: 0px;"
             >
               <div
-                class="chakra-stack css-11sp92w"
+                class="mt-2 border-l-2 border-gray-200 pl-4 text-start"
               />
             </div>
           </div>
@@ -1476,7 +1400,7 @@ exports[`should rendering 1`] = `
       </div>
     </header>
     <div
-      class="css-1t2fh6z"
+      class="hidden pt-[60px] md:block"
     />
     <div
       class="absolute bottom-0 -mb-80 h-80 w-full bg-gray-700 md:-mb-52 md:h-52"
