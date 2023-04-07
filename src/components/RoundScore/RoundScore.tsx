@@ -41,7 +41,7 @@ const RoundScore: FC<RoundScoreProps> = ({
         {[...Array(3)].map((_, i) => (
           <span
             key={i}
-            className={`text-center text-xl font-bold italic text-gray-500 md:text-4xl ${
+            className={`text-center text-xl font-bold italic text-gray-500 md:text-3xl ${
               !pro || isChecking ? 'opacity-100' : 'opacity-0'
             } transition-opacity duration-150`}
           >
@@ -78,7 +78,7 @@ const RoundScore: FC<RoundScoreProps> = ({
             disabled={scores.length === 0}
             aria-label={'clear scores'}
           >
-            <VscTrash />
+            <VscTrash className='md:text-2xl' />
           </Button>
         </div>
         <RoundScoreButton

@@ -1,26 +1,13 @@
 import React, { FC } from 'react';
-import {
-  Box,
-  Flex,
-  Text,
-  IconButton,
-  Stack,
-  Collapse,
-  Icon,
-  Popover,
-  PopoverTrigger,
-  PopoverContent,
-  useColorModeValue,
-  useDisclosure,
-  Image,
-  Spacer,
-} from '@chakra-ui/react';
+import { Collapse, Popover, PopoverTrigger, PopoverContent, useDisclosure } from '@chakra-ui/react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { GoChevronDown, GoChevronRight } from 'react-icons/go';
 import { GrClose } from 'react-icons/gr';
 import UserMenu from '../UserMenu';
 import { GetNavItem, NavItem } from './NavigationItem';
+import IconButton from '@/atoms/IconButton';
 import LanguageChangeButton from '@/components/LanguageChangeButton';
 
 const NavigationBar: FC = () => {
@@ -28,207 +15,132 @@ const NavigationBar: FC = () => {
   const items = GetNavItem();
   return (
     <>
-      <Box position={{ md: 'fixed' }} width={'100%'} zIndex={200} as={'header'}>
-        <Flex
-          bg={useColorModeValue('white', 'gray.800')}
-          color={useColorModeValue('gray.600', 'white')}
-          minH={'60px'}
-          py={{ base: 2 }}
-          px={{ base: 4 }}
-          borderBottom={1}
-          borderStyle={'solid'}
-          borderColor={useColorModeValue('gray.200', 'gray.900')}
-          align={'center'}
-        >
-          <Flex
-            flex={{ base: 1, md: 'auto' }}
-            ml={{ base: -2 }}
-            display={{ base: 'flex', md: 'none' }}
-          >
-            <IconButton
-              onClick={onToggle}
-              icon={
-                isOpen ? <GrClose width={3} height={3} /> : <GiHamburgerMenu width={5} height={5} />
-              }
-              variant={'ghost'}
-              aria-label={'toggle navigation'}
-            />
-          </Flex>
-          <Flex flex={{ base: 'auto' }} justify={{ base: 'center', md: 'start' }}>
-            <Box
-              _hover={{
-                textDecoration: 'none',
-                color: useColorModeValue('gray.800', 'white'),
-              }}
-            >
-              <Link href={'/'} passHref>
-                <a>
-                  <Image src={'/logo.svg'} alt={'darts homes logo'} h={'40px'} w={'200px'} />
-                </a>
-              </Link>
-            </Box>
-            <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
+      <header className='z-[200] w-full md:fixed'>
+        <div className='flex min-h-[60px] items-center border-b-[1px] border-solid border-gray-200 bg-white py-2 px-4 text-gray-600'>
+          <div className='-ml-2 flex flex-1 md:hidden md:flex-auto'>
+            <IconButton onClick={onToggle} color='ghost' aria-label='toggle navigation'>
+              {isOpen ? <GrClose size={16} /> : <GiHamburgerMenu size={18} />}
+            </IconButton>
+          </div>
+          <div className='flex flex-auto justify-center md:justify-start'>
+            <Link href='/' passHref>
+              <a className='flex items-center'>
+                <Image src='/logo.svg' alt='darts homes logo' height='40px' width='200px' />
+              </a>
+            </Link>
+            <div className='ml-10 hidden md:flex'>
               <DesktopNav items={items} />
-            </Flex>
-            <Spacer />
-            <Flex gap={2} alignItems={'center'}>
+            </div>
+            <div className='flex-1' />
+            <div className='flex items-center gap-2'>
               <LanguageChangeButton />
               <UserMenu />
-            </Flex>
-          </Flex>
-        </Flex>
+            </div>
+          </div>
+        </div>
         <Collapse in={isOpen} animateOpacity>
           <MobileNav items={items} />
         </Collapse>
-      </Box>
-      <Box pt={'60px'} display={{ base: 'none', md: 'block' }} />
+      </header>
+      <div className='hidden pt-[60px] md:block' />
     </>
   );
 };
 
 const DesktopNav: FC<{ items: NavItem[] }> = ({ items }) => {
-  const linkColor = useColorModeValue('gray.600', 'gray.200');
-  const linkHoverColor = useColorModeValue('gray.800', 'white');
-  const popoverContentBgColor = useColorModeValue('white', 'gray.800');
   return (
-    <Stack direction={'row'} spacing={4} alignItems={'center'}>
+    <div className='flex flex-row items-center gap-4'>
       {items.map((navItem) => (
-        <Box key={navItem.label}>
+        <div key={navItem.label}>
           <Popover trigger={'hover'} placement={'bottom-start'}>
             <PopoverTrigger>
-              <Box
-                p={2}
-                fontSize={'sm'}
-                fontWeight={500}
-                color={linkColor}
-                _hover={{
-                  textDecoration: 'none',
-                  color: linkHoverColor,
-                }}
-              >
+              <div className='p-2 text-sm font-medium text-gray-500 hover:text-gray-800'>
                 <Link href={navItem.href ?? '#'} passHref aria-label={navItem.label}>
                   {navItem.label}
                 </Link>
-              </Box>
+              </div>
             </PopoverTrigger>
             {navItem.children && (
               <PopoverContent
                 border={0}
                 boxShadow={'xl'}
-                bg={popoverContentBgColor}
+                bg={'white'}
                 p={4}
                 rounded={'xl'}
                 minW={'sm'}
               >
-                <Stack maxH={'80vh'} overflowY={'scroll'}>
+                <div className='max-h-[80vh] overflow-y-scroll'>
                   {navItem.children.map((child) => (
                     <DesktopSubNav key={child.label} {...child} />
                   ))}
-                </Stack>
+                </div>
               </PopoverContent>
             )}
           </Popover>
-        </Box>
+        </div>
       ))}
-    </Stack>
+    </div>
   );
 };
 
 const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
   return (
-    <Box
-      role={'group'}
-      display={'block'}
-      p={2}
-      rounded={'md'}
-      _hover={{ bg: useColorModeValue('pink.50', 'gray.900') }}
-    >
+    <div className='group rounded-md p-2 hover:bg-pink-50'>
       <Link href={href ?? '/'}>
         <a aria-label={label}>
-          <Stack direction={'row'} align={'center'}>
-            <Box>
-              <Text
-                transition={'all .3s ease'}
-                _groupHover={{ color: 'pink.400' }}
-                fontWeight={500}
-              >
+          <div className='flex flex-row items-center'>
+            <div>
+              <p className='font-medium text-gray-600 transition-all duration-300 group-hover:text-pink-400'>
                 {label}
-              </Text>
-              <Text fontSize={'sm'}>{subLabel}</Text>
-            </Box>
-            <Flex
-              transition={'all .3s ease'}
-              transform={'translateX(-10px)'}
-              opacity={0}
-              _groupHover={{ opacity: '100%', transform: 'translateX(0)' }}
-              justify={'flex-end'}
-              align={'center'}
-              flex={1}
-            >
-              <Icon color={'pink.400'} w={5} h={5} as={GoChevronRight} />
-            </Flex>
-          </Stack>
+              </p>
+              <p className='text-sm'>{subLabel}</p>
+            </div>
+            <div className='flex flex-1 -translate-x-3 justify-end opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100'>
+              <GoChevronRight size={20} className='text-pink-400' />
+            </div>
+          </div>
         </a>
       </Link>
-    </Box>
+    </div>
   );
 };
 
 const MobileNav: FC<{ items: NavItem[] }> = ({ items }) => {
   return (
-    <Stack bg={useColorModeValue('white', 'gray.800')} p={4} display={{ md: 'none' }}>
+    <div className='bg-white p-4'>
       {items.map((navItem) => (
         <MobileNavItem key={navItem.label} {...navItem} />
       ))}
-    </Stack>
+    </div>
   );
 };
 
 const MobileNavItem = ({ label, children, href }: NavItem) => {
   const { isOpen, onToggle } = useDisclosure();
   return (
-    <Stack spacing={4} onClick={children && onToggle}>
+    <div onClick={children && onToggle}>
       <Link href={href && !children ? href : '#'} passHref>
-        <Flex
-          py={2}
-          justify={'space-between'}
-          align={'center'}
-          _hover={{
-            textDecoration: 'none',
-          }}
-        >
-          <Text fontWeight={600} color={useColorModeValue('gray.600', 'gray.200')}>
-            {label}
-          </Text>
+        <div className='flex flex-row items-center justify-between p-2'>
+          <span className='font-medium text-gray-600'>{label}</span>
           {children && (
-            <Icon
-              as={GoChevronDown}
-              transition={'all .25s ease-in-out'}
-              transform={isOpen ? 'rotate(180deg)' : ''}
-              w={6}
-              h={6}
+            <GoChevronDown
+              size={20}
+              className={`${isOpen ? 'rotate-180' : ''} transition-all duration-200 ease-in-out`}
             />
           )}
-        </Flex>
+        </div>
       </Link>
       <Collapse in={isOpen} animateOpacity style={{ marginTop: '0!important' }}>
-        <Stack
-          mt={2}
-          pl={4}
-          borderLeft={1}
-          borderStyle={'solid'}
-          borderColor={useColorModeValue('gray.200', 'gray.700')}
-          align={'start'}
-        >
+        <div className='mt-2 border-l-2 border-gray-200 pl-4 text-start'>
           {children &&
             children.map((child) => (
               <Link key={child.label} href={child.href ?? '/'}>
-                <Box py={2}>{child.label}</Box>
+                <div className='py-3'>{child.label}</div>
               </Link>
             ))}
-        </Stack>
+        </div>
       </Collapse>
-    </Stack>
+    </div>
   );
 };
 

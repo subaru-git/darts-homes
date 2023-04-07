@@ -9,17 +9,17 @@ exports[`should rendering 1`] = `
       class="relative col-span-3 grid grid-cols-3"
     >
       <span
-        class="text-center text-xl font-bold italic text-gray-500 md:text-4xl opacity-100 transition-opacity duration-150"
+        class="text-center text-xl font-bold italic text-gray-500 md:text-3xl opacity-100 transition-opacity duration-150"
       >
         20T
       </span>
       <span
-        class="text-center text-xl font-bold italic text-gray-500 md:text-4xl opacity-100 transition-opacity duration-150"
+        class="text-center text-xl font-bold italic text-gray-500 md:text-3xl opacity-100 transition-opacity duration-150"
       >
         19T
       </span>
       <span
-        class="text-center text-xl font-bold italic text-gray-500 md:text-4xl opacity-100 transition-opacity duration-150"
+        class="text-center text-xl font-bold italic text-gray-500 md:text-3xl opacity-100 transition-opacity duration-150"
       >
         18T
       </span>
@@ -33,6 +33,7 @@ exports[`should rendering 1`] = `
           class="text-white bg-blue-500 hover:bg-blue-400 disabled:bg-blue-300 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base undefined"
         >
           <svg
+            class="md:text-2xl"
             fill="currentColor"
             height="1em"
             stroke="currentColor"

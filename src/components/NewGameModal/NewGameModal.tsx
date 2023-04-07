@@ -1,7 +1,5 @@
 import React, { FC, ReactNode } from 'react';
 import {
-  Button,
-  IconButton,
   useBreakpointValue,
   useDisclosure,
   Modal,
@@ -11,13 +9,11 @@ import {
   ModalFooter,
   ModalHeader,
   ModalOverlay,
-  Text,
-  Flex,
-  Alert,
-  AlertIcon,
-  Box,
 } from '@chakra-ui/react';
 import { FiSettings } from 'react-icons/fi';
+import { TbAlertTriangle } from 'react-icons/tb';
+import Button from '@/atoms/Button';
+import IconButton from '@/atoms/IconButton';
 import useLocale from '@/hooks/locale';
 
 type NewGameModalProps = {
@@ -31,18 +27,18 @@ const NewGameModal: FC<NewGameModalProps> = ({ onNewGame, settings, isFinished }
   const isMd = useBreakpointValue({ base: false, md: true });
   const { t } = useLocale();
   return (
-    <>
+    <div className='flex w-fit flex-nowrap items-center p-2'>
       {isMd ? (
-        <Button leftIcon={<FiSettings />} variant={'ghost'} onClick={onOpen} aria-label={'setting'}>
-          New Game
-        </Button>
+        <IconButton color='ghost' onClick={onOpen} aria-label='setting'>
+          <div className='flex items-center gap-1'>
+            <FiSettings size={18} />
+            <span>New Game</span>
+          </div>
+        </IconButton>
       ) : (
-        <IconButton
-          icon={<FiSettings />}
-          variant={'ghost'}
-          onClick={onOpen}
-          aria-label={'setting'}
-        />
+        <IconButton color='ghost' onClick={onOpen} aria-label='setting'>
+          <FiSettings size={18} />
+        </IconButton>
       )}
       <Modal isOpen={isOpen} onClose={onClose} size={'2xl'}>
         <ModalOverlay />
@@ -50,34 +46,39 @@ const NewGameModal: FC<NewGameModalProps> = ({ onNewGame, settings, isFinished }
           <ModalHeader>Start New Game?</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <Flex direction={'column'} gap={4}>
+            <div className='flex flex-col gap-4'>
               {!isFinished ? (
-                <Alert status={'warning'} fontSize={{ base: 'sm', md: 'md' }}>
-                  <AlertIcon />
-                  <Text>{t.warning.newgame}</Text>
-                </Alert>
+                <div
+                  className='items-center rounded-full bg-yellow-100 p-2 text-sm leading-none text-gray-600'
+                  role='warning'
+                >
+                  <div className='flex items-center gap-1'>
+                    <TbAlertTriangle className='text-orange-600' size={20} />
+                    <span className='text-sm'>{t.warning.newgame}</span>
+                  </div>
+                </div>
               ) : null}
-              <Box>{settings}</Box>
-            </Flex>
+              <div>{settings}</div>
+            </div>
           </ModalBody>
           <ModalFooter>
-            <Button variant={'ghost'} onClick={onClose} mr={3} aria-label={'cancel'}>
+            <Button className='mr-3' color='ghost' onClick={onClose} aria-label='cancel'>
               Cancel
             </Button>
             <Button
-              colorScheme={'blue'}
+              color='blue-fill'
               onClick={() => {
                 onNewGame();
                 onClose();
               }}
-              aria-label={'new game'}
+              aria-label='new game'
             >
               New Game
             </Button>
           </ModalFooter>
         </ModalContent>
       </Modal>
-    </>
+    </div>
   );
 };
 

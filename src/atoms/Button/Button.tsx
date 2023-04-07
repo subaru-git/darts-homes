@@ -46,6 +46,8 @@ const style: { [key: string]: string } = {
   'fuchsia-fill': 'text-white bg-fuchsia-500 hover:bg-fuchsia-400  disabled:bg-fuchsia-200',
   rose: 'text-rose-600 border-rose-300 bg-white hover:bg-rose-50 disabled:opacity-50',
   'rose-fill': 'text-white bg-rose-500 hover:bg-rose-400  disabled:bg-rose-200',
+  ghost:
+    'text-gray-600 bg-transparent hover:text-gray-400 p-0 focus:ring-0 disabled:opacity-50 border-none',
 } as const;
 
 export default Button;
