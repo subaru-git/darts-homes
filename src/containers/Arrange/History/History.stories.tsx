@@ -3,7 +3,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import History from './History';
 
 export default {
-  title: 'Components/History',
+  title: 'Containers/Arrange/History',
   component: History,
 } as ComponentMeta<typeof History>;
 

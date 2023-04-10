@@ -42,40 +42,40 @@ const TenKey: FC<TenKeyProps> = ({ onCount, keyboard = false }) => {
           value={value}
           onChange={() => {}}
         />
-        <Button onClick={() => addNumber('1')} aria-label='one'>
+        <Button className='w-full' onClick={() => addNumber('1')} aria-label='one'>
           1
         </Button>
-        <Button onClick={() => addNumber('2')} aria-label='two'>
+        <Button className='w-full' onClick={() => addNumber('2')} aria-label='two'>
           2
         </Button>
-        <Button onClick={() => addNumber('3')} aria-label='three'>
+        <Button className='w-full' onClick={() => addNumber('3')} aria-label='three'>
           3
         </Button>
-        <Button onClick={() => addNumber('4')} aria-label='four'>
+        <Button className='w-full' onClick={() => addNumber('4')} aria-label='four'>
           4
         </Button>
-        <Button onClick={() => addNumber('5')} aria-label='five'>
+        <Button className='w-full' onClick={() => addNumber('5')} aria-label='five'>
           5
         </Button>
-        <Button onClick={() => addNumber('6')} aria-label='six'>
+        <Button className='w-full' onClick={() => addNumber('6')} aria-label='six'>
           6
         </Button>
-        <Button onClick={() => addNumber('7')} aria-label='seven'>
+        <Button className='w-full' onClick={() => addNumber('7')} aria-label='seven'>
           7
         </Button>
-        <Button onClick={() => addNumber('8')} aria-label='eight'>
+        <Button className='w-full' onClick={() => addNumber('8')} aria-label='eight'>
           8
         </Button>
-        <Button onClick={() => addNumber('9')} aria-label='nine'>
+        <Button className='w-full' onClick={() => addNumber('9')} aria-label='nine'>
           9
         </Button>
-        <Button onClick={() => deleteNumber()} aria-label='delete'>
+        <Button className='w-full' onClick={() => deleteNumber()} aria-label='delete'>
           <RiDeleteBack2Line className='m-auto' />
         </Button>
-        <Button onClick={() => addNumber('0')} aria-label='zero'>
+        <Button className='w-full' onClick={() => addNumber('0')} aria-label='zero'>
           0
         </Button>
-        <Button onClick={() => enter()} aria-label='enter'>
+        <Button className='w-full' onClick={() => enter()} aria-label='enter'>
           <AiOutlineEnter className='m-auto' />
         </Button>
       </div>

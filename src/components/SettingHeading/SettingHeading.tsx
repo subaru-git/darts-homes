@@ -1,7 +1,5 @@
 import React, { FC } from 'react';
 import {
-  Flex,
-  Text,
   IconButton,
   Popover,
   PopoverArrow,
@@ -21,10 +19,8 @@ type SettingHeadingProps = {
 
 const SettingHeading: FC<SettingHeadingProps> = ({ title, hintHeader, hintBody }) => {
   return (
-    <Flex alignItems={'center'}>
-      <Text fontSize={'sm'} fontWeight={'bold'} color={'gray.500'}>
-        {title}
-      </Text>
+    <div className='flex items-center'>
+      <span className='text-sm font-bold text-gray-500'>{title}</span>
       <Popover>
         <PopoverTrigger>
           <IconButton
@@ -32,7 +28,7 @@ const SettingHeading: FC<SettingHeadingProps> = ({ title, hintHeader, hintBody }
             variant={'ghost'}
             color={'gray.500'}
             aria-label={`${title} help`}
-          />
+          ></IconButton>
         </PopoverTrigger>
         <PopoverContent>
           <PopoverArrow />
@@ -41,7 +37,7 @@ const SettingHeading: FC<SettingHeadingProps> = ({ title, hintHeader, hintBody }
           <PopoverBody>{hintBody}</PopoverBody>
         </PopoverContent>
       </Popover>
-    </Flex>
+    </div>
   );
 };
 

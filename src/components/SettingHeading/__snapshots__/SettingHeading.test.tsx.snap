@@ -3,13 +3,13 @@
 exports[`should rendering 1`] = `
 <div>
   <div
-    class="css-70qvj9"
+    class="flex items-center"
   >
-    <p
-      class="chakra-text css-1sl8k3i"
+    <span
+      class="text-sm font-bold text-gray-500"
     >
       title
-    </p>
+    </span>
     <button
       aria-controls="popover-content-:r1:"
       aria-expanded="false"

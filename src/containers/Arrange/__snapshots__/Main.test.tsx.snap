@@ -19,7 +19,7 @@ exports[`should rendering 1`] = `
         >
           <button
             aria-label="toggle navigation"
-            class="text-gray-600 bg-transparent hover:text-gray-400 p-0 focus:ring-0 disabled:opacity-50 m-auto inline-flex items-center rounded-full p-2.5 text-center text-sm font-medium focus:outline-none focus:ring-4 disabled:cursor-not-allowed"
+            class="text-gray-600 bg-transparent hover:text-gray-400 p-0 focus:ring-0 disabled:opacity-50 m-auto inline-flex items-center rounded-full p-2.5 text-center text-sm font-medium focus:outline-none disabled:cursor-not-allowed"
             type="button"
           >
             <svg
@@ -1410,11 +1410,11 @@ exports[`should rendering 1`] = `
       class="css-1lekzkb"
     >
       <div
-        class="flex w-fit flex-nowrap items-center p-2"
+        class="flex h-fit w-fit flex-nowrap items-start p-[9px]"
       >
         <button
           aria-label="setting"
-          class="text-gray-600 bg-transparent hover:text-gray-400 p-0 focus:ring-0 disabled:opacity-50 m-auto inline-flex items-center rounded-full p-2.5 text-center text-sm font-medium focus:outline-none focus:ring-4 disabled:cursor-not-allowed"
+          class="text-gray-600 bg-transparent hover:text-gray-400 p-0 focus:ring-0 disabled:opacity-50 m-auto inline-flex items-center rounded-full p-2.5 text-center text-sm font-medium focus:outline-none disabled:cursor-not-allowed"
           type="button"
         >
           <div
@@ -1447,11 +1447,11 @@ exports[`should rendering 1`] = `
         </button>
       </div>
       <div
-        class="flex w-fit flex-nowrap items-center p-2"
+        class="flex h-fit w-fit flex-nowrap items-start p-2"
       >
         <button
           aria-label="what is this game?"
-          class="text-gray-600 bg-transparent hover:text-gray-400 p-0 focus:ring-0 disabled:opacity-50 m-auto inline-flex items-center rounded-full p-2.5 text-center text-sm font-medium focus:outline-none focus:ring-4 disabled:cursor-not-allowed"
+          class="text-gray-600 bg-transparent hover:text-gray-400 p-0 focus:ring-0 disabled:opacity-50 m-auto inline-flex items-center rounded-full p-2.5 text-center text-sm font-medium focus:outline-none disabled:cursor-not-allowed"
           type="button"
         >
           <div
@@ -1500,17 +1500,16 @@ exports[`should rendering 1`] = `
               >
                 <div
                   aria-label="target board"
-                  class="css-0"
                 >
                   <p
                     aria-label="message Target"
-                    class="chakra-text css-uzy2cd"
+                    class="pl-1 pt-1 font-bold text-green-600 md:pl-4 md:pt-4 text-[24px] md:text-[32px]"
                   >
                     Target
                   </p>
                   <p
                     aria-label="target Target"
-                    class="chakra-text css-17ue8gu"
+                    class="min-w-[110px] py-1 text-center font-[roboto,_sans-serif] font-bold text-gray-700 md:min-w-[260px] md:py-8 text-[48px] md:text-[96px]"
                   >
                     NICE
                   </p>
