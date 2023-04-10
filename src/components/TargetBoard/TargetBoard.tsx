@@ -1,5 +1,4 @@
 import React, { FC } from 'react';
-import { Box, Text, useBreakpointValue } from '@chakra-ui/react';
 
 type TargetBoardProps = {
   target?: string;
@@ -8,38 +7,25 @@ type TargetBoardProps = {
 };
 
 const TargetBoard: FC<TargetBoardProps> = ({ target, message, size = 'md' }) => {
-  const messageFontSize = useBreakpointValue({
-    base: size === 'md' ? '24px' : '18px',
-    md: size === 'md' ? '32px' : '24px',
-  });
-  const targetFontSize = useBreakpointValue({
-    base: size === 'md' ? '48px' : '32px',
-    md: size === 'md' ? '96px' : '64px',
-  });
+  const messageFontSize =
+    size === 'md' ? 'text-[24px] md:text-[32px]' : 'text-[18px] md:text-[24px]';
+  const targetFontSize =
+    size === 'md' ? 'text-[48px] md:text-[96px]' : 'text-[32px] md:text-[64px]';
   return (
-    <Box aria-label={'target board'}>
-      <Text
-        fontSize={messageFontSize}
-        fontWeight={'bold'}
-        color={'green.500'}
-        pl={{ base: 1, md: 4 }}
-        pt={{ base: 1, md: 4 }}
+    <div aria-label='target board'>
+      <p
+        className={`pl-1 pt-1 font-bold text-green-600 md:pl-4 md:pt-4 ${messageFontSize}`}
         aria-label={`message ${message}`}
       >
         {message}
-      </Text>
-      <Text
-        textAlign={'center'}
-        fontSize={targetFontSize}
-        py={{ base: 1, md: 8 }}
-        fontWeight={'bold'}
-        fontFamily={'roboto, sans-serif'}
-        minWidth={{ base: '110px', md: '260px' }}
+      </p>
+      <p
+        className={`min-w-[110px] py-1 text-center font-[roboto,_sans-serif] font-bold text-gray-700 md:min-w-[260px] md:py-8 ${targetFontSize}`}
         aria-label={`target ${message}`}
       >
         {target}
-      </Text>
-    </Box>
+      </p>
+    </div>
   );
 };
 

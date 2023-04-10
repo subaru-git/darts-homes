@@ -3,7 +3,7 @@
 exports[`should rendering 1`] = `
 <div>
   <button
-    class="text-white bg-blue-500 hover:bg-blue-400 disabled:bg-blue-300 m-auto inline-flex items-center rounded-full p-2.5 text-center text-sm font-medium focus:outline-none focus:ring-4 disabled:cursor-not-allowed"
+    class="text-white bg-blue-500 hover:bg-blue-400 disabled:bg-blue-300 focus:ring-4 m-auto inline-flex items-center rounded-full p-2.5 text-center text-sm font-medium focus:outline-none disabled:cursor-not-allowed"
     type="button"
   />
   <span

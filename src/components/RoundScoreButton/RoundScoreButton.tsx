@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { IconButton, useBreakpointValue, useDisclosure } from '@chakra-ui/react';
+import { useBreakpointValue, useDisclosure } from '@chakra-ui/react';
 import { GiPartyPopper } from 'react-icons/gi';
 import { MdOutlineChangeCircle } from 'react-icons/md';
 import RoundOverDialog from '../RoundOverDialog';
@@ -110,14 +110,9 @@ const MobileRoundScoreButton: FC<RoundScoreButtonProps> = ({
         </Button>
       ) : (
         <>
-          <IconButton
-            icon={<GiPartyPopper />}
-            colorScheme={'orange'}
-            size={'sm'}
-            width={'auto'}
-            onClick={() => onOpen()}
-            aria-label={'round over'}
-          />
+          <Button color={'orange-fill'} onClick={() => onOpen()} aria-label='round over'>
+            <GiPartyPopper />
+          </Button>
           <RoundOverDialog
             isOpen={isOpen}
             onClose={onClose}

@@ -4,17 +4,16 @@ exports[`should rendering 1`] = `
 <div>
   <div
     aria-label="target board"
-    class="css-0"
   >
     <p
       aria-label="message next target"
-      class="chakra-text css-uzy2cd"
+      class="pl-1 pt-1 font-bold text-green-600 md:pl-4 md:pt-4 text-[24px] md:text-[32px]"
     >
       next target
     </p>
     <p
       aria-label="target next target"
-      class="chakra-text css-17ue8gu"
+      class="min-w-[110px] py-1 text-center font-[roboto,_sans-serif] font-bold text-gray-700 md:min-w-[260px] md:py-8 text-[48px] md:text-[96px]"
     >
       501
     </p>

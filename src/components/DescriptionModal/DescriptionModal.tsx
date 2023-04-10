@@ -22,7 +22,7 @@ const DescriptionModal: FC<DescriptionModalProps> = ({ header, description, game
   const { isOpen, onToggle } = useDisclosure();
   const isMd = useBreakpointValue({ base: false, md: true });
   return (
-    <div className='flex w-fit flex-nowrap items-center p-2'>
+    <div className='flex h-fit w-fit flex-nowrap items-start p-2'>
       {isMd ? (
         <IconButton aria-label='what is this game?' color='ghost' onClick={onToggle}>
           <div className='flex items-center gap-1'>
