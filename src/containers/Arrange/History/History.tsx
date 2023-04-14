@@ -108,8 +108,9 @@ const History: FC<HistoryProps> = ({ history, user }) => {
                       <td className='p-0 text-end md:p-1' colSpan={3}>
                         <span>{DateFormat(h.playedAt)}</span>
                       </td>
-                      <td className='flex items-center p-0 text-center md:p-1'>
+                      <td className='m-auto flex items-center p-0 text-center md:p-1'>
                         <IconButton
+                          className='p-0'
                           aria-label='delete history'
                           onClick={() => {
                             setDeleteHistory(h);

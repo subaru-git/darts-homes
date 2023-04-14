@@ -3,7 +3,7 @@
 exports[`should rendering 1`] = `
 <div>
   <div
-    class="flex h-fit w-fit flex-nowrap items-start p-2"
+    class="flex h-fit w-fit flex-nowrap items-start p-1"
   >
     <button
       aria-label="what is this game?"

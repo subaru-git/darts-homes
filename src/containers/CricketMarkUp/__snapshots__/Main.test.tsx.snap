@@ -1411,7 +1411,7 @@ exports[`should rendering 1`] = `
         class="css-gg4vpm"
       >
         <div
-          class="flex h-fit w-fit flex-nowrap items-start p-[9px]"
+          class="flex h-fit w-fit flex-nowrap items-start p-[5px]"
         >
           <button
             aria-label="setting"
@@ -1451,7 +1451,7 @@ exports[`should rendering 1`] = `
           class="css-1vakbk4"
         >
           <div
-            class="flex h-fit w-fit flex-nowrap items-start p-2"
+            class="flex h-fit w-fit flex-nowrap items-start p-1"
           >
             <button
               aria-label="what is this game?"

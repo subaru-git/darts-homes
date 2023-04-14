@@ -3,7 +3,7 @@
 exports[`should rendering 1`] = `
 <div>
   <div
-    class="flex h-fit w-fit flex-nowrap items-start p-[9px]"
+    class="flex h-fit w-fit flex-nowrap items-start p-[5px]"
   >
     <button
       aria-label="setting"
