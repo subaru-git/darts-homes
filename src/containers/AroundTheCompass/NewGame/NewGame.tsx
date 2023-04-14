@@ -5,7 +5,6 @@ import {
   NumberInput,
   NumberInputField,
   NumberInputStepper,
-  Text,
 } from '@chakra-ui/react';
 import NewGameModal from '@/components/NewGameModal';
 
@@ -25,7 +24,7 @@ const NewGame: FC<NewGameProps> = ({ onNewGame, currentRound, isFinished = false
       onNewGame={() => onNewGame(round)}
       settings={
         <>
-          <Text fontSize='sm'>Round</Text>
+          <span className='text-sm'>Round</span>
           <NumberInput
             defaultValue={round}
             onChange={(value) => setRound(parse(value))}

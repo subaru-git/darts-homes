@@ -1,16 +1,7 @@
 import React, { FC, Fragment, useState } from 'react';
-import {
-  IconButton,
-  Table,
-  TableContainer,
-  Text,
-  Tbody,
-  Td,
-  Tr,
-  useDisclosure,
-  useBreakpointValue,
-} from '@chakra-ui/react';
+import { useDisclosure } from '@chakra-ui/react';
 import { MdDeleteForever } from 'react-icons/md';
+import IconButton from '@/atoms/IconButton';
 import HistoryDeleteAlert from '@/containers/History/DeleteAlert';
 import { db } from '@/db/db';
 import { deleteResult } from '@/lib/GameHistoryManager';
@@ -25,37 +16,26 @@ const HistoryTable: FC<HistoryTableProps> = ({ history, user }) => {
   const [deleteHistory, setDeleteHistory] = useState<AroundTheCompassResultModel | undefined>(
     undefined,
   );
-  const isMd = useBreakpointValue({ base: false, md: true });
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <TableContainer>
-        <Table>
-          <Tbody>
+      <div>
+        <table className='w-full table-fixed'>
+          <tbody>
             {history.map((item) => (
               <Fragment key={`${item.id}`}>
-                {isMd ? (
-                  <DesktopHistoryRow
-                    history={item}
-                    onDelete={() => {
-                      setDeleteHistory(item);
-                      onOpen();
-                    }}
-                  />
-                ) : (
-                  <MobileRow
-                    history={item}
-                    onDelete={() => {
-                      setDeleteHistory(item);
-                      onOpen();
-                    }}
-                  />
-                )}
+                <HistoryRow
+                  history={item}
+                  onDelete={() => {
+                    setDeleteHistory(item);
+                    onOpen();
+                  }}
+                />
               </Fragment>
             ))}
-          </Tbody>
-        </Table>
-      </TableContainer>
+          </tbody>
+        </table>
+      </div>
       {deleteHistory ? (
         <HistoryDeleteAlert
           message={`Around The Compass: ${DateFormat(deleteHistory.playedAt)}`}
@@ -71,74 +51,38 @@ const HistoryTable: FC<HistoryTableProps> = ({ history, user }) => {
   );
 };
 
-const DesktopHistoryRow: FC<{
+const HistoryRow: FC<{
   history: AroundTheCompassResultModel;
   onDelete: () => void;
 }> = ({ history, onDelete }) => {
   return (
     <>
-      <Tr key={`${history.playedAt}-game`} bg='green.100'>
-        <Td colSpan={4} p={1}>
+      <tr key={`${history.playedAt}-game`} className='bg-green-100'>
+        <td colSpan={3} className='p-0 text-xs md:p-1 md:text-base'>
           Around The Compass
-        </Td>
-        <Td colSpan={1} p={1} textAlign='end'>
+        </td>
+        <td colSpan={1} className='whitespace-nowrap p-0 text-end text-xs md:p-1 md:text-base'>
           Round: {history.round}
-        </Td>
-        <Td colSpan={2} p={1} textAlign='end'>
-          <Text>{DateFormat(history.playedAt)}</Text>
-        </Td>
-        <Td colSpan={1} p={1} textAlign='center'>
+        </td>
+        <td colSpan={3} className=' whitespace-nowrap p-0 text-end text-xs md:p-1 md:text-base'>
+          <span>{DateFormat(history.playedAt)}</span>
+        </td>
+        <td colSpan={1} className='flex items-center p-0 text-center text-xs md:p-1 md:text-base'>
           <IconButton
+            className='m-auto p-0'
             aria-label='delete history'
-            icon={<MdDeleteForever size={24} />}
-            variant='ghost'
-            size='xs'
+            color='ghost'
             onClick={onDelete}
-          />
-        </Td>
-      </Tr>
-      <Tr key={`${history.id}-score`}>
-        <Td pr={20}>
-          <Text fontSize='lg' as='b'>
-            Score: {history.result}
-          </Text>
-        </Td>
-      </Tr>
-    </>
-  );
-};
-
-const MobileRow: FC<{
-  history: AroundTheCompassResultModel;
-  onDelete: () => void;
-}> = ({ history, onDelete }) => {
-  return (
-    <>
-      <Tr bg='green.100'>
-        <Td p={0} fontSize='xs'>
-          Around The Compass
-        </Td>
-        <Td p={0} fontSize='xs'>
-          Round: {history.round}
-        </Td>
-        <Td p={0} fontSize='xs' textAlign='start'>
-          <Text>{DateFormat(history.playedAt)}</Text>
-        </Td>
-        <Td p={0} textAlign='start'>
-          <IconButton
-            aria-label='delete history'
-            icon={<MdDeleteForever size={19} />}
-            variant='ghost'
-            size='2xs'
-            onClick={onDelete}
-          />
-        </Td>
-      </Tr>
-      <Tr>
-        <Td py={2} fontSize='sm' fontWeight='bold' px={1} colSpan={1}>
-          Score: {history.result}
-        </Td>
-      </Tr>
+          >
+            <MdDeleteForever size={24} />
+          </IconButton>
+        </td>
+      </tr>
+      <tr key={`${history.id}-score`}>
+        <td className='border-b py-1 pr-20 text-sm md:py-2 md:text-base' colSpan={8}>
+          <span className='text-base font-bold md:text-lg'>Score: {history.result}</span>
+        </td>
+      </tr>
     </>
   );
 };

@@ -27,7 +27,7 @@ const NewGameModal: FC<NewGameModalProps> = ({ onNewGame, settings, isFinished }
   const isMd = useBreakpointValue({ base: false, md: true });
   const { t } = useLocale();
   return (
-    <div className='flex h-fit w-fit flex-nowrap items-start p-[9px]'>
+    <div className='flex h-fit w-fit flex-nowrap items-start p-[5px]'>
       {isMd ? (
         <IconButton color='ghost' onClick={onOpen} aria-label='setting'>
           <div className='flex items-center gap-1'>

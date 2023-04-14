@@ -1407,10 +1407,10 @@ exports[`should rendering 1`] = `
       class="hidden pt-[60px] md:block"
     />
     <div
-      class="css-1lekzkb"
+      class="flex items-center justify-between"
     >
       <div
-        class="flex h-fit w-fit flex-nowrap items-start p-[9px]"
+        class="flex h-fit w-fit flex-nowrap items-start p-[5px]"
       >
         <button
           aria-label="setting"
@@ -1447,10 +1447,10 @@ exports[`should rendering 1`] = `
         </button>
       </div>
       <div
-        class="css-1vakbk4"
+        class="flex gap-2"
       >
         <div
-          class="flex h-fit w-fit flex-nowrap items-start p-2"
+          class="flex h-fit w-fit flex-nowrap items-start p-1"
         >
           <button
             aria-label="what is this game?"
@@ -1504,13 +1504,11 @@ exports[`should rendering 1`] = `
       </div>
     </div>
     <div
-      class="css-1dlhlta"
+      class="flex items-center justify-around gap-2 p-4"
     >
-      <div
-        class="css-0"
-      >
+      <div>
         <div
-          class="css-1bjivtr"
+          class="flex items-end justify-center"
         >
           <div
             aria-label="target board"
@@ -1622,7 +1620,7 @@ exports[`should rendering 1`] = `
         </div>
       </div>
       <div
-        class="css-13s4dk6"
+        class="min-w-[250px]"
       >
         <div
           class="m-auto flex max-w-[320px] flex-col gap-1"
@@ -1797,7 +1795,7 @@ exports[`should rendering 1`] = `
       </div>
     </div>
     <div
-      class="css-h94677"
+      class="p-4"
     >
       <div
         class="max-h-[300px] overflow-y-auto"

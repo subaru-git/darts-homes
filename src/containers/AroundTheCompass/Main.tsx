@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Box, Flex, Text, useBreakpointValue } from '@chakra-ui/react';
+import { useBreakpointValue } from '@chakra-ui/react';
 import NewGame from './NewGame';
 import CameraView from '@/components/CameraView';
 import CountButtons from '@/components/CountButtons';
@@ -57,7 +57,7 @@ type MainProps = {
 const DesktopMain: FC<MainProps> = ({ game, setGame, user, description }) => {
   return (
     <>
-      <Flex justifyContent='space-between' alignItems='center'>
+      <div className='flex items-center justify-between'>
         <NewGame
           onNewGame={(r) => {
             if (game.isFinished())
@@ -67,26 +67,26 @@ const DesktopMain: FC<MainProps> = ({ game, setGame, user, description }) => {
           isFinished={game.isFinished()}
           currentRound={game.getTargetRound()}
         />
-        <Flex gap={2}>
+        <div className='flex gap-2'>
           <DescriptionModal
             header='Around The Compass'
-            description={<Text whiteSpace='pre-wrap'>{description}</Text>}
+            description={<p className='whitespace-pre-wrap'>{description}</p>}
           />
           <CameraView />
-        </Flex>
-      </Flex>
-      <Flex justifyContent='space-around' gap={4} alignItems='center' p={4}>
-        <Box>
-          <Flex justifyContent='center' alignItems='end'>
+        </div>
+      </div>
+      <div className='flex items-center justify-around gap-2 p-4'>
+        <div>
+          <div className='flex items-end justify-center'>
             <TargetBoard
               message={`Round ${game.getRound()} / ${game.getTargetRound()}`}
               target={game.getCurrentTarget().toString()}
             />
             <TargetBoard message='Score' target={game.getTotalScore().toString()} size='sm' />
-          </Flex>
+          </div>
           <MyRoundScore game={game} setGame={setGame} user={user} />
-        </Box>
-        <Box minWidth={250}>
+        </div>
+        <div className='min-w-[250px]'>
           <CountButtons
             buttons={[12, 6, 4, 2, 1]}
             onCount={(n) =>
@@ -94,19 +94,19 @@ const DesktopMain: FC<MainProps> = ({ game, setGame, user, description }) => {
             }
             full
           />
-        </Box>
-      </Flex>
-      <Box p={4}>
+        </div>
+      </div>
+      <div className='p-4'>
         <RoundBoard score={game.getScore()} />
-      </Box>
+      </div>
     </>
   );
 };
 
 const MobileMain: FC<MainProps> = ({ game, setGame, user, description }) => {
   return (
-    <Flex direction='column' gap={4}>
-      <Flex justifyContent='space-between' width='100%'>
+    <div className='flex flex-col gap-4'>
+      <div className='flex w-full justify-between'>
         <NewGame
           onNewGame={(r) => {
             if (game.isFinished())
@@ -116,35 +116,35 @@ const MobileMain: FC<MainProps> = ({ game, setGame, user, description }) => {
           isFinished={game.isFinished()}
           currentRound={game.getTargetRound()}
         />
-        <Flex alignItems='center' gap={4}>
+        <div className='flex items-center gap-3'>
           <TargetBoard
             message={`Round ${game.getRound()} / ${game.getTargetRound()}`}
             target={game.getCurrentTarget().toString()}
           />
           <TargetBoard message='Score' target={game.getTotalScore().toString()} size='sm' />
-        </Flex>
-        <Flex direction='column'>
+        </div>
+        <div className='flex flex-col'>
           <DescriptionModal
             header='Around The Compass'
-            description={<Text whiteSpace='pre-wrap'>{description}</Text>}
+            description={<p className='whitespace-pre-wrap'>{description}</p>}
           />
           <CameraView />
-        </Flex>
-      </Flex>
-      <Box px={2}>
+        </div>
+      </div>
+      <div className='px-2'>
         <MyRoundScore game={game} setGame={setGame} user={user} />
-      </Box>
-      <Box px={2}>
+      </div>
+      <div className='px-2'>
         <CountButtons
           buttons={[12, 6, 4, 2, 1]}
           onCount={(n) => updateObject(game, new AroundTheCompassGame(20), 'addScore', setGame, n)}
           full
         />
-      </Box>
-      <Box px={2}>
+      </div>
+      <div className='px-2'>
         <RoundBoard score={game.getScore()} />
-      </Box>
-    </Flex>
+      </div>
+    </div>
   );
 };
 

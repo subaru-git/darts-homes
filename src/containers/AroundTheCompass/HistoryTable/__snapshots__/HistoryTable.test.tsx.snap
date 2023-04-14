@@ -2,15 +2,11 @@
 
 exports[`should rendering 1`] = `
 <div>
-  <div
-    class="chakra-table__container css-zipzvv"
-  >
+  <div>
     <table
-      class="chakra-table css-5605sr"
+      class="w-full table-fixed"
     >
-      <tbody
-        class="css-0"
-      />
+      <tbody />
     </table>
   </div>
   <span

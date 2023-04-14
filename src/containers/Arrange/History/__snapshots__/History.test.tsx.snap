@@ -234,11 +234,11 @@ exports[`master out fat bull 1`] = `
                 </span>
               </td>
               <td
-                class="flex items-center p-0 text-center md:p-1"
+                class="m-auto flex items-center p-0 text-center md:p-1"
               >
                 <button
                   aria-label="delete history"
-                  class="text-gray-600 bg-transparent hover:text-gray-400 p-0 focus:ring-0 disabled:opacity-50 m-auto inline-flex items-center rounded-full p-2.5 text-center text-sm font-medium focus:outline-none disabled:cursor-not-allowed"
+                  class="p-0"
                   type="button"
                 >
                   <svg
@@ -837,11 +837,11 @@ exports[`master out fat bull 1`] = `
                 </span>
               </td>
               <td
-                class="flex items-center p-0 text-center md:p-1"
+                class="m-auto flex items-center p-0 text-center md:p-1"
               >
                 <button
                   aria-label="delete history"
-                  class="text-gray-600 bg-transparent hover:text-gray-400 p-0 focus:ring-0 disabled:opacity-50 m-auto inline-flex items-center rounded-full p-2.5 text-center text-sm font-medium focus:outline-none disabled:cursor-not-allowed"
+                  class="p-0"
                   type="button"
                 >
                   <svg
@@ -1431,11 +1431,11 @@ exports[`master out fat bull 1`] = `
                 </span>
               </td>
               <td
-                class="flex items-center p-0 text-center md:p-1"
+                class="m-auto flex items-center p-0 text-center md:p-1"
               >
                 <button
                   aria-label="delete history"
-                  class="text-gray-600 bg-transparent hover:text-gray-400 p-0 focus:ring-0 disabled:opacity-50 m-auto inline-flex items-center rounded-full p-2.5 text-center text-sm font-medium focus:outline-none disabled:cursor-not-allowed"
+                  class="p-0"
                   type="button"
                 >
                   <svg
@@ -2235,11 +2235,11 @@ exports[`single out fat bull 1`] = `
                 </span>
               </td>
               <td
-                class="flex items-center p-0 text-center md:p-1"
+                class="m-auto flex items-center p-0 text-center md:p-1"
               >
                 <button
                   aria-label="delete history"
-                  class="text-gray-600 bg-transparent hover:text-gray-400 p-0 focus:ring-0 disabled:opacity-50 m-auto inline-flex items-center rounded-full p-2.5 text-center text-sm font-medium focus:outline-none disabled:cursor-not-allowed"
+                  class="p-0"
                   type="button"
                 >
                   <svg
@@ -2838,11 +2838,11 @@ exports[`single out fat bull 1`] = `
                 </span>
               </td>
               <td
-                class="flex items-center p-0 text-center md:p-1"
+                class="m-auto flex items-center p-0 text-center md:p-1"
               >
                 <button
                   aria-label="delete history"
-                  class="text-gray-600 bg-transparent hover:text-gray-400 p-0 focus:ring-0 disabled:opacity-50 m-auto inline-flex items-center rounded-full p-2.5 text-center text-sm font-medium focus:outline-none disabled:cursor-not-allowed"
+                  class="p-0"
                   type="button"
                 >
                   <svg
@@ -3432,11 +3432,11 @@ exports[`single out fat bull 1`] = `
                 </span>
               </td>
               <td
-                class="flex items-center p-0 text-center md:p-1"
+                class="m-auto flex items-center p-0 text-center md:p-1"
               >
                 <button
                   aria-label="delete history"
-                  class="text-gray-600 bg-transparent hover:text-gray-400 p-0 focus:ring-0 disabled:opacity-50 m-auto inline-flex items-center rounded-full p-2.5 text-center text-sm font-medium focus:outline-none disabled:cursor-not-allowed"
+                  class="p-0"
                   type="button"
                 >
                   <svg
