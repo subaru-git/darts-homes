@@ -19,11 +19,9 @@ const List: FC = () => {
             <Card>
               <Flex direction='column' gap={4}>
                 <Link href={`/${key}`}>
-                  <a>
-                    <Heading as='h3' size={{ base: 'md', md: 'lg' }} p={{ base: 1, md: 4 }}>
-                      {value.title}
-                    </Heading>
-                  </a>
+                  <Heading as='h3' size={{ base: 'md', md: 'lg' }} p={{ base: 1, md: 4 }}>
+                    {value.title}
+                  </Heading>
                 </Link>
                 <HStack>
                   {value.tags.map((tag) => (

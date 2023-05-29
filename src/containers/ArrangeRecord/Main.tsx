@@ -83,12 +83,12 @@ const Main: FC = () => {
           ref={imageTargetRef}
           className={`relative mx-auto aspect-square w-[50vh] max-w-[360px] md:mx-2 md:w-[60vh] md:max-w-[540px]`}
         >
-          <div ref={containerRef} className='absolute top-0 left-0 w-full md:h-fit'>
+          <div ref={containerRef} className='absolute left-0 top-0 w-full md:h-fit'>
             <div className='h-full w-full'>
               <DartBoard onCount={() => {}} hard />
             </div>
           </div>
-          <canvas ref={canvasRef} className='absolute top-0 left-0'></canvas>
+          <canvas ref={canvasRef} className='absolute left-0 top-0'></canvas>
         </div>
         <div className='flex flex-col gap-4 pb-4'>
           <div>

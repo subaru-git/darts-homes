@@ -15,7 +15,7 @@ exports[`should rendering 1`] = `
           class="css-x4muuh"
         >
           <td
-            class="css-1hg6byp"
+            class="css-yqmnaf"
           >
             <p
               class="chakra-text css-1ps7yy3"
@@ -24,7 +24,7 @@ exports[`should rendering 1`] = `
             </p>
           </td>
           <td
-            class="css-1hg6byp"
+            class="css-yqmnaf"
           >
             <div
               class="css-1h3cqa9"
@@ -60,7 +60,7 @@ exports[`should rendering 1`] = `
             </div>
           </td>
           <td
-            class="css-1hg6byp"
+            class="css-yqmnaf"
           >
             <p
               class="chakra-text css-1ps7yy3"

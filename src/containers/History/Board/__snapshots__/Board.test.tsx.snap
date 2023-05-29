@@ -11,6 +11,7 @@ exports[`should rendering 1`] = `
     >
       <div
         class="chakra-alert css-vr88kb"
+        data-status="error"
         role="alert"
       >
         <div
@@ -18,9 +19,10 @@ exports[`should rendering 1`] = `
         >
           <span
             class="chakra-alert__icon css-14ogjxt"
+            data-status="error"
           >
             <svg
-              class="chakra-icon css-fi0ww0"
+              class="chakra-icon css-qk6lof"
               focusable="false"
               viewBox="0 0 24 24"
             >
@@ -32,11 +34,13 @@ exports[`should rendering 1`] = `
           </span>
           <div
             class="chakra-alert__title css-tidvy5"
+            data-status="error"
           >
             Invalid Import File.
           </div>
           <div
             class="chakra-alert__desc css-zzks76"
+            data-status="error"
           >
             Your import file is invalid. Please check the import file.
           </div>
@@ -61,10 +65,10 @@ exports[`should rendering 1`] = `
       </div>
     </div>
     <div
-      class="css-1vk0cfl"
+      class="css-1m0mzue"
     >
       <h2
-        class="chakra-heading css-ozfqyb"
+        class="chakra-heading css-h9sihg"
       >
         History
       </h2>
@@ -78,7 +82,7 @@ exports[`should rendering 1`] = `
         />
         <button
           aria-label="import"
-          class="chakra-button css-kx4v7c"
+          class="chakra-button css-4l303d"
           type="button"
         >
           <span
@@ -107,7 +111,7 @@ exports[`should rendering 1`] = `
         </button>
         <button
           aria-label="export"
-          class="chakra-button css-iez0o3"
+          class="chakra-button css-1k21iee"
           type="button"
         >
           <span

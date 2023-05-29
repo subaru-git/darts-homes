@@ -15,9 +15,9 @@ const DesktopDescription: FC = () => {
       <Image
         src='/darts.webp'
         alt='description image'
-        objectFit='contain'
-        width='640px'
-        height='360px'
+        style={{ objectFit: 'contain' }}
+        width={640}
+        height={360}
       />
       <div className='flex max-w-lg flex-col justify-center gap-4'>
         <h2 className='text-2xl font-bold'>{t.home.description.title}</h2>
@@ -34,9 +34,9 @@ const MobileDescription: FC = () => {
       <Image
         src='/darts.webp'
         alt='description image'
-        objectFit='contain'
-        width='360px'
-        height='180px'
+        style={{ objectFit: 'contain' }}
+        width={360}
+        height={180}
       />
       <div className='flex flex-col gap-4'>
         <h2 className='text-center text-lg font-bold'>{t.home.description.title}</h2>

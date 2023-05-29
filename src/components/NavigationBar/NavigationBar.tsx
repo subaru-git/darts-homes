@@ -16,7 +16,7 @@ const NavigationBar: FC = () => {
   return (
     <>
       <header className='z-[200] w-full md:fixed'>
-        <div className='flex min-h-[60px] items-center border-b-[1px] border-solid border-gray-200 bg-white py-2 px-4 text-gray-600'>
+        <div className='flex min-h-[60px] items-center border-b-[1px] border-solid border-gray-200 bg-white px-4 py-2 text-gray-600'>
           <div className='-ml-2 flex flex-1 md:hidden md:flex-auto'>
             <IconButton onClick={onToggle} color='ghost' aria-label='toggle navigation'>
               {isOpen ? <GrClose size={16} /> : <GiHamburgerMenu size={18} />}
@@ -24,9 +24,7 @@ const NavigationBar: FC = () => {
           </div>
           <div className='flex flex-auto justify-center md:justify-start'>
             <Link href='/' passHref>
-              <a className='flex items-center'>
-                <Image src='/logo.svg' alt='darts homes logo' height='40px' width='200px' />
-              </a>
+              <Image src='/logo.svg' alt='darts homes logo' height={40} width={200} />
             </Link>
             <div className='ml-10 hidden md:flex'>
               <DesktopNav items={items} />
@@ -87,19 +85,17 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
   return (
     <div className='group rounded-md p-2 hover:bg-pink-50'>
       <Link href={href ?? '/'}>
-        <a aria-label={label}>
-          <div className='flex flex-row items-center'>
-            <div>
-              <p className='font-medium text-gray-600 transition-all duration-300 group-hover:text-pink-400'>
-                {label}
-              </p>
-              <p className='text-sm'>{subLabel}</p>
-            </div>
-            <div className='flex flex-1 -translate-x-3 justify-end opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100'>
-              <GoChevronRight size={20} className='text-pink-400' />
-            </div>
+        <div className='flex flex-row items-center'>
+          <div>
+            <p className='font-medium text-gray-600 transition-all duration-300 group-hover:text-pink-400'>
+              {label}
+            </p>
+            <p className='text-sm'>{subLabel}</p>
           </div>
-        </a>
+          <div className='flex flex-1 -translate-x-3 justify-end opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100'>
+            <GoChevronRight size={20} className='text-pink-400' />
+          </div>
+        </div>
       </Link>
     </div>
   );
