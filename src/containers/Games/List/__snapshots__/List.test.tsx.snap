@@ -6,12 +6,12 @@ exports[`should rendering 1`] = `
     class="css-h94677"
   >
     <h2
-      class="chakra-heading css-yl7i8f"
+      class="chakra-heading css-uqd16f"
     >
       Games
     </h2>
     <div
-      class="css-1h2orqn"
+      class="css-ojpwlm"
     >
       <div>
         <div
@@ -24,7 +24,7 @@ exports[`should rendering 1`] = `
               href="/eagleseye"
             >
               <h3
-                class="chakra-heading css-17drl7a"
+                class="chakra-heading css-dnq814"
               >
                 Eagle's Eye
               </h3>
@@ -63,7 +63,7 @@ BULL is separate.
               href="/cricketmarkup"
             >
               <h3
-                class="chakra-heading css-17drl7a"
+                class="chakra-heading css-dnq814"
               >
                 Cricket Mark-Up
               </h3>
@@ -104,7 +104,7 @@ For more information, please watch this video.
               href="/doubletrouble"
             >
               <h3
-                class="chakra-heading css-17drl7a"
+                class="chakra-heading css-dnq814"
               >
                 Double Trouble
               </h3>
@@ -143,7 +143,7 @@ Receive five points for every double you hit. 15 points available every 3darts; 
               href="/sweet16"
             >
               <h3
-                class="chakra-heading css-17drl7a"
+                class="chakra-heading css-dnq814"
               >
                 Sweet 16
               </h3>
@@ -182,7 +182,7 @@ Receive five points every time you finish 32, 15poits available every 3 darts; 3
               href="/topsandtens"
             >
               <h3
-                class="chakra-heading css-17drl7a"
+                class="chakra-heading css-dnq814"
               >
                 Tops and Tens
               </h3>
@@ -221,7 +221,7 @@ Receive five points every time you finish 40. 15 points available every 3darts, 
               href="/twodartcombinations"
             >
               <h3
-                class="chakra-heading css-17drl7a"
+                class="chakra-heading css-dnq814"
               >
                 Two-Dart Combinations
               </h3>
@@ -260,7 +260,7 @@ Receive 15 points for every finish you complete. 15 points available every 3 dar
               href="/aroundthecompass"
             >
               <h3
-                class="chakra-heading css-17drl7a"
+                class="chakra-heading css-dnq814"
               >
                 Around The Compass
               </h3>
@@ -299,7 +299,7 @@ Receive 15 points for every finish you complete. 15 points available every 3 dar
               href="/tonsup"
             >
               <h3
-                class="chakra-heading css-17drl7a"
+                class="chakra-heading css-dnq814"
               >
                 Tons Up
               </h3>
@@ -338,7 +338,7 @@ Receive ten points every time you complete the finish and a ten-point bonus if y
               href="/route64"
             >
               <h3
-                class="chakra-heading css-17drl7a"
+                class="chakra-heading css-dnq814"
               >
                 Route 64
               </h3>
@@ -378,7 +378,7 @@ Receive ten points for every finish you complete and a ten point bonus for first
               href="/eightythrew"
             >
               <h3
-                class="chakra-heading css-17drl7a"
+                class="chakra-heading css-dnq814"
               >
                 Eighty Threw
               </h3>
@@ -418,7 +418,7 @@ Receive ten points for every finish you complete and ten point bonuses for two d
               href="/shanghainights"
             >
               <h3
-                class="chakra-heading css-17drl7a"
+                class="chakra-heading css-dnq814"
               >
                 Shanghai Nights
               </h3>
@@ -458,7 +458,7 @@ Receive ten points every time you take out the combination. Ten points bonuses f
               href="/switchhitter"
             >
               <h3
-                class="chakra-heading css-17drl7a"
+                class="chakra-heading css-dnq814"
               >
                 Switch Hitter
               </h3>
@@ -498,7 +498,7 @@ You receive no points for a dart which lands outside of the treble or single 19 
               href="/bullybully"
             >
               <h3
-                class="chakra-heading css-17drl7a"
+                class="chakra-heading css-dnq814"
               >
                 Bully Bully
               </h3>
@@ -537,7 +537,7 @@ You receive no points for a dart which lands outside of the treble or single 19 
               href="/treblesforshow"
             >
               <h3
-                class="chakra-heading css-17drl7a"
+                class="chakra-heading css-dnq814"
               >
                 Trebles For Show
               </h3>
@@ -576,7 +576,7 @@ You receive no points for a dart which lands outside of the treble or single 20 
               href="/arrange"
             >
               <h3
-                class="chakra-heading css-17drl7a"
+                class="chakra-heading css-dnq814"
               >
                 Arrange
               </h3>
@@ -630,7 +630,7 @@ The simulation mode must include the specified range of deviations.
               href="/countup"
             >
               <h3
-                class="chakra-heading css-17drl7a"
+                class="chakra-heading css-dnq814"
               >
                 Count Up
               </h3>

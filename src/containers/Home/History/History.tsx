@@ -15,9 +15,9 @@ const DesktopHistory: FC = () => {
       <Image
         src='/history.webp'
         alt='history image'
-        objectFit='cover'
-        width='640px'
-        height='360px'
+        style={{ objectFit: 'cover' }}
+        width={640}
+        height={360}
       />
       <div className='flex max-w-lg flex-col justify-center gap-4'>
         <h2 className='text-2xl font-bold'>{t.home.history.title}</h2>
@@ -35,9 +35,9 @@ const MobileHistory: FC = () => {
       <Image
         src='/history.webp'
         alt='history image'
-        objectFit='cover'
-        width='360px'
-        height='180px'
+        style={{ objectFit: 'cover' }}
+        width={360}
+        height={180}
       />
       <h2 className='text-center text-lg font-bold'>{t.home.history.title}</h2>
       <p className='whitespace-pre-wrap text-sm'>{t.home.history.description.join('\n')}</p>

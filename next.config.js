@@ -14,6 +14,9 @@ const nextConfig = withBundleAnalyzer({
     config.resolve.alias['@'] = path.resolve(__dirname, 'src');
     return config;
   },
+  compiler: {
+    emotion: true,
+  },
 });
 
 module.exports = nextConfig;

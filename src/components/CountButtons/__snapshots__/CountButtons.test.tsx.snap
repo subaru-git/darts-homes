@@ -36,7 +36,6 @@ exports[`should rendering and clickable input 1`] = `
           width="1em"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <desc />
           <path
             d="M0 0h24v24H0z"
             fill="none"
@@ -185,7 +184,6 @@ exports[`should rendering and disable input 1`] = `
           width="1em"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <desc />
           <path
             d="M0 0h24v24H0z"
             fill="none"
@@ -343,7 +341,6 @@ exports[`should rendering only cricket numbers 1`] = `
           width="1em"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <desc />
           <path
             d="M0 0h24v24H0z"
             fill="none"

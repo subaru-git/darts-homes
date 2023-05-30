@@ -9,7 +9,7 @@ exports[`should rendering 1`] = `
       class="z-[200] w-full md:fixed"
     >
       <div
-        class="flex min-h-[60px] items-center border-b-[1px] border-solid border-gray-200 bg-white py-2 px-4 text-gray-600"
+        class="flex min-h-[60px] items-center border-b-[1px] border-solid border-gray-200 bg-white px-4 py-2 text-gray-600"
       >
         <div
           class="-ml-2 flex flex-1 md:hidden md:flex-auto"
@@ -38,32 +38,18 @@ exports[`should rendering 1`] = `
           class="flex flex-auto justify-center md:justify-start"
         >
           <a
-            class="flex items-center"
             href="/"
           >
-            <span
-              style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
-            >
-              <span
-                style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
-              >
-                <img
-                  alt=""
-                  aria-hidden="true"
-                  src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27200%27%20height=%2740%27/%3e"
-                  style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
-                />
-              </span>
-              <img
-                alt="darts homes logo"
-                data-nimg="intrinsic"
-                decoding="async"
-                src="/logo.svg"
-                srcset="/logo.svg 1x, /logo.svg 2x"
-                style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
-              />
-              <noscript />
-            </span>
+            <img
+              alt="darts homes logo"
+              data-nimg="1"
+              decoding="async"
+              height="40"
+              loading="lazy"
+              src="/logo.svg"
+              style="color: transparent;"
+              width="200"
+            />
           </a>
           <div
             class="ml-10 hidden md:flex"
@@ -80,6 +66,7 @@ exports[`should rendering 1`] = `
                   id="popover-trigger-:r2:"
                 >
                   <a
+                    aria-label="Games"
                     href="/games"
                   >
                     Games
@@ -90,7 +77,7 @@ exports[`should rendering 1`] = `
                   style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
                 >
                   <section
-                    class="chakra-popover__content css-1slp7gy"
+                    class="chakra-popover__content css-r1kswd"
                     id="popover-content-:r2:"
                     role="tooltip"
                     style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
@@ -103,7 +90,6 @@ exports[`should rendering 1`] = `
                         class="group rounded-md p-2 hover:bg-pink-50"
                       >
                         <a
-                          aria-label="Eagle's Eye"
                           href="/eagleseye"
                         >
                           <div
@@ -147,7 +133,6 @@ exports[`should rendering 1`] = `
                         class="group rounded-md p-2 hover:bg-pink-50"
                       >
                         <a
-                          aria-label="Cricket Mark-Up"
                           href="/cricketmarkup"
                         >
                           <div
@@ -191,7 +176,6 @@ exports[`should rendering 1`] = `
                         class="group rounded-md p-2 hover:bg-pink-50"
                       >
                         <a
-                          aria-label="Double Trouble"
                           href="/doubletrouble"
                         >
                           <div
@@ -235,7 +219,6 @@ exports[`should rendering 1`] = `
                         class="group rounded-md p-2 hover:bg-pink-50"
                       >
                         <a
-                          aria-label="Sweet 16"
                           href="/sweet16"
                         >
                           <div
@@ -279,7 +262,6 @@ exports[`should rendering 1`] = `
                         class="group rounded-md p-2 hover:bg-pink-50"
                       >
                         <a
-                          aria-label="Tops and Tens"
                           href="/topsandtens"
                         >
                           <div
@@ -323,7 +305,6 @@ exports[`should rendering 1`] = `
                         class="group rounded-md p-2 hover:bg-pink-50"
                       >
                         <a
-                          aria-label="Two-Dart Combinations"
                           href="/twodartcombinations"
                         >
                           <div
@@ -367,7 +348,6 @@ exports[`should rendering 1`] = `
                         class="group rounded-md p-2 hover:bg-pink-50"
                       >
                         <a
-                          aria-label="Around The Compass"
                           href="/aroundthecompass"
                         >
                           <div
@@ -411,7 +391,6 @@ exports[`should rendering 1`] = `
                         class="group rounded-md p-2 hover:bg-pink-50"
                       >
                         <a
-                          aria-label="Tons Up"
                           href="/tonsup"
                         >
                           <div
@@ -455,7 +434,6 @@ exports[`should rendering 1`] = `
                         class="group rounded-md p-2 hover:bg-pink-50"
                       >
                         <a
-                          aria-label="Route 64"
                           href="/route64"
                         >
                           <div
@@ -499,7 +477,6 @@ exports[`should rendering 1`] = `
                         class="group rounded-md p-2 hover:bg-pink-50"
                       >
                         <a
-                          aria-label="Eighty Threw"
                           href="/eightythrew"
                         >
                           <div
@@ -543,7 +520,6 @@ exports[`should rendering 1`] = `
                         class="group rounded-md p-2 hover:bg-pink-50"
                       >
                         <a
-                          aria-label="Shanghai Nights"
                           href="/shanghainights"
                         >
                           <div
@@ -587,7 +563,6 @@ exports[`should rendering 1`] = `
                         class="group rounded-md p-2 hover:bg-pink-50"
                       >
                         <a
-                          aria-label="Switch Hitter"
                           href="/switchhitter"
                         >
                           <div
@@ -631,7 +606,6 @@ exports[`should rendering 1`] = `
                         class="group rounded-md p-2 hover:bg-pink-50"
                       >
                         <a
-                          aria-label="Bully Bully"
                           href="/bullybully"
                         >
                           <div
@@ -675,7 +649,6 @@ exports[`should rendering 1`] = `
                         class="group rounded-md p-2 hover:bg-pink-50"
                       >
                         <a
-                          aria-label="Treble For Show"
                           href="/treblesforshow"
                         >
                           <div
@@ -719,7 +692,6 @@ exports[`should rendering 1`] = `
                         class="group rounded-md p-2 hover:bg-pink-50"
                       >
                         <a
-                          aria-label="Arrange"
                           href="/arrange"
                         >
                           <div
@@ -763,7 +735,6 @@ exports[`should rendering 1`] = `
                         class="group rounded-md p-2 hover:bg-pink-50"
                       >
                         <a
-                          aria-label="Count Up"
                           href="/countup"
                         >
                           <div
@@ -816,7 +787,8 @@ exports[`should rendering 1`] = `
                   id="popover-trigger-:r4:"
                 >
                   <a
-                    href="/#"
+                    aria-label="Tools"
+                    href="#"
                   >
                     Tools
                   </a>
@@ -826,7 +798,7 @@ exports[`should rendering 1`] = `
                   style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
                 >
                   <section
-                    class="chakra-popover__content css-1slp7gy"
+                    class="chakra-popover__content css-r1kswd"
                     id="popover-content-:r4:"
                     role="tooltip"
                     style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
@@ -839,7 +811,6 @@ exports[`should rendering 1`] = `
                         class="group rounded-md p-2 hover:bg-pink-50"
                       >
                         <a
-                          aria-label="Arrange Record"
                           href="/arrangerecord"
                         >
                           <div
@@ -892,6 +863,7 @@ exports[`should rendering 1`] = `
                   id="popover-trigger-:r6:"
                 >
                   <a
+                    aria-label="Respect"
                     href="/respect"
                   >
                     Respect
@@ -907,6 +879,7 @@ exports[`should rendering 1`] = `
                   id="popover-trigger-:r8:"
                 >
                   <a
+                    aria-label="History"
                     href="/history"
                   >
                     History
@@ -957,33 +930,39 @@ exports[`should rendering 1`] = `
                 style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
                 tabindex="-1"
               >
-                <div
-                  class="group block rounded-md p-2 hover:bg-pink-50"
+                <a
                   href="/"
                 >
-                  <span
-                    class="group-hover:text-pink-400 group-hover:transition-all group-hover:duration-150 group-hover:ease-linear"
+                  <div
+                    class="group block rounded-md p-2 hover:bg-pink-50"
                   >
-                    日本語
-                  </span>
-                </div>
-                <div
-                  class="group block rounded-md p-2 hover:bg-pink-50"
+                    <span
+                      class="group-hover:text-pink-400 group-hover:transition-all group-hover:duration-150 group-hover:ease-linear"
+                    >
+                      日本語
+                    </span>
+                  </div>
+                </a>
+                <a
                   href="/"
                 >
-                  <span
-                    class="group-hover:text-pink-400 group-hover:transition-all group-hover:duration-150 group-hover:ease-linear"
+                  <div
+                    class="group block rounded-md p-2 hover:bg-pink-50"
                   >
-                    English
-                  </span>
-                </div>
+                    <span
+                      class="group-hover:text-pink-400 group-hover:transition-all group-hover:duration-150 group-hover:ease-linear"
+                    >
+                      English
+                    </span>
+                  </div>
+                </a>
               </section>
             </div>
             <button
               aria-controls="popover-content-:rc:"
               aria-expanded="false"
               aria-haspopup="dialog"
-              class="chakra-button css-1pnao28"
+              class="chakra-button css-1840noo"
               id="popover-trigger-:rc:"
               type="button"
             >
@@ -1201,31 +1180,34 @@ exports[`should rendering 1`] = `
           class="bg-white p-4"
         >
           <div>
-            <div
-              class="flex flex-row items-center justify-between p-2"
-              href="/#"
+            <a
+              href="#"
             >
-              <span
-                class="font-medium text-gray-600"
+              <div
+                class="flex flex-row items-center justify-between p-2"
               >
-                Games
-              </span>
-              <svg
-                class=" transition-all duration-200 ease-in-out"
-                fill="currentColor"
-                height="20"
-                stroke="currentColor"
-                stroke-width="0"
-                viewBox="0 0 10 16"
-                width="20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M5 11L0 6l1.5-1.5L5 8.25 8.5 4.5 10 6l-5 5z"
-                  fill-rule="evenodd"
-                />
-              </svg>
-            </div>
+                <span
+                  class="font-medium text-gray-600"
+                >
+                  Games
+                </span>
+                <svg
+                  class=" transition-all duration-200 ease-in-out"
+                  fill="currentColor"
+                  height="20"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 10 16"
+                  width="20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 11L0 6l1.5-1.5L5 8.25 8.5 4.5 10 6l-5 5z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </a>
             <div
               class="chakra-collapse"
               style="overflow: hidden; display: none; opacity: 0; height: 0px;"
@@ -1233,115 +1215,182 @@ exports[`should rendering 1`] = `
               <div
                 class="mt-2 border-l-2 border-gray-200 pl-4 text-start"
               >
-                <div
-                  class="py-3"
+                <a
+                  href="/eagleseye"
                 >
-                  Eagle's Eye
-                </div>
-                <div
-                  class="py-3"
+                  <div
+                    class="py-3"
+                  >
+                    Eagle's Eye
+                  </div>
+                </a>
+                <a
+                  href="/cricketmarkup"
                 >
-                  Cricket Mark-Up
-                </div>
-                <div
-                  class="py-3"
+                  <div
+                    class="py-3"
+                  >
+                    Cricket Mark-Up
+                  </div>
+                </a>
+                <a
+                  href="/doubletrouble"
                 >
-                  Double Trouble
-                </div>
-                <div
-                  class="py-3"
+                  <div
+                    class="py-3"
+                  >
+                    Double Trouble
+                  </div>
+                </a>
+                <a
+                  href="/sweet16"
                 >
-                  Sweet 16
-                </div>
-                <div
-                  class="py-3"
+                  <div
+                    class="py-3"
+                  >
+                    Sweet 16
+                  </div>
+                </a>
+                <a
+                  href="/topsandtens"
                 >
-                  Tops and Tens
-                </div>
-                <div
-                  class="py-3"
+                  <div
+                    class="py-3"
+                  >
+                    Tops and Tens
+                  </div>
+                </a>
+                <a
+                  href="/twodartcombinations"
                 >
-                  Two-Dart Combinations
-                </div>
-                <div
-                  class="py-3"
+                  <div
+                    class="py-3"
+                  >
+                    Two-Dart Combinations
+                  </div>
+                </a>
+                <a
+                  href="/aroundthecompass"
                 >
-                  Around The Compass
-                </div>
-                <div
-                  class="py-3"
+                  <div
+                    class="py-3"
+                  >
+                    Around The Compass
+                  </div>
+                </a>
+                <a
+                  href="/tonsup"
                 >
-                  Tons Up
-                </div>
-                <div
-                  class="py-3"
+                  <div
+                    class="py-3"
+                  >
+                    Tons Up
+                  </div>
+                </a>
+                <a
+                  href="/route64"
                 >
-                  Route 64
-                </div>
-                <div
-                  class="py-3"
+                  <div
+                    class="py-3"
+                  >
+                    Route 64
+                  </div>
+                </a>
+                <a
+                  href="/eightythrew"
                 >
-                  Eighty Threw
-                </div>
-                <div
-                  class="py-3"
+                  <div
+                    class="py-3"
+                  >
+                    Eighty Threw
+                  </div>
+                </a>
+                <a
+                  href="/shanghainights"
                 >
-                  Shanghai Nights
-                </div>
-                <div
-                  class="py-3"
+                  <div
+                    class="py-3"
+                  >
+                    Shanghai Nights
+                  </div>
+                </a>
+                <a
+                  href="/switchhitter"
                 >
-                  Switch Hitter
-                </div>
-                <div
-                  class="py-3"
+                  <div
+                    class="py-3"
+                  >
+                    Switch Hitter
+                  </div>
+                </a>
+                <a
+                  href="/bullybully"
                 >
-                  Bully Bully
-                </div>
-                <div
-                  class="py-3"
+                  <div
+                    class="py-3"
+                  >
+                    Bully Bully
+                  </div>
+                </a>
+                <a
+                  href="/treblesforshow"
                 >
-                  Treble For Show
-                </div>
-                <div
-                  class="py-3"
+                  <div
+                    class="py-3"
+                  >
+                    Treble For Show
+                  </div>
+                </a>
+                <a
+                  href="/arrange"
                 >
-                  Arrange
-                </div>
-                <div
-                  class="py-3"
+                  <div
+                    class="py-3"
+                  >
+                    Arrange
+                  </div>
+                </a>
+                <a
+                  href="/countup"
                 >
-                  Count Up
-                </div>
+                  <div
+                    class="py-3"
+                  >
+                    Count Up
+                  </div>
+                </a>
               </div>
             </div>
           </div>
           <div>
-            <div
-              class="flex flex-row items-center justify-between p-2"
-              href="/#"
+            <a
+              href="#"
             >
-              <span
-                class="font-medium text-gray-600"
+              <div
+                class="flex flex-row items-center justify-between p-2"
               >
-                Tools
-              </span>
-              <svg
-                class=" transition-all duration-200 ease-in-out"
-                fill="currentColor"
-                height="20"
-                stroke="currentColor"
-                stroke-width="0"
-                viewBox="0 0 10 16"
-                width="20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M5 11L0 6l1.5-1.5L5 8.25 8.5 4.5 10 6l-5 5z"
-                  fill-rule="evenodd"
-                />
-              </svg>
-            </div>
+                <span
+                  class="font-medium text-gray-600"
+                >
+                  Tools
+                </span>
+                <svg
+                  class=" transition-all duration-200 ease-in-out"
+                  fill="currentColor"
+                  height="20"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 10 16"
+                  width="20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 11L0 6l1.5-1.5L5 8.25 8.5 4.5 10 6l-5 5z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </a>
             <div
               class="chakra-collapse"
               style="overflow: hidden; display: none; opacity: 0; height: 0px;"
@@ -1349,25 +1398,32 @@ exports[`should rendering 1`] = `
               <div
                 class="mt-2 border-l-2 border-gray-200 pl-4 text-start"
               >
-                <div
-                  class="py-3"
+                <a
+                  href="/arrangerecord"
                 >
-                  Arrange Record
-                </div>
+                  <div
+                    class="py-3"
+                  >
+                    Arrange Record
+                  </div>
+                </a>
               </div>
             </div>
           </div>
           <div>
-            <div
-              class="flex flex-row items-center justify-between p-2"
+            <a
               href="/respect"
             >
-              <span
-                class="font-medium text-gray-600"
+              <div
+                class="flex flex-row items-center justify-between p-2"
               >
-                Respect
-              </span>
-            </div>
+                <span
+                  class="font-medium text-gray-600"
+                >
+                  Respect
+                </span>
+              </div>
+            </a>
             <div
               class="chakra-collapse"
               style="overflow: hidden; display: none; opacity: 0; height: 0px;"
@@ -1378,16 +1434,19 @@ exports[`should rendering 1`] = `
             </div>
           </div>
           <div>
-            <div
-              class="flex flex-row items-center justify-between p-2"
+            <a
               href="/history"
             >
-              <span
-                class="font-medium text-gray-600"
+              <div
+                class="flex flex-row items-center justify-between p-2"
               >
-                History
-              </span>
-            </div>
+                <span
+                  class="font-medium text-gray-600"
+                >
+                  History
+                </span>
+              </div>
+            </a>
             <div
               class="chakra-collapse"
               style="overflow: hidden; display: none; opacity: 0; height: 0px;"
@@ -1412,6 +1471,7 @@ exports[`should rendering 1`] = `
       >
         <div
           class="chakra-alert css-vr88kb"
+          data-status="error"
           role="alert"
         >
           <div
@@ -1419,9 +1479,10 @@ exports[`should rendering 1`] = `
           >
             <span
               class="chakra-alert__icon css-14ogjxt"
+              data-status="error"
             >
               <svg
-                class="chakra-icon css-fi0ww0"
+                class="chakra-icon css-qk6lof"
                 focusable="false"
                 viewBox="0 0 24 24"
               >
@@ -1433,11 +1494,13 @@ exports[`should rendering 1`] = `
             </span>
             <div
               class="chakra-alert__title css-tidvy5"
+              data-status="error"
             >
               Invalid Import File.
             </div>
             <div
               class="chakra-alert__desc css-zzks76"
+              data-status="error"
             >
               Your import file is invalid. Please check the import file.
             </div>
@@ -1462,10 +1525,10 @@ exports[`should rendering 1`] = `
         </div>
       </div>
       <div
-        class="css-1vk0cfl"
+        class="css-1m0mzue"
       >
         <h2
-          class="chakra-heading css-ozfqyb"
+          class="chakra-heading css-h9sihg"
         >
           History
         </h2>
@@ -1479,7 +1542,7 @@ exports[`should rendering 1`] = `
           />
           <button
             aria-label="import"
-            class="chakra-button css-kx4v7c"
+            class="chakra-button css-4l303d"
             type="button"
           >
             <span
@@ -1508,7 +1571,7 @@ exports[`should rendering 1`] = `
           </button>
           <button
             aria-label="export"
-            class="chakra-button css-iez0o3"
+            class="chakra-button css-1k21iee"
             type="button"
           >
             <span

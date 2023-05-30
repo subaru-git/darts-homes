@@ -15,7 +15,7 @@ exports[`should rendering 1`] = `
           class="css-x4muuh"
         >
           <td
-            class="css-1hg6byp"
+            class="css-yqmnaf"
           >
             <p
               class="chakra-text css-1ps7yy3"
@@ -24,7 +24,7 @@ exports[`should rendering 1`] = `
             </p>
           </td>
           <td
-            class="css-1hg6byp"
+            class="css-yqmnaf"
           >
             <div
               class="css-1h3cqa9"
@@ -33,34 +33,34 @@ exports[`should rendering 1`] = `
                 class="css-0"
               >
                 <div
-                  css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop).,You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+                  class="css-lzrd4v-CricketMark"
                 />
               </div>
               <div
                 class="css-0"
               >
                 <div
-                  css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop).,You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+                  class="css-lzrd4v-CricketMark"
                 />
               </div>
               <div
                 class="css-0"
               >
                 <div
-                  css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop).,You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+                  class="css-lzrd4v-CricketMark"
                 />
               </div>
               <div
                 class="css-0"
               >
                 <div
-                  css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop).,You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+                  class="css-109awtt-CricketMark"
                 />
               </div>
             </div>
           </td>
           <td
-            class="css-1hg6byp"
+            class="css-yqmnaf"
           >
             <p
               class="chakra-text css-1ps7yy3"
