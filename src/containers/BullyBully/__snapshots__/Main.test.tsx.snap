@@ -12,7 +12,7 @@ exports[`should rendering 1`] = `
       class="z-[200] w-full md:fixed"
     >
       <div
-        class="flex min-h-[60px] items-center border-b-[1px] border-solid border-gray-200 bg-white py-2 px-4 text-gray-600"
+        class="flex min-h-[60px] items-center border-b-[1px] border-solid border-gray-200 bg-white px-4 py-2 text-gray-600"
       >
         <div
           class="-ml-2 flex flex-1 md:hidden md:flex-auto"
@@ -1684,25 +1684,25 @@ exports[`should rendering 1`] = `
         class="css-13s4dk6"
       >
         <div
-          css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+          class="css-158voh1-CountBullButtons"
         >
           <div
-            css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop).,You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+            class="css-8vdy66-CountBullButtons"
           />
           <button
             aria-label="outer bull"
-            css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+            class="css-c7v446-CountBullButtons"
           />
           <button
             aria-label="inner bull"
-            css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+            class="css-1kw2i65-CountBullButtons"
           />
           <button
             aria-label="non bull"
-            css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+            class="css-1cn4f4l-CountBullButtons"
           />
           <div
-            css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+            class="css-6n8pms-CountBullButtons"
           />
         </div>
       </div>
