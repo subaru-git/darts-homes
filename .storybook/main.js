@@ -39,6 +39,13 @@ module.exports = {
           '@emotion/styled': toPath('node_modules/@emotion/styled'),
           'emotion-theming': toPath('node_modules/@emotion/react'),
         },
+        fallback: {
+          ...(config.resolve || {}).fallback,
+          fs: false,
+          stream: false,
+          os: false,
+          zlib: false,
+        },
       },
     };
   },
