@@ -1,10 +1,12 @@
-import React, { FC } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import { Flex, Grid, GridItem, Text, useBreakpointValue } from '@chakra-ui/react';
+import { AiOutlineThunderbolt } from 'react-icons/ai';
 import ArrangeBoard from './ArrangeBoard';
 import ArrangeScore from './ArrangeScore';
 import ArrangeScoreBoard from './ArrangeScoreBoard';
 import NewGame from './NewGame';
 import Targets from './Targets';
+import CheckButton from '@/atoms/CheckButton/CheckButton';
 import DescriptionModal from '@/components/DescriptionModal';
 import RoundDisplay from '@/components/RoundDisplay';
 import RoundScore from '@/components/RoundScore';
@@ -26,6 +28,10 @@ const Main: FC = () => {
   const setGame = useArrangeGameSet();
   const isMd = useBreakpointValue({ base: false, md: true });
   const { t } = useLocale();
+  const [isThePower, setThePower] = useState(false);
+  useEffect(() => {
+    if (!enablePower(game)) setThePower(false);
+  }, [game]);
   if (!game) return <MainTemplate label={'arrange-main'} isLoading />;
   return (
     <MainTemplate label='arrange-main'>
@@ -35,6 +41,8 @@ const Main: FC = () => {
           setGame={setGame}
           user={user}
           description={t.games.arrange.description.join('\n')}
+          isThePower={isThePower}
+          setThePower={setThePower}
         />
       ) : (
         <MobileMain
@@ -42,6 +50,8 @@ const Main: FC = () => {
           setGame={setGame}
           user={user}
           description={t.games.arrange.description.join('\n')}
+          isThePower={isThePower}
+          setThePower={setThePower}
         />
       )}
     </MainTemplate>
@@ -53,12 +63,21 @@ type MainProps = {
   setGame: (game: ArrangeGame) => void;
   user: User | null | undefined;
   description?: string;
+  isThePower?: boolean;
+  setThePower?: (isThePower: boolean) => void;
 };
 
-const DesktopMain: FC<MainProps> = ({ game, setGame, user, description }) => {
+const DesktopMain: FC<MainProps> = ({
+  game,
+  setGame,
+  user,
+  description,
+  isThePower,
+  setThePower,
+}) => {
   return (
     <>
-      <Flex justifyContent='space-between' alignItems='center'>
+      <div className='flex items-center justify-between'>
         <NewGame
           onNewGame={(settings) => {
             if (game.isFinished()) saveHistory(game.getGameResult(), db.arrangeResult, user);
@@ -71,10 +90,10 @@ const DesktopMain: FC<MainProps> = ({ game, setGame, user, description }) => {
           header={'Arrange'}
           description={<Text whiteSpace='pre-wrap'>{description}</Text>}
         />
-      </Flex>
+      </div>
       <div className='flex flex-col gap-4'>
-        <Flex gap={20} justifyContent='center'>
-          <Flex direction='column' alignItems='center' gap={4} justifyContent='center'>
+        <div className='flex justify-center gap-10'>
+          <div className='flex flex-col items-center justify-center gap-4'>
             {game.getSettings().game && game.getSettings().hard ? (
               <ScoreBoard
                 data={convertArrangeOutToGameScore({
@@ -86,23 +105,37 @@ const DesktopMain: FC<MainProps> = ({ game, setGame, user, description }) => {
               />
             ) : (
               <>
-                <ArrangeScore
-                  score={`${
-                    game.getCurrentTarget() === -1
-                      ? 'BUST'
-                      : game.getCurrentTarget() === 0
-                      ? 'NICE'
-                      : game.getCurrentTarget()
-                  }`}
-                  round={`${
-                    game.getCurrentTarget() === -1
-                      ? 'BUST'
-                      : game.getCurrentTarget() === 0
-                      ? 'NICE'
-                      : game.getCurrentRoundTarget()
-                  }`}
-                  pro={game.getSettings().pro}
-                />
+                <div>
+                  <div className='flex justify-end' hidden={!enablePower(game)}>
+                    <CheckButton
+                      color='orange'
+                      onClick={() => setThePower?.(!isThePower)}
+                      checked={isThePower}
+                    >
+                      <AiOutlineThunderbolt />
+                      The Power
+                    </CheckButton>
+                  </div>
+                  <div className='h-[250px] min-w-[400px]'>
+                    <ArrangeScore
+                      score={`${
+                        game.getCurrentTarget() === -1
+                          ? 'BUST'
+                          : game.getCurrentTarget() === 0
+                          ? 'NICE'
+                          : game.getCurrentTarget()
+                      }`}
+                      round={`${
+                        game.getCurrentTarget() === -1
+                          ? 'BUST'
+                          : game.getCurrentTarget() === 0
+                          ? 'NICE'
+                          : game.getCurrentRoundTarget()
+                      }`}
+                      pro={game.getSettings().pro}
+                    />
+                  </div>
+                </div>
                 <RoundDisplay
                   count={game.getSettings().hard ? game.getDartsCount() : game.getRoundCount()}
                   round={game.getSettings().hard ? false : true}
@@ -119,17 +152,18 @@ const DesktopMain: FC<MainProps> = ({ game, setGame, user, description }) => {
               </>
             )}
             <MyRoundScore game={game} setGame={setGame} user={user} />
-          </Flex>
+          </div>
           <ArrangeBoard
             onCount={(n) => updateObject(game, new ArrangeGame(), 'addScore', setGame, n)}
             range={game.getSettings().range}
             simulation={game.getSettings().simulation}
             hard={game.getSettings().hard}
             disabled={game.getRoundScore().length >= 3 || game.isFinished()}
+            thePower={isThePower}
             roundVectors={[...game.getVectors()]}
             onLanding={(n) => updateObject(game, new ArrangeGame(), 'addVector', setGame, n)}
           />
-        </Flex>
+        </div>
         {game.getSettings().game && game.getSettings().hard ? null : (
           <div className='max-h-[30vh] overflow-y-scroll px-2'>
             <ArrangeScoreBoard
@@ -141,19 +175,40 @@ const DesktopMain: FC<MainProps> = ({ game, setGame, user, description }) => {
     </>
   );
 };
-const MobileMain: FC<MainProps> = ({ game, setGame, user, description }) => {
+const MobileMain: FC<MainProps> = ({
+  game,
+  setGame,
+  user,
+  description,
+  isThePower,
+  setThePower,
+}) => {
   return (
     <>
       {game.getSettings().game && game.getSettings().hard ? (
         <MobileGameDisplay game={game} setGame={setGame} user={user} description={description} />
       ) : (
-        <MobileMainDisplay game={game} setGame={setGame} user={user} description={description} />
+        <MobileMainDisplay
+          game={game}
+          setGame={setGame}
+          user={user}
+          description={description}
+          isThePower={isThePower}
+          setThePower={setThePower}
+        />
       )}
     </>
   );
 };
 
-const MobileMainDisplay: FC<MainProps> = ({ game, setGame, user, description }) => {
+const MobileMainDisplay: FC<MainProps> = ({
+  game,
+  setGame,
+  user,
+  description,
+  isThePower,
+  setThePower,
+}) => {
   return (
     <Flex direction='column' pb={2}>
       <Flex justifyContent='space-between' alignItems='center'>
@@ -205,11 +260,22 @@ const MobileMainDisplay: FC<MainProps> = ({ game, setGame, user, description }) 
             </div>
           </GridItem>
           <GridItem colStart={5} mx={1}>
-            <RoundDisplay
-              count={game.getSettings().hard ? game.getDartsCount() : game.getRoundCount()}
-              round={game.getSettings().hard ? false : true}
-              size='sm'
-            />
+            <div className='flex h-full flex-col justify-between'>
+              <div className='flex justify-center pb-4' hidden={!enablePower(game)}>
+                <CheckButton
+                  color='orange'
+                  onClick={() => setThePower?.(!isThePower)}
+                  checked={isThePower}
+                >
+                  <AiOutlineThunderbolt />
+                </CheckButton>
+              </div>
+              <RoundDisplay
+                count={game.getSettings().hard ? game.getDartsCount() : game.getRoundCount()}
+                round={game.getSettings().hard ? false : true}
+                size='sm'
+              />
+            </div>
           </GridItem>
         </Grid>
         <MyRoundScore game={game} setGame={setGame} user={user} />
@@ -219,6 +285,7 @@ const MobileMainDisplay: FC<MainProps> = ({ game, setGame, user, description }) 
           simulation={game.getSettings().simulation}
           hard={game.getSettings().hard}
           disabled={game.getRoundScore().length >= 3 || game.isFinished()}
+          thePower={isThePower}
           roundVectors={[...game.getVectors()]}
           onLanding={(n) => updateObject(game, new ArrangeGame(), 'addVector', setGame, n)}
         />
@@ -304,6 +371,13 @@ const getResult = (game: ArrangeGame) => {
     return res;
   }
   return `[${game.getTargets().join(', ')}]\n${game.getRoundCount()} Round`;
+};
+
+const enablePower = (game: ArrangeGame | null) => {
+  if (!game) return false;
+  if (game.getCurrentTarget() > 40 && game.getSettings().hard) return false;
+  if (game.getCurrentTarget() > 50 && !game.getSettings().hard) return false;
+  return true;
 };
 
 export default Main;

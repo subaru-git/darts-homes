@@ -1466,7 +1466,7 @@ exports[`should rendering 1`] = `
       class="hidden pt-[60px] md:block"
     />
     <div
-      class="css-69i1ev"
+      class="flex items-center justify-between"
     >
       <div
         class="flex h-fit w-fit flex-nowrap items-start p-[5px]"
@@ -1543,35 +1543,67 @@ exports[`should rendering 1`] = `
       class="flex flex-col gap-4"
     >
       <div
-        class="css-1cck3nv"
+        class="flex justify-center gap-10"
       >
         <div
-          class="css-hq2ciy"
+          class="flex flex-col items-center justify-center gap-4"
         >
-          <div
-            class="flex h-full w-full"
-          >
+          <div>
             <div
-              class="relative h-full w-full"
+              class="flex justify-end"
             >
-              <div
-                class="absolute inset-0 flex h-full w-full items-center justify-center opacity-100 transition-opacity duration-150"
+              <button
+                class="text-orange-400 border-orange-400 bg-white hover:bg-orange-50 w-fit rounded-lg border p-2 text-sm font-bold subpixel-antialiased disabled:cursor-not-allowed md:px-3 md:text-base undefined"
               >
                 <div
-                  aria-label="target board"
+                  class="flex items-center gap-1"
                 >
-                  <p
-                    aria-label="message Target"
-                    class="pl-1 pt-1 font-bold text-green-600 md:pl-4 md:pt-4 text-[24px] md:text-[32px]"
+                  <svg
+                    fill="currentColor"
+                    height="1em"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 1024 1024"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    Target
-                  </p>
-                  <p
-                    aria-label="target Target"
-                    class="min-w-[110px] py-1 text-center font-[roboto,_sans-serif] font-bold text-gray-700 md:min-w-[260px] md:py-8 text-[48px] md:text-[96px]"
+                    <path
+                      d="M848 359.3H627.7L825.8 109c4.1-5.3.4-13-6.3-13H436c-2.8 0-5.5 1.5-6.9 4L170 547.5c-3.1 5.3.7 12 6.9 12h174.4l-89.4 357.6c-1.9 7.8 7.5 13.3 13.3 7.7L853.5 373c5.2-4.9 1.7-13.7-5.5-13.7zM378.2 732.5l60.3-241H281.1l189.6-327.4h224.6L487 427.4h211L378.2 732.5z"
+                    />
+                  </svg>
+                  The Power
+                </div>
+              </button>
+            </div>
+            <div
+              class="h-[250px] min-w-[400px]"
+            >
+              <div
+                class="flex h-full w-full"
+              >
+                <div
+                  class="relative h-full w-full"
+                >
+                  <div
+                    class="absolute inset-0 flex h-full w-full items-center justify-center opacity-100 transition-opacity duration-150"
                   >
-                    NICE
-                  </p>
+                    <div
+                      aria-label="target board"
+                    >
+                      <p
+                        aria-label="message Target"
+                        class="pl-1 pt-1 font-bold text-green-600 md:pl-4 md:pt-4 text-[24px] md:text-[32px]"
+                      >
+                        Target
+                      </p>
+                      <p
+                        aria-label="target Target"
+                        class="min-w-[110px] py-1 text-center font-[roboto,_sans-serif] font-bold text-gray-700 md:min-w-[260px] md:py-8 text-[48px] md:text-[96px]"
+                      >
+                        NICE
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

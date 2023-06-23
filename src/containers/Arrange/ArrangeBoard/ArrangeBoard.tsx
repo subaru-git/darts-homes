@@ -14,6 +14,7 @@ type ArrangeBoardProps = {
   simulation?: boolean;
   hard?: boolean;
   disabled?: boolean;
+  thePower?: boolean;
   roundVectors?: Vector2D[];
   onLanding?: (landing: Vector2D) => void;
 };
@@ -31,6 +32,7 @@ const ArrangeBoard: FC<ArrangeBoardProps> = ({
   simulation = false,
   hard = false,
   disabled = false,
+  thePower = false,
   roundVectors = [],
   onLanding = () => {},
 }) => {
@@ -75,12 +77,14 @@ const ArrangeBoard: FC<ArrangeBoardProps> = ({
                 let relativePos = { x: e.clientX - baseRect.x, y: e.clientY - baseRect.y };
                 const aimVec = normalizedCoordinate(relativePos, baseRect);
                 setAim({ x: aimVec.x, y: aimVec.y, visible: 'visible' });
-                if (simulation) {
-                  pos = getLandingPosition({ x: e.clientX, y: e.clientY }, baseRect, range);
-                  relativePos = { x: pos.x - baseRect.x, y: pos.y - baseRect.y };
-                  const landingVec = normalizedCoordinate(relativePos, baseRect);
-                  setLanding({ x: landingVec.x, y: landingVec.y, visible: 'visible' });
-                }
+                pos = getLandingPosition(
+                  { x: e.clientX, y: e.clientY },
+                  baseRect,
+                  !simulation || thePower ? { x: 0, y: 0 } : range,
+                );
+                relativePos = { x: pos.x - baseRect.x, y: pos.y - baseRect.y };
+                const landingVec = normalizedCoordinate(relativePos, baseRect);
+                setLanding({ x: landingVec.x, y: landingVec.y, visible: 'visible' });
                 onLanding(normalizedCoordinate(relativePos, baseRect));
                 base.current?.style.setProperty('pointer-events', `none`);
                 const elm = document.elementFromPoint(pos.x, pos.y) as HTMLElement;
