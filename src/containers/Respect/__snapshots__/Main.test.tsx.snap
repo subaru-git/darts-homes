@@ -1653,6 +1653,36 @@ exports[`should rendering 1`] = `
               </p>
             </div>
           </div>
+          <div>
+            <div
+              class="h-full max-w-md rounded-xl border border-gray-200 bg-gray-50 p-5 shadow-md"
+            >
+              <div
+                class="css-gmuwbf"
+              >
+                <a
+                  class="chakra-link css-spn4bz"
+                  href="https://www.pdc.tv/"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  <img
+                    alt="Home | PDC image"
+                    class="chakra-image__placeholder css-1l0a0ng"
+                    src="/fallback.webp"
+                  />
+                </a>
+              </div>
+              <h3
+                class="chakra-heading css-nnmkwd"
+              >
+                Home | PDC
+              </h3>
+              <p
+                class="chakra-text css-1ykf6wi"
+              />
+            </div>
+          </div>
         </div>
       </div>
       <div
@@ -1955,7 +1985,7 @@ exports[`should rendering 1`] = `
               <p
                 class="chakra-text css-1ykf6wi"
               >
-                プロダーツプレイヤーとして活動しながらYouTube投稿をさせていただいております。毎週金曜日20時投稿してます！！皆様に面白いこと楽しいことやいい情報お届け出来たらと思ってます(*´∀｀*)少しでもいいなって思ってくださった方がいれば是非チャンネル登録と高評価コメントなどよろしくお願いします！僕のモチベーション...
+                プロダーツプレイヤーとして活動しながらYouTube投稿をさせていただいております。2023年3月より毎日ショート動画含めの20時投稿してます！！皆様に面白いこと楽しいことやいい情報お届け出来たらと思ってます(*´∀｀*)少しでもいいなって思ってくださった方がいれば是非チャンネル登録と高評価コメントなどよろしくお...
               </p>
             </div>
           </div>
@@ -1987,7 +2017,7 @@ exports[`should rendering 1`] = `
               <p
                 class="chakra-text css-1ykf6wi"
               >
-                ダーツの楽しみ方無限大ダーツプロ浅田斉吾国内ダーツプロトーナメントPERFECTで6年連続日本一The Ninjaのニックネームで、アジア、ヨーロッパなどでも活躍プロダーツプレイヤー浅田斉吾がダーツ動画だけでなく、趣味のバイクやゲーム、また色々なチャレンジしたりするチャンネルです！好きな事させてもらってるゆる〜い...
+                ダーツの楽しみ方無限大皆様、ご視聴ありがとうございます！プロダーツプレイヤー浅田斉吾です。ダーツに関するスキルアップ、コーチング動画ダーツのエンターテイメント動画をメインに動画配信しております。気まぐれで趣味のバイク（ハーレーショベルヘッド）ゲーム（APEX、ヴァロラント等）も投稿や配信しております。プロ活動と仕...
               </p>
             </div>
           </div>
@@ -2020,6 +2050,458 @@ exports[`should rendering 1`] = `
                 class="chakra-text css-1ykf6wi"
               >
                 パンプイットチャンネルのひでひとですm(__)m地元函館でプロダーツプレイヤーが、ダーツはもちろん、釣り、DIY、そのた色んな面白い事に、チャレンジしていくチャンネルです。時に真面目に、時に悪ふざけそんなチャンネルです。調査依頼やチャレンジ依頼も受け付けています(°▽°)チャンネル登録よろしくお願いします。Twi...
+              </p>
+            </div>
+          </div>
+          <div>
+            <div
+              class="h-full max-w-md rounded-xl border border-gray-200 bg-gray-50 p-5 shadow-md"
+            >
+              <div
+                class="css-gmuwbf"
+              >
+                <a
+                  class="chakra-link css-spn4bz"
+                  href="https://www.youtube.com/channel/UC-bJ0W_x2btdNmMKySAwVAw"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  <img
+                    alt="Darts Cafe DOLLIS - YouTube image"
+                    class="chakra-image__placeholder css-1l0a0ng"
+                    src="/fallback.webp"
+                  />
+                </a>
+              </div>
+              <h3
+                class="chakra-heading css-nnmkwd"
+              >
+                Darts Cafe DOLLIS - YouTube
+              </h3>
+              <p
+                class="chakra-text css-1ykf6wi"
+              >
+                ダーツカフェ ドリズがお届けするスティールダーツ動画アカウントトッププレイヤーのスロー動画シリーズ、ドリーTVシリーズ、PDCの映像などなどスティールファン向けの動画を発信しています。宜しくお願いします。
+              </p>
+            </div>
+          </div>
+          <div>
+            <div
+              class="h-full max-w-md rounded-xl border border-gray-200 bg-gray-50 p-5 shadow-md"
+            >
+              <div
+                class="css-gmuwbf"
+              >
+                <a
+                  class="chakra-link css-spn4bz"
+                  href="https://www.youtube.com/channel/UC9j2C8uswgvuqfJcIi3o7wA"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  <img
+                    alt="DOLLYドリー - YouTube image"
+                    class="chakra-image__placeholder css-1l0a0ng"
+                    src="/fallback.webp"
+                  />
+                </a>
+              </div>
+              <h3
+                class="chakra-heading css-nnmkwd"
+              >
+                DOLLYドリー - YouTube
+              </h3>
+              <p
+                class="chakra-text css-1ykf6wi"
+              >
+                東京・巣鴨 ダーツカフェ ドリズ オーナースティールダーツの映像が主ダーツスロー映像、遠征、トーク、スケボー、ビリヤードよろしくお願いします！
+                <br />
+                <a
+                  class="chakra-link css-11a67xw"
+                  href="https://linktr.ee/dolly1129"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  https://linktr.ee/dolly1129
+                   
+                  <svg
+                    class="chakra-icon css-onkibi"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                      />
+                      <path
+                        d="M15 3h6v6"
+                      />
+                      <path
+                        d="M10 14L21 3"
+                      />
+                    </g>
+                  </svg>
+                </a>
+                <br />
+              </p>
+            </div>
+          </div>
+          <div>
+            <div
+              class="h-full max-w-md rounded-xl border border-gray-200 bg-gray-50 p-5 shadow-md"
+            >
+              <div
+                class="css-gmuwbf"
+              >
+                <a
+                  class="chakra-link css-spn4bz"
+                  href="https://www.youtube.com/channel/UCwwXvuW6jknceskts0yxLFQ"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  <img
+                    alt="DARTS YOU CHANNEL ダーツユーチャンネル - YouTube image"
+                    class="chakra-image__placeholder css-1l0a0ng"
+                    src="/fallback.webp"
+                  />
+                </a>
+              </div>
+              <h3
+                class="chakra-heading css-nnmkwd"
+              >
+                DARTS YOU CHANNEL ダーツユーチャンネル - YouTube
+              </h3>
+              <p
+                class="chakra-text css-1ykf6wi"
+              >
+                DARTS YOU CHANNELダーツに関する様々な動画を配信中です※本チャンネルの動画をSNS等で無断転載や掲載する行為はご遠慮くださいチャンネルメンバーシップ登録はこちらから
+                <br />
+                <a
+                  class="chakra-link css-11a67xw"
+                  href="https://www.youtube.com/channel/UCwwXvuW6jknceskts0yxLFQ/join"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  https://www.youtube.com/channel/UCwwXvuW6jknceskts0yxLFQ/join
+                   
+                  <svg
+                    class="chakra-icon css-onkibi"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                      />
+                      <path
+                        d="M15 3h6v6"
+                      />
+                      <path
+                        d="M10 14L21 3"
+                      />
+                    </g>
+                  </svg>
+                </a>
+                <br />
+                メンバー動画...
+              </p>
+            </div>
+          </div>
+          <div>
+            <div
+              class="h-full max-w-md rounded-xl border border-gray-200 bg-gray-50 p-5 shadow-md"
+            >
+              <div
+                class="css-gmuwbf"
+              >
+                <a
+                  class="chakra-link css-spn4bz"
+                  href="https://www.youtube.com/channel/UC2v_nQeKxiisJ7lj18rPd_A"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  <img
+                    alt="TIGA OFFICIAL - YouTube image"
+                    class="chakra-image__placeholder css-1l0a0ng"
+                    src="/fallback.webp"
+                  />
+                </a>
+              </div>
+              <h3
+                class="chakra-heading css-nnmkwd"
+              >
+                TIGA OFFICIAL - YouTube
+              </h3>
+              <p
+                class="chakra-text css-1ykf6wi"
+              >
+                <br />
+                <a
+                  class="chakra-link css-11a67xw"
+                  href="http://tiga-darts.jp/"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  http://tiga-darts.jp/
+                   
+                  <svg
+                    class="chakra-icon css-onkibi"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                      />
+                      <path
+                        d="M15 3h6v6"
+                      />
+                      <path
+                        d="M10 14L21 3"
+                      />
+                    </g>
+                  </svg>
+                </a>
+                <br />
+                日本トップクラスのバレルデザイナーがプロデュースしたブランド「TIGA」コンセプトはハイクオリティ＆ハイコストパフォーマンス。最先端のコンピューターソフトを駆使し、3次元設計で開発されたバレルは今までにない性能を実現。また、厳しい品質管理を行うことによりバレルセットでの重...
+              </p>
+            </div>
+          </div>
+          <div>
+            <div
+              class="h-full max-w-md rounded-xl border border-gray-200 bg-gray-50 p-5 shadow-md"
+            >
+              <div
+                class="css-gmuwbf"
+              >
+                <a
+                  class="chakra-link css-spn4bz"
+                  href="https://www.youtube.com/channel/UC4Osg5wx51EttEUYx0chf2g"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  <img
+                    alt="赤松大輔・野毛駿平のダーツっぽいチャンネル - YouTube image"
+                    class="chakra-image__placeholder css-1l0a0ng"
+                    src="/fallback.webp"
+                  />
+                </a>
+              </div>
+              <h3
+                class="chakra-heading css-nnmkwd"
+              >
+                赤松大輔・野毛駿平のダーツっぽいチャンネル - YouTube
+              </h3>
+              <p
+                class="chakra-text css-1ykf6wi"
+              >
+                皆さんこんにちわ！野毛です。赤松です。突然ですが、YouTubeチャンネル始めます！その名も「赤松大輔・野毛駿平のダーツっぽいチャンネル」がっつりダーツ技術論からダーツに関係ありそうでなさそうな事まで「ダーツっぽい」について発信します。「チャンネル登録」を押すともっとダーツのこと聞かせてよって気持ちが二人に届きま...
+              </p>
+            </div>
+          </div>
+          <div>
+            <div
+              class="h-full max-w-md rounded-xl border border-gray-200 bg-gray-50 p-5 shadow-md"
+            >
+              <div
+                class="css-gmuwbf"
+              >
+                <a
+                  class="chakra-link css-spn4bz"
+                  href="https://www.youtube.com/channel/UCIVchbvDH0ZtPkTaP1HMCFw"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  <img
+                    alt="山田勇樹のサバチャンネル - YouTube image"
+                    class="chakra-image__placeholder css-1l0a0ng"
+                    src="/fallback.webp"
+                  />
+                </a>
+              </div>
+              <h3
+                class="chakra-heading css-nnmkwd"
+              >
+                山田勇樹のサバチャンネル - YouTube
+              </h3>
+              <p
+                class="chakra-text css-1ykf6wi"
+              >
+                おつかれサバです！！このチャンネルではやんま〜のガチダーツ対戦はもちろん、やんまーの休日密着やチャレンジ動画など、普段プロの試合で見れないやんま〜の姿を皆様にお届けしています。
+              </p>
+            </div>
+          </div>
+          <div>
+            <div
+              class="h-full max-w-md rounded-xl border border-gray-200 bg-gray-50 p-5 shadow-md"
+            >
+              <div
+                class="css-gmuwbf"
+              >
+                <a
+                  class="chakra-link css-spn4bz"
+                  href="https://www.youtube.com/channel/UCXWWYh5MVz8fMY_AgFXPwmg"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  <img
+                    alt="東田臣チャンネル Higashida Shin - YouTube image"
+                    class="chakra-image__placeholder css-1l0a0ng"
+                    src="/fallback.webp"
+                  />
+                </a>
+              </div>
+              <h3
+                class="chakra-heading css-nnmkwd"
+              >
+                東田臣チャンネル Higashida Shin - YouTube
+              </h3>
+              <p
+                class="chakra-text css-1ykf6wi"
+              >
+                ダーツのプロプレイヤーです(Soft Darts Professional Tour Japan参戦中)東田臣(ヒガシダシン)です普段はFarEastDarts神戸店と言うダーツショップに勤務しています。ダーツの業界では変な顔をする人、すぐふざける人、サモハンキンポー風、痩せると国分太一と言われます、もしくは言っ...
+              </p>
+            </div>
+          </div>
+          <div>
+            <div
+              class="h-full max-w-md rounded-xl border border-gray-200 bg-gray-50 p-5 shadow-md"
+            >
+              <div
+                class="css-gmuwbf"
+              >
+                <a
+                  class="chakra-link css-spn4bz"
+                  href="https://www.youtube.com/channel/UCAzHNvtKpq1dKSlVNIgVkVg"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  <img
+                    alt="あーりーちゃんねる - YouTube image"
+                    class="chakra-image__placeholder css-1l0a0ng"
+                    src="/fallback.webp"
+                  />
+                </a>
+              </div>
+              <h3
+                class="chakra-heading css-nnmkwd"
+              >
+                あーりーちゃんねる - YouTube
+              </h3>
+              <p
+                class="chakra-text css-1ykf6wi"
+              >
+                このチャンネルはプロダーツプレイヤー有原竜太が運営しているチャンネルです！★★★★★ーチャンネルの内容ー★★★★★★・ダーツ上達のスキルをご紹介！・ダーツの難しい記録に挑戦！・プロダーツプレイヤーとしての活動報告！★★★★★★★★★★★★★★★★★★★★★🏆プロダーツプレイヤー有原竜太の戦歴🏆SUPER DA...
+              </p>
+            </div>
+          </div>
+          <div>
+            <div
+              class="h-full max-w-md rounded-xl border border-gray-200 bg-gray-50 p-5 shadow-md"
+            >
+              <div
+                class="css-gmuwbf"
+              >
+                <a
+                  class="chakra-link css-spn4bz"
+                  href="https://www.youtube.com/channel/UC2415Gw-kBBJP9AttRsqVMA"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  <img
+                    alt="UNO CHANNEL - YouTube image"
+                    class="chakra-image__placeholder css-1l0a0ng"
+                    src="/fallback.webp"
+                  />
+                </a>
+              </div>
+              <h3
+                class="chakra-heading css-nnmkwd"
+              >
+                UNO CHANNEL - YouTube
+              </h3>
+              <p
+                class="chakra-text css-1ykf6wi"
+              >
+                Darts Cafe UNOのYouTubeチャンネルです。主に店内でのダーツにかかわる挑戦や検証系の企画と近隣(下北沢・三軒茶屋・中目黒)の気になるお店やスポット紹介を中心に動画を投稿します。動画撮影・編集すべて初心者の従業員が見よう見まねでやっているため、大変お見苦しいところもあるかと思いますが、出来るだけ皆...
+              </p>
+            </div>
+          </div>
+          <div>
+            <div
+              class="h-full max-w-md rounded-xl border border-gray-200 bg-gray-50 p-5 shadow-md"
+            >
+              <div
+                class="css-gmuwbf"
+              >
+                <a
+                  class="chakra-link css-spn4bz"
+                  href="https://www.youtube.com/channel/UCRvCwDp_1DwOlOpnlJf9iYw"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  <img
+                    alt="Professional Darts Corporation - YouTube image"
+                    class="chakra-image__placeholder css-1l0a0ng"
+                    src="/fallback.webp"
+                  />
+                </a>
+              </div>
+              <h3
+                class="chakra-heading css-nnmkwd"
+              >
+                Professional Darts Corporation - YouTube
+              </h3>
+              <p
+                class="chakra-text css-1ykf6wi"
+              >
+                Welcome to the official YouTube channel for the PDC!From nine-dart finishes to 180's, or darts tips to bullseye challenges, we have everything to satisfy you...
+              </p>
+            </div>
+          </div>
+          <div>
+            <div
+              class="h-full max-w-md rounded-xl border border-gray-200 bg-gray-50 p-5 shadow-md"
+            >
+              <div
+                class="css-gmuwbf"
+              >
+                <a
+                  class="chakra-link css-spn4bz"
+                  href="https://www.youtube.com/channel/UC8x49nAPAo5HNE_K5AuThZA"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  <img
+                    alt="鈴木未来のMIKU ROOM - YouTube image"
+                    class="chakra-image__placeholder css-1l0a0ng"
+                    src="/fallback.webp"
+                  />
+                </a>
+              </div>
+              <h3
+                class="chakra-heading css-nnmkwd"
+              >
+                鈴木未来のMIKU ROOM - YouTube
+              </h3>
+              <p
+                class="chakra-text css-1ykf6wi"
+              >
+                2019・2020年のダーツ世界チャンピオンの鈴木未来のチャンネルダーツが上達したい人・勝負強くなりたいアスリートに向けて、技術やメンタルについて自身の経験をもとに語ります。趣味のゴルフ・釣り・ラノベ・カラオケや地元香川県の紹介などもしていきます。他スポーツ選手ともコラボしていきたいです。Directed by ...
               </p>
             </div>
           </div>
