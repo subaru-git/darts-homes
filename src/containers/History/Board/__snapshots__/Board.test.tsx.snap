@@ -149,12 +149,12 @@ exports[`should rendering 1`] = `
         role="tablist"
       >
         <button
-          aria-controls="tabs-:r5:--tabpanel-0"
+          aria-controls="tabs-:r4:--tabpanel-0"
           aria-label="arrange"
           aria-selected="true"
           class="chakra-tabs__tab css-52dxnr"
           data-index="0"
-          id="tabs-:r5:--tab-0"
+          id="tabs-:r4:--tab-0"
           role="tab"
           tabindex="0"
           type="button"
@@ -162,12 +162,12 @@ exports[`should rendering 1`] = `
           Arrange
         </button>
         <button
-          aria-controls="tabs-:r5:--tabpanel-1"
+          aria-controls="tabs-:r4:--tabpanel-1"
           aria-label="cricket mark up"
           aria-selected="false"
           class="chakra-tabs__tab css-52dxnr"
           data-index="1"
-          id="tabs-:r5:--tab-1"
+          id="tabs-:r4:--tab-1"
           role="tab"
           tabindex="-1"
           type="button"
@@ -175,12 +175,12 @@ exports[`should rendering 1`] = `
           Cricket Mark-Up
         </button>
         <button
-          aria-controls="tabs-:r5:--tabpanel-2"
+          aria-controls="tabs-:r4:--tabpanel-2"
           aria-label="eagle's eye"
           aria-selected="false"
           class="chakra-tabs__tab css-52dxnr"
           data-index="2"
-          id="tabs-:r5:--tab-2"
+          id="tabs-:r4:--tab-2"
           role="tab"
           tabindex="-1"
           type="button"
@@ -188,12 +188,12 @@ exports[`should rendering 1`] = `
           Eagle's Eye
         </button>
         <button
-          aria-controls="tabs-:r5:--tabpanel-3"
+          aria-controls="tabs-:r4:--tabpanel-3"
           aria-label="double trouble"
           aria-selected="false"
           class="chakra-tabs__tab css-52dxnr"
           data-index="3"
-          id="tabs-:r5:--tab-3"
+          id="tabs-:r4:--tab-3"
           role="tab"
           tabindex="-1"
           type="button"
@@ -201,12 +201,12 @@ exports[`should rendering 1`] = `
           Double Trouble
         </button>
         <button
-          aria-controls="tabs-:r5:--tabpanel-4"
+          aria-controls="tabs-:r4:--tabpanel-4"
           aria-label="sweet 16"
           aria-selected="false"
           class="chakra-tabs__tab css-52dxnr"
           data-index="4"
-          id="tabs-:r5:--tab-4"
+          id="tabs-:r4:--tab-4"
           role="tab"
           tabindex="-1"
           type="button"
@@ -214,12 +214,12 @@ exports[`should rendering 1`] = `
           Sweet 16
         </button>
         <button
-          aria-controls="tabs-:r5:--tabpanel-5"
+          aria-controls="tabs-:r4:--tabpanel-5"
           aria-label="tops and tens"
           aria-selected="false"
           class="chakra-tabs__tab css-52dxnr"
           data-index="5"
-          id="tabs-:r5:--tab-5"
+          id="tabs-:r4:--tab-5"
           role="tab"
           tabindex="-1"
           type="button"
@@ -227,12 +227,12 @@ exports[`should rendering 1`] = `
           Tops and Tens
         </button>
         <button
-          aria-controls="tabs-:r5:--tabpanel-6"
+          aria-controls="tabs-:r4:--tabpanel-6"
           aria-label="two dart combinations"
           aria-selected="false"
           class="chakra-tabs__tab css-52dxnr"
           data-index="6"
-          id="tabs-:r5:--tab-6"
+          id="tabs-:r4:--tab-6"
           role="tab"
           tabindex="-1"
           type="button"
@@ -240,12 +240,12 @@ exports[`should rendering 1`] = `
           Two-Dart Combinations
         </button>
         <button
-          aria-controls="tabs-:r5:--tabpanel-7"
+          aria-controls="tabs-:r4:--tabpanel-7"
           aria-label="around the compass"
           aria-selected="false"
           class="chakra-tabs__tab css-52dxnr"
           data-index="7"
-          id="tabs-:r5:--tab-7"
+          id="tabs-:r4:--tab-7"
           role="tab"
           tabindex="-1"
           type="button"
@@ -253,12 +253,12 @@ exports[`should rendering 1`] = `
           Around The Compass
         </button>
         <button
-          aria-controls="tabs-:r5:--tabpanel-8"
+          aria-controls="tabs-:r4:--tabpanel-8"
           aria-label="tons up"
           aria-selected="false"
           class="chakra-tabs__tab css-52dxnr"
           data-index="8"
-          id="tabs-:r5:--tab-8"
+          id="tabs-:r4:--tab-8"
           role="tab"
           tabindex="-1"
           type="button"
@@ -266,12 +266,12 @@ exports[`should rendering 1`] = `
           Tons Up
         </button>
         <button
-          aria-controls="tabs-:r5:--tabpanel-9"
+          aria-controls="tabs-:r4:--tabpanel-9"
           aria-label="route 64"
           aria-selected="false"
           class="chakra-tabs__tab css-52dxnr"
           data-index="9"
-          id="tabs-:r5:--tab-9"
+          id="tabs-:r4:--tab-9"
           role="tab"
           tabindex="-1"
           type="button"
@@ -279,12 +279,12 @@ exports[`should rendering 1`] = `
           Route 64
         </button>
         <button
-          aria-controls="tabs-:r5:--tabpanel-10"
+          aria-controls="tabs-:r4:--tabpanel-10"
           aria-label="eighty threw"
           aria-selected="false"
           class="chakra-tabs__tab css-52dxnr"
           data-index="10"
-          id="tabs-:r5:--tab-10"
+          id="tabs-:r4:--tab-10"
           role="tab"
           tabindex="-1"
           type="button"
@@ -292,12 +292,12 @@ exports[`should rendering 1`] = `
           Eighty Threw
         </button>
         <button
-          aria-controls="tabs-:r5:--tabpanel-11"
+          aria-controls="tabs-:r4:--tabpanel-11"
           aria-label="shanghai nights"
           aria-selected="false"
           class="chakra-tabs__tab css-52dxnr"
           data-index="11"
-          id="tabs-:r5:--tab-11"
+          id="tabs-:r4:--tab-11"
           role="tab"
           tabindex="-1"
           type="button"
@@ -305,12 +305,12 @@ exports[`should rendering 1`] = `
           Shanghai Nights
         </button>
         <button
-          aria-controls="tabs-:r5:--tabpanel-12"
+          aria-controls="tabs-:r4:--tabpanel-12"
           aria-label="switch hitter"
           aria-selected="false"
           class="chakra-tabs__tab css-52dxnr"
           data-index="12"
-          id="tabs-:r5:--tab-12"
+          id="tabs-:r4:--tab-12"
           role="tab"
           tabindex="-1"
           type="button"
@@ -318,12 +318,12 @@ exports[`should rendering 1`] = `
           Switch Hitter
         </button>
         <button
-          aria-controls="tabs-:r5:--tabpanel-13"
+          aria-controls="tabs-:r4:--tabpanel-13"
           aria-label="bully bully"
           aria-selected="false"
           class="chakra-tabs__tab css-52dxnr"
           data-index="13"
-          id="tabs-:r5:--tab-13"
+          id="tabs-:r4:--tab-13"
           role="tab"
           tabindex="-1"
           type="button"
@@ -331,12 +331,12 @@ exports[`should rendering 1`] = `
           Bully Bully
         </button>
         <button
-          aria-controls="tabs-:r5:--tabpanel-14"
+          aria-controls="tabs-:r4:--tabpanel-14"
           aria-label="trebles for show"
           aria-selected="false"
           class="chakra-tabs__tab css-52dxnr"
           data-index="14"
-          id="tabs-:r5:--tab-14"
+          id="tabs-:r4:--tab-14"
           role="tab"
           tabindex="-1"
           type="button"
@@ -344,12 +344,12 @@ exports[`should rendering 1`] = `
           Trebles For Show
         </button>
         <button
-          aria-controls="tabs-:r5:--tabpanel-15"
+          aria-controls="tabs-:r4:--tabpanel-15"
           aria-label="count up"
           aria-selected="false"
           class="chakra-tabs__tab css-52dxnr"
           data-index="15"
-          id="tabs-:r5:--tab-15"
+          id="tabs-:r4:--tab-15"
           role="tab"
           tabindex="-1"
           type="button"
@@ -362,9 +362,9 @@ exports[`should rendering 1`] = `
       >
         <div
           aria-label="arrange history"
-          aria-labelledby="tabs-:r5:--tab-0"
+          aria-labelledby="tabs-:r4:--tab-0"
           class="chakra-tabs__tab-panel css-a5mhaz"
-          id="tabs-:r5:--tabpanel-0"
+          id="tabs-:r4:--tabpanel-0"
           role="tabpanel"
           tabindex="0"
         >
@@ -508,10 +508,10 @@ exports[`should rendering 1`] = `
         </div>
         <div
           aria-label="cricket mark up history"
-          aria-labelledby="tabs-:r5:--tab-1"
+          aria-labelledby="tabs-:r4:--tab-1"
           class="chakra-tabs__tab-panel css-a5mhaz"
           hidden=""
-          id="tabs-:r5:--tabpanel-1"
+          id="tabs-:r4:--tabpanel-1"
           role="tabpanel"
           tabindex="0"
         >
@@ -529,10 +529,10 @@ exports[`should rendering 1`] = `
         </div>
         <div
           aria-label="eagle's eye history"
-          aria-labelledby="tabs-:r5:--tab-2"
+          aria-labelledby="tabs-:r4:--tab-2"
           class="chakra-tabs__tab-panel css-a5mhaz"
           hidden=""
-          id="tabs-:r5:--tabpanel-2"
+          id="tabs-:r4:--tabpanel-2"
           role="tabpanel"
           tabindex="0"
         >
@@ -550,10 +550,10 @@ exports[`should rendering 1`] = `
         </div>
         <div
           aria-label="double trouble history"
-          aria-labelledby="tabs-:r5:--tab-3"
+          aria-labelledby="tabs-:r4:--tab-3"
           class="chakra-tabs__tab-panel css-a5mhaz"
           hidden=""
-          id="tabs-:r5:--tabpanel-3"
+          id="tabs-:r4:--tabpanel-3"
           role="tabpanel"
           tabindex="0"
         >
@@ -571,10 +571,10 @@ exports[`should rendering 1`] = `
         </div>
         <div
           aria-label="sweet 16 history"
-          aria-labelledby="tabs-:r5:--tab-4"
+          aria-labelledby="tabs-:r4:--tab-4"
           class="chakra-tabs__tab-panel css-a5mhaz"
           hidden=""
-          id="tabs-:r5:--tabpanel-4"
+          id="tabs-:r4:--tabpanel-4"
           role="tabpanel"
           tabindex="0"
         >
@@ -592,10 +592,10 @@ exports[`should rendering 1`] = `
         </div>
         <div
           aria-label="tops and tens history"
-          aria-labelledby="tabs-:r5:--tab-5"
+          aria-labelledby="tabs-:r4:--tab-5"
           class="chakra-tabs__tab-panel css-a5mhaz"
           hidden=""
-          id="tabs-:r5:--tabpanel-5"
+          id="tabs-:r4:--tabpanel-5"
           role="tabpanel"
           tabindex="0"
         >
@@ -613,10 +613,10 @@ exports[`should rendering 1`] = `
         </div>
         <div
           aria-label="two dart combinations history"
-          aria-labelledby="tabs-:r5:--tab-6"
+          aria-labelledby="tabs-:r4:--tab-6"
           class="chakra-tabs__tab-panel css-a5mhaz"
           hidden=""
-          id="tabs-:r5:--tabpanel-6"
+          id="tabs-:r4:--tabpanel-6"
           role="tabpanel"
           tabindex="0"
         >
@@ -634,10 +634,10 @@ exports[`should rendering 1`] = `
         </div>
         <div
           aria-label="around the compass history"
-          aria-labelledby="tabs-:r5:--tab-7"
+          aria-labelledby="tabs-:r4:--tab-7"
           class="chakra-tabs__tab-panel css-a5mhaz"
           hidden=""
-          id="tabs-:r5:--tabpanel-7"
+          id="tabs-:r4:--tabpanel-7"
           role="tabpanel"
           tabindex="0"
         >
@@ -651,10 +651,10 @@ exports[`should rendering 1`] = `
         </div>
         <div
           aria-label="tons up history"
-          aria-labelledby="tabs-:r5:--tab-8"
+          aria-labelledby="tabs-:r4:--tab-8"
           class="chakra-tabs__tab-panel css-a5mhaz"
           hidden=""
-          id="tabs-:r5:--tabpanel-8"
+          id="tabs-:r4:--tabpanel-8"
           role="tabpanel"
           tabindex="0"
         >
@@ -672,10 +672,10 @@ exports[`should rendering 1`] = `
         </div>
         <div
           aria-label="route 64 history"
-          aria-labelledby="tabs-:r5:--tab-9"
+          aria-labelledby="tabs-:r4:--tab-9"
           class="chakra-tabs__tab-panel css-a5mhaz"
           hidden=""
-          id="tabs-:r5:--tabpanel-9"
+          id="tabs-:r4:--tabpanel-9"
           role="tabpanel"
           tabindex="0"
         >
@@ -693,10 +693,10 @@ exports[`should rendering 1`] = `
         </div>
         <div
           aria-label="eighty threw history"
-          aria-labelledby="tabs-:r5:--tab-10"
+          aria-labelledby="tabs-:r4:--tab-10"
           class="chakra-tabs__tab-panel css-a5mhaz"
           hidden=""
-          id="tabs-:r5:--tabpanel-10"
+          id="tabs-:r4:--tabpanel-10"
           role="tabpanel"
           tabindex="0"
         >
@@ -714,10 +714,10 @@ exports[`should rendering 1`] = `
         </div>
         <div
           aria-label="shanghai nights history"
-          aria-labelledby="tabs-:r5:--tab-11"
+          aria-labelledby="tabs-:r4:--tab-11"
           class="chakra-tabs__tab-panel css-a5mhaz"
           hidden=""
-          id="tabs-:r5:--tabpanel-11"
+          id="tabs-:r4:--tabpanel-11"
           role="tabpanel"
           tabindex="0"
         >
@@ -735,10 +735,10 @@ exports[`should rendering 1`] = `
         </div>
         <div
           aria-label="switch hitter history"
-          aria-labelledby="tabs-:r5:--tab-12"
+          aria-labelledby="tabs-:r4:--tab-12"
           class="chakra-tabs__tab-panel css-a5mhaz"
           hidden=""
-          id="tabs-:r5:--tabpanel-12"
+          id="tabs-:r4:--tabpanel-12"
           role="tabpanel"
           tabindex="0"
         >
@@ -756,10 +756,10 @@ exports[`should rendering 1`] = `
         </div>
         <div
           aria-label="bully bully history"
-          aria-labelledby="tabs-:r5:--tab-13"
+          aria-labelledby="tabs-:r4:--tab-13"
           class="chakra-tabs__tab-panel css-a5mhaz"
           hidden=""
-          id="tabs-:r5:--tabpanel-13"
+          id="tabs-:r4:--tabpanel-13"
           role="tabpanel"
           tabindex="0"
         >
@@ -777,10 +777,10 @@ exports[`should rendering 1`] = `
         </div>
         <div
           aria-label="trebles for show history"
-          aria-labelledby="tabs-:r5:--tab-14"
+          aria-labelledby="tabs-:r4:--tab-14"
           class="chakra-tabs__tab-panel css-a5mhaz"
           hidden=""
-          id="tabs-:r5:--tabpanel-14"
+          id="tabs-:r4:--tabpanel-14"
           role="tabpanel"
           tabindex="0"
         >
@@ -798,10 +798,10 @@ exports[`should rendering 1`] = `
         </div>
         <div
           aria-label="count up history"
-          aria-labelledby="tabs-:r5:--tab-15"
+          aria-labelledby="tabs-:r4:--tab-15"
           class="chakra-tabs__tab-panel css-a5mhaz"
           hidden=""
-          id="tabs-:r5:--tabpanel-15"
+          id="tabs-:r4:--tabpanel-15"
           role="tabpanel"
           tabindex="0"
         >

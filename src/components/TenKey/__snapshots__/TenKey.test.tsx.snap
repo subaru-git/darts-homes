@@ -3,7 +3,7 @@
 exports[`should rendering 1`] = `
 <div>
   <div
-    class="grid grid-cols-3 grid-rows-5 gap-1"
+    class="grid min-h-[200px] grid-cols-3 gap-1 gird-rows-5"
   >
     <input
       class="col-span-3 rounded-md border p-2.5 text-right text-sm tracking-widest text-gray-900 focus:outline-none focus:ring-0"

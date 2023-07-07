@@ -16,14 +16,12 @@ test('should rendering', async () => {
     await user.click(findByAriaLabel(buttons, 'four'));
     await user.click(findByAriaLabel(buttons, 'zero'));
     await user.click(findByAriaLabel(buttons, 'enter'));
-    await user.click(findByAriaLabel(buttons, 'round change'));
   }
   expect(screen.getByText('980')).toBeInTheDocument();
   await user.click(findByAriaLabel(buttons, 'one'));
   await user.click(findByAriaLabel(buttons, 'four'));
   await user.click(findByAriaLabel(buttons, 'zero'));
   await user.click(findByAriaLabel(buttons, 'enter'));
-  await user.click(screen.getByRole('button', { name: 'round over' }));
   expect(screen.getByText(/Total: 1120/i)).toBeInTheDocument();
   expect(container).toMatchSnapshot();
 }, 30000);
