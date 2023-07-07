@@ -11,26 +11,22 @@ describe('gaming Count Up', () => {
       cy.get('button[aria-label="four"]').first().click();
       cy.get('button[aria-label="zero"]').first().click();
       cy.get('button[aria-label="enter"]').first().click();
-      cy.get('button[aria-label="round change"]').first().click();
     });
     cy.get('button[aria-label="one"]').first().click();
     cy.get('button[aria-label="four"]').first().click();
     cy.get('button[aria-label="zero"]').first().click();
     cy.get('button[aria-label="enter"]').first().click();
-    cy.get('button[aria-label="round over"]').first().click();
     cy.get('button[aria-label="new game"]').first().click();
     [...Array(7)].forEach(() => {
       cy.get('button[aria-label="one"]').first().click();
       cy.get('button[aria-label="four"]').first().click();
       cy.get('button[aria-label="zero"]').first().click();
       cy.get('button[aria-label="enter"]').first().click();
-      cy.get('button[aria-label="round change"]').first().click();
     });
     cy.get('button[aria-label="one"]').first().click();
     cy.get('button[aria-label="four"]').first().click();
     cy.get('button[aria-label="zero"]').first().click();
     cy.get('button[aria-label="enter"]').first().click();
-    cy.get('button[aria-label="setting"]').first().click({ force: true });
     cy.get('button[aria-label="new game"]').click();
     cy.visit('/history');
     cy.get('button[aria-label="count up"]').click();

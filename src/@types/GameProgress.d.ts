@@ -106,6 +106,5 @@ interface ArrangeSettings {
 }
 
 interface CountUpProgress {
-  round: number | null;
   score: number[];
 }
