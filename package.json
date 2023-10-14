@@ -46,7 +46,7 @@
     "gaussian": "^1.2.0",
     "html-to-image": "^1.11.11",
     "is-even": "^1.0.0",
-    "next": "^13.4.4",
+    "next": "^13.5.4",
     "next-seo": "^5.11.1",
     "react": "^18.2.0",
     "react-camera-pro": "^1.2.1",
