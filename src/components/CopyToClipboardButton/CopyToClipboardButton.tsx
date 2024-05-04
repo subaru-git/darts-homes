@@ -1,5 +1,5 @@
 import React, { FC, useState } from 'react';
-import CopyToClipboard from 'react-copy-to-clipboard';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 import Button from '@/atoms/Button';
 
 type CopyToClipboardButtonProps = {

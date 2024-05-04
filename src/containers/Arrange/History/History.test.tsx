@@ -1,4 +1,4 @@
-import { screen } from '@testing-library/react';
+import { screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { v4 as uuidv4 } from 'uuid';
 import History from './History';
@@ -25,7 +25,7 @@ test('master out fat bull', async () => {
   const user = userEvent.setup();
   const out = screen.queryAllByLabelText('master out')[0];
   jest.useRealTimers();
-  await user.click(out);
+  await waitFor(() => user.click(out));
   const select = screen.getByRole('combobox');
   const options = screen.getAllByRole('option');
   expect(select).toBeTruthy();

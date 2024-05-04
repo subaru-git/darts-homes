@@ -1,4 +1,4 @@
-import { screen } from '@testing-library/react';
+import { screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import Main from './Main';
 import { findByAriaLabel } from '@/lib/TestUtils/FindByAriaLabel';
@@ -11,18 +11,18 @@ test('should rendering', async () => {
   const user = userEvent.setup();
   const { container } = render(<Main />);
   const buttons = screen.getAllByRole('button');
-  await user.click(findByAriaLabel(buttons, 'setting'));
-  await user.click(screen.getByRole('radio', { name: 'master out' }));
-  await user.click(screen.getByRole('button', { name: 'new game' }));
+  await waitFor(() => user.click(findByAriaLabel(buttons, 'setting')));
+  await waitFor(() => user.click(screen.getByRole('radio', { name: 'master out' })));
+  await waitFor(() => user.click(screen.getByRole('button', { name: 'new game' })));
   for (const [i] of Array(8).entries()) {
     const target = screen.getByLabelText('target Target').textContent;
     const a = arrange.find((a) => a.n === parseInt(target ?? '0')) ?? { n: 0, t: [] };
-    for (const t of a.t) await user.click(findByAriaLabel(buttons, t));
+    for (const t of a.t) await waitFor(() => user.click(findByAriaLabel(buttons, t)), { timeout: 10000 });
     if (i < 7) {
-      await user.click(findByAriaLabel(buttons, 'round change'));
+      await waitFor(() => user.click(findByAriaLabel(buttons, 'round change')), { timeout: 10000 });
       continue;
     }
-    await user.click(screen.getByRole('button', { name: 'round over' }));
+    await waitFor(() => user.click(screen.getByRole('button', { name: 'round over' })), { timeout: 10000 });
   }
   expect(screen.getByText(/8 Round/i)).toBeInTheDocument();
   expect(container).toMatchSnapshot();

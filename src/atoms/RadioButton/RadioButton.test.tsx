@@ -1,11 +1,12 @@
+import { screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import RadioButton from './RadioButton';
 import { render } from '@/lib/TestUtils/RenderMock';
-import '@testing-library/jest-dom';
 
 test('should rendering', async () => {
   const MockOnChange = jest.fn();
-  const { getByLabelText, container } = render(
+  const user = userEvent.setup();
+  const { container } = render(
     <RadioButton
       values={[
         { value: 'single', label: 'Single Out', ariaLabel: 'single out' },
@@ -16,12 +17,11 @@ test('should rendering', async () => {
       onChange={MockOnChange}
     />,
   );
-  const single = getByLabelText('single out');
+  const single = screen.getByLabelText('single out');
   expect(single).toBeInTheDocument();
   expect(single.parentElement?.children[1].textContent).toBe('Single Out');
-  const user = userEvent.setup();
-  await user.click(single);
-  expect(MockOnChange).toBeCalled();
+  await waitFor(() => user.click(single));
+  expect(MockOnChange).toHaveBeenCalled();
   expect(MockOnChange.mock.calls[0][0]).toBe('single');
   const checked = container.querySelectorAll('input[checked]');
   expect(checked.length).toBe(1);

@@ -10,7 +10,7 @@ exports[`should rendering 1`] = `
       style="overflow: hidden; display: none; opacity: 0; height: 0px;"
     >
       <div
-        class="chakra-alert css-vr88kb"
+        class="chakra-alert css-1rddp0n"
         data-status="error"
         role="alert"
       >
@@ -141,7 +141,7 @@ exports[`should rendering 1`] = `
       </div>
     </div>
     <div
-      class="chakra-tabs css-13o7eu2"
+      class="chakra-tabs css-1xpribl"
     >
       <div
         aria-orientation="horizontal"
@@ -150,6 +150,7 @@ exports[`should rendering 1`] = `
       >
         <button
           aria-controls="tabs-:r4:--tabpanel-0"
+          aria-disabled="false"
           aria-label="arrange"
           aria-selected="true"
           class="chakra-tabs__tab css-52dxnr"
@@ -163,6 +164,7 @@ exports[`should rendering 1`] = `
         </button>
         <button
           aria-controls="tabs-:r4:--tabpanel-1"
+          aria-disabled="false"
           aria-label="cricket mark up"
           aria-selected="false"
           class="chakra-tabs__tab css-52dxnr"
@@ -176,6 +178,7 @@ exports[`should rendering 1`] = `
         </button>
         <button
           aria-controls="tabs-:r4:--tabpanel-2"
+          aria-disabled="false"
           aria-label="eagle's eye"
           aria-selected="false"
           class="chakra-tabs__tab css-52dxnr"
@@ -189,6 +192,7 @@ exports[`should rendering 1`] = `
         </button>
         <button
           aria-controls="tabs-:r4:--tabpanel-3"
+          aria-disabled="false"
           aria-label="double trouble"
           aria-selected="false"
           class="chakra-tabs__tab css-52dxnr"
@@ -202,6 +206,7 @@ exports[`should rendering 1`] = `
         </button>
         <button
           aria-controls="tabs-:r4:--tabpanel-4"
+          aria-disabled="false"
           aria-label="sweet 16"
           aria-selected="false"
           class="chakra-tabs__tab css-52dxnr"
@@ -215,6 +220,7 @@ exports[`should rendering 1`] = `
         </button>
         <button
           aria-controls="tabs-:r4:--tabpanel-5"
+          aria-disabled="false"
           aria-label="tops and tens"
           aria-selected="false"
           class="chakra-tabs__tab css-52dxnr"
@@ -228,6 +234,7 @@ exports[`should rendering 1`] = `
         </button>
         <button
           aria-controls="tabs-:r4:--tabpanel-6"
+          aria-disabled="false"
           aria-label="two dart combinations"
           aria-selected="false"
           class="chakra-tabs__tab css-52dxnr"
@@ -241,6 +248,7 @@ exports[`should rendering 1`] = `
         </button>
         <button
           aria-controls="tabs-:r4:--tabpanel-7"
+          aria-disabled="false"
           aria-label="around the compass"
           aria-selected="false"
           class="chakra-tabs__tab css-52dxnr"
@@ -254,6 +262,7 @@ exports[`should rendering 1`] = `
         </button>
         <button
           aria-controls="tabs-:r4:--tabpanel-8"
+          aria-disabled="false"
           aria-label="tons up"
           aria-selected="false"
           class="chakra-tabs__tab css-52dxnr"
@@ -267,6 +276,7 @@ exports[`should rendering 1`] = `
         </button>
         <button
           aria-controls="tabs-:r4:--tabpanel-9"
+          aria-disabled="false"
           aria-label="route 64"
           aria-selected="false"
           class="chakra-tabs__tab css-52dxnr"
@@ -280,6 +290,7 @@ exports[`should rendering 1`] = `
         </button>
         <button
           aria-controls="tabs-:r4:--tabpanel-10"
+          aria-disabled="false"
           aria-label="eighty threw"
           aria-selected="false"
           class="chakra-tabs__tab css-52dxnr"
@@ -293,6 +304,7 @@ exports[`should rendering 1`] = `
         </button>
         <button
           aria-controls="tabs-:r4:--tabpanel-11"
+          aria-disabled="false"
           aria-label="shanghai nights"
           aria-selected="false"
           class="chakra-tabs__tab css-52dxnr"
@@ -306,6 +318,7 @@ exports[`should rendering 1`] = `
         </button>
         <button
           aria-controls="tabs-:r4:--tabpanel-12"
+          aria-disabled="false"
           aria-label="switch hitter"
           aria-selected="false"
           class="chakra-tabs__tab css-52dxnr"
@@ -319,6 +332,7 @@ exports[`should rendering 1`] = `
         </button>
         <button
           aria-controls="tabs-:r4:--tabpanel-13"
+          aria-disabled="false"
           aria-label="bully bully"
           aria-selected="false"
           class="chakra-tabs__tab css-52dxnr"
@@ -332,6 +346,7 @@ exports[`should rendering 1`] = `
         </button>
         <button
           aria-controls="tabs-:r4:--tabpanel-14"
+          aria-disabled="false"
           aria-label="trebles for show"
           aria-selected="false"
           class="chakra-tabs__tab css-52dxnr"
@@ -345,6 +360,7 @@ exports[`should rendering 1`] = `
         </button>
         <button
           aria-controls="tabs-:r4:--tabpanel-15"
+          aria-disabled="false"
           aria-label="count up"
           aria-selected="false"
           class="chakra-tabs__tab css-52dxnr"

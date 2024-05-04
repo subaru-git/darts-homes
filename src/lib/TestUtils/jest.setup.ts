@@ -2,6 +2,7 @@ import mocksdk from 'firebase-mock';
 import failOnConsole from 'jest-fail-on-console';
 import { createMatchMedia } from '@/lib/TestUtils/MatchMediaMock';
 import { MediaRecorderMock } from '@/lib/TestUtils/MediaRecorderMock';
+import '@testing-library/jest-dom';
 
 jest.mock('next/router', () => ({ useRouter: jest.fn().mockReturnValue({ locale: 'en' }) }));
 jest.mock('react-camera-pro');

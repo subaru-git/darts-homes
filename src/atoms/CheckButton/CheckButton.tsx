@@ -15,7 +15,6 @@ const CheckButton: FC<CheckButtonProps & ButtonHTMLAttributes<HTMLButtonElement>
   checked,
   ...props
 }) => {
-  console.log('CheckButton', checked);
   const c = `${color}${checked ? '-fill' : ''}`;
   return (
     <button

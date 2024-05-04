@@ -2,7 +2,6 @@ import { readFileSync } from 'fs';
 import { screen } from '@testing-library/react';
 import Main from './Main';
 import { render } from '@/lib/TestUtils/RenderMock';
-import '@testing-library/jest-dom';
 
 test('should rendering', async () => {
   const data = JSON.parse(readFileSync('data/data.json', 'utf8')) as RespectResult;
