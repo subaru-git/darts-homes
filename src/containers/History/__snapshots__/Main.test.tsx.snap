@@ -116,13 +116,12 @@ exports[`should rendering 1`] = `
                                 height="20"
                                 stroke="currentColor"
                                 stroke-width="0"
-                                viewBox="0 0 8 16"
+                                viewBox="0 0 24 24"
                                 width="20"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M7.5 8l-5 5L1 11.5 4.75 8 1 4.5 2.5 3l5 5z"
-                                  fill-rule="evenodd"
+                                  d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"
                                 />
                               </svg>
                             </div>
@@ -159,13 +158,12 @@ exports[`should rendering 1`] = `
                                 height="20"
                                 stroke="currentColor"
                                 stroke-width="0"
-                                viewBox="0 0 8 16"
+                                viewBox="0 0 24 24"
                                 width="20"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M7.5 8l-5 5L1 11.5 4.75 8 1 4.5 2.5 3l5 5z"
-                                  fill-rule="evenodd"
+                                  d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"
                                 />
                               </svg>
                             </div>
@@ -202,13 +200,12 @@ exports[`should rendering 1`] = `
                                 height="20"
                                 stroke="currentColor"
                                 stroke-width="0"
-                                viewBox="0 0 8 16"
+                                viewBox="0 0 24 24"
                                 width="20"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M7.5 8l-5 5L1 11.5 4.75 8 1 4.5 2.5 3l5 5z"
-                                  fill-rule="evenodd"
+                                  d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"
                                 />
                               </svg>
                             </div>
@@ -245,13 +242,12 @@ exports[`should rendering 1`] = `
                                 height="20"
                                 stroke="currentColor"
                                 stroke-width="0"
-                                viewBox="0 0 8 16"
+                                viewBox="0 0 24 24"
                                 width="20"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M7.5 8l-5 5L1 11.5 4.75 8 1 4.5 2.5 3l5 5z"
-                                  fill-rule="evenodd"
+                                  d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"
                                 />
                               </svg>
                             </div>
@@ -288,13 +284,12 @@ exports[`should rendering 1`] = `
                                 height="20"
                                 stroke="currentColor"
                                 stroke-width="0"
-                                viewBox="0 0 8 16"
+                                viewBox="0 0 24 24"
                                 width="20"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M7.5 8l-5 5L1 11.5 4.75 8 1 4.5 2.5 3l5 5z"
-                                  fill-rule="evenodd"
+                                  d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"
                                 />
                               </svg>
                             </div>
@@ -331,13 +326,12 @@ exports[`should rendering 1`] = `
                                 height="20"
                                 stroke="currentColor"
                                 stroke-width="0"
-                                viewBox="0 0 8 16"
+                                viewBox="0 0 24 24"
                                 width="20"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M7.5 8l-5 5L1 11.5 4.75 8 1 4.5 2.5 3l5 5z"
-                                  fill-rule="evenodd"
+                                  d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"
                                 />
                               </svg>
                             </div>
@@ -374,13 +368,12 @@ exports[`should rendering 1`] = `
                                 height="20"
                                 stroke="currentColor"
                                 stroke-width="0"
-                                viewBox="0 0 8 16"
+                                viewBox="0 0 24 24"
                                 width="20"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M7.5 8l-5 5L1 11.5 4.75 8 1 4.5 2.5 3l5 5z"
-                                  fill-rule="evenodd"
+                                  d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"
                                 />
                               </svg>
                             </div>
@@ -417,13 +410,12 @@ exports[`should rendering 1`] = `
                                 height="20"
                                 stroke="currentColor"
                                 stroke-width="0"
-                                viewBox="0 0 8 16"
+                                viewBox="0 0 24 24"
                                 width="20"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M7.5 8l-5 5L1 11.5 4.75 8 1 4.5 2.5 3l5 5z"
-                                  fill-rule="evenodd"
+                                  d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"
                                 />
                               </svg>
                             </div>
@@ -460,13 +452,12 @@ exports[`should rendering 1`] = `
                                 height="20"
                                 stroke="currentColor"
                                 stroke-width="0"
-                                viewBox="0 0 8 16"
+                                viewBox="0 0 24 24"
                                 width="20"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M7.5 8l-5 5L1 11.5 4.75 8 1 4.5 2.5 3l5 5z"
-                                  fill-rule="evenodd"
+                                  d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"
                                 />
                               </svg>
                             </div>
@@ -503,13 +494,12 @@ exports[`should rendering 1`] = `
                                 height="20"
                                 stroke="currentColor"
                                 stroke-width="0"
-                                viewBox="0 0 8 16"
+                                viewBox="0 0 24 24"
                                 width="20"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M7.5 8l-5 5L1 11.5 4.75 8 1 4.5 2.5 3l5 5z"
-                                  fill-rule="evenodd"
+                                  d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"
                                 />
                               </svg>
                             </div>
@@ -546,13 +536,12 @@ exports[`should rendering 1`] = `
                                 height="20"
                                 stroke="currentColor"
                                 stroke-width="0"
-                                viewBox="0 0 8 16"
+                                viewBox="0 0 24 24"
                                 width="20"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M7.5 8l-5 5L1 11.5 4.75 8 1 4.5 2.5 3l5 5z"
-                                  fill-rule="evenodd"
+                                  d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"
                                 />
                               </svg>
                             </div>
@@ -589,13 +578,12 @@ exports[`should rendering 1`] = `
                                 height="20"
                                 stroke="currentColor"
                                 stroke-width="0"
-                                viewBox="0 0 8 16"
+                                viewBox="0 0 24 24"
                                 width="20"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M7.5 8l-5 5L1 11.5 4.75 8 1 4.5 2.5 3l5 5z"
-                                  fill-rule="evenodd"
+                                  d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"
                                 />
                               </svg>
                             </div>
@@ -632,13 +620,12 @@ exports[`should rendering 1`] = `
                                 height="20"
                                 stroke="currentColor"
                                 stroke-width="0"
-                                viewBox="0 0 8 16"
+                                viewBox="0 0 24 24"
                                 width="20"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M7.5 8l-5 5L1 11.5 4.75 8 1 4.5 2.5 3l5 5z"
-                                  fill-rule="evenodd"
+                                  d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"
                                 />
                               </svg>
                             </div>
@@ -675,13 +662,12 @@ exports[`should rendering 1`] = `
                                 height="20"
                                 stroke="currentColor"
                                 stroke-width="0"
-                                viewBox="0 0 8 16"
+                                viewBox="0 0 24 24"
                                 width="20"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M7.5 8l-5 5L1 11.5 4.75 8 1 4.5 2.5 3l5 5z"
-                                  fill-rule="evenodd"
+                                  d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"
                                 />
                               </svg>
                             </div>
@@ -718,13 +704,12 @@ exports[`should rendering 1`] = `
                                 height="20"
                                 stroke="currentColor"
                                 stroke-width="0"
-                                viewBox="0 0 8 16"
+                                viewBox="0 0 24 24"
                                 width="20"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M7.5 8l-5 5L1 11.5 4.75 8 1 4.5 2.5 3l5 5z"
-                                  fill-rule="evenodd"
+                                  d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"
                                 />
                               </svg>
                             </div>
@@ -761,13 +746,12 @@ exports[`should rendering 1`] = `
                                 height="20"
                                 stroke="currentColor"
                                 stroke-width="0"
-                                viewBox="0 0 8 16"
+                                viewBox="0 0 24 24"
                                 width="20"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M7.5 8l-5 5L1 11.5 4.75 8 1 4.5 2.5 3l5 5z"
-                                  fill-rule="evenodd"
+                                  d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"
                                 />
                               </svg>
                             </div>
@@ -837,13 +821,12 @@ exports[`should rendering 1`] = `
                                 height="20"
                                 stroke="currentColor"
                                 stroke-width="0"
-                                viewBox="0 0 8 16"
+                                viewBox="0 0 24 24"
                                 width="20"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M7.5 8l-5 5L1 11.5 4.75 8 1 4.5 2.5 3l5 5z"
-                                  fill-rule="evenodd"
+                                  d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"
                                 />
                               </svg>
                             </div>
@@ -915,7 +898,7 @@ exports[`should rendering 1`] = `
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M478.33 433.6l-90-218a22 22 0 00-40.67 0l-90 218a22 22 0 1040.67 16.79L316.66 406h102.67l18.33 44.39A22 22 0 00458 464a22 22 0 0020.32-30.4zM334.83 362L368 281.65 401.17 362zm-66.99-19.08a22 22 0 00-4.89-30.7c-.2-.15-15-11.13-36.49-34.73 39.65-53.68 62.11-114.75 71.27-143.49H330a22 22 0 000-44H214V70a22 22 0 00-44 0v20H54a22 22 0 000 44h197.25c-9.52 26.95-27.05 69.5-53.79 108.36-31.41-41.68-43.08-68.65-43.17-68.87a22 22 0 00-40.58 17c.58 1.38 14.55 34.23 52.86 83.93.92 1.19 1.83 2.35 2.74 3.51-39.24 44.35-77.74 71.86-93.85 80.74a22 22 0 1021.07 38.63c2.16-1.18 48.6-26.89 101.63-85.59 22.52 24.08 38 35.44 38.93 36.1a22 22 0 0030.75-4.9z"
+                  d="m478.33 433.6-90-218a22 22 0 0 0-40.67 0l-90 218a22 22 0 1 0 40.67 16.79L316.66 406h102.67l18.33 44.39A22 22 0 0 0 458 464a22 22 0 0 0 20.32-30.4zM334.83 362 368 281.65 401.17 362zm-66.99-19.08a22 22 0 0 0-4.89-30.7c-.2-.15-15-11.13-36.49-34.73 39.65-53.68 62.11-114.75 71.27-143.49H330a22 22 0 0 0 0-44H214V70a22 22 0 0 0-44 0v20H54a22 22 0 0 0 0 44h197.25c-9.52 26.95-27.05 69.5-53.79 108.36-31.41-41.68-43.08-68.65-43.17-68.87a22 22 0 0 0-40.58 17c.58 1.38 14.55 34.23 52.86 83.93.92 1.19 1.83 2.35 2.74 3.51-39.24 44.35-77.74 71.86-93.85 80.74a22 22 0 1 0 21.07 38.63c2.16-1.18 48.6-26.89 101.63-85.59 22.52 24.08 38 35.44 38.93 36.1a22 22 0 0 0 30.75-4.9z"
                 />
               </svg>
             </button>
@@ -1064,7 +1047,8 @@ exports[`should rendering 1`] = `
                               />
                             </lineargradient>
                             <path
-                              d="M47.46,15.5l-1.37,1.48c-1.34,1.44-3.5,1.67-5.15,0.6c-2.71-1.75-6.43-3.13-11-2.37	c-4.94,0.83-9.17,3.85-11.64, 7.97l-8.03-6.08C14.99,9.82,23.2,5,32.5,5c5,0,9.94,1.56,14.27,4.46	C48.81,10.83,49.13,13.71,47.46,15.5z"
+                              d="M47.46,15.5l-1.37,1.48c-1.34,1.44-3.5,1.67-5.15,0.6c-2.71-1.75-6.43-3.13-11-2.37	c-4.94,0.83-9.17,3.85-11.64,
+        7.97l-8.03-6.08C14.99,9.82,23.2,5,32.5,5c5,0,9.94,1.56,14.27,4.46	C48.81,10.83,49.13,13.71,47.46,15.5z"
                               fill="url(#95yY7w43Oj6n2vH63j6HJb)"
                             />
                             <lineargradient
@@ -1090,7 +1074,8 @@ exports[`should rendering 1`] = `
                               />
                             </lineargradient>
                             <path
-                              d="M16.01,30.91c-0.09,2.47,0.37,4.83,1.27,6.96l-8.21,6.05c-1.35-2.51-2.3-5.28-2.75-8.22	c-1.06-6.88,0.54-13.38, 3.95-18.6l8.03,6.08C16.93,25.47,16.1,28.11,16.01,30.91z"
+                              d="M16.01,30.91c-0.09,2.47,0.37,4.83,1.27,6.96l-8.21,6.05c-1.35-2.51-2.3-5.28-2.75-8.22	c-1.06-6.88,0.54-13.38,
+        3.95-18.6l8.03,6.08C16.93,25.47,16.1,28.11,16.01,30.91z"
                               fill="url(#95yY7w43Oj6n2vH63j6HJc)"
                             />
                             <lineargradient
@@ -1116,7 +1101,8 @@ exports[`should rendering 1`] = `
                               />
                             </lineargradient>
                             <path
-                              d="M50.45,51.28c-4.55,4.07-10.61,6.57-17.36,6.71C22.91,58.2,13.66,52.53,9.07,43.92l8.21-6.05	C19.78,43.81, 25.67,48,32.5,48c3.94,0,7.52-1.28,10.33-3.44L50.45,51.28z"
+                              d="M50.45,51.28c-4.55,4.07-10.61,6.57-17.36,6.71C22.91,58.2,13.66,52.53,9.07,43.92l8.21-6.05	C19.78,43.81,
+        25.67,48,32.5,48c3.94,0,7.52-1.28,10.33-3.44L50.45,51.28z"
                               fill="url(#95yY7w43Oj6n2vH63j6HJd)"
                             />
                             <lineargradient
@@ -1150,7 +1136,8 @@ exports[`should rendering 1`] = `
                               />
                             </lineargradient>
                             <path
-                              d="M59,31.97c0.01,7.73-3.26,14.58-8.55,19.31l-7.62-6.72c2.1-1.61,3.77-3.71,4.84-6.15 c0.29-0.66-0.2-1.41-0.92-1.41H37c-2.21,0-4-1.79-4-4v-2c0-2.21,1.79-4,4-4h17C56.75,27,59,29.22,59,31.97z"
+                              d="M59,31.97c0.01,7.73-3.26,14.58-8.55,19.31l-7.62-6.72c2.1-1.61,3.77-3.71,4.84-6.15
+        c0.29-0.66-0.2-1.41-0.92-1.41H37c-2.21,0-4-1.79-4-4v-2c0-2.21,1.79-4,4-4h17C56.75,27,59,29.22,59,31.97z"
                               fill="url(#95yY7w43Oj6n2vH63j6HJe)"
                             />
                           </svg>
@@ -1197,13 +1184,12 @@ exports[`should rendering 1`] = `
                   height="20"
                   stroke="currentColor"
                   stroke-width="0"
-                  viewBox="0 0 10 16"
+                  viewBox="0 0 24 24"
                   width="20"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M5 11L0 6l1.5-1.5L5 8.25 8.5 4.5 10 6l-5 5z"
-                    fill-rule="evenodd"
+                    d="M5.22 8.22a.749.749 0 0 0 0 1.06l6.25 6.25a.749.749 0 0 0 1.06 0l6.25-6.25a.749.749 0 1 0-1.06-1.06L12 13.939 6.28 8.22a.749.749 0 0 0-1.06 0Z"
                   />
                 </svg>
               </div>
@@ -1380,13 +1366,12 @@ exports[`should rendering 1`] = `
                   height="20"
                   stroke="currentColor"
                   stroke-width="0"
-                  viewBox="0 0 10 16"
+                  viewBox="0 0 24 24"
                   width="20"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M5 11L0 6l1.5-1.5L5 8.25 8.5 4.5 10 6l-5 5z"
-                    fill-rule="evenodd"
+                    d="M5.22 8.22a.749.749 0 0 0 0 1.06l6.25 6.25a.749.749 0 0 0 1.06 0l6.25-6.25a.749.749 0 1 0-1.06-1.06L12 13.939 6.28 8.22a.749.749 0 0 0-1.06 0Z"
                   />
                 </svg>
               </div>
@@ -1470,7 +1455,7 @@ exports[`should rendering 1`] = `
         style="overflow: hidden; display: none; opacity: 0; height: 0px;"
       >
         <div
-          class="chakra-alert css-vr88kb"
+          class="chakra-alert css-1rddp0n"
           data-status="error"
           role="alert"
         >
@@ -1601,7 +1586,7 @@ exports[`should rendering 1`] = `
         </div>
       </div>
       <div
-        class="chakra-tabs css-13o7eu2"
+        class="chakra-tabs css-1xpribl"
       >
         <div
           aria-orientation="horizontal"
@@ -1610,6 +1595,7 @@ exports[`should rendering 1`] = `
         >
           <button
             aria-controls="tabs-:rq:--tabpanel-0"
+            aria-disabled="false"
             aria-label="arrange"
             aria-selected="true"
             class="chakra-tabs__tab css-52dxnr"
@@ -1623,6 +1609,7 @@ exports[`should rendering 1`] = `
           </button>
           <button
             aria-controls="tabs-:rq:--tabpanel-1"
+            aria-disabled="false"
             aria-label="cricket mark up"
             aria-selected="false"
             class="chakra-tabs__tab css-52dxnr"
@@ -1636,6 +1623,7 @@ exports[`should rendering 1`] = `
           </button>
           <button
             aria-controls="tabs-:rq:--tabpanel-2"
+            aria-disabled="false"
             aria-label="eagle's eye"
             aria-selected="false"
             class="chakra-tabs__tab css-52dxnr"
@@ -1649,6 +1637,7 @@ exports[`should rendering 1`] = `
           </button>
           <button
             aria-controls="tabs-:rq:--tabpanel-3"
+            aria-disabled="false"
             aria-label="double trouble"
             aria-selected="false"
             class="chakra-tabs__tab css-52dxnr"
@@ -1662,6 +1651,7 @@ exports[`should rendering 1`] = `
           </button>
           <button
             aria-controls="tabs-:rq:--tabpanel-4"
+            aria-disabled="false"
             aria-label="sweet 16"
             aria-selected="false"
             class="chakra-tabs__tab css-52dxnr"
@@ -1675,6 +1665,7 @@ exports[`should rendering 1`] = `
           </button>
           <button
             aria-controls="tabs-:rq:--tabpanel-5"
+            aria-disabled="false"
             aria-label="tops and tens"
             aria-selected="false"
             class="chakra-tabs__tab css-52dxnr"
@@ -1688,6 +1679,7 @@ exports[`should rendering 1`] = `
           </button>
           <button
             aria-controls="tabs-:rq:--tabpanel-6"
+            aria-disabled="false"
             aria-label="two dart combinations"
             aria-selected="false"
             class="chakra-tabs__tab css-52dxnr"
@@ -1701,6 +1693,7 @@ exports[`should rendering 1`] = `
           </button>
           <button
             aria-controls="tabs-:rq:--tabpanel-7"
+            aria-disabled="false"
             aria-label="around the compass"
             aria-selected="false"
             class="chakra-tabs__tab css-52dxnr"
@@ -1714,6 +1707,7 @@ exports[`should rendering 1`] = `
           </button>
           <button
             aria-controls="tabs-:rq:--tabpanel-8"
+            aria-disabled="false"
             aria-label="tons up"
             aria-selected="false"
             class="chakra-tabs__tab css-52dxnr"
@@ -1727,6 +1721,7 @@ exports[`should rendering 1`] = `
           </button>
           <button
             aria-controls="tabs-:rq:--tabpanel-9"
+            aria-disabled="false"
             aria-label="route 64"
             aria-selected="false"
             class="chakra-tabs__tab css-52dxnr"
@@ -1740,6 +1735,7 @@ exports[`should rendering 1`] = `
           </button>
           <button
             aria-controls="tabs-:rq:--tabpanel-10"
+            aria-disabled="false"
             aria-label="eighty threw"
             aria-selected="false"
             class="chakra-tabs__tab css-52dxnr"
@@ -1753,6 +1749,7 @@ exports[`should rendering 1`] = `
           </button>
           <button
             aria-controls="tabs-:rq:--tabpanel-11"
+            aria-disabled="false"
             aria-label="shanghai nights"
             aria-selected="false"
             class="chakra-tabs__tab css-52dxnr"
@@ -1766,6 +1763,7 @@ exports[`should rendering 1`] = `
           </button>
           <button
             aria-controls="tabs-:rq:--tabpanel-12"
+            aria-disabled="false"
             aria-label="switch hitter"
             aria-selected="false"
             class="chakra-tabs__tab css-52dxnr"
@@ -1779,6 +1777,7 @@ exports[`should rendering 1`] = `
           </button>
           <button
             aria-controls="tabs-:rq:--tabpanel-13"
+            aria-disabled="false"
             aria-label="bully bully"
             aria-selected="false"
             class="chakra-tabs__tab css-52dxnr"
@@ -1792,6 +1791,7 @@ exports[`should rendering 1`] = `
           </button>
           <button
             aria-controls="tabs-:rq:--tabpanel-14"
+            aria-disabled="false"
             aria-label="trebles for show"
             aria-selected="false"
             class="chakra-tabs__tab css-52dxnr"
@@ -1805,6 +1805,7 @@ exports[`should rendering 1`] = `
           </button>
           <button
             aria-controls="tabs-:rq:--tabpanel-15"
+            aria-disabled="false"
             aria-label="count up"
             aria-selected="false"
             class="chakra-tabs__tab css-52dxnr"
