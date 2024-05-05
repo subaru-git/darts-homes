@@ -1,7 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should rendering 1`] = `
-<div>
+<div
+  aria-hidden="true"
+  data-aria-hidden="true"
+>
   <div
     data-cy="count-up-main"
   >
@@ -1937,7 +1940,7 @@ exports[`should rendering 1`] = `
         <div
           class="text-xs text-gray-400 md:p-5"
         >
-          Copyright © 2023 Darts Homes
+          Copyright © 2024 Darts Homes
         </div>
       </div>
     </div>

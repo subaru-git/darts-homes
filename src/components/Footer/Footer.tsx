@@ -44,7 +44,7 @@ const Footer: FC = () => {
             </div>
           </div>
         </div>
-        <div className='text-xs text-gray-400 md:p-5'>{`Copyright © 2023 Darts Homes`}</div>
+        <div className='text-xs text-gray-400 md:p-5'>{`Copyright © 2024 Darts Homes`}</div>
       </div>
     </div>
   );
