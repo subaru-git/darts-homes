@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import Link from 'next/link';
-import { AiFillGithub, AiOutlineTwitter } from 'react-icons/ai';
+import { AiFillGithub } from 'react-icons/ai';
+import { FaXTwitter } from "react-icons/fa6";
 import useLocale from '@/hooks/locale';
 
 const Footer: FC = () => {
@@ -28,9 +29,9 @@ const Footer: FC = () => {
                 href={'https://twitter.com/darts_homes'}
                 target='_blank'
                 rel='noopener noreferrer'
-                aria-label={'darts_homes twitter'}
+                aria-label={'darts_homes x'}
               >
-                <AiOutlineTwitter size={24} color={'white'} />
+                <FaXTwitter size={24} color={'white'} />
               </a>
             </div>
           </div>
