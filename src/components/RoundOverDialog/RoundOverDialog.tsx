@@ -8,7 +8,7 @@ import {
   AlertDialogOverlay,
   Button,
 } from '@chakra-ui/react';
-import { LineIcon, LineShareButton, TwitterIcon, TwitterShareButton } from 'react-share';
+import { LineIcon, LineShareButton, XIcon, TwitterShareButton } from 'react-share';
 
 type RoundOverDialogProps = {
   isOpen: boolean;
@@ -36,7 +36,7 @@ const RoundOverDialog: FC<RoundOverDialogProps> = ({ isOpen, result, onClose, on
               <span className='whitespace-pre-wrap'>{result}</span>
               <div className='flex justify-center gap-2'>
                 <TwitterShareButton title={`${result}\n`} url={'http://darts.homes'}>
-                  <TwitterIcon size={32} round />
+                  <XIcon size={32} round />
                 </TwitterShareButton>
                 <LineShareButton title={`${result}\n`} url={'http://darts.homes'}>
                   <LineIcon size={32} round />
