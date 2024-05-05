@@ -1,8 +1,9 @@
-import { screen, waitFor } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import Main from './Main';
 import { findByAriaLabel } from '@/lib/TestUtils/FindByAriaLabel';
 import { render } from '@/lib/TestUtils/RenderMock';
+import { waitFor } from '@/lib/TestUtils/TestHelpers';
 import '@testing-library/jest-dom';
 
 jest.spyOn(global.Math, 'random').mockReturnValue(0.5);
