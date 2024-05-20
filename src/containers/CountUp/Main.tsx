@@ -84,7 +84,7 @@ const DesktopMain: FC<MainProps> = ({
     setIsFinished(false);
   }, [isFinished, onOpen]);
   return (
-    <div>
+    <>
       <Flex justifyContent='space-between' alignItems='center'>
         <NewGame
           onNewGame={() => {
@@ -153,7 +153,7 @@ const DesktopMain: FC<MainProps> = ({
         }}
         result={getResult(game)}
       />
-    </div>
+    </>
   );
 };
 
