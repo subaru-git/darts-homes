@@ -1,4 +1,4 @@
-import { doubleOut, masterOut, singleOut } from '../Helper/Arrange';
+import { impossibleDoubleOut, impossibleMasterOut, impossibleSingleOut } from '../Helper/Arrange';
 import { convertScoreToNumber } from '../Helper/Converter';
 import { isBust, isDoubleOut, isMasterOut, isSingleOut } from '../Helper/OutOption';
 import Player from '../Player/Player';
@@ -16,19 +16,19 @@ class ArrangeGame implements Game, GameData<ArrangeProgress, ArrangeResult> {
     simulation: true,
     hard: false,
     separate: false,
-    game: false,
+    mode: '3-darts',
     pro: false,
   };
 
   constructor(settings: ArrangeSettings = ArrangeGame.defaultSettings) {
     this.settings = settings;
-    const { out, targets, game } = settings;
-    if (game) {
+    const { out, targets, mode } = settings;
+    if (mode === '1-leg') {
       this.targetOutCount = 1;
       if (this.targets.length === 0) this.targets.push(501);
       return;
     }
-    this.targets.push(this.getNextTarget(this.targets.length, out, targets));
+    this.targets.push(this.getNextTarget(this.targets.length, out, mode, targets));
   }
   getSettings() {
     return this.settings;
@@ -94,8 +94,8 @@ class ArrangeGame implements Game, GameData<ArrangeProgress, ArrangeResult> {
   roundChange() {
     if (this.roundScore.length > 3) return;
     if (this.getCurrentTarget() === 0) {
-      const { out, targets } = this.settings;
-      this.targets.push(this.getNextTarget(this.targets.length, out, targets));
+      const { out, targets, mode } = this.settings;
+      this.targets.push(this.getNextTarget(this.targets.length, out, mode, targets));
     }
     this.player.roundScore(this.roundScore);
     this.roundScore = [];
@@ -169,10 +169,27 @@ class ArrangeGame implements Game, GameData<ArrangeProgress, ArrangeResult> {
     if (isBust(target, out)) return -1;
     return target;
   }
-  private getNextTarget(index: number, out: OutOption, targets?: number[]) {
+  private getNextTarget(index: number, out: OutOption, mode: ArrangeGameMode, targets?: number[]) {
     if (targets && targets[index]) return targets[index];
-    const table = out === 'master' ? masterOut : out === 'double' ? doubleOut : singleOut;
+    const table = this.getTable(out, mode);
     return table[Math.floor(Math.random() * table.length)];
+  }
+  private getTable(out: OutOption, mode: ArrangeGameMode) {
+    if (mode === '6-darts')
+      return out === 'double'
+        ? Array.from({ length: 180 }, (_, i) => i + 1 + 170)
+        : Array.from({ length: 180 }, (_, i) => i + 1 + 180);
+    const impossible =
+      out === 'single'
+        ? impossibleSingleOut
+        : out === 'double'
+          ? impossibleDoubleOut
+          : impossibleMasterOut;
+    const max = out === 'single' ? 180 : out === 'double' ? 170 : 180;
+    const table = Array.from({ length: max }, (_, i) => i + 1).filter(
+      (i) => !impossible.includes(i),
+    );
+    return table;
   }
 }
 

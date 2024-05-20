@@ -94,7 +94,7 @@ const DesktopMain: FC<MainProps> = ({
       <div className='flex flex-col gap-4'>
         <div className='flex justify-center gap-10'>
           <div className='flex flex-col items-center justify-center gap-4'>
-            {game.getSettings().game && game.getSettings().hard ? (
+            {game.getSettings().mode === '1-leg' && game.getSettings().hard ? (
               <ScoreBoard
                 data={convertArrangeOutToGameScore({
                   ...game.getArrangeScore()[0],
@@ -122,15 +122,15 @@ const DesktopMain: FC<MainProps> = ({
                         game.getCurrentTarget() === -1
                           ? 'BUST'
                           : game.getCurrentTarget() === 0
-                          ? 'NICE'
-                          : game.getCurrentTarget()
+                            ? 'NICE'
+                            : game.getCurrentTarget()
                       }`}
                       round={`${
                         game.getCurrentTarget() === -1
                           ? 'BUST'
                           : game.getCurrentTarget() === 0
-                          ? 'NICE'
-                          : game.getCurrentRoundTarget()
+                            ? 'NICE'
+                            : game.getCurrentRoundTarget()
                       }`}
                       pro={game.getSettings().pro}
                     />
@@ -143,11 +143,11 @@ const DesktopMain: FC<MainProps> = ({
                 <Targets
                   count={game.getTargetOutCount()}
                   targets={
-                    game.getSettings().game
+                    game.getSettings().mode === '1-leg'
                       ? [...game.getTargets(), [] as unknown as number]
                       : game.getTargets()
                   }
-                  isFinished={game.getSettings().game ? false : game.isFinished()}
+                  isFinished={game.getSettings().mode === '1-leg' ? false : game.isFinished()}
                 />
               </>
             )}
@@ -164,7 +164,7 @@ const DesktopMain: FC<MainProps> = ({
             onLanding={(n) => updateObject(game, new ArrangeGame(), 'addVector', setGame, n)}
           />
         </div>
-        {game.getSettings().game && game.getSettings().hard ? null : (
+        {game.getSettings().mode === '1-leg' && game.getSettings().hard ? null : (
           <div className='max-h-[30vh] overflow-y-scroll px-2'>
             <ArrangeScoreBoard
               score={toArrangeScoreBoard(game.getArrangeScore(), game.isFinished())}
@@ -185,7 +185,7 @@ const MobileMain: FC<MainProps> = ({
 }) => {
   return (
     <>
-      {game.getSettings().game && game.getSettings().hard ? (
+      {game.getSettings().mode === '1-leg' && game.getSettings().hard ? (
         <MobileGameDisplay game={game} setGame={setGame} user={user} description={description} />
       ) : (
         <MobileMainDisplay
@@ -245,15 +245,15 @@ const MobileMainDisplay: FC<MainProps> = ({
                   game.getCurrentTarget() === -1
                     ? 'BUST'
                     : game.getCurrentTarget() === 0
-                    ? 'NICE'
-                    : game.getCurrentTarget()
+                      ? 'NICE'
+                      : game.getCurrentTarget()
                 }`}
                 round={`${
                   game.getCurrentTarget() === -1
                     ? 'BUST'
                     : game.getCurrentTarget() === 0
-                    ? 'NICE'
-                    : game.getCurrentRoundTarget()
+                      ? 'NICE'
+                      : game.getCurrentRoundTarget()
                 }`}
                 pro={game.getSettings().pro}
               />
@@ -359,7 +359,7 @@ const MyRoundScore: FC<MainProps> = ({ game, setGame, user }) => (
 );
 
 const getResult = (game: ArrangeGame) => {
-  if (game.getSettings().game) {
+  if (game.getSettings().mode === '1-leg') {
     const res = `${convertArrangeOutToGameScore(game.getArrangeScore()[0])
       .map((s, i) => {
         if (i === 0) return convertToFullWidth(`.  :${s.ToGo}`);

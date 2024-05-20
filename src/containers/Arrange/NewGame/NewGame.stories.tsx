@@ -18,7 +18,7 @@ Default.args = {
     simulation: true,
     hard: false,
     separate: false,
-    game: false,
+    mode: '3-darts',
     pro: false,
   },
   isFinished: false,

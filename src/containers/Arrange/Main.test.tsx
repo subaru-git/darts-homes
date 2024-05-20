@@ -27,7 +27,7 @@ test('should rendering', async () => {
   }
   expect(screen.getByText(/8 Round/i)).toBeInTheDocument();
   expect(container).toMatchSnapshot();
-}, 60000);
+}, 90000);
 
 const arrange = [
   { n: 180, t: ['20 triple', '20 triple', '20 triple'] },

@@ -13,7 +13,7 @@ test('double out', () => {
     simulation: true,
     separate: false,
     hard: false,
-    game: false,
+    mode: '3-darts',
     pro: false,
   });
   expect(game.getCurrentTarget()).toBe(120);
@@ -195,7 +195,7 @@ test('double out', () => {
       simulation: true,
       separate: false,
       hard: false,
-      game: false,
+      mode: '3-darts',
       pro: false,
     },
     playedAt: '2020-12-31T16:01:01.000Z',
@@ -210,7 +210,7 @@ test('single out', () => {
     simulation: true,
     separate: false,
     hard: false,
-    game: false,
+    mode: '3-darts',
     pro: false,
   });
   expect(game.getCurrentTarget()).toBe(120);
@@ -302,7 +302,7 @@ test('master out', () => {
     simulation: true,
     separate: false,
     hard: false,
-    game: false,
+    mode: '3-darts',
     pro: false,
   });
   expect(game.getCurrentTarget()).toBe(120);
@@ -402,7 +402,7 @@ test('hard game mode', () => {
     simulation: true,
     separate: true,
     hard: true,
-    game: true,
+    mode: '1-leg',
     pro: false,
   });
   expect(game.getCurrentTarget()).toBe(501);
@@ -442,7 +442,7 @@ test('get darts count', () => {
     simulation: true,
     separate: false,
     hard: false,
-    game: false,
+    mode: '3-darts',
     pro: false,
   });
   expect(game.getDartsCount()).toBe(0);

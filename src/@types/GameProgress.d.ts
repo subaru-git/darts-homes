@@ -89,6 +89,7 @@ interface ArrangeProgress {
 }
 
 type OutOption = 'double' | 'single' | 'master';
+type ArrangeGameMode = '1-leg' | '3-darts' | '6-darts';
 interface RangeAxis {
   x: number;
   y: number;
@@ -101,7 +102,7 @@ interface ArrangeSettings {
   simulation: boolean;
   separate: boolean;
   hard: boolean;
-  game: boolean;
+  mode: ArrangeGameMode;
   pro: boolean;
 }
 
