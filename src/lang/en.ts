@@ -294,7 +294,7 @@ const text = {
           title: 'Game Mode',
           hint: {
             header: 'Game Mode?',
-            body: 'Select Game Mode 3 darts or 1 leg. The 3 Darts Mode is a mode where you are randomly given a score that can be cleared in 3 darts, and you have to clear it 8 times. The 1 Leg Mode is a mode where you have to clear 501 to win the leg.',
+            body: 'Select Game Mode: 3 Darts, 6 Darts, or 1 Leg. In 3 Darts Mode, you are randomly given a score that can be cleared in 3 darts, and you have to clear it 8 times. In 6 Darts Mode, you are randomly given a score that can be cleared in 6 darts, and you have to clear it 8 times. In 1 Leg Mode, you have to clear a score of 501 to win the leg.',
           },
         },
         {
