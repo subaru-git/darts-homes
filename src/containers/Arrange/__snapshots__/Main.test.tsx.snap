@@ -1618,42 +1618,42 @@ exports[`should rendering 1`] = `
             <span
               class="text-sm font-bold text-gray-500 md:text-lg"
             >
-              87
+              86
             </span>
             <span
               class="text-sm font-bold text-gray-500 md:text-lg"
             >
-              87
+              86
             </span>
             <span
               class="text-sm font-bold text-gray-500 md:text-lg"
             >
-              87
+              86
             </span>
             <span
               class="text-sm font-bold text-gray-500 md:text-lg"
             >
-              87
+              86
             </span>
             <span
               class="text-sm font-bold text-gray-500 md:text-lg"
             >
-              87
+              86
             </span>
             <span
               class="text-sm font-bold text-gray-500 md:text-lg"
             >
-              87
+              86
             </span>
             <span
               class="text-sm font-bold text-gray-500 md:text-lg"
             >
-              87
+              86
             </span>
             <span
               class="text-sm font-bold text-gray-500 md:text-lg"
             >
-              87
+              86
             </span>
             <span
               class="text-sm font-bold text-gray-500 md:text-lg"
@@ -1670,7 +1670,7 @@ exports[`should rendering 1`] = `
               <span
                 class="text-center text-xl font-bold italic text-gray-500 md:text-3xl opacity-100 transition-opacity duration-150"
               >
-                T17
+                D-BULL
               </span>
               <span
                 class="text-center text-xl font-bold italic text-gray-500 md:text-3xl opacity-100 transition-opacity duration-150"
@@ -2457,39 +2457,12 @@ exports[`should rendering 1`] = `
                 <td
                   class="px-3 py-1 italic md:px-6 md:py-4 font-bold text-gray-500"
                 >
-                  87
+                  86
                 </td>
                 <td
                   class="px-3 py-1 italic md:px-6 md:py-4  text-gray-500"
                 >
-                  T17
-                </td>
-                <td
-                  class="px-3 py-1 italic md:px-6 md:py-4  text-gray-500"
-                >
-                  D18
-                </td>
-                <td
-                  class="px-3 py-1 italic md:px-6 md:py-4  text-gray-500"
-                />
-                <td
-                  class="px-3 py-1 italic md:px-6 md:py-4  text-red-700"
-                >
-                  FINISH
-                </td>
-              </tr>
-              <tr
-                class="border-b"
-              >
-                <td
-                  class="px-3 py-1 italic md:px-6 md:py-4 font-bold text-gray-500"
-                >
-                  87
-                </td>
-                <td
-                  class="px-3 py-1 italic md:px-6 md:py-4  text-gray-500"
-                >
-                  T17
+                  D-BULL
                 </td>
                 <td
                   class="px-3 py-1 italic md:px-6 md:py-4  text-gray-500"
@@ -2511,39 +2484,12 @@ exports[`should rendering 1`] = `
                 <td
                   class="px-3 py-1 italic md:px-6 md:py-4 font-bold text-gray-500"
                 >
-                  87
+                  86
                 </td>
                 <td
                   class="px-3 py-1 italic md:px-6 md:py-4  text-gray-500"
                 >
-                  T17
-                </td>
-                <td
-                  class="px-3 py-1 italic md:px-6 md:py-4  text-gray-500"
-                >
-                  D18
-                </td>
-                <td
-                  class="px-3 py-1 italic md:px-6 md:py-4  text-gray-500"
-                />
-                <td
-                  class="px-3 py-1 italic md:px-6 md:py-4  text-red-700"
-                >
-                  FINISH
-                </td>
-              </tr>
-              <tr
-                class="border-b"
-              >
-                <td
-                  class="px-3 py-1 italic md:px-6 md:py-4 font-bold text-gray-500"
-                >
-                  87
-                </td>
-                <td
-                  class="px-3 py-1 italic md:px-6 md:py-4  text-gray-500"
-                >
-                  T17
+                  D-BULL
                 </td>
                 <td
                   class="px-3 py-1 italic md:px-6 md:py-4  text-gray-500"
@@ -2565,39 +2511,12 @@ exports[`should rendering 1`] = `
                 <td
                   class="px-3 py-1 italic md:px-6 md:py-4 font-bold text-gray-500"
                 >
-                  87
+                  86
                 </td>
                 <td
                   class="px-3 py-1 italic md:px-6 md:py-4  text-gray-500"
                 >
-                  T17
-                </td>
-                <td
-                  class="px-3 py-1 italic md:px-6 md:py-4  text-gray-500"
-                >
-                  D18
-                </td>
-                <td
-                  class="px-3 py-1 italic md:px-6 md:py-4  text-gray-500"
-                />
-                <td
-                  class="px-3 py-1 italic md:px-6 md:py-4  text-red-700"
-                >
-                  FINISH
-                </td>
-              </tr>
-              <tr
-                class="border-b"
-              >
-                <td
-                  class="px-3 py-1 italic md:px-6 md:py-4 font-bold text-gray-500"
-                >
-                  87
-                </td>
-                <td
-                  class="px-3 py-1 italic md:px-6 md:py-4  text-gray-500"
-                >
-                  T17
+                  D-BULL
                 </td>
                 <td
                   class="px-3 py-1 italic md:px-6 md:py-4  text-gray-500"
@@ -2619,12 +2538,12 @@ exports[`should rendering 1`] = `
                 <td
                   class="px-3 py-1 italic md:px-6 md:py-4 font-bold text-gray-500"
                 >
-                  87
+                  86
                 </td>
                 <td
                   class="px-3 py-1 italic md:px-6 md:py-4  text-gray-500"
                 >
-                  T17
+                  D-BULL
                 </td>
                 <td
                   class="px-3 py-1 italic md:px-6 md:py-4  text-gray-500"
@@ -2646,12 +2565,93 @@ exports[`should rendering 1`] = `
                 <td
                   class="px-3 py-1 italic md:px-6 md:py-4 font-bold text-gray-500"
                 >
-                  87
+                  86
                 </td>
                 <td
                   class="px-3 py-1 italic md:px-6 md:py-4  text-gray-500"
                 >
-                  T17
+                  D-BULL
+                </td>
+                <td
+                  class="px-3 py-1 italic md:px-6 md:py-4  text-gray-500"
+                >
+                  D18
+                </td>
+                <td
+                  class="px-3 py-1 italic md:px-6 md:py-4  text-gray-500"
+                />
+                <td
+                  class="px-3 py-1 italic md:px-6 md:py-4  text-red-700"
+                >
+                  FINISH
+                </td>
+              </tr>
+              <tr
+                class="border-b"
+              >
+                <td
+                  class="px-3 py-1 italic md:px-6 md:py-4 font-bold text-gray-500"
+                >
+                  86
+                </td>
+                <td
+                  class="px-3 py-1 italic md:px-6 md:py-4  text-gray-500"
+                >
+                  D-BULL
+                </td>
+                <td
+                  class="px-3 py-1 italic md:px-6 md:py-4  text-gray-500"
+                >
+                  D18
+                </td>
+                <td
+                  class="px-3 py-1 italic md:px-6 md:py-4  text-gray-500"
+                />
+                <td
+                  class="px-3 py-1 italic md:px-6 md:py-4  text-red-700"
+                >
+                  FINISH
+                </td>
+              </tr>
+              <tr
+                class="border-b"
+              >
+                <td
+                  class="px-3 py-1 italic md:px-6 md:py-4 font-bold text-gray-500"
+                >
+                  86
+                </td>
+                <td
+                  class="px-3 py-1 italic md:px-6 md:py-4  text-gray-500"
+                >
+                  D-BULL
+                </td>
+                <td
+                  class="px-3 py-1 italic md:px-6 md:py-4  text-gray-500"
+                >
+                  D18
+                </td>
+                <td
+                  class="px-3 py-1 italic md:px-6 md:py-4  text-gray-500"
+                />
+                <td
+                  class="px-3 py-1 italic md:px-6 md:py-4  text-red-700"
+                >
+                  FINISH
+                </td>
+              </tr>
+              <tr
+                class="border-b"
+              >
+                <td
+                  class="px-3 py-1 italic md:px-6 md:py-4 font-bold text-gray-500"
+                >
+                  86
+                </td>
+                <td
+                  class="px-3 py-1 italic md:px-6 md:py-4  text-gray-500"
+                >
+                  D-BULL
                 </td>
                 <td
                   class="px-3 py-1 italic md:px-6 md:py-4  text-gray-500"

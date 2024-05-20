@@ -64,15 +64,16 @@ const NewGame: FC<NewGameProps> = ({ onNewGame, currentSettings, isFinished = fa
               <RadioButton
                 values={[
                   { value: '3-darts', label: '3 darts', ariaLabel: '3 darts' },
+                  { value: '6-darts', label: '6 darts', ariaLabel: '6 darts' },
                   { value: '1-leg', label: '1 Leg', ariaLabel: '1 leg' },
                 ]}
-                onChange={(game) =>
+                onChange={(mode) =>
                   setSettings({
                     ...settings,
-                    game: game === '1-leg' ? true : false,
+                    mode: mode as ArrangeGameMode,
                   })
                 }
-                defaultValue={settings.game ? '1-leg' : '3-darts'}
+                defaultValue={settings.mode}
               />
             </div>
             <div>
@@ -246,7 +247,7 @@ const NewGame: FC<NewGameProps> = ({ onNewGame, currentSettings, isFinished = fa
                   });
                 else setSettings({ ...settings, targets: [] });
               }}
-              disabled={settings.game}
+              disabled={settings.mode === '1-leg'}
             ></Input>
           </div>
         </div>
