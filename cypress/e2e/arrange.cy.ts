@@ -9,7 +9,8 @@ describe('gaming Arrange', () => {
     cy.get('button[aria-label="new game"]').click();
     [...Array(8)].forEach((_, i) => {
       cy.get('[aria-label="target board"] > [aria-label*="target"]').then((targets) => {
-        const a = arrange.find((a) => a.n === parseInt(targets.text())) ?? { n: 0, t: [] };
+        const targetText = targets.text();
+        const a = arrange.find((a) => a.n === parseInt(targetText)) || { n: 0, t: [] };
         for (const t of a.t) {
           cy.get(`button[aria-label="${t}"]`).click({ force: true });
         }
@@ -23,7 +24,8 @@ describe('gaming Arrange', () => {
     cy.get('button[aria-label="new game"]').first().click();
     [...Array(8)].forEach((_, i) => {
       cy.get('[aria-label="target board"] > [aria-label*="target"]').then((targets) => {
-        const a = arrange.find((a) => a.n === parseInt(targets.text())) ?? { n: 0, t: [] };
+        const targetText = targets.text();
+        const a = arrange.find((a) => a.n === parseInt(targetText)) || { n: 0, t: [] };
         for (const t of a.t) {
           cy.get(`button[aria-label="${t}"]`).click({ force: true });
         }
