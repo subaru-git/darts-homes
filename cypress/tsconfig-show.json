@@ -1,1 +1,0 @@
-error TS18003: No inputs were found in config file '/Users/okadatakashi/work/darts-homes/cypress/tsconfig.json'. Specified 'include' paths were '["../node_modules/cypress","./**/*.ts"]' and 'exclude' paths were '["../node_modules","../cypress",".././cypress.config.ts"]'.
