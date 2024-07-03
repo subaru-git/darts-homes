@@ -55,7 +55,7 @@ const CameraView: FC = () => {
           <DrawerBody>
             <div className='flex justify-between gap-4'>
               <div className='flex items-center gap-4'>
-                <div className='h-6 w-6 text-xl'>
+                <div className='size-6 text-xl'>
                   <RecordingMark recording={recording} />
                 </div>
                 <Button

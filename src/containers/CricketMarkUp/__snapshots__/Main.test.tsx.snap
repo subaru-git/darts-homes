@@ -12,7 +12,7 @@ exports[`should rendering 1`] = `
       class="z-[200] w-full md:fixed"
     >
       <div
-        class="flex min-h-[60px] items-center border-b-[1px] border-solid border-gray-200 bg-white px-4 py-2 text-gray-600"
+        class="flex min-h-[60px] items-center border-b border-solid border-gray-200 bg-white px-4 py-2 text-gray-600"
       >
         <div
           class="-ml-2 flex flex-1 md:hidden md:flex-auto"
@@ -1455,7 +1455,7 @@ exports[`should rendering 1`] = `
         class="css-gg4vpm"
       >
         <div
-          class="flex h-fit w-fit flex-nowrap items-start p-[5px]"
+          class="flex size-fit flex-nowrap items-start p-[5px]"
         >
           <button
             aria-label="setting"
@@ -1495,7 +1495,7 @@ exports[`should rendering 1`] = `
           class="css-1vakbk4"
         >
           <div
-            class="flex h-fit w-fit flex-nowrap items-start p-1"
+            class="flex size-fit flex-nowrap items-start p-1"
           >
             <button
               aria-label="what is this game?"

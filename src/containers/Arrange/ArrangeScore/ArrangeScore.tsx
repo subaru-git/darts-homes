@@ -12,10 +12,10 @@ type ArrangeScoreProps = {
 const ArrangeScore: FC<ArrangeScoreProps> = ({ score, round, pro = false }) => {
   const [isLeft, setIsLeft] = useState(false);
   return (
-    <div className='flex h-full w-full'>
-      <div className='relative h-full w-full'>
+    <div className='flex size-full'>
+      <div className='relative size-full'>
         <div
-          className={`absolute inset-0 flex h-full w-full items-center justify-center ${
+          className={`absolute inset-0 flex size-full items-center justify-center ${
             !pro || isLeft ? 'opacity-100' : 'opacity-0'
           } transition-opacity duration-150`}
         >
@@ -23,7 +23,7 @@ const ArrangeScore: FC<ArrangeScoreProps> = ({ score, round, pro = false }) => {
         </div>
         {pro && (
           <div
-            className={`absolute inset-0 z-10 flex h-full w-full items-center justify-center ${
+            className={`absolute inset-0 z-10 flex size-full items-center justify-center ${
               isLeft ? 'opacity-0' : 'opacity-100'
             } transition-opacity duration-150`}
           >

@@ -14,7 +14,7 @@ exports[`should rendering 1`] = `
         type="radio"
       />
       <label
-        class="cursor-pointer select-none bg-gray-100 px-4 py-1 text-sm no-tap-highlighting peer-checked:bg-blue-500 peer-checked:text-white peer-disabled:opacity-60 md:text-base rounded-l-md"
+        class="cursor-pointer select-none bg-gray-100 px-4 py-1 text-sm peer-checked:bg-blue-500 peer-checked:text-white peer-disabled:opacity-60 md:text-base rounded-l-md"
         for="radio-single"
       >
         Single Out
@@ -28,7 +28,7 @@ exports[`should rendering 1`] = `
         type="radio"
       />
       <label
-        class="cursor-pointer select-none bg-gray-100 px-4 py-1 text-sm no-tap-highlighting peer-checked:bg-blue-500 peer-checked:text-white peer-disabled:opacity-60 md:text-base "
+        class="cursor-pointer select-none bg-gray-100 px-4 py-1 text-sm peer-checked:bg-blue-500 peer-checked:text-white peer-disabled:opacity-60 md:text-base "
         for="radio-double"
       >
         Double Out
@@ -43,7 +43,7 @@ exports[`should rendering 1`] = `
         type="radio"
       />
       <label
-        class="cursor-pointer select-none bg-gray-100 px-4 py-1 text-sm no-tap-highlighting peer-checked:bg-blue-500 peer-checked:text-white peer-disabled:opacity-60 md:text-base rounded-r-md"
+        class="cursor-pointer select-none bg-gray-100 px-4 py-1 text-sm peer-checked:bg-blue-500 peer-checked:text-white peer-disabled:opacity-60 md:text-base rounded-r-md"
         for="radio-master"
       >
         Master Out

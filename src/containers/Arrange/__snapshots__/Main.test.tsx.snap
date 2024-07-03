@@ -12,7 +12,7 @@ exports[`should rendering 1`] = `
       class="z-[200] w-full md:fixed"
     >
       <div
-        class="flex min-h-[60px] items-center border-b-[1px] border-solid border-gray-200 bg-white px-4 py-2 text-gray-600"
+        class="flex min-h-[60px] items-center border-b border-solid border-gray-200 bg-white px-4 py-2 text-gray-600"
       >
         <div
           class="-ml-2 flex flex-1 md:hidden md:flex-auto"
@@ -1454,7 +1454,7 @@ exports[`should rendering 1`] = `
       class="flex items-center justify-between"
     >
       <div
-        class="flex h-fit w-fit flex-nowrap items-start p-[5px]"
+        class="flex size-fit flex-nowrap items-start p-[5px]"
       >
         <button
           aria-label="setting"
@@ -1491,7 +1491,7 @@ exports[`should rendering 1`] = `
         </button>
       </div>
       <div
-        class="flex h-fit w-fit flex-nowrap items-start p-1"
+        class="flex size-fit flex-nowrap items-start p-1"
       >
         <button
           aria-label="what is this game?"
@@ -1564,13 +1564,13 @@ exports[`should rendering 1`] = `
               class="h-[250px] min-w-[400px]"
             >
               <div
-                class="flex h-full w-full"
+                class="flex size-full"
               >
                 <div
-                  class="relative h-full w-full"
+                  class="relative size-full"
                 >
                   <div
-                    class="absolute inset-0 flex h-full w-full items-center justify-center opacity-100 transition-opacity duration-150"
+                    class="absolute inset-0 flex size-full items-center justify-center opacity-100 transition-opacity duration-150"
                   >
                     <div
                       aria-label="target board"
@@ -1739,10 +1739,10 @@ exports[`should rendering 1`] = `
         </div>
         <div>
           <div
-            class="relative aspect-square max-h-[540px] w-[100vw] max-w-[540px]"
+            class="relative aspect-square max-h-[540px] w-screen max-w-[540px]"
           >
             <div
-              class="absolute h-full w-full"
+              class="absolute size-full"
             >
               <div
                 class="css-1y2wuv-SoftDartBoard"
@@ -2330,14 +2330,14 @@ exports[`should rendering 1`] = `
               </div>
             </div>
             <div
-              class="pointer-events-none relative h-full w-full overflow-hidden"
+              class="pointer-events-none relative size-full overflow-hidden"
             >
               <div
-                class="pointer-events-auto absolute h-full w-full"
+                class="pointer-events-auto absolute size-full"
                 data-cy="arrange-board-base"
               >
                 <div
-                  class="h-full w-full bg-black opacity-20"
+                  class="size-full bg-black opacity-20"
                 />
                 <svg
                   class="text-white text-opacity-50 css-v8q6zq-ArrangeBoard"

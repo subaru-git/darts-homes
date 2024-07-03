@@ -51,8 +51,8 @@ const ArrangeBoard: FC<ArrangeBoardProps> = ({
           ? 'visible'
           : 'hidden'
         : i <= roundVectors.length - 1
-        ? 'visible'
-        : 'hidden';
+          ? 'visible'
+          : 'hidden';
       return { ...v, x: roundVectors[i].x, y: roundVectors[i].y, visible };
     });
     setDarts(d);
@@ -60,13 +60,13 @@ const ArrangeBoard: FC<ArrangeBoardProps> = ({
   return (
     <>
       <div>
-        <div className='relative aspect-square max-h-[540px] w-[100vw] max-w-[540px]'>
-          <div className='absolute h-full w-full'>
+        <div className='relative aspect-square max-h-[540px] w-screen max-w-[540px]'>
+          <div className='absolute size-full'>
             <DartBoard onCount={onCount} hard={hard} />
           </div>
-          <div className='pointer-events-none relative h-full w-full overflow-hidden'>
+          <div className='pointer-events-none relative size-full overflow-hidden'>
             <div
-              className='pointer-events-auto absolute h-full w-full'
+              className='pointer-events-auto absolute size-full'
               ref={base}
               data-cy={'arrange-board-base'}
               onClick={(e) => {
@@ -98,7 +98,7 @@ const ArrangeBoard: FC<ArrangeBoardProps> = ({
                 setAnimation(true);
               }}
             >
-              <div className='h-full w-full bg-black opacity-20' hidden={!disabled} />
+              <div className='size-full bg-black opacity-20' hidden={!disabled} />
               <TfiTarget
                 className='text-white text-opacity-50'
                 size={32}

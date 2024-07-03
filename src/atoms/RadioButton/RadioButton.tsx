@@ -42,7 +42,7 @@ const RadioButton: FC<SwitchProps> = ({
           />
           <label
             htmlFor={`radio-${v.value}`}
-            className={`cursor-pointer select-none bg-gray-100 px-4 py-1 text-sm no-tap-highlighting peer-checked:bg-blue-500 peer-checked:text-white peer-disabled:opacity-60 md:text-base ${
+            className={`cursor-pointer select-none bg-gray-100 px-4 py-1 text-sm peer-checked:bg-blue-500 peer-checked:text-white peer-disabled:opacity-60 md:text-base ${
               i === 0 ? 'rounded-l-md' : i === values.length - 1 ? 'rounded-r-md' : ''
             }`}
           >

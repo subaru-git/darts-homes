@@ -9,7 +9,7 @@ exports[`should rendering 1`] = `
       class="z-[200] w-full md:fixed"
     >
       <div
-        class="flex min-h-[60px] items-center border-b-[1px] border-solid border-gray-200 bg-white px-4 py-2 text-gray-600"
+        class="flex min-h-[60px] items-center border-b border-solid border-gray-200 bg-white px-4 py-2 text-gray-600"
       >
         <div
           class="-ml-2 flex flex-1 md:hidden md:flex-auto"
@@ -1854,7 +1854,7 @@ exports[`should rendering 1`] = `
                         type="radio"
                       />
                       <label
-                        class="cursor-pointer select-none bg-gray-100 px-4 py-1 text-sm no-tap-highlighting peer-checked:bg-blue-500 peer-checked:text-white peer-disabled:opacity-60 md:text-base rounded-l-md"
+                        class="cursor-pointer select-none bg-gray-100 px-4 py-1 text-sm peer-checked:bg-blue-500 peer-checked:text-white peer-disabled:opacity-60 md:text-base rounded-l-md"
                         for="radio-single"
                       >
                         Single Out
@@ -1869,7 +1869,7 @@ exports[`should rendering 1`] = `
                         type="radio"
                       />
                       <label
-                        class="cursor-pointer select-none bg-gray-100 px-4 py-1 text-sm no-tap-highlighting peer-checked:bg-blue-500 peer-checked:text-white peer-disabled:opacity-60 md:text-base "
+                        class="cursor-pointer select-none bg-gray-100 px-4 py-1 text-sm peer-checked:bg-blue-500 peer-checked:text-white peer-disabled:opacity-60 md:text-base "
                         for="radio-double"
                       >
                         Double Out
@@ -1884,7 +1884,7 @@ exports[`should rendering 1`] = `
                         type="radio"
                       />
                       <label
-                        class="cursor-pointer select-none bg-gray-100 px-4 py-1 text-sm no-tap-highlighting peer-checked:bg-blue-500 peer-checked:text-white peer-disabled:opacity-60 md:text-base rounded-r-md"
+                        class="cursor-pointer select-none bg-gray-100 px-4 py-1 text-sm peer-checked:bg-blue-500 peer-checked:text-white peer-disabled:opacity-60 md:text-base rounded-r-md"
                         for="radio-master"
                       >
                         Master Out
@@ -1911,7 +1911,7 @@ exports[`should rendering 1`] = `
                         type="radio"
                       />
                       <label
-                        class="cursor-pointer select-none bg-gray-100 px-4 py-1 text-sm no-tap-highlighting peer-checked:bg-blue-500 peer-checked:text-white peer-disabled:opacity-60 md:text-base rounded-l-md"
+                        class="cursor-pointer select-none bg-gray-100 px-4 py-1 text-sm peer-checked:bg-blue-500 peer-checked:text-white peer-disabled:opacity-60 md:text-base rounded-l-md"
                         for="radio-fat"
                       >
                         Fat Bull
@@ -1926,7 +1926,7 @@ exports[`should rendering 1`] = `
                         type="radio"
                       />
                       <label
-                        class="cursor-pointer select-none bg-gray-100 px-4 py-1 text-sm no-tap-highlighting peer-checked:bg-blue-500 peer-checked:text-white peer-disabled:opacity-60 md:text-base rounded-r-md"
+                        class="cursor-pointer select-none bg-gray-100 px-4 py-1 text-sm peer-checked:bg-blue-500 peer-checked:text-white peer-disabled:opacity-60 md:text-base rounded-r-md"
                         for="radio-separate"
                       >
                         Separate Bull

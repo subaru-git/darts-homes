@@ -3,13 +3,13 @@
 exports[`should rendering 1`] = `
 <div>
   <div
-    class="flex h-full w-full"
+    class="flex size-full"
   >
     <div
-      class="relative h-full w-full"
+      class="relative size-full"
     >
       <div
-        class="absolute inset-0 flex h-full w-full items-center justify-center opacity-100 transition-opacity duration-150"
+        class="absolute inset-0 flex size-full items-center justify-center opacity-100 transition-opacity duration-150"
       >
         <div
           aria-label="target board"
