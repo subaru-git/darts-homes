@@ -1,17 +1,11 @@
-/* eslint-disable import/named */
-import React from 'react';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import NewGameModal from './NewGameModal';
 
-export default {
-  title: 'Components/NewGameModal',
+const meta: Meta<typeof NewGameModal> = {
   component: NewGameModal,
-} as ComponentMeta<typeof NewGameModal>;
-
-const Template: ComponentStory<typeof NewGameModal> = (args) => <NewGameModal {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {
-  isFinished: false,
-  settings: <div>Settings</div>,
+  title: 'Components/NewGameModal',
 };
+
+export default meta;
+type Story = StoryObj<typeof NewGameModal>;
+export const Default: Story = { args: { isFinished: false, settings: <div>Settings</div> } };

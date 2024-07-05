@@ -1,16 +1,9 @@
-import React from 'react';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import CheckButton from './CheckButton';
 
-export default {
-  title: 'Atoms/CheckButton',
-  component: CheckButton,
-} as ComponentMeta<typeof CheckButton>;
+const meta: Meta<typeof CheckButton> = { component: CheckButton, title: 'Atoms/CheckButton' };
+export default meta;
 
-const Template: ComponentStory<typeof CheckButton> = (args) => <CheckButton {...args} />;
+type Story = StoryObj<typeof CheckButton>;
 
-export const Default = Template.bind({});
-Default.args = {
-  color: 'green',
-  children: 'CheckButton',
-};
+export const Default: Story = { args: { color: 'green', children: 'CheckButton' } };

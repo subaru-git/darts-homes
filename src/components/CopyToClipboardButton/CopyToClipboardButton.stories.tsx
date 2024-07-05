@@ -1,13 +1,11 @@
-import React from 'react';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import CopyToClipboardButton from './CopyToClipboardButton';
 
-export default {
-  title: 'Components/CopyToClipboardButton',
+const meta: Meta<typeof CopyToClipboardButton> = {
   component: CopyToClipboardButton,
-} as ComponentMeta<typeof CopyToClipboardButton>;
+  title: 'Components/CopyToClipboardButton',
+};
 
-const Template: ComponentStory<typeof CopyToClipboardButton> = (args) => <CopyToClipboardButton {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {};
+export default meta;
+type Story = StoryObj<typeof CopyToClipboardButton>;
+export const Default: Story = {};

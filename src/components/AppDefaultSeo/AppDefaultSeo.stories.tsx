@@ -1,13 +1,11 @@
-import React from 'react';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import AppDefaultSeo from './AppDefaultSeo';
 
-export default {
-  title: 'Components/AppDefaultSeo',
+const meta: Meta<typeof AppDefaultSeo> = {
   component: AppDefaultSeo,
-} as ComponentMeta<typeof AppDefaultSeo>;
+  title: 'Components/AppDefaultSeo',
+};
 
-const Template: ComponentStory<typeof AppDefaultSeo> = (args) => <AppDefaultSeo {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {};
+export default meta;
+type Story = StoryObj<typeof AppDefaultSeo>;
+export const Default: Story = {};
