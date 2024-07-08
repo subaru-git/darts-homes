@@ -1,14 +1,8 @@
-/* eslint-disable import/named */
-import React from 'react';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import List from './List';
 
-export default {
-  title: 'Containers/Games/List',
-  component: List,
-} as ComponentMeta<typeof List>;
+const meta: Meta<typeof List> = { component: List, title: 'Containers/Games/List' };
 
-const Template: ComponentStory<typeof List> = (args) => <List {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {};
+export default meta;
+type Story = StoryObj<typeof List>;
+export const Default: Story = {};

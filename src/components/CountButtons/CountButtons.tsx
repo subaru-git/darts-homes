@@ -185,7 +185,7 @@ const Full: FC<{ disabled?: boolean; bull?: boolean; onCount: (n: point) => void
                   />
                 </TabPanel>
                 <TabPanel>
-                  <div className='h-full w-full'>
+                  <div className='size-full'>
                     <DartBoard
                       onCount={(n) => {
                         onCount(n);

@@ -1,28 +1,13 @@
-import React from 'react';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import RoundDisplay from './RoundDisplay';
 
-export default {
-  title: 'Components/RoundDisplay',
+const meta: Meta<typeof RoundDisplay> = {
   component: RoundDisplay,
-} as ComponentMeta<typeof RoundDisplay>;
-
-const Template: ComponentStory<typeof RoundDisplay> = (args) => <RoundDisplay {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {
-  count: 4,
-  round: true,
+  title: 'Components/RoundDisplay',
 };
 
-export const Dart = Template.bind({});
-Dart.args = {
-  count: 1,
-  round: false,
-};
-
-export const Darts = Template.bind({});
-Darts.args = {
-  count: 4,
-  round: false,
-};
+export default meta;
+type Story = StoryObj<typeof RoundDisplay>;
+export const Default: Story = { args: { count: 4, round: true } };
+export const Dart: Story = { args: { count: 1, round: false } };
+export const Darts: Story = { args: { count: 4, round: false } };

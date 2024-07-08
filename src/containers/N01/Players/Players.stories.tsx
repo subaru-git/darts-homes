@@ -1,16 +1,8 @@
-/* eslint-disable import/named */
-import React from 'react';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import Players from './Players';
 
-export default {
-  title: 'Containers/N01/Players',
-  component: Players,
-} as ComponentMeta<typeof Players>;
+const meta: Meta<typeof Players> = { component: Players, title: 'Containers/N01/Players' };
 
-const Template: ComponentStory<typeof Players> = (args) => <Players {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {
-  players: ['Player 1', 'Player 2'],
-};
+export default meta;
+type Story = StoryObj<typeof Players>;
+export const Default: Story = { args: { players: ['Player 1', 'Player 2'] } };

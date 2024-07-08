@@ -1,22 +1,9 @@
-import React from 'react';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import RoundScore from './RoundScore';
 
-export default {
-  title: 'Components/RoundScore',
-  component: RoundScore,
-} as ComponentMeta<typeof RoundScore>;
+const meta: Meta<typeof RoundScore> = { component: RoundScore, title: 'Components/RoundScore' };
 
-const Template: ComponentStory<typeof RoundScore> = (args) => <RoundScore {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {
-  scores: ['19T', '0', 'D-BULL'],
-  isFinished: false,
-};
-
-export const Finished = Template.bind({});
-Finished.args = {
-  scores: [],
-  isFinished: true,
-};
+export default meta;
+type Story = StoryObj<typeof RoundScore>;
+export const Default: Story = { args: { scores: ['19T', '0', 'D-BULL'], isFinished: false } };
+export const Finished: Story = { args: { scores: [], isFinished: true } };

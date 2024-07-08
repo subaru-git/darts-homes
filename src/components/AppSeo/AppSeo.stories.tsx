@@ -1,17 +1,14 @@
-import React from 'react';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import AppSeo from './AppSeo';
 
-export default {
-  title: 'Components/AppSeo',
-  component: AppSeo,
-} as ComponentMeta<typeof AppSeo>;
+const meta: Meta<typeof AppSeo> = { component: AppSeo, title: 'Components/AppSeo' };
 
-const Template: ComponentStory<typeof AppSeo> = (args) => <AppSeo {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {
-  title: 'AppSep Stories',
-  description: 'AppSep Stories.',
-  canonical: 'https://darts.homes',
+export default meta;
+type Story = StoryObj<typeof AppSeo>;
+export const Default: Story = {
+  args: {
+    title: 'AppSep Stories',
+    description: 'AppSep Stories.',
+    canonical: 'https://darts.homes',
+  },
 };

@@ -1,16 +1,11 @@
-import React from 'react';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import RoundOverDialog from './RoundOverDialog';
 
-export default {
-  title: 'Components/RoundOverDialog',
+const meta: Meta<typeof RoundOverDialog> = {
   component: RoundOverDialog,
-} as ComponentMeta<typeof RoundOverDialog>;
-
-const Template: ComponentStory<typeof RoundOverDialog> = (args) => <RoundOverDialog {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {
-  isOpen: true,
-  result: 'Result',
+  title: 'Components/RoundOverDialog',
 };
+
+export default meta;
+type Story = StoryObj<typeof RoundOverDialog>;
+export const Default: Story = { args: { isOpen: true, result: 'Result' } };

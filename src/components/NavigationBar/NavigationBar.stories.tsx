@@ -1,40 +1,40 @@
-import React from 'react';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import NavigationBar from './NavigationBar';
 
-export default {
-  title: 'Components/NavigationBar',
+const meta: Meta<typeof NavigationBar> = {
   component: NavigationBar,
-} as ComponentMeta<typeof NavigationBar>;
+  title: 'Components/NavigationBar',
+};
 
-const Template: ComponentStory<typeof NavigationBar> = (args) => <NavigationBar {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {
-  items: [
-    {
-      label: 'Games',
-      children: [
-        {
-          label: '501',
-          subLabel: 'The popular dart game',
-          href: '#',
-        },
-        {
-          label: "Eagle's Eye",
-          subLabel: 'A dart game for BULL practice',
-          href: '#',
-        },
-        {
-          label: 'Cricket Number Count',
-          subLabel: 'A original dart game for practice. designed by kikuyama.',
-          href: '#',
-        },
-      ],
-    },
-    {
-      label: 'Respect',
-      href: '#',
-    },
-  ],
+export default meta;
+type Story = StoryObj<typeof NavigationBar>;
+export const Default: Story = {
+  args: {
+    items: [
+      {
+        label: 'Games',
+        children: [
+          {
+            label: '501',
+            subLabel: 'The popular dart game',
+            href: '#',
+          },
+          {
+            label: "Eagle's Eye",
+            subLabel: 'A dart game for BULL practice',
+            href: '#',
+          },
+          {
+            label: 'Cricket Number Count',
+            subLabel: 'A original dart game for practice. designed by kikuyama.',
+            href: '#',
+          },
+        ],
+      },
+      {
+        label: 'Respect',
+        href: '#',
+      },
+    ],
+  },
 };

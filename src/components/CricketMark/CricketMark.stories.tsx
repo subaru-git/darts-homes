@@ -1,15 +1,8 @@
-import React from 'react';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import CricketMark from './CricketMark';
 
-export default {
-  title: 'Components/CricketMark',
-  component: CricketMark,
-} as ComponentMeta<typeof CricketMark>;
+const meta: Meta<typeof CricketMark> = { component: CricketMark, title: 'Components/CricketMark' };
 
-const Template: ComponentStory<typeof CricketMark> = (args) => <CricketMark {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {
-  count: 3,
-};
+export default meta;
+type Story = StoryObj<typeof CricketMark>;
+export const Default: Story = { args: { count: 3 } };

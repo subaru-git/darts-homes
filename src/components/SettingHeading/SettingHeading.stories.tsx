@@ -1,17 +1,13 @@
-import React from 'react';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import SettingHeading from './SettingHeading';
 
-export default {
-  title: 'Components/SettingHeading',
+const meta: Meta<typeof SettingHeading> = {
   component: SettingHeading,
-} as ComponentMeta<typeof SettingHeading>;
+  title: 'Components/SettingHeading',
+};
 
-const Template: ComponentStory<typeof SettingHeading> = (args) => <SettingHeading {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {
-  title: 'Setting',
-  hintHeader: 'Hint',
-  hintBody: 'This is a hint',
+export default meta;
+type Story = StoryObj<typeof SettingHeading>;
+export const Default: Story = {
+  args: { title: 'Setting', hintHeader: 'Hint', hintBody: 'This is a hint' },
 };

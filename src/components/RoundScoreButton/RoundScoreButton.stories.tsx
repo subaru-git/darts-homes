@@ -1,22 +1,12 @@
-import React from 'react';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import RoundScoreButton from './RoundScoreButton';
 
-export default {
-  title: 'Components/RoundScoreButton',
+const meta: Meta<typeof RoundScoreButton> = {
   component: RoundScoreButton,
-} as ComponentMeta<typeof RoundScoreButton>;
-
-const Template: ComponentStory<typeof RoundScoreButton> = (args) => <RoundScoreButton {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {
-  isFinished: false,
+  title: 'Components/RoundScoreButton',
 };
 
-export const Finished = Template.bind({});
-Finished.args = {
-  isFinished: true,
-  disabled: false,
-  result: 'Result',
-};
+export default meta;
+type Story = StoryObj<typeof RoundScoreButton>;
+export const Default: Story = { args: { isFinished: false } };
+export const Finished: Story = { args: { isFinished: true, disabled: false, result: 'Result' } };

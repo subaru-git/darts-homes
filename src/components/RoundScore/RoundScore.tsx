@@ -51,7 +51,7 @@ const RoundScore: FC<RoundScoreProps> = ({
         {pro && (
           <button
             type='button'
-            className='absolute z-10 col-span-3 h-full w-full select-none rounded border text-center text-xl font-bold italic text-gray-500 outline-none no-tap-highlighting md:text-4xl'
+            className='absolute z-10 col-span-3 size-full select-none rounded border text-center text-xl font-bold italic text-gray-500 outline-none md:text-4xl'
             onMouseDown={() => setIsChecking(true)}
             onMouseUp={() => setIsChecking(false)}
             onMouseLeave={() => setIsChecking(false)}

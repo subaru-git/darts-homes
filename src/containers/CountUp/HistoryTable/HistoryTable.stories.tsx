@@ -1,13 +1,11 @@
-import React from 'react';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import HistoryTable from './HistoryTable';
 
-export default {
-  title: 'Containers/CountUp/HistoryTable',
+const meta: Meta<typeof HistoryTable> = {
   component: HistoryTable,
-} as ComponentMeta<typeof HistoryTable>;
+  title: 'Containers/CountUp/HistoryTable',
+};
 
-const Template: ComponentStory<typeof HistoryTable> = (args) => <HistoryTable {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {};
+export default meta;
+type Story = StoryObj<typeof HistoryTable>;
+export const Default: Story = {};

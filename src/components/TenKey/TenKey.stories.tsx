@@ -1,13 +1,8 @@
-import React from 'react';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import TenKey from './TenKey';
 
-export default {
-  title: 'Components/TenKey',
-  component: TenKey,
-} as ComponentMeta<typeof TenKey>;
+const meta: Meta<typeof TenKey> = { component: TenKey, title: 'Components/TenKey' };
 
-const Template: ComponentStory<typeof TenKey> = (args) => <TenKey {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {};
+export default meta;
+type Story = StoryObj<typeof TenKey>;
+export const Default: Story = {};

@@ -1,25 +1,14 @@
-import React from 'react';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import MainTemplate from './MainTemplate';
 
-export default {
-  title: 'Templates/MainTemplate',
+const meta: Meta<typeof MainTemplate> = {
   component: MainTemplate,
-} as ComponentMeta<typeof MainTemplate>;
-
-const Template: ComponentStory<typeof MainTemplate> = (args) => (
-  <MainTemplate {...args}>
-    <p>Template Body</p>
-  </MainTemplate>
-);
-
-export const Default = Template.bind({});
-Default.args = {
-  label: 'MainTemplate',
+  title: 'Templates/MainTemplate',
 };
 
-export const Loading = Template.bind({});
-Loading.args = {
-  label: 'MainTemplate',
-  isLoading: true,
+export default meta;
+type Story = StoryObj<typeof MainTemplate>;
+export const Default: Story = { args: { label: 'MainTemplate', children: <p>Template Body</p> } };
+export const Loading: Story = {
+  args: { label: 'MainTemplate', isLoading: true, children: <p>Template Body</p> },
 };

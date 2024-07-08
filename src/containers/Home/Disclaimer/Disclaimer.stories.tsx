@@ -1,14 +1,11 @@
-/* eslint-disable import/named */
-import React from 'react';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import Disclaimer from './Disclaimer';
 
-export default {
-  title: 'Containers/Home/Description',
+const meta: Meta<typeof Disclaimer> = {
   component: Disclaimer,
-} as ComponentMeta<typeof Disclaimer>;
+  title: 'Containers/Home/Disclaimer',
+};
 
-const Template: ComponentStory<typeof Disclaimer> = (args) => <Disclaimer {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {};
+export default meta;
+type Story = StoryObj<typeof Disclaimer>;
+export const Default: Story = {};

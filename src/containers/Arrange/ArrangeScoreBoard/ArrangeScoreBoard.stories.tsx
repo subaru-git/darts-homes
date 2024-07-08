@@ -1,15 +1,11 @@
-import React from 'react';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import ArrangeScoreBoard from './ArrangeScoreBoard';
 
-export default {
-  title: 'Containers/Arrange/ArrangeScoreBoard',
+const meta: Meta<typeof ArrangeScoreBoard> = {
   component: ArrangeScoreBoard,
-} as ComponentMeta<typeof ArrangeScoreBoard>;
+  title: 'Containers/Arrange/ArrangeScoreBoard',
+};
 
-const Template: ComponentStory<typeof ArrangeScoreBoard> = (args) => (
-  <ArrangeScoreBoard {...args} />
-);
-
-export const Default = Template.bind({});
-Default.args = {};
+export default meta;
+type Story = StoryObj<typeof ArrangeScoreBoard>;
+export const Default: Story = {};

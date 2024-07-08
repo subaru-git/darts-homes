@@ -16,7 +16,7 @@ const NavigationBar: FC = () => {
   return (
     <>
       <header className='z-[200] w-full md:fixed'>
-        <div className='flex min-h-[60px] items-center border-b-[1px] border-solid border-gray-200 bg-white px-4 py-2 text-gray-600'>
+        <div className='flex min-h-[60px] items-center border-b border-solid border-gray-200 bg-white px-4 py-2 text-gray-600'>
           <div className='-ml-2 flex flex-1 md:hidden md:flex-auto'>
             <IconButton onClick={onToggle} color='ghost' aria-label='toggle navigation'>
               {isOpen ? <GrClose size={16} /> : <GiHamburgerMenu size={18} />}

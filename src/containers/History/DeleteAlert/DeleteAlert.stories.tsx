@@ -1,17 +1,13 @@
-/* eslint-disable import/named */
-import React from 'react';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import DeleteAlert from './DeleteAlert';
 
-export default {
-  title: 'Containers/History/DeleteAlert',
+const meta: Meta<typeof DeleteAlert> = {
   component: DeleteAlert,
-} as ComponentMeta<typeof DeleteAlert>;
+  title: 'Containers/History/DeleteAlert',
+};
 
-const Template: ComponentStory<typeof DeleteAlert> = (args) => <DeleteAlert {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {
-  message: 'This will delete all your history',
-  isOpen: true,
+export default meta;
+type Story = StoryObj<typeof DeleteAlert>;
+export const Default: Story = {
+  args: { message: 'This will delete all your history', isOpen: true },
 };

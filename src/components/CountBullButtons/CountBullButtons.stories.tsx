@@ -1,15 +1,11 @@
-import React from 'react';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import CountBullButtons from './CountBullButtons';
 
-export default {
-  title: 'Components/CountBullButtons',
+const meta: Meta<typeof CountBullButtons> = {
   component: CountBullButtons,
-} as ComponentMeta<typeof CountBullButtons>;
-
-const Template: ComponentStory<typeof CountBullButtons> = (args) => <CountBullButtons {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {
-  disabled: false,
+  title: 'Components/CountBullButtons',
 };
+
+export default meta;
+type Story = StoryObj<typeof CountBullButtons>;
+export const Default: Story = { args: { disabled: false } };

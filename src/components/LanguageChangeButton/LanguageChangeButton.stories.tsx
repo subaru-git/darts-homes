@@ -1,15 +1,11 @@
-import React from 'react';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import LanguageChangeButton from './LanguageChangeButton';
 
-export default {
-  title: 'Components/LanguageChangeButton',
+const meta: Meta<typeof LanguageChangeButton> = {
   component: LanguageChangeButton,
-} as ComponentMeta<typeof LanguageChangeButton>;
+  title: 'Components/LanguageChangeButton',
+};
 
-const Template: ComponentStory<typeof LanguageChangeButton> = (args) => (
-  <LanguageChangeButton {...args} />
-);
-
-export const Default = Template.bind({});
-Default.args = {};
+export default meta;
+type Story = StoryObj<typeof LanguageChangeButton>;
+export const Default: Story = {};

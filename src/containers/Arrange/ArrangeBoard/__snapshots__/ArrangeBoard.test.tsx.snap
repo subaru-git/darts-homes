@@ -4,10 +4,10 @@ exports[`should rendering 1`] = `
 <div>
   <div>
     <div
-      class="relative aspect-square max-h-[540px] w-[100vw] max-w-[540px]"
+      class="relative aspect-square max-h-[540px] w-screen max-w-[540px]"
     >
       <div
-        class="absolute h-full w-full"
+        class="absolute size-full"
       >
         <div
           class="css-1y2wuv-SoftDartBoard"
@@ -595,14 +595,14 @@ exports[`should rendering 1`] = `
         </div>
       </div>
       <div
-        class="pointer-events-none relative h-full w-full overflow-hidden"
+        class="pointer-events-none relative size-full overflow-hidden"
       >
         <div
-          class="pointer-events-auto absolute h-full w-full"
+          class="pointer-events-auto absolute size-full"
           data-cy="arrange-board-base"
         >
           <div
-            class="h-full w-full bg-black opacity-20"
+            class="size-full bg-black opacity-20"
             hidden=""
           />
           <svg

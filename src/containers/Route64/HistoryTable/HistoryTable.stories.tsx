@@ -1,28 +1,28 @@
-import React from 'react';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import { v4 as uuidv4 } from 'uuid';
 import HistoryTable from './HistoryTable';
 
-export default {
-  title: 'Containers/Route64/HistoryTable',
+const meta: Meta<typeof HistoryTable> = {
   component: HistoryTable,
-} as ComponentMeta<typeof HistoryTable>;
+  title: 'Containers/Route64/HistoryTable',
+};
 
-const Template: ComponentStory<typeof HistoryTable> = (args) => <HistoryTable {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {
-  history: [
-    {
-      uuid: uuidv4(),
-      result: 0,
-      scores: [
-        ['D20', 'D20', 'D20'],
-        ['16', '16', '16'],
-        ['20', '20', '20'],
-      ],
-      round: 3,
-      playedAt: '2022-11-16T01:44:01.238Z',
-    },
-  ],
+export default meta;
+type Story = StoryObj<typeof HistoryTable>;
+export const Default: Story = {
+  args: {
+    history: [
+      {
+        uuid: uuidv4(),
+        result: 0,
+        scores: [
+          ['D20', 'D20', 'D20'],
+          ['16', '16', '16'],
+          ['20', '20', '20'],
+        ],
+        round: 3,
+        playedAt: '2022-11-16T01:44:01.238Z',
+      },
+    ],
+  },
 };

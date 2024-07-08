@@ -84,7 +84,7 @@ const Main: FC = () => {
           className={`relative mx-auto aspect-square w-[50vh] max-w-[360px] md:mx-2 md:w-[60vh] md:max-w-[540px]`}
         >
           <div ref={containerRef} className='absolute left-0 top-0 w-full md:h-fit'>
-            <div className='h-full w-full'>
+            <div className='size-full'>
               <DartBoard onCount={() => {}} hard />
             </div>
           </div>

@@ -1,14 +1,8 @@
-/* eslint-disable import/named */
-import React from 'react';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import Respect from './Respect';
 
-export default {
-  title: 'Containers/Home/Respect',
-  component: Respect,
-} as ComponentMeta<typeof Respect>;
+const meta: Meta<typeof Respect> = { component: Respect, title: 'Containers/Home/Respect' };
 
-const Template: ComponentStory<typeof Respect> = (args) => <Respect {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {};
+export default meta;
+type Story = StoryObj<typeof Respect>;
+export const Default: Story = {};
