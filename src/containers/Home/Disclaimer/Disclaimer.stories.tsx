@@ -3,7 +3,7 @@ import Disclaimer from './Disclaimer';
 
 const meta: Meta<typeof Disclaimer> = {
   component: Disclaimer,
-  title: 'Containers/Home/Description',
+  title: 'Containers/Home/Disclaimer',
 };
 
 export default meta;
