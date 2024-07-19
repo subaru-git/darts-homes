@@ -1,3 +1,4 @@
+'use client';
 import React, { FC } from 'react';
 import { Box, Center, Text, Flex, useBreakpointValue } from '@chakra-ui/react';
 import NewGame from './NewGame';
@@ -10,35 +11,25 @@ import TargetBoard from '@/components/TargetBoard';
 import { useAuth } from '@/contexts/AuthContext';
 import { useBullyBullyGame, useBullyBullyGameSet } from '@/contexts/BullyBullyGameContext';
 import { db } from '@/db/db';
-import useLocale from '@/hooks/locale';
 import BullyBullyGame from '@/lib/BullyBullyGame';
 import { saveHistory } from '@/lib/GameHistoryManager';
 import { updateObject } from '@/lib/Helper/updateObjectState';
 import MainTemplate from '@/templates/MainTemplate';
+import { useTranslations } from 'next-intl';
 
 const Main: FC = () => {
   const user = useAuth();
   const game = useBullyBullyGame();
   const setGame = useBullyBullyGameSet();
   const isMd = useBreakpointValue({ base: false, md: true });
-  const { t } = useLocale();
+  const t = useTranslations('games.bullybully');
   if (!game) return <MainTemplate label={'bully-bully-main'} isLoading />;
   return (
     <MainTemplate label='bully-bully-main'>
       {isMd ? (
-        <DesktopMain
-          game={game}
-          setGame={setGame}
-          description={t.games.bullybully.description.join('\n')}
-          user={user}
-        />
+        <DesktopMain game={game} setGame={setGame} description={t('description')} user={user} />
       ) : (
-        <MobileMain
-          game={game}
-          setGame={setGame}
-          description={t.games.bullybully.description.join('\n')}
-          user={user}
-        />
+        <MobileMain game={game} setGame={setGame} description={t('description')} user={user} />
       )}
     </MainTemplate>
   );

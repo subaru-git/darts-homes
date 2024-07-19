@@ -1,3 +1,4 @@
+'use client';
 import React, { FC } from 'react';
 import { Box, Text, Flex, useBreakpointValue } from '@chakra-ui/react';
 import NewGame from './NewGame';
@@ -10,35 +11,25 @@ import TargetBoard from '@/components/TargetBoard';
 import { useAuth } from '@/contexts/AuthContext';
 import { useEightyThrewGame, useEightyThrewGameSet } from '@/contexts/EightyThrewGameContext';
 import { db } from '@/db/db';
-import useLocale from '@/hooks/locale';
 import EightyThrewGame from '@/lib/EightyThrewGame';
 import { saveHistory } from '@/lib/GameHistoryManager';
 import { updateObject } from '@/lib/Helper/updateObjectState';
 import MainTemplate from '@/templates/MainTemplate';
+import { useTranslations } from 'next-intl';
 
 const Main: FC = () => {
   const game = useEightyThrewGame();
   const setGame = useEightyThrewGameSet();
   const user = useAuth();
   const isMd = useBreakpointValue({ base: false, md: true });
-  const { t } = useLocale();
+  const t = useTranslations('games.eightythrew');
   if (!game) return <MainTemplate label={'eighty-threw-main'} isLoading />;
   return (
     <MainTemplate label='eighty-threw-main'>
       {isMd ? (
-        <DesktopMain
-          game={game}
-          setGame={setGame}
-          user={user}
-          description={t.games.eightythrew.description.join('\n')}
-        />
+        <DesktopMain game={game} setGame={setGame} user={user} description={t('description')} />
       ) : (
-        <MobileMain
-          game={game}
-          setGame={setGame}
-          user={user}
-          description={t.games.eightythrew.description.join('\n')}
-        />
+        <MobileMain game={game} setGame={setGame} user={user} description={t('description')} />
       )}
     </MainTemplate>
   );

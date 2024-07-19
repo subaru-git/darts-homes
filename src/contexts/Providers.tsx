@@ -1,3 +1,4 @@
+'use client';
 import React, { FC, ReactNode } from 'react';
 import { AroundTheCompassGameContextProvider } from './AroundTheCompassGameContext';
 import { ArrangeGameContextProvider } from './ArrangeGameContext';

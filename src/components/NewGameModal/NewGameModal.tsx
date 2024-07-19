@@ -14,7 +14,7 @@ import { FiSettings } from 'react-icons/fi';
 import { TbAlertTriangle } from 'react-icons/tb';
 import Button from '@/atoms/Button';
 import IconButton from '@/atoms/IconButton';
-import useLocale from '@/hooks/locale';
+import { useTranslations } from 'next-intl';
 
 type NewGameModalProps = {
   onNewGame: () => void;
@@ -25,7 +25,7 @@ type NewGameModalProps = {
 const NewGameModal: FC<NewGameModalProps> = ({ onNewGame, settings, isFinished }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const isMd = useBreakpointValue({ base: false, md: true });
-  const { t } = useLocale();
+  const t = useTranslations('Components.newgamemodal');
   return (
     <div className='flex size-fit flex-nowrap items-start p-[5px]'>
       {isMd ? (
@@ -54,7 +54,7 @@ const NewGameModal: FC<NewGameModalProps> = ({ onNewGame, settings, isFinished }
                 >
                   <div className='flex items-center gap-1'>
                     <TbAlertTriangle className='text-orange-600' size={20} />
-                    <span className='text-sm'>{t.warning.newgame}</span>
+                    <span className='text-sm'>{t('newgame')}</span>
                   </div>
                 </div>
               ) : null}

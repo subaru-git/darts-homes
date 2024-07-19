@@ -1,3 +1,4 @@
+'use client';
 import React, { FC } from 'react';
 import { Box, Text, Flex, useBreakpointValue } from '@chakra-ui/react';
 import NewGame from './NewGame';
@@ -13,11 +14,11 @@ import {
   useTwoDartCombinationsGameSet,
 } from '@/contexts/TwoDartCombinationsGameContext';
 import { db } from '@/db/db';
-import useLocale from '@/hooks/locale';
 import { saveHistory } from '@/lib/GameHistoryManager';
 import { updateObject } from '@/lib/Helper/updateObjectState';
 import TwoDartCombinationsGame from '@/lib/TwoDartCombinationsGame';
 import MainTemplate from '@/templates/MainTemplate';
+import { useTranslations } from 'next-intl';
 
 const arrange = [
   [17, 12],
@@ -47,24 +48,14 @@ const Main: FC = () => {
   const setGame = useTwoDartCombinationsGameSet();
   const user = useAuth();
   const isMd = useBreakpointValue({ base: false, md: true });
-  const { t } = useLocale();
+  const t = useTranslations('games.twodartcombinations');
   if (!game) return <MainTemplate label={'two-dart-combinations-main'} isLoading />;
   return (
     <MainTemplate label='two-dart-combinations-main'>
       {isMd ? (
-        <DesktopMain
-          game={game}
-          setGame={setGame}
-          user={user}
-          description={t.games.twodartcombinations.description.join('\n')}
-        />
+        <DesktopMain game={game} setGame={setGame} user={user} description={t('description')} />
       ) : (
-        <MobileMain
-          game={game}
-          setGame={setGame}
-          user={user}
-          description={t.games.twodartcombinations.description.join('\n')}
-        />
+        <MobileMain game={game} setGame={setGame} user={user} description={t('description')} />
       )}
     </MainTemplate>
   );

@@ -1,3 +1,4 @@
+'use client';
 import React, { FC } from 'react';
 import { Box, Text, Flex, Grid, GridItem, useBreakpointValue } from '@chakra-ui/react';
 import Board from './Board';
@@ -11,35 +12,25 @@ import TargetBoard from '@/components/TargetBoard';
 import { useAuth } from '@/contexts/AuthContext';
 import { useCricketMarkUpGame, useCricketMarkUpGameSet } from '@/contexts/CricketMarkUpGameContext';
 import { db } from '@/db/db';
-import useLocale from '@/hooks/locale';
 import CricketMarkUpGame from '@/lib/CricketMarkUpGame';
 import { saveHistory } from '@/lib/GameHistoryManager';
 import { updateObject } from '@/lib/Helper/updateObjectState';
 import MainTemplate from '@/templates/MainTemplate';
+import { useTranslations } from 'next-intl';
 
 const Main: FC = () => {
   const game = useCricketMarkUpGame();
   const setGame = useCricketMarkUpGameSet();
   const user = useAuth();
   const isMd = useBreakpointValue({ base: false, md: true });
-  const { t } = useLocale();
+  const t = useTranslations('games.cricketmarkup');
   if (!game) return <MainTemplate label={'cricket-mark-up-main'} isLoading />;
   return (
     <MainTemplate label='cricket-mark-up-main'>
       {isMd ? (
-        <DesktopMain
-          game={game}
-          setGame={setGame}
-          user={user}
-          description={t.games.cricketmarkup.description.join('\n')}
-        />
+        <DesktopMain game={game} setGame={setGame} user={user} description={t('description')} />
       ) : (
-        <MobileMain
-          game={game}
-          setGame={setGame}
-          user={user}
-          description={t.games.cricketmarkup.description.join('\n')}
-        />
+        <MobileMain game={game} setGame={setGame} user={user} description={t('description')} />
       )}
     </MainTemplate>
   );
@@ -85,8 +76,8 @@ const DesktopMain: FC<MainProps> = ({ game, setGame, user, description }) => {
                           game.getCurrentTarget() === '-1'
                             ? 'Fin'
                             : game.getCurrentTarget() === 'S-BULL'
-                            ? 'BULL'
-                            : game.getCurrentTarget()
+                              ? 'BULL'
+                              : game.getCurrentTarget()
                         }
                         message='Target'
                       />
@@ -143,8 +134,8 @@ const MobileMain: FC<MainProps> = ({ game, setGame, user, description }) => {
                 game.getCurrentTarget() === '-1'
                   ? 'Fin'
                   : game.getCurrentTarget() === 'S-BULL'
-                  ? 'BULL'
-                  : game.getCurrentTarget()
+                    ? 'BULL'
+                    : game.getCurrentTarget()
               }
               message='Target'
             />

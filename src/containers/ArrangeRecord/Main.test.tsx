@@ -1,24 +1,12 @@
 import Main from './Main';
 import { render } from '@/lib/TestUtils/RenderMock';
+import { useSearchParams } from 'next/navigation';
 import '@testing-library/jest-dom';
 
-jest.mock('next/router', () => ({
-  useRouter() {
-    return {
-      route: '/',
-      query: 'a',
-      asPath: '',
-      push: jest.fn(),
-      events: {
-        on: jest.fn(),
-        off: jest.fn(),
-      },
-      beforePopState: jest.fn(() => null),
-      prefetch: jest.fn(() => null),
-    };
-  },
-}));
+jest.mock('next/navigation');
 
 test('should rendering', async () => {
+  const useSearchParamsMock = useSearchParams as jest.Mock;
+  useSearchParamsMock.mockReturnValue({ get: jest.fn() });
   render(<Main />);
 }, 30000);

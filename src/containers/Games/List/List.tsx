@@ -3,33 +3,36 @@ import { Flex, Heading, HStack, Text, Box } from '@chakra-ui/react';
 import Link from 'next/link';
 import AppTag from '@/components/AppTag';
 import Card from '@/components/Card';
-import useLocale from '@/hooks/locale';
+import { useTranslations } from 'next-intl';
+import { getGames } from '@/lib/getGames';
 
 const List: FC = () => {
-  const { t } = useLocale();
-  const data = Object.entries(t.games);
+  const t = useTranslations();
+  const games = getGames();
   return (
     <Box p={4}>
       <Heading as='h2' size={{ base: 'lg', md: 'xl' }} pb={4}>
         Games
       </Heading>
       <Flex flexWrap='wrap' gap={2} alignItems='stretch'>
-        {data.map(([key, value]) => (
-          <div key={key}>
+        {games.map((game) => (
+          <div key={game}>
             <Card>
               <Flex direction='column' gap={4}>
-                <Link href={`/${key}`}>
+                <Link href={`/${game}`}>
                   <Heading as='h3' size={{ base: 'md', md: 'lg' }} p={{ base: 1, md: 4 }}>
-                    {value.title}
+                    {t(`games.${game}.title`)}
                   </Heading>
                 </Link>
                 <HStack>
-                  {value.tags.map((tag) => (
-                    <AppTag key={tag} tag={tag} />
-                  ))}
+                  {t(`games.${game}.tags`)
+                    .split('#')
+                    .map((tag) => (
+                      <AppTag key={tag} tag={tag} />
+                    ))}
                 </HStack>
                 <Text whiteSpace='pre-wrap' fontSize={{ base: 'sm', md: 'md' }}>
-                  {value.description.join('\n')}
+                  {t(`games.${game}.description`)}
                 </Text>
               </Flex>
             </Card>

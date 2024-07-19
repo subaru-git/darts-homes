@@ -1,3 +1,4 @@
+'use client';
 import React, { FC } from 'react';
 import { useBreakpointValue } from '@chakra-ui/react';
 import { css } from '@emotion/react';

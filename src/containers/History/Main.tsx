@@ -1,3 +1,4 @@
+'use client';
 import React, { FC, useState } from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
 import Board from '@/containers/History/Board';

@@ -1,3 +1,4 @@
+'use client';
 import React, { FC } from 'react';
 import { Box, Flex, Text, useBreakpointValue } from '@chakra-ui/react';
 import CameraView from '@/components/CameraView';
@@ -10,35 +11,25 @@ import NewGame from '@/containers/DoubleTrouble/NewGame';
 import { useAuth } from '@/contexts/AuthContext';
 import { useDoubleTroubleGame, useDoubleTroubleGameSet } from '@/contexts/DoubleTroubleGameContext';
 import { db } from '@/db/db';
-import useLocale from '@/hooks/locale';
 import DoubleTroubleGame from '@/lib/DoubleTroubleGame';
 import { saveHistory } from '@/lib/GameHistoryManager';
 import { updateObject } from '@/lib/Helper/updateObjectState';
 import MainTemplate from '@/templates/MainTemplate';
+import { useTranslations } from 'next-intl';
 
 const Main: FC = () => {
   const game = useDoubleTroubleGame();
   const setGame = useDoubleTroubleGameSet();
   const user = useAuth();
   const isMd = useBreakpointValue({ base: false, md: true });
-  const { t } = useLocale();
+  const t = useTranslations('games.doubletrouble');
   if (!game) return <MainTemplate label={'double-trouble-main'} isLoading />;
   return (
     <MainTemplate label='double-trouble-main'>
       {isMd ? (
-        <DesktopMain
-          game={game}
-          setGame={setGame}
-          user={user}
-          description={t.games.doubletrouble.description.join('\n')}
-        />
+        <DesktopMain game={game} setGame={setGame} user={user} description={t('description')} />
       ) : (
-        <MobileMain
-          game={game}
-          setGame={setGame}
-          user={user}
-          description={t.games.doubletrouble.description.join('\n')}
-        />
+        <MobileMain game={game} setGame={setGame} user={user} description={t('description')} />
       )}
     </MainTemplate>
   );

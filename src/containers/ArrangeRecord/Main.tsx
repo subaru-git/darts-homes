@@ -1,7 +1,7 @@
+'use client';
 import React, { FC, RefObject, useEffect, useRef, useState } from 'react';
 import { toBlob } from 'html-to-image';
 import fileDownload from 'js-file-download';
-import { useRouter } from 'next/router';
 import { isMobile } from 'react-device-detect';
 import { RiDownload2Fill } from 'react-icons/ri';
 import { TwitterIcon, TwitterShareButton } from 'react-share';
@@ -10,26 +10,22 @@ import CopyToClipboardButton from '@/components/CopyToClipboardButton';
 import DartBoard from '@/components/DartBoard';
 import DescriptionModal from '@/components/DescriptionModal';
 import SettingHeading from '@/components/SettingHeading';
-import useLocale from '@/hooks/locale';
 import { drawArrow, getSegmentCenter } from '@/lib/Helper/CanvasDraw';
 import MainTemplate from '@/templates/MainTemplate';
+import { useTranslations } from 'next-intl';
+import { useSearchParams } from 'next/navigation';
 
 const Main: FC = () => {
-  const router = useRouter();
-  const { a, t } = router.query;
+  const searchParams = useSearchParams();
+  const a = searchParams.get('a');
+  const t = searchParams.get('t') ? parseInt(searchParams.get('t') as string) : 0;
   const arranges = (a ? (Array.isArray(a) ? a : a.split(',')) : []) as string[];
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const imageTargetRef = useRef<HTMLDivElement>(null);
   const [target, setTarget] = useState(t ?? 0);
   const [lines, setLines] = useState<string[]>(arranges ?? ['', '', '']);
-  const {
-    t: { tools },
-  } = useLocale();
-  const defaultHelp = { title: '', hint: { header: '', body: '' } };
-  const description = tools.arrangerecord.description;
-  const targetHelp = tools.arrangerecord.help.find((h) => h.title === 'Target') || defaultHelp;
-  const arrangesHelp = tools.arrangerecord.help.find((h) => h.title === 'Arranges') || defaultHelp;
+  const trans = useTranslations('tools.arrangerecord');
 
   const getURL = () => {
     const url = new URL('https://darts.homes/arrangerecord');
@@ -74,7 +70,7 @@ const Main: FC = () => {
       <div className='flex justify-end'>
         <DescriptionModal
           header={'Arrange Record'}
-          description={<span className='whitespace-pre-wrap'>{description}</span>}
+          description={<span className='whitespace-pre-wrap'>{trans('description')}</span>}
           game={false}
         />
       </div>
@@ -93,9 +89,9 @@ const Main: FC = () => {
         <div className='flex flex-col gap-4 pb-4'>
           <div>
             <SettingHeading
-              title={targetHelp?.title}
-              hintHeader={targetHelp?.hint.header}
-              hintBody={targetHelp?.hint.body}
+              title={trans('help.Target.title')}
+              hintHeader={trans('help.Target.hint.header')}
+              hintBody={trans('help.Target.hint.body')}
             />
             <input
               type='number'
@@ -106,9 +102,9 @@ const Main: FC = () => {
           </div>
           <div>
             <SettingHeading
-              title={arrangesHelp?.title}
-              hintHeader={arrangesHelp?.hint.header}
-              hintBody={arrangesHelp?.hint.body}
+              title={trans('help.Arranges.title')}
+              hintHeader={trans('help.Arranges.hint.header')}
+              hintBody={trans('help.Arranges.hint.body')}
             />
             <div className='flex flex-col gap-4'>
               <input
