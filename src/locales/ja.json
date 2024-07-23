@@ -1,12 +1,96 @@
 {
   "seo": {
     "default": {
-      "title": "自宅でダーツをしています",
-      "description": "自宅でダーツをしています。上達しています。,"
+      "title": "Darts Homes - ただ投げるだけの家ダーツじゃつまらなくない？",
+      "description": "家ダーツがただ投げるだけになっていませんか？練習メニューありますよ"
     },
-    "Practice": {
-      "title": "練習",
-      "description": "以下の演習でスキルを磨いてください。"
+    "eagleseye": {
+      "title": "Eagle's Eye",
+      "description": "BULLのみでカウントアップするゲームです。ブルはセパレートです。"
+    },
+    "cricketmarkup": {
+      "title": "Cricket Mark-Up",
+      "description": "「菊池山口」さんの紹介したダーツ練習ゲームです。クリケットナンバーを狙っていきます。"
+    },
+    "doubletrouble": {
+      "title": "Double Trouble",
+      "description": "ダブル練習ゲームです。1から20までのダブルを狙っていきます。"
+    },
+    "sweet16": {
+      "title": "Sweet 16",
+      "description": "32ダブルアウト練習ゲームです。32はメジャーなアレンジなのでぜひ練習しましょう。"
+    },
+    "topsandtens": {
+      "title": "Tops and Tens",
+      "description": "40ダブルアウト練習ゲームです。40はメジャーなアレンジなのでぜひ練習しましょう。"
+    },
+    "twodartcombinations": {
+      "title": "Two-Dart Combinations",
+      "description": "41から60までをダブルアウトする練習ゲームです。全て2ダーツでアウトするのが目標です。"
+    },
+    "aroundthecompass": {
+      "title": "Around The Compass",
+      "description": "24ダブルアウト練習ゲームです。24はメジャーなアレンジなのでぜひ練習しましょう。"
+    },
+    "tonsup": {
+      "title": "Tons Up",
+      "description": "100ダブルアウト練習ゲームです。2本でアウトできたら素晴らしい。"
+    },
+    "route64": {
+      "title": "Route 64",
+      "description": "64ダブルアウト練習ゲームです。2本でアウトできたら素晴らしい。"
+    },
+    "eightythrew": {
+      "title": "Eighty Threw",
+      "description": "82ダブルアウト練習ゲームです。2本でアウトできたら素晴らしい。"
+    },
+    "shanghainights": {
+      "title": "Shanghai Night",
+      "description": "120ダブルアウト練習ゲームです。20ダブル3本でアウトできたらボーナス。"
+    },
+    "switchhitter": {
+      "title": "Switch Hitter",
+      "description": "19練習ゲームです。19トリプルにガンガン入れていこう。"
+    },
+    "bullybully": {
+      "title": "Bully Bully",
+      "description": "BULL練習ゲームです。やっぱりBULLでしょう。"
+    },
+    "treblesforshow": {
+      "title": "Treble For Show",
+      "description": "20練習ゲームです。セパレートやクリケットだと20は基本だよね。"
+    },
+    "arrange": {
+      "title": "Arrange",
+      "description": "アレンジの練習です。シミュレーションモードではねらいに対してズレを考慮する必要があります。"
+    },
+    "countup": {
+      "title": "Count Up",
+      "description": "スティールダーツ用のカウントアップゲームです。スティールダーツの練習にどうぞ。"
+    },
+    "games": {
+      "title": "Games",
+      "description": "ダーツの練習ゲームを紹介します。あなたに合ったものがあると嬉しいです。"
+    },
+    "arrangerecord": {
+      "title": "Arrange Record",
+      "description": "アレンジの軌跡を見ながら考えるツール。"
+    },
+    "respect": {
+      "title": "Respect",
+      "description": "リスペクトするダーツコンテンツを紹介します。一緒に応援していきましょう。"
+    },
+    "history": {
+      "title": "History",
+      "description": "あなたの成長を確認できます。ブラウザ間の同期はできません。"
+    },
+    "termsofservice": {
+      "title": "Terms of Service",
+      "description": "Darts Homes の利用規約です。"
+    },
+    "privacypolicy": {
+      "title": "Privacy Policy",
+      "description": "Darts Homes のプライバシーポリシーです。"
     }
   },
   "Home": {
