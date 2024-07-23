@@ -13,9 +13,9 @@ import {
 import fileDownload from 'js-file-download';
 import { BiExport, BiImport } from 'react-icons/bi';
 import { useAuth } from '@/contexts/AuthContext';
-import useLocale from '@/hooks/locale';
 import { exportGameHistory, importGameHistory } from '@/lib/GameHistoryManager';
 import { isGameHistory } from '@/lib/Helper/TypeGuard';
+import { useTranslations } from 'next-intl';
 
 type ImportExportProps = {
   onError: () => void;
@@ -42,7 +42,7 @@ const ImportExport: FC<ImportExportProps> = ({ onError }) => {
   });
   const inputRef = useRef<HTMLInputElement>(null);
   const cancelRef = useRef<HTMLButtonElement>(null);
-  const { t } = useLocale();
+  const t = useTranslations();
   return (
     <>
       <Flex gap={4}>
@@ -106,7 +106,7 @@ const ImportExport: FC<ImportExportProps> = ({ onError }) => {
             <AlertDialogHeader fontSize='lg' fontWeight='bold'>
               Import History
             </AlertDialogHeader>
-            <AlertDialogBody>{t.import.description}</AlertDialogBody>
+            <AlertDialogBody>{t('import.description')}</AlertDialogBody>
             <AlertDialogFooter>
               <Button
                 colorScheme='gray'
@@ -126,7 +126,7 @@ const ImportExport: FC<ImportExportProps> = ({ onError }) => {
                 ml={3}
                 aria-label='add'
               >
-                {t.common.add}
+                {t('common.add')}
               </Button>
               <Button
                 colorScheme='red'
@@ -137,7 +137,7 @@ const ImportExport: FC<ImportExportProps> = ({ onError }) => {
                 ml={3}
                 aria-label='overwrite'
               >
-                {t.common.overwrite}
+                {t('common.overwrite')}
               </Button>
             </AlertDialogFooter>
           </AlertDialogContent>

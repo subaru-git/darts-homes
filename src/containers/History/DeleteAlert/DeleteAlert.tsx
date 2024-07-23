@@ -9,7 +9,7 @@ import {
   Button,
   Text,
 } from '@chakra-ui/react';
-import useLocale from '@/hooks/locale';
+import { useTranslations } from 'next-intl';
 
 type DeleteAlertProps = {
   message: string;
@@ -20,7 +20,7 @@ type DeleteAlertProps = {
 
 const DeleteAlert: FC<DeleteAlertProps> = ({ message, isOpen, onClose, onDelete }) => {
   const cancelRef = useRef<HTMLButtonElement>(null);
-  const { t } = useLocale();
+  const t = useTranslations('warning');
   if (!history) return null;
   return (
     <AlertDialog
@@ -35,7 +35,7 @@ const DeleteAlert: FC<DeleteAlertProps> = ({ message, isOpen, onClose, onDelete 
             Delete History
           </AlertDialogHeader>
           <AlertDialogBody>
-            {t.warning.deletehistory}
+            {t('deletehistory')}
             <Text mt={4}>{message}</Text>
           </AlertDialogBody>
           <AlertDialogFooter>

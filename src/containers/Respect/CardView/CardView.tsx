@@ -1,5 +1,5 @@
 import React, { FC, Fragment } from 'react';
-import { ExternalLinkIcon } from '@chakra-ui/icons';
+import { FiExternalLink } from 'react-icons/fi';
 import { Box, Center, Flex, Heading, Link, Image, Text } from '@chakra-ui/react';
 import replace from 'react-string-replace';
 import Card from '@/components/Card';
@@ -90,7 +90,7 @@ const replaceDescription = (description: string) => {
         <Fragment key={i}>
           <br />
           <Link href={match} isExternal color='teal.700' fontStyle='italic'>
-            {match} <ExternalLinkIcon />
+            {match} <FiExternalLink />
           </Link>
           <br />
         </Fragment>

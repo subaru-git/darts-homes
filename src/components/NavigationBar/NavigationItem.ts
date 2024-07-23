@@ -1,4 +1,4 @@
-import useLocale from '@/hooks/locale';
+import { useTranslations } from 'next-intl';
 
 export interface NavItem {
   label: string;
@@ -8,7 +8,7 @@ export interface NavItem {
 }
 
 export const GetNavItem = () => {
-  const { t } = useLocale();
+  const t = useTranslations('Components.navigation');
   return [
     {
       label: 'Games',
@@ -16,82 +16,82 @@ export const GetNavItem = () => {
       children: [
         {
           label: "Eagle's Eye",
-          subLabel: t.navigation.eagleseye,
+          subLabel: t('eagleseye'),
           href: '/eagleseye',
         },
         {
           label: 'Cricket Mark-Up',
-          subLabel: t.navigation.cricketmarkup,
+          subLabel: t('cricketmarkup'),
           href: '/cricketmarkup',
         },
         {
           label: 'Double Trouble',
-          subLabel: t.navigation.doubletrouble,
+          subLabel: t('doubletrouble'),
           href: '/doubletrouble',
         },
         {
           label: 'Sweet 16',
-          subLabel: t.navigation.sweet16,
+          subLabel: t('sweet16'),
           href: '/sweet16',
         },
         {
           label: 'Tops and Tens',
-          subLabel: t.navigation.topsandtens,
+          subLabel: t('topsandtens'),
           href: '/topsandtens',
         },
         {
           label: 'Two-Dart Combinations',
-          subLabel: t.navigation.twodartcombinations,
+          subLabel: t('twodartcombinations'),
           href: '/twodartcombinations',
         },
         {
           label: 'Around The Compass',
-          subLabel: t.navigation.aroundthecompass,
+          subLabel: t('aroundthecompass'),
           href: '/aroundthecompass',
         },
         {
           label: 'Tons Up',
-          subLabel: t.navigation.tonsup,
+          subLabel: t('tonsup'),
           href: '/tonsup',
         },
         {
           label: 'Route 64',
-          subLabel: t.navigation.route64,
+          subLabel: t('route64'),
           href: '/route64',
         },
         {
           label: 'Eighty Threw',
-          subLabel: t.navigation.eightythrew,
+          subLabel: t('eightythrew'),
           href: '/eightythrew',
         },
         {
           label: 'Shanghai Nights',
-          subLabel: t.navigation.shanghainights,
+          subLabel: t('shanghainights'),
           href: '/shanghainights',
         },
         {
           label: 'Switch Hitter',
-          subLabel: t.navigation.switchhitter,
+          subLabel: t('switchhitter'),
           href: '/switchhitter',
         },
         {
           label: 'Bully Bully',
-          subLabel: t.navigation.bullybully,
+          subLabel: t('bullybully'),
           href: '/bullybully',
         },
         {
           label: 'Treble For Show',
-          subLabel: t.navigation.treblesforshow,
+          subLabel: t('treblesforshow'),
           href: '/treblesforshow',
         },
         {
           label: 'Arrange',
-          subLabel: t.navigation.arrange,
+          subLabel: t('arrange'),
           href: '/arrange',
         },
         {
           label: 'Count Up',
-          subLabel: t.navigation.countup,
+          subLabel: t('countup'),
           href: '/countup',
         },
       ],
@@ -101,7 +101,7 @@ export const GetNavItem = () => {
       children: [
         {
           label: 'Arrange Record',
-          subLabel: t.navigation.arrangerecord,
+          subLabel: t('arrangerecord'),
           href: '/arrangerecord',
         },
       ],

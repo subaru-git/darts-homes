@@ -118,9 +118,9 @@ For more information, please watch this video.
                 double
               </span>
               <span
-                class="text-gray-100 bg-pink-400 whitespace-nowrap rounded-full px-2.5 py-0.5 text-sm font-medium"
+                class="text-gray-100 bg-orange-400 whitespace-nowrap rounded-full px-2.5 py-0.5 text-sm font-medium"
               >
-                count up
+                finish
               </span>
             </div>
             <p
@@ -282,7 +282,7 @@ Receive 15 points for every finish you complete. 15 points available every 3 dar
             <p
               class="chakra-text css-12mgru9"
             >
-              You have 20 visits to finish 24 using any combination but always finishing on a double, Recieve five points every time you complete the finish.
+              You have 20 visits to finish 24 using any combination but always finishing on a double, Receive five points every time you complete the finish.
 10point bonus for three double 12's (i.e. you get the double 12 first dart then follow it up with two more). 15 points available every 3 darts; 300 overall.
             </p>
           </div>

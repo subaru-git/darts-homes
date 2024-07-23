@@ -1720,26 +1720,28 @@ exports[`should rendering 1`] = `
                   https://bit.ly/2XKqSJUFascinating
                    
                   <svg
-                    class="chakra-icon css-onkibi"
-                    focusable="false"
+                    fill="none"
+                    height="1em"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
                     viewBox="0 0 24 24"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-width="2"
-                    >
-                      <path
-                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                      />
-                      <path
-                        d="M15 3h6v6"
-                      />
-                      <path
-                        d="M10 14L21 3"
-                      />
-                    </g>
+                    <path
+                      d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                    />
+                    <polyline
+                      points="15 3 21 3 21 9"
+                    />
+                    <line
+                      x1="10"
+                      x2="21"
+                      y1="14"
+                      y2="3"
+                    />
                   </svg>
                 </a>
                 <br />
@@ -1786,26 +1788,28 @@ exports[`should rendering 1`] = `
                   http://japanprodarts.jp/
                    
                   <svg
-                    class="chakra-icon css-onkibi"
-                    focusable="false"
+                    fill="none"
+                    height="1em"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
                     viewBox="0 0 24 24"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-width="2"
-                    >
-                      <path
-                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                      />
-                      <path
-                        d="M15 3h6v6"
-                      />
-                      <path
-                        d="M10 14L21 3"
-                      />
-                    </g>
+                    <path
+                      d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                    />
+                    <polyline
+                      points="15 3 21 3 21 9"
+                    />
+                    <line
+                      x1="10"
+                      x2="21"
+                      y1="14"
+                      y2="3"
+                    />
                   </svg>
                 </a>
                 <br />
@@ -1883,26 +1887,28 @@ exports[`should rendering 1`] = `
                   https://www.youtube.com/channel/UCR4VLOEv_CuxO9MztlDw3jQ
                    
                   <svg
-                    class="chakra-icon css-onkibi"
-                    focusable="false"
+                    fill="none"
+                    height="1em"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
                     viewBox="0 0 24 24"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-width="2"
-                    >
-                      <path
-                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                      />
-                      <path
-                        d="M15 3h6v6"
-                      />
-                      <path
-                        d="M10 14L21 3"
-                      />
-                    </g>
+                    <path
+                      d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                    />
+                    <polyline
+                      points="15 3 21 3 21 9"
+                    />
+                    <line
+                      x1="10"
+                      x2="21"
+                      y1="14"
+                      y2="3"
+                    />
                   </svg>
                 </a>
                 <br />
@@ -2109,26 +2115,28 @@ exports[`should rendering 1`] = `
                   https://linktr.ee/dolly1129
                    
                   <svg
-                    class="chakra-icon css-onkibi"
-                    focusable="false"
+                    fill="none"
+                    height="1em"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
                     viewBox="0 0 24 24"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-width="2"
-                    >
-                      <path
-                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                      />
-                      <path
-                        d="M15 3h6v6"
-                      />
-                      <path
-                        d="M10 14L21 3"
-                      />
-                    </g>
+                    <path
+                      d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                    />
+                    <polyline
+                      points="15 3 21 3 21 9"
+                    />
+                    <line
+                      x1="10"
+                      x2="21"
+                      y1="14"
+                      y2="3"
+                    />
                   </svg>
                 </a>
                 <br />
@@ -2174,26 +2182,28 @@ exports[`should rendering 1`] = `
                   https://www.youtube.com/channel/UCwwXvuW6jknceskts0yxLFQ/join
                    
                   <svg
-                    class="chakra-icon css-onkibi"
-                    focusable="false"
+                    fill="none"
+                    height="1em"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
                     viewBox="0 0 24 24"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-width="2"
-                    >
-                      <path
-                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                      />
-                      <path
-                        d="M15 3h6v6"
-                      />
-                      <path
-                        d="M10 14L21 3"
-                      />
-                    </g>
+                    <path
+                      d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                    />
+                    <polyline
+                      points="15 3 21 3 21 9"
+                    />
+                    <line
+                      x1="10"
+                      x2="21"
+                      y1="14"
+                      y2="3"
+                    />
                   </svg>
                 </a>
                 <br />
@@ -2239,26 +2249,28 @@ exports[`should rendering 1`] = `
                   http://tiga-darts.jp/
                    
                   <svg
-                    class="chakra-icon css-onkibi"
-                    focusable="false"
+                    fill="none"
+                    height="1em"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
                     viewBox="0 0 24 24"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-width="2"
-                    >
-                      <path
-                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                      />
-                      <path
-                        d="M15 3h6v6"
-                      />
-                      <path
-                        d="M10 14L21 3"
-                      />
-                    </g>
+                    <path
+                      d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                    />
+                    <polyline
+                      points="15 3 21 3 21 9"
+                    />
+                    <line
+                      x1="10"
+                      x2="21"
+                      y1="14"
+                      y2="3"
+                    />
                   </svg>
                 </a>
                 <br />

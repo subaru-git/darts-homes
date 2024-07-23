@@ -1,3 +1,4 @@
+'use client';
 import React, { FC } from 'react';
 import { Adsense } from '@ctrl/react-adsense';
 

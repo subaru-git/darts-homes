@@ -1,3 +1,5 @@
+'use client';
+
 import { createContext, ReactNode, useContext, useEffect, useState } from 'react';
 import { onAuthStateChanged } from '@firebase/auth';
 import { doc, getDoc, setDoc } from '@firebase/firestore';

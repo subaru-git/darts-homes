@@ -1,3 +1,4 @@
+'use client';
 import React, { FC } from 'react';
 import { Box, Text, Flex, useBreakpointValue } from '@chakra-ui/react';
 import NewGame from './NewGame';
@@ -13,35 +14,25 @@ import {
   useShanghaiNightsGameSet,
 } from '@/contexts/ShanghaiNightsGameContext';
 import { db } from '@/db/db';
-import useLocale from '@/hooks/locale';
 import { saveHistory } from '@/lib/GameHistoryManager';
 import { updateObject } from '@/lib/Helper/updateObjectState';
 import ShanghaiNightsGame from '@/lib/ShanghaiNightsGame';
 import MainTemplate from '@/templates/MainTemplate';
+import { useTranslations } from 'next-intl';
 
 const Main: FC = () => {
   const game = useShanghaiNightsGame();
   const setGame = useShanghaiNightsGameSet();
   const user = useAuth();
   const isMd = useBreakpointValue({ base: false, md: true });
-  const { t } = useLocale();
+  const t = useTranslations('games.shanghainights');
   if (!game) return <MainTemplate label={'shanghai-nights-main'} isLoading />;
   return (
     <MainTemplate label='shanghai-nights-main'>
       {isMd ? (
-        <DesktopMain
-          game={game}
-          setGame={setGame}
-          user={user}
-          description={t.games.shanghainights.description.join('\n')}
-        />
+        <DesktopMain game={game} setGame={setGame} user={user} description={t('description')} />
       ) : (
-        <MobileMain
-          game={game}
-          setGame={setGame}
-          user={user}
-          description={t.games.shanghainights.description.join('\n')}
-        />
+        <MobileMain game={game} setGame={setGame} user={user} description={t('description')} />
       )}
     </MainTemplate>
   );

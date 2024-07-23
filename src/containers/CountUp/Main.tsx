@@ -1,3 +1,4 @@
+'use client';
 import React, { FC, useEffect, useState } from 'react';
 import { Text, Box, Flex, useBreakpointValue, useDisclosure } from '@chakra-ui/react';
 import NewGame from './NewGame';
@@ -10,11 +11,11 @@ import TenKey from '@/components/TenKey';
 import { useAuth } from '@/contexts/AuthContext';
 import { useCountUpGame, useCountUpGameSet } from '@/contexts/CountUpGameContext';
 import { db } from '@/db/db';
-import useLocale from '@/hooks/locale';
 import CountUpGame from '@/lib/CountUpGame/CountUpGame';
 import { saveHistory } from '@/lib/GameHistoryManager';
 import { updateObject } from '@/lib/Helper/updateObjectState';
 import MainTemplate from '@/templates/MainTemplate';
+import { useTranslations } from 'next-intl';
 
 const Main: FC = () => {
   const game = useCountUpGame();
@@ -22,7 +23,7 @@ const Main: FC = () => {
   const user = useAuth();
   const [scoreFocus, setScoreFocus] = useState(false);
   const isMd = useBreakpointValue({ base: false, md: true });
-  const { t } = useLocale();
+  const t = useTranslations('games.countup');
   if (!game) return <MainTemplate label={'count-up-main'} isLoading />;
   return (
     <MainTemplate label='count-up-main'>
@@ -33,7 +34,7 @@ const Main: FC = () => {
           user={user}
           scoreFocus={scoreFocus}
           setScoreFocus={setScoreFocus}
-          description={t.games.countup.description.join('\n')}
+          description={t('description')}
         />
       ) : (
         <MobileMain
@@ -42,7 +43,7 @@ const Main: FC = () => {
           user={user}
           scoreFocus={scoreFocus}
           setScoreFocus={setScoreFocus}
-          description={t.games.countup.description.join('\n')}
+          description={t('description')}
         />
       )}
     </MainTemplate>

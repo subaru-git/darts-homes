@@ -1,3 +1,4 @@
+'use client';
 import React, { FC } from 'react';
 import { Box, Text, Center, Flex, Grid, GridItem, useBreakpointValue } from '@chakra-ui/react';
 import CameraView from '@/components/CameraView';
@@ -10,35 +11,25 @@ import NewGame from '@/containers/EaglesEye/NewGame';
 import { useAuth } from '@/contexts/AuthContext';
 import { useEaglesEyeGame, useEaglesEyeGameSet } from '@/contexts/EaglesEyeGameContext';
 import { db } from '@/db/db';
-import useLocale from '@/hooks/locale';
 import EaglesEyeGame from '@/lib/EaglesEyeGame';
 import { saveHistory } from '@/lib/GameHistoryManager';
 import { updateObject } from '@/lib/Helper/updateObjectState';
 import MainTemplate from '@/templates/MainTemplate';
+import { useTranslations } from 'next-intl';
 
 const EaglesEyeMain: FC = () => {
   const game = useEaglesEyeGame();
   const setGame = useEaglesEyeGameSet();
   const user = useAuth();
   const isMd = useBreakpointValue({ base: false, md: true });
-  const { t } = useLocale();
+  const t = useTranslations('games.eagleseye');
   if (!game) return <MainTemplate label={'eagles-eye-main'} isLoading />;
   return (
     <MainTemplate label='eagles-eye-main'>
       {isMd ? (
-        <DesktopMain
-          game={game}
-          setGame={setGame}
-          user={user}
-          description={t.games.eagleseye.description.join('\n')}
-        />
+        <DesktopMain game={game} setGame={setGame} user={user} description={t('description')} />
       ) : (
-        <MobileMain
-          game={game}
-          setGame={setGame}
-          user={user}
-          description={t.games.eagleseye.description.join('\n')}
-        />
+        <MobileMain game={game} setGame={setGame} user={user} description={t('description')} />
       )}
     </MainTemplate>
   );

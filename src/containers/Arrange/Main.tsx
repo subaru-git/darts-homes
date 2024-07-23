@@ -1,3 +1,4 @@
+'use client';
 import React, { FC, useEffect, useState } from 'react';
 import { Flex, Grid, GridItem, Text, useBreakpointValue } from '@chakra-ui/react';
 import { AiOutlineThunderbolt } from 'react-icons/ai';
@@ -14,20 +15,20 @@ import ScoreBoard from '@/components/ScoreBoard';
 import { useArrangeGame, useArrangeGameSet } from '@/contexts/ArrangeGameContext';
 import { useAuth } from '@/contexts/AuthContext';
 import { db } from '@/db/db';
-import useLocale from '@/hooks/locale';
 import ArrangeGame from '@/lib/ArrangeGame/';
 import { saveHistory } from '@/lib/GameHistoryManager';
 import { convertArrangeOutToGameScore, convertToFullWidth } from '@/lib/Helper/Converter';
 import { toArrangeScoreBoard } from '@/lib/Helper/Format';
 import { updateObject } from '@/lib/Helper/updateObjectState';
 import MainTemplate from '@/templates/MainTemplate';
+import { useTranslations } from 'next-intl';
 
 const Main: FC = () => {
   const user = useAuth();
   const game = useArrangeGame();
   const setGame = useArrangeGameSet();
   const isMd = useBreakpointValue({ base: false, md: true });
-  const { t } = useLocale();
+  const t = useTranslations('games.arrange');
   const [isThePower, setThePower] = useState(false);
   useEffect(() => {
     if (!enablePower(game)) setThePower(false);
@@ -40,7 +41,7 @@ const Main: FC = () => {
           game={game}
           setGame={setGame}
           user={user}
-          description={t.games.arrange.description.join('\n')}
+          description={t('description')}
           isThePower={isThePower}
           setThePower={setThePower}
         />
@@ -49,7 +50,7 @@ const Main: FC = () => {
           game={game}
           setGame={setGame}
           user={user}
-          description={t.games.arrange.description.join('\n')}
+          description={t('description')}
           isThePower={isThePower}
           setThePower={setThePower}
         />

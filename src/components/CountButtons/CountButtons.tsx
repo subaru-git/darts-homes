@@ -1,3 +1,4 @@
+'use client';
 import React, { FC, Fragment, useState } from 'react';
 import {
   Drawer,

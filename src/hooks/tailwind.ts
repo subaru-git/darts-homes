@@ -1,3 +1,4 @@
+'use client';
 import { useEffect } from 'react';
 import create from '@kodingdotninja/use-tailwind-breakpoint';
 import resolveConfig from 'tailwindcss/resolveConfig';

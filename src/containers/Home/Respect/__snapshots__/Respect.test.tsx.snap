@@ -31,12 +31,13 @@ exports[`should rendering 1`] = `
       <h2
         class="text-2xl font-bold"
       >
-        Thanks for all the darts content
+        Suggest practicing home darts
       </h2>
       <p
         class="whitespace-pre-wrap text-base"
       >
-        This site appreciates and respects all content, including each darts manufacturer, players, YouTube, blogs, etc.
+        We propose practice methods for home darts, which tend to be monotonous.
+The practice is supported as an application with references to YouTube, Blogs, etc.
       </p>
     </div>
   </div>

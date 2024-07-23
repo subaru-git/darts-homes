@@ -1,3 +1,4 @@
+'use client';
 import React, { FC, useEffect, useState } from 'react';
 import { FiRss } from 'react-icons/fi';
 import { VscTrash } from 'react-icons/vsc';

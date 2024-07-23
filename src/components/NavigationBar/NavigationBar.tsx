@@ -1,3 +1,4 @@
+'use client';
 import React, { FC } from 'react';
 import { Collapse, Popover, PopoverTrigger, PopoverContent, useDisclosure } from '@chakra-ui/react';
 import Image from 'next/image';

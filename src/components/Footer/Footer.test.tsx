@@ -1,5 +1,6 @@
-import { render, screen } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 import Footer from './Footer';
+import { render } from '@/lib/TestUtils/RenderMock';
 
 test('should rendering', () => {
   const { container } = render(<Footer />);
