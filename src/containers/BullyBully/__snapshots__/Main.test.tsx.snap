@@ -917,7 +917,7 @@ exports[`should rendering 1`] = `
                 tabindex="-1"
               >
                 <a
-                  href="/"
+                  href="/ja"
                 >
                   <div
                     class="group block rounded-md p-2 hover:bg-pink-50"
@@ -930,7 +930,7 @@ exports[`should rendering 1`] = `
                   </div>
                 </a>
                 <a
-                  href="/"
+                  href="/en"
                 >
                   <div
                     class="group block rounded-md p-2 hover:bg-pink-50"
@@ -1669,25 +1669,26 @@ exports[`should rendering 1`] = `
         class="css-13s4dk6"
       >
         <div
-          class="css-158voh1-CountBullButtons"
+          class="relative flex h-[40vw] max-h-[40vh] w-[40vw] max-w-[40vh] items-center justify-center"
         >
           <div
-            class="css-8vdy66-CountBullButtons"
-          />
-          <button
-            aria-label="outer bull"
-            class="css-c7v446-CountBullButtons"
+            class="absolute z-40 h-full w-full bg-gray-800 opacity-50 hidden"
           />
           <button
             aria-label="inner bull"
-            class="css-1kw2i65-CountBullButtons"
+            class="absolute z-30 h-[37.5%] w-[37.5%] appearance-none rounded-full bg-gradient-radial from-gray-800 to-gray-500 text-white hover:from-gray-800 hover:to-gray-600"
+          />
+          <button
+            aria-label="outer bull"
+            class="absolute z-20 h-[75%] w-[75%] appearance-none rounded-full bg-gradient-radial from-red-600 to-red-400 hover:from-red-700 hover:to-red-500"
           />
           <button
             aria-label="non bull"
-            class="css-1cn4f4l-CountBullButtons"
+            class="absolute z-10 h-full w-full appearance-none bg-gradient-radial from-gray-600 to-gray-500 hover:from-gray-700 hover:to-gray-600"
           />
           <div
-            class="css-6n8pms-CountBullButtons"
+            class="pointer-events-none absolute z-50 h-full w-full opacity-30"
+            style="background-image: url(./noise.svg);"
           />
         </div>
       </div>

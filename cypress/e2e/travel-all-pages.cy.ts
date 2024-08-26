@@ -4,8 +4,6 @@ describe('Travel all pages', () => {
     indexedDB.deleteDatabase('DartsHomes');
     cy.visit('/');
     cy.get('div[data-cy="home-main"]').should('be.visible');
-    cy.visit('/n01');
-    cy.get('div[data-cy="n01-main"]').should('be.visible');
     cy.visit('/eagleseye');
     cy.get('div[data-cy="eagles-eye-main"]').should('be.visible');
     cy.visit('/cricketmarkup');
@@ -48,8 +46,6 @@ describe('Travel all pages', () => {
     cy.get('div[data-cy="privacypolicy-main"]').should('be.visible');
     cy.visit('/ja');
     cy.get('div[data-cy="home-main"]').should('be.visible');
-    cy.visit('/ja/n01');
-    cy.get('div[data-cy="n01-main"]').should('be.visible');
     cy.visit('/ja/eagleseye');
     cy.get('div[data-cy="eagles-eye-main"]').should('be.visible');
     cy.visit('/ja/cricketmarkup');
@@ -92,8 +88,6 @@ describe('Travel all pages', () => {
     cy.get('div[data-cy="privacypolicy-main"]').should('be.visible');
     cy.visit('/en');
     cy.get('div[data-cy="home-main"]').should('be.visible');
-    cy.visit('/en/n01');
-    cy.get('div[data-cy="n01-main"]').should('be.visible');
     cy.visit('/en/eagleseye');
     cy.get('div[data-cy="eagles-eye-main"]').should('be.visible');
     cy.visit('/en/cricketmarkup');

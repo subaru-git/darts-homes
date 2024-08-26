@@ -12,7 +12,7 @@ import { GiHorizontalFlip } from 'react-icons/gi';
 import RadioButton from '@/atoms/RadioButton/RadioButton';
 import NewGameModal from '@/components/NewGameModal';
 import SettingHeading from '@/components/SettingHeading';
-import useLocale from '@/hooks/locale';
+import { useTranslations } from 'next-intl';
 
 type NewGameProps = {
   onNewGame: (settings: ArrangeSettings) => void;
@@ -22,16 +22,7 @@ type NewGameProps = {
 
 const NewGame: FC<NewGameProps> = ({ onNewGame, currentSettings, isFinished = false }) => {
   const [settings, setSettings] = useState<ArrangeSettings>(currentSettings);
-  const { t } = useLocale();
-  const defaultHelp = { title: '', hint: { header: '', body: '' } };
-  const sim = t.games.arrange.help.find((h) => h.title === 'Simulation Mode') || defaultHelp;
-  const mode = t.games.arrange.help.find((h) => h.title === 'Game Mode') || defaultHelp;
-  const board = t.games.arrange.help.find((h) => h.title === 'Board Type') || defaultHelp;
-  const pro = t.games.arrange.help.find((h) => h.title === 'Pro Mode') || defaultHelp;
-  const range = t.games.arrange.help.find((h) => h.title === 'Range') || defaultHelp;
-  const out = t.games.arrange.help.find((h) => h.title === 'Out Option') || defaultHelp;
-  const bull = t.games.arrange.help.find((h) => h.title === 'Bull Option') || defaultHelp;
-  const fixed = t.games.arrange.help.find((h) => h.title === 'Fixed Score') || defaultHelp;
+  const t = useTranslations('games.arrange.help');
   return (
     <NewGameModal
       onNewGame={() => onNewGame(settings)}
@@ -40,9 +31,9 @@ const NewGame: FC<NewGameProps> = ({ onNewGame, currentSettings, isFinished = fa
           <div className='flex flex-wrap gap-5'>
             <div>
               <SettingHeading
-                title={sim?.title}
-                hintHeader={sim?.hint.header}
-                hintBody={sim?.hint.body}
+                title={t('Simulation Mode.title')}
+                hintHeader={t('Simulation Mode.hint.header')}
+                hintBody={t('Simulation Mode.hint.body')}
               />
               <RadioButton
                 values={[
@@ -57,9 +48,9 @@ const NewGame: FC<NewGameProps> = ({ onNewGame, currentSettings, isFinished = fa
             </div>
             <div>
               <SettingHeading
-                title={mode?.title}
-                hintHeader={mode?.hint.header}
-                hintBody={mode?.hint.body}
+                title={t('Game Mode.title')}
+                hintHeader={t('Game Mode.hint.header')}
+                hintBody={t('Game Mode.hint.body')}
               />
               <RadioButton
                 values={[
@@ -78,9 +69,9 @@ const NewGame: FC<NewGameProps> = ({ onNewGame, currentSettings, isFinished = fa
             </div>
             <div>
               <SettingHeading
-                title={board?.title}
-                hintHeader={board?.hint.header}
-                hintBody={board?.hint.body}
+                title={t('Board Type.title')}
+                hintHeader={t('Board Type.hint.header')}
+                hintBody={t('Board Type.hint.body')}
               />
               <RadioButton
                 values={[
@@ -98,9 +89,9 @@ const NewGame: FC<NewGameProps> = ({ onNewGame, currentSettings, isFinished = fa
             </div>
             <div>
               <SettingHeading
-                title={pro?.title}
-                hintHeader={pro?.hint.header}
-                hintBody={pro?.hint.body}
+                title={t('Pro Mode.title')}
+                hintHeader={t('Pro Mode.hint.header')}
+                hintBody={t('Pro Mode.hint.body')}
               />
               <RadioButton
                 values={[
@@ -116,9 +107,9 @@ const NewGame: FC<NewGameProps> = ({ onNewGame, currentSettings, isFinished = fa
           </div>
           <div>
             <SettingHeading
-              title={range?.title}
-              hintHeader={range?.hint.header}
-              hintBody={range?.hint.body}
+              title={t('Range.title')}
+              hintHeader={t('Range.hint.header')}
+              hintBody={t('Range.hint.body')}
             />
             <div className='px-4 pt-4'>
               <GiHorizontalFlip />
@@ -189,9 +180,9 @@ const NewGame: FC<NewGameProps> = ({ onNewGame, currentSettings, isFinished = fa
           </div>
           <div>
             <SettingHeading
-              title={out?.title}
-              hintHeader={out?.hint.header}
-              hintBody={out?.hint.body}
+              title={t('Out Option.title')}
+              hintHeader={t('Out Option.hint.header')}
+              hintBody={t('Out Option.hint.body')}
             />
             <RadioButton
               values={[
@@ -211,9 +202,9 @@ const NewGame: FC<NewGameProps> = ({ onNewGame, currentSettings, isFinished = fa
           </div>
           <div>
             <SettingHeading
-              title={bull?.title}
-              hintHeader={bull?.hint.header}
-              hintBody={bull?.hint.body}
+              title={t('Bull Option.title')}
+              hintHeader={t('Bull Option.hint.header')}
+              hintBody={t('Bull Option.hint.body')}
             />
             <RadioButton
               values={[
@@ -232,9 +223,9 @@ const NewGame: FC<NewGameProps> = ({ onNewGame, currentSettings, isFinished = fa
           </div>
           <div>
             <SettingHeading
-              title={fixed?.title}
-              hintHeader={fixed?.hint.header}
-              hintBody={fixed?.hint.body}
+              title={t('Fixed Score.title')}
+              hintHeader={t('Fixed Score.hint.header')}
+              hintBody={t('Fixed Score.hint.body')}
             />
             <Input
               type='number'

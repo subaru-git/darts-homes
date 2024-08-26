@@ -1,3 +1,4 @@
+'use client';
 import React, { FC } from 'react';
 import { Box, Text, Flex, useBreakpointValue } from '@chakra-ui/react';
 import NewGame from './NewGame';
@@ -10,35 +11,25 @@ import TargetBoard from '@/components/TargetBoard';
 import { useAuth } from '@/contexts/AuthContext';
 import { useRoute64Game, useRoute64GameSet } from '@/contexts/Route64GameContext';
 import { db } from '@/db/db';
-import useLocale from '@/hooks/locale';
 import { saveHistory } from '@/lib/GameHistoryManager';
 import { updateObject } from '@/lib/Helper/updateObjectState';
 import Route64Game from '@/lib/Route64Game';
 import MainTemplate from '@/templates/MainTemplate';
+import { useTranslations } from 'next-intl';
 
 const Main: FC = () => {
   const game = useRoute64Game();
   const setGame = useRoute64GameSet();
   const user = useAuth();
   const isMd = useBreakpointValue({ base: false, md: true });
-  const { t } = useLocale();
+  const t = useTranslations('games.route64');
   if (!game) return <MainTemplate label={'route-64-main'} isLoading />;
   return (
     <MainTemplate label='route-64-main'>
       {isMd ? (
-        <DesktopMain
-          game={game}
-          setGame={setGame}
-          user={user}
-          description={t.games.route64.description.join('\n')}
-        />
+        <DesktopMain game={game} setGame={setGame} user={user} description={t('description')} />
       ) : (
-        <MobileMain
-          game={game}
-          setGame={setGame}
-          user={user}
-          description={t.games.route64.description.join('\n')}
-        />
+        <MobileMain game={game} setGame={setGame} user={user} description={t('description')} />
       )}
     </MainTemplate>
   );

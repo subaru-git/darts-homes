@@ -33,7 +33,7 @@ import TonsUpHistoryTable from '@/containers/TonsUp/HistoryTable';
 import TopsAndTensHistoryTable from '@/containers/TopsAndTens/HistoryTable';
 import TreblesForShowHistoryTable from '@/containers/TreblesForShow/HistoryTable';
 import TwoDartCombinationsHistoryTable from '@/containers/TwoDartCombinations/HistoryTable';
-import useLocale from '@/hooks/locale';
+import { useTranslations } from 'next-intl';
 
 type HistoryBoardProps = {
   history: GameResultModel;
@@ -42,15 +42,15 @@ type HistoryBoardProps = {
 
 const HistoryBoard: FC<HistoryBoardProps> = ({ history, user }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const { t } = useLocale();
+  const t = useTranslations('import');
   return (
     <Box p={{ base: 1, md: 4 }}>
       <Collapse in={isOpen} animateOpacity>
         <Alert status='error' justifyContent='space-between'>
           <Flex>
             <AlertIcon />
-            <AlertTitle>{t.import.errortitle}</AlertTitle>
-            <AlertDescription>{t.import.errordescription}</AlertDescription>
+            <AlertTitle>{t('errortitle')}</AlertTitle>
+            <AlertDescription>{t('errordescription')}</AlertDescription>
           </Flex>
           <CloseButton alignSelf='flex-start' position='relative' right={-1} onClick={onClose} />
         </Alert>

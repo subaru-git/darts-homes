@@ -1,3 +1,4 @@
+'use client';
 import React, { FC } from 'react';
 import { useBreakpointValue } from '@chakra-ui/react';
 import NewGame from './NewGame';
@@ -13,35 +14,25 @@ import {
 } from '@/contexts/AroundTheCompassGameContext';
 import { useAuth } from '@/contexts/AuthContext';
 import { db } from '@/db/db';
-import useLocale from '@/hooks/locale';
 import AroundTheCompassGame from '@/lib/AroundTheCompassGame';
 import { saveHistory } from '@/lib/GameHistoryManager';
 import { updateObject } from '@/lib/Helper/updateObjectState';
 import MainTemplate from '@/templates/MainTemplate';
+import { useTranslations } from 'next-intl';
 
 const Main: FC = () => {
   const game = useAroundTheCompassGame();
   const setGame = useAroundTheCompassGameSet();
   const user = useAuth();
   const isMd = useBreakpointValue({ base: false, md: true });
-  const { t } = useLocale();
+  const t = useTranslations('games.aroundthecompass');
   if (!game) return <MainTemplate label={'around-the-compass-main'} isLoading />;
   return (
     <MainTemplate label={'around-the-compass-main'}>
       {isMd ? (
-        <DesktopMain
-          game={game}
-          setGame={setGame}
-          user={user}
-          description={t.games.aroundthecompass.description.join('\n')}
-        />
+        <DesktopMain game={game} setGame={setGame} user={user} description={t('description')} />
       ) : (
-        <MobileMain
-          game={game}
-          setGame={setGame}
-          user={user}
-          description={t.games.aroundthecompass.description.join('\n')}
-        />
+        <MobileMain game={game} setGame={setGame} user={user} description={t('description')} />
       )}
     </MainTemplate>
   );

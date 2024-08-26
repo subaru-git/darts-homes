@@ -10,14 +10,14 @@ const LanguageChangeButton: FC = () => {
         <IconButton icon={<IoLanguage />} variant={'ghost'} aria-label={'change language'} />
       </PopoverTrigger>
       <PopoverContent>
-        <Link href={'/'} locale={'ja'} passHref>
+        <Link href={'/ja'} locale={'ja'} passHref>
           <div className='group block rounded-md p-2 hover:bg-pink-50'>
             <span className='group-hover:text-pink-400 group-hover:transition-all group-hover:duration-150 group-hover:ease-linear'>
               日本語
             </span>
           </div>
         </Link>
-        <Link href={'/'} locale={'en'} passHref>
+        <Link href={'/en'} locale={'en'} passHref>
           <div className='group block rounded-md p-2 hover:bg-pink-50'>
             <span className='group-hover:text-pink-400 group-hover:transition-all group-hover:duration-150 group-hover:ease-linear'>
               English

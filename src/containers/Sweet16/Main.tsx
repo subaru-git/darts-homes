@@ -1,3 +1,4 @@
+'use client';
 import React, { FC } from 'react';
 import { Box, Text, Flex, useBreakpointValue } from '@chakra-ui/react';
 import NewGame from './NewGame';
@@ -10,35 +11,25 @@ import TargetBoard from '@/components/TargetBoard';
 import { useAuth } from '@/contexts/AuthContext';
 import { useSweet16Game, useSweet16GameSet } from '@/contexts/Sweet16Context';
 import { db } from '@/db/db';
-import useLocale from '@/hooks/locale';
 import { saveHistory } from '@/lib/GameHistoryManager';
 import { updateObject } from '@/lib/Helper/updateObjectState';
 import Sweet16Game from '@/lib/Sweet16Game';
 import MainTemplate from '@/templates/MainTemplate';
+import { useTranslations } from 'next-intl';
 
 const Main: FC = () => {
   const game = useSweet16Game();
   const setGame = useSweet16GameSet();
   const user = useAuth();
   const isMd = useBreakpointValue({ base: false, md: true });
-  const { t } = useLocale();
+  const t = useTranslations('games.sweet16');
   if (!game) return <MainTemplate label={'sweet16-main'} isLoading />;
   return (
     <MainTemplate label='sweet16-main'>
       {isMd ? (
-        <DesktopMain
-          game={game}
-          setGame={setGame}
-          user={user}
-          description={t.games.sweet16.description.join('\n')}
-        />
+        <DesktopMain game={game} setGame={setGame} user={user} description={t('description')} />
       ) : (
-        <MobileMain
-          game={game}
-          setGame={setGame}
-          user={user}
-          description={t.games.sweet16.description.join('\n')}
-        />
+        <MobileMain game={game} setGame={setGame} user={user} description={t('description')} />
       )}
     </MainTemplate>
   );
