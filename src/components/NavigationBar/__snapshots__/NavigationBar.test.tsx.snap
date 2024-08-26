@@ -911,7 +911,7 @@ exports[`should rendering 1`] = `
               tabindex="-1"
             >
               <a
-                href="/"
+                href="/ja"
               >
                 <div
                   class="group block rounded-md p-2 hover:bg-pink-50"
@@ -924,7 +924,7 @@ exports[`should rendering 1`] = `
                 </div>
               </a>
               <a
-                href="/"
+                href="/en"
               >
                 <div
                   class="group block rounded-md p-2 hover:bg-pink-50"
