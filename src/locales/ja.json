@@ -76,6 +76,10 @@
       "title": "Arrange Record",
       "description": "アレンジの軌跡を見ながら考えるツール。"
     },
+    "countdrill": {
+      "title": "Count Drill",
+      "description": "スティールダーツに必要な暗算を練習します。1ラウンドの暗算をずっと続けます。"
+    },
     "respect": {
       "title": "Respect",
       "description": "リスペクトするダーツコンテンツを紹介します。一緒に応援していきましょう。"
@@ -276,6 +280,10 @@
           }
         }
       }
+    },
+    "countdrill": {
+      "title": "Count Drill",
+      "description": "スティールダーツに必要な暗算を練習します。\n1ラウンドの暗算をずっと続けます。バーストはしないはずです。"
     }
   },
   "Practice": {
@@ -323,7 +331,8 @@
       "treblesforshow": "20練習ゲーム",
       "arrange": "アレンジ練習ゲーム",
       "countup": "スティールダーツ用カウントアップ",
-      "arrangerecord": "アレンジの軌跡を見るツール"
+      "arrangerecord": "アレンジの軌跡を見るツール",
+      "countdrill": "スティールダーツ用暗算練習"
     }
   }
 }

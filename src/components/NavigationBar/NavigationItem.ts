@@ -104,6 +104,11 @@ export const GetNavItem = () => {
           subLabel: t('arrangerecord'),
           href: '/arrangerecord',
         },
+        {
+          label: 'Count Drill',
+          subLabel: t('countdrill'),
+          href: '/countdrill',
+        },
       ],
     },
     {
