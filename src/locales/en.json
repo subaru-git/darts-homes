@@ -76,6 +76,10 @@
       "title": "Arrange Record",
       "description": "A tool for arrange. You can check the arrange route."
     },
+    "countdrill": {
+      "title": "Count Drill",
+      "description": "You will practice the mental arithmetic needed for steel darts. You will continuously work on one round."
+    },
     "respect": {
       "title": "Respect",
       "description": "Here are some darts contents that we respect. Let's support them together."
@@ -276,6 +280,10 @@
           }
         }
       }
+    },
+    "countdrill": {
+      "title": "Count Drill",
+      "description": "You will practice the mental arithmetic needed for steel darts. You’ll keep calculating for each round continuously. There shouldn’t be any busts."
     }
   },
   "Practice": {
@@ -323,7 +331,8 @@
       "treblesforshow": "20 practice game",
       "arrange": "Arrange practice game",
       "countup": "count up game for steel darts",
-      "arrangerecord": "Arrange record display"
+      "arrangerecord": "Arrange record display",
+      "countdrill": "Practice mental arithmetic for steel darts"
     }
   }
 }

@@ -6,6 +6,7 @@ import Button from '@/atoms/Button';
 type TenKeyProps = {
   onCount: (value: string) => void;
   force: boolean;
+  nolimit?: boolean;
   disabled?: boolean;
   display?: boolean;
   onChange?: (value: string) => void;
@@ -15,6 +16,7 @@ type TenKeyProps = {
 const TenKey: FC<TenKeyProps> = ({
   onCount,
   force,
+  nolimit = false,
   disabled = false,
   display = true,
   onChange,
@@ -27,7 +29,7 @@ const TenKey: FC<TenKeyProps> = ({
   };
   const addNumber = (n: string) => {
     let v = value + n;
-    if (parseInt(v) > 180) v = '180';
+    if (parseInt(v) > 180 && !nolimit) v = '180';
     setScore(v);
   };
   const deleteNumber = () => setScore(value.slice(0, -1));
